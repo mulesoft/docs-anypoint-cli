@@ -1,6 +1,6 @@
 name: anypoint-cli
 title: Anypoint CLI
 version: '2.x'
-display_version: '2,x'
+display_version: '2.x'
 nav:
 - modules/ROOT/nav.adoc
