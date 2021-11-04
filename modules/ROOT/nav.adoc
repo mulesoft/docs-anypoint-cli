@@ -1,0 +1,3 @@
+.xref:index.adoc[Anypoint CLI]
+* xref:index.adoc[Anypoint CLI]
+ ** xref:anypoint-platform-cli-commands.adoc[List of Commands]
