@@ -1,0 +1,46 @@
+= Specifying Environments and Business Groups
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: administration, api, organization, users, gateway, theme, cli
+// :page-aliases: cloudhub-cli.adoc, runtime-manager::anypoint-platform-cli-commands.adoc
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<use environment>>| Make specified environment active
+|<<use business-group>>| Make specified business-group active
+|===
+
+
+== use environment
+
+This command is only available for interactive mode.
+
+----
+> use environment [options] <name>
+----
+This command makes active the environment specified in `<name>`.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== use business-group
+
+This command is only available for interactive mode.
+
+----
+> use business-group  [options] <name>
+----
+This command makes the business group you specified in `<name>` active.
+
+[NOTE]
+--
+If your business group or organization name contains spaces, you need to enclose its name between `"` characters.
+
+----
+> use business-group "QA Organization"
+----
+--
+

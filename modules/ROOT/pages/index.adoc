@@ -1,4 +1,5 @@
 = Anypoint Platform CLI 3.x
+
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

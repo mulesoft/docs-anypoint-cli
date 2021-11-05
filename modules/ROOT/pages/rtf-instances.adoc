@@ -1,0 +1,31 @@
+= Listing Runtime Fabric Instances
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: administration, api, organization, users, gateway, theme, cli
+// :page-aliases: cloudhub-cli.adoc, runtime-manager::anypoint-platform-cli-commands.adoc
+
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<runtime-mgr rtf list>>  | Lists available Runtime Fabric instances
+|===
+
+
+
+
+=== runtime-mgr rtf list
+
+----
+> runtime-mgr rtf list [options]
+----
+
+This command lists available Runtime Fabric instances.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+For information about managing your Runtime Fabric instances using the command line, see
+xref:runtime-fabric::install-rtfctl.adoc#supported-commands[Supported rtfctl Commands].
