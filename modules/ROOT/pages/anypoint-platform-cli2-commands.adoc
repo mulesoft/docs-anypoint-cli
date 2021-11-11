@@ -1,4 +1,4 @@
-= Anypoint Platform CLI 2.x List of Commands
+= Anypoint CLI 2.x List of Commands
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,19 +7,19 @@ endif::[]
 
 Anypoint Platform CLI provides commands for different use case scenarios:
 
-* <<Commands For Administering Your Anypoint Platform Account>>
-* <<Commands for API Manager>>
-* <<Commands for Administering Your Design Center Applications>>
-* <<Commands for Managing Exchange Assets>>
-* <<Commands for Administering Your CloudHub Application>>
-* <<Commands for Managing Your Locally Deployed Applications Managed by Runtime Manager>>
-* <<Commands for Managing Your Local Servers>>
-* <<Commands for Administering Your Local Server Groups>>
-* <<Commands for Administering Your Local Cluster Servers>>
-* <<Commands for Managing Alerts for Your Locally Deployed Applications Managed by Runtime Manager>>
-* <<Commands for Managing Your CloudHub Dedicated Load Balancer>>
-* <<Commands for Managing Your CloudHub Anypoint Virtual Private Cloud (VPC)>>
-* <<Commands for Specifying Environments and Business Groups>>
+* <<Anypoint Platform Account>>
+* <<API Manager>>
+* <<Design Center Applications>>
+* <<Exchange Assets>>
+* <<CloudHub Applications>>
+* <<Locally Deployed Applications Managed by Runtime Manager>>
+* <<Local Servers>>
+* <<Local Server Groups>>
+* <<Local Cluster Servers>>
+* <<Alerts for Locally Deployed Applications Managed by Runtime Manager>>
+* <<CloudHub Dedicated Load Balancer>>
+* <<CloudHub Anypoint Virtual Private Cloud (VPC)>>
+* <<Environments and Business Groups>>
 
 
 [TIP]
@@ -33,7 +33,7 @@ Supported values are `table`, `text`, and `json`. Defaults to `text` for non-int
 You can pass the `--fields` option after a command to get a list of all possible fields to output.
 --
 
-== Commands For Administering Your Anypoint Platform Account
+== Anypoint Platform Account
 
 [%header,cols="35a,65a"]
 |===
@@ -47,7 +47,7 @@ You can pass the `--fields` option after a command to get a list of all possible
 |<<account environment describe>> | Shows details of an environment
 |===
 
-== Commands for API Manager
+== API Manager
 
 [%header,cols="35a,65a"]
 |===
@@ -90,7 +90,7 @@ You can pass the `--fields` option after a command to get a list of all possible
 |<<api-mgr proxy download>> | Download a ZIP archive of a proxy to a local directory
 |===
 
-== Commands for Administering Your Design Center Applications
+== Design Center Applications
 
 [%header,cols="35a,65a"]
 |===
@@ -103,7 +103,7 @@ You can pass the `--fields` option after a command to get a list of all possible
 | <<designcenter project list>> | List all Design Center projects
 |===
 
-== Commands for Managing Exchange Assets
+== Exchange Assets
 
 [%header,cols="35a,65a"]
 |===
@@ -124,7 +124,7 @@ You can pass the `--fields` option after a command to get a list of all possible
 |<<exchange asset describe>> | Show a given asset's information
 |===
 
-== Commands for Administering Your CloudHub Application
+== CloudHub Applications
 
 [%header,cols="35a,65a"]
 |===
@@ -148,7 +148,7 @@ You can pass the `--fields` option after a command to get a list of all possible
 // |<<runtime-mgr cloudhub-application downgrade-runtime>>| Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
 |===
 
-== Commands for Managing Your Locally Deployed Applications Managed by Runtime Manager
+== Locally Deployed Applications Managed by Runtime Manager
 
 [CAUTION]
 In order for the Anypoint Platform CLI to recognize your target servers, each server needs to be manually registered with the platform.
@@ -171,7 +171,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 
 
 
-== Commands for Managing Your Local Servers
+== Local Servers
 
 [%header,cols="35a,65a"]
 |===
@@ -184,7 +184,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 // |<<runtime-mgr server register>> | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
 |===
 
-== Commands for Administering Your Local Server Groups
+== Local Server Groups
 
 [%header,cols="35a,65a"]
 |===
@@ -198,7 +198,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |<<runtime-mgr serverGroup remove server>> | Removes server from a server group
 |===
 
-== Commands for Administering Your Local Cluster Servers
+== Local Cluster Servers
 
 [%header,cols="35a,65a"]
 |===
@@ -213,7 +213,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |===
 
 
-== Commands for Managing Alerts for Your Locally Deployed Applications Managed by Runtime Manager
+== Alerts for Locally Deployed Applications Managed by Runtime Manager
 
 [%header,cols="35a,65a"]
 |===
@@ -224,7 +224,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |<<runtime-mgr standalone-alert list>> | Lists all alerts for standalone runtimes in the environment
 |===
 
-== Commands for Managing Your CloudHub Dedicated Load Balancer
+== CloudHub Dedicated Load Balancer
 
 [%header,cols="35a,65a"]
 |===
@@ -251,7 +251,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |<<cloudhub runtime list>>| Lists all available runtimes
 |===
 
-== Commands for Managing Your CloudHub Anypoint Virtual Private Cloud (VPC)
+== CloudHub Anypoint Virtual Private Cloud (VPC)
 
 [%header,cols="35a,65a"]
 |===
@@ -272,7 +272,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |<<cloudhub vpc firewall-rules remove>>| Remove a firewall rule for Mule applications in this VPC
 |===
 
-== Commands for Specifying Environments and Business Groups
+== Environments and Business Groups
 
 [%header,cols="35a,65a"]
 |===
