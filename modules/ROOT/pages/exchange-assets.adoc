@@ -1,4 +1,4 @@
-= Managing Exchange Assets
+= Exchange Assets
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

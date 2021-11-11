@@ -1,4 +1,4 @@
-= Administering Local Server Groups
+= Local Server Groups
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

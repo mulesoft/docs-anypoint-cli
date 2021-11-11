@@ -1,4 +1,4 @@
-= Specifying Environments and Business Groups
+= Environments and Business Groups
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

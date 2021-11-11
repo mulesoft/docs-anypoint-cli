@@ -1,4 +1,4 @@
-= Listing Runtime Fabric Instances
+= Runtime Fabric Instances
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
@@ -16,7 +16,7 @@ endif::[]
 
 
 
-=== runtime-mgr rtf list
+== runtime-mgr rtf list
 
 ----
 > runtime-mgr rtf list [options]

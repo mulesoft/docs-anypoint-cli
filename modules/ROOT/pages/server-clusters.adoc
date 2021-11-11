@@ -1,4 +1,4 @@
-= Administering Local Cluster Servers
+= Local Cluster Servers
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

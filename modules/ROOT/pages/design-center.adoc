@@ -1,4 +1,4 @@
-= Administering Design Center Applications
+= Design Center Applications
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

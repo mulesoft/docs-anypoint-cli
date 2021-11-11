@@ -1,4 +1,4 @@
-= Administering Your Anypoint Platform Account
+= Anypoint Platform Account
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

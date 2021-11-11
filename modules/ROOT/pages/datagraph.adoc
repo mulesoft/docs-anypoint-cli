@@ -1,4 +1,4 @@
-= Managing Anypoint DataGraph
+= DataGraph
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

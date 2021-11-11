@@ -1,4 +1,4 @@
-= Using Anypoint Platform CLI
+= Use Anypoint Platform CLI
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

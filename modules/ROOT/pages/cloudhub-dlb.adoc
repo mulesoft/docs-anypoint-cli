@@ -1,4 +1,4 @@
-= Managing CloudHub Dedicated Load Balancers
+= CloudHub Dedicated Load Balancers
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
