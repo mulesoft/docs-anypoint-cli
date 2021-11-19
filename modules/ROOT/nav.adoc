@@ -1,3 +1,4 @@
 .xref:index.adoc[Anypoint CLI 2.x]
 * xref:index.adoc[Anypoint CLI 2.x]
  ** xref:anypoint-platform-cli2-commands.adoc[List of Commands]
+ ** xref:command-line-tools.adoc[Deprecated Command Line Tools]
