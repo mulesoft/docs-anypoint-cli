@@ -1,9 +1,9 @@
-= CloudHub Anypoint VPCs
+= Anypoint Virtual Private Cloud
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:keywords: administration, api, organization, users, gateway, theme, cli
+:keywords: vpc, cloudhub, virtual private cloud, cli
 // :page-aliases: cloudhub-cli.adoc, runtime-manager::anypoint-platform-cli-commands.adoc
 
 

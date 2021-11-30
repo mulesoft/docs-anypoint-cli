@@ -3,7 +3,8 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:keywords: administration, api, organization, users, gateway, theme, cli
+:keywords: runtime manager, hybrid apps, cli
+
 // :page-aliases: cloudhub-cli.adoc, runtime-manager::anypoint-platform-cli-commands.adoc
 
 
