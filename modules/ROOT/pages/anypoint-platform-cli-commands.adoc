@@ -49,6 +49,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |===
 
 
+[[api-manager]]
 == API Manager
 
 [%header,cols="35a,65a"]
@@ -84,6 +85,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:api-mgr.adoc#api-mgr-tier-list[api-mgr tier list] | Lists the SLA tiers of an API instance
 |===
 
+[[cloudhub-applications]]
 == CloudHub Applications
 
 [%header,cols="35a,65a"]
@@ -108,6 +110,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 // |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-downgrade-runtime[runtime-mgr cloudhub-application downgrade-runtime]| Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
 |===
 
+[[cloudhub-load-balancers]]
 == CloudHub Dedicated Load Balancers
 
 [%header,cols="35a,65a"]
@@ -135,6 +138,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:cloudhub-dlb.adoc#cloudhub-runtime-list[cloudhub runtime list]| Lists all available runtimes
 |===
 
+[[cloudhub-vpcs]]
 == CloudHub Anypoint VPCs
 
 [%header,cols="35a,65a"]
@@ -156,7 +160,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub vpc firewall-rules remove]| Remove a firewall rule for Mule applications in this Anypoint VPC
 |===
 
-
+[[datagraph]]
 == DataGraph
 
 [%header,cols="35a,65a"]
@@ -167,6 +171,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 | xref:datagraph.adoc#datagraph-load-balancer-config-remove[datagraph load-balancer-config remove]| Removes a dedicated load balancer configuration from Anypoint DataGraph
 |===
 
+[[design-center]]
 == Design Center Applications
 
 [%header,cols="35a,65a"]
