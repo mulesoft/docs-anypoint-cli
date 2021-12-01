@@ -209,7 +209,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |===
 
 
-
+[[standalone-management]]
 == Locally Deployed Applications Managed by Runtime Manager
 
 [CAUTION]
