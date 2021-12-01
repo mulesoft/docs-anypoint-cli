@@ -1,4 +1,4 @@
-= Design Center Applications
+= Design Center Projects
 
 
 // tag::summary[]
