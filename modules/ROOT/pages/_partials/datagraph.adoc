@@ -1,0 +1,54 @@
+= DataGraph
+
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+| <<datagraph load-balancer-config add>> | Adds a dedicated load balancer configuration to Anypoint DataGraph
+| <<datagraph load-balancer-config describe>> | Displays a dedicated load balancer configuration for Anypoint DataGraph
+| <<datagraph load-balancer-config remove>> | Removes a dedicated load balancer configuration from Anypoint DataGraph
+|===
+
+
+// end::summary[]
+
+
+// tag::commands[]
+
+== datagraph load-balancer-config add
+
+----
+> datagraph load-balancer-config add <dlbUrl>
+----
+This command adds a dedicated load balancer configuration specified by `<dlbUrl>` to Anypoint DataGraph.
+The `dlbUrl` is a valid URL that includes the DLB domain and the mapping rule `inputUri`.
+
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== datagraph load-balancer-config describe
+
+----
+> datagraph load-balancer-config describe [options]
+----
+
+This command displays a dedicated load balancer URL for Anypoint DataGraph.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== datagraph load-balancer-config remove
+
+----
+> datagraph load-balancer-config remove [options]
+----
+
+This command removes a dedicated load balancer configuration from Anypoint DataGraph.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+// end::commands[]

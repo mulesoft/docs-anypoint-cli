@@ -8,23 +8,24 @@ endif::[]
 
 Anypoint Platform CLI provides the ability to manage these features in Anypoint Platform:
 
-* <<Anypoint Platform Account>>
-* <<Environments and Business Groups>>
-* <<API Manager>>
-* <<CloudHub Applications>>
-* <<CloudHub Dedicated Load Balancers>>
-* <<CloudHub Anypoint VPCs>>
-* <<Design Center Applications>>
-* <<DataGraph>>
-* <<Exchange Assets>>
-* <<Locally Deployed Applications Managed by Runtime Manager>>
-* <<Alerts for Locally Deployed Applications Managed by Runtime Manager>>
-* <<Local Servers>>
-* <<Local Server Groups>>
-* <<Local Cluster Servers>>
-* <<Runtime Fabric Instances>>
+* <<account>>
+* <<env-business-groups>>
+* <<api-mgr>>
+* <<cloudhub-apps>>
+* <<cloudhub-dlb>>
+* <<cloudhub-vpc>>
+* <<design-center>>
+* <<datagraph>>
+* <<exchange-assets>>
+* <<standalone-apps>>
+* <<standalone-alerts>>
+* <<servers>>
+* <<server-groups>>
+* <<server-clusters>>
+* <<rtf-instances>>
 
 
+[[account]]
 == Anypoint Platform Account
 
 [%header,cols="35a,65a"]
@@ -39,6 +40,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:account.adoc#account-environment-describe[account environment describe]| Shows details of an environment
 |===
 
+[[env-business-groups]]
 == Environments and Business Groups
 
 [%header,cols="35a,65a"]
@@ -49,6 +51,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |===
 
 
+[[api-mgr]]
 == API Manager
 
 [%header,cols="35a,65a"]
@@ -84,6 +87,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:api-mgr.adoc#api-mgr-tier-list[api-mgr tier list] | Lists the SLA tiers of an API instance
 |===
 
+[[cloudhub-apps]]
 == CloudHub Applications
 
 [%header,cols="35a,65a"]
@@ -108,6 +112,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 // |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-downgrade-runtime[runtime-mgr cloudhub-application downgrade-runtime]| Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
 |===
 
+[[cloudhub-dlb]]
 == CloudHub Dedicated Load Balancers
 
 [%header,cols="35a,65a"]
@@ -135,6 +140,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:cloudhub-dlb.adoc#cloudhub-runtime-list[cloudhub runtime list]| Lists all available runtimes
 |===
 
+[[cloudhub-vpc]]
 == CloudHub Anypoint VPCs
 
 [%header,cols="35a,65a"]
@@ -156,7 +162,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub vpc firewall-rules remove]| Remove a firewall rule for Mule applications in this Anypoint VPC
 |===
 
-
+[[datagraph]]
 == DataGraph
 
 [%header,cols="35a,65a"]
@@ -167,7 +173,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 | xref:datagraph.adoc#datagraph-load-balancer-config-remove[datagraph load-balancer-config remove]| Removes a dedicated load balancer configuration from Anypoint DataGraph
 |===
 
-== Design Center Applications
+[[design-center]]
+== Design Center Projects
 
 [%header,cols="35a,65a"]
 |===
@@ -180,6 +187,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 | xref:design-center.adoc#designcenter-project-list[designcenter project list] | List all Design Center projects
 |===
 
+[[exchange-assets]]
 == Exchange Assets
 
 [%header,cols="35a,65a"]
@@ -209,7 +217,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |===
 
 
-
+[[standalone-apps]]
 == Locally Deployed Applications Managed by Runtime Manager
 
 [CAUTION]
@@ -231,7 +239,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:standalone-apps.adoc#runtime-mgr-standalone-application-copy[runtime-mgr standalone-application copy] | Copies a standalone application
 |===
 
-
+[[standalone-alerts]]
 == Alerts for Locally Deployed Applications Managed by Runtime Manager
 
 [%header,cols="35a,65a"]
@@ -243,6 +251,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-list[runtime-mgr standalone-alert list] | Lists all alerts for standalone runtimes in the environment
 |===
 
+[[servers]]
 == Local Servers
 
 [%header,cols="35a,65a"]
@@ -256,6 +265,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 // |xref:servers.adoc#runtime-mgr-server-register[runtime-mgr server register] | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
 |===
 
+[[server-groups]]
 == Local Server Groups
 
 [%header,cols="35a,65a"]
@@ -270,6 +280,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:server-groups.adoc#runtime-mgr-servergroup-remove-server[runtime-mgr serverGroup remove server] | Removes server from a server group
 |===
 
+[[server-clusters]]
 == Local Cluster Servers
 
 [%header,cols="35a,65a"]
@@ -284,6 +295,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:server-clusters.adoc#runtime-mgr-cluster-modify[runtime-mgr cluster modify] | Modifies cluster
 |===
 
+[[rtf-instances]]
 == Runtime Fabric Instances
 
 [%header,cols="35a,65a"]

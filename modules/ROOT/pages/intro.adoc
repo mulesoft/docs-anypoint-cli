@@ -6,32 +6,6 @@ endif::[]
 :keywords: anypoint platform, cli
 // :page-aliases: cloudhub-cli.adoc, runtime-manager::anypoint-platform-cli-commands.adoc
 
-An Anypoint Platform CLI call has the following form:
+include::anypoint-cli::partial$intro.adoc[tag=syntax]
 
-[source,console]
-----
-$ anypoint-cli [params] [command]
-----
-
-
-== exit
-
-----
-> exit [options]
-----
-This command exits Anypoint Platform CLI.
-
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
-
-
-If you choose not to pass a command, Anypoint Platform CLI runs in interactive mode.
-If you choose to pass a specific command and there is an error, the application exits and return you a description of the issue.
-
-The Anypoint Platform CLI provides three default options:
-
-* The `--help` option displays usage information of the command.
-* The `-o` or `--output` option lets you specify the command's output to the defined format. +
-Supported values are `table`, `text`, and `json`. Defaults to `text` for non-interactive mode and `table` for interactive sessions.
-* The `-f` or `--fields` option allows you to define which fields to output. +
-You can pass the `--fields` option after a command to get a list of all possible fields to output.
+include::anypoint-cli::partial$intro.adoc[tag=commands]

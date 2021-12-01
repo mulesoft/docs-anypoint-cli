@@ -1,0 +1,103 @@
+= Local Server Groups
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<runtime-mgr serverGroup create>> | Creates server group from servers
+|<<runtime-mgr serverGroup describe>> | Describes server group
+|<<runtime-mgr serverGroup modify>> | Modifies server group
+|<<runtime-mgr serverGroup add server>> | Adds server to a server group
+|<<runtime-mgr serverGroup delete>> | Deletes server group
+|<<runtime-mgr serverGroup list>> | Lists all server groups in the environment
+|<<runtime-mgr serverGroup remove server>> | Removes server from a server group
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+== runtime-mgr serverGroup create
+
+----
+> runtime-mgr serverGroup create [options] <name> [serverIds...]
+----
+
+This command creates a server group with the name passed in `name` using the server Id(s) passed as argument(s) thereafter.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== runtime-mgr serverGroup describe
+
+----
+> runtime-mgr serverGroup describe [options] <serverGroupId>
+----
+
+This command describes the server group passed in `serverGroupId`.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== runtime-mgr serverGroup modify
+
+----
+> runtime-mgr serverGroup modify [options] <serverGroupId>
+----
+
+This command modifies the server group passed in `serverGroupId`.
+
+In order to update the id for the cluster, you need to pass the  `--name` option.
+
+Besides the `--name` option, this command also takes the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+
+
+== runtime-mgr serverGroup add server
+
+----
+> runtime-mgr serverGroup add server [options] <serverGroupId> <serverId>
+----
+
+This command adds the server passed in `serverId` to the server group passed in `serverGroupId`.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== runtime-mgr serverGroup delete
+
+----
+> runtime-mgr serverGroup delete [options] <serverGroupId>
+----
+
+This command deletes the server groups passed in `serverGroupId`.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+[WARNING]
+This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
+
+== runtime-mgr serverGroup list
+
+----
+> runtime-mgr serverGroup list [options]
+----
+
+This command lists all server groups in the environment.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== runtime-mgr serverGroup remove server
+
+----
+> runtime-mgr serverGroup remove server [options] <serverGroupId> <serverId>
+----
+
+This command removes the server passed in `serverId` from the server group passed in `serverGroupId`.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+// end::commands[]

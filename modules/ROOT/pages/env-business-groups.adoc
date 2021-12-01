@@ -6,41 +6,7 @@ endif::[]
 :keywords: environment, business group, cli
 // :page-aliases: cloudhub-cli.adoc, runtime-manager::anypoint-platform-cli-commands.adoc
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|<<use environment>>| Make specified environment active
-|<<use business-group>>| Make specified business-group active
-|===
 
+include::anypoint-cli::partial$env-business-groups.adoc[tag=summary]
 
-== use environment
-
-This command is only available for interactive mode.
-
-----
-> use environment [options] <name>
-----
-This command makes active the environment specified in `<name>`.
-
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
-
-== use business-group
-
-This command is only available for interactive mode.
-
-----
-> use business-group  [options] <name>
-----
-This command makes the business group you specified in `<name>` active.
-
-[NOTE]
---
-If your business group or organization name contains spaces, you need to enclose its name between `"` characters.
-
-----
-> use business-group "QA Organization"
-----
---
-
+include::anypoint-cli::partial$env-business-groups.adoc[tag=commands]

@@ -1,0 +1,516 @@
+= Exchange Assets
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<exchange asset upload>> | Uploads an Exchange asset
+|<<exchange asset uploadv2>> | Uploads an Exchange asset using Exchange Experience API v2
+|<<exchange asset mutableDataUpload>> | Modifies mutable data of an existing Exchange asset
+|<<exchange asset modify>> | Modifies an Exchange asset
+|<<exchange asset download>> | Downloads an Exchange asset
+|<<exchange asset list>> | Lists all assets
+|<<exchange asset page download>> | Downloads an asset's description page from Exchange
+|<<exchange asset page modify>> | Changes an asset's description page from Exchange
+|<<exchange asset page upload>> | Uploads an asset's description page from Exchange
+|<<exchange asset page update>> | Updates an asset's description page from Exchange
+|<<exchange asset page delete>> | Deletes an asset's description page from Exchange
+|<<exchange asset page list>> | List all pages for a given asset
+|<<exchange asset copy>> | Copies an Exchange asset
+|<<exchange asset delete>> | Deletes an asset from Exchange
+|<<exchange asset deprecate>> | Deprecates an asset
+|<<exchange asset undeprecate>> | Undeprecate an asset
+|<<exchange asset describe>> | Show a given asset's information
+|<<exchange asset resource upload>> | Uploads a resource to an asset portal
+|<<exchange asset resource list>> | Lists published resources in the asset portal
+|<<exchange asset resource download>> | Downloads resource from the asset portal
+|<<exchange asset resource delete>> | Deletes resource from the asset portal
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+== exchange asset upload
+
+----
+> exchange asset upload [options] <assetIdentifier> [filePath]
+----
+
+This command uploads an OAS, RAML, WSDL, HTTP, or custom asset using the IDs passed in `<assetIdentifier>`. +
+If `<filePath>` points to a ZIP archive file, that archive must include an `exchange.json` file describing the asset. +
+Argument `assetIdentifier` should be formatted as follows: `<group_id>/<asset_id>/<version>`.
+
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also accepts:
+
+[%header,cols="30a,40a,30a"]
+|===
+| Command | Description |  Example
+| `--apiVersion` | Asset API version .4+<.<|
+`exchange asset upload --apiVersion 1.0 --name testProject --classifier custom`
+
+`exchange asset upload --mainFile 'api.yml'`
+| `--name` |Asset name
+| `--mainFile` | Main file of the API asset
+| `--classifier` | Valid asset classifiers are `oas`, `raml`, `wsdl`, `http`, and `custom`.
+|===
+
+== exchange asset uploadv2
+
+----
+> exchange asset uploadv2 [properties] <assetIdentifier>
+----
+
+This command uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, example, policy, extension, external-library or connector asset using the ID passed in <assetIdentifier>.
+
+Use the following format for the _assetIdentifier_ argument:
+
+`([_groupID_]/)_assetID_/_version_`
+
+If _group_id_ is not specified, it defaults to the currently selected organization ID.
+
+[%header,cols="40a,30a,30a"]
+|===
+| Command | Description |  Example
+| `--name` | Asset name (required if no pom file is specified) .3+|
+`exchange asset uploadv2 --name "Raml Asset" --description "RAML" --properties.apiVersion v1 --properties.mainFile api.raml --files.raml.zip /..../file-path/raml.zip raml-asset/1.0.0`
+| `--description` | Asset description
+| `--properties` | Asset properties
+
+For example:
+
+* `properties.mainFile main.yaml`
+* `properties.apiVersion v1`
+* `properties.assetLink \http://api.com`
+
+| `--files` | Asset file, identified as `classifier.packaging` or `packaging`, for example, `files.raml.zip .../file-path/raml.zip`
+
+To send multiple files, use the same option multiple times:
+
+`--files.custom.zip custom.zip --files.pom.xml pom.xml` | `exchange asset uploadv2 --files.mule-application.jar /..../file-path/mule-app.jar --files.pom /..../file-path/mule-app.pom fa7b266c-3817-4cbb-ae49-7f3cc6c8cd9e/my-mule-app/1.0.0`
+| `--type` | Asset type
+
+Required if no file is specified.
+
+Supported Values:
+
+* `rest-api`
+* `soap-api`
+* `http-api`
+* `raml-fragment`
+* `custom`
+* `connector`
+* `template`
+* `example`
+* `policy`
+* `app`
+* `extension`
+* `external-library`
+
+If it is uploaded, the type is inferred from the classifier of the file.
+
+Depending on the type of asset, some possible classifier values are:
+
+* REST API
+** `oas`  (with `zip`, `yaml`, or `json` as packaging)
+** `raml` (with `zip` or `raml` as packaging)
+* RAML Fragment
+** `raml-fragment` (with `zip` or `raml` as packaging)
+* SOAP API
+** `wsdl` (with `zip`, `wsld`, or `xml` as packaging)
+* Custom
+** `custom`
+* Application
+** `mule-application` (with `jar` as packaging)
+* Policy
+** `mule-policy` (with `jar` as packaging) + `policy-definition` (with `yaml` as packaging)
+* Example
+** `mule-application-example` (with `jar` as packaging)
+* Template
+** `mule-application-template` (with `jar` as packaging)
+* Extension
+** `mule-plugin` (with `jar` as packaging)
+* Connector
+** `studio-plugin` (with `zip` as packaging) + file with no classifier and packaging `jar`
+* External Library
+** `external-library` (with `jar` as packaging) |
+
+| `--categories` | Categories |
+
+`categories.someKey value`
+
+`categories.anotherKey anotherValue`
+
+| `--fields` | Fields |
+
+`fields.someKey value`
+
+`fields.anotherKey anotherValue`
+
+| `--keywords` | Keywords (comma-separated) |
+
+
+`raml,rest-api,someKeyword`
+
+| `--tags` | Tags (comma-separated)|
+
+
+`api,tag1,tag2`
+
+| `--dependencies` | Asset dependencies (comma-separated) |
+
+`groupID:assetID:version,groupID2:assetID:version` |
+|===
+
+== exchange asset mutableDataUpload
+
+----
+> exchange asset mutableDataUpload [properties] <assetIdentifier>
+----
+
+This command modifies the mutable data of an already created asset, including tags, categories, fields, and documentation.
+
+Use the following format for the _assetIdentifier_ argument:
+
+`[_<groupID>_]/_<assetID>_/_<version>_`
+
+If _group_id_ is not specified, it defaults to the currently selected organization ID.
+
+[%header,cols="40a,30a,30a"]
+|===
+| Command | Description |  Example
+| `--docs` | Documentation file. (Should specify the "zip" file path. Example: "--docs /.../file-path/docs.zip") |
+`exchange asset mutableDataUpload --docs /Users/llucas/Desktop/examples/docs.zip --tags "tag1,tag2" --categories.beach sun --fields.central park fa7b266c-3817-4cbb-ae49-7f3cc6c8cd9e/asset-id/1.0.0`
+
+| `--categories` | Categories |
+
+`categories.someKey value`
+
+`categories.anotherKey anotherValue`
+
+| `--fields` | Fields |
+
+`fields.someKey value`
+
+`fields.anotherKey anotherValue`
+
+| `--tags` | Tags (comma-separated)|
+
+`api,tag1,tag2`
+
+|===
+
+== exchange asset modify
+
+----
+> exchange asset modify [options] <assetIdentifier>
+----
+
+This command modifies the Exchange asset identified with `<assetIdentifier>`. +
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Command | Description |  Example
+|`--name` | New asset name .2+<.<| `exchange asset modify --name newName --tags test,sample`
+|`--tags` | Comma-separated tags for the asset
+|===
+
+== exchange asset download
+
+----
+> exchange asset download [options] <assetIdentifier> <directory>
+----
+
+This command downloads the Exchange asset identified with `<assetIdentifier>` to the directory passed in `<directory>`. +
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset list
+
+----
+> exchange asset list [options] [searchText]
+----
+
+This command lists all assets in Exchange.
+
+[TIP]
+You can specify keywords in searchText to limit results to APIs containing those specific keywords.
+
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Command | Description |  Example
+|`--limit` | Number of results to retrieve | `exchange asset list --limit 2`
+|`--offset` | Offsets the number of APIs passed | `exchange asset list --offset 3`
+|`--sort` | Sorts the results in the field name passed | `exchange asset list --sort "Latest Version"`
+|`--organizationId` | Filters by organization id | `exchange asset list --organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
+|===
+
+
+== exchange asset page download
+
+----
+> exchange asset page download [options] <assetIdentifier> <directory> [pageName]
+----
+
+This command downloads the description page specified in `<pageName>` for the Exchange asset identified with `<assetIdentifier>` to the directory passed in `<directory>`. +
+If [pageName] is not specified, this command downloads all pages.
+
+[NOTE]
+This command only supports published pages.
+
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID. +
+The description page in downloaded in Markdown format. When `name` is not specified, all pages are downloaded.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset page modify
+
+----
+> exchange asset page modify [options] <assetIdentifier> <pageName>
+----
+
+This command modifies the description page specified in `<pageName>`, for the Exchange asset identified with `<assetIdentifier>`.
+
+[NOTE]
+This command only supports published pages.
+
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID. +
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes the `--name` option to set a new asset page name.
+
+== exchange asset page upload
+
+----
+> exchange asset page upload [options] <assetIdentifier> <pageName> <mdPath>
+----
+
+This command uploads an asset description page from the path passed in `<mdPath>` using the name specified in `<pageName>` to the Exchange asset identified with `<assetIdentifier>`. +
+Naming the page "home" makes the uploaded page the main description page for the Exchange asset.
+
+[CAUTION]
+This command publishes all active drafts as part of the operation.
+
+Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID. +
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset page update
+
+----
+> exchange asset page update [options] <assetIdentifier> <pageName> <mdPath>
+----
+
+This command updates the content of an asset description page from the path passed in `<mdPath>` using the name specified in `<pageName>` to the Exchange asset identified with `<assetIdentifier>`. +
+Naming the page "home" makes the updated page the main description page for the Exchange asset.
+
+[CAUTION]
+This command publishes all active drafts as part of the operation.
+
+Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID. +
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset page delete
+
+----
+> exchange asset page delete [options] <assetIdentifier> <pageName>
+----
+
+This command deletes the description page specified in `<pageName>`, for the asset identified with `<assetIdentifier>`. +
+
+[WARNING]
+This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
+
+[NOTE]
+This command only supports published pages.
+
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID. +
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset page list
+
+----
+> exchange asset page list <assetIdentifier>
+----
+
+This command lists all pages for the asset passed in `<assetIdentifier>`. +
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+[NOTE]
+This command only supports published pages.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+
+== exchange asset copy
+
+----
+> exchange asset copy [options] <source> <target>
+----
+
+This command copies the Exchange asset from `<source>` to `<target>`. +
+Arguments `<source>` and `<target>` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+This command accepts the default options `--help`, `-f/--fields`, and `-o/--output`, and also:
+
+[%header,cols="30a,40a,30a"]
+|===
+| Command | Description |  Example
+|`--targetOrganizationId` | Organization ID to copy asset into | `exchange asset copy --targetOrganizationId organization_id source_group_id/source_asset_id/source_version target_group_id/target_asset_id/target_version`
+|===
+
+== exchange asset delete
+
+----
+> exchange asset delete [options] <assetIdentifier>
+----
+
+This command deletes the Exchange asset passed in `<assetIdentifier>`.
+
+[WARNING]
+This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
+
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID. +
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset deprecate
+
+----
+> exchange asset deprecate <assetIdentifier>
+----
+
+This command deprecates the asset passed in `<assetIdentifier>`.
+
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset undeprecate
+
+----
+> exchange asset undeprecate <assetIdentifier>
+----
+
+This command undeprecates the asset passed in `<assetIdentifier>`.
+
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset describe
+
+----
+> exchange asset describe <assetIdentifier>
+----
+
+This command describes the asset passed in `<assetIdentifier>`.
+
+Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset resource upload
+
+----
+> exchange asset resource upload [options] <assetIdentifier> <filepath>
+----
+
+This command uploads the resource specified in `<filepath>` to a page in the asset portal described in `<assetIdentifier>`.
+
+You can use this command for any page of your `<assetIdentifier>` asset.
+
+Supported file extensions for `<filepath>` are: `jpeg`, `jpg`, `jpe`, `gif`, `bmp`, `png`, `webp`, `ico`, `svg`, `tiff`, `tif`.
+
+The argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+The successful output command will be a markdown codesnippet.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset resource list
+
+----
+> exchange asset resource list [options] <assetIdentifier>
+----
+
+This command lists the resources in the asset portal of the asset specified in `<assetIdentifier>`.
+
+Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+[NOTE]
+This command lists published resources by default. +
+You can use the `--draft` option to list draft resources from the asset portal.
+
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes the `--draft` option to list non-published resources in the asset portal.
+
+== exchange asset resource download
+
+----
+> exchange asset resource download [options] <assetIdentifier> <resourcePath> <filePath>
+----
+
+This command downloads the published resource specified in `<resourcePath>` from the asset portal of the asset specified in `<assetIdentifier>` to the file specified in `<filePath>`.
+
+Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+Argument `<resourcePath>` must be a published resource. +
+You can list all published resources using the <<exchange asset resource list,asset resource list>> command.
+
+[NOTE]
+This command only supports published resources.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+== exchange asset resource delete
+
+----
+> exchange asset resource delete [options] <assetIdentifier> <resourcePath>
+----
+
+This command deletes the resource specified in `<resourcePath>` from the asset portal of the asset specified in `<assetIdentifier>` by publishing a new portal in which `resourcePath` has been deleted.
+
+Argument `<assetIdentifier>` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
+
+Argument `<resourcePath>` must be a published resource. +
+You can list all published resources using the <<exchange asset resource list,asset resource list>> command.
+
+[CAUTION]
+This command publishes all active drafts as part of the operation.
+
+// CLI DEFAULTS
+include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+// end::commands[]

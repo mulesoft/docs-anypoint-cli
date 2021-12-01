@@ -19,6 +19,7 @@ Use Runtime Manager to manage Mule applications deployed to CloudHub (hosted by 
 * xref:2.x@api-manager::index.adoc[API Manager 2.x (Crowd Release)]
 * xref:design-center::index.adoc[Design Center]
 
+[[prereqs]]
 == Prerequisites
 
 * Download and install NodeJS and npm (node package manager) on your system.
@@ -28,7 +29,7 @@ See the https://nodejs.org/en/download/[NodeJS download page].
 +
 See the https://git-scm.com/downloads[Git download site].
 
-
+[[installation]]
 == Installation
 
 Depending on the configuration of your system, you might need to run these commands using administrator credentials.
@@ -51,12 +52,13 @@ If the git protocol is blocked, you can configure Git to use `https://` instead 
 ----
 git config --global url."https://".insteadOf git://
 ----
-
+[[authentication]]
 == Authentication
 
 You can configure Anypoint CLI authentication with username and password, client ID and client secret, or a bearer token.
 At least one method is required.
 
+[[username-pw]]
 === Username and Password
 
 If you don't log in using single sign-on (SSO), you can use your username and password to log into the CLI directly.
@@ -74,6 +76,7 @@ You can also pass this value using the environment variable `export ANYPOINT_PAS
 
 For information about logging in using SSO, see xref:access-management::external-identity.adoc[About Identity Management].
 
+[[client-id-secret]]
 === Client ID and Client Secret
 
 You can configure a Connected App with the `client_credentials` grant type to use with the CLI.
@@ -91,6 +94,7 @@ You can also pass this value using the environment variable `export ANYPOINT_CLI
 
 For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
+[[bearer-token]]
 === Bearer Token
 
 If you have already generated a bearer token, you can pass it to the CLI directly.
@@ -106,8 +110,8 @@ Your CLI session expires when the bearer token expires.
 
 For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform].
 
-
-== Reference
+[[optional-args]]
+== Optional Arguments
 
 The Anypoint CLI takes the following optional arguments:
 
@@ -132,6 +136,7 @@ You can also pass this value using a dedicated environment variable `ANYPOINT_HO
 
 |===
 
+[[cli-usage]]
 == Usage
 
 Keep the following in mind while using the Anypoint CLI:
@@ -147,7 +152,7 @@ For information about Master Organization settings, see xref:access-management::
 +
 You can start typing the name of the command or parameter and press Tab for autocomplete or press Tab+Tab for a list of options.
 
-
+[[credentials-file]]
 === Credentials File
 
 The recommended way of passing these options to your Anypoint Platform CLI installation is using the `credentials` file located inside the `~/.anypoint` directory, which is not automatically created during installation. Follow these steps to create your credentials file:
@@ -196,6 +201,7 @@ Then run the `anypoint-cli` command without any options:
 > anypoint-cli
 ----
 
+[[env-variables]]
 === Dedicated Environment Variables
 
 If you choose to pass the credentials when running `anypoint-cli`, pass both parameters as environment variables: `ANYPOINT_USERNAME` and `ANYPOINT_PASSWORD`.
@@ -207,6 +213,7 @@ If you choose to pass the credentials when running `anypoint-cli`, pass both par
 > anypoint-cli
 ----
 
+[[cli-options]]
 === CLI Options
 
 If you pass only your username, the Anypoint CLI prompts for your password.
@@ -217,11 +224,13 @@ If you pass only your username, the Anypoint CLI prompts for your password.
 Password: ****
 ----
 
+[[pass-commands]]
 === Pass Commands
 
 After setting up a proper way to access Anypoint Platform from the CLI, you can start passing commands. +
 See xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI 3.x List of Commands] for instructions on how to use them.
 
+[[network-proxy]]
 === Use Anypoint CLI Through a Network Proxy
 
 To use the Anypoint CLI through a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` environment variables with the hostname or IP addresses of your proxy servers.
@@ -262,6 +271,7 @@ If the proxy server requires authentication, use these commands:
 `> set HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
 
+[[notes]]
 == Notes
 
 * To improve the Anypoint CLI experience, we gather anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
