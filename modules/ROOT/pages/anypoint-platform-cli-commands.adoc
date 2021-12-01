@@ -232,6 +232,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |===
 
 
+[[standalone-alerts]]
 == Alerts for Locally Deployed Applications Managed by Runtime Manager
 
 [%header,cols="35a,65a"]
@@ -243,6 +244,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-list[runtime-mgr standalone-alert list] | Lists all alerts for standalone runtimes in the environment
 |===
 
+[[standalone-servers]]
 == Local Servers
 
 [%header,cols="35a,65a"]
@@ -256,6 +258,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 // |xref:servers.adoc#runtime-mgr-server-register[runtime-mgr server register] | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
 |===
 
+[[standalone-server-groups]]
 == Local Server Groups
 
 [%header,cols="35a,65a"]
@@ -270,6 +273,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:server-groups.adoc#runtime-mgr-servergroup-remove-server[runtime-mgr serverGroup remove server] | Removes server from a server group
 |===
 
+[[standalone-clusters]]
 == Local Cluster Servers
 
 [%header,cols="35a,65a"]
