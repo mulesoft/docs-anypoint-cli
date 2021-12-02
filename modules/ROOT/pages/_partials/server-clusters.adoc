@@ -28,8 +28,7 @@
 
 This command adds the cluster in `clusterId` to the server passed in `serverId`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == runtime-mgr cluster delete
 
@@ -39,8 +38,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 
 This command deletes the cluster passed in `clusterId`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -53,8 +51,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command lists all clusters in the environment.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == runtime-mgr cluster remove server
 
@@ -64,8 +61,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 
 This command removes the server passed in `serverId` from the cluster passed in `clusterId`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == runtime-mgr cluster create
 
@@ -91,8 +87,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 This command describes the cluster passed in `clusterId`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == runtime-mgr cluster modify
 

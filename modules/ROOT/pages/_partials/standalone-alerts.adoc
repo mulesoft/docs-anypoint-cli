@@ -25,8 +25,7 @@
 
 This command describes the alert passed in `alertId`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == runtime-mgr standalone-alert create
 
@@ -91,8 +90,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 This command lists all alerts for standalone Mules in the current environment.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 // end::commands[]
 

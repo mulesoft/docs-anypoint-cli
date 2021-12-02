@@ -37,8 +37,7 @@ This command does not take any options, except for the default ones: `--help`, `
 
 This command displays all xref:access-management::organization.adoc#business-groups[business groups]. It returns the name of the business group, the type ('Master' or 'Business unit'), and the ID.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
 == account business-group describe
@@ -61,8 +60,7 @@ If your business group or organization name contains spaces, you need to enclose
 
 It returns data such as the owner, the type, subscription information, the entitlements of the group and in which environment is running.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == account environment list
 
@@ -97,8 +95,7 @@ This command deletes the environment specified in `<name>` +
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == account environment describe
 
@@ -109,7 +106,6 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 This command returns information about the environment specified in `<name>` +
 If no `<name>` is provided, this command returns information about the current session's environment.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 // end::commands[]

@@ -40,8 +40,7 @@
 ----
 This command lists all load balancers in your Anypoint Platform. It displays load balancer's name, domain, its state, and the Anypoint VPC ID to which the load balancer is bound.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub load-balancer describe
 
@@ -54,8 +53,7 @@ You can start typing your load balancer's name and press`tab` for Anypoint Platf
 
 It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub load-balancer describe-json
 
@@ -66,8 +64,7 @@ This command displays a raw JSON response from the load balancer that is specifi
 
 You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub load-balancer create
 
@@ -314,8 +311,7 @@ This command does not take any options, except for the default ones: `--help`, `
 ----
 This command lists all supported regions.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub runtime list
 ----
@@ -323,8 +319,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 ----
 This command lists all supported runtimes.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
 // end::commands[]

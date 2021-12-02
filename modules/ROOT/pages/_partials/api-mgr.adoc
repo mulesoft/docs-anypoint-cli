@@ -125,8 +125,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 Changes the asset version for the API instance passed in `<apiInstanceId`,  by choosing a new version from Exchange passed in `<assetVersion>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr api classify
 
@@ -136,8 +135,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 
 Classifies the API instance passed in `<apiInstanceId>` in the  environment passed in `<destEnvName>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr api delete
 
@@ -147,8 +145,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 
 This command deletes the API instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr api deploy
 
@@ -197,8 +194,7 @@ It takes `true` or `false` values.
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr api describe
 
@@ -208,8 +204,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 
 Shows details of the API Instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr api download-proxy
 
@@ -437,8 +432,7 @@ This option takes `true` or `false` values. Default Value is `true`
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr contract delete
 
@@ -448,8 +442,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 
 This command deletes the contract between the API Instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr contract list
 
@@ -529,8 +522,7 @@ Defaults to MuleSoft group ID when not provided.
 
 This command disables the policy passed in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr policy edit
 
@@ -562,8 +554,7 @@ For example `api-mgr policy apply (...) -p '[{"methodRegex":"GET|PUT","uriTempla
 
 This command enables the policy passed in `<policyId>` for the API Instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr policy list
 
@@ -585,8 +576,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 This command removes the policy specified in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr tier add
 
@@ -643,8 +633,7 @@ For example: `-l true,100,sec -l false,20,min`
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr tier delete
 
@@ -654,8 +643,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == api-mgr tier list
 ----

@@ -230,8 +230,7 @@ This command downloads the Exchange asset identified with `<assetIdentifier>` to
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset list
 
@@ -272,8 +271,7 @@ Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 The description page in downloaded in Markdown format. When `name` is not specified, all pages are downloaded.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset page modify
 
@@ -304,8 +302,7 @@ This command publishes all active drafts as part of the operation.
 
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset page update
 
@@ -321,8 +318,7 @@ This command publishes all active drafts as part of the operation.
 
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset page delete
 
@@ -340,8 +336,7 @@ This command only supports published pages.
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset page list
 
@@ -356,8 +351,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 [NOTE]
 This command only supports published pages.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
 == exchange asset copy
@@ -391,8 +385,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset deprecate
 
@@ -405,8 +398,7 @@ This command deprecates the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset undeprecate
 
@@ -419,8 +411,7 @@ This command undeprecates the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset describe
 
@@ -433,8 +424,7 @@ This command describes the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset resource upload
 
@@ -453,8 +443,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 The successful output command will be a markdown codesnippet.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset resource list
 
@@ -490,8 +479,7 @@ You can list all published resources using the <<exchange asset resource list,as
 [NOTE]
 This command only supports published resources.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == exchange asset resource delete
 
@@ -510,7 +498,6 @@ You can list all published resources using the <<exchange asset resource list,as
 [CAUTION]
 This command publishes all active drafts as part of the operation.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 // end::commands[]

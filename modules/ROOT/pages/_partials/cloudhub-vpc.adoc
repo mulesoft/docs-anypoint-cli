@@ -44,8 +44,7 @@ This command displays information about the Anypoint VPC that is specified in `<
 
 You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub vpc describe-json
 
@@ -56,8 +55,7 @@ This command displays a raw JSON response of the Anypoint VPC that is specified 
 
 You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub vpc create
 
@@ -81,8 +79,7 @@ This command deletes the Anypoint VPC specified in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub vpc environments add
 
@@ -109,8 +106,7 @@ Besides the default `--help` option, this command also takes the option `--defau
 ----
 This command assigns the Anypoint VPC defined in `<vpc>` to the business group(s) passed as argument(s) thereafter.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub vpc business-groups remove
 ----
@@ -121,8 +117,7 @@ This command removes the Anypoint VPC defined in `<vpc>` from the business group
 [WARNING]
 This command does not prompt twice before removing the Anypoint VPC from the specified resource. If you send a remove instruction, it does not ask for confirmation.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub vpc dns-servers set
 
@@ -158,8 +153,7 @@ To remove a DNS set, you need to use the <<cloudhub vpc dns-servers unset,vpc dn
 ----
 This command clears the list of local host names (internal domain names) to be resolved using your DNS servers from the Anypoint VPC passed in `<vpc>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub vpc firewall-rules describe
 
@@ -168,8 +162,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 ----
 This command describes all the firewall rules for the Anypoint VPC defined in `<vpc>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
 == cloudhub vpc firewall-rules add
@@ -198,8 +191,7 @@ By default, all IP addresses are blocked, and you need to authorize IP addresses
 
 You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
 == cloudhub vpc firewall-rules remove
@@ -209,8 +201,7 @@ include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
 ----
 This command removes the firewall rule from the workers inside the Anypoint VPC specified in `<vpc>` at the index passed in the `<index>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
 // end::commands[]

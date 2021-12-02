@@ -22,8 +22,7 @@ $ anypoint-cli [params] [command]
 ----
 This command exits Anypoint Platform CLI.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
 If you choose not to pass a command, Anypoint Platform CLI runs in interactive mode.

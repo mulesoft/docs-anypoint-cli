@@ -23,8 +23,7 @@ This command is only available for interactive mode.
 ----
 This command makes active the environment specified in `<name>`.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == use business-group
 

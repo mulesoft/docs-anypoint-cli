@@ -20,8 +20,7 @@
 
 This command lists available Runtime Fabric instances.
 
-// CLI DEFAULTS
-include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 For information about managing your Runtime Fabric instances using the command line, see
 xref:runtime-fabric::install-rtfctl.adoc#supported-commands[Supported rtfctl Commands].
