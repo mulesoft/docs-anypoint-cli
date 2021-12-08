@@ -3,7 +3,6 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: administration, api, organization, users, gateway, theme, cli
-// :page-aliases: runtime-manager::anypoint-platform-cli2-commands.adoc
 
 Anypoint Platform CLI provides commands for different use case scenarios:
 
