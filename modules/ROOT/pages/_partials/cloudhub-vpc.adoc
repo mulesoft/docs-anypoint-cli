@@ -62,7 +62,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 > cloudhub vpc create [options] <name> <region> <cidrBlock> [environments...]
 ----
-This command creates an Anypoint VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::virtual-private-cloud.adoc#size-your-vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environments] passed as argument(s) thereafter.
+This command creates an Anypoint VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::vpc-provisioning-concept#faq_how_to_size_vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environments] passed as argument(s) thereafter.
 
 [NOTE]
 An Anypoint VPC needs to be bound to a business group within your organization. When creating an Anypoint VPC, make sure to assign it a business group using the <<cloudhub vpc business-groups add, business-groups add>> command.
