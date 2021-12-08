@@ -147,7 +147,7 @@ If you don't pass a command-line parameter, the default profile properties are u
 +
 . Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
 +
-For information about Master Organization settings, see xref:access-management::organization.adoc#manage-the-master-organization-s-settings[Manage Master Organization Settings].
+For information about Master Organization settings, see xref:access-management::organization.adoc#manage-root-organization-settings[Manage Root Organization Settings].
 . The Anypoint CLI works with autocomplete.
 +
 You can start typing the name of the command or parameter and press Tab for autocomplete or press Tab+Tab for a list of options.
