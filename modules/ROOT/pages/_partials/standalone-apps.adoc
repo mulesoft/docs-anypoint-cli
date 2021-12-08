@@ -73,7 +73,7 @@ This command modifies the standalone (on-premises) application passed in `identi
 
 The `identifier` parameter specifies the application identifier.
 To retrieve the identifier, see
-xref:standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr standalone-application list].
+xref:anypoint-cli::standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr standalone-application list].
 
 In addition to the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
 

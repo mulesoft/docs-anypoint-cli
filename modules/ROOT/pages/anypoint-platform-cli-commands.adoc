@@ -101,7 +101,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-start[runtime-mgr cloudhub-application start]| Start an application
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-restart[runtime-mgr cloudhub-application restart]| Restart a running application
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-delete[runtime-mgr cloudhub-application delete]| Delete an application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-deploy[runtime-mgr cloudhub-application deploy]| Deploy a new application
+|xref:cloudhub-apps.adoc#deploy-to-cloudhub[runtime-mgr cloudhub-application deploy]| Deploy a new application
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-modify[runtime-mgr cloudhub-application modify]| Modify an existing application, optionally updating the ZIP file
 // |<<runtime-mgr application revert-runtime]| Reverts application to its previous runtime
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-download-logs[runtime-mgr cloudhub-application download-logs]| Download application logs to specified directory
