@@ -2033,7 +2033,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
-Further configuration information can be found in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc#managing-certificates[certificates section] of the dedicated xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[load balancer documentation] page.
+For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
 === cloudhub load-balancer start
 
@@ -2096,7 +2096,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
 |===
 
-Further configuration information can be found in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc#managing-certificates[certificates section] of the dedicated xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[load balancer documentation] page.
+For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
 === cloudhub load-balancer ssl-endpoint remove
 
@@ -2276,7 +2276,7 @@ This command does not take any options, except for the default ones: `--help`, `
 ----
 > cloudhub vpc create [options] <name> <region> <cidrBlock> [environments...]
 ----
-This command creates a VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::virtual-private-cloud.adoc#size-your-vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environment(s)] passed as argument(s) thereafter.
+This command creates a VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::virtual-private-cloud.adoc#size-your-vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environments] passed as arguments thereafter.
 
 [NOTE]
 A VPC needs to be bound to a business group within your organization. When creating a VPC, make sure to assign it a business group using the <<cloudhub vpc business-groups add, business-groups add>> command.
