@@ -4,7 +4,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, cli
-// :page-aliases: cloudhub-cli.adoc, runtime-manager::anypoint-platform-cli.adoc
+// :page-aliases: runtime-manager::anypoint-platform-cli-commands.adoc, runtime-manager::cloudhub-cli.adoc
 
 Anypoint Platform provides a scripting and command-line tool for both Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 The command-line interface (CLI) supports both the interactive shell and standard CLI modes and works with:
