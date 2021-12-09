@@ -1,10 +1,5 @@
 = Local Server Groups
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: server groups, cli
-
 include::anypoint-cli::partial$server-groups.adoc[tag=summary]
 
 include::anypoint-cli::partial$server-groups.adoc[tag=commands]

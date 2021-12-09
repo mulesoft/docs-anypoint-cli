@@ -1,8 +1,4 @@
 = CloudHub Dedicated Load Balancers
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: dlb, cloudhub, dedicated load balancer, load balancer, cli
 
 include::anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
 

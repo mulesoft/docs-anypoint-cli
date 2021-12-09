@@ -1,12 +1,5 @@
 = API Manager
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: api manager, cli
-
-
-
 include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
 
 include::anypoint-cli::partial$api-mgr.adoc[tag=commands]

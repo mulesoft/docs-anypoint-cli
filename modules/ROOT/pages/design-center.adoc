@@ -1,10 +1,5 @@
 = Design Center Applications
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: design center, cli
-
 include::anypoint-cli::partial$design-center.adoc[tag=summary]
 
 include::anypoint-cli::partial$design-center.adoc[tag=commands]

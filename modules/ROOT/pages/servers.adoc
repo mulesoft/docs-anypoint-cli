@@ -1,10 +1,5 @@
 = Local Servers
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: servers, cli
-
 include::anypoint-cli::partial$servers.adoc[tag=summary]
 
 include::anypoint-cli::partial$servers.adoc[tag=commands]

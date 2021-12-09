@@ -1,11 +1,5 @@
 = Runtime Fabric Instances
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: runtime fabric, cli
-
-
 include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
 
 include::anypoint-cli::partial$rtf-instances.adoc[tag=commands]

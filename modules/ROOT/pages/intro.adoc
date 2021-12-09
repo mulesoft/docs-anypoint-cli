@@ -1,9 +1,5 @@
 = Use Anypoint Platform CLI
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: anypoint platform, cli
 
 include::anypoint-cli::partial$intro.adoc[tag=syntax]
 

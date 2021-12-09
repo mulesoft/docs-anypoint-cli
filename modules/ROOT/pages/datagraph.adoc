@@ -1,10 +1,5 @@
 = DataGraph
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: datagraph, load balancer, cli
-
 include::anypoint-cli::partial$datagraph.adoc[tag=summary]
 
 include::anypoint-cli::partial$datagraph.adoc[tag=commands]

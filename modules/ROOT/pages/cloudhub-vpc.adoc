@@ -1,10 +1,5 @@
 = Anypoint Virtual Private Cloud
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: vpc, cloudhub, virtual private cloud, cli
-
 include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
 
 include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=commands]

@@ -1,10 +1,5 @@
 = Locally Deployed Applications Managed by Runtime Manager
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: runtime manager, hybrid apps, cli
-
 include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
 
 include::anypoint-cli::partial$standalone-apps.adoc[tag=commands]

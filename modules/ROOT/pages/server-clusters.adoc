@@ -1,11 +1,5 @@
 = Local Cluster Servers
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: cluster servers, cli
-
-
 include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
 
 include::anypoint-cli::partial$server-clusters.adoc[tag=commands]

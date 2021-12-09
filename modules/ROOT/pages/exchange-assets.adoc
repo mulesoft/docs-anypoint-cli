@@ -1,10 +1,5 @@
 = Exchange Assets
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: exchange, assets, api, cli
-
 include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
 
 include::anypoint-cli::partial$exchange-assets.adoc[tag=commands]

@@ -1,11 +1,5 @@
 = Anypoint Platform Account
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: administration, api, business group, user, environment, cli
-
-
 include::anypoint-cli::partial$account.adoc[tag=summary]
 
 include::anypoint-cli::partial$account.adoc[tag=commands]

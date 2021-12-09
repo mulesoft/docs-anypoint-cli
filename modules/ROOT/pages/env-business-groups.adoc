@@ -1,11 +1,5 @@
 = Environments and Business Groups
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: environment, business group, cli
-
-
 include::anypoint-cli::partial$env-business-groups.adoc[tag=summary]
 
 include::anypoint-cli::partial$env-business-groups.adoc[tag=commands]

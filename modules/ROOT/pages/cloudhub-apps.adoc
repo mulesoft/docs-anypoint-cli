@@ -1,11 +1,5 @@
 = CloudHub Applications
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: apps, cloudhub, cli
-
-
 include::anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
 
 include::anypoint-cli::partial$cloudhub-apps.adoc[tag=commands]
