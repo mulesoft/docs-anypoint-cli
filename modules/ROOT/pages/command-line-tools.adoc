@@ -1,8 +1,4 @@
 = Command Line Tools
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: cloudhub, cloud
 :page-aliases: runtime-manager::command-line-tools.adoc
 
 [WARNING]
