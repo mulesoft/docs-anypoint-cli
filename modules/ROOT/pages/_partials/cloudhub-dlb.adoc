@@ -107,7 +107,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
-Further configuration information can be found in xref:runtime-manager::lb-ssl-endpoints[Configure SSL Endpoints and Certificates].
+For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
 == cloudhub load-balancer start
 
