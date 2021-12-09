@@ -2273,7 +2273,7 @@ This command does not take any options, except for the default ones: `--help`, `
 ----
 > cloudhub vpc create [options] <name> <region> <cidrBlock> [environments...]
 ----
-This command creates a VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::vpc-provisioning-concept.html#faq_how_to_size_vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environments] passed as arguments thereafter.
+This command creates a VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::vpc-provisioning-concept.adoc#faq_how_to_size_vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environments] passed as arguments thereafter.
 
 [NOTE]
 A VPC needs to be bound to a business group within your organization. When creating a VPC, make sure to assign it a business group using the <<cloudhub vpc business-groups add, business-groups add>> command.
