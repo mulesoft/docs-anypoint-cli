@@ -1,0 +1,10 @@
+= Runtime Manager
+
+Anypoint CLI supports managing these Runtime Manager features:
+
+* xref:standalone-apps.adoc[]
+* xref:standalone-alerts.adoc[]
+* xref:servers.adoc[]
+* xref:server-clusters.adoc[]
+* xref:server-groups.adoc[]
+* xref:rtf-instances.adoc[]
