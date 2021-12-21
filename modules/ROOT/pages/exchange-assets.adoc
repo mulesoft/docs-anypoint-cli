@@ -1,4 +1,4 @@
-= Exchange Assets
+= CLI for Exchange Assets
 
 include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
 

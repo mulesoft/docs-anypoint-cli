@@ -1,4 +1,4 @@
-= CloudHub Applications
+= CLI for CloudHub Applications
 
 include::anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
 

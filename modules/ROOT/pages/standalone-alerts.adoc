@@ -1,4 +1,6 @@
-= Alerts for Locally Deployed Applications Managed by Runtime Manager
+= CLI for Hybrid Application Alerts
+
+Use these commands to control alerts for apps that are deployed to your local Mule server and managed with Runtime Manager.
 
 include::anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
 

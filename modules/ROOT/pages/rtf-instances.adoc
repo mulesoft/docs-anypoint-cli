@@ -1,4 +1,4 @@
-= Runtime Fabric Instances
+= CLI for Runtime Fabric Instances
 
 include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
 

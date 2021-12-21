@@ -1,4 +1,4 @@
-= Anypoint Platform Account
+= CLI for Anypoint Platform Accounts
 
 include::anypoint-cli::partial$account.adoc[tag=summary]
 

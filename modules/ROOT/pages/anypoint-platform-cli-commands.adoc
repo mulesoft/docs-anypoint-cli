@@ -1,4 +1,4 @@
-= Anypoint Platform CLI 3.x List of Commands
+= Anypoint CLI 3.x List of Commands
 :page-aliases: runtime-manager::anypoint-platform-cli-commands.adoc
 
 
@@ -214,7 +214,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 
 
 [[standalone-apps]]
-== Locally Deployed Applications Managed by Runtime Manager
+== Hybrid Applications
 
 [CAUTION]
 In order for the Anypoint Platform CLI to recognize your target servers, each server needs to be manually registered with the platform.
@@ -236,7 +236,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |===
 
 [[standalone-alerts]]
-== Alerts for Locally Deployed Applications Managed by Runtime Manager
+== Alerts for Hybrid Applications
 
 [%header,cols="35a,65a"]
 |===

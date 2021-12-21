@@ -1,4 +1,4 @@
-= Local Servers
+= CLI for Local Servers
 
 include::anypoint-cli::partial$servers.adoc[tag=summary]
 
