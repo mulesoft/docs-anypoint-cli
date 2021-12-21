@@ -1,4 +1,4 @@
-= Environments and Business Groups
+= CLI for Environments and Business Groups
 
 include::anypoint-cli::partial$env-business-groups.adoc[tag=summary]
 

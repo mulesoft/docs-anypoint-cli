@@ -1,4 +1,4 @@
-= API Manager
+= CLI for API Manager
 
 include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
 

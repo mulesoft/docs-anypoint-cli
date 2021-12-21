@@ -1,8 +1,8 @@
-= CloudHub
+= CLI for CloudHub
 
 Anypoint CLI supports managing these CloudHub features:
 
-* xref:cloudhub-apps.adoc[]
-* xref:cloudhub-dlb.adoc[]
-* xref:cloudhub-vpc.adoc[]
+* xref:cloudhub-apps.adoc[CloudHub Applications]
+* xref:cloudhub-dlb.adoc[CloudHub Dedicated Load Balancers]
+* xref:cloudhub-vpc.adoc[Anypoint Virtual Private Cloud]
 

@@ -1,4 +1,4 @@
-= Anypoint Virtual Private Cloud
+= CLI for Anypoint Virtual Private Cloud
 
 include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
 

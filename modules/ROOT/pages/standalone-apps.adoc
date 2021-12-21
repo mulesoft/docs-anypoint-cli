@@ -1,4 +1,6 @@
-= Locally Deployed Applications Managed by Runtime Manager
+= CLI for Hybrid Applications
+
+Use these commands for apps that are deployed to your local Mule server and managed with Runtime Manager.
 
 include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
 

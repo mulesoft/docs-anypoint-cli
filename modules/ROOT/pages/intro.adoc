@@ -1,5 +1,4 @@
-= Use Anypoint Platform CLI
-
+= Use Anypoint CLI
 
 include::anypoint-cli::partial$intro.adoc[tag=syntax]
 

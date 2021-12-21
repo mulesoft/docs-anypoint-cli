@@ -1,4 +1,4 @@
-= Design Center Applications
+= CLI for Design Center Projects
 
 include::anypoint-cli::partial$design-center.adoc[tag=summary]
 

@@ -1,4 +1,4 @@
-= DataGraph
+= CLI for DataGraph
 
 include::anypoint-cli::partial$datagraph.adoc[tag=summary]
 
