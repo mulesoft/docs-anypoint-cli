@@ -1,15 +1,20 @@
 = About Anypoint CLI 4.x
 :page-aliases: runtime-manager::anypoint-platform-cli.adoc
 
-Anypoint Platform provides a scripting and command-line tool for both Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
-The command-line interface (CLI) supports both the interactive shell and standard CLI modes and works with:
+Anypoint Platform provides a scripting and command-line tool for Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 
-* xref:exchange::index.adoc[Anypoint Exchange]
-* xref:access-management::index.adoc[Access management]
-* xref:runtime-manager::index.adoc[Anypoint Runtime Manager]
-+
-Use Runtime Manager to manage Mule applications deployed to CloudHub (hosted by MuleSoft) and locally hosted Mule servers.
-* xref:runtime-manager::virtual-private-cloud.adoc[VPCs]
-* xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[CloudHub Load Balancers]
-* xref:2.x@api-manager::index.adoc[API Manager 2.x (Crowd Release)]
-* xref:design-center::index.adoc[Design Center]
+To get started with Anypoint CLI: 
+
+. <<install.adoc#,Install>> the Anypoint CLI.
+. <<index.adoc,Become familiar>> with using the commands, including how to authenticate and optionally use a proxy.
+. <<anypoint-platform-cli-commands.adoc,View the list of commands>> available for the product features you want to access through CLI.
+
+See Also
+
+* xref:exchange::index.adoc[Anypoint Exchange Documentation]
+* xref:access-management::index.adoc[Access Management Documentation]
+* xref:runtime-manager::index.adoc[Anypoint Runtime Manager Documentation]
+* xref:runtime-manager::virtual-private-cloud.adoc[VPC Documentation]
+* xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[CloudHub Load Balancers Documentation]
+* xref:2.x@api-manager::index.adoc[API Manager 2.x (Crowd Release) Documentation]
+* xref:design-center::index.adoc[Design Center Documentation]

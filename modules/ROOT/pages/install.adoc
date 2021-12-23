@@ -1,5 +1,7 @@
 = Install Anypoint CLI
 
+You can install Anypoint CLI from npm. It is provided as a set of plugins. You can choose to download the entire set or just the plugin for the product areas you are actively using. 
+
 [[prereqs]]
 == Prerequisites
 
