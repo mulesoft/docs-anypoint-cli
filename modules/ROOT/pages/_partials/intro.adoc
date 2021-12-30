@@ -16,7 +16,7 @@ The Anypoint Platform CLI command set has the following syntax:
 // I commented out source,console out because the command shows as yellow, which is an accessibility issue when using a white background. We can research a better color scheme for commands if it is necessary.
 
 ----
-$ anypoint-cli [params] [command]
+$ anypoint-cli [command] [options]
 ----
 
 If you pass a command and there is an error, the application exits and returns a description of the issue.
