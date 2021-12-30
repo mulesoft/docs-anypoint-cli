@@ -1,10 +1,14 @@
 = Use Anypoint Platform CLI
 
+// tag::usageintro[]
+
 // Check this for 4.x, as I think interactive mode will no longer be supported.  
 
 Use Anypoint Platform CLI commands to automate a subset of product actions through scripts. 
 
 Anypoint Platform CLI can be run in batch or interactive mode. 
+
+// end::usageintro[]
 
 // tag::syntax[]
 
