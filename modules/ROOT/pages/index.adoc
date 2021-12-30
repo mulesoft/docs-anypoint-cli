@@ -6,5 +6,5 @@ Anypoint Platform provides a scripting and command-line tool for Anypoint Platfo
 To get started with Anypoint CLI: 
 
 . <<install.adoc#,Install>> the Anypoint CLI.
-. <<index.adoc,See how to use the commands>>, including how to authenticate and optionally use a proxy.
-. <<anypoint-platform-cli-commands.adoc,View the list of commands>> available for the product features you want to access through CLI.
+. <<index.adoc#,See how to use the commands>>, including how to authenticate and optionally use a proxy.
+. <<anypoint-platform-cli-commands.adoc#,View the list of commands>> available for the product features you want to access through CLI.
