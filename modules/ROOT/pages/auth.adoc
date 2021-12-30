@@ -3,6 +3,15 @@
 You can configure Anypoint CLI authentication with username and password, client ID and client secret, or a bearer token.
 At least one method is required.
 
+You can optionally set environment variables to hold the credential values or create a credentials file. See the following sections for details.
+
+* <<username-pw>>
+* <<client-id-secret>>
+* <<bearer-token>>
+* <<credentials-file>>
+* <<env-variables>>
+* <<cli-options>>
+
 [[username-pw]]
 === Username and Password
 
@@ -58,7 +67,9 @@ For information about generating a bearer token, see https://help.mulesoft.com/s
 [[credentials-file]]
 === Credentials File
 
-The recommended way of passing these options to your Anypoint Platform CLI installation is using the `credentials` file located inside the `~/.anypoint` directory, which is not automatically created during installation. Follow these steps to create your credentials file:
+The recommended way of passing credential options to your Anypoint Platform CLI installation is using the `credentials` file located inside the `~/.anypoint` directory, which is not automatically created during installation. 
+
+To create your credentials file:
 
 . Create a directory called `.anypoint` in the `~/` directory for Linux and OSx, or `C:\Users\USERNAME \` in Windows.
 . Navigate to your `.anypoint` directory and create a blank file named `credentials` with the following structure:

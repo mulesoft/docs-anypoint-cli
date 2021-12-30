@@ -29,23 +29,33 @@ You can also pass this value using a dedicated environment variable `ANYPOINT_HO
 
 |===
 
-[[cli-usage]]
-== Usage
+[[general]]
+== General Anypoint CLI Functionality
 
-Keep the following in mind while using the Anypoint CLI:
+[[overrides]]
+=== Override Order
 
-. Environment variables override credentials file parameters and command-line parameters override environment variables. +
+You can use environment variables to define parameter values in Anypoint CLI. Following is the override order if you mix environment variable settings with explicit command line values:
+
+* Environment variables override credentials file parameters and command-line parameters override environment variables. +
 If you don't pass a command-line parameter, the default profile properties are used.
-. If not specified, the default environment is production.
-+
-. Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
-+
+* If not specified, the default environment is production.
+
+
+[[session-timeout]]
+=== Session Timeout
+Your Anypoint Platform session expires based on the *Default session timeout* configured in your Master Organization settings.
+
 For information about Master Organization settings, see xref:access-management::organization.adoc#manage-root-organization-settings[Manage Root Organization Settings].
-. The Anypoint CLI works with autocomplete.
-+
+
+[[autocomplete]]
+=== Command Autocompletion
+
+The Anypoint CLI works with autocomplete.
+
 You can start typing the name of the command or parameter and press Tab for autocomplete or press Tab+Tab for a list of options.
 
-[[notes]]
-== Notes
+[[data-collection]]
+=== Anonymized Usage Data
 
-* To improve the Anypoint CLI experience, we gather anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
+To improve the Anypoint CLI experience, we gather anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
