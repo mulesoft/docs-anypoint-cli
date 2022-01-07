@@ -1,8 +1,24 @@
 = CLI for DataGraph API Source Management
 
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+| <<datagraph sources add>> | Adds an API source 
+| <<datagraph sources promote>> | Promotes an API source
+| <<datagraph sources update>> | Updates an API source
+| <<datagraph scale>> | Scales API calls made to the unified schema
+| <<datagraph schema-download>> | Downloads the unified schema
+| <<datagraph sources delete>> | Deletes an API source
+| <<datagraph sources get>> | Gets an API source
+| <<datagraph sources list>> | Lists all API sources
+| <<datagraph describe>> | Returns information about DataGraph
+|===
+
+// end::summary[]
 
 // tag::commands[]
-
 
 == datagraph sources add
 
