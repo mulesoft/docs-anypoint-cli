@@ -50,7 +50,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option|Description
 | `enabled`
 | Sets whether the alert should be enabled or not. +
 Possible values are `true` or `false`.
@@ -111,7 +111,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Value |Description | Example
+|Option |Description | Example
 | `--offset` | Offsets the amount of APIs passed | `api-mgr alert list --offset 3`
 | `--sort` | Sorts the results in the field name passed | `api-mgr alert list --sort "Latest Version"`
 |===
@@ -162,7 +162,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Value |Description | Example
+|Option|Description | Example
 | `target <id>`
 | Hybrid or RTF deployment target ID. +
 | `api-mgr api deploy --target 1598794 643404`
@@ -228,7 +228,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
 This option takes `true` or `false` values.
@@ -290,7 +290,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `--assetId <value>`       | Asset ID by which filter results.
 | `--apiVersion <value>`    | API version by which filter results.
 | `--instanceLabel <value>` | API instance label by which  filter results.
@@ -311,7 +311,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `--type <value>`
 | Endpoint type. +
 Accepted values are `http`, `raml`, or `wsdl`.
@@ -377,7 +377,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `-a, --copyAlerts`
 | Indicates whether to copy alerts. +
 This option takes `true` or `false` values. Default Value is `true`
@@ -404,7 +404,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `--target <id>`
 | Hybrid or RTF deployment target ID.
 
@@ -459,7 +459,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Value |Description |Example
+|Option |Description |Example
 |`--limit` | Number of results to retrieve | `exchange asset list --limit 2`
 |`--offset` | Offsets the amount of APIs passed | `api-mgr contract list --offset 3 643404`
 |`--sort` | Sorts the results in the field name passed | `api-mgr contract list --sort "Latest Version" 643404`
@@ -475,7 +475,7 @@ Applies the policy passed in `<policyId>` to the API instance passed in `<apiIns
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `--policyVersion <value>`
 | Mule 4 policy version.
 
@@ -504,7 +504,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `--policyVersion <value>`
 | Mule4 policy version.
 
@@ -536,7 +536,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `-c, --config [configJSON`]
 | Pass the configuration data as a JSON string. +
 For example, `api-mgr policy apply -c '{"property": "value"}'`
@@ -590,7 +590,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `-a, --autoApprove`
 | Indicates whether the SAL tier should be auto-approved. +
 This command only takes `true` or `false` values.
@@ -656,7 +656,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description | Example
+|Option |Description | Example
 |`--limit` | Number of results to retrieve | `api-mgr tier list --limit 2`
 |`--offset` | Offsets the amount of APIs passed | `api-mgr tier list --offset 3`
 |`--sort` | Sorts the results in the field name passed | `api-mgr tier list --sort "Latest Version"`

@@ -74,7 +74,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 This command creates a load balancer using the specified values in the variables.
 [%header,cols="12,53a,35a"]
 |===
-|Value |Description |Example
+|Option |Description |Example
 | `vpc` |Name of the Anypoint VPC to which this load balancer is bound. +
 If your Anypoint VPC name contains spaces, you need to pass it between ´"´ characters. | `vpc-demo`
 | `name` |Name for the load balancer. | `newtestloadbalancer`
@@ -95,7 +95,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header,cols="30a,70a"]
 |===
-|Value |Description
+|Option |Description
 |`http` | Specifies the Load balancer HTTP behavior. It can be set to `on` (accepts HTTP requests and forwards it to your configured default `_sslendpoint_`), `off` (refuses all HTTP requests), or `redirect` (redirects to HTTPS).
 |`clientCertificate` | Client certificate file
 |`verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always), `off` (don't verify), or `optional` (verification optional).
@@ -148,7 +148,7 @@ This command adds an SSL endpoint to the load balancer specified in `<name>`, us
 
 [%header,cols="12a,53a,35a"]
 |===
-|Value |Description |Example
+|Option |Description |Example
 | `name` |Name for the load balancer. | `newtestloadbalancer`
 | `certificate` |Absolute path to the `.pem` file of your certificate in your local hard drive. +
 Your certificate files need to be PEM encoded and not encrypted. | `/Users/mule/Documents/cert.pem`
@@ -163,7 +163,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header,cols="15a,85a"]
 |===
-|Value |Description
+|Option |Description
 |clientCertificate | Client certificate file
 |verificationMode  | Specifies the client verification mode. It can be set to `on` (verify always) `off` (don't verify) or `optional` (Verification optional).
 |crl | Certificate Revocation List file
@@ -196,7 +196,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header,cols="30a,70a"]
 |===
-|Value |Description
+|Option |Description
 |`http` | Specifies the Load balancer HTTP behavior
 |===
 
@@ -256,7 +256,7 @@ If no `certificateName` is passed, Anypoint Platform CLI adds the mappings to th
 
 [%header,cols="12a,68a,20a"]
 |===
-|Value |Description |Example
+|Option |Description |Example
 |`name` |Name of the load balancer to which this rule is applied. |`testloadbalancer`
 |`index` |Priority of the rule.  |1
 |`inputUri` |Name of the URI of your input URL |example.com
@@ -271,7 +271,7 @@ The `--upstreamProtocol` option sets the protocol used by your application to co
 
 [%header,cols="25a,60a"]
 |===
-| Option | Description
+|Option | Description
 | `--upstreamProtocol <protocol>` | Look for upstream applications in HTTP port 8091 or HTTPS port 8092.
 Supported Values: `http`, `https`
 | `--certificateName <certificate name>` | Optional parameter
