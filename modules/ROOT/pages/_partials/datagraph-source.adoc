@@ -39,8 +39,8 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 Set headers using a comma-separated list of `key:value` pairs.
 |`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params.
 Use a comma-separated list of `key:value` pairs.
-|`--headers-file` | Specifies the file path containing header `key:value` pairs, one pair per line.
-|`--query-params-file` | Specifies the file path containing query param `key:value` pairs, one pair per line.
+|`--headers-file` | Specifies the file containing header `key:value` pairs, one pair per line.
+|`--query-params-file` | Specifies the file containing query param `key:value` pairs, one pair per line.
 |`url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
 |`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
@@ -72,8 +72,8 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 |`-P` | Reads a password from `STDIN`.
 |`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers. Set headers using a comma-separated list of `key:value` pairs.
 |`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params. Use a comma-separated list of `key:value` pairs.
-|`--headers-file` | Specifies the file path containing header `key:value` pairs, one pair per line.
-|`--query-params-file` | Specifies the file path containing query param `key:value` pairs, one pair per line.
+|`--headers-file` | Specifies the file containing header `key:value` pairs, one pair per line.
+|`--query-params-file` | Specifies the file containing query param `key:value` pairs, one pair per line.
 |`url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
 |`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
@@ -105,8 +105,8 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 |`-P` | Reads a password from `STDIN`.
 |`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers. Set headers using a comma-separated list of `key:value` pairs.
 |`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params. Use a comma-separated list of `key:value` pairs.
-|`--headers-file` | Specifies the file path containing header `key:value` pairs, one pair per line.
-|`--query-params-file` | Specifies the file path containing query param `key:value` pairs, one pair per line.
+|`--headers-file` | Specifies the file containing header `key:value` pairs, one pair per line.
+|`--query-params-file` | Specifies the file containing query param `key:value` pairs, one pair per line.
 |`url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
 |`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
