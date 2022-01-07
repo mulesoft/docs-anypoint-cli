@@ -1,0 +1,172 @@
+= CLI for DataGraph API Source Management
+
+
+// tag::commands[]
+
+
+== datagraph sources add
+
+----
+> datagraph sources add <gav>
+----
+
+This command adds an API source, specified by `<gav>`—the group, asset, and version of the API source. 
+ 
+In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
+
+[%header,cols="30a,40a,30a"]
+|===
+| Options | Description
+|`-p` | Prompts for a password.
+|`-P` | Reads a password from `STDIN`.
+|`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers.
+Set headers using a comma-separated list of `key:value` pairs.
+|`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params.
+Use a comma-separated list of `key:value` pairs.
+|`--headers-file` | Specifies the file path containing header `key:value` pairs, one pair per line.
+|`--query-params-file` | Specifies the file path containing query param `key:value` pairs, one pair per line.
+|`url` | Configures the URL for the backend API.
+|`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
+|`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
+|`--ca` | Specifies a list of certificate authority (CA) files to add to the API's truststore.
+|`--cert` | Specifies the client certificate to use for mTLS.
+|`--key` | Specifies the private key to use for mTLS.
+|`--keyPassword` | Specifies the password to decrypt an encrypted private key.
+|`--delete-ca` | Deletes all CA certificates.
+|`--no-mtls` | Deletes the client certificate, private key, and private key password information.
+|===
+
+[NOTE]
+All headers and query params defined in the command line and the headers and query params files are appended. If there are repeated keys, the values provided in the command line takes precedence.
+
+== datagraph sources promote
+
+----
+> datagraph sources promote <sourceId> <targetEnv>
+----
+
+This command promotes an API source, specified by its `<sourceId>`, to the target environment, specified by `<targetEnv>`.
+
+In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
+
+[%header,cols="30a,40a,30a"]
+|===
+| Options | Description 
+|`-p` | Prompts for a password.
+|`-P` | Reads a password from `STDIN`.
+|`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers. Set headers using a comma-separated list of `key:value` pairs.
+|`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params. Use a comma-separated list of `key:value` pairs.
+|`--headers-file` | Specifies the file path containing header `key:value` pairs, one pair per line.
+|`--query-params-file` | Specifies the file path containing query param `key:value` pairs, one pair per line.
+|`url` | Configures the URL for the backend API.
+|`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
+|`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
+|`--ca` | Specifies a list of certificate authority (CA) files to add to the API's truststore.
+|`--cert` | Specifies the client certificate to use for mTLS.
+|`--key` | Specifies the private key to use for mTLS.
+|`--keyPassword` | Specifies the password to decrypt an encrypted private key.
+|`--delete-ca` | Deletes all CA certificates.
+|`--no-mtls` | Deletes the client certificate, private key, and private key password information.
+|===
+
+[NOTE]
+All headers and query params defined in the command line and the headers and query params files are appended. If there are repeated keys, the values provided in the command line takes precedence.
+
+== datagraph sources update 
+
+----
+> datagraph sources update <sourceId>
+----
+
+This command updates the version of an API source, specified by its `<sourceId>`.
+
+In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
+
+[%header,cols="30a,40a,30a"]
+|===
+| Options | Description 
+|`-p` | Prompts for a password.
+|`-P` | Reads a password from `STDIN`.
+|`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers. Set headers using a comma-separated list of `key:value` pairs.
+|`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params. Use a comma-separated list of `key:value` pairs.
+|`--headers-file` | Specifies the file path containing header `key:value` pairs, one pair per line.
+|`--query-params-file` | Specifies the file path containing query param `key:value` pairs, one pair per line.
+|`url` | Configures the URL for the backend API.
+|`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
+|`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
+|`--ca` | Specifies a list of certificate authority (CA) files to add to the API's truststore.
+|`--cert` | Specifies the client certificate to use for mTLS.
+|`--key` | Specifies the private key to use for mTLS.
+|`--keyPassword` | Specifies the password to decrypt an encrypted private key.
+|`--delete-ca` | Deletes all CA certificates.
+|`--no-mtls` | Deletes the client certificate, private key, and private key password information.
+|===
+
+[NOTE]
+All headers and query params defined in the command line and the headers and query params files are appended. If there are repeated keys, the values provided in the command line takes precedence.
+
+== datagraph scale 
+
+----
+> datagraph scale <api-calls>
+----
+
+This command allows you to configure the number of concurrent API calls, specified by `<api-calls>`, permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
+
+This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+
+== datagraph schema-download
+
+----
+> datagraph schema-download
+----
+
+This command downloads the unified schema for the current environment. 
+
+This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+
+== datagraph sources delete
+
+----
+> datagraph sources delete <sourceId>
+----
+
+This command deletes an API source, specified by `<sourceId>`.
+
+This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+
+== datagraph sources get 
+
+----
+> datagraph sources get <sourceId>
+----
+
+This command get an API source, specified by `<sourceId>`.
+
+This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+
+== datagraph sources list
+
+----
+> datagraph sources list
+----
+
+This command list all API sources for the current environment. 
+
+This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+
+== datagraph describe 
+
+----
+> datagraph describe
+----
+
+This command returns the following information about DataGraph:
+
+* `endpoint`: Displays the GraphQL endpoint that accepts requests.
+* `deploymentError`: If a DataGraph deployment fails, this field describes the error; otherwise, it's empty.
+* `deploymentStatus`: Shows whether DataGraph is deploying, running, or has errors.
+* `logLevels`: Displays a list of the configured log levels.
+
+This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+
