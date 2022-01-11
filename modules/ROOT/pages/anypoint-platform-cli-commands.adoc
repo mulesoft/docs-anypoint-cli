@@ -1,4 +1,4 @@
-= Anypoint CLI 3.x List of Commands
+= Anypoint CLI 4.x List of Commands
 :page-aliases: runtime-manager::anypoint-platform-cli-commands.adoc
 
 
