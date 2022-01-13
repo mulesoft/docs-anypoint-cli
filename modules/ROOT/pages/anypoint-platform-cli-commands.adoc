@@ -21,7 +21,9 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<rtf-instances>>
 
 == Test Video 
-video::https://share.vidyard.com/watch/odWqo4e4PSyZjs5x1u34jj?[width=640,start=10,opts=controls]
+//video::odWqo4e4PSyZjs5x1u34jj?[vidyard,width=640,start=10,opts=controls]
+
+video::Xp46m57w1Ns[youtube]
 
 [[account]]
 == Anypoint Platform Account
