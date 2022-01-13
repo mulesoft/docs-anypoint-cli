@@ -20,6 +20,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<server-clusters>>
 * <<rtf-instances>>
 
+== Test Video 
+embed video::https://share.vidyard.com/watch/odWqo4e4PSyZjs5x1u34jj?[width=640,start=10,opts=controls]
 
 [[account]]
 == Anypoint Platform Account
