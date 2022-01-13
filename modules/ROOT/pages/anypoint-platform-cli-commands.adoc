@@ -21,9 +21,16 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<rtf-instances>>
 
 == Test Video 
-//video::odWqo4e4PSyZjs5x1u34jj?[vidyard,width=640,start=10,opts=controls]
 
-video::Xp46m57w1Ns[youtube]
+=== Using image
+
+[#img-MSVideo] 
+[link=https://share.vidyard.com/watch/odWqo4e4PSyZjs5x1u34jj?] 
+image::thumbnail.png[Video,77,43]
+
+=== Using pass macro
+
+Click here to watch a short video. (pass:macros[https://share.vidyard.com/watch/odWqo4e4PSyZjs5x1u34jj?])
 
 [[account]]
 == Anypoint Platform Account
