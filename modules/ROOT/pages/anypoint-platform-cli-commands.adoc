@@ -24,13 +24,13 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 
 === Using image
 
-[#img-MSVideo] 
-[link=https://share.vidyard.com/watch/odWqo4e4PSyZjs5x1u34jj?] 
-image::thumbnail.png[Video,77,43]
+[#img-apicatalog-trigger-video] 
+[link=https://share.vidyard.com/watch/nrXhztqoSDUshX9DV9NnAm?] 
+image::api-catalog-thumb.png[640,360,window=_blank,alt=API Catalog Trigger Conditions Video]
 
-=== Using pass macro
+=== Using regular link
 
-Click here to watch a short video. (pass:macros[https://share.vidyard.com/watch/odWqo4e4PSyZjs5x1u34jj?])
+https://share.vidyard.com/watch/nrXhztqoSDUshX9DV9NnAm?[API Catalog trigger conditions video^]
 
 [[account]]
 == Anypoint Platform Account
