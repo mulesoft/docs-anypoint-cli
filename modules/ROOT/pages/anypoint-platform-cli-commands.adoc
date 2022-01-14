@@ -20,18 +20,6 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<server-clusters>>
 * <<rtf-instances>>
 
-== Test Video 
-
-=== Using image
-
-[#img-apicatalog-trigger-video] 
-[link=https://share.vidyard.com/watch/nrXhztqoSDUshX9DV9NnAm?] 
-image::api-catalog-thumb.png[640,360,window=_blank,alt=API Catalog Trigger Conditions Video]
-
-=== Using regular link
-
-https://share.vidyard.com/watch/nrXhztqoSDUshX9DV9NnAm?[API Catalog trigger conditions video^]
-
 [[account]]
 == Anypoint Platform Account
 
