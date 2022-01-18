@@ -30,26 +30,48 @@ This command adds an API source, specified by `<gav>`—the group, asset, and ve
  
 In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
 
-[%header,cols="30a,40a,30a"]
+[%header,cols="35a,65a"]
 |===
 | Options | Description
-|`-p` | Prompts for a password.
-|`-P` | Reads a password from `STDIN`.
-|`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers.
-Set headers using a comma-separated list of `key:value` pairs.
-|`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params.
-Use a comma-separated list of `key:value` pairs.
-|`--headers-file` | Specifies the file containing header `key:value` pairs, one pair per line.
-|`--query-params-file` | Specifies the file containing query param `key:value` pairs, one pair per line.
-|`url` | Configures the URL for the backend API.
+|`--auth-none` | Use if your API is public.
+|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password.
+ 
+Additional required options:
+
+* `--basic-credentials <username>:<password>`
+
+|`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
+
+Additional required options:
+
+* `--client-credentials <client_id>:<client_secret>`
+* `--<authorization server URL>` 
+* `--<scope>`
+
+|`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
+
+Additional required options:
+
+*  `--mapping: <comma-separated list of key:value pairs>`
+
+|`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
+
+Additional required options for query params:
+
+* `--query-params: <comma-separated list of key:value pairs>`
+* `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
+
+Additional required options for headers: 
+
+* `--headers: c<omma-separated list of key:value pairs>`
+* `--headers-file: <location of the file containing header key:value pairs, one per line>`
+
+|`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
-|`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
-|`--ca` | Specifies a list of certificate authority (CA) files to add to the API's truststore.
-|`--cert` | Specifies the client certificate to use for mTLS.
-|`--key` | Specifies the private key to use for mTLS.
-|`--keyPassword` | Specifies the password to decrypt an encrypted private key.
-|`--delete-ca` | Deletes all CA certificates.
-|`--no-mtls` | Deletes the client certificate, private key, and private key password information.
+|`--ca` | Specify a list of certificate authority (CA) files to add to the API's truststore.
+|`--cert` | Specify the client certificate to use for mTLS.
+|`--key` | Specify the private key to use for mTLS.
+|`--key-password` | Specify the password to decrypt an encrypted private key.
 |===
 
 [NOTE]
@@ -68,19 +90,45 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 [%header,cols="30a,40a,30a"]
 |===
 | Options | Description 
-|`-p` | Prompts for a password.
-|`-P` | Reads a password from `STDIN`.
-|`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers. Set headers using a comma-separated list of `key:value` pairs.
-|`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params. Use a comma-separated list of `key:value` pairs.
-|`--headers-file` | Specifies the file containing header `key:value` pairs, one pair per line.
-|`--query-params-file` | Specifies the file containing query param `key:value` pairs, one pair per line.
-|`url` | Configures the URL for the backend API.
+|`--auth-none` | Use if your API is public.
+|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password.
+ 
+Additional required options:
+
+* `--basic-credentials <username>:<password>`
+
+|`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
+
+Additional required options:
+
+* `--client-credentials <client_id>:<client_secret>`
+* `--<authorization server URL>` 
+* `--<scope>`
+
+|`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
+
+Additional required options:
+
+*  `--mapping: <comma-separated list of key:value pairs>`
+
+|`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
+
+Additional required options for query params:
+
+* `--query-params: <comma-separated list of key:value pairs>`
+* `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
+
+Additional required options for headers: 
+
+* `--headers: c<omma-separated list of key:value pairs>`
+* `--headers-file: <location of the file containing header key:value pairs, one per line>`
+
+|`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
-|`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
-|`--ca` | Specifies a list of certificate authority (CA) files to add to the API's truststore.
-|`--cert` | Specifies the client certificate to use for mTLS.
-|`--key` | Specifies the private key to use for mTLS.
-|`--keyPassword` | Specifies the password to decrypt an encrypted private key.
+|`--ca` | Specify a list of certificate authority (CA) files to add to the API's truststore.
+|`--cert` | Specify the client certificate to use for mTLS.
+|`--key` | Specify the private key to use for mTLS.
+|`--key-password` | Specifies the password to decrypt an encrypted private key.
 |`--delete-ca` | Deletes all CA certificates.
 |`--no-mtls` | Deletes the client certificate, private key, and private key password information.
 |===
@@ -101,19 +149,45 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 [%header,cols="30a,40a,30a"]
 |===
 | Options | Description 
-|`-p` | Prompts for a password.
-|`-P` | Reads a password from `STDIN`.
-|`--headers` | Use if you authenticate to your API by passing `client_id` and `client_secret` headers. Set headers using a comma-separated list of `key:value` pairs.
-|`--query-params` | Use if you authenticate to your API by passing `client_id` and `client_secret` query params. Use a comma-separated list of `key:value` pairs.
-|`--headers-file` | Specifies the file containing header `key:value` pairs, one pair per line.
-|`--query-params-file` | Specifies the file containing query param `key:value` pairs, one pair per line.
-|`url` | Configures the URL for the backend API.
+|`--auth-none` | Use if your API is public.
+|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password.
+ 
+Additional required options:
+
+* `--basic-credentials <username>:<password>`
+
+|`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
+
+Additional required options:
+
+* `--client-credentials <client_id>:<client_secret>`
+* `--<authorization server URL>` 
+* `--<scope>`
+
+|`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
+
+Additional required options:
+
+*  `--mapping: <comma-separated list of key:value pairs>`
+
+|`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
+
+Additional required options for query params:
+
+* `--query-params: <comma-separated list of key:value pairs>`
+* `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
+
+Additional required options for headers: 
+
+* `--headers: c<omma-separated list of key:value pairs>`
+* `--headers-file: <location of the file containing header key:value pairs, one per line>`
+
+|`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
-|`--discover-url-api-instance` | Automatically sets the URL of the backend API based on the provided API instance.
-|`--ca` | Specifies a list of certificate authority (CA) files to add to the API's truststore.
-|`--cert` | Specifies the client certificate to use for mTLS.
-|`--key` | Specifies the private key to use for mTLS.
-|`--keyPassword` | Specifies the password to decrypt an encrypted private key.
+|`--ca` | Specify a list of certificate authority (CA) files to add to the API's truststore.
+|`--cert` | Specify the client certificate to use for mTLS.
+|`--key` | Specify the private key to use for mTLS.
+|`--key-password` | Specifies the password to decrypt an encrypted private key.
 |`--delete-ca` | Deletes all CA certificates.
 |`--no-mtls` | Deletes the client certificate, private key, and private key password information.
 |===
