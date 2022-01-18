@@ -1,4 +1,4 @@
-= CLI for DataGraph
+= CLI for DataGraph Load Balancers
 
 include::anypoint-cli::partial$datagraph.adoc[tag=summary]
 
