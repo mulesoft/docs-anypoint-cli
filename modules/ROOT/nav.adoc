@@ -11,7 +11,7 @@
  ** xref:cloudhub-vpc.adoc[Anypoint Virtual Private Cloud]
 * xref:datagraph-index.adoc[DataGraph]
  ** xref:datagraph.adoc[DataGraph Load Balancers]
- ** xref:datagraph-source.adoc [DataGraph API Source Management]
+ ** xref:datagraph-source.adoc[DataGraph API Source Management]
 * xref:design-center.adoc[Design Center Projects]
 * xref:exchange-assets.adoc[Exchange Assets]
 * xref:runtime-manager.adoc[Runtime Manager]
