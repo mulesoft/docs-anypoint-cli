@@ -34,34 +34,39 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 |===
 | Options | Description
 |`--auth-none` | Use if your API is public.
-|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password.
- 
-Additional required options:
+|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password. 
+{sp} +
+{sp} +
+Required:
 
 * `--basic-credentials <username>:<password>`
 
-|`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
-
-Additional required options:
+|`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values.
+{sp} +
+{sp} +
+Required:
 
 * `--client-credentials <client_id>:<client_secret>`
 * `--<authorization server URL>` 
 * `--<scope>`
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
-
-Additional required options:
+{sp} +
+{sp} +
+Required:
 
 *  `--mapping: <comma-separated list of key:value pairs>`
 
 |`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
-
-Additional required options for query params:
+{sp} +
+{sp} +
+Required for query params:
 
 * `--query-params: <comma-separated list of key:value pairs>`
 * `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
-
-Additional required options for headers: 
+{sp} +
+{sp} +
+Required for headers: 
 
 * `--headers: c<omma-separated list of key:value pairs>`
 * `--headers-file: <location of the file containing header key:value pairs, one per line>`
@@ -87,38 +92,43 @@ This command promotes an API source, specified by its `<sourceId>`, to the targe
 
 In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
 
-[%header,cols="30a,40a,30a"]
+[%header,cols="35a,65a"]
 |===
 | Options | Description 
 |`--auth-none` | Use if your API is public.
 |`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password.
- 
-Additional required options:
+{sp} +
+{sp} +
+Required:
 
 * `--basic-credentials <username>:<password>`
 
 |`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
-
-Additional required options:
+{sp} +
+{sp} +
+Required:
 
 * `--client-credentials <client_id>:<client_secret>`
 * `--<authorization server URL>` 
 * `--<scope>`
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
-
-Additional required options:
+{sp} +
+{sp} +
+Required:
 
 *  `--mapping: <comma-separated list of key:value pairs>`
 
 |`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
-
-Additional required options for query params:
+{sp} +
+{sp} +
+Required for query params:
 
 * `--query-params: <comma-separated list of key:value pairs>`
 * `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
-
-Additional required options for headers: 
+{sp} +
+{sp} +
+Required for headers: 
 
 * `--headers: c<omma-separated list of key:value pairs>`
 * `--headers-file: <location of the file containing header key:value pairs, one per line>`
@@ -146,38 +156,43 @@ This command updates the version of an API source, specified by its `<sourceId>`
 
 In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
 
-[%header,cols="30a,40a,30a"]
+[%header,cols="35a,65a"]
 |===
 | Options | Description 
 |`--auth-none` | Use if your API is public.
-|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password.
- 
-Additional required options:
+|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password. 
+{sp} +
+{sp} +
+Required:
 
 * `--basic-credentials <username>:<password>`
 
 |`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
-
-Additional required options:
+{sp} +
+{sp} +
+Required:
 
 * `--client-credentials <client_id>:<client_secret>`
 * `--<authorization server URL>` 
 * `--<scope>`
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
-
-Additional required options:
+{sp} +
+{sp} +
+Required:
 
 *  `--mapping: <comma-separated list of key:value pairs>`
 
 |`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
-
-Additional required options for query params:
+{sp} +
+{sp} +
+Required for query params:
 
 * `--query-params: <comma-separated list of key:value pairs>`
 * `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
-
-Additional required options for headers: 
+{sp} +
+{sp} +
+Required for headers: 
 
 * `--headers: c<omma-separated list of key:value pairs>`
 * `--headers-file: <location of the file containing header key:value pairs, one per line>`
@@ -260,3 +275,4 @@ This command returns the following information about DataGraph:
 
 This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
 
+// end::commands[]
