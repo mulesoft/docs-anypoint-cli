@@ -1,0 +1,55 @@
+
+= All Product Summaries
+
+// tag::account-summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<account user describe>>| Show account details
+|<<account business-group list>>| Lists business groups
+|<<account business-group describe>>| Show details of a business group
+|<<account environment list>>| Lists environments
+|<<account environment create>>| Create new environment
+|<<account environment delete>>| Delete an environment
+|<<account environment describe>> | Shows details of an environment
+|===
+
+// end::account-summary[]
+
+// tag::api-mgr-summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<api-mgr alert add>> | Creates an API instance alert
+|<<api-mgr alert list>> | Lists alerts for an API instance
+|<<api-mgr api change-specification>> | Changes the asset version for an API instance by choosing a new version from Exchange
+|<<api-mgr api classify>> |Classifies an API instance in a given environment
+|<<api-mgr api delete>> | Deletes an API
+|<<api-mgr api deploy>> | Deploys an API to CloudHub, hybrid server, or Runtime Fabric
+|<<api-mgr api deprecate>> | Deprecates an API instance
+|<<api-mgr api describe>> | Shows details of an API
+|<<api-mgr api download-proxy>> | Downloads the API proxy ZIP file to a local directory
+|<<api-mgr api edit>> | Edits an API instance
+|<<api-mgr api list>> | Lists all APIs in API Manager 2.x
+|<<api-mgr api manage>> | Manages a new API, API version, or new API instance with an asset from Exchange
+|<<api-mgr api promote>> | Promotes an API instance from source environment
+|<<api-mgr api redeploy>> | Redeploys an API to CloudHub, Hybrid server, or Runtime Fabric
+|<<api-mgr api undeprecate>> | Undeprecates an API instance
+|<<api-mgr contract delete>> | Deletes a given API contract
+|<<api-mgr contract list>> | Lists all contracts to a given API instance.
+|<<api-mgr policy apply>> | Applies a policy to a given API instance
+|<<api-mgr policy describe>> | Shows the description and available configuration properties of a given policy template
+|<<api-mgr policy disable>> | Disables policy from a given API instance
+|<<api-mgr policy edit>> | Edits the policy configuration of a given API instance
+|<<api-mgr policy enable>> | Enables a policy on a given API instance
+|<<api-mgr policy list>> | Lists policies
+|<<api-mgr policy remove>> | Removes a policy from a given API instance
+|<<api-mgr tier add>> | Creates an SLA tier
+|<<api-mgr tier copy>> | Copies an SLA tier from source to a target API Instance
+|<<api-mgr tier delete>> | Deletes an SLA tier from an API instance
+|<<api-mgr tier list>> | Lists the SLA tiers of an API instance
+|===
+
+// end::api-mgr-summary[]
