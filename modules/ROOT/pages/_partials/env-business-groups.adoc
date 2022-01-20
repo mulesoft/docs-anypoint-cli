@@ -3,12 +3,20 @@
 
 // tag::summary[]
 
+//[%header,cols="35a,65a"]
+//|===
+//|Command |Description
+//|<<use environment>>| Make specified environment active
+//|<<use business-group>>| Make specified business-group active
+//|===
+
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<use environment>>| Make specified environment active
-|<<use business-group>>| Make specified business-group active
+|xref:env-business-groups.adoc#use-environment[use environment]| Make specified environment active
+|xref:env-business-groups.adoc#use-business-group[use business-group]| Make specified business-group active
 |===
+
 
 // end::summary[]
 
