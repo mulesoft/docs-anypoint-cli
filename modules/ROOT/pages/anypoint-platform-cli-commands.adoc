@@ -23,35 +23,17 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 [[account]]
 == Anypoint Platform Account
 
-include::anypoint-cli::partial$all-prod-summaries.adoc[tag=account-summary]
-
-//[%header,cols="35a,65a"]
-//|===
-//|Command |Description
-//|xref:account.adoc#account-user-describe[account user describe]| Show account details
-//|xref:account.adoc#account-business-group-list[account business-group list]| Lists business groups
-//|xref:account.adoc#account-business-group-describe[account business-group describe]| Show details of a business group
-//|xref:account.adoc#account-environment-list[account environment list]| Lists environments
-//|xref:account.adoc#account-environment-create[account environment create]| Create new environment
-//|xref:account.adoc#account-environment-delete[account environment delete]| Delete an environment
-//|xref:account.adoc#account-environment-describe[account environment describe]| Shows details of an environment
-//|===
+include::anypoint-cli::partial$account.adoc[tag=summary]
 
 [[env-business-groups]]
 == Environments and Business Groups
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:env-business-groups.adoc#use-environment[use environment]| Make specified environment active
-|xref:env-business-groups.adoc#use-business-group[use business-group]| Make specified business-group active
-|===
-
+include::anypoint-cli::partial$env-business-groups.adoc[tag=summary]
 
 [[api-mgr]]
 == API Manager
 
-include::anypoint-cli::partial$all-prod-summaries.adoc[tag=api-mgr-summary]
+include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
 
 [[cloudhub-apps]]
 == CloudHub Applications
