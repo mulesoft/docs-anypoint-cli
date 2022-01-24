@@ -38,219 +38,65 @@ include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
 [[cloudhub-apps]]
 == CloudHub Applications
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-list[runtime-mgr cloudhub-alert list]| Lists all alerts in the environment
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-history-describe[runtime-mgr cloudhub-alert-history describe]| Describes the history of the alarm
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-list[runtime-mgr cloudhub-application list]| Lists all applications in the environment
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe[runtime-mgr cloudhub-application describe]| Show application details
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe-json[runtime-mgr cloudhub-application describe-json]| Show raw application JSON response
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-stop[runtime-mgr cloudhub-application stop]| Stop a running application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-start[runtime-mgr cloudhub-application start]| Start an application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-restart[runtime-mgr cloudhub-application restart]| Restart a running application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-delete[runtime-mgr cloudhub-application delete]| Delete an application
-|xref:cloudhub-apps.adoc#deploy-to-cloudhub[runtime-mgr cloudhub-application deploy]| Deploy a new application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-modify[runtime-mgr cloudhub-application modify]| Modify an existing application, optionally updating the ZIP file
-// |<<runtime-mgr application revert-runtime]| Reverts application to its previous runtime
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-download-logs[runtime-mgr cloudhub-application download-logs]| Download application logs to specified directory
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-tail-logs[runtime-mgr cloudhub-application tail-logs]| Tail application logs
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-copy[runtime-mgr cloudhub-application copy]| Copies a CloudHub application
-// |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-upgrade-runtime[runtime-mgr cloudhub-application upgrade-runtime]| Upgrades application runtime to the latest patch version or if a version if specified, to that version.
-// |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-downgrade-runtime[runtime-mgr cloudhub-application downgrade-runtime]| Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
-|===
+include::anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
 
 [[cloudhub-dlb]]
 == CloudHub Dedicated Load Balancers
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-list[cloudhub load-balancer list]| Lists all load balancers in an organization
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub load-balancer list describe]| Show load balancer details
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe-json[cloudhub load-balancer describe-json]| Show load balancer details in raw JSON response
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-create[cloudhub load-balancer create]| Create a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub load-balancer start]| Starts a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-stop[cloudhub load-balancer stop]| Stops a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-delete[cloudhub load-balancer delete]| Delete a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-add[cloudhub load-balancer ssl-endpoint add]| Add an additional certificate to an existing load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-remove[cloudhub load-balancer ssl-endpoint remove]| Remove a certificate from a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-set-default[cloudhub load-balancer ssl-endpoint set-default]| Set the default certificate that the load balancer will serve
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-describe[cloudhub load-balancer ssl-endpoint describe]| Show the load balancer configuration for a particular certificate
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-add[cloudhub load-balancer whitelist add]| Add an IP or range of IPs to the load balancer allowlist
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-remove[cloudhub load-balancer whitelist remove]| Remove an IP or range of IPs from the load balancer allowlist
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-describe[cloudhub load-balancer mappings describe]| Lists the proxy mapping rules for a load balancer. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-add[cloudhub load-balancer mappings add]| Add a proxy mapping rule at the specified index. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-remove[cloudhub load-balancer mappings remove]| Remove a proxy mapping rule. If no `certificateName` is given, the mappings for the default SSL endpoint are shown.
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-enable[cloudhub load-balancer dynamic-ips enable]| Enables dynamic IPs
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-disable[cloudhub load-balancer dynamic-ips disable]| Disables dynamic IPs
-|xref:cloudhub-dlb.adoc#cloudhub-region-list[cloudhub region list]| Lists all supported regions
-|xref:cloudhub-dlb.adoc#cloudhub-runtime-list[cloudhub runtime list]| Lists all available runtimes
-|===
+include::anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
 
 [[cloudhub-vpc]]
 == CloudHub Anypoint VPCs
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-list[cloudhub vpc list]| Lists all Anypoint VPCs
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-describe[cloudhub vpc describe]| Show Anypoint VPC details
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-describe-json[cloudhub vpc describe-json]| Show raw Anypoint VPC JSON response
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-create[cloudhub vpc create]| Create a new Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-delete[cloudhub vpc delete]| Delete an existing Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-environments-add[cloudhub vpc environments add]| Modifies the Anypoint VPC association to Runtime Manager environments.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-environments-remove[cloudhub vpc environments remove]| Modifies the Anypoint VPC association to Runtime Manager environments.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-business-groups-add[cloudhub vpc business-groups add]| Share an Anypoint VPC with a list of Business Groups.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-business-groups-remove[cloudhub vpc business-groups remove]| Share an Anypoint VPC with a list of Business Groups.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-dns-servers-set[cloudhub vpc dns-servers set]| Sets the domain names that are resolved using your internal DNS servers. If used with no option, internal DNS will be disabled
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-dns-servers-unset[cloudhub vpc dns-servers unset]| Clears the list domain names that are resolved using your internal DNS servers
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-describe[cloudhub vpc firewall-rules describe]| Show firewall rule for Mule applications in this Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-add[cloudhub vpc firewall-rules add]| Add a firewall rule for Mule applications in this Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub vpc firewall-rules remove]| Remove a firewall rule for Mule applications in this Anypoint VPC
-|===
+include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
 
 [[datagraph]]
 == DataGraph
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-| xref:datagraph.adoc#datagraph-load-balancer-config-add[datagraph load-balancer-config add] | Adds a dedicated load balancer configuration to Anypoint DataGraph
-| xref:datagraph.adoc#datagraph-load-balancer-config-describe[datagraph load-balancer-config describe] | Displays a dedicated load balancer configuration for Anypoint DataGraph
-| xref:datagraph.adoc#datagraph-load-balancer-config-remove[datagraph load-balancer-config remove]| Removes a dedicated load balancer configuration from Anypoint DataGraph
-|===
+include::anypoint-cli::partial$datagraph.adoc[tag=summary]
 
 [[design-center]]
 == Design Center Projects
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-| xref:design-center.adoc#designcenter-project-create[designcenter project create] | Creates a new Design Center project
-| xref:design-center.adoc#designcenter-project-delete[designcenter project delete] | Deletes a Design Center project
-| xref:design-center.adoc#designcenter-project-download[designcenter project download] | Downloads the content of a Design Center project
-| xref:design-center.adoc#designcenter-project-publish[designcenter project publish] | Publishes a Design Center project to Exchange
-| xref:design-center.adoc#designcenter-project-upload[designcenter project upload] | Uploads the content of a project to Design Center
-| xref:design-center.adoc#designcenter-project-list[designcenter project list] | List all Design Center projects
-|===
+include::anypoint-cli::partial$design-center.adoc[tag=summary]
 
 [[exchange-assets]]
 == Exchange Assets
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:exchange-assets.adoc#exchange-asset-upload[exchange asset upload] | Uploads an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-uploadv2[exchange asset uploadv2] | Uploads an Exchange asset using Exchange Experience API v2
-|xref:exchange-assets.adoc#exchange-asset-mutabledataupload[exchange asset mutableDataUpload] | Modifies mutable data of an existing Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-modify[exchange asset modify] | Modifies an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-download[exchange asset download] | Downloads an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-list[exchange asset list] | Lists all assets
-|xref:exchange-assets.adoc#exchange-asset-page-download[exchange asset page download] | Downloads an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-modify[exchange asset page modify] | Changes an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-upload[exchange asset page upload] | Uploads an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-update[exchange asset page update] | Updates an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-delete[exchange asset page delete] | Deletes an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-list[exchange asset page list] | List all pages for a given asset
-|xref:exchange-assets.adoc#exchange-asset-copy[exchange asset copy] | Copies an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-delete[exchange asset delete] | Deletes an asset from Exchange
-|xref:exchange-assets.adoc#exchange-asset-deprecate[exchange asset deprecate] | Deprecates an asset
-|xref:exchange-assets.adoc#exchange-asset-undeprecate[exchange asset undeprecate] | Undeprecate an asset
-|xref:exchange-assets.adoc#exchange-asset-describe[exchange asset describe] | Show a given asset's information
-|xref:exchange-assets.adoc#exchange-asset-resource-upload[exchange asset resource upload] | Uploads a resource to an asset portal
-|xref:exchange-assets.adoc#exchange-asset-resource-list[exchange asset resource list] | Lists published resources in the asset portal
-|xref:exchange-assets.adoc#exchange-asset-resource-download[exchange asset resource download] | Downloads resource from the asset portal
-|xref:exchange-assets.adoc#exchange-asset-resource-delete[exchange asset resource delete] | Deletes resource from the asset portal
-|===
-
+include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
 
 [[standalone-apps]]
 == Hybrid Applications
 
 [CAUTION]
-In order for the Anypoint Platform CLI to recognize your target servers, each server needs to be manually registered with the platform.
+For the Anypoint Platform CLI to recognize your target servers, each server needs to be manually registered with the platform.
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-artifact[runtime-mgr standalone-application artifact] | Downloads a standalone application artifact binary
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-deploy[runtime-mgr standalone-application deploy] | Deploys or redeploys an application to an on-premises server, server group, or cluster
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe-json[runtime-mgr standalone-application describe-json] | Shows a raw standalone application JSON response
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-modify[runtime-mgr standalone-application modify] | Changes a standalone application artifact
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-start[runtime-mgr standalone-application start] | Starts a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-delete[runtime-mgr standalone-application delete] | Deletes a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe[runtime-mgr standalone-application describe] | Shows detailed information for a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr standalone-application list] | Lists all standalone applications in the environment
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-restart[runtime-mgr standalone-application restart] | Restarts a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-stop[runtime-mgr standalone-application stop] | Stops a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-copy[runtime-mgr standalone-application copy] | Copies a standalone application
-|===
+include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
 
 [[standalone-alerts]]
 == Alerts for Hybrid Applications
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-describe[runtime-mgr standalone-alert describe] | Describes an alert
-|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-create[runtime-mgr standalone-alert create] | Creates new alert for standalone runtime
-|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-modify[runtime-mgr standalone-alert modify] | Modifies alert for standalone runtime
-|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-list[runtime-mgr standalone-alert list] | Lists all alerts for standalone runtimes in the environment
-|===
+include::anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
 
 [[servers]]
 == Local Servers
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:servers.adoc#runtime-mgr-server-describe[runtime-mgr server describe] | Describes server
-|xref:servers.adoc#runtime-mgr-server-modify[runtime-mgr server modify] | Modifies server
-|xref:servers.adoc#runtime-mgr-server-token[runtime-mgr server token] | Gets server registration token. This token needs to be used to register a new server
-|xref:servers.adoc#runtime-mgr-server-delete[runtime-mgr server delete] | Deletes server
-|xref:servers.adoc#runtime-mgr-server-list[runtime-mgr server list] | Changes an standalone application artifact
-// |xref:servers.adoc#runtime-mgr-server-register[runtime-mgr server register] | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
-|===
+include::anypoint-cli::partial$servers.adoc[tag=summary]
 
 [[server-groups]]
 == Local Server Groups
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:server-groups.adoc#runtime-mgr-servergroup-create[runtime-mgr serverGroup create] | Creates server group from servers
-|xref:server-groups.adoc#runtime-mgr-servergroup-describe[runtime-mgr serverGroup describe] | Describes server group
-|xref:server-groups.adoc#runtime-mgr-servergroup-modify[runtime-mgr serverGroup modify] | Modifies server group
-|xref:server-groups.adoc#runtime-mgr-servergroup-add-server[runtime-mgr serverGroup add server] | Adds server to a server group
-|xref:server-groups.adoc#runtime-mgr-servergroup-delete[runtime-mgr serverGroup delete] | Deletes server group
-|xref:server-groups.adoc#runtime-mgr-servergroup-list[runtime-mgr serverGroup list] | Lists all server groups in the environment
-|xref:server-groups.adoc#runtime-mgr-servergroup-remove-server[runtime-mgr serverGroup remove server] | Removes server from a server group
-|===
+include::anypoint-cli::partial$server-groups.adoc[tag=summary]
 
 [[server-clusters]]
 == Local Cluster Servers
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:server-clusters.adoc#runtime-mgr-cluster-add-server[runtime-mgr cluster add server] | Adds server to cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-delete[runtime-mgr cluster delete] | Deletes cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-list[runtime-mgr cluster list] | Lists all clusters in the environment
-|xref:server-clusters.adoc#runtime-mgr-cluster-remove-server[runtime-mgr cluster remove server] | Removes server from a cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-create[runtime-mgr cluster create] | Creates new cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-describe[runtime-mgr cluster describe] | Describes server cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-modify[runtime-mgr cluster modify] | Modifies cluster
-|===
+include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
 
 [[rtf-instances]]
 == Runtime Fabric Instances
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:rtf-instances.adoc#runtime-mgr-rtf-list[runtime-mgr rtf list]  | Lists available Runtime Fabric instances
-|===
+include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
 
 == See Also
 

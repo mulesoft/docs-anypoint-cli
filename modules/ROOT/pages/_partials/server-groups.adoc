@@ -5,13 +5,13 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr serverGroup create>> | Creates server group from servers
-|<<runtime-mgr serverGroup describe>> | Describes server group
-|<<runtime-mgr serverGroup modify>> | Modifies server group
-|<<runtime-mgr serverGroup add server>> | Adds server to a server group
-|<<runtime-mgr serverGroup delete>> | Deletes server group
-|<<runtime-mgr serverGroup list>> | Lists all server groups in the environment
-|<<runtime-mgr serverGroup remove server>> | Removes server from a server group
+|xref:server-groups.adoc#runtime-mgr-servergroup-create[runtime-mgr serverGroup create] | Creates server group from servers
+|xref:server-groups.adoc#runtime-mgr-servergroup-describe[runtime-mgr serverGroup describe] | Describes server group
+|xref:server-groups.adoc#runtime-mgr-servergroup-modify[runtime-mgr serverGroup modify] | Modifies server group
+|xref:server-groups.adoc#runtime-mgr-servergroup-add-server[runtime-mgr serverGroup add server] | Adds server to a server group
+|xref:server-groups.adoc#runtime-mgr-servergroup-delete[runtime-mgr serverGroup delete] | Deletes server group
+|xref:server-groups.adoc#runtime-mgr-servergroup-list[runtime-mgr serverGroup list] | Lists all server groups in the environment
+|xref:server-groups.adoc#runtime-mgr-servergroup-remove-server[runtime-mgr serverGroup remove server] | Removes server from a server group
 |===
 
 // end::summary[]

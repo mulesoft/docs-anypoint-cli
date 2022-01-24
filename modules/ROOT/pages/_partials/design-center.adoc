@@ -6,12 +6,12 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-| <<designcenter project create>> | Creates a new Design Center project
-| <<designcenter project delete>> | Deletes a Design Center project
-| <<designcenter project download>> | Downloads the content of a Design Center project
-| <<designcenter project publish>> | Publishes a Design Center project to Exchange
-| <<designcenter project upload>> | Uploads the content of a project to Design Center
-| <<designcenter project list>> | List all Design Center projects
+| xref:design-center.adoc#designcenter-project-create[designcenter project create] | Creates a new Design Center project
+| xref:design-center.adoc#designcenter-project-delete[designcenter project delete] | Deletes a Design Center project
+| xref:design-center.adoc#designcenter-project-download[designcenter project download] | Downloads the content of a Design Center project
+| xref:design-center.adoc#designcenter-project-publish[designcenter project publish] | Publishes a Design Center project to Exchange
+| xref:design-center.adoc#designcenter-project-upload[designcenter project upload] | Uploads the content of a project to Design Center
+| xref:design-center.adoc#designcenter-project-list[designcenter project list] | List all Design Center projects
 |===
 
 // end::summary[]
