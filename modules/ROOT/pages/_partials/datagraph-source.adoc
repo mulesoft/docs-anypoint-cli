@@ -23,10 +23,10 @@
 == datagraph sources add
 
 ----
-> datagraph sources add <gav>
+> datagraph sources add <g/a/v>
 ----
 
-This command adds an API source, specified by `<gav>`—the group, asset, and version of the API source. 
+This command adds an API source, specified by `<g/a/v>`—the groupID, assetID, and versionID of the API source. 
  
 In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
 
@@ -47,8 +47,7 @@ Required:
 Required:
 
 * `--client-credentials <client_id>:<client_secret>`
-* `--<authorization server URL>` 
-* `--<scope>`
+* `--server <authorization server URL>` 
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
 {sp} +
@@ -63,12 +62,16 @@ Required:
 Required for query params:
 
 * `--query-params: <comma-separated list of key:value pairs>`
++
+Or
 * `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
 {sp} +
 {sp} +
 Required for headers: 
 
 * `--headers: c<omma-separated list of key:value pairs>`
++
+Or
 * `--headers-file: <location of the file containing header key:value pairs, one per line>`
 
 |`--url` | Configures the URL for the backend API.
@@ -109,8 +112,7 @@ Required:
 Required:
 
 * `--client-credentials <client_id>:<client_secret>`
-* `--<authorization server URL>` 
-* `--<scope>`
+* `--server <authorization server URL>` 
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
 {sp} +
@@ -125,12 +127,16 @@ Required:
 Required for query params:
 
 * `--query-params: <comma-separated list of key:value pairs>`
++
+Or
 * `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
 {sp} +
 {sp} +
 Required for headers: 
 
 * `--headers: c<omma-separated list of key:value pairs>`
++
+Or
 * `--headers-file: <location of the file containing header key:value pairs, one per line>`
 
 |`--url` | Configures the URL for the backend API.
@@ -173,8 +179,7 @@ Required:
 Required:
 
 * `--client-credentials <client_id>:<client_secret>`
-* `--<authorization server URL>` 
-* `--<scope>`
+* `--server <authorization server URL>` 
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
 {sp} +
@@ -189,12 +194,16 @@ Required:
 Required for query params:
 
 * `--query-params: <comma-separated list of key:value pairs>`
++
+Or
 * `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
 {sp} +
 {sp} +
 Required for headers: 
 
-* `--headers: c<omma-separated list of key:value pairs>`
+* `--headers: <comma-separated list of key:value pairs>`
++
+Or
 * `--headers-file: <location of the file containing header key:value pairs, one per line>`
 
 |`--url` | Configures the URL for the backend API.
