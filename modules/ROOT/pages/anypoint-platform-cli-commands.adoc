@@ -11,7 +11,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
 * <<design-center>>
-* <<datagraph>>
+* <<datagraph-load-balancers>>
+* <<datagraph-source>>
 * <<exchange-assets>>
 * <<standalone-apps>>
 * <<standalone-alerts>>
@@ -158,7 +159,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub vpc firewall-rules remove]| Remove a firewall rule for Mule applications in this Anypoint VPC
 |===
 
-[[datagraph]]
+[[datagraph-load-balancers]]
 == DataGraph Load Balancers
 
 [%header,cols="35a,65a"]
