@@ -5,6 +5,7 @@ Anypoint Platform provides a scripting and command-line tool for both Anypoint P
 The command-line interface (CLI) supports both the interactive shell and standard CLI modes and works with:
 
 * xref:exchange::index.adoc[Anypoint Exchange]
+* xref:datagraph::index.adoc[Anypoint DataGraph]
 * xref:access-management::index.adoc[Access management]
 * xref:runtime-manager::index.adoc[Anypoint Runtime Manager]
 +

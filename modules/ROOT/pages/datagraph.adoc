@@ -1,5 +1,6 @@
-= CLI for DataGraph
+= CLI for Anypoint DataGraph
 
-include::anypoint-cli::partial$datagraph.adoc[tag=summary]
+Anypoint CLI supports managing these DataGraph features:
 
-include::anypoint-cli::partial$datagraph.adoc[tag=commands]
+* xref:datagraph-source.adoc[DataGraph API Source Management]
+* xref:datagraph-load-balancer.adoc[DataGraph Load Balancers]
