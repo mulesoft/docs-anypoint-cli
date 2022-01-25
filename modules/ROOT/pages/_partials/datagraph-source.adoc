@@ -34,7 +34,7 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 |===
 | Options | Description
 |`--auth-none` | Use if your API is public.
-|`--auth-basic` a|Use if you authenticate to your API either by using the basic authentication header or by using a username and password. 
+|`--auth-basic` a|Use if you authenticate to your API either by passing the basic authentication header or by passing a username and password. 
 {sp} +
 {sp} +
 Required:
@@ -54,30 +54,30 @@ Required:
 {sp} +
 Required:
 
-*  `--mapping: <comma-separated list of key:value pairs>`
+*  `--mapping: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 
-|`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
+|`--auth-custom` a|Use if you authenticate to your API by passing custom header parameters and values, such as query params or headers.
 {sp} +
 {sp} +
 Required for query params:
 
-* `--query-params: <comma-separated list of key:value pairs>`
+* `--query-params: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 +
 Or
-* `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
+* `--query-params-file: <location of the file containing query param key-value pairs, one pair per line>`
 {sp} +
 {sp} +
 Required for headers: 
 
-* `--headers: c<omma-separated list of key:value pairs>`
+* `--headers: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 +
 Or
-* `--headers-file: <location of the file containing header key:value pairs, one per line>`
+* `--headers-file: <location of the file containing header key-value pairs, one per line>`
 
 |`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one API is running, DataGraph uses the first URL.
 |`--ca` | Specify a list of certificate authority (CA) files to add to the API's truststore.
-|`--cert` | Specify the client certificate to use for mTLS.
+|`--cert` | Specify the client certificate to use for mutual transport layer security (mTLS).
 |`--key` | Specify the private key to use for mTLS.
 |`--key-password` | Specify the password to decrypt an encrypted private key.
 |===
@@ -119,29 +119,29 @@ Required:
 {sp} +
 Required:
 
-*  `--mapping: <comma-separated list of key:value pairs>`
+*  `--mapping: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 
 |`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
 {sp} +
 {sp} +
 Required for query params:
 
-* `--query-params: <comma-separated list of key:value pairs>`
+* `--query-params: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 +
 Or
-* `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
+* `--query-params-file: <location of the file containing query param key-value pairs, one pair per line>`
 {sp} +
 {sp} +
 Required for headers: 
 
-* `--headers: <comma-separated list of key:value pairs>`
+* `--headers: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 +
 Or
-* `--headers-file: <location of the file containing header key:value pairs, one per line>`
+* `--headers-file: <location of the file containing header key-value pairs, one per line>`
 
 |`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one API is running, DataGraph uses the first URL.
-|`--ca` | Specify a list of certificate authority (CA) files to add to the API's truststore.
+|`--ca` | Specify a list of CA files to add to the API's truststore.
 |`--cert` | Specify the client certificate to use for mTLS.
 |`--key` | Specify the private key to use for mTLS.
 |`--key-password` | Specifies the password to decrypt an encrypted private key.
@@ -158,7 +158,7 @@ All headers and query params defined in the command line and the headers and que
 > datagraph sources update <sourceId>
 ----
 
-This command updates the version of an API source, specified by its `<sourceId>`.
+This command updates the version of an API source `<sourceId>`. 
 
 In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
 
@@ -166,7 +166,7 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 |===
 | Options | Description 
 |`--auth-none` | Use if your API is public.
-|`--auth-basic` a|Use if you authenticate to your API using the basic authentication header, or a username and password. 
+|`--auth-basic` a|Use if you authenticate to your API either by passing the basic authentication header or by passing a username and password. 
 {sp} +
 {sp} +
 Required:
@@ -186,29 +186,29 @@ Required:
 {sp} +
 Required:
 
-*  `--mapping: <comma-separated list of key:value pairs>`
+*  `--mapping: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 
-|`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
+|`--auth-custom` a|Use if you authenticate to your API by passing custom header parameters and values, such as query params or headers.
 {sp} +
 {sp} +
 Required for query params:
 
-* `--query-params: <comma-separated list of key:value pairs>`
+* `--query-params: <comma-separated list of key-value pairs>`
 +
 Or
-* `--query-params-file: <location of the file containing query param key:value pairs, one pair per line>`
+* `--query-params-file: <location of the file containing query param key-value pairs, one pair per line>`
 {sp} +
 {sp} +
 Required for headers: 
 
-* `--headers: <comma-separated list of key:value pairs>`
+* `--headers: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 +
 Or
-* `--headers-file: <location of the file containing header key:value pairs, one per line>`
+* `--headers-file: <location of the file containing header key-value pairs, one per line>`
 
 |`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
-|`--ca` | Specify a list of certificate authority (CA) files to add to the API's truststore.
+|`--ca` | Specify a list of CA files to add to the API's truststore.
 |`--cert` | Specify the client certificate to use for mTLS.
 |`--key` | Specify the private key to use for mTLS.
 |`--key-password` | Specifies the password to decrypt an encrypted private key.
