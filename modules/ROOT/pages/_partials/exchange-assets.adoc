@@ -5,8 +5,8 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-uploadv2[exchange:asset:uploadv2] | Uploads an Exchange asset using Exchange Experience API v2
+// |xref:exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset
+|xref:exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset using Exchange Experience API
 |xref:exchange-assets.adoc#exchange-asset-mutabledataupload[exchange:asset:mutableDataUpload] | Modifies mutable data of an existing Exchange asset
 |xref:exchange-assets.adoc#exchange-asset-modify[exchange:asset:modify] | Modifies an Exchange asset
 |xref:exchange-assets.adoc#exchange-asset-download[exchange:asset:download] | Downloads an Exchange asset
@@ -32,34 +32,34 @@
 
 // tag::commands[]
 
+// == exchange:asset:upload
+
+// ----
+// > exchange:asset:upload [options] <assetIdentifier> [filePath]
+// ----
+
+// This command uploads an OAS, RAML, WSDL, HTTP, or custom asset using the IDs passed in `<assetIdentifier>`. +
+// If `<filePath>` points to a ZIP archive file, that archive must include an `exchange.json` file describing the asset. +
+// Argument `assetIdentifier` should be formatted as follows: `<group_id>/<asset_id>/<version>`.
+
+// Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also accepts:
+
+// [%header,cols="30a,40a,30a"]
+// |===
+// | Command | Description |  Example
+// | `--apiVersion` | Asset API version .4+<.<|
+// `exchange:asset:upload --apiVersion 1.0 --name testProject --classifier custom`
+
+// `exchange:asset:upload --mainFile 'api.yml'`
+// | `--name` |Asset name
+// | `--mainFile` | Main file of the API asset
+// | `--classifier` | Valid asset classifiers are `oas`, `raml`, `wsdl`, `http`, and `custom`.
+// |===
+
 == exchange:asset:upload
 
 ----
-> exchange:asset:upload [options] <assetIdentifier> [filePath]
-----
-
-This command uploads an OAS, RAML, WSDL, HTTP, or custom asset using the IDs passed in `<assetIdentifier>`. +
-If `<filePath>` points to a ZIP archive file, that archive must include an `exchange.json` file describing the asset. +
-Argument `assetIdentifier` should be formatted as follows: `<group_id>/<asset_id>/<version>`.
-
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also accepts:
-
-[%header,cols="30a,40a,30a"]
-|===
-| Command | Description |  Example
-| `--apiVersion` | Asset API version .4+<.<|
-`exchange:asset:upload --apiVersion 1.0 --name testProject --classifier custom`
-
-`exchange:asset:upload --mainFile 'api.yml'`
-| `--name` |Asset name
-| `--mainFile` | Main file of the API asset
-| `--classifier` | Valid asset classifiers are `oas`, `raml`, `wsdl`, `http`, and `custom`.
-|===
-
-== exchange:asset:uploadv2
-
-----
-> exchange:asset:uploadv2 [properties] <assetIdentifier>
+> exchange:asset:upload [properties] <assetIdentifier>
 ----
 
 This command uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, example, policy, extension, external-library or connector asset using the ID passed in <assetIdentifier>.
@@ -74,15 +74,16 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 |===
 | Command | Description |  Example
 | `--name` | Asset name (required if no pom file is specified) .3+|
-`exchange:asset:uploadv2 --name "Raml Asset" --description "RAML" --properties.apiVersion v1 --properties.mainFile api.raml --files.raml.zip /..../file-path/raml.zip raml-asset/1.0.0`
-| `--description` | Asset description
-| `--properties` | Asset properties
+`exchange:asset:uploadv2 --name "Raml Asset" --description "RAML"  --properties='{"apiVersion":"v1", "mainFile": "api.raml"}' --files.raml.zip /..../file-path/raml.zip raml-asset/1.0.0` 
+| `--description` | Asset description 
+| `--properties` | Asset properties 
 
 For example:
 
-* `properties.mainFile main.yaml`
-* `properties.apiVersion v1`
-* `properties.assetLink \http://api.com`
+* `properties='{"mainFile":"main.raml"}'`
+* `properties='{"apiVersion":"v1"}'`
+* `properties='{"assetLink":"\http://api.com"}'`
+* `properties='{"mainFile":"main.raml","apiVersion":"v1","assetLink":"\http://api.com"}'`
 
 | `--files` | Asset file, identified as `classifier.packaging` or `packaging`, for example, `files.raml.zip .../file-path/raml.zip`
 

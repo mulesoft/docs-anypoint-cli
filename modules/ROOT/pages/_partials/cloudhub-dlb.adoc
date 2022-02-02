@@ -8,7 +8,7 @@
 |Command |Description
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-list[cloudhub:load-balancer:list]| Lists all load balancers in an organization
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub:load-balancer:list:describe]| Show load balancer details
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe-json[cloudhub:load-balancer:describe-json]| Show load balancer details in raw JSON response
+// |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe-json[cloudhub:load-balancer:describe-json]| Show load balancer details in raw JSON response
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-create[cloudhub:load-balancer:create]| Create a load balancer
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub:load-balancer:start]| Starts a load balancer
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-stop[cloudhub:load-balancer:stop]| Stops a load balancer
@@ -49,22 +49,24 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 This command displays information about the load balancer that is specified in `<name>`.
 
+Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`.
+
 You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
 It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== cloudhub:load-balancer:describe-json
+// == cloudhub:load-balancer:describe-json
 
-----
-> cloudhub load-balancer describe [options] <name>
-----
-This command displays a raw JSON response from the load balancer that is specified in `<name>`.
+// ----
+// > cloudhub load-balancer describe [options] <name>
+// ----
+// This command displays a raw JSON response from the load balancer that is specified in `<name>`.
 
-You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+// You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+// This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == cloudhub:load-balancer:create
 

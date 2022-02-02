@@ -9,7 +9,7 @@ For the Anypoint Platform CLI to recognize your target servers, each server must
 |Command |Description
 |xref:standalone-apps.adoc#runtime-mgr-standalone-application-artifact[runtime-mgr:standalone-application:artifact] | Downloads a standalone application artifact binary
 |xref:standalone-apps.adoc#runtime-mgr-standalone-application-deploy[runtime-mgr:standalone-application:deploy] | Deploys or redeploys an application to an on-premises server, server group, or cluster
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe-json[runtime-mgr:standalone-application:describe-json] | Shows a raw standalone application JSON response
+// |xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe-json[runtime-mgr:standalone-application:describe-json] | Shows a raw standalone application JSON response
 |xref:standalone-apps.adoc#runtime-mgr-standalone-application-modify[runtime-mgr:standalone-application:modify] | Changes a standalone application artifact
 |xref:standalone-apps.adoc#runtime-mgr-standalone-application-start[runtime-mgr:standalone-application:start] | Starts a standalone application
 |xref:standalone-apps.adoc#runtime-mgr-standalone-application-delete[runtime-mgr:standalone-application:delete] | Deletes a standalone application
@@ -53,15 +53,15 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 To redeploy an app and set a logging level or turn on Insight event tracking, see <<runtime-mgr:standalone-application:modify>>.
 
-== runtime-mgr:standalone-application:describe-json
+// == runtime-mgr:standalone-application:describe-json
 
-----
-> runtime-mgr:standalone-application:describe-json [options] <identifier>
-----
+//----
+//> runtime-mgr:standalone-application:describe-json [options] <identifier>
+//----
 
-This command describes the standalone (on-premises) application passed in `identifier` as a raw JSON response.
+//This command describes the standalone (on-premises) application passed in `identifier` as a raw JSON response.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+//This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == runtime-mgr:standalone-application:modify
 
@@ -120,6 +120,8 @@ This command does not prompt twice before deleting. If you send a delete instruc
 ----
 
 This command shows detailed information, such as status, creation date, and last update, for the standalone (on-premises) application passed in `identifier`.
+
+Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`. 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
