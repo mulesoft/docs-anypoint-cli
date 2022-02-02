@@ -6,13 +6,13 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:account.adoc#account-user-describe[account:user:describe]| Show account details
-|xref:account.adoc#account-business-group-list[account:business-group:list]| Lists business groups
-|xref:account.adoc#account-business-group-describe[account:business-group:describe]| Show details of a business group
-|xref:account.adoc#account-environment-list[account:environment:list]| Lists environments
-|xref:account.adoc#account-environment-create[account:environment:create]| Create new environment
-|xref:account.adoc#account-environment-delete[account:environment:delete]| Delete an environment
-|xref:account.adoc#account-environment-describe[account:environment:describe]| Shows details of an environment
+|xref:account.adoc#account-user-describe[account-user-describe]| Show account details
+|xref:account.adoc#account-business-group-list[account-business-group-list]| Lists business groups
+|xref:account.adoc#account-business-group-describe[account-business-group-describe]| Show details of a business group
+|xref:account.adoc#account-environment-list[account-environment-list]| Lists environments
+|xref:account.adoc#account-environment-create[account-environment-create]| Create new environment
+|xref:account.adoc#account-environment-delete[account-environment-delete]| Delete an environment
+|xref:account.adoc#account-environment-describe[account-environment-describe]| Shows details of an environment
 |===
 
 // end::summary[]
@@ -20,6 +20,7 @@
 
 // tag::commands[]
 
+[[account-user-describe]]
 == account:user:describe
 
 ----
@@ -29,6 +30,7 @@
 This command simply returns the information for your account. This includes your username, your full name, your email address, and the creation date of your account. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[account-business-group-list]]
 == account:business-group:list
 
 ----
@@ -39,7 +41,7 @@ This command displays all xref:access-management::business-groups.adoc[business 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-
+[[account-business-group-describe]]
 == account:business-group:describe
 
 ----
@@ -62,6 +64,7 @@ It returns data such as the owner, the type, subscription information, the entit
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[account-environment-list]]
 == account:environment:list
 
 ----
@@ -70,6 +73,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 This command lists all your environments in Anypoint Platform. It returns your environment name, Id and whether it's sandboxed or not. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[account-environment-create]]
 == account:environment:create
 
 ----
@@ -85,6 +89,7 @@ Supported values for environment types are:
 
 If no type is specified, the command creates a production environment.
 
+[[]account-environment-delete]
 == account:environment:delete
 
 ----
@@ -97,6 +102,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[account-environment-describe]]
 == account:environment:describe
 
 ----
