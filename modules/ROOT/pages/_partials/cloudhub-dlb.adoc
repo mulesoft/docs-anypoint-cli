@@ -6,26 +6,26 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-list[cloudhub load-balancer list]| Lists all load balancers in an organization
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub load-balancer list describe]| Show load balancer details
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe-json[cloudhub load-balancer describe-json]| Show load balancer details in raw JSON response
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-create[cloudhub load-balancer create]| Create a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub load-balancer start]| Starts a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-stop[cloudhub load-balancer stop]| Stops a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-delete[cloudhub load-balancer delete]| Delete a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-add[cloudhub load-balancer ssl-endpoint add]| Add an additional certificate to an existing load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-remove[cloudhub load-balancer ssl-endpoint remove]| Remove a certificate from a load balancer
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-set-default[cloudhub load-balancer ssl-endpoint set-default]| Set the default certificate that the load balancer will serve
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-describe[cloudhub load-balancer ssl-endpoint describe]| Show the load balancer configuration for a particular certificate
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-add[cloudhub load-balancer whitelist add]| Add an IP or range of IPs to the load balancer allowlist
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-remove[cloudhub load-balancer whitelist remove]| Remove an IP or range of IPs from the load balancer allowlist
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-describe[cloudhub load-balancer mappings describe]| Lists the proxy mapping rules for a load balancer. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-add[cloudhub load-balancer mappings add]| Add a proxy mapping rule at the specified index. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-remove[cloudhub load-balancer mappings remove]| Remove a proxy mapping rule. If no `certificateName` is given, the mappings for the default SSL endpoint are shown.
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-enable[cloudhub load-balancer dynamic-ips enable]| Enables dynamic IPs
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-disable[cloudhub load-balancer dynamic-ips disable]| Disables dynamic IPs
-|xref:cloudhub-dlb.adoc#cloudhub-region-list[cloudhub region list]| Lists all supported regions
-|xref:cloudhub-dlb.adoc#cloudhub-runtime-list[cloudhub runtime list]| Lists all available runtimes
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-list[cloudhub:load-balancer:list]| Lists all load balancers in an organization
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub:load-balancer:list:describe]| Show load balancer details
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe-json[cloudhub:load-balancer:describe-json]| Show load balancer details in raw JSON response
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-create[cloudhub:load-balancer:create]| Create a load balancer
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub:load-balancer:start]| Starts a load balancer
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-stop[cloudhub:load-balancer:stop]| Stops a load balancer
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-delete[cloudhub:load-balancer:delete]| Delete a load balancer
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-add[cloudhub:load-balancer:ssl-endpoint:add]| Add an additional certificate to an existing load balancer
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-remove[cloudhub:load-balancer:ssl-endpoint:remove]| Remove a certificate from a load balancer
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-set-default[cloudhub:load-balancer:ssl-endpoint:set-default]| Set the default certificate that the load balancer will serve
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-describe[cloudhub:load-balancer:ssl-endpoint:set-describe]| Show the load balancer configuration for a particular certificate
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-add[cloudhub:load-balancer:whitelist:add]| Add an IP or range of IPs to the load balancer allowlist
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-remove[cloudhub:load-balancer:whitelist:remove]| Remove an IP or range of IPs from the load balancer allowlist
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-describe[cloudhub:load-balancer:mappings:describe]| Lists the proxy mapping rules for a load balancer. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-add[cloudhub:load-balancer:mappings:add]| Add a proxy mapping rule at the specified index. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-remove[cloudhub:load-balancer:mappings:remove]| Remove a proxy mapping rule. If no `certificateName` is given, the mappings for the default SSL endpoint are shown.
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-enable[cloudhub:load-balancer:dynamic-ips:enable]| Enables dynamic IPs
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-disable[cloudhub:load-balancer:dynamic-ips:disable]| Disables dynamic IPs
+|xref:cloudhub-dlb.adoc#cloudhub-region-list[cloudhub:region:list]| Lists all supported regions
+|xref:cloudhub-dlb.adoc#cloudhub-runtime-list[cloudhub:runtime:list]| Lists all available runtimes
 |===
 
 // end::summary[]
@@ -33,10 +33,10 @@
 
 // tag::commands[]
 
-== cloudhub load-balancer list
+== cloudhub:load-balancer:list
 
 ----
-> cloudhub load-balancer list [options]
+> cloudhub:load-balancer:list [options]
 ----
 This command lists all load balancers in your Anypoint Platform. It displays load balancer's name, domain, its state, and the Anypoint VPC ID to which the load balancer is bound.
 
@@ -55,7 +55,7 @@ It displays load balancer's name, domain, its state and the Anypoint VPC Id to w
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== cloudhub load-balancer describe-json
+== cloudhub:load-balancer:describe-json
 
 ----
 > cloudhub load-balancer describe [options] <name>
@@ -66,10 +66,10 @@ You can start typing your load balancer's name and press`tab` for Anypoint Platf
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== cloudhub load-balancer create
+== cloudhub:load-balancer:create
 
 ----
-> cloudhub load-balancer create [options] <vpc> <name> <certificate> <privateKey>
+> cloudhub:load-balancer:create [options] <vpc> <name> <certificate> <privateKey>
 ----
 This command creates a load balancer using the specified values in the variables.
 [%header,cols="12,53a,35a"]
@@ -109,27 +109,27 @@ CloudHub does not implement the Online Certificate Status Protocol (OCSP). To ke
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
-== cloudhub load-balancer start
+== cloudhub:load-balancer:start
 
 ----
-> cloudhub load-balancer start [options] <name>
+> cloudhub:load-balancer:start [options] <name>
 ----
 This command starts the load balancer specified in `<name>`. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
 
-== cloudhub load-balancer stop
+== cloudhub:load-balancer:stop
 
 ----
-> cloudhub load-balancer stop [options] <name>
+> cloudhub:load-balancer:stop [options] <name>
 ----
 This command stops the load balancer specified in `<name>`. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer delete
+== cloudhub:load-balancer:delete
 
 ----
-> cloudhub load-balancer delete [options] <name>
+> cloudhub:load-balancer:delete [options] <name>
 ----
 
 This command deletes the load balancer specified in `<name>`.
@@ -139,10 +139,10 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer ssl-endpoint add
+== cloudhub:load-balancer:ssl-endpoint:add
 
 ----
-> cloudhub load-balancer ssl-endpoint add [options] <name> <certificate> <privateKey>
+> cloudhub:load-balancer:ssl-endpoint:add [options] <name> <certificate> <privateKey>
 ----
 This command adds an SSL endpoint to the load balancer specified in `<name>`, using the certificate and private key passed.
 
@@ -172,10 +172,10 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
-== cloudhub load-balancer ssl-endpoint remove
+== cloudhub:load-balancer:ssl-endpoint:remove
 
 ----
-> cloudhub load-balancer ssl-endpoint remove [options] <name> <certificateName>
+> cloudhub:load-balancer:ssl-endpoint:remove [options] <name> <certificateName>
 ----
 This command removes the ssl certificate specified in `<certificateName>` from the load balancer specified in `<name>`.
 
@@ -184,10 +184,10 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer ssl-endpoint set-default
+== cloudhub:load-balancer:ssl-endpoint:set-default
 
 ----
-> cloudhub load-balancer ssl-endpoint set-default [options] <name> <certificateName>
+> cloudhub:load-balancer:ssl-endpoint:set-default [options] <name> <certificateName>
 ----
 This command sets the certificate specified in `<certificateName>` as the default  certificate for the load balancer passed in `<name>`. +
 
@@ -200,20 +200,20 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`http` | Specifies the Load balancer HTTP behavior
 |===
 
-== cloudhub load-balancer ssl-endpoint describe
+== cloudhub:load-balancer:ssl-endpoint:set-describe
 
 ----
-> cloudhub load-balancer ssl-endpoint describe [options] <name> <certificateName>
+> cloudhub:load-balancer:ssl-endpoint:set-describe [options] <name> <certificateName>
 ----
 This command shows information about the configuration of the load balancer passed in `<name>` for the the certificate specified in `<certificateName>`. +
 You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer whitelist add
+== cloudhub:load-balancer:whitelist:add
 
 ----
-> cloudhub load-balancer whitelist add [options] <name> <cidrBlock>
+> cloudhub:load-balancer:whitelist:add [options] <name> <cidrBlock>
 ----
 This command adds a range of IP addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`.
 
@@ -223,10 +223,10 @@ The allowlist works at the load balancer level, not at the CN certificate level.
 You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer whitelist remove
+== cloudhub:load-balancer:whitelist:remove
 
 ----
-> cloudhub load-balancer whitelist remove <name> <cidrBlock>
+> cloudhub:load-balancer:whitelist:remove <name> <cidrBlock>
 ----
 This command removes an IP or range of IPs addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`.
 
@@ -235,20 +235,20 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer mappings describe
+== cloudhub:load-balancer:mappings:describe
 
 ----
-> cloudhub load-balancer mappings describe <name> [certificateName]
+> cloudhub:load-balancer:mappings:describe <name> [certificateName]
 ----
 This command lists the mapping rules for the load balancer specified in `<name>`. +
 If no `certificateName` is passed, Anypoint Platform CLI returns the mappings for the default SSL endpoint.
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer mappings add
+== cloudhub:load-balancer:mappings:add
 
 ----
-> cloudhub load-balancer mappings add [options] <name> <index> <inputUri> <appName> <appUri> [certificateName]
+> cloudhub:load-balancer:mappings:add [options] <name> <index> <inputUri> <appName> <appUri> [certificateName]
 ----
 This command adds a proxy mapping rule to the load balancer specified in `<name>` at the priority index specified in `<index>` in the CN passed under the `certificateName` option. +
 If no `certificateName` is passed, Anypoint Platform CLI adds the mappings to the default SSL endpoint.
@@ -277,45 +277,45 @@ Supported Values: `http`, `https`
 | `--certificateName <certificate name>` | Optional parameter
 |===
 
-== cloudhub load-balancer mappings remove
+== cloudhub:load-balancer:mappings:remove
 
 ----
-> cloudhub load-balancer mappings remove [options] <name> <index> [certificateName]
+> cloudhub:load-balancer:mappings:remove [options] <name> <index> [certificateName]
 ----
 This command removes the proxy mapping rules from the load balancer specified in `<name>` at the priority index specified in `<index>` and the CN specified as the `certificateName` option.
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 If no `certificateName` is passed, Anypoint Platform CLI removes the mappings for the default SSL endpoint.
 
-== cloudhub load-balancer dynamic-ips enable
+== cloudhub:load-balancer:dynamic-ips:enable
 
 ----
-> cloudhub load-balancer dynamic-ips enable [options] <name>
+> cloudhub:load-balancer:dynamic-ips:enable [options] <name>
 ----
 This command enables dynamic IPs for the load balancer specified in `<name>`.
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-== cloudhub load-balancer dynamic-ips disable
+== cloudhub:load-balancer:dynamic-ips:disable
 
 ----
-> cloudhub load-balancer dynamic-ips disable [options] <name>
+> cloudhub:load-balancer:dynamic-ips:disable [options] <name>
 ----
 This command disables dynamic IPs for the load balancer specified in `<name>`.
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
 
-== cloudhub region list
+== cloudhub:region:list
 
 ----
-> cloudhub region list [options]
+> cloudhub:region:list [options]
 ----
 This command lists all supported regions.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== cloudhub runtime list
+== cloudhub:runtime:list
 ----
-> cloudhub runtime list [options]
+> cloudhub:runtime:list [options]
 ----
 This command lists all supported runtimes.
 

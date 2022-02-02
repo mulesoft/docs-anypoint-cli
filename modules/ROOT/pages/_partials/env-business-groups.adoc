@@ -6,8 +6,8 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:env-business-groups.adoc#use-environment[use environment]| Make specified environment active
-|xref:env-business-groups.adoc#use-business-group[use business-group]| Make specified business-group active
+|xref:env-business-groups.adoc#use-environment[use:environment]| Make specified environment active
+|xref:env-business-groups.adoc#use-business-group[use:business-group]| Make specified business-group active
 |===
 
 
@@ -15,23 +15,23 @@
 
 // tag::commands[]
 
-== use environment
+== use:environment
 
 This command is only available for interactive mode.
 
 ----
-> use environment [options] <name>
+> use:environment [options] <name>
 ----
 This command makes active the environment specified in `<name>`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== use business-group
+== use:business-group
 
 This command is only available for interactive mode.
 
 ----
-> use business-group  [options] <name>
+> use:business-group  [options] <name>
 ----
 This command makes the business group you specified in `<name>` active.
 
@@ -40,7 +40,7 @@ This command makes the business group you specified in `<name>` active.
 If your business group or organization name contains spaces, you need to enclose its name between `"` characters.
 
 ----
-> use business-group "QA Organization"
+> use:business-group "QA Organization"
 ----
 --
 

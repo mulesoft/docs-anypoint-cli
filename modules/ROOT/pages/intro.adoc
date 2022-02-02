@@ -39,7 +39,7 @@ Anypoint CLI provides the following general functionality.
 [[overrides]]
 === Override Order
 
-You can use environment variables to define parameter values in Anypoint CLI. Following is the override order if you mix environment variable settings with explicit command line values:
+You can use:environment variables to define parameter values in Anypoint CLI. Following is the override order if you mix environment variable settings with explicit command line values:
 
 * Environment variables override credentials file parameters and command-line parameters override environment variables. +
 If you don't pass a command-line parameter, the default profile properties are used.

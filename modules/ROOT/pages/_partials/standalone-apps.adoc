@@ -7,17 +7,17 @@ For the Anypoint Platform CLI to recognize your target servers, each server must
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-artifact[runtime-mgr standalone-application artifact] | Downloads a standalone application artifact binary
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-deploy[runtime-mgr standalone-application deploy] | Deploys or redeploys an application to an on-premises server, server group, or cluster
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe-json[runtime-mgr standalone-application describe-json] | Shows a raw standalone application JSON response
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-modify[runtime-mgr standalone-application modify] | Changes a standalone application artifact
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-start[runtime-mgr standalone-application start] | Starts a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-delete[runtime-mgr standalone-application delete] | Deletes a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe[runtime-mgr standalone-application describe] | Shows detailed information for a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr standalone-application list] | Lists all standalone applications in the environment
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-restart[runtime-mgr standalone-application restart] | Restarts a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-stop[runtime-mgr standalone-application stop] | Stops a standalone application
-|xref:standalone-apps.adoc#runtime-mgr-standalone-application-copy[runtime-mgr standalone-application copy] | Copies a standalone application
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-artifact[runtime-mgr:standalone-application:artifact] | Downloads a standalone application artifact binary
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-deploy[runtime-mgr:standalone-application:deploy] | Deploys or redeploys an application to an on-premises server, server group, or cluster
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe-json[runtime-mgr:standalone-application:describe-json] | Shows a raw standalone application JSON response
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-modify[runtime-mgr:standalone-application:modify] | Changes a standalone application artifact
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-start[runtime-mgr:standalone-application:start] | Starts a standalone application
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-delete[runtime-mgr:standalone-application:delete] | Deletes a standalone application
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-describe[runtime-mgr:standalone-application:describe] | Shows detailed information for a standalone application
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr:standalone-application:list] | Lists all standalone applications in the environment
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-restart[runtime-mgr:standalone-application:restart] | Restarts a standalone application
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-stop[runtime-mgr:standalone-application:stop] | Stops a standalone application
+|xref:standalone-apps.adoc#runtime-mgr-standalone-application-copy[runtime-mgr:standalone-application:copy] | Copies a standalone application
 |===
 
 // end::summary[]
@@ -26,10 +26,10 @@ For the Anypoint Platform CLI to recognize your target servers, each server must
 // tag::commands[]
 
 
-== runtime-mgr standalone-application artifact
+== runtime-mgr:standalone-application:artifact
 
 ----
-> runtime-mgr standalone-application artifact [options] <identifier> <directory>
+> runtime-mgr:standalone-application:artifact [options] <identifier> <directory>
 ----
 
 This command downloads the application artifact of the `identifier` application, to the directory passed in `directory`.
@@ -37,10 +37,10 @@ The `identifier` parameter can be either an application ID or name.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr standalone-application deploy
+== runtime-mgr:standalone-application:deploy
 
 ----
-> runtime-mgr standalone-application deploy [options] <targetIdentifier> <name> <zipfile>
+> runtime-mgr:standalone-application:deploy [options] <targetIdentifier> <name> <zipfile>
 ----
 
 This command deploys or redeploys the application passed as a ZIP file in the path `zipfile` to the on-premises target passed in `targetIdentifier`.
@@ -51,29 +51,29 @@ A target can be either a server, server group, or cluster.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-To redeploy an app and set a logging level or turn on Insight event tracking, see <<runtime-mgr standalone-application modify>>.
+To redeploy an app and set a logging level or turn on Insight event tracking, see <<runtime-mgr:standalone-application:modify>>.
 
-== runtime-mgr standalone-application describe-json
+== runtime-mgr:standalone-application:describe-json
 
 ----
-> runtime-mgr standalone-application describe-json [options] <identifier>
+> runtime-mgr:standalone-application:describe-json [options] <identifier>
 ----
 
 This command describes the standalone (on-premises) application passed in `identifier` as a raw JSON response.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr standalone-application modify
+== runtime-mgr:standalone-application:modify
 
 ----
-> runtime-mgr standalone-application modify [options] <identifier> <zipfile>
+> runtime-mgr:standalone-application:modify [options] <identifier> <zipfile>
 ----
 
 This command modifies the standalone (on-premises) application passed in `identifier` with the ZIP file application passed in `zipfile` as a path.
 
 The `identifier` parameter specifies the application identifier.
 To retrieve the identifier, see
-xref:anypoint-cli::standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr standalone-application list].
+xref:anypoint-cli::standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr:standalone-application:list].
 
 In addition to the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
 
@@ -90,20 +90,20 @@ To set multiple logging levels, provide multiple `--log` options, for example, `
 |===
 
 
-== runtime-mgr standalone-application start
+== runtime-mgr:standalone-application:start
 
 ----
-> runtime-mgr standalone-application start [options] <identifier>
+> runtime-mgr:standalone-application:start [options] <identifier>
 ----
 
 This command starts the standalone (on-premises) application passed in `identifier`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr standalone-application delete
+== runtime-mgr:standalone-application:delete
 
 ----
-> runtime-mgr standalone-application delete [options] <identifier>
+> runtime-mgr:standalone-application:delete [options] <identifier>
 ----
 
 This command deletes the standalone (on-premises) application passed in `identifier`.
@@ -113,20 +113,20 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-== runtime-mgr standalone-application describe
+== runtime-mgr:standalone-application:describe
 
 ----
-> runtime-mgr standalone-application describe [options] <identifier>
+> runtime-mgr:standalone-application:describe [options] <identifier>
 ----
 
 This command shows detailed information, such as status, creation date, and last update, for the standalone (on-premises) application passed in `identifier`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr standalone-application list
+== runtime-mgr:standalone-application:list
 
 ----
-> runtime-mgr standalone-application list [options]
+> runtime-mgr:standalone-application:list [options]
 ----
 
 This command lists all standalone (on-premises) applications.
@@ -141,30 +141,30 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |===
 
 
-== runtime-mgr standalone-application restart
+== runtime-mgr:standalone-application:restart
 
 ----
-> runtime-mgr standalone-application restart [options] <identifier>
+> runtime-mgr:standalone-application:restart [options] <identifier>
 ----
 
 This command restarts the standalone (on-premises) application passed in `identifier`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr standalone-application stop
+== runtime-mgr:standalone-application:stop
 
 ----
-> runtime-mgr standalone-application stop [options] <identifier>
+> runtime-mgr:standalone-application:stop [options] <identifier>
 ----
 
 This command stops the standalone (on-premises) application passed in `identifier`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr standalone-application copy
+== runtime-mgr:standalone-application:copy
 
 ----
-> runtime-mgr standalone-application copy [options] <source> <target> <targetIdentifier>
+> runtime-mgr:standalone-application:copy [options] <source> <target> <targetIdentifier>
 ----
 
 This command copies the standalone (on-premises) application passed in `source` to the target passed in `target` and the server, server group or cluster ID or Name passed in `targetIdentifier`.
@@ -172,14 +172,14 @@ This command copies the standalone (on-premises) application passed in `source` 
 Both arguments `source` and `destination` are represented using the format: `<organizationName>:<environmentName>/<appName>`, for example:
 
 ----
-> runtime-mgr standalone-application copy Services:QA/application-1 Development:QA/application-2 123456
+> runtime-mgr:standalone-application:copy Services:QA/application-1 Development:QA/application-2 123456
 ----
 Copies the application named `application-1` from the QA environment of the _Services_ organization to the QA environment of the `_Development_` organization in the server ID 123456.
 
 If the Anypoint Platform CLI is using the QA environment in the Services organization, the command can simply take the application name as a `source`:
 
 ----
-> runtime-mgr standalone-application copy application-1 Development/QA/application-2 123456
+> runtime-mgr:standalone-application:copy application-1 Development/QA/application-2 123456
 ----
 
 [NOTE]
