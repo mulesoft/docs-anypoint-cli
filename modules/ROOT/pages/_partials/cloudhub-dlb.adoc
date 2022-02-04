@@ -17,8 +17,8 @@
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-remove[cloudhub:load-balancer:ssl-endpoint:remove]| Remove a certificate from a load balancer
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-set-default[cloudhub:load-balancer:ssl-endpoint:set-default]| Set the default certificate that the load balancer will serve
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-describe[cloudhub:load-balancer:ssl-endpoint:set-describe]| Show the load balancer configuration for a particular certificate
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-add[cloudhub:load-balancer:whitelist:add]| Add an IP or range of IPs to the load balancer allowlist
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-remove[cloudhub:load-balancer:whitelist:remove]| Remove an IP or range of IPs from the load balancer allowlist
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-allowlist-add[cloudhub:load-balancer:allowlist:add]| Add an IP or range of IPs to the load balancer allowlist
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-allowlist-remove[cloudhub:load-balancer:allowlist:remove]| Remove an IP or range of IPs from the load balancer allowlist
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-describe[cloudhub:load-balancer:mappings:describe]| Lists the proxy mapping rules for a load balancer. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-add[cloudhub:load-balancer:mappings:add]| Add a proxy mapping rule at the specified index. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-remove[cloudhub:load-balancer:mappings:remove]| Remove a proxy mapping rule. If no `certificateName` is given, the mappings for the default SSL endpoint are shown.
@@ -221,11 +221,11 @@ You can start typing your load balancer's name and press `tab` for Anypoint Plat
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-[[cloudhub-load-balancer-whitelist-add]]
-== cloudhub:load-balancer:whitelist:add
+[[cloudhub-load-balancer-allowlist-add]]
+== cloudhub:load-balancer:allowlist:add
 
 ----
-> cloudhub:load-balancer:whitelist:add [options] <name> <cidrBlock>
+> cloudhub:load-balancer:allowlist:add [options] <name> <cidrBlock>
 ----
 This command adds a range of IP addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`.
 
@@ -235,11 +235,11 @@ The allowlist works at the load balancer level, not at the CN certificate level.
 You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-[[cloudhub-load-balancer-whitelist-remove]]
-== cloudhub:load-balancer:whitelist:remove
+[[cloudhub-load-balancer-allowlist-remove]]
+== cloudhub:load-balancer:allowlist:remove
 
 ----
-> cloudhub:load-balancer:whitelist:remove <name> <cidrBlock>
+> cloudhub:load-balancer:allowlist:remove <name> <cidrBlock>
 ----
 This command removes an IP or range of IPs addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`.
 
