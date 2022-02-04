@@ -56,6 +56,7 @@
 // | `--classifier` | Valid asset classifiers are `oas`, `raml`, `wsdl`, `http`, and `custom`.
 // |===
 
+[[exchange-asset-upload]]
 == exchange:asset:upload
 
 ----
@@ -164,6 +165,7 @@ Depending on the type of asset, some possible classifier values are:
 `groupID:assetID:version,groupID2:assetID:version` |
 |===
 
+[[exchange-asset-mutableDataUpload]]
 == exchange:asset:mutableDataUpload
 
 ----
@@ -202,6 +204,7 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 
 |===
 
+[[exchange-asset-modify]]
 == exchange:asset:modify
 
 ----
@@ -221,6 +224,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`--tags` | Comma-separated tags for the asset
 |===
 
+[[exchange-asset-download]]
 == exchange:asset:download
 
 ----
@@ -233,6 +237,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-list]]
 == exchange:asset:list
 
 ----
@@ -255,7 +260,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`--organizationId` | Filters by organization id | `exchange:asset:list --organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
 |===
 
-
+[[exchange-asset-page-download]]
 == exchange:asset:page:download
 
 ----
@@ -274,6 +279,7 @@ The description page in downloaded in Markdown format. When `name` is not specif
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-page-modify]]
 == exchange:asset:page:modify
 
 ----
@@ -289,6 +295,7 @@ Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes the `--name` option to set a new asset page name.
 
+[[exchange-asset-page-upload]]
 == exchange:asset:page:upload
 
 ----
@@ -305,6 +312,7 @@ Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-page-update]]
 == exchange:asset:page:update
 
 ----
@@ -321,6 +329,7 @@ Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-page-delete]]
 == exchange:asset:page:delete
 
 ----
@@ -339,6 +348,7 @@ Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-page-list]]
 == exchange:asset:page:list
 
 ----
@@ -354,7 +364,7 @@ This command only supports published pages.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-
+[[exchange-asset-copy]]
 == exchange:asset:copy
 
 ----
@@ -373,6 +383,7 @@ This command accepts the default options `--help`, `-f/--fields`, and `-o/--outp
 |`--targetOrganizationId` | Organization ID to copy asset into | `exchange:asset:copy --targetOrganizationId organization_id source_group_id/source_asset_id/source_version target_group_id/target_asset_id/target_version`
 |===
 
+[[exchange-asset-delete]]
 == exchange:asset:delete
 
 ----
@@ -388,6 +399,7 @@ Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-deprecate]]
 == exchange:asset:deprecate
 
 ----
@@ -401,6 +413,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-undeprecate]]
 == exchange:asset:undeprecate
 
 ----
@@ -414,6 +427,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-describe]]
 == exchange:asset:describe
 
 ----
@@ -427,6 +441,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-resource-upload]]
 == exchange:asset:resource:upload
 
 ----
@@ -446,6 +461,7 @@ The successful output command will be a markdown codesnippet.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-resource-list]]
 == exchange:asset:resource:list
 
 ----
@@ -463,6 +479,7 @@ You can use the `--draft` option to list draft resources from the asset portal.
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes the `--draft` option to list non-published resources in the asset portal.
 
+[[exchange-asset-resource-download]]
 == exchange:asset:resource:download
 
 ----
@@ -482,6 +499,7 @@ This command only supports published resources.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[exchange-asset-resource-delete]]
 == exchange:asset:resource:delete
 
 ----

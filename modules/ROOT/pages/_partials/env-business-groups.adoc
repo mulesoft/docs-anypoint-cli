@@ -15,6 +15,7 @@
 
 // tag::commands[]
 
+[[use-environment]]
 == use:environment
 
 This command is only available for interactive mode.
@@ -26,6 +27,7 @@ This command makes active the environment specified in `<name>`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[use-business-group]]
 == use:business-group
 
 This command is only available for interactive mode.

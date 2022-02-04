@@ -33,6 +33,7 @@
 
 // tag::commands[]
 
+[[cloudhub-load-balancer-list]]
 == cloudhub:load-balancer:list
 
 ----
@@ -42,6 +43,7 @@ This command lists all load balancers in your Anypoint Platform. It displays loa
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[cloudhub-load-balancer-describe]]
 == cloudhub load-balancer describe
 
 ----
@@ -68,6 +70,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 // This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[cloudhub-load-balancer-create]]
 == cloudhub:load-balancer:create
 
 ----
@@ -111,6 +114,7 @@ CloudHub does not implement the Online Certificate Status Protocol (OCSP). To ke
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
+[[== cloudhub-load-balancer-start]]
 == cloudhub:load-balancer:start
 
 ----
@@ -119,7 +123,7 @@ For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.a
 This command starts the load balancer specified in `<name>`. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-
+[[cloudhub-load-balancer-stop]]
 == cloudhub:load-balancer:stop
 
 ----
@@ -128,6 +132,7 @@ This command does not take any options, except for the default ones: `--help`, `
 This command stops the load balancer specified in `<name>`. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-delete]]
 == cloudhub:load-balancer:delete
 
 ----
@@ -141,6 +146,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-ssl-endpoint-add]]
 == cloudhub:load-balancer:ssl-endpoint:add
 
 ----
@@ -174,6 +180,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
+[[cloudhub-load-balancer-ssl-endpoint-remove]]
 == cloudhub:load-balancer:ssl-endpoint:remove
 
 ----
@@ -186,6 +193,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-ssl-endpoint-set-default]]
 == cloudhub:load-balancer:ssl-endpoint:set-default
 
 ----
@@ -202,6 +210,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`http` | Specifies the Load balancer HTTP behavior
 |===
 
+[[cloudhub-load-balancer-ssl-endpoint-set-describe]]
 == cloudhub:load-balancer:ssl-endpoint:set-describe
 
 ----
@@ -212,6 +221,7 @@ You can start typing your load balancer's name and press `tab` for Anypoint Plat
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-whitelist-add]]
 == cloudhub:load-balancer:whitelist:add
 
 ----
@@ -225,6 +235,7 @@ The allowlist works at the load balancer level, not at the CN certificate level.
 You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-whitelist-remove]]
 == cloudhub:load-balancer:whitelist:remove
 
 ----
@@ -237,6 +248,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-mappings-describe]]
 == cloudhub:load-balancer:mappings:describe
 
 ----
@@ -247,6 +259,7 @@ If no `certificateName` is passed, Anypoint Platform CLI returns the mappings fo
 
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-mappings-add]]
 == cloudhub:load-balancer:mappings:add
 
 ----
@@ -279,6 +292,7 @@ Supported Values: `http`, `https`
 | `--certificateName <certificate name>` | Optional parameter
 |===
 
+[[cloudhub-load-balancer-mappings-remove]]
 == cloudhub:load-balancer:mappings:remove
 
 ----
@@ -289,6 +303,7 @@ This command removes the proxy mapping rules from the load balancer specified in
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 If no `certificateName` is passed, Anypoint Platform CLI removes the mappings for the default SSL endpoint.
 
+[[cloudhub-load-balancer-dynamic-ips-enable]]
 == cloudhub:load-balancer:dynamic-ips:enable
 
 ----
@@ -297,6 +312,7 @@ If no `certificateName` is passed, Anypoint Platform CLI removes the mappings fo
 This command enables dynamic IPs for the load balancer specified in `<name>`.
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
+[[cloudhub-load-balancer-dynamic-ips-disable]]
 == cloudhub:load-balancer:dynamic-ips:disable
 
 ----
@@ -305,7 +321,7 @@ This command does not take any options, except for the default ones: `--help`, `
 This command disables dynamic IPs for the load balancer specified in `<name>`.
 This command does not take any options, except for the default ones: `--help`, `-f`/`--fields` and `-o`/`--output`
 
-
+[[cloudhub-region-list]]
 == cloudhub:region:list
 
 ----
@@ -315,7 +331,9 @@ This command lists all supported regions.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[== cloudhub-runtime-list]]
 == cloudhub:runtime:list
+
 ----
 > cloudhub:runtime:list [options]
 ----

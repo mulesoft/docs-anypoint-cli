@@ -38,6 +38,8 @@
 // end::summary[]
 
 // tag::commands[]
+
+[[api-mgr-alert-add]]
 == api-mgr:alert:add
 
 ----
@@ -99,6 +101,7 @@ You can pass this option multiple times to specify multiple codes.
 | ID of a policy applied to API instance to trigger `response-code` alert type.
 |===
 
+[[api-mgr-alert-list]]
 == api-mgr:alert:list
 
 ----
@@ -116,7 +119,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--sort` | Sorts the results in the field name passed | `api-mgr:alert:list --sort "Latest Version"`
 |===
 
-
+[[api-mgr-api-change-specification]]
 == api-mgr:api:change-specification
 
 ----
@@ -127,6 +130,7 @@ Changes the asset version for the API instance passed in `<apiInstanceId`,  by c
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-api-classify]]
 == api-mgr:api:classify
 
 ----
@@ -137,6 +141,7 @@ Classifies the API instance passed in `<apiInstanceId>` in the  environment pass
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-api-delete]]
 == api-mgr:api:delete
 
 ----
@@ -147,6 +152,7 @@ This command deletes the API instance passed in `<apiInstanceId>`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-api-deploy]]
 == api-mgr:api:deploy
 
 ----
@@ -186,6 +192,7 @@ It takes `true` or `false` values.
 
 |===
 
+[[api-mgr-api-deprecate]]
 == api-mgr:api:deprecate
 
 ----
@@ -196,6 +203,7 @@ Deprecates the API instance passed in `<apiInstanceId>`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-api-describe]]
 == api-mgr:api:describe
 
 ----
@@ -206,6 +214,7 @@ Shows details of the API Instance passed in `<apiInstanceId>`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
 
 ----
@@ -217,6 +226,7 @@ This command downloads the API proxy ZIP file of the API Instance passed in `<ap
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes a `gatewayVersion` option to specify the gateway version you want to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
+[[api-mgr-api-edit]]
 == api-mgr:api:edit
 
 ----
@@ -278,6 +288,7 @@ Supported values are `http`, or `https`.
 
 |===
 
+[[api-mgr-api-list]]
 == api-mgr:api:list
 
 ----
@@ -299,6 +310,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--sort` | Sorts the results in the field name passed
 |===
 
+[[api-mgr-api-manage]]
 == api-mgr:api:manage
 
 ----
@@ -364,7 +376,7 @@ Supported values are `http`, or `https`.
 | WSDL service port.
 |===
 
-
+[[api-mgr-api-promote]]
 == api-mgr:api:promote
 
 ----
@@ -391,7 +403,7 @@ This option takes `true` or `false` values. Default Value is `true`
 This option takes `true` or `false` values. Default Value is `true`
 |===
 
-
+[[api-mgr-api-redeploy]]
 == api-mgr:api:redeploy
 
 ----
@@ -423,7 +435,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 This option takes `true` or `false` values. Default Value is `true`
 |===
 
-
+[[api-mgr-api-undeprecate]]
 == api-mgr:api:undeprecate
 
 ----
@@ -434,6 +446,7 @@ Undeprecates the API instance passed in `<apiInstanceId>`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-contract-delete]]
 == api-mgr:contract:delete
 
 ----
@@ -444,6 +457,7 @@ This command deletes the contract between the API Instance passed in `<apiInstan
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-contract-list]]
 == api-mgr:contract:list
 
 ----
@@ -465,6 +479,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`--sort` | Sorts the results in the field name passed | `api-mgr:contract:list --sort "Latest Version" 643404`
 |===
 
+[[api-mgr-policy-apply]]
 == api-mgr:policy:apply
 
 ----
@@ -492,6 +507,7 @@ For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
 |===
 
+[[api-mgr-policy-describe]]
 == api-mgr:policy:describe
 
 ----
@@ -513,7 +529,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 Defaults to MuleSoft group ID when not provided.
 |===
 
-
+[[api-mgr-policy-disable]]
 == api-mgr:policy:disable
 
 ----
@@ -524,6 +540,7 @@ This command disables the policy passed in `<policyId>` from the API instance pa
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-policy-edit]]
 == api-mgr:policy:edit
 
 ----
@@ -546,6 +563,7 @@ For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
 |===
 
+[[api-mgr-policy-enable]]
 == api-mgr:policy:enable
 
 ----
@@ -556,6 +574,7 @@ This command enables the policy passed in `<policyId>` for the API Instance pass
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-policy-list]]
 == api-mgr:policy:list
 
 ----
@@ -567,7 +586,7 @@ When the `[apiInstanceId]` parameter is specified, this command lists the polici
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes the `-m, --muleVersion4OrAbove` option which takes `true` or `false` values. +
 
-
+[[api-mgr-policy-remove]]
 == api-mgr:policy:remove
 
 ----
@@ -578,6 +597,7 @@ This command removes the policy specified in `<policyId>` from the API instance 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-tier-add]]
 == api-mgr:tier:add
 
 ----
@@ -624,7 +644,7 @@ For example: `-l true,100,sec -l false,20,min`
 
 |===
 
-
+[[api-mgr-tier-copy]]
 == api-mgr:tier:copy
 
 ----
@@ -635,6 +655,7 @@ This command copies the SLA tier from the API instance passed in `<sourceAPIInst
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-tier-delete]]
 == api-mgr:tier:delete
 
 ----
@@ -645,6 +666,7 @@ This command deletes the SLA tier passed in `<tierId>` from API instance passed 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[api-mgr-tier-list]]
 == api-mgr:tier:list
 ----
 > api-mgr:tier:list [options] <apiInstanceId> [searchText]

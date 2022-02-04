@@ -18,6 +18,7 @@
 
 // tag::commands[]
 
+[[runtime-mgr-servergroup-create]]
 == runtime-mgr:serverGroup:create
 
 ----
@@ -28,6 +29,7 @@ This command creates a server group with the name passed in `name` using the ser
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-servergroup-describe]]
 == runtime-mgr:serverGroup:describe
 
 ----
@@ -38,6 +40,7 @@ This command describes the server group passed in `serverGroupId`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-servergroup-modify]]
 == runtime-mgr:serverGroup:modify
 
 ----
@@ -50,7 +53,7 @@ In order to update the id for the cluster, you need to pass the  `--name` option
 
 Besides the `--name` option, this command also takes the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
 
-
+[[runtime-mgr-servergroup-add-server]]
 == runtime-mgr:serverGroup:add:server
 
 ----
@@ -61,6 +64,7 @@ This command adds the server passed in `serverId` to the server group passed in 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-servergroup-delete]]
 == runtime-mgr:serverGroup:delete
 
 ----
@@ -74,6 +78,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
+[[runtime-mgr-servergroup-list]]
 == runtime-mgr:serverGroup:list
 
 ----
@@ -84,6 +89,7 @@ This command lists all server groups in the environment.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-servergroup-remove-server]]
 == runtime-mgr:serverGroup:remove:server
 
 ----

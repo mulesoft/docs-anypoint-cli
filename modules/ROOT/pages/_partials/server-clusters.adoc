@@ -19,6 +19,7 @@
 
 // tag::commands[]
 
+[[runtime-mgr-cluster-add-server]]
 == runtime-mgr:cluster:add:server
 
 ----
@@ -29,6 +30,7 @@ This command adds the cluster in `clusterId` to the server passed in `serverId`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-cluster-delete]]
 == runtime-mgr:cluster:delete
 
 ----
@@ -42,6 +44,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
+[[runtime-mgr-cluster-list]]
 == runtime-mgr:cluster:list
 
 ----
@@ -52,6 +55,7 @@ This command lists all clusters in the environment.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-cluster-remove-server]]
 == runtime-mgr:cluster:remove:server
 
 ----
@@ -62,6 +66,7 @@ This command removes the server passed in `serverId` from the cluster passed in 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-cluster-create]]
 == runtime-mgr:cluster:create
 
 ----
@@ -78,6 +83,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`--server <id:ip>` | Pair of server ID and IP address. Latter is optional for multicast cluster. Provide multiple values to add multiple servers
 |===
 
+[[runtime-mgr-cluster-describe]]
 == runtime-mgr:cluster:describe
 
 ----
@@ -88,6 +94,7 @@ This command describes the cluster passed in `clusterId`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-cluster-modify]]
 == runtime-mgr:cluster:modify
 
 ----

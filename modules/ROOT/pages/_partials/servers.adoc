@@ -18,6 +18,7 @@
 
 // tag::commands[]
 
+[[runtime-mgr-server-describe]]
 == runtime-mgr:server:describe
 
 ----
@@ -28,6 +29,7 @@ This command describes the server passed in `serverId`.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-server-modify]]
 == runtime-mgr:server:modify
 
 ----
@@ -40,6 +42,7 @@ In order to update the id for the cluster, you need to pass the  `--name` option
 
 Besides the `--name` option, this command also takes the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
 
+[[runtime-mgr-server-token]]
 == runtime-mgr:server:token
 
 ----
@@ -50,6 +53,7 @@ This command gets server registration token. This token needs to be used to regi
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-server-delete]]
 == runtime-mgr:server:delete
 
 ----
@@ -63,6 +67,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
+[[runtime-mgr-server-list]]
 == runtime-mgr:server:list
 
 ----

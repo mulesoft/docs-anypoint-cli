@@ -25,7 +25,7 @@ For the Anypoint Platform CLI to recognize your target servers, each server must
 
 // tag::commands[]
 
-
+[[runtime-mgr-standalone-application-artifact]]
 == runtime-mgr:standalone-application:artifact
 
 ----
@@ -37,6 +37,7 @@ The `identifier` parameter can be either an application ID or name.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-standalone-application-deploy]]
 == runtime-mgr:standalone-application:deploy
 
 ----
@@ -63,6 +64,7 @@ To redeploy an app and set a logging level or turn on Insight event tracking, se
 
 //This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-standalone-application-modify]]
 == runtime-mgr:standalone-application:modify
 
 ----
@@ -89,7 +91,7 @@ In addition to the default `--help`, `-f`/`--fields` and `-o`/`--output` options
 To set multiple logging levels, provide multiple `--log` options, for example, `--log INFO:org.apache --log WARN:org.mule`.
 |===
 
-
+[[runtime-mgr-standalone-application-start]]
 == runtime-mgr:standalone-application:start
 
 ----
@@ -100,6 +102,7 @@ This command starts the standalone (on-premises) application passed in `identifi
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-standalone-application-delete]]
 == runtime-mgr:standalone-application:delete
 
 ----
@@ -113,6 +116,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
+[[runtime-mgr-standalone-application-describe]]
 == runtime-mgr:standalone-application:describe
 
 ----
@@ -125,6 +129,7 @@ Use the option `-o json` to get the raw JSON response of the application you spe
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-standalone-application-list]]
 == runtime-mgr:standalone-application:list
 
 ----
@@ -142,7 +147,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--offset <num>`      | Offsets the number of applications passed
 |===
 
-
+[[runtime-mgr-standalone-application-restart]]
 == runtime-mgr:standalone-application:restart
 
 ----
@@ -153,6 +158,7 @@ This command restarts the standalone (on-premises) application passed in `identi
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-standalone-application-stop]]
 == runtime-mgr:standalone-application:stop
 
 ----
@@ -163,6 +169,7 @@ This command stops the standalone (on-premises) application passed in `identifie
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+[[runtime-mgr-standalone-application-copy]]
 == runtime-mgr:standalone-application:copy
 
 ----

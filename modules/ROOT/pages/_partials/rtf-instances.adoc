@@ -12,6 +12,7 @@
 
 // tag::commands[]
 
+[[runtime-mgr-rtf-list]]
 == runtime-mgr:rtf:list
 
 ----
