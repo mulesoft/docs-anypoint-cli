@@ -51,16 +51,4 @@ The default is `text` for non-interactive mode and `table` for interactive mode.
 
 If you do not to pass a command, Anypoint Platform CLI runs in interactive mode.
 
-
-=== exit
-
-----
-> exit [options]
-----
-This command exits Anypoint Platform CLI when it is being run in interactive mode.
-
-The `exit` command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
-
-
-
 // end::commands[]
