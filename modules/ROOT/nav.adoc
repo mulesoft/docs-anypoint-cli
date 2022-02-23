@@ -6,7 +6,6 @@
  ** xref:proxy.adoc[Use a Proxy Server]
 * xref:anypoint-platform-cli-commands.adoc[List of Commands]
 * xref:account.adoc[Anypoint Platform Accounts]
-* xref:api-catalog.adoc[API Catalog]
 * xref:api-mgr.adoc[API Manager]
 * xref:cloudhub.adoc[CloudHub]
  ** xref:cloudhub-apps.adoc[CloudHub Applications]
