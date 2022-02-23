@@ -64,6 +64,6 @@ To improve the Anypoint CLI experience, we gather anonymized usage data. You can
 
 == See Also
 
-* xref:anypoint-platform-cli-commands.adoc[List of Commands]
 * xref:auth.adoc[Authentication Methods]
 * xref:proxy.adoc[Use Anypoint CLI Through a Network Proxy]
+* xref:anypoint-platform-cli-commands.adoc[List of Commands]
