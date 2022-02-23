@@ -4,8 +4,6 @@ include::anypoint-cli::partial$intro.adoc[tag=usageintro]
 
 include::anypoint-cli::partial$intro.adoc[tag=syntax]
 
-include::anypoint-cli::partial$intro.adoc[tag=commands]
-
 == Optional Arguments
 
 The Anypoint CLI takes the following optional arguments:
@@ -63,3 +61,9 @@ You can start typing the name of the command or parameter and press Tab for auto
 === Anonymized Usage Data
 
 To improve the Anypoint CLI experience, we gather anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
+
+== See Also
+
+* xref:anypoint-platform-cli-commands.adoc[List of Commands]
+* xref:auth.adoc[Authentication Methods]
+* xref:proxy.adoc[Use Anypoint CLI Through a Network Proxy]

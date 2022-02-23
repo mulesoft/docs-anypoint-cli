@@ -2,11 +2,7 @@
 
 // tag::usageintro[]
 
-// Check this for 4.x, as I think interactive mode will no longer be supported.  
-
-Use Anypoint Platform CLI commands to automate a subset of product actions through scripts. 
-
-Anypoint Platform CLI can be run in batch or interactive mode. 
+Use Anypoint Platform CLI commands to automate a subset of product actions through scripts. Anypoint Platform CLI 4.0 and later can be run only in batch mode. 
 
 // end::usageintro[]
 
@@ -39,16 +35,6 @@ You can use the `--fields` option with no fields to get a list of fields to outp
 ** `text`
 ** `json`
 +
-The default is `text` for non-interactive mode and `table` for interactive mode.
+The default is `text`.
 
 // end::syntax[]
-
-
-// tag::commands[]
-
-[[interactive-mode]]
-== Interactive Mode
-
-If you do not to pass a command, Anypoint Platform CLI runs in interactive mode.
-
-// end::commands[]
