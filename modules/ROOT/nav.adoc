@@ -1,6 +1,6 @@
 .xref:index.adoc[Anypoint CLI]
 * xref:index.adoc[About Anypoint CLI 4.x]
-* xref:install.adoc[Install Anypoint CLI Plugins]
+* xref:install.adoc[Install Anypoint CLI]
 * xref:intro.adoc[Use Anypoint CLI]
  ** xref:auth.adoc[Authentication Methods]
  ** xref:proxy.adoc[Use a Proxy Server]
