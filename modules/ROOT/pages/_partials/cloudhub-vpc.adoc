@@ -9,7 +9,6 @@
 |Command |Description
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-list[cloudhub:vpc:list]| Lists all Anypoint VPCs
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-describe[cloudhub:vpc:describe]| Show Anypoint VPC details
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-describe-json[cloudhub:vpc:describe-json]| Show raw Anypoint VPC JSON response
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-create[cloudhub:vpc:create]| Create a new Anypoint VPC
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-delete[cloudhub:vpc:delete]| Delete an existing Anypoint VPC
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-environments-add[cloudhub:vpc:environments:add]| Modifies the Anypoint VPC association to Runtime Manager environments.
@@ -44,21 +43,23 @@ This command lists all available Anypoint VPCs. It returns ID, region, and envir
 ----
 This command displays information about the Anypoint VPC that is specified in `<name>`.
 
-You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
-
-[[cloudhub-vpc-describe-json]]
-== cloudhub:vpc:describe-json
-
-----
-> cloudhub:vpc:describe [options] <name>
-----
-This command displays a raw JSON response of the Anypoint VPC that is specified in `<name>`.
+Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`.
 
 You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+//[[cloudhub-vpc-describe-json]]
+//== cloudhub:vpc:describe-json
+
+//----
+//> cloudhub:vpc:describe [options] <name>
+//----
+//This command displays a raw JSON response of the Anypoint VPC that is specified in `<name>`.
+
+//You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+
+//This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 [[cloudhub-vpc-create]]
 == cloudhub:vpc:create
