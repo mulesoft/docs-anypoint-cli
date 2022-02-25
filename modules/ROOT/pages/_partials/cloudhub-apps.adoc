@@ -5,7 +5,7 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:cloudhub-apps.adoc#runtime-mgr:cloudhub-alert:list[runtime-mgr:cloudhub-alert-list]| Lists all alerts in the environment
+|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-list[runtime-mgr:cloudhub-alert:list]| Lists all alerts in the environment
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-history-describe[runtime-mgr:cloudhub-alert-history:describe]| Describes the history of the alarm
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-list[runtime-mgr:cloudhub-application:list]| Lists all applications in the environment
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe[runtime-mgr:cloudhub-application:describe]| Show application details
