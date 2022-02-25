@@ -67,7 +67,9 @@ For information about generating a bearer token, see https://help.mulesoft.com/s
 [[credentials-file]]
 === Credentials File
 
-The recommended way of passing credential options to your Anypoint Platform CLI installation is using the `credentials` file located inside the `~/.anypoint` directory, which is not automatically created during installation. 
+The recommended way of passing credential options to your Anypoint Platform CLI installation is using the `config.json` file located inside the `macOS: ~/Library/Preferences/@mulesoft/anypoint-cli-nodejs
+Unix: ~/.config/@mulesoft/anypoint-cli-nodejs
+Windows: %LOCALAPPDATA%\@mulesoft\anypoint-cli-nodejs` directory, which is not automatically created during installation. 
 
 To create your credentials file:
 
