@@ -28,7 +28,7 @@
 
 This command adds the cluster in `clusterId` to the server passed in `serverId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-cluster-delete]]
 == runtime-mgr:cluster:delete
@@ -39,7 +39,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command deletes the cluster passed in `clusterId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -53,7 +53,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command lists all clusters in the environment.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-cluster-remove-server]]
 == runtime-mgr:cluster:remove:server
@@ -64,7 +64,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command removes the server passed in `serverId` from the cluster passed in `clusterId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-cluster-create]]
 == runtime-mgr:cluster:create
@@ -75,7 +75,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command creates a cluster using the id passed in `name`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also takes:
 [%header,cols="30,70"]
 |===
 |Value | Description
@@ -92,7 +92,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 This command describes the cluster passed in `clusterId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-cluster-modify]]
 == runtime-mgr:cluster:modify

@@ -47,7 +47,7 @@ Use the option `-o json` to get the raw JSON response of the application you spe
 
 You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 //[[cloudhub-vpc-describe-json]]
 //== cloudhub:vpc:describe-json
@@ -59,7 +59,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 //You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-//This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+//This command takes only the default options: `--help` and `-o`/`--output`
 
 [[cloudhub-vpc-create]]
 == cloudhub:vpc:create
@@ -85,7 +85,7 @@ This command deletes the Anypoint VPC specified in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[cloudhub-vpc-environments-add]]
 == cloudhub:vpc:environments:add
@@ -115,7 +115,7 @@ Besides the default `--help` option, this command also takes the option `--defau
 ----
 This command assigns the Anypoint VPC defined in `<vpc>` to the business group(s) passed as argument(s) thereafter.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[cloudhub-vpc-business-groups-remove]]
 == cloudhub:vpc:business-groups:remove
@@ -128,7 +128,7 @@ This command removes the Anypoint VPC defined in `<vpc>` from the business group
 [WARNING]
 This command does not prompt twice before removing the Anypoint VPC from the specified resource. If you send a remove instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[cloudhub-vpc-dns-servers-set]]
 == cloudhub:vpc:dns-servers:set
@@ -143,7 +143,7 @@ Whenever those private domains are provided, your worker resolves them using you
 This feature is supported by workers running Mule versions 3.5.x, 3.6.x, 3.7.4, 3.8.0-HF1, 3.8.1 and 3.8.2.
 
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also takes:
 
 [%header,cols="20a,80a"]
 |===
@@ -166,7 +166,7 @@ To remove a DNS set, you need to use the <<cloudhub:vpc:dns-servers:unset,vpc dn
 ----
 This command clears the list of local host names (internal domain names) to be resolved using your DNS servers from the Anypoint VPC passed in `<vpc>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[cloudhub-vpc-firewall-rules-describe]]
 == cloudhub:vpc:firewall-rules:describe
@@ -176,7 +176,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 This command describes all the firewall rules for the Anypoint VPC defined in `<vpc>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[cloudhub-vpc-firewall-rules-add]]
 == cloudhub:vpc:firewall-rules:add
@@ -205,7 +205,7 @@ By default, all IP addresses are blocked, and you need to authorize IP addresses
 
 You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[cloudhub-vpc-firewall-rules-remove]]
 == cloudhub:vpc:firewall-rules:remove
@@ -215,7 +215,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 This command removes the firewall rule from the workers inside the Anypoint VPC specified in `<vpc>` at the index passed in the `<index>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 
 // end::commands[]

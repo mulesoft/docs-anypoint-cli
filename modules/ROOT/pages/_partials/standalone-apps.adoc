@@ -35,7 +35,7 @@ For the Anypoint Platform CLI to recognize your target servers, each server must
 This command downloads the application artifact of the `identifier` application, to the directory passed in `directory`.
 The `identifier` parameter can be either an application ID or name.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-standalone-application-deploy]]
 == runtime-mgr:standalone-application:deploy
@@ -50,7 +50,7 @@ The `targetIdentifier` parameter can be either a target ID or name.
 
 A target can be either a server, server group, or cluster.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 To redeploy an app and set a logging level or turn on Insight event tracking, see <<runtime-mgr:standalone-application:modify>>.
 
@@ -62,7 +62,7 @@ To redeploy an app and set a logging level or turn on Insight event tracking, se
 
 //This command describes the standalone (on-premises) application passed in `identifier` as a raw JSON response.
 
-//This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+//This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-standalone-application-modify]]
 == runtime-mgr:standalone-application:modify
@@ -100,7 +100,7 @@ To set multiple logging levels, provide multiple `--log` options, for example, `
 
 This command starts the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-standalone-application-delete]]
 == runtime-mgr:standalone-application:delete
@@ -111,7 +111,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command deletes the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -127,7 +127,7 @@ This command shows detailed information, such as status, creation date, and last
 
 Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`. 
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-standalone-application-list]]
 == runtime-mgr:standalone-application:list
@@ -138,7 +138,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command lists all standalone (on-premises) applications.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also takes:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -156,7 +156,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 This command restarts the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-standalone-application-stop]]
 == runtime-mgr:standalone-application:stop
@@ -167,7 +167,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command stops the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-standalone-application-copy]]
 == runtime-mgr:standalone-application:copy
@@ -194,6 +194,6 @@ If the Anypoint Platform CLI is using the QA environment in the Services organiz
 [NOTE]
 Running this command requires for your user to have read/write access to the `/tmp` directory of the OS where the CLI is installed.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 // end::commands[]

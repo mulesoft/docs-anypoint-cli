@@ -27,7 +27,7 @@
 
 This command describes the server passed in `serverId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-server-modify]]
 == runtime-mgr:server:modify
@@ -51,7 +51,7 @@ Besides the `--name` option, this command also takes the default `--help`, `-f`/
 
 This command gets server registration token. This token needs to be used to register a new server.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-server-delete]]
 == runtime-mgr:server:delete
@@ -62,7 +62,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command deletes the server passed in `serverId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -76,7 +76,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This server lists all servers in your environment.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command takes only the default options: `--help` and `-o`/`--output`
 
 // TODO: Deprecated server register
 // == runtime-mgr server register
@@ -88,7 +88,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 //
 // This command registers a new server with the name passed in `name`. This command returns a signed certificate which is downloaded to `directory` path.
 //
-// Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+// Besides the default `--help` and `-o`/`--output` options, this command also takes:
 //
 // [%header,cols="30,70"]
 // |===
