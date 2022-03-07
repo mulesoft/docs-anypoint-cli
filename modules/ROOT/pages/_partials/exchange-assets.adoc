@@ -161,7 +161,7 @@ Depending on the type of asset, some possible classifier values are:
 
 | `--dependencies` | Asset dependencies (comma-separated) |
 
-`groupID:assetID:version,groupID2:assetID:version` |
+`groupID:assetID:version,groupID2:assetID:version`
 
 | `--status` | Asset status 
 
