@@ -237,13 +237,23 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 
 Supported Values:
 
-* `development`
 * `published`
 * `deprecated` |
 
-`exchange asset updateStatus --status development` 
+`exchange asset updateStatus --status deprecated` |
 
+Valid transitions are:
+
+[%header,cols="30a,30a"]
 |===
+| From | TO
+| `development` | `published`
+| `published` | `deprecated`
+|===
+
+Note `published` state corresponds to the `stable` state
+
+===
 
 == exchange asset modify
 
