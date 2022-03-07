@@ -248,7 +248,7 @@ Valid transitions are:
 
 [%header,cols="30a,30a"]
 |===
-| From | TO
+| From | To
 | `development` | `published`
 | `published` | `deprecated`
 |===
