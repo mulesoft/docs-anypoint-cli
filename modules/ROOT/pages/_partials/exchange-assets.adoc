@@ -240,7 +240,9 @@ Supported Values:
 * `published`
 * `deprecated` |
 
-`exchange asset updateStatus --status deprecated` |
+`exchange asset updateStatus --status deprecated`
+
+|===
 
 Valid transitions are:
 
