@@ -251,6 +251,7 @@ Valid transitions are:
 | From | To
 | `development` | `published`
 | `published` | `deprecated`
+| `deprecated` | `published`
 |===
 
 Note `published` state corresponds to the `stable` state
