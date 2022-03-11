@@ -4,6 +4,8 @@ You must install Anypoint CLI from npm before you can run the commands. You can 
 
 * <<prereqs,Install the prerequisite software>> before proceeding with any of the Anypoint CLI installations. 
 
+* See the <<plugin-list,list of plugins>> to see which plugins are available to install so that you can decide which ones you need.
+
 * <<installation,Install the core package and all default plugins>>, which includes the core Anypoint CLI functionality and all default plugins.
 
 * <<install-core-only,Install the core package only>>. You must install the core package before you install plugins if you plan to install plugins separately. You can also install the core package to apply an upgrade or maintenance release without affecting the separate plugin installations.
@@ -13,6 +15,8 @@ You must install Anypoint CLI from npm before you can run the commands. You can 
 * <<verify-installation,Verify the installation>> by running the basic commands and viewing the output.
 
 * If you have issues with the installation, see <<troubleshoot-installation,Troubleshoot the Installation>>.
+
+* <<uninstall-plugins,You can uninstall plugins>> if you want to remove some you have already installed.
 
 [[prereqs]]
 == Prerequisites
@@ -36,10 +40,28 @@ See the https://nodejs.org/en/download/[NodeJS download page].
 
 Depending on the configuration of your system, you might need to log in using administrator credentials before you can successfully run the npm commands.
 
+
+[[plugin-list]]
+== List of Plugins
+
+You can install the following plugins with Anypoint CLI:  
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+| anypoint-cli-account-plugin | Account command topics
+| anypoint-cli-api-mgr-plugin | API Manager command topics
+| anypoint-cli-cloudhub-plugin | CloudHub command topics
+| anypoint-cli-designcenter-plugin | Design Center command topics
+| anypoint-cli-datagraph-plugin | DataGraph command topics
+| anypoint-cli-exchange-plugin| Exhange command topics
+| anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
+|===
+
 [[installation]]
 == Install the Core Package Plus Default Plugins
 
-Run the following command to install the Anypoint CLI core package plus all default plugins. 
+Run the following command to install the Anypoint CLI core package plus all default plugins. See <<plugin-list,List of Plugins>>.
 
 [source,text,linenums]
 ----
@@ -198,19 +220,4 @@ The following command uninstalls the account plugin.
 $ anypoint-cli-v4 plugins:uninstall @mulesoft/anypoint-cli-account-plugin
 ----
 
-[[plugin-list]]
-== List of Plugins
-
-You can install the following plugins with Anypoint CLI:  
-
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-| anypoint-cli-account-plugin | Account command topics
-| anypoint-cli-api-mgr-plugin | API Manager command topics
-| anypoint-cli-cloudhub-plugin | CloudHub command topics
-| anypoint-cli-designcenter-plugin | Design Center command topics
-| anypoint-cli-datagraph-plugin | DataGraph command topics
-| anypoint-cli-exchange-plugin| Exhange command topics
-| anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
-|===
+See <<plugin-list,List of Plugins>>.
