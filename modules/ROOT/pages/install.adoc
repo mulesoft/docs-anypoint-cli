@@ -199,7 +199,7 @@ $ anypoint-cli-v4 plugins:uninstall @mulesoft/anypoint-cli-account-plugin
 ----
 
 [[plugin-list]]
-= List of Plugins
+== List of Plugins
 
 You can install the following plugins with Anypoint CLI:  
 
