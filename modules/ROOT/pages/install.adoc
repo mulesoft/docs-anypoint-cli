@@ -12,9 +12,7 @@ You must install Anypoint CLI from npm before you can run the commands. You can 
 
 * After you have installed the core package, you can selectively <<install-plugins,install the Anypoint CLI plugins you want to use>>. 
 
-* After installing, <<verify-installation,Verify the installation>> by running a few recommended commands and viewing the output.
-
-* If you have issues with the installation, see <<troubleshoot-installation,Troubleshoot the Installation>>.
+* After installing, <<verify-installation,verify the installation>> by running a few recommended commands and viewing the output.
 
 * If you want to remove some plugins you have already installed, you can selectively <<uninstall-plugins,uninstall plugins>> .
 
@@ -180,23 +178,6 @@ For example, to test the `account:environment:list` command in the account topic
 [source,text,linenums]
 ----
 $ anypoint-cli-v4 account:environment:list
-----
-
-[[troubleshoot-install]]
-== Troubleshoot the Installation
-
-If the installation command fails with the following error, ensure that the Git client is installed on your computer and the git protocol is not blocked by your firewall or network:
-
-[source,text,linenums]
-----
-fatal: read error: Invalid argument
-----
-
-If the git protocol is blocked, you can configure Git to use `https://` instead of `git://`:
-
-[source,text,linenums]
-----
-git config --global url."https://".insteadOf git://
 ----
 
 [[uninstall-plugin]]
