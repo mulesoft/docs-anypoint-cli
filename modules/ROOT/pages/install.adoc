@@ -4,19 +4,19 @@ You must install Anypoint CLI from npm before you can run the commands. You can 
 
 * <<prereqs,Install the prerequisite software>> before proceeding with any of the Anypoint CLI installations. 
 
-* See the <<plugin-list,list of plugins>> to see which plugins are available to install so that you can decide which ones you need.
+* See the <<plugin-list,list of Anypoint CLI plugins>> to see which plugins are available to install so that you can decide which ones you need.
 
-* <<installation,Install the core package and all default plugins>>, which includes the core Anypoint CLI functionality and all default plugins.
+* If you want to install the core package plus all of the default plugins in one command, <<installation,install using the `--production` parameter>>.
 
-* <<install-core-only,Install the core package only>>. You must install the core package before you install plugins if you plan to install plugins separately. You can also install the core package to apply an upgrade or maintenance release without affecting the separate plugin installations.
+* If you want to selectively install plugins or install a different version of the core functionality, you must <<install-core-only,install the core package>>. 
 
-* <<install-plugins,Install the CLI plugins you want to use>>. This enables you to save space and to limit the commands available to only those that support the parts of Anypoint Platform that you use.
+* After you have installed the core package, you can selectively <<install-plugins,install the Anypoint CLI plugins you want to use>>. 
 
-* <<verify-installation,Verify the installation>> by running the basic commands and viewing the output.
+* After installing, <<verify-installation,Verify the installation>> by running a few recommended commands and viewing the output.
 
 * If you have issues with the installation, see <<troubleshoot-installation,Troubleshoot the Installation>>.
 
-* <<uninstall-plugins,You can uninstall plugins>> if you want to remove some you have already installed.
+* If you want to remove some plugins you have already installed, you can selectively <<uninstall-plugins,uninstall plugins>> .
 
 [[prereqs]]
 == Prerequisites
