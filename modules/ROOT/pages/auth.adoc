@@ -8,14 +8,13 @@ You can optionally set environment variables to hold the credential values or cr
 * <<username-pw>>
 * <<client-id-secret>>
 * <<bearer-token>>
-* <<credentials-file>>
+* <<config-file>>
 * <<env-variables>>
-* <<cli-options>>
 
 [[username-pw]]
 === Username and Password
 
-If you don't log in using single sign-on (SSO), you can use your username and password to log into the CLI directly.
+If you do not log in using single sign-on (SSO), you can use your username and password to log into the CLI directly.
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -64,58 +63,23 @@ Your CLI session expires when the bearer token expires.
 
 For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform].
 
-[[credentials-file]]
-=== Credentials File
+[[config-file]]
+=== Configuration File
 
-The recommended way of passing credential options to your Anypoint Platform CLI installation is using the `config.json` file located inside the `macOS: ~/Library/Preferences/@mulesoft/anypoint-cli-nodejs
-Unix: ~/.config/@mulesoft/anypoint-cli-nodejs
-Windows: %LOCALAPPDATA%\@mulesoft\anypoint-cli-nodejs` directory, which is not automatically created during installation. 
+MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the Node.js `config.json` file. 
 
-To create your credentials file:
+To create your configuration file:
 
-. Create a directory called `.anypoint` in the `~/` directory for Linux and OSx, or `C:\Users\USERNAME \` in Windows.
-. Navigate to your `.anypoint` directory and create a blank file named `credentials` with the following structure:
+. Run the "anypoint-cli-v4 conf" command, to set the authentication method.
 +
-[source,text,linenums]
 ----
-{
- "default": {
-  "username": "yourAnypointUserName",
-  "password": "yourAnypointPassword",
-  "organization": "",
-  "environment": "",
-  "host": ""
- },
- "otherProfile": {
-  "username": "",
-  "password": "",
-  "organization": "",
-  "environment": "",
-  "host": ""
- },
- "connAppProfile": {
-  "client_id": "",
-  "client_secret": "",
-  "organization": "",
-  "environment": "",
-  "host": ""
- }
-}
+$ anypoint-cli-v4 conf username <username>
+$ anypoint-cli-v4 conf password <password>
 ----
-Note that the `default` profile is used unless the `ANYPOINT_PROFILE` environment variable is set:
 +
-[source,text,linenums]
-----
-> export ANYPOINT_PROFILE="otherProfile"
-> anypoint-cli
-----
-
-Then run the `anypoint-cli` command without any options:
-
-[source,text,linenums]
-----
-> anypoint-cli
-----
+The `config.json` file is created in the following directory:
++
+ ~/Library/Preferences/@mulesoft/anypoint-cli-v4-nodejs/config.json
 
 [[env-variables]]
 === Dedicated Environment Variables
@@ -127,15 +91,4 @@ If you choose to pass the credentials when running `anypoint-cli`, pass both par
 > export ANYPOINT_USERNAME="username"
 > export ANYPOINT_PASSWORD="password"
 > anypoint-cli
-----
-
-[[cli-options]]
-=== CLI Options
-
-If you pass only your username, the Anypoint CLI prompts for your password.
-
-[source,text,linenums]
-----
-> anypoint-cli --username="user"
-Password: ****
 ----
