@@ -1,26 +1,167 @@
-= Install Anypoint CLI
+= Install Anypoint CLI 4.x
 
-You must install Anypoint CLI from npm before you can run the commands. 
+You must install Anypoint CLI from npm before you can run the commands. You can install the installation in different ways depending on your needs. Use the following guidelines to install:
+
+* <<prereqs,Install the prerequisite software>> before proceeding with any of the Anypoint CLI installations. 
+
+* <<installation,Install the core package and all default plugins>>, which includes the core Anypoint CLI functionality and all default plugins.
+
+* <<install-core-only,Install the core package only>>. You must install the core package before you install plugins if you plan to install plugins separately. You can also install the core package to apply an upgrade or maintenance release without affecting the separate plugin installations.
+
+* <<install-plugins,Install the CLI plugins you want to use>>. This enables you to save space and to limit the commands available to only those that support the parts of Anypoint Platform that you use.
+
+* <<verify-installation,Verify the installation>> by running the basic commands and viewing the output.
+
+* If you have issues with the installation, see <<troubleshoot-installation,Troubleshoot the Installation>>.
 
 [[prereqs]]
 == Prerequisites
 
-* Download and install NodeJS and npm (node package manager) on your system.
+The Anypoint CLI is built with Node.js and it is installed by using npm (node package manager).
+
+=== Version Requirements
+
+* Node.js version 16 or later
+* npm version 7 or later
+
+To install the prerequisite software:
+
+* Download and install Node.js and npm.
 +
 See the https://nodejs.org/en/download/[NodeJS download page].
-* Download and install the Git version management on your system.
-+
-See the https://git-scm.com/downloads[Git download site].
+//I don't think this step is necessary.
+//* Download and install the Git version management on your system.
+//+
+//See the https://git-scm.com/downloads[Git download site].
+
+Depending on the configuration of your system, you might need to log in using administrator credentials before you can successfully run the npm commands.
 
 [[installation]]
-== Installation
+== Install the Core Package Plus Default Plugins
 
-Run the following command to install Anypoint CLI package. Depending on the configuration of your system, you might need to run this command using administrator credentials.
+Run the following command to install the Anypoint CLI core package plus all default plugins. 
 
 [source,text,linenums]
 ----
-$ npm install -g anypoint-cli@latest
+$ npm install -g @mulesoft/anypoint-cli-v4 --production
 ----
+
+[[install-core-only]]
+== Install the Core Anypoint CLI Package Only
+
+You must install the core package before you install plugins if you plan to install plugins separately. You can also install the core package to apply an upgrade or maintenance release without affecting the separate plugin installations.
+
+[source,text,linenums]
+----
+$ npm install -g @mulesoft/anypoint-cli-v4
+----
+
+[[install-plugins]]
+== Install Plugins Separately
+
+Installing plugins separately from the core package installation enables you to save space and to limit the commands available to only those that support the parts of Anypoint Platform that you use.
+
+You must <<install-core-only,install the core package>> before you install plugins. After you install the core package, install each of the plugins you want to use as follows:
+
+See <<plugin-list,List of Plugins>>.
+
+[source,text,linenums]
+----
+$ anypoint-cli-v4 plugins:install @mulesoft/anypoint-cli-<plugin-name>-plugin
+----
+
+[[verify-installation]]
+== Verify the Installation
+
+To verify that Anypoint CLI was installed correctly, use the following command:
+
+[source,text,linenums]
+----
+$ anypoint-cli-v4 --version
+----
+
+The output shows the version of the installed core package as follows:
+
+----
+xxx
+xxx
+----
+
+To verify a plugin installation and view the list of plugins you have installed, use the following command:
+
+[source,text,linenums]
+----
+$ anypoint-cli-v4
+----
+
+For example:
+
+. Install the account plugin as follows:
++
+[source,text,linenums]
+----
+$ anypoint-cli-v4 plugins:install @mulesoft/anypoint-cli-account-plugin
+----
++
+. Run the `anypoint-cli-v4` command as follows:
++
+[source,text,linenums]
+----
+$ anypoint-cli-v4
+----
++
+The output shows the installed plugins under the `TOPICS` section. 
++
+----
+VERSION
+  @mulesoft/anypoint-cli-v4/x.x.x linux-x64 node-v14.17.6
+ 
+USAGE
+  $ anypoint-cli-v4 [COMMAND]
+ 
+TOPICS
+  account  Show details of a business group. If "name" is omitted, defaults to the current session's business group
+  plugins  list installed plugins
+ 
+COMMANDS
+  conf     manage configuration
+  help     display help for anypoint-cli
+  plugins  list installed plugins
+----
+
+You can also run `anypoint-cli-v4` with the `plugins` parameter to see the list of installed plugins along with the versions of the plugins and the core package.
+
+For example:
+
+* Run the `anypoint-cli-v4` command as follows:
++
+[source,text,linenums]
+----
+$ anypoint-cli-v4
+----
++
+The output shows the version for each installed CLI component as follows: 
++
+----
+$ anypoint-cli-v4 plugins
+@mulesoft/anypoint-cli-account-plugin x.x.x
+└─ @mulesoft/anypoint-cli-command x.x.x
+└─ conf-cli 0.1.9
+----
+
+See <<plugin-list,List of Plugins>>.
+
+To test a specific command for a plugin you have installed, run `anypoint-cli-v4` followed by the command. 
+
+For example, to test the `account:environment:list` command in the account topic, use the following command:
+
+[source,text,linenums]
+----
+$ anypoint-cli-v4 account:environment:list
+----
+
+[[troubleshoot-install]]
+== Troubleshoot the Installation
 
 If the installation command fails with the following error, ensure that the Git client is installed on your computer and the git protocol is not blocked by your firewall or network:
 
@@ -35,3 +176,41 @@ If the git protocol is blocked, you can configure Git to use `https://` instead 
 ----
 git config --global url."https://".insteadOf git://
 ----
+
+[[uninstall-plugin]]
+== Uninstall a Plugin
+
+You can selectively uninstall plugins. One reason you might want to do this is if you have installed several plugins and decide you want to uninstall all except the ones you are regularly using. 
+
+To uninstall a plugin, use the following command:
+
+[source,text,linenums]
+----
+$ anypoint-cli-v4 plugins:uninstall @mulesoft/anypoint-cli-<plugin-name>-plugin
+----
+
+For example:
+
+The following command uninstalls the account plugin.
+
+[source,text,linenums]
+----
+$ anypoint-cli-v4 plugins:uninstall @mulesoft/anypoint-cli-account-plugin
+----
+
+[[plugin-list]]
+= List of Plugins
+
+You can install the following plugins with Anypoint CLI:  
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+| anypoint-cli-account-plugin | Account command topics
+| anypoint-cli-api-mgr-plugin | API Manager command topics
+| anypoint-cli-cloudhub-plugin | CloudHub command topics
+| anypoint-cli-designcenter-plugin | Design Center command topics
+| anypoint-cli-datagraph-plugin | DataGraph command topics
+| anypoint-cli-exchange-plugin| Exhange command topics
+| anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
+|===
