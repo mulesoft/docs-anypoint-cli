@@ -8,9 +8,8 @@ You must install Anypoint CLI from npm before you can run the commands. You can 
 
 * If you want to install the core package plus all of the default plugins in one command, <<installation,install using the `--production` parameter>>.
 
-* If you want to selectively install plugins or install a different version of the core functionality, you must <<install-core-only,install the core package>>. 
-
-* After you have installed the core package, you can selectively <<install-plugins,install the Anypoint CLI plugins you want to use>>. 
+* If you want to selectively install plugins or install a different version of the core functionality, you must <<install-core-only,install the core package>> and then 
+selectively <<install-plugins,install the Anypoint CLI plugins you want to use>>. 
 
 * After installing, <<verify-installation,verify the installation>> by running a few recommended commands and viewing the output.
 
