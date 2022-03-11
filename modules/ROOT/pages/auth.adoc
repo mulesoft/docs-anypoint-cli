@@ -1,12 +1,21 @@
 = Authentication Methods
 
+To authenticate to Anypoint CLI, you must at minimum use one of the following combinations:
+
+* Username, password, and organization ID
+* Client ID, client secret, and organization ID
+* Bearer token and organization ID
+
+The default environment and host are used if you do not specify them, so if you need to log in to a specific environment or host, you must include them in the log in as well.
+
 You can pass Anypoint CLI credentials using the following methods:
 
-* <<credentials-file,Using a credentials configuration file (Recommended)>>
+* <<single-signon,Using single signon (SSO)>>
+* <<credentials-file,Using a credentials configuration file>>
 * <<command-line-parameters,Using command line parameters>>
 * <<env-variables,Using environment variables>>
 
-Configuration settings are overridden in the following order:
+Configuration settings are overridden as follows:
 
 * Command line parameters override all other methods. 
 
@@ -14,19 +23,25 @@ Configuration settings are overridden in the following order:
 
 * Credentials configuration file parameters are used if no command line parameters or environment variables are set.
 
-Each method of passing credentials enables you to authenticate Anypoint CLI with username and password, client ID and client secret, or a bearer token:
+[[single-signon]]
+== SSO
+
+If you have configured Anypoint Platform to use SSO with the system on which you are running Anypoint CLI, run the Anypoint CLI command with no credential parameters and it will log in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
+
+[[credentials-file]]
+== Credentials Configuration File
+
+If you are not using SSO, MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
+
+You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` parameter to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
+
+username, password, client_id, client_secret, host, session.selectedEnvironment.id, session.selectedOrganization.id
+
+For details see the following:
 
 * <<username-pw>>
 * <<client-id-secret>>
 * <<bearer-token>>
-
-[[credentials-file]]
-=== Credentials Configuration File
-
-MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the credentials configuration file for optimal security. 
-You can authenticate to Anypoint Platform with username and password, client ID and client secret, or a bearer token using a combination of the following parameters:
-
-username, password, client_id, client_secret, host, session.selectedEnvironment.id, session.selectedOrganization.id
 
 To create your configuration file:
 
@@ -48,7 +63,7 @@ The commands store the credential information in the `config.json` file in the f
 [[command-line-parameters]]
 == Command Line Parameters
 
-You can authenticate to Anypoint Platform with username and password, client ID and client secret, or a bearer token by running the `anypoint-cli-v4` command with a combination of the following parameters:
+You can authenticate to Anypoint Platform through command line by running the `anypoint-cli-v4` command with a combination of the following parameters:
 
 --username, --password, --client_id, --client_secret, --bearer, --organization, --environment
 
@@ -59,9 +74,9 @@ For details see the following:
 * <<bearer-token>>
 
 [[env-variables]]
-=== Dedicated Environment Variables
+== Environment Variables
 
-You can authenticate to Anypoint Platform with username and password, client ID and client secret, or a bearer token using a combination of the following environment variables:
+You can authenticate to Anypoint Platform by setting a combination of the following environment variables before running the `anypoint-cli-v4` command:
 
 ANYPOINT_USERNAME, ANYPOINT_PASSWORD, ANYPOINT_CLIENT_ID, ANYPOINT_CLIENT_SECRET, ANYPOINT_ORG, ANYPOINT_ENV, ANYPOINT_HOST
 
@@ -79,55 +94,76 @@ For details see the following:
 ----
 
 [[username-pw]]
-=== Username and Password
+== Username and Password
 
-If you do not log in using single sign-on (SSO), you can use your username and password to log into the CLI directly.
+If you do not log in to Anypoint Platform using single sign-on (SSO), you can use your username and password to log in to Anypoint Platform directly. 
 
-[%header%autowidth.spread,cols="a,a"]
-|===
-| Parameter | Description
-| `username` | Your Anypoint Platform username
+The following examples show the ways you can do this:
 
-You can also pass this value using the environment variable `export ANYPOINT_USERNAME=<name>`.
-| `password` | Your Anypoint Platform password
-
-You can also pass this value using the environment variable `export ANYPOINT_PASSWORD=<pwd>`.
-|===
-
-If you choose to pass the credentials when running `anypoint-cli-v4`, pass both parameters as environment variables: `ANYPOINT_USERNAME` and `ANYPOINT_PASSWORD`.
-
-For information about logging in using SSO, see xref:access-management::external-identity.adoc[About Identity Management].
+* Configuration File Example
++
+----
+$ anypoint-cli-v4 conf username myUserName
+$ anypoint-cli-v4 conf password myPassword
+$ anypoint-cli-v4 conf organization myOrgId
+$ anypoint-cli-v4 account:environment:list
+----
++
+* Environment Variable Example
++
+----
+$ export ANYPOINT_USERNAME=myUserName
+$ export ANYPOINT_PASSWORD=myPassword
+$ export ANYPOINT_ORG=myOrgId
+$ anypoint-cli-v4 account:environment:list
+----
++
+* Command Line Example
++
+----
+$ anypoint-cli-v4 --username myUserName --password myPassword --organization myOrgId account:environment:list
+----
 
 [[client-id-secret]]
-=== Client ID and Client Secret
+== Client ID and Client Secret
 
-You can configure a Connected App with the `client_credentials` grant type to use with the CLI.
+If you are using Connected Apps with Anypoint Platform, you can configure a Connected App with the `client_credentials` grant type to use to log in to Anypoint Platform. For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
-[%header%autowidth.spread,cols="a,a"]
-|===
-| Parameter | Description
-| `client_id` | The ID of the Connected App
-
-You can also pass this value using the environment variable `export ANYPOINT_CLIENT_ID=<client_id>`.
-| `client_secret` | The client secret of the Connected App
-
-You can also pass this value using the environment variable `export ANYPOINT_CLIENT_SECRET=<client_secret>`.
-|===
-
-For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
+* Configuration File Example
++
+----
+$ anypoint-cli-v4 conf client_id myClientID
+$ anypoint-cli-v4 conf client_secret myCLientSecret
+$ anypoint-cli-v4 conf organization myOrgId
+$ anypoint-cli-v4 account:environment:list
+----
++
+* Environment Variable Example
++
+----
+$ export ANYPOINT_CLIENT_ID=myClientID
+$ export ANYPOINT_CLIENT_SECRET=myCLientSecret
+$ export ANYPOINT_ORG=myOrgId
+$ anypoint-cli-v4 account:environment:list
+----
++
+* Command Line Example
++
+----
+$ anypoint-cli-v4 --client_id myClientID myClientSecret --organization myOrgId account:environment:list
+----
 
 [[bearer-token]]
-=== Bearer Token
+== Bearer Token
 
-If you have already generated a bearer token, you can pass it to the CLI directly.
-When you provide a bearer token, the CLI ignores any provided user or client credentials.
+You can generate a bearer token in Anypoint Platform and pass it to Anypoint CLI directly. When you provide a bearer token, Anypoint CLI ignores any provided user or client credentials.
 
-[%header%autowidth.spread,cols="a,a"]
-|===
-| Parameter | Description
-| `bearer` | A bearer token for the Anypoint Platform
+* Command Line Example
++
+----
+$ anypoint-cli-v4 --bearer myBearerToken --organization myOrgId account:environment:list
+----
 
-Your CLI session expires when the bearer token expires.
-|===
+Your Anypoint Platform session expires when the bearer token expires.
 
 For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform].
