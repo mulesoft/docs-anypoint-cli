@@ -4,6 +4,7 @@
 * xref:intro.adoc[Use Anypoint CLI 4.x]
  ** xref:auth.adoc[Authentication Methods]
  ** xref:proxy.adoc[Use a Proxy Server]
+ ** xref:diff-earlier-ver.adoc[Differences from Earlier Versions]
 * xref:anypoint-platform-cli-commands.adoc[List of Commands]
 * xref:account.adoc[Anypoint Platform Accounts]
 * xref:api-mgr.adoc[API Manager]

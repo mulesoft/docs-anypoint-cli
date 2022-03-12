@@ -1,0 +1,28 @@
+= Differences from Earlier Versions
+
+Scripts that use versions of Anypoint CLI earlier than Anypoint CLI version 4.x will not work with Anypoint CLI 4.x because the new version of the CLI and commands use different names and are implemented using a different architecture based on OCLIF (Open CLI Framework). However, because the CLI name and install package are different, you can install Anypoint CLI 4.x on the same systems and continue to use earlier versions of Anypoint CLI in your existing scripts. As you write new scripts and update existing ones, MuleSoft recommends that you use Anypoint CLI 4.x. Commands for plugins introduced after the Anypoint CLI 4.x release will work only with the new version. 
+
+== Changes
+
+Anypoint CLI 4.x introduces the following changes:
+
+* *Command Name* The CLI is named `anypoint-cli-v4` to enable you to continue to use earlier versions, which were named `anypoint-cli`. 
+* *Installation* Command groups for Anypoint Platform components are packaged as plugins that can optionally be installed and uninstalled separately.
+* *Authentication* The credentials file located in `$HOME/.anypoint/credentials` is no longer used. Instead you can set credentials using the `anypoint-cli-v4 conf` command. 
+* *Command Syntax* The separator between command parameters is a colon (:) instead of a space. For example, the command to get the Exchange asset resource list is now `anypoint-cli-v4 exchange:asset:resource:list`.
+* *Commands and Properties* The following commands and properties have changed:
+
+ ** `exchange:asset:upload` replaces `exchange:asset:uploadv2`
+ ** `exchange:asset:upload --properties='{"apiVersion":"v1", "mainFile": "api.raml"}'` replaces `exchange:asset:upload properties.xxx.xxx'`
+ ** `cloudhub:load-balancer:allowlist:add/remove` commands replace the similar commands that used a non-inclusive term 
+ ** `runtime-mgr:cloudhub-application:describe -o JSON` replaces `runtime-mgr cloudhub-application describe-json`
+ ** `runtime-mgr:pcf-application:describe -o JSON` replaces `runtime-mgr pcf-application describe-json`
+ ** `cloudhub:vpc:describe -o JSON` replaces `cloudhub vpc describe-json`
+
+* *Interactive Mode* Interactive mode is no longer supported and therefore the following commands and options are no longer available:
+
+ ** `use business-group` command
+ ** `use environment` command
+ ** `exit` command
+ ** `-f, --fields` options
+ ** You cannot interactively enter the password if you omit it
