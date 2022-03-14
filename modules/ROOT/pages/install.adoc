@@ -2,25 +2,24 @@
 
 You must install Anypoint CLI from npm before you can run the commands. You can install the installation in different ways depending on your needs. Use the following guidelines to install:
 
-* <<prereqs,Install the prerequisite software>> before proceeding with any of the Anypoint CLI installations. 
+* <<prereqs,Install the prerequisite software>> before proceeding with the Anypoint CLI installation. 
 
-* See the <<plugin-list,list of Anypoint CLI plugins>> to see which plugins are available to install so that you can decide which ones you need.
+* <<installation,Install the Anypoint CLI 4.x package>>, which includes all of the default plugins.
 
-* If you want to install the core package plus all of the default plugins in one command, <<installation,install using the `--production` parameter>>.
+* <<install-plugins,Install add-on plugins or new versions of default plugins>> as needed after you have installed Anypoint CLI 4.x. 
 
-* If you want to selectively install plugins or install a different version of the core functionality, you must <<install-core-only,install the core package>> and then 
-selectively <<install-plugins,install the Anypoint CLI plugins you want to use>>. 
+* <<verify-installation,Verify the installation>>.
 
-* After installing, <<verify-installation,verify the installation>> by running a few recommended commands and viewing the output.
+* If you want to remove plugins you do not use, you can selectively <<uninstall-plugins,uninstall plugins>>.
 
-* If you want to remove some plugins you have already installed, you can selectively <<uninstall-plugins,uninstall plugins>> .
+See the <<plugin-list,list of Anypoint CLI plugins>> to see which plugins are available.
 
 [[prereqs]]
 == Prerequisites
 
 The Anypoint CLI is built with Node.js and it is installed by using npm (node package manager).
 
-=== Version Requirements
+Versions required are as follows:
 
 * Node.js version 16 or later
 * npm version 7 or later
@@ -62,25 +61,13 @@ Run the following command to install the Anypoint CLI core package plus all defa
 
 [source,text,linenums]
 ----
-$ npm install -g @mulesoft/anypoint-cli-v4 --production
-----
-
-[[install-core-only]]
-== Install the Core Anypoint CLI Package Only
-
-You must install the core package before you install plugins if you plan to install plugins separately. You can also install the core package to apply an upgrade or maintenance release without affecting the separate plugin installations.
-
-[source,text,linenums]
-----
 $ npm install -g @mulesoft/anypoint-cli-v4
 ----
 
 [[install-plugins]]
 == Install Plugins Separately
 
-Installing plugins separately from the core package installation enables you to save space and to limit the commands available to only those that support the parts of Anypoint Platform that you use.
-
-You must <<install-core-only,install the core package>> before you install plugins. After you install the core package, install each of the plugins you want to use as follows:
+After you have installed the Anypoint CLI 4.x core package you can install plugins that are not included with Anypoint CLI by default or to install a new version of a default plugin. Install each of the plugins you want to use as follows:
 
 See <<plugin-list,List of Plugins>>.
 
