@@ -1,12 +1,12 @@
 = Install Anypoint CLI 4.x
 
-You must install Anypoint CLI from npm before you can run the commands. You can install the installation in different ways depending on your needs. Use the following guidelines to install:
+You must install Anypoint CLI from npm before you can run the commands. Use the following guidelines to install:
 
 * <<prereqs,Install the prerequisite software>> before proceeding with the Anypoint CLI installation. 
 
 * <<installation,Install the Anypoint CLI 4.x package>>, which includes all of the default plugins.
 
-* <<install-plugins,Install add-on plugins or new versions of default plugins>> as needed after you have installed Anypoint CLI 4.x. 
+* <<install-plugins,Install non-default plugins or new versions of default plugins>> if needed after you have installed Anypoint CLI 4.x. 
 
 * <<verify-installation,Verify the installation>>.
 
@@ -17,7 +17,7 @@ See the <<plugin-list,list of Anypoint CLI plugins>> to see which plugins are av
 [[prereqs]]
 == Prerequisites
 
-The Anypoint CLI is built with Node.js and it is installed by using npm (node package manager).
+The Anypoint CLI is built with Node.js and is installed by using npm (node package manager).
 
 Versions required are as follows:
 
@@ -29,10 +29,6 @@ To install the prerequisite software:
 * Download and install Node.js and npm.
 +
 See the https://nodejs.org/en/download/[NodeJS download page].
-//I don't think this step is necessary.
-//* Download and install the Git version management on your system.
-//+
-//See the https://git-scm.com/downloads[Git download site].
 
 Depending on the configuration of your system, you might need to log in using administrator credentials before you can successfully run the npm commands.
 
@@ -44,7 +40,7 @@ You can install the following plugins with Anypoint CLI:
 
 [%header,cols="35a,65a"]
 |===
-|Command |Description
+|Plugin |Description
 | anypoint-cli-account-plugin | Account command topics
 | anypoint-cli-api-mgr-plugin | API Manager command topics
 | anypoint-cli-cloudhub-plugin | CloudHub command topics
@@ -67,14 +63,21 @@ $ npm install -g @mulesoft/anypoint-cli-v4
 [[install-plugins]]
 == Install Plugins Separately
 
-After you have installed the Anypoint CLI 4.x core package you can install plugins that are not included with Anypoint CLI by default or to install a new version of a default plugin. Install each of the plugins you want to use as follows:
-
-See <<plugin-list,List of Plugins>>.
+After you have installed the Anypoint CLI 4.x core package you can install plugins that are not included with Anypoint CLI by default or install a new version of a default plugin. Install each of the plugins you want to use as follows:
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4 plugins:install @mulesoft/anypoint-cli-<plugin-name>-plugin
+$ anypoint-cli-v4 plugins:install @mulesoft/<plugin-name>
 ----
+
+For example, to install the account plugin, use the following command:
+
+[source,text,linenums]
+----
+$ anypoint-cli-v4 plugins:install @mulesoft/anypoint-cli-account-plugin
+----
+
+See <<plugin-list>>.
 
 [[verify-installation]]
 == Verify the Installation
