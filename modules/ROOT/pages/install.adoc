@@ -12,8 +12,6 @@ You must install Anypoint CLI from npm before you can run the commands. Use the 
 
 * If you want to remove plugins you do not use, you can selectively <<uninstall-plugins,uninstall plugins>>.
 
-See the <<plugin-list,list of Anypoint CLI plugins>> to see which plugins are available.
-
 [[prereqs]]
 == Before You Begin
 
@@ -31,24 +29,6 @@ To install the prerequisite software:
 See the https://nodejs.org/en/download/[NodeJS download page].
 
 Depending on the configuration of your system, you might need to log in using administrator credentials before you can successfully run the npm commands.
-
-
-[[plugin-list]]
-== List of Plugins
-
-You can install the following plugins with Anypoint CLI:  
-
-[%header,cols="35a,65a"]
-|===
-|Plugin |Description
-| anypoint-cli-account-plugin | Account command topics
-| anypoint-cli-api-mgr-plugin | API Manager command topics
-| anypoint-cli-cloudhub-plugin | CloudHub command topics
-| anypoint-cli-designcenter-plugin | Design Center command topics
-| anypoint-cli-datagraph-plugin | DataGraph command topics
-| anypoint-cli-exchange-plugin| Exhange command topics
-| anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
-|===
 
 [[installation]]
 == Install the Core Package Plus Default Plugins
@@ -77,7 +57,22 @@ For example, to install the account plugin, use the following command:
 $ anypoint-cli-v4 plugins:install @mulesoft/anypoint-cli-account-plugin
 ----
 
-See <<plugin-list>>.
+[[plugin-list]]
+=== List of Plugins
+
+You can install the following plugins with Anypoint CLI:  
+
+[%header,cols="35a,65a"]
+|===
+|Plugin |Description
+| anypoint-cli-account-plugin | Account command topics
+| anypoint-cli-api-mgr-plugin | API Manager command topics
+| anypoint-cli-cloudhub-plugin | CloudHub command topics
+| anypoint-cli-datagraph-plugin | DataGraph command topics
+| anypoint-cli-designcenter-plugin | Design Center command topics
+| anypoint-cli-exchange-plugin| Exhange command topics
+| anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
+|===
 
 [[verify-installation]]
 == Verify the Installation
