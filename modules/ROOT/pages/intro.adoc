@@ -6,7 +6,7 @@ include::anypoint-cli::partial$intro.adoc[tag=syntax]
 
 == Optional Arguments
 
-The Anypoint CLI takes the following optional arguments:
+The Anypoint CLI has the following optional arguments:
 
 [%header%autowidth.spread,cols="a,a"]
 |===

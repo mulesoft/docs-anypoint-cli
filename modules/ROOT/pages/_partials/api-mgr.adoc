@@ -48,7 +48,7 @@
 
 This command creates an API instance alert with the name passed in `name` for the API Instance Id passed in `<apiInstanceId>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -110,7 +110,7 @@ You can pass this option multiple times to specify multiple codes.
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -128,7 +128,7 @@ Besides the default `--help` and `-o`/`--output` options, this command also take
 
 Changes the asset version for the API instance passed in `<apiInstanceId`,  by choosing a new version from Exchange passed in `<assetVersion>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-api-classify]]
 == api-mgr:api:classify
@@ -139,7 +139,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 Classifies the API instance passed in `<apiInstanceId>` in the  environment passed in `<destEnvName>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-api-delete]]
 == api-mgr:api:delete
@@ -150,7 +150,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 This command deletes the API instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-api-deploy]]
 == api-mgr:api:deploy
@@ -164,7 +164,7 @@ This command deploys the API instance passed in <apiInstanceId> to the deploymen
 [NOTE]
 This command is only supported for endpoints with proxy.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -187,7 +187,7 @@ Besides the default `--help` and `-o`/`--output` options, this command also take
 
 | `overwrite`
 | Update application if it exists. +
-It takes `true` or `false` values.
+It has `true` or `false` values.
 | `api-mgr:api:deploy --overwrite: true  643404`
 
 |===
@@ -201,7 +201,7 @@ It takes `true` or `false` values.
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-api-describe]]
 == api-mgr:api:describe
@@ -212,7 +212,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 Shows details of the API Instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
@@ -223,7 +223,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 This command downloads the API proxy ZIP file of the API Instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes a `gatewayVersion` option to specify the gateway version you want to download.
+Besides the default `--help` and `-o`/`--output` options, this command also has a `gatewayVersion` option to specify the gateway version you want to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
 [[api-mgr-api-edit]]
@@ -234,22 +234,22 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 ----
 
 Edits the API instance passed in `<apiInstanceId>`. +
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether you are managing this API in Mule 4 or above. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `--deploymentType <value>`
 | Deployment type. +
@@ -297,7 +297,7 @@ Supported values are `http`, or `https`.
 
 Lists all APIs in API Manager 2.x.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -319,7 +319,7 @@ Besides the default `--help` and `-o`/`--output` options, this command also take
 
 Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -330,15 +330,15 @@ Accepted values are `http`, `raml`, or `wsdl`.
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether you are managing this API in Mule 4 or above. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `--deploymentType <value>`
 | Deployment type. +
@@ -385,22 +385,22 @@ Supported values are `http` or `https`.
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-a, --copyAlerts`
 | Indicates whether to copy alerts. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 
 | `-p, --copyPolicies`
 |Indicates whether to copy policies. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 
 | `-t, --copyTiers`
 |Indicates whether to copy tiers. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 |===
 
 [[api-mgr-api-redeploy]]
@@ -412,7 +412,7 @@ This option takes `true` or `false` values. Default Value is `true`
 
 Redeploys the API Instance passed in `<apiInstanceId>` to the deployment target set up in the options described below.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -432,7 +432,7 @@ Besides the default `--help` and `-o`/`--output` options, this command also take
 
 | `--overwrite`
 | Update application if exists. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 |===
 
 [[api-mgr-api-undeprecate]]
@@ -444,7 +444,7 @@ This option takes `true` or `false` values. Default Value is `true`
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
@@ -455,7 +455,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 This command deletes the contract between the API Instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
@@ -469,7 +469,7 @@ Lists all contracts of the API passed in `<apiInstanceId>`.
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -516,7 +516,7 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTempla
 
 This command shows the description and available configuration properties of the policy passed in `<policyId>`. +
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -538,7 +538,7 @@ Defaults to MuleSoft group ID when not provided.
 
 This command disables the policy passed in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-policy-edit]]
 == api-mgr:policy:edit
@@ -549,7 +549,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 This command edits the policy configuration passed in `<policyId>` of the API Instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -572,7 +572,7 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTempla
 
 This command enables the policy passed in `<policyId>` for the API Instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-policy-list]]
 == api-mgr:policy:list
@@ -584,7 +584,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 This command lists all policies for all APIs in API Manager 2.x. +
 When the `[apiInstanceId]` parameter is specified, this command lists the policies applied to that API instance.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes the `-m, --muleVersion4OrAbove` option which takes `true` or `false` values. +
+Besides the default `--help` and `-o`/`--output` options, this command also has the `-m, --muleVersion4OrAbove` option which has `true` or `false` values. +
 
 [[api-mgr-policy-remove]]
 == api-mgr:policy:remove
@@ -595,7 +595,7 @@ Besides the default `--help` and `-o`/`--output` options, this command also take
 
 This command removes the policy specified in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-tier-add]]
 == api-mgr:tier:add
@@ -606,14 +606,14 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 This command creates an SLA tier for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-a, --autoApprove`
 | Indicates whether the SAL tier should be auto-approved. +
-This command only takes `true` or `false` values.
+This command only has `true` or `false` values.
 
 | `--name <value>`
 | Tier name
@@ -653,7 +653,7 @@ For example: `-l true,100,sec -l false,20,min`
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
@@ -664,7 +664,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command takes only the default options: `--help` and `-o`/`--output`
+This command has only the default options: `--help` and `-o`/`--output`
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list
@@ -674,7 +674,7 @@ This command takes only the default options: `--help` and `-o`/`--output`
 
 This command lists the SLA tiers of the  API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` and `-o`/`--output` options, this command also has:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
