@@ -25,13 +25,10 @@ If you pass a command and there is an error, the application exits and returns a
 Anypoint Platform CLI has the following default options:
 
 * `--help` displays usage information of the command.
-* `-f` or `--fields` specifies which fields to output. 
-+
-You can use the `--fields` option with no fields to get a list of fields to output.
-* `-o` or `--output` outputs the results in one of the following formats: +
-** `table`
-** `text`
-** `json`
+* `-o` or `--output` outputs the results in one of the following formats: 
+ ** `table`
+ ** `text`
+ ** `json`
 +
 The default is `text`.
 
