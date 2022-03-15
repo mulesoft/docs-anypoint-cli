@@ -1,4 +1,4 @@
-= Use Anypoint Platform CLI
+= General Use of Commands and Options
 
 // tag::usageintro[]
 

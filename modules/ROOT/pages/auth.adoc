@@ -35,7 +35,15 @@ If you are not using SSO, MuleSoft recommends that you pass credentials to your 
 
 You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` parameter to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
 
-username, password, client_id, client_secret, host, session.selectedEnvironment.id, session.selectedOrganization.id
+----
+username
+password
+client_id
+client_secret
+host
+session.selectedEnvironment.id
+session.selectedOrganization.id
+----
 
 For details see the following:
 
@@ -65,7 +73,15 @@ The commands store the credential information in the `config.json` file in the f
 
 You can authenticate to Anypoint Platform through command line by running the `anypoint-cli-v4` command with a combination of the following parameters:
 
---username, --password, --client_id, --client_secret, --bearer, --organization, --environment
+----
+--username
+--password
+--client_id
+--client_secret
+--bearer
+--organization
+--environment
+----
 
 For details see the following:
 
@@ -78,20 +94,21 @@ For details see the following:
 
 You can authenticate to Anypoint Platform by setting a combination of the following environment variables before running the `anypoint-cli-v4` command:
 
-ANYPOINT_USERNAME, ANYPOINT_PASSWORD, ANYPOINT_CLIENT_ID, ANYPOINT_CLIENT_SECRET, ANYPOINT_ORG, ANYPOINT_ENV, ANYPOINT_HOST
+----
+ANYPOINT_USERNAME
+ANYPOINT_PASSWORD
+ANYPOINT_CLIENT_ID
+ANYPOINT_CLIENT_SECRET
+ANYPOINT_ORG
+ANYPOINT_ENV
+ANYPOINT_HOST
+----
 
 For details see the following:
 
 * <<username-pw>>
 * <<client-id-secret>>
 * <<bearer-token>>
-
-[source,text,linenums]
-----
-> export ANYPOINT_USERNAME="username"
-> export ANYPOINT_PASSWORD="password"
-> anypoint-cli
-----
 
 [[username-pw]]
 == Username and Password
