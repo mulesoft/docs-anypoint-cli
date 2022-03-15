@@ -82,7 +82,16 @@ See <<plugin-list>>.
 [[verify-installation]]
 == Verify the Installation
 
-To verify that Anypoint CLI was installed correctly, use the following command:
+After you install Anypoint CLI you can verify the installation as follows:
+
+* <<view-core-version>>
+* <<view-plugin-list>>
+* <<view-all-version-info>>
+
+[[view-core-version]]
+=== View the Core Package Version
+
+To view the version of the core package, use the following command:
 
 [source,text,linenums]
 ----
@@ -92,9 +101,11 @@ $ anypoint-cli-v4 --version
 The output shows the version of the installed core package as follows:
 
 ----
-xxx
-xxx
+@mulesoft/anypoint-cli-v4/0.4.2 darwin-x64 node-v12.22.5
 ----
+
+[[view-plugin-list]]
+=== View the List of Plugins Installed
 
 To verify a plugin installation and view the list of plugins you have installed, use the following command:
 
@@ -103,24 +114,8 @@ To verify a plugin installation and view the list of plugins you have installed,
 $ anypoint-cli-v4
 ----
 
-For example:
+The output shows the installed plugins under the `TOPICS` section. The following example shows that only the account plugin is installed. 
 
-. Install the account plugin as follows:
-+
-[source,text,linenums]
-----
-$ anypoint-cli-v4 plugins:install @mulesoft/anypoint-cli-account-plugin
-----
-+
-. Run the `anypoint-cli-v4` command as follows:
-+
-[source,text,linenums]
-----
-$ anypoint-cli-v4
-----
-+
-The output shows the installed plugins under the `TOPICS` section. 
-+
 ----
 VERSION
   @mulesoft/anypoint-cli-v4/x.x.x linux-x64 node-v14.17.6
@@ -138,35 +133,23 @@ COMMANDS
   plugins  list installed plugins
 ----
 
-You can also run `anypoint-cli-v4` with the `plugins` parameter to see the list of installed plugins along with the versions of the plugins and the core package.
+[[view-all-version-info]]
+=== View All Version Information
 
-For example:
+To see the list of installed plugins along with full version information, use the following command: 
 
-* Run the `anypoint-cli-v4` command as follows:
-+
 [source,text,linenums]
 ----
-$ anypoint-cli-v4
+$ anypoint-cli-v4 plugins
 ----
-+
-The output shows the version for each installed CLI component as follows: 
-+
+
+The output shows the version information as follows: 
+
 ----
 $ anypoint-cli-v4 plugins
 @mulesoft/anypoint-cli-account-plugin x.x.x
 └─ @mulesoft/anypoint-cli-command x.x.x
 └─ conf-cli 0.1.9
-----
-
-See <<plugin-list,List of Plugins>>.
-
-To test a specific command for a plugin you have installed, run `anypoint-cli-v4` followed by the command. 
-
-For example, to test the `account:environment:list` command in the account topic, use the following command:
-
-[source,text,linenums]
-----
-$ anypoint-cli-v4 account:environment:list
 ----
 
 [[uninstall-plugin]]

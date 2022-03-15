@@ -1,6 +1,8 @@
 = Differences from Earlier Versions
 
-Scripts that use versions of Anypoint CLI earlier than Anypoint CLI version 4.x will not automatically use Anypoint CLI 4.x commands because the new version of the CLI has different command names and syntax. However, because the CLI name and install package are different, you can install Anypoint CLI 4.x on the same systems and continue to use earlier versions of Anypoint CLI in your existing scripts. As you write new scripts and update existing ones, MuleSoft recommends that you use Anypoint CLI 4.x so that you take advantage of improvements and the latest fixes going forward. Commands for plugins introduced after the Anypoint CLI 4.x release will be available only in Anypoint CLI 4.x. 
+Scripts that use versions of Anypoint CLI earlier than Anypoint CLI version 4.x will not automatically use Anypoint CLI 4.x commands because the new version of the CLI has different command names and syntax. However, because the CLI name and install package are different, you can install Anypoint CLI 4.x on the same systems and continue to use earlier versions of Anypoint CLI in your existing scripts. 
+
+As you write new scripts and update existing ones, MuleSoft recommends that you use Anypoint CLI 4.x so that you take advantage of new features and fixes in future releases. Plugins are available only in Anypoint CLI 4.x. 
 
 == Changes
 

@@ -2,7 +2,7 @@
 
 // tag::usageintro[]
 
-Use Anypoint Platform CLI commands to automate a subset of product actions through scripts. Anypoint Platform CLI 4.0 and later can be run only in batch mode. 
+Use Anypoint Platform CLI commands to automate a subset of product actions through scripts. Anypoint Platform CLI 4.0 and later can be run only in batch mode. Interactive mode is no longer supported.
 
 // end::usageintro[]
 
