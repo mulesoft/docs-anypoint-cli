@@ -4,7 +4,7 @@ To authenticate to Anypoint CLI, you must at minimum use one of the following co
 
 * Username, password, and organization ID
 * Client ID, client secret, and organization ID
-* Bearer token and organization ID
+* Bearer token and organization ID (command line only)
 
 The default environment and host are used if you do not specify them, so if you need to log in to a specific environment or host, you must include them in the log in as well.
 
@@ -49,7 +49,6 @@ For details see the following:
 
 * <<username-pw>>
 * <<client-id-secret>>
-* <<bearer-token>>
 
 To create your configuration file:
 
@@ -108,7 +107,6 @@ For details see the following:
 
 * <<username-pw>>
 * <<client-id-secret>>
-* <<bearer-token>>
 
 [[username-pw]]
 == Username and Password
