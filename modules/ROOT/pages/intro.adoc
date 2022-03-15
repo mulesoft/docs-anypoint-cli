@@ -1,4 +1,4 @@
-= Use Anypoint Platform CLI 4.x
+= General Use of Commands and Options
 
 include::anypoint-cli::partial$intro.adoc[tag=usageintro]
 

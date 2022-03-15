@@ -1,4 +1,4 @@
-= Install Anypoint CLI 4.x
+= Installing Anypoint CLI 4.x
 
 You must install Anypoint CLI from npm before you can run the commands. Use the following guidelines to install:
 
@@ -15,7 +15,7 @@ You must install Anypoint CLI from npm before you can run the commands. Use the 
 See the <<plugin-list,list of Anypoint CLI plugins>> to see which plugins are available.
 
 [[prereqs]]
-== Prerequisites
+== Before You Begin
 
 The Anypoint CLI is built with Node.js and is installed by using npm (node package manager).
 
@@ -61,7 +61,7 @@ $ npm install -g @mulesoft/anypoint-cli-v4
 ----
 
 [[install-plugins]]
-== Install Plugins Separately
+== Install a Plugin Separately
 
 After you have installed the Anypoint CLI 4.x core package you can install plugins that are not included with Anypoint CLI by default or install a new version of a default plugin. Install each of the plugins you want to use as follows:
 

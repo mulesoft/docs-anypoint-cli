@@ -1,4 +1,4 @@
-= Authentication Methods
+= Authentication
 
 To authenticate to Anypoint CLI, you must at minimum use one of the following combinations:
 

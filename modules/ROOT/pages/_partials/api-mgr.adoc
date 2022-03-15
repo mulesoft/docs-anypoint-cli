@@ -352,7 +352,7 @@ Supported values are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--scheme <value>`
 | Proxy scheme. +
-Supported values are `http`, or `https`.
+Supported values are `http` or `https`.
 
 | `--port <value>`
 | Proxy port.
