@@ -61,10 +61,3 @@ You can start typing the name of the command or parameter and press Tab for auto
 === Anonymized Usage Data
 
 To improve the Anypoint CLI experience, we gather anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
-
-== See Also
-
-* xref:auth.adoc[Authentication Methods]
-* xref:proxy.adoc[Use Anypoint CLI Through a Network Proxy]
-* xref:anypoint-platform-cli-commands.adoc[List of Commands]
-* xref:diff-earlier-ver.adoc[Differences from Earlier Versions]

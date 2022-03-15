@@ -4,7 +4,7 @@ Anypoint CLI can be run through a network proxy to add a layer of security. To u
 
 == Configure a Proxy Server Without Authentication
 
-Depending on your operating system, use the following commands:
+To configure a proxy server that does not require authentication, use the following commands:
 
 * Linux, macOS, or Unix
 +
@@ -24,7 +24,7 @@ Depending on your operating system, use the following commands:
 
 == Configure a Proxy Server With Authentication
 
-If the proxy server requires authentication, depending on your operating system, use these commands:
+To configure a proxy server that requires authentication, use these commands:
 
 * Linux, macOS, or Unix
 +
@@ -41,5 +41,3 @@ If the proxy server requires authentication, depending on your operating system,
 
 `> set HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
-
-

@@ -94,7 +94,6 @@ include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
 
 == See Also
 
-* xref:diff-earlier-ver.adoc[Differences from Earlier Versions]
 * xref:exchange::index.adoc[Anypoint Exchange Documentation]
 * xref:access-management::index.adoc[Access Management Documentation]
 * xref:runtime-manager::index.adoc[Anypoint Runtime Manager Documentation]
