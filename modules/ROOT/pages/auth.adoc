@@ -142,7 +142,7 @@ $ anypoint-cli-v4 --username myUserName --password myPassword --organization myO
 [[client-id-secret]]
 == Client ID and Client Secret
 
-If you are using Connected Apps with Anypoint Platform, you can configure a Connected App with the `client_credentials` grant type to use to log in to Anypoint Platform. For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
+If you are using connected apps with Anypoint Platform, you can configure a connected app with the `client_credentials` grant type to use to log in to Anypoint Platform. For more information about connected apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
 * Configuration File Example
 +
