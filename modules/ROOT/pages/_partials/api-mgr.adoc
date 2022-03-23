@@ -489,7 +489,7 @@ For example, `api-mgr policy apply -c '{"property": "value"}'`
 
 | `--configFlag [file]`
 | Pass the configuration data as a file. +
-For example, `api-mgr policy apply -c ./config.json`
+For example, `api-mgr policy apply --configFile ./config.json`
 
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings. +
