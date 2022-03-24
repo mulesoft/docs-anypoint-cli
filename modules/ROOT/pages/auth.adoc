@@ -111,7 +111,7 @@ For details see the following:
 [[username-pw]]
 == Username and Password
 
-If you do not log in to Anypoint Platform using single sign-on (SSO), you can use your username and password to log in to Anypoint Platform directly. 
+If you do not log in to Anypoint Platform using SSO, you can use your username and password to log in to Anypoint Platform directly. 
 
 The following examples show the ways you can do this:
 
