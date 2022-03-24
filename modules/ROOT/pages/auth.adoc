@@ -1,6 +1,6 @@
 = Authentication
 
-To authenticate to Anypoint CLI, you must at minimum use one of the following combinations:
+To authenticate to Anypoint CLI, you must use one of the authentication option combinations and an organization ID:
 
 * Username, password, and organization ID
 * Client ID, client secret, and organization ID

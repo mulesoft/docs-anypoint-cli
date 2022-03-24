@@ -1,7 +1,7 @@
-= Getting Started with Anypoint CLI 4.x
+= Getting Started with Anypoint Platform CLI 4.x
 :page-aliases: runtime-manager::anypoint-platform-cli.adoc
 
-Anypoint CLI is a scripting and command-line tool for Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+Anypoint Platform CLI is a scripting and command-line tool for Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 
 If you are using a version of Anypoint CLI earlier than Anypoint CLI 4.x, xref:diff-earlier-ver.adoc[read this first to find out about the differences.]
 
