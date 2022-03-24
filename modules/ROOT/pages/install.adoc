@@ -2,20 +2,20 @@
 
 You must install Anypoint CLI from npm before you can run the commands. Use the following guidelines to install:
 
-* <<prereqs,Install the prerequisite software>> before proceeding with the Anypoint CLI installation. 
+. <<prereqs,Install the prerequisite software>> before proceeding with the Anypoint CLI installation. 
 
-* <<installation,Install the Anypoint CLI 4.x package>>, which includes all of the default plugins.
+. <<installation,Install the Anypoint CLI 4.x package>>, which includes all of the default plugins.
 
-* <<install-plugins,Install non-default plugins or new versions of default plugins>> if needed after you have installed Anypoint CLI 4.x. 
+. <<install-plugins,Install nondefault plugins or new versions of default plugins>> if needed after you have installed Anypoint CLI 4.x. 
 
-* <<verify-installation,Verify the installation>>.
+. <<verify-installation,Verify the installation>>.
 
-* If you want to remove plugins you do not use, you can selectively <<uninstall-plugins,uninstall plugins>>.
+. Optionally <<uninstall-plugins,uninstall plugins>> you do not use.
 
 [[prereqs]]
 == Before You Begin
 
-The Anypoint CLI is built with Node.js and is installed by using npm (node package manager).
+The Anypoint CLI is built with Node.js and is installed by using npm, the package manager for the Node JavaScript platform.
 
 Versions required are as follows:
 
@@ -31,9 +31,9 @@ See the https://nodejs.org/en/download/[NodeJS download page].
 Depending on the configuration of your system, you might need to log in using administrator credentials before you can successfully run the npm commands.
 
 [[installation]]
-== Install the Core Package Plus Default Plugins
+== Install the Core Package and Default Plugins
 
-Run the following command to install the Anypoint CLI core package plus all default plugins. See <<plugin-list,List of Plugins>>.
+Run the following command to install the Anypoint CLI core package and all default plugins. See <<plugin-list,List of Plugins>>.
 
 [source,text,linenums]
 ----
@@ -43,7 +43,7 @@ $ npm install -g @mulesoft/anypoint-cli-v4
 [[install-plugins]]
 == Install a Plugin Separately
 
-After you have installed the Anypoint CLI 4.x core package you can install plugins that are not included with Anypoint CLI by default or install a new version of a default plugin. Install each of the plugins you want to use as follows:
+After installing the Anypoint CLI 4.x core package, you can install nondefault plugins or new versions of default plugins as follows:
 
 [source,text,linenums]
 ----
@@ -77,7 +77,7 @@ You can install the following plugins with Anypoint CLI:
 [[verify-installation]]
 == Verify the Installation
 
-After you install Anypoint CLI you can verify the installation as follows:
+After you install Anypoint CLI you can verify the installation using commands to:
 
 * <<view-core-version>>
 * <<view-plugin-list>>
@@ -86,7 +86,7 @@ After you install Anypoint CLI you can verify the installation as follows:
 [[view-core-version]]
 === View the Core Package Version
 
-To view the version of the core package, use the following command:
+To view the version of the core package:
 
 [source,text,linenums]
 ----
@@ -102,14 +102,14 @@ The output shows the version of the installed core package as follows:
 [[view-plugin-list]]
 === View the List of Plugins Installed
 
-To verify a plugin installation and view the list of plugins you have installed, use the following command:
+To verify a plugin installation and view a list of all installed  plugins, use the following command:
 
 [source,text,linenums]
 ----
 $ anypoint-cli-v4
 ----
 
-The output shows the installed plugins under the `TOPICS` section. The following example shows that only the account plugin is installed. 
+The output shows the installed plugins under the `TOPICS` section. The following example shows that only the account plugin is installed: 
 
 ----
 VERSION
@@ -138,7 +138,7 @@ To see the list of installed plugins along with full version information, use th
 $ anypoint-cli-v4 plugins
 ----
 
-The output shows the version information as follows: 
+The output shows the version information: 
 
 ----
 $ anypoint-cli-v4 plugins
@@ -150,18 +150,16 @@ $ anypoint-cli-v4 plugins
 [[uninstall-plugin]]
 == Uninstall a Plugin
 
-You can selectively uninstall plugins. One reason you might want to do this is if you have installed several plugins and decide you want to uninstall all except the ones you are regularly using. 
+Uninstall plugins if, for example, you want to reduce the number to only those you use regularly.  
 
-To uninstall a plugin, use the following command:
+To uninstall a plugin:
 
 [source,text,linenums]
 ----
 $ anypoint-cli-v4 plugins:uninstall @mulesoft/anypoint-cli-<plugin-name>-plugin
 ----
 
-For example:
-
-The following command uninstalls the account plugin.
+For example, the following command uninstalls the account plugin:
 
 [source,text,linenums]
 ----

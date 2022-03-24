@@ -8,5 +8,5 @@ If you are using a version of Anypoint CLI earlier than Anypoint CLI 4.x, xref:d
 To get started with Anypoint CLI: 
 
 . <<install.adoc#,Install>> Anypoint CLI.
-. <<intro.adoc#,See how to use the commands>>, including how to authenticate and optionally use a proxy.
-. <<anypoint-platform-cli-commands.adoc#,View the list of commands>> available for the product features you want to access using Anypoint CLI.
+. <<intro.adoc#,Learn the general use of the commands>>, including how to authenticate and optionally use a proxy.
+. <<anypoint-platform-cli-commands.adoc#,View the list of commands>> available for the Anypoint Platform actions you can execute using Anypoint CLI.
