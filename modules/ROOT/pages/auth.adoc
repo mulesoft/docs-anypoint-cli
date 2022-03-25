@@ -33,7 +33,7 @@ If you have configured Anypoint Platform to use SSO with the system on which you
 
 If you are not using SSO, MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
 
-You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` parameter to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
+You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` option to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
 
 ----
 username

@@ -289,7 +289,7 @@ The `--upstreamProtocol` option sets the protocol used by your application to co
 | Option | Description
 | `--upstreamProtocol <protocol>` | Look for upstream applications in HTTP port 8091 or HTTPS port 8092.
 Supported Values: `http`, `https`
-| `--certificateName <certificate name>` | Optional parameter
+| `--certificateName <certificate name>` | Optional option
 |===
 
 [[cloudhub-load-balancer-mappings-remove]]

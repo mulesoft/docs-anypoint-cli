@@ -33,7 +33,7 @@ For the Anypoint Platform CLI to recognize your target servers, each server must
 ----
 
 This command downloads the application artifact of the `identifier` application, to the directory passed in `directory`.
-The `identifier` parameter can be either an application ID or name.
+The `identifier` option can be either an application ID or name.
 
 This command has only the default options: `--help` and `-o`/`--output`
 
@@ -46,7 +46,7 @@ This command has only the default options: `--help` and `-o`/`--output`
 
 This command deploys or redeploys the application passed as a ZIP file in the path `zipfile` to the on-premises target passed in `targetIdentifier`.
 
-The `targetIdentifier` parameter can be either a target ID or name.
+The `targetIdentifier` option can be either a target ID or name.
 
 A target can be either a server, server group, or cluster.
 
@@ -73,7 +73,7 @@ To redeploy an app and set a logging level or turn on Insight event tracking, se
 
 This command modifies the standalone (on-premises) application passed in `identifier` with the ZIP file application passed in `zipfile` as a path.
 
-The `identifier` parameter specifies the application identifier.
+The `identifier` option specifies the application identifier.
 To retrieve the identifier, see
 xref:anypoint-cli::standalone-apps.adoc#runtime-mgr-standalone-application-list[runtime-mgr:standalone-application:list].
 
