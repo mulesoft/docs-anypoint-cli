@@ -1,12 +1,12 @@
 = Authentication
 
-To authenticate to Anypoint CLI, you must use one of the authentication option combinations and an organization ID:
+To authenticate to Anypoint CLI, you must use one of the authentication option combinations:
 
-* Username, password, and organization ID
-* Client ID, client secret, and organization ID
-* Bearer token and organization ID (command line only)
+* Username and password
+* Client ID and client secret
+* Bearer token (command line only)
 
-The default environment and host are used if you do not specify them, so if you need to log in to a specific environment or host, you must include them in the log in as well.
+The default host, environment, and organization are used if you do not specify them.
 
 You can pass Anypoint CLI credentials using the following methods:
 
