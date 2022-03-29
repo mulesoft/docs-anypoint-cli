@@ -14,6 +14,7 @@
 | <<datagraph sources get>> | Gets an API source
 | <<datagraph sources list>> | Lists all API sources
 | <<datagraph describe>> | Returns information about DataGraph
+|
 |===
 
 // end::summary[]
@@ -179,15 +180,20 @@ In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbos
 {sp} +
 Required:
 
-* `--basic-credentials <username>:<password>`
+* `--credentials <username>:<password>`
 
 |`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
 {sp} +
 {sp} +
 Required:
 
-* `--client-credentials <client_id>:<client_secret>`
+* `--credentials <client_id>:<client_secret>`
 * `--server <authorization server URL>` 
+{sp} +
+{sp} +
+Not Required:
+
+* `--scope <server>`
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
 {sp} +
@@ -196,23 +202,22 @@ Required:
 
 *  `--mapping: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 
-|`--auth-custom` a|Use if you authenticate to your API by passing custom header parameters and values, such as query params or headers.
-{sp} +
-{sp} +
-Required for query params:
-
-* `--query-params: <comma-separated list of key-value pairs>`
-+
-Or
-* `--query-params-file: <location of the file containing query param key-value pairs, one pair per line>`
+|`--auth-headers` a|Use if you authenticate to your API by passing custom header parameters and values.
 {sp} +
 {sp} +
 Required for headers: 
 
-* `--headers: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
+* `--custom-headers: <comma-separated list of header-value pairs, for example, header1:value1,header2:value2>`
 +
 Or
-* `--headers-file: <location of the file containing header key-value pairs, one per line>`
+* `--custom-headers-file: <location of the file containing header-value pairs, one per line>`
+
+|`--auth-query-params` a|Use if you authenticate to your API by passing query parameters and values.
+{sp} +
+{sp} +
+Required for query params: 
+
+* `--credentials <client_id:client_secret>`
 
 |`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
@@ -289,6 +294,27 @@ This command returns the following information about DataGraph:
 * `deploymentError`: If a DataGraph deployment fails, this field describes the error; otherwise, it's empty.
 * `deploymentStatus`: Shows whether DataGraph is deploying, running, or has errors.
 * `logLevels`: Displays a list of the configured log levels.
+* `envStatus`: Displays the status of the current environment.
+* `dlbEndpoint`: Displays the load balancer endpoint.
+
+
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
+
+== datagraph validate
+
+----
+> datagraph validate asset <g/a/v>
+----
+
+This command validates if it’s possible to add an API source to the unified schema. To do so, the command:
+
+* Translates the API source into a GraphQL schema.
+* Validates any embedded customizations against DataGraph rules.
+* Runs a conflict check against the unified schema.
+
+If any of these steps generates a conflict or error, the command returns the result. If it finds no conflicts or errors, it returns a success message.
+
+The API source to validate is specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. 
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
