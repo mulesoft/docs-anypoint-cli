@@ -28,7 +28,7 @@
 
 This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. 
  
-In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
+In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
 
 [%header,cols="35a,65a"]
 |===
@@ -39,15 +39,20 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 {sp} +
 Required:
 
-* `--basic-credentials <username>:<password>`
+* `--credentials <username>:<password>`
 
 |`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values.
 {sp} +
 {sp} +
 Required:
 
-* `--client-credentials <client_id>:<client_secret>`
-* `--server <authorization server URL>` 
+* `--credentials <client_id>:<client_secret>`
+* `--server <authorization server URL>`
+{sp} +
+{sp} +
+Not Required:
+
+* `--scope <server>`
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
 {sp} +
@@ -56,29 +61,28 @@ Required:
 
 *  `--mapping: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 
-|`--auth-custom` a|Use if you authenticate to your API by passing custom header parameters and values, such as query params or headers.
-{sp} +
-{sp} +
-Required for query params:
-
-* `--query-params: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
-+
-Or
-* `--query-params-file: <location of the file containing query param key-value pairs, one pair per line>`
+|`--auth-headers` a|Use if you authenticate to your API by passing custom header parameters and values.
 {sp} +
 {sp} +
 Required for headers: 
 
-* `--headers: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
+* `--custom-headers: <comma-separated list of header-value pairs, for example, header1:value1,header2:value2>`
 +
 Or
-* `--headers-file: <location of the file containing header key-value pairs, one per line>`
+* `--custom-headers-file: <location of the file containing header-value pairs, one per line>`
 
-|`--url` | Configures the URL for the backend API.
+|`--auth-query-params` a|Use if you authenticate to your API by passing query parameters and values.
+{sp} +
+{sp} +
+Required for query params: 
+
+* `--credentials <client_id:client_secret>`
+
+|`--url <url>` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one API is running, DataGraph uses the first URL.
-|`--ca` | Specify a list of certificate authority (CA) files to add to the API's truststore.
-|`--cert` | Specify the client certificate to use for mutual transport layer security (mTLS).
-|`--key` | Specify the private key to use for mTLS.
+|`--ca` | Specify a comma-separated list of certificate authority (CA) files to add to the API's truststore, for example, `file.ca,file2.ca`.
+|`--cert` | Specify the filename of the client certificate to use for mutual transport layer security (mTLS), for example, `cert.ca`.
+|`--key` | Specify the filename of the private key to use for mTLS, for example `key.pem`.
 |`--key-password` | Specify the password to decrypt an encrypted private key.
 |===
 
@@ -93,7 +97,7 @@ All headers and query params defined in the command line and the headers and que
 
 This command promotes an API source `<sourceId>` to the target environment `<targetEnv>`.
 
-In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
+In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
 
 [%header,cols="35a,65a"]
 |===
@@ -104,7 +108,7 @@ In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, t
 {sp} +
 Required:
 
-* `--basic-credentials <username>:<password>`
+* `--credentials <username>:<password>`
 
 |`--auth-oauth` a| Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
 {sp} +
@@ -113,6 +117,11 @@ Required:
 
 * `--client-credentials <client_id>:<client_secret>`
 * `--server <authorization server URL>` 
+{sp} +
+{sp} +
+Not Required:
+
+* `--scope <server>`
 
 |`--auth-pass-through` a| Use if you authenticate to your API by passing authorization headers.
 {sp} +
@@ -121,23 +130,22 @@ Required:
 
 *  `--mapping: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
 
-|`--auth-custom` a|Use if you authenticate to your API using custom header parameters and values, such as query params or headers.
+|`--auth-headers` a|Use if you authenticate to your API by passing custom header parameters and values.
 {sp} +
 {sp} +
-Required for query params:
+Required for headers:
 
-* `--query-params: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
+* `--custom-headers: <comma-separated list of header-value pairs, for example, header1:value1,header2:value2>`
 +
 Or
-* `--query-params-file: <location of the file containing query param key-value pairs, one pair per line>`
-{sp} +
-{sp} +
-Required for headers: 
+* `--custom-headers-file: <location of the file containing header header-value pairs, one per line>`
 
-* `--headers: <comma-separated list of key-value pairs, for example, key1:value1,key2:value2>`
-+
-Or
-* `--headers-file: <location of the file containing header key-value pairs, one per line>`
+|`--auth-query-params` a|Use if you authenticate to your API by passing query parameters and values.
+{sp} +
+{sp} +
+Required for query params: 
+
+* `--credentials <client_id:client_secret>`
 
 |`--url` | Configures the URL for the backend API.
 |`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one API is running, DataGraph uses the first URL.
@@ -145,8 +153,8 @@ Or
 |`--cert` | Specify the client certificate to use for mTLS.
 |`--key` | Specify the private key to use for mTLS.
 |`--key-password` | Specifies the password to decrypt an encrypted private key.
-|`--delete-ca` | Deletes all CA certificates.
-|`--no-mtls` | Deletes the client certificate, private key, and private key password information.
+|`--empty-ca` | Deletes all CA certificates.
+|`--empty-mtls` | Deletes the client certificate, private key, and private key password information.
 |===
 
 [NOTE]
@@ -160,7 +168,7 @@ All headers and query params defined in the command line and the headers and que
 
 This command updates the version of an API source `<sourceId>`. 
 
-In addition to the default `--help`, `-f/--fields`, and `-o/--output` options, this command accepts the following default options:
+In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
 
 [%header,cols="35a,65a"]
 |===
@@ -212,8 +220,8 @@ Or
 |`--cert` | Specify the client certificate to use for mTLS.
 |`--key` | Specify the private key to use for mTLS.
 |`--key-password` | Specifies the password to decrypt an encrypted private key.
-|`--delete-ca` | Deletes all CA certificates.
-|`--no-mtls` | Deletes the client certificate, private key, and private key password information.
+|`--empty-ca` | Deletes all CA certificates.
+|`--empty-mtls` | Deletes the client certificate, private key, and private key password information.
 |===
 
 [NOTE]
@@ -227,7 +235,7 @@ All headers and query params defined in the command line and the headers and que
 
 This command enables you to configure the number of concurrent API calls permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
 
-This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
 == datagraph schema-download
 
@@ -237,7 +245,7 @@ This command takes the default `--help`, `-f/--fields`, and `-o/--output` option
 
 This command downloads the unified schema for the current environment. 
 
-This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
 == datagraph sources delete
 
@@ -247,7 +255,7 @@ This command takes the default `--help`, `-f/--fields`, and `-o/--output` option
 
 This command deletes the specified API source.
 
-This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
 == datagraph sources get 
 
@@ -257,7 +265,7 @@ This command takes the default `--help`, `-f/--fields`, and `-o/--output` option
 
 This command gets the specified API source.
 
-This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
 == datagraph sources list
 
@@ -267,7 +275,7 @@ This command takes the default `--help`, `-f/--fields`, and `-o/--output` option
 
 This command lists all API sources for the current environment. 
 
-This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
 == datagraph describe 
 
@@ -282,6 +290,6 @@ This command returns the following information about DataGraph:
 * `deploymentStatus`: Shows whether DataGraph is deploying, running, or has errors.
 * `logLevels`: Displays a list of the configured log levels.
 
-This command takes the default `--help`, `-f/--fields`, and `-o/--output` options.
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
 // end::commands[]
