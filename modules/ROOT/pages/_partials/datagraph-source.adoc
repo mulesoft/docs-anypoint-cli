@@ -27,7 +27,7 @@
 > datagraph sources add <g/a/v>
 ----
 
-This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. 
+This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command use the current organization ID. 
  
 In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
 
@@ -314,7 +314,7 @@ This command validates if it’s possible to add an API source to the unified sc
 
 If any of these steps generates a conflict or error, the command returns the result. If it finds no conflicts or errors, it returns a success message.
 
-The API source to validate is specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. 
+The API source to validate is specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command use the current organization ID.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
