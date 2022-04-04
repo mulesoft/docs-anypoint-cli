@@ -240,7 +240,7 @@ This command does not take any options, except for the default ones: `--help`, `
 == cloudhub load-balancer allowlist add
 
 ----
-> cloudhub load-balancer whitelist add [options] <name> <cidrBlock>
+> cloudhub load-balancer allowlist add [options] <name> <cidrBlock>
 ----
 
 This command has exactly the same characteristics as the <<cloudhub load-balancer whitelist add>> command.
@@ -251,7 +251,7 @@ We favor the use of the term "allowlist" instead of "whitelist" in adherence to 
 == cloudhub load-balancer allowlist remove
 
 ----
-> cloudhub load-balancer whitelist add [options] <name> <cidrBlock>
+> cloudhub load-balancer allowlist remove [options] <name> <cidrBlock>
 ----
 
 This command has exactly the same characteristics as the <<cloudhub load-balancer whitelist remove>> command.
