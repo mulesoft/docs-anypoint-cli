@@ -10,7 +10,7 @@ You must install Anypoint CLI from npm before you can run the commands. Use the 
 
 . <<verify-installation,Verify the installation>>.
 
-. Optionally <<uninstall-plugins,uninstall plugins>> you do not use.
+. Optionally <<uninstall-plugins,uninstall plugins>> you do not use or <<uninstall-anypoint-cli,uninstall the Anypoint CLI>> from a system where it is no longer used.
 
 [[prereqs]]
 == Before You Begin
@@ -167,3 +167,15 @@ $ anypoint-cli-v4 plugins:uninstall @mulesoft/anypoint-cli-account-plugin
 ----
 
 See <<plugin-list,List of Plugins>>.
+
+[[uninstall-anypoint-cli]]
+== Uninstall Anypoint CLI
+
+You might want to uninstall Anypoint CLI from systems where it is no longer being used. 
+
+To uninstall the Anypoint CLI:
+
+[source,text,linenums]
+----
+$ $ npm uninstall -g @mulesoft/anypoint-cli-v4
+----
