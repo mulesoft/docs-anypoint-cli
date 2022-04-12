@@ -153,13 +153,13 @@ Required for query params:
 |`--ca` | Specify a list of CA files to add to the API's truststore.
 |`--cert` | Specify the client certificate to use for mTLS.
 |`--key` | Specify the private key to use for mTLS.
-|`--key-password` | Specifies the password to decrypt an encrypted private key.
+|`--key-password` | Specify the password to decrypt an encrypted private key.
 |`--empty-ca` | Deletes all CA certificates.
 |`--empty-mtls` | Deletes the client certificate, private key, and private key password information.
 |===
 
 [NOTE]
-All headers and query params defined in the command line and the headers and query params files are appended. If there are repeated keys, the values provided in the command line takes precedence.
+All headers and query params defined in the command line, and all header and query param files, are appended. If there are repeated keys, the values provided in the command line takes precedence.
 
 == datagraph sources update 
 
@@ -224,13 +224,13 @@ Required for query params:
 |`--ca` | Specify a list of CA files to add to the API's truststore.
 |`--cert` | Specify the client certificate to use for mTLS.
 |`--key` | Specify the private key to use for mTLS.
-|`--key-password` | Specifies the password to decrypt an encrypted private key.
+|`--key-password` | Specify the password to decrypt an encrypted private key.
 |`--empty-ca` | Deletes all CA certificates.
 |`--empty-mtls` | Deletes the client certificate, private key, and private key password information.
 |===
 
 [NOTE]
-All headers and query params defined in the command line and the headers and query params files are appended. If there are repeated keys, the values provided in the command line takes precedence.
+All headers and query params defined in the command line, and all header and query param files, are appended. If there are repeated keys, the values provided in the command line takes precedence.
 
 == datagraph scale 
 
