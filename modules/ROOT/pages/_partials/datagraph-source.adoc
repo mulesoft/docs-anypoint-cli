@@ -27,7 +27,7 @@
 > datagraph sources add <g/a/v>
 ----
 
-This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command use the current organization ID. 
+This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command uses the current organization ID. 
  
 In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
 
@@ -88,7 +88,7 @@ Required for query params:
 |===
 
 [NOTE]
-All headers and query params defined in the command line and the headers and query params files are appended. If there are repeated keys, the values provided in the command line takes precedence.
+All headers and query params defined in the command line, and all header and query param files, are appended. If there are repeated keys, the values provided in the command line takes precedence.
 
 == datagraph sources promote
 
@@ -175,7 +175,7 @@ In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbos
 |===
 | Options | Description 
 |`--auth-none` | Use if your API is public.
-|`--auth-basic` a|Use if you authenticate to your API either by passing the basic authentication header or by passing a username and password. 
+|`--auth-basic` a|Use if you authenticate to your API by passing either the basic authentication header or both a username and password. 
 {sp} +
 {sp} +
 Required:
@@ -220,7 +220,7 @@ Required for query params:
 * `--credentials <client_id:client_secret>`
 
 |`--url` | Configures the URL for the backend API.
-|`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one APIs is running, DataGraph uses the first URL.
+|`--discover-url` | Automatically discovers the URL of the backend API based on the instances running in the current environment. If more than one API is running, DataGraph uses the first URL.
 |`--ca` | Specify a list of CA files to add to the API's truststore.
 |`--cert` | Specify the client certificate to use for mTLS.
 |`--key` | Specify the private key to use for mTLS.
@@ -314,7 +314,7 @@ This command validates if it’s possible to add an API source to the unified sc
 
 If any of these steps generates a conflict or error, the command returns the result. If it finds no conflicts or errors, it returns a success message.
 
-The API source to validate is specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command use the current organization ID.
+The API source to validate is specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command uses the current organization ID.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
