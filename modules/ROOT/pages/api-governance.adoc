@@ -2,16 +2,18 @@
 
 include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 
-include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-create]
-
-include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-delete]
-
-include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-info]
-
-include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-list]
-
-include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-update]
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-api-validate]
 
 include::anypoint-cli::partial$api-governance.adoc[tag=governance-document]
 
-include::anypoint-cli::partial$api-governance.adoc[tag=governance-validate]
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-profile-create]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-profile-delete]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-profile-info]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-profile-list]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-profile-update]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-ruleset-validate]
