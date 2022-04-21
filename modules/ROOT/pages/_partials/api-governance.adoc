@@ -17,7 +17,7 @@
 
 // end::summary[]
 
-// tag::governance-profile-validate[]
+// tag::governance-api-validate[]
 
 [[governance-api-validate]]
 == governance api validate
@@ -47,7 +47,34 @@ Spec does not conform with Ruleset
 [.. full report shown here..]
 ----
 
-// end::governance-profile-validate[]
+// end::governance-api-validate[]
+
+// tag::governance-document[]
+
+[[governance-document]]
+=== governance document
+
+`> governance document [options] <ruleset> <file>`
+
+This command creates the documentation for an API Governance ruleset definition .zip file that you want to upload and publish to Exchange. 
+
+*Example command:*
+`anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip`
+
+*Example output:*
+
+----
+validation name [ 'scalar-parameters' ]
+Saving to `/Users/janedoe/temp/prof-1.doc.zip`
+----
+
+This command accepts the following options:
+
+Default options: `--help`, `-f`/`--fields` and `-o`/`--output`
+Other options: `--files.docs.zip`
+
+
+// end::governance-document[]
 
 // tag::governance-profile-create[]
 
@@ -116,35 +143,9 @@ This command deletes a specific Governance profile.
 
 // end::governance-profile-delete[]
 
-// tag::governance-document[]
-
-[[governance-document]]
-=== governance document
-
-`> governance document [options] <ruleset> <file>`
-
-This command creates the documentation for an API Governance ruleset definition .zip file that you want to upload and publish to Exchange. 
-
-*Example command:*
-`anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip`
-
-*Example output:*
-
-----
-validation name [ 'scalar-parameters' ]
-Saving to `/Users/janedoe/temp/prof-1.doc.zip`
-----
-
-This command accepts the following options:
-
-Default options: `--help`, `-f`/`--fields` and `-o`/`--output`
-Other options: `--files.docs.zip`
-
-
-// end::governance-document[]
-
 // tag::governance-profile-info[]
 
+[[governance-profile-info]]
 == governance profile info
 
 `> governance profile info <profile-id>`
@@ -242,15 +243,8 @@ Governance Profile Ids for all of the Governance Profiles for an organization us
 
 // tag::governance-ruleset-validate[]
 
-[[validate-ruleset]]
-== Validate Governance Ruleset Format Using the API Governance CLI
-
-To validate the format of your governance ruleset as you develop it, use the following command:
-
-// include::anypoint-cli::partial$api-governance.adoc[tag=governance-validate,leveloffset=+1]
-
 [[governance-ruleset-validate]]
-=== governance ruleset validate
+== governance ruleset validate
 
 `> governance ruleset validate <governance-ruleset>
 
