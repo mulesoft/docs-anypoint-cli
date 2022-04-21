@@ -1,0 +1,17 @@
+= CLI for API Governance
+
+include::anypoint-cli::partial$api-governance.adoc[tag=summary]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-create]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-delete]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-info]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-list]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-console-update]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-document]
+
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-validate]
