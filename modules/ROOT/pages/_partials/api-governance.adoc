@@ -52,7 +52,7 @@ Spec does not conform with Ruleset
 // tag::governance-document[]
 
 [[governance-document]]
-=== governance document
+== governance document
 
 `> governance document [options] <ruleset> <file>`
 
@@ -79,7 +79,7 @@ Other options: `--files.docs.zip`
 // tag::governance-profile-create[]
 
 [[governance-profile-create]]
-=== governance profile create
+== governance profile create
 
 `> governance profile create [options] <profile-name> <ruleset-asset-identifiers>`
 
