@@ -7,7 +7,7 @@ The command-line interface (CLI) supports both the interactive shell and standar
 * xref:exchange::index.adoc[Anypoint Exchange]
 * xref:access-management::index.adoc[Access management]
 * xref:runtime-manager::index.adoc[Anypoint Runtime Manager]
-* xref:runtime-manager::index.adoc[API Governance]
+* xref:api-governance::index.adoc[API Governance]
 +
 Use Runtime Manager to manage Mule applications deployed to CloudHub (hosted by MuleSoft) and locally hosted Mule servers.
 * xref:runtime-manager::virtual-private-cloud.adoc[VPCs]
