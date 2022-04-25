@@ -200,7 +200,7 @@ This command lists information for all governance profiles for an organization. 
 `> governance profile update [options] <profile-id>`
 
 This command updates an existing governance profile. You can update the governance profile's
-Governance rulesets, name, tags, and description.
+governance rulesets, name, tags, and description.
 
 NOTE: You must know the governance profile ID to edit a governance profile. You can get the
 governance profile IDs for all of the governance profiles for an organization using the
@@ -224,7 +224,7 @@ These are the asset's identifiers.
 |The `tags` argument is followed by a comma separated list of tags formatted as follows: `tag1,tag2,tag3`.
 
 |--description <description>
-|The `description` argument is followed by a string that is the new Governance profile description.
+|The `description` argument is followed by a string that is the new governance profile description.
 |===
 
 *Example command:*
