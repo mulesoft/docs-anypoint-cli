@@ -123,10 +123,10 @@ You can also pass this value using the environment variable `export ANYPOINT_ORG
 You can also pass this value using the environment variable `export ANYPOINT_ENV=<name>`.
 
 | `host` | The host of your Anypoint Platform Installation +
-By default, this value points to `\https://anypoint.mulesoft.com`. +
+By default, this value points to `anypoint.mulesoft.com`. +
 
 * If you are using Anypoint Platform PCE, pass the address where you are hosting the platform.
-* If you are using Anypoint Platform EU Cloud, pass your EU control plane URL.
+* If you are using Anypoint Platform EU Cloud, pass your EU control plane address.
 
 You can also pass this value using a dedicated environment variable `ANYPOINT_HOST=<name>`.
 
