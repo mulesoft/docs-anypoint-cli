@@ -1,0 +1,284 @@
+= API Governance
+
+
+// tag::summary[]
+
+|===
+|Command |Description
+| xref:api-governance.adoc#governance-api-validate[governance api validate] | Validates an API definition against a specified governance ruleset
+| xref:api-governance.adoc#governance-document[governance document] | Creates the documentation file for a governance ruleset definition
+| xref:api-governance.adoc#governance-profile-create[governance profile create] | Creates a governance profile
+| xref:api-governance.adoc#governance-profile-delete[governance profile delete] | Deletes a governance profile
+| xref:api-governance.adoc#governance-profile-info[governance profile info] | Lists information for a specific governance profile ID
+| xref:api-governance.adoc#governance-profile-list[governance profile list] | Lists all governance profiles for an organization
+| xref:api-governance.adoc#governance-profile-update[governance profile update] | Updates a governance profile
+| xref:api-governance.adoc#governance-ruleset-validate[governance ruleset validate] | Validates a governance ruleset definition's format
+|===
+
+// end::summary[]
+
+// tag::governance-api-validate[]
+
+[[governance-api-validate]]
+== governance api validate
+
+`> governance api validate <governance-ruleset> <api-definition-zip-file>`
+
+This command validates an API definition against a specified ruleset.
+
+*Example command:*
+
+`anypoint-cli governance api validate ~/Downloads/ruleset.yaml ~/Downloads/order-api-1.0.0-raml.zip`
+
+*Example output:*
+
+For a specification that is conformant to the ruleset:
+
+----
+ Spec conforms with Ruleset
+----
+
+For a specification that is nonconformant to the ruleset:
+
+----
+ Ruleset /path/Downloads/ruleset.yaml
+ Spec /path/Downloads/order-api-1.0.0-raml.zip
+ Spec does not conform with Ruleset
+ [.. full report shown here..]
+----
+
+// end::governance-api-validate[]
+
+// tag::governance-document[]
+
+[[governance-document]]
+== governance document
+
+`> governance document [options] <ruleset> <file>`
+
+This command creates the documentation for an API Governance ruleset definition .zip file that you want to upload and publish to Exchange. 
+
+*Example command:*
+`anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip`
+
+*Example output:*
+
+----
+ validation name [ 'scalar-parameters' ]
+ Saving to /Users/janedoe/temp/prof-1.doc.zip
+----
+
+This command accepts the following options:
+
+* Default options: `--help`, `-f`/`--fields` and `-o`/`--output`
+
+* Other options: `--files.docs.zip`
+
+// end::governance-document[]
+
+// tag::governance-profile-create[]
+
+[[governance-profile-create]]
+== governance profile create
+
+`> governance profile create [options] <profile-name> <ruleset-asset-identifiers>`
+
+This command creates a governance profile. 
+
+<profile-name>
+
+A string value for the new governance profile name.
+
+<ruleset-asset-identifiers>
+
+A list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+
+To get the ruleset asset identifiers:
+
+* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
+* If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
+
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--tags <tags>
+|The `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
+
+|--description <description>
+|The `description` option is followed by a string that is the new governance profile's description.
+|===
+
+*Example command:*
+
+`anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --tags best --description "Profile for OAS Best Practices"`
+
+*Example output:*
+
+----
+ Profile Added
+ Id         	4f98e59d-8efb-420f-ac95-9cd0af15bd45                                    
+ Name       	OAS Best Practices                                                        
+ Description	Profile for OAS Best Practices                                
+ Rulesets   	gav://68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
+ Filter     	tag:best    
+----
+
+// end::governance-profile-create[]
+
+// tag::governance-profile-delete[]
+
+[[governance-profile-delete]]
+== governance profile delete
+
+`> governance profile delete <profile-id>`
+
+This command deletes a specific governance profile.
+
+*Example command:*
+`anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362`
+
+*Example output:*
+
+----
+ Profile with id 8ffd463f-86b2-4132-afc6-44d179209362 removed
+----
+
+// end::governance-profile-delete[]
+
+// tag::governance-profile-info[]
+
+[[governance-profile-info]]
+== governance profile info
+
+`> governance profile info <profile-id>`
+
+This command lists all information for a governance profile ID.
+
+*Example command:*
+
+`anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362`
+
+*Example output:*
+
+----
+ Id         	19fb211b-8775-43cc-865a-46228921d6ed                                                                                                    
+ Name       	Best Practices                                                                                                                          
+ Description	Best Practices Profile                                                                                                                  
+ Rulesets   	gav://3280b56c-e887-40f9-a9aa-db1118f719d5/best-practices/1.0.0 gav://68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
+ Filter     	tag:best 
+----
+
+// end::governance-profile-info[]
+
+// tag::governance-profile-list[]
+
+[[governance-profile-list]]
+== governance profile list
+
+`> governance profile list`
+
+This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
+
+*Example output:*
+
+----
+ Profile Name  	     Profile Id                          
+	
+ OAS Best Practices	 4f98e59d-8efb-420f-ac95-9cd0af15bd45
+
+----
+// end::governance-profile-list[]
+
+// tag::governance-profile-update[]
+
+[[governance-profile-update]]
+== governance profile update
+
+`> governance profile update [options] <profile-id>`
+
+This command updates an existing governance profile. You can update the governance profile's
+governance rulesets, name, tags, and description.
+
+NOTE: You must know the governance profile ID to edit a governance profile. You can get the
+governance profile IDs for all of the governance profiles for an organization using the
+`governance profile list` command. 
+
+*Options:* 
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--profile-name <profile-name>
+|The `profile-name` argument is followed by a string that is the new governance profile name.
+
+|--ruleset-gavs <ruleset-gavs>
+|The `ruleset-gavs` argument is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+
+These are the asset's identifiers.
+
+|--tags <tags>
+|The `tags` argument is followed by a comma separated list of tags formatted as follows: `tag1,tag2,tag3`.
+
+|--description <description>
+|The `description` argument is followed by a string that is the new governance profile description.
+|===
+
+*Example command:*
+ `anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --profile-name "New Name"``
+
+*Example output:*
+
+----
+ Profile updated 51f9f94c-fb0c-43d4-9895-22c9e64f1537`
+----
+
+// end::governance-profile-update[]
+
+// tag::governance-ruleset-validate[]
+
+[[governance-ruleset-validate]]
+== governance ruleset validate
+
+`> governance ruleset validate <governance-ruleset>`
+
+This command validates the governance ruleset definition's format.
+
+<governance-ruleset>    
+ 
+Specify the file location and file name of the ruleset definition .zip file that you want to validate.	
+
+*Example command:*
+
+`anypoint-cli governance ruleset validate ~/temp/prof-1-bad.yaml`
+
+*Example output for a valid ruleset:*
+
+----
+ Ruleset conforms with Dialect
+----
+
+*Example output for a nonvalid ruleset:*
+
+----
+Ruleset does not conform with Dialect
+ModelId: file:///Users/janedoe/temp/prof-1-bad.yaml
+Profile: Validation Profile 1.0
+Conforms: false
+Number of results: 1`
+
+Level: Violation
+
+- Constraint: http://a.ml/amf/default_document#/declarations/profileNode_profile_required_validation
+  Message: Property 'profile' is mandatory
+  Severity: Violation
+  Target: file:///Users/janedoe/temp/prof-1-bad.yaml#/encodes
+  Property: http://schema.org/name
+  Range: [(3,0)-(11,19)]
+  Location: file:///Users/janedoe/temp/prof-1-bad.yaml
+----
+
+// end::governance-ruleset-validate[]
