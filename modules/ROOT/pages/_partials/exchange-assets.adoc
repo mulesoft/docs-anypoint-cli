@@ -108,6 +108,7 @@ Supported Values:
 * `app`
 * `extension`
 * `external-library`
+* `ruleset`
 
 If it is uploaded, the type is inferred from the classifier of the file.
 
@@ -163,7 +164,7 @@ Depending on the type of asset, some possible classifier values are:
 
 `groupID:assetID:version,groupID2:assetID:version`
 
-| `--status` | Asset status 
+| `--status` | Asset status
 
 Supported Values:
 
@@ -233,7 +234,7 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 [%header,cols="40a,30a,30a"]
 |===
 | Command | Description |  Example
-| `--status` | Asset status 
+| `--status` | Asset status
 
 Supported Values:
 
@@ -305,7 +306,6 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |Command | Description |  Example
 |`--limit` | Number of results to retrieve | `exchange asset list --limit 2`
 |`--offset` | Offsets the number of APIs passed | `exchange asset list --offset 3`
-|`--sort` | Sorts the results in the field name passed | `exchange asset list --sort "Latest Version"`
 |`--organizationId` | Filters by organization id | `exchange asset list --organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
 |===
 
