@@ -85,6 +85,7 @@ Required for query params:
 |`--cert` | Specify the filename of the client certificate to use for mutual transport layer security (mTLS), for example, `cert.ca`.
 |`--key` | Specify the filename of the private key to use for mTLS, for example `key.pem`.
 |`--key-password` | Specify the password to decrypt an encrypted private key.
+|`--ignore-invalid-edits` | Use to apply valid edits made in the extensions in the API specification and to ignore any edits that are invalid.
 |===
 
 [NOTE]
@@ -227,6 +228,9 @@ Required for query params:
 |`--key-password` | Specify the password to decrypt an encrypted private key.
 |`--empty-ca` | Deletes all CA certificates.
 |`--empty-mtls` | Deletes the client certificate, private key, and private key password information.
+|`--keep-edits` | Keeps edits that are present in the current version of the API source instead of extracting those edits from the API specification.
+|`--override-ui-edits` | Change the origin of the API source to the CLI. Ff the origin of the API source is the DataGraph UI, use this option to override the UI edits with the edits in the API specification. 
+|`--ignore-invalid-edits` | Use to apply valid edits made in the extensions in the API specification and to ignore any edits that are invalid.
 |===
 
 [NOTE]
