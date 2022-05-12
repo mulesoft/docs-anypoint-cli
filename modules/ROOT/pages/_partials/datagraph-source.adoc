@@ -313,7 +313,7 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 This command validates if it’s possible to add an API source to the unified schema. To do so, the command:
 
 * Translates the API source into a GraphQL schema.
-* Validates any embedded customizations against DataGraph rules.
+* Validates any API extensions applied in the API specification.
 * Runs a conflict check against the unified schema.
 
 If any of these steps generates a conflict or error, the command returns the result. If it finds no conflicts or errors, it returns a success message.
