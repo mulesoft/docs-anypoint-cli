@@ -91,6 +91,32 @@ Required for query params:
 [NOTE]
 All headers and query params defined in the command line, and all header and query param files, are appended. If there are repeated keys, the values provided in the command line takes precedence.
 
+=== Example Command
+
+----
+datagraph sources add order-e2e/1.0.0 --url http://test.com
+----
+
+=== Example Output
+
+----
+{
+  "apiVersion": "1.0",
+  "assetId": "order-e2e",
+  "createDate": "2022-05-11T21:17:57",
+  "endpoint": "http://test.com",
+  "environmentId": "36fe3e9d-4896-4a1d-8162-e1284f49949c",
+  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "name": "Order E2E",
+  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "securityScheme": "NO_AUTH",
+  "sourceId": "15d5afdf-ed79-432c-9739-032328e2013f",
+  "updateDate": "2022-05-11T21:17:57",
+  "version": "1.0.0",
+  "origin": "CLI"
+}
+----
+ 
 == datagraph sources promote
 
 ----
@@ -161,6 +187,10 @@ Required for query params:
 
 [NOTE]
 All headers and query params defined in the command line, and all header and query param files, are appended. If there are repeated keys, the values provided in the command line takes precedence.
+
+=== Example Command
+
+=== Example Output
 
 == datagraph sources update 
 
@@ -236,6 +266,10 @@ Required for query params:
 [NOTE]
 All headers and query params defined in the command line, and all header and query param files, are appended. If there are repeated keys, the values provided in the command line takes precedence.
 
+=== Example Command
+
+=== Example Output
+
 == datagraph scale 
 
 ----
@@ -245,6 +279,10 @@ All headers and query params defined in the command line, and all header and que
 This command enables you to configure the number of concurrent API calls permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
+
+=== Example Command
+
+=== Example Output
 
 == datagraph schema-download
 
@@ -266,6 +304,10 @@ This command deletes the specified API source.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
+=== Example Command
+
+=== Example Output
+
 == datagraph sources get 
 
 ----
@@ -276,6 +318,10 @@ This command gets the specified API source.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
+=== Example Command
+
+=== Example Output
+
 == datagraph sources list
 
 ----
@@ -285,6 +331,10 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 This command lists all API sources for the current environment. 
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
+
+=== Example Command
+
+=== Example Output
 
 == datagraph describe 
 
@@ -301,8 +351,11 @@ This command returns the following information about DataGraph:
 * `envStatus`: Displays the status of the current environment.
 * `dlbEndpoint`: Displays the load balancer endpoint.
 
-
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
+
+=== Example Command
+
+=== Example Output
 
 == datagraph validate
 
@@ -321,5 +374,9 @@ If any of these steps generates a conflict or error, the command returns the res
 The API source to validate is specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command uses the current organization ID.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
+
+=== Example Command
+
+=== Example Output
 
 // end::commands[]
