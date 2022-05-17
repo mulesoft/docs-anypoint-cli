@@ -306,7 +306,15 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+----
+datagraph sources delete d40df394-785d-4c91-8aeb-f07568dd57c
+----
+
 === Example Output
+
+----
+"Source deleted successfully"
+----
 
 == datagraph sources get 
 
