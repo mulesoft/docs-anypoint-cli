@@ -14,7 +14,7 @@
 | <<datagraph sources get>> | Gets an API source
 | <<datagraph sources list>> | Lists all API sources
 | <<datagraph describe>> | Returns information about DataGraph
-|
+| <<datagraph validate>> | Validates an API source for the unified schema
 |===
 
 // end::summary[]
