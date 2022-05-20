@@ -294,6 +294,39 @@ This command downloads the unified schema for the current environment.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
+=== Example Output
+
+----
+directive @key(fields: String) on OBJECT
+
+"An Item"
+type Item {
+  itemId: Int!
+  "A Product"
+  product: OrderProduct!
+  quantity: Int!
+}
+
+"An Order"
+type Order {
+  items: [Item!]!
+  orderId: String!
+  customerId: String!
+}
+
+"A Product"
+type OrderProduct {
+  productId: String!
+  name: String!
+}
+
+type Query {
+  orders(ordersCount: Int): [Order!]
+  ordersByOrderId(orderId: String!): Order
+  ordersProductsByOrderId(productsCounts: Int, orderId: String!): [OrderProduct!]
+}
+----
+
 == datagraph sources delete
 
 ----
@@ -313,7 +346,10 @@ datagraph sources delete d40df394-785d-4c91-8aeb-f07568dd57c
 === Example Output
 
 ----
-"Source deleted successfully"
+{
+  "message": "Source deleted successfully",
+  "sourceId": "620afe93-b196-42eb-ae77-b68a0a937b6a"
+}
 ----
 
 == datagraph sources get 
@@ -328,7 +364,31 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+----
+datagraph sources get d1d27987-939a-4b41-b3ef-411568ee5bdd
+----
+
 === Example Output
+
+----
+{
+  "apiVersion": "1.0",
+  "assetId": "order-e2e",
+  "createDate": "2022-05-20T16:49:00Z",
+  "hasKeystore": false,
+  "endpoint": "http://test.com",
+  "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
+  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "name": "Order E2E",
+  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "hasTruststore": false,
+  "securityScheme": "NO_AUTH",
+  "sourceId": "d1d27987-939a-4b41-b3ef-411568ee5bdd",
+  "updateDate": "2022-05-20T16:49:00Z",
+  "version": "1.0.0",
+  "origin": "CLI"
+}
+----
 
 == datagraph sources list
 
@@ -361,9 +421,16 @@ This command returns the following information about DataGraph:
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
-=== Example Command
-
 === Example Output
+
+----
+{
+  "deploymentStatus": "STARTED",
+  "dlbEndpoint": "datagraph-18dc11ee-4a09-9f5ddd34-492d.us-e1.qax.cloudhub.io",
+  "endpoint": "datagraph-18dc11ee-4a09-9f5ddd34-492d.us-e1.qax.cloudhub.io",
+  "envStatus": "STARTED"
+}
+----
 
 == datagraph validate
 
