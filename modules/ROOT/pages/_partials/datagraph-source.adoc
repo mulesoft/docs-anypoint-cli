@@ -506,6 +506,16 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+----
+datagraph validate asset 73b0d8f2-5a2f-4107-884d-fcd80f30bc51/sales-api/1.0.0
+----
+
 === Example Output
+
+----
+{
+  "code": "success"
+}
+----
 
 // end::commands[]
