@@ -29,7 +29,7 @@
 
 This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command uses the current organization ID. 
  
-In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
+In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following options:
 
 [%header,cols="35a,65a"]
 |===
@@ -125,7 +125,7 @@ datagraph sources add order-e2e/1.0.0 --url http://test.com
 
 This command promotes an API source `<sourceId>` to the target environment `<targetEnv>`.
 
-In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
+In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following options:
 
 [%header,cols="35a,65a"]
 |===
@@ -200,7 +200,7 @@ All headers and query params defined in the command line, and all header and que
 
 This command updates the version of an API source `<sourceId>`. 
 
-In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following default options:
+In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following options:
 
 [%header,cols="35a,65a"]
 |===
