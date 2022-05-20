@@ -94,24 +94,24 @@ All headers and query params defined in the command line, and all header and que
 === Example Command
 
 ----
-datagraph sources add order-e2e/1.0.0 --url http://test.com
+datagraph sources add 18dc11ee-4a09-4aae-9c6c-4371a87eafa8/product-api/1.0.0/  --url http://test.com
 ----
 
 === Example Output
 
 ----
 {
-  "apiVersion": "1.0",
-  "assetId": "order-e2e",
-  "createDate": "2022-05-11T21:17:57",
+  "apiVersion": "v1",
+  "assetId": "product-api",
+  "createDate": "2022-05-20T18:05:41",
   "endpoint": "http://test.com",
-  "environmentId": "36fe3e9d-4896-4a1d-8162-e1284f49949c",
+  "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
   "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
-  "name": "Order E2E",
+  "name": "Product API",
   "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
   "securityScheme": "NO_AUTH",
-  "sourceId": "15d5afdf-ed79-432c-9739-032328e2013f",
-  "updateDate": "2022-05-11T21:17:57",
+  "sourceId": "deca7be1-c299-4441-bc7b-dba733e3a11f",
+  "updateDate": "2022-05-20T18:05:41",
   "version": "1.0.0",
   "origin": "CLI"
 }
@@ -268,7 +268,29 @@ All headers and query params defined in the command line, and all header and que
 
 === Example Command
 
+----
+> datagraph sources update deca7be1-c299-4441-bc7b-dba733e3a11f --url http://test.com
+----
+
 === Example Output
+
+----
+{
+  "apiVersion": "v2",
+  "assetId": "product-api",
+  "createDate": "2022-05-20T18:05:41Z",
+  "endpoint": "http://test.com",
+  "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
+  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "name": "Product API",
+  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "securityScheme": "NO_AUTH",
+  "sourceId": "deca7be1-c299-4441-bc7b-dba733e3a11f",
+  "updateDate": "2022-05-20T18:13:26",
+  "version": "2.0.0",
+  "origin": "CLI"
+}
+----
 
 == datagraph scale 
 
@@ -400,10 +422,42 @@ This command lists all API sources for the current environment.
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
-=== Example Command
 
 === Example Output
 
+----
+{
+    "apiVersion": "1.0",
+    "assetId": "order-e2e",
+    "createDate": "2022-05-20T16:49:00.000Z",
+    "endpoint": "http://test.com",
+    "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
+    "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "name": "Order E2E",
+    "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "securityScheme": "NO_AUTH",
+    "sourceId": "d1d27987-939a-4b41-b3ef-411568ee5bdd",
+    "updateDate": "2022-05-20T16:49:00.000Z",
+    "version": "1.0.0",
+    "origin": "CLI"
+  },
+  {
+    "apiVersion": "v1",
+    "assetId": "product-api",
+    "createDate": "2022-05-20T18:05:41.000Z",
+    "endpoint": "http://test.com",
+    "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
+    "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "name": "Product API",
+    "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "securityScheme": "NO_AUTH",
+    "sourceId": "deca7be1-c299-4441-bc7b-dba733e3a11f",
+    "updateDate": "2022-05-20T18:05:41.000Z",
+    "version": "1.0.0",
+    "origin": "CLI"
+  }
+----
+  
 == datagraph describe 
 
 ----
