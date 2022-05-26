@@ -4,6 +4,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 
 * <<account>>
 * <<env-business-groups>>
+* <<api-governance>>
 * <<api-mgr>>
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
@@ -44,6 +45,10 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:env-business-groups.adoc#use-business-group[use business-group]| Make specified business-group active
 |===
 
+[[api-governance]]
+== API Governance
+
+include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 
 [[api-mgr]]
 == API Manager
@@ -113,7 +118,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |===
 |Command |Description
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-list[cloudhub load-balancer list]| Lists all load balancers in an organization
-|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub load-balancer list describe]| Show load balancer details
+|xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub load-balancer describe]| Show load balancer details
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-describe-json[cloudhub load-balancer describe-json]| Show load balancer details in raw JSON response
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-create[cloudhub load-balancer create]| Create a load balancer
 |xref:cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub load-balancer start]| Starts a load balancer
@@ -297,4 +302,3 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |Command |Description
 |xref:rtf-instances.adoc#runtime-mgr-rtf-list[runtime-mgr rtf list]  | Lists available Runtime Fabric instances
 |===
-

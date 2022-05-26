@@ -8,6 +8,7 @@
 |<<exchange asset upload>> | Uploads an Exchange asset
 |<<exchange asset uploadv2>> | Uploads an Exchange asset using Exchange Experience API v2
 |<<exchange asset mutableDataUpload>> | Modifies mutable data of an existing Exchange asset
+|<<exchange asset updateStatus>> | Modifies status of an existent Exchange asset
 |<<exchange asset modify>> | Modifies an Exchange asset
 |<<exchange asset download>> | Downloads an Exchange asset
 |<<exchange asset list>> | Lists all assets
@@ -107,6 +108,7 @@ Supported Values:
 * `app`
 * `extension`
 * `external-library`
+* `ruleset`
 
 If it is uploaded, the type is inferred from the classifier of the file.
 
@@ -160,7 +162,21 @@ Depending on the type of asset, some possible classifier values are:
 
 | `--dependencies` | Asset dependencies (comma-separated) |
 
-`groupID:assetID:version,groupID2:assetID:version` |
+`groupID:assetID:version,groupID2:assetID:version`
+
+| `--status` | Asset status
+
+Supported Values:
+
+* `development`
+* `published`
+
+Default value:
+
+* `published` |
+
+`development` |
+
 |===
 
 == exchange asset mutableDataUpload
@@ -200,6 +216,46 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 `api,tag1,tag2`
 
 |===
+
+== exchange asset updateStatus
+
+----
+> exchange asset updateStatus [properties] <assetIdentifier>
+----
+
+This command modifies the status of an already created asset.
+
+Use the following format for the _assetIdentifier_ argument:
+
+`[_<groupID>_]/_<assetID>_/_<version>_`
+
+If _group_id_ is not specified, it defaults to the currently selected organization ID.
+
+[%header,cols="40a,30a,30a"]
+|===
+| Command | Description |  Example
+| `--status` | Asset status
+
+Supported Values:
+
+* `published`
+* `deprecated` |
+
+`exchange asset updateStatus --status deprecated`
+
+|===
+
+Valid transitions are:
+
+[%header,cols="30a,30a"]
+|===
+| From | To
+| `development` | `published`
+| `published` | `deprecated`
+| `deprecated` | `published`
+|===
+
+Note that the `published` state corresponds to the `stable` state
 
 == exchange asset modify
 
@@ -250,7 +306,6 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |Command | Description |  Example
 |`--limit` | Number of results to retrieve | `exchange asset list --limit 2`
 |`--offset` | Offsets the number of APIs passed | `exchange asset list --offset 3`
-|`--sort` | Sorts the results in the field name passed | `exchange asset list --sort "Latest Version"`
 |`--organizationId` | Filters by organization id | `exchange asset list --organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
 |===
 
