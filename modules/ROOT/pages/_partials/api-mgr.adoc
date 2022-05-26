@@ -502,6 +502,10 @@ If no value is provided, this value defaults to MuleSoft group ID.
 | Pass the configuration data as a JSON string. +
 For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 
+| `--configFlag [file]`
+| Pass the configuration data as a file. +
+For example, `api-mgr policy apply --configFile ./config.json`
+
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings. +
 For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`

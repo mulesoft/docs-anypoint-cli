@@ -5,6 +5,8 @@
 Anypoint Platform CLI provides the ability to manage these features in Anypoint Platform:
 
 * <<account>>
+* <<env-business-groups>>
+* <<api-governance>>
 * <<api-mgr>>
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
