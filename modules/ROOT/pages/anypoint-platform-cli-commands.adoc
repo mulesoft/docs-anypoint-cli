@@ -6,6 +6,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 
 * <<account>>
 * <<env-business-groups>>
+* <<api-governance>>
 * <<api-mgr>>
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
@@ -46,6 +47,10 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 |xref:env-business-groups.adoc#use-business-group[use business-group]| Make specified business-group active
 |===
 
+[[api-governance]]
+== API Governance
+
+include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 
 [[api-mgr]]
 == API Manager
