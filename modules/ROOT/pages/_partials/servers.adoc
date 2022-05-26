@@ -27,7 +27,7 @@
 
 This command describes the server passed in `serverId`.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-server-modify]]
 == runtime-mgr:server:modify
@@ -51,7 +51,7 @@ Besides the `--name` option, this command also has the default `--help`, `-f`/`-
 
 This command gets server registration token. This token needs to be used to register a new server.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-server-delete]]
 == runtime-mgr:server:delete
@@ -62,7 +62,7 @@ This command has only the default options: `--help` and `-o`/`--output`
 
 This command deletes the server passed in `serverId`.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -76,5 +76,5 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This server lists all servers in your environment.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 

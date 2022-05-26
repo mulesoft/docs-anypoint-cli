@@ -27,7 +27,7 @@
 
 This command creates a server group with the name passed in `name` using the server Id(s) passed as argument(s) thereafter.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-servergroup-describe]]
 == runtime-mgr:serverGroup:describe
@@ -38,7 +38,7 @@ This command has only the default options: `--help` and `-o`/`--output`
 
 This command describes the server group passed in `serverGroupId`.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-servergroup-modify]]
 == runtime-mgr:serverGroup:modify
@@ -62,7 +62,7 @@ Besides the `--name` option, this command also has the default `--help`, `-f`/`-
 
 This command adds the server passed in `serverId` to the server group passed in `serverGroupId`.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-servergroup-delete]]
 == runtime-mgr:serverGroup:delete
@@ -73,7 +73,7 @@ This command has only the default options: `--help` and `-o`/`--output`
 
 This command deletes the server groups passed in `serverGroupId`.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -87,7 +87,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command lists all server groups in the environment.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 [[runtime-mgr-servergroup-remove-server]]
 == runtime-mgr:serverGroup:remove:server
@@ -98,6 +98,6 @@ This command has only the default options: `--help` and `-o`/`--output`
 
 This command removes the server passed in `serverId` from the server group passed in `serverGroupId`.
 
-This command has only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help` and `-o`/`--output`
 
 // end::commands[]
