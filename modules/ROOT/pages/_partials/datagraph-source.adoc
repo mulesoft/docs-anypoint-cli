@@ -105,10 +105,10 @@ datagraph sources add 18dc11ee-4a09-4aae-9c6c-4371a87eafa8/product-api/1.0.0/  -
   "assetId": "product-api",
   "createDate": "2022-05-20T18:05:41",
   "endpoint": "http://test.com",
-  "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
-  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "environmentId": "<envID>",
+  "groupId": "<groupID>",
   "name": "Product API",
-  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "organizationId": "<orgID>",
   "securityScheme": "NO_AUTH",
   "sourceId": "deca7be1-c299-4441-bc7b-dba733e3a11f",
   "updateDate": "2022-05-20T18:05:41",
@@ -190,9 +190,9 @@ All headers and query params defined in the command line, and all header and que
 
 === Example Command
 
-In this example, the `organizationId` is changed after running the `promote` command.
+In this example, the `environmentId` is changed after running the `promote` command.
 ----
-datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd d4e8ad78-4ce1-489d-b9a8-d6b2f06c74d2 --auth-none
+datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd e7e8da65-9cf1-569e-c9d2-brd2r0rc7rd6 --auth-none
 ----
 
 === Example Output
@@ -203,10 +203,10 @@ datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd d4e8ad78-4ce1-489
   "assetId": "order-e2e",
   "createDate": "2022-05-27T18:56:03",
   "endpoint": "http://test.com",
-  "environmentId": "d4e8ad78-4ce1-489d-b9a8-d6b2f06c74d2",
-  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "environmentId": "e7e8da65-9cf1-569e-c9d2-brd2r0rc7rd6",
+  "groupId": "<groupID>",
   "name": "Order E2E",
-  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "organizationId": "<orgID>",
   "securityScheme": "NO_AUTH",
   "sourceId": "1ff021b3-9296-43fd-9d64-2f9027c25740",
   "updateDate": "2022-05-27T18:56:03",
@@ -305,10 +305,10 @@ The following command updates the URL of the source API and changes its authenti
   "assetId": "product-api",
   "createDate": "2022-05-20T18:56:57Z",
   "endpoint": "http://test2.com",
-  "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
-  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "environmentId": "<envID>",
+  "groupId": "<groupID>",
   "name": "Product API",
-  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "organizationId": "<orgID>",
   "securityScheme": "BASIC",
   "sourceId": "b6cb82a6-51dc-4968-861a-aa04447c3442",
   "updateDate": "2022-05-27T18:31:39",
@@ -424,10 +424,10 @@ datagraph sources get d1d27987-939a-4b41-b3ef-411568ee5bdd
   "createDate": "2022-05-20T16:49:00Z",
   "hasKeystore": false,
   "endpoint": "http://test.com",
-  "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
-  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "environmentId": "<envID>",
+  "groupId": "<groupID>",
   "name": "Order E2E",
-  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "organizationId": "<orgID>",
   "hasTruststore": false,
   "securityScheme": "NO_AUTH",
   "sourceId": "d1d27987-939a-4b41-b3ef-411568ee5bdd",
@@ -456,10 +456,10 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
     "assetId": "order-e2e",
     "createDate": "2022-05-20T16:49:00.000Z",
     "endpoint": "http://test.com",
-    "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
-    "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "environmentId": "<envID>",
+    "groupId": "<groupID>",
     "name": "Order E2E",
-    "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "organizationId": "<orgID>",
     "securityScheme": "NO_AUTH",
     "sourceId": "d1d27987-939a-4b41-b3ef-411568ee5bdd",
     "updateDate": "2022-05-20T16:49:00.000Z",
@@ -471,10 +471,10 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
     "assetId": "product-api",
     "createDate": "2022-05-20T18:05:41.000Z",
     "endpoint": "http://test.com",
-    "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
-    "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "environmentId": "<envID>",
+    "groupId": "<groupID>",
     "name": "Product API",
-    "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+    "organizationId": "<orgID>",
     "securityScheme": "NO_AUTH",
     "sourceId": "deca7be1-c299-4441-bc7b-dba733e3a11f",
     "updateDate": "2022-05-20T18:05:41.000Z",
@@ -505,8 +505,8 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 ----
 {
   "deploymentStatus": "STARTED",
-  "dlbEndpoint": "datagraph-18dc11ee-4a09-9f5ddd34-492d.us-e1.qax.cloudhub.io",
-  "endpoint": "datagraph-18dc11ee-4a09-9f5ddd34-492d.us-e1.qax.cloudhub.io",
+  "dlbEndpoint": "datagraph-example.us-e1.prod.cloudhub.io",
+  "endpoint": "datagraph-example.us-e1.prod.cloudhub.io",
   "envStatus": "STARTED"
 }
 ----
