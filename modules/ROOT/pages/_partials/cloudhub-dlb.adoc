@@ -331,7 +331,7 @@ This command lists all supported regions.
 
 This command accepts only the default options: `--help` and `-o`/`--output`
 
-[[== cloudhub-runtime-list]]
+[[cloudhub-runtime-list]]
 == cloudhub:runtime:list
 
 ----
