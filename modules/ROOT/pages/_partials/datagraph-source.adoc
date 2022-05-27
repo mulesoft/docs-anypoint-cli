@@ -291,7 +291,7 @@ All headers and query params defined in the command line, and all header and que
 
 === Example Command
 
-The following command updates the URL of the source API and changes its authentication from `auth-none` to `auth-basic` adding a client ID and secret.
+The following command updates the URL of the source API and changes its authentication from `auth-none` to `auth-basic`, adding a client ID and secret.
 
 ----
 > datagraph sources update b6cb82a6-51dc-4968-861a-aa04447c3442 --url http://test2.com --version 1.0.0 --auth-basic --credentials client-test:client-secret
