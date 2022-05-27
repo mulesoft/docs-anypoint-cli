@@ -120,7 +120,7 @@ datagraph sources add 18dc11ee-4a09-4aae-9c6c-4371a87eafa8/product-api/1.0.0/  -
 == datagraph sources promote
 
 ----
-> datagraph sources promote <sourceId> <targetEnv>
+> datagraph sources promote <sourceId> <target-EnvID>
 ----
 
 This command promotes an API source `<sourceId>` to the target environment `<targetEnv>`.
@@ -190,7 +190,30 @@ All headers and query params defined in the command line, and all header and que
 
 === Example Command
 
+In this example, the `organizationId` is changed after running the `promote` command.
+----
+datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd d4e8ad78-4ce1-489d-b9a8-d6b2f06c74d2 --auth-none
+----
+
 === Example Output
+
+----
+{
+  "apiVersion": "1.0",
+  "assetId": "order-e2e",
+  "createDate": "2022-05-27T18:56:03",
+  "endpoint": "http://test.com",
+  "environmentId": "d4e8ad78-4ce1-489d-b9a8-d6b2f06c74d2",
+  "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "name": "Order E2E",
+  "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
+  "securityScheme": "NO_AUTH",
+  "sourceId": "1ff021b3-9296-43fd-9d64-2f9027c25740",
+  "updateDate": "2022-05-27T18:56:03",
+  "version": "1.0.0",
+  "origin": "CLI"
+}
+----
 
 == datagraph sources update 
 
@@ -268,26 +291,28 @@ All headers and query params defined in the command line, and all header and que
 
 === Example Command
 
+The following command updates the URL of the source API and changes its authentication from `auth-none` to `auth-basic` adding a client ID and secret.
+
 ----
-> datagraph sources update deca7be1-c299-4441-bc7b-dba733e3a11f --url http://test.com
+> datagraph sources update b6cb82a6-51dc-4968-861a-aa04447c3442 --url http://test2.com --version 1.0.0 --auth-basic --credentials client-test:client-secret
 ----
 
 === Example Output
 
 ----
 {
-  "apiVersion": "v2",
+  "apiVersion": "v1",
   "assetId": "product-api",
-  "createDate": "2022-05-20T18:05:41Z",
-  "endpoint": "http://test.com",
+  "createDate": "2022-05-20T18:56:57Z",
+  "endpoint": "http://test2.com",
   "environmentId": "9f5ddd34-492d-4dc5-b3a9-41e36d1a87a8",
   "groupId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
   "name": "Product API",
   "organizationId": "18dc11ee-4a09-4aae-9c6c-4371a87eafa8",
-  "securityScheme": "NO_AUTH",
-  "sourceId": "deca7be1-c299-4441-bc7b-dba733e3a11f",
-  "updateDate": "2022-05-20T18:13:26",
-  "version": "2.0.0",
+  "securityScheme": "BASIC",
+  "sourceId": "b6cb82a6-51dc-4968-861a-aa04447c3442",
+  "updateDate": "2022-05-27T18:31:39",
+  "version": "1.0.0",
   "origin": "CLI"
 }
 ----
