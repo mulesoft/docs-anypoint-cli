@@ -12,7 +12,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
 * <<design-center>>
-* <<datagraph>>
+* <<datagraph-load-balancers>>
+* <<datagraph-source>>
 * <<exchange-assets>>
 * <<standalone-apps>>
 * <<standalone-alerts>>
@@ -163,8 +164,8 @@ include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub vpc firewall-rules remove]| Remove a firewall rule for Mule applications in this Anypoint VPC
 |===
 
-[[datagraph]]
-== DataGraph
+[[datagraph-load-balancers]]
+== DataGraph Load Balancers
 
 [%header,cols="35a,65a"]
 |===
@@ -172,6 +173,23 @@ include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 | xref:datagraph.adoc#datagraph-load-balancer-config-add[datagraph load-balancer-config add] | Adds a dedicated load balancer configuration to Anypoint DataGraph
 | xref:datagraph.adoc#datagraph-load-balancer-config-describe[datagraph load-balancer-config describe] | Displays a dedicated load balancer configuration for Anypoint DataGraph
 | xref:datagraph.adoc#datagraph-load-balancer-config-remove[datagraph load-balancer-config remove]| Removes a dedicated load balancer configuration from Anypoint DataGraph
+|===
+
+[[datagraph-source]]
+== DataGraph API Source Management
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+| xref:datagraph-source.adoc#datagraph-sources-add[datagraph sources add] | Adds an API source 
+| xref:datagraph-source.adoc#datagraph-sources-promote[datagraph sources promote] | Promotes an API source
+| xref:datagraph-source.adoc#datagraph-sources-update[datagraph sources update] | Updates an API source
+| xref:datagraph-source.adoc#datagraph-scale[datagraph scale] | Scales API calls made to the unified schema
+| xref:datagraph-source.adoc#datagraph-schema-download[datagraph schema-download] | Downloads the unified schema
+| xref:datagraph-source.adoc#datagraph-sources-delete[datagraph sources delete] | Deletes an API source
+| xref:datagraph-source.adoc#datagraph-sources-get[datagraph sources get] | Gets an API source
+| xref:datagraph-source.adoc#datagraph-sources-list[datagraph sources list] | Lists all API sources
+| xref:datagraph-source.adoc#datagraph-describe[datagraph describe] | Returns information about DataGraph
 |===
 
 [[design-center]]
