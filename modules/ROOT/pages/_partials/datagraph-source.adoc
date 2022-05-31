@@ -320,7 +320,7 @@ The following command updates the URL of the source API and changes its authenti
 == datagraph scale 
 
 ----
-> datagraph scale <api-calls>
+> datagraph scale <concurrent-api-calls>
 ----
 
 This command enables you to configure the number of concurrent API calls permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
@@ -329,7 +329,17 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+----
+datagraph scale 300
+----
+
 === Example Output
+
+----
+{
+  "message": "Api calls updated"
+}
+----
 
 == datagraph schema-download
 
