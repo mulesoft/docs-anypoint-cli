@@ -26,6 +26,16 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 
 include::anypoint-cli::partial$account.adoc[tag=summary]
 
+[[env-business-groups]]
+== Environments and Business Groups
+
+include::anypoint-cli::partial$env-business-groups.adoc[tag=summary]
+
+[[api-governance]]
+== API Governance
+
+include::anypoint-cli::partial$api-governance.adoc[tag=summary]
+
 [[api-mgr]]
 == API Manager
 

@@ -1,0 +1,46 @@
+= Environments and Business Groups
+
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<use environment>>| Make specified environment active
+|<<use business-group>>| Make specified business-group active
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+== use environment
+
+This command is only available for interactive mode.
+
+----
+> use environment [options] <name>
+----
+This command makes active the environment specified in `<name>`.
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== use business-group
+
+This command is only available for interactive mode.
+
+----
+> use business-group  [options] <name>
+----
+This command makes the business group you specified in `<name>` active.
+
+[NOTE]
+--
+If your business group or organization name contains spaces, you need to enclose its name between `"` characters.
+
+----
+> use business-group "QA Organization"
+----
+--
+
+// end::commands[]
