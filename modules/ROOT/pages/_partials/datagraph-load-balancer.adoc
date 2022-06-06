@@ -1,4 +1,4 @@
-= DataGraph
+= DataGraph Load Balancers
 
 
 // tag::summary[]
