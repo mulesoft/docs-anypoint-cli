@@ -1,0 +1,33 @@
+= Project
+
+|===
+|Command |Description
+| xref:project.adoc#project-validate
+[project validate] | Validates an API project using the `exchange.json` file to identify dependencies and rulesets
+|===
+
+// tag::project-validate[]
+
+[[project-validate]]
+== project validate
+
+`> project validate <api-project>`
+
+This command references the `exchange.json` file to download all project dependencies for a project and then runs the validation for the API. It also runs ruleset validations if there are any ruleset dependencies indicated in the `exchange.json` file.
+
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--project <project path>
+|The path to the project directory
+
+|===
+
+*Example command:*
+
+`anypoint-cli project validate --project /mypath/myproject.yml`
+
+// end::project-validate[]

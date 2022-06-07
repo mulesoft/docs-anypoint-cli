@@ -12,8 +12,6 @@
 | xref:api-governance.adoc#governance-profile-info[governance profile info] | Lists information for a specific governance profile ID
 | xref:api-governance.adoc#governance-profile-list[governance profile list] | Lists all governance profiles for an organization
 | xref:api-governance.adoc#governance-profile-update[governance profile update] | Updates a governance profile
-| xref:api-governance.adoc#governance-project-validate
-[governance project validate] | Validates an API project using the `exchange.json` file to identify dependencies and rulesets
 | xref:api-governance.adoc#governance-ruleset-validate
 [governance ruleset validate] | Validates a governance ruleset definition's format
 |===
@@ -240,44 +238,6 @@ These are the asset's identifiers.
 ----
 
 // end::governance-profile-update[]
-
-// tag::governance-project-validate[]
-
-[[governance-project-validate]]
-== governance project validate
-
-`> governance project validate <api-project>`
-
-This command references the `exchange.json` file to download all project dependencies for a project and then runs the validation for the API. It also runs ruleset validations if there are any in the `exchange.json` file.
-
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
-
-[cols="1,1"]
-|===
-|Option |Description
-
-|--project <project path>
-|The path to the project directory
-
-|===
-
-*Example command:*
-
-`anypoint-cli governance project validate --project /mypath/myproject.yml`
-
-*Example output for a valid API:*
-
-----
- xxx
-----
-
-*Example output for a nonvalid API:*
-
-----
- xxx
-----
-
-// end::governance-project-validate[]
 
 // tag::governance-ruleset-validate[]
 
