@@ -1,0 +1,3 @@
+= CLI for API Projects
+
+include::anypoint-cli::partial$project.adoc[tag=project-validate]

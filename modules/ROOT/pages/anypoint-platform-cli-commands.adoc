@@ -21,6 +21,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<server-groups>>
 * <<server-clusters>>
 * <<rtf-instances>>
+* <<project>>
 
 
 [[account]]
@@ -312,6 +313,15 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:server-clusters.adoc#runtime-mgr-cluster-create[runtime-mgr cluster create] | Creates new cluster
 |xref:server-clusters.adoc#runtime-mgr-cluster-describe[runtime-mgr cluster describe] | Describes server cluster
 |xref:server-clusters.adoc#runtime-mgr-cluster-modify[runtime-mgr cluster modify] | Modifies cluster
+|===
+
+[[project]]
+== API Projects
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:project.adoc#project-validate[project validate]  | Validates API projects independently of Exchange and Design Center. Uses the descriptor information in `exchange.json` files if present to identify project and dependency information. 
 |===
 
 [[rtf-instances]]
