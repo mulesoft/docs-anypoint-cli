@@ -27,6 +27,11 @@
 > datagraph sources add <g/a/v>
 ----
 
+[NOTE]
+--
+DataGraph supports only `stable` state API versions.
+--
+
 This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command uses the current organization ID. 
  
 In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following options:
@@ -220,6 +225,11 @@ datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd e7e8da65-9cf1-569
 ----
 > datagraph sources update <sourceId>
 ----
+
+[NOTE]
+--
+DataGraph supports only `stable` state API versions.
+--
 
 This command updates the version of an API source `<sourceId>`. 
 
