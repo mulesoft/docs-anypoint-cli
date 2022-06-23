@@ -249,7 +249,7 @@ This command validates the governance ruleset definition's format.
 
 <governance-ruleset>    
  
-Specify the file location and file name of the ruleset definition .zip file that you want to validate.	
+Specify the file location and file name of the ruleset definition YAML file that you want to validate.	
 
 *Example command:*
 
@@ -268,7 +268,7 @@ Ruleset does not conform with Dialect
 ModelId: file:///Users/janedoe/temp/prof-1-bad.yaml
 Profile: Validation Profile 1.0
 Conforms: false
-Number of results: 1`
+Number of results: 1
 
 Level: Violation
 
