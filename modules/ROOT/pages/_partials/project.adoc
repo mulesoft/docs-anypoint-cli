@@ -13,7 +13,7 @@
 
 `> project validate <api-project>`
 
-This command references the `exchange.json` file to download all project dependencies for a project and then runs the validation for the API. It also runs ruleset validations if there are any ruleset dependencies indicated in the `exchange.json` file.
+This command references the `exchange.json` file to download all project dependencies for a project and then runs the validation for the API. It uses the ruleset dependencies in the `exchange.json` file to identify the rulesets against which to validate.
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
 
