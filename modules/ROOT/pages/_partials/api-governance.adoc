@@ -24,11 +24,15 @@
 
 `> governance api validate <governance-ruleset> <api-definition-zip-file>`
 
-This command validates an API definition against a specified ruleset.
+This command validates an API definition against specified rulesets. If the API project specified includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. If the ZIP file does not include ruleset dependency information, you must also provide the ruleset YAML files against which you want to validate, separated by commas. 
 
-*Example command:*
+*Example commands:*
 
-`anypoint-cli governance api validate ~/Downloads/ruleset.yaml ~/Downloads/order-api-1.0.0-raml.zip`
+----
+anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml.zip
+
+anypoint-cli governance api validate /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+----
 
 *Example output:*
 
@@ -59,7 +63,10 @@ For a specification that is nonconformant to the ruleset:
 This command creates the documentation for an API Governance ruleset definition .zip file that you want to upload and publish to Exchange. 
 
 *Example command:*
-`anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip`
+
+----
+anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
+----
 
 *Example output:*
 
@@ -113,7 +120,9 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 *Example command:*
 
-`anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --tags best --description "Profile for OAS Best Practices"`
+----
+anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --tags best --description "Profile for OAS Best Practices"
+----
 
 *Example output:*
 
@@ -138,7 +147,10 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 This command deletes a specific governance profile.
 
 *Example command:*
-`anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362`
+
+----
+anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362`
+----
 
 *Example output:*
 
@@ -159,7 +171,9 @@ This command lists all information for a governance profile ID.
 
 *Example command:*
 
-`anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362`
+----
+anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362`
+----
 
 *Example output:*
 
@@ -228,7 +242,10 @@ These are the asset's identifiers.
 |===
 
 *Example command:*
- `anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --profile-name "New Name"``
+
+----
+anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --profile-name "New Name"
+----
 
 *Example output:*
 
@@ -249,11 +266,15 @@ This command validates the governance ruleset definition's format.
 
 <governance-ruleset>    
  
-Specify the file location and file name of the ruleset definition YAML file that you want to validate.	
+Specify the file location and file name of the ruleset definition YAML file that you want to validate or a ZIP file of a project that includes ruleset files to validate.	
 
-*Example command:*
+*Example commands:*
 
-`anypoint-cli governance ruleset validate ~/temp/prof-1-bad.yaml`
+----
+anypoint-cli governance ruleset validate ~/temp/myruleset.yaml
+
+anypoint-cli governance ruleset validate ~/temp/myproject.zip
+----
 
 *Example output for a valid ruleset:*
 
