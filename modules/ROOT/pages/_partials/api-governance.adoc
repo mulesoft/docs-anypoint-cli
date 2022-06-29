@@ -22,9 +22,21 @@
 [[governance-api-validate]]
 == governance api validate
 
-`> governance api validate <governance-ruleset> <api-definition-zip-file>`
+`> governance api validate [options] <api-definition-zip-file>`
 
 This command validates an API definition against specified rulesets. If the API project specified includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. If the ZIP file does not include ruleset dependency information, you must also provide the ruleset YAML files against which you want to validate, separated by commas. 
+
+*Options:* 
+
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--ruleset <ruleset-yaml-file>
+|The `ruleset` option is followed by ruleset YAML files separated by commas. Specify this option only if the API ZIP file does not contain the ruleset dependencies.
+|===
 
 *Example commands:*
 
@@ -60,7 +72,13 @@ For a specification that is nonconformant to the ruleset:
 
 `> governance document [options] <ruleset> <file>`
 
-This command creates the documentation for an API Governance ruleset definition .zip file that you want to upload and publish to Exchange. 
+This command creates the documentation for an API Governance ruleset definition ZIP file that you want to upload and publish to Exchange. 
+
+*Options:* 
+
+This command accepts the following options:
+
+* Default options: `--help`, `-f`/`--fields` and `-o`/`--output`
 
 *Example command:*
 
@@ -74,12 +92,6 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
  validation name [ 'scalar-parameters' ]
  Saving to /Users/janedoe/temp/prof-1.doc.zip
 ----
-
-This command accepts the following options:
-
-* Default options: `--help`, `-f`/`--fields` and `-o`/`--output`
-
-* Other options: `--files.docs.zip`
 
 // end::governance-document[]
 
@@ -105,7 +117,9 @@ To get the ruleset asset identifiers:
 * If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
 * If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+*Options:* 
+
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
 [cols="1,1"]
 |===
@@ -178,11 +192,11 @@ anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362`
 *Example output:*
 
 ----
- Id         	19fb211b-8775-43cc-865a-46228921d6ed                                                                                                    
- Name       	Best Practices                                                                                                                          
- Description	Best Practices Profile                                                                                                                  
- Rulesets   	gav://3280b56c-e887-40f9-a9aa-db1118f719d5/best-practices/1.0.0 gav://68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
- Filter     	tag:best 
+Id         	19fb211b-8775-43cc-865a-46228921d6ed                                                                                                    
+Name       	Best Practices                                                                                                                          
+Description	Best Practices Profile                                                                                                                  
+Rulesets   	gav://3280b56c-e887-40f9-a9aa-db1118f719d5/best-practices/1.0.0 gav://68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
+Filter     	tag:best 
 ----
 
 // end::governance-profile-info[]
@@ -221,6 +235,8 @@ governance profile IDs for all of the governance profiles for an organization us
 `governance profile list` command. 
 
 *Options:* 
+
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
 [cols="1,1"]
 |===
