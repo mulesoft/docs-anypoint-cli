@@ -22,9 +22,9 @@
 [[governance-api-validate]]
 == governance api validate
 
-`> governance api validate [options] <api-definition-zip-file>`
+`> governance api validate [options] <api-definition>`
 
-This command validates the API definition specified in `api-definition-zip-file` against specified rulesets. If the API project specified includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. If the ZIP file does not include ruleset dependency information, you must also use the `--ruleset` option and specify the ruleset YAML files against which you want to validate, separated by commas. 
+This command validates the API definition passed in `api-definition` against specified rulesets. `api-definition` can be a ZIP file or a project folder. If the API project specified includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. If the ZIP file does not include ruleset dependency information, you must also use the `--ruleset` option and specify the ruleset YAML files against which you want to validate, separated by commas. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -32,7 +32,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |===
 |Option |Description
 
-|--ruleset <ruleset-yaml-file>
+|--ruleset <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
 |The `ruleset` option is followed by ruleset YAML files separated by commas. Specify this option only if the API ZIP file does not contain the ruleset dependencies.
 |===
 
@@ -41,7 +41,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 ----
 anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml.zip
 
-anypoint-cli governance api validate /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli governance api validate --ruleset /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
