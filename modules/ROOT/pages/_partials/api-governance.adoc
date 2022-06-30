@@ -149,7 +149,7 @@ The `governance profile delete` command accepts only the default options: `--hel
 *Example command:*
 
 ----
-anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362`
+anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362
 ----
 
 *Example output:*
@@ -174,7 +174,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 *Example command:*
 
 ----
-anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362`
+anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362
 ----
 
 *Example output:*
@@ -220,7 +220,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 This command updates the governance profile specified in `profile-id`. To get this ID, run the `governance profile info` or `governance profile list` command.
 
 You can update the governance profile's
-governance rulesets, name, tags, and description. 
+governance name, rulesets, tags, and description. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -252,7 +252,7 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 *Example output:*
 
 ----
- Profile updated 51f9f94c-fb0c-43d4-9895-22c9e64f1537`
+ Profile updated 51f9f94c-fb0c-43d4-9895-22c9e64f1537
 ----
 
 // end::governance-profile-update[]
