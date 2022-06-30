@@ -262,9 +262,9 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 [[governance-ruleset-validate]]
 == governance ruleset validate
 
-`> governance ruleset validate [options] <governance-ruleset>`
+`> governance ruleset validate [options] <ruleset-zip-file> | <ruleset-folder> | <exchange-json-file> | <ruleset-yaml-file>`
 
-This command validates the `governance-ruleset` definition's format. Specify the file location and file name of the ruleset definition YAML file that you want to validate or a ZIP file of a project that includes ruleset files to validate.	
+This command validates the definition format of specified rulesets. You can specify the path to the ruleset definition YAML file (`ruleset-yaml-file`), ZIP file (`ruleset-zip-file`), or folder (`ruleset-folder`). If you specify a folder, you can optionally specify additional parameters for the `exchange.json` file (`exchange-json-file`) and a ruleset YAML file (`ruleset-yaml-file`) after the folder name to more specifically identify the rulesets you want to validate.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
@@ -273,7 +273,11 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 anypoint-cli governance ruleset validate ~/temp/myruleset.yaml
 
-anypoint-cli governance ruleset validate ~/temp/myproject.zip
+anypoint-cli governance ruleset validate ~/temp/myrulesets.zip
+
+anypoint-cli governance ruleset validate ~/temp/myfolder
+
+anypoint-cli governance ruleset validate ~/temp/myfolder exchange.json myruleset.yaml
 ----
 
 *Example output for a valid ruleset:*
