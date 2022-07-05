@@ -33,8 +33,10 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
-|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. If the API ZIP file contains a ruleset that is a duplicate of a ruleset included in the project dependencies, both will be validated.
+|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
 |===
+
+If the same ruleset is included in the project dependencies and in the `--rulesets` option, both will be validated.
 
 *Example commands:*
 
