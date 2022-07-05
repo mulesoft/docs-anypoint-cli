@@ -32,8 +32,8 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |===
 |Option |Description
 
-|--ruleset <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
-|The `ruleset` option is followed by ruleset YAML files separated by commas. Specify this option only if the API ZIP file does not contain the ruleset dependencies.
+|--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
+|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. If the API ZIP file contains a ruleset that is a duplicate of a ruleset included in the project dependencies, both will be validated.
 |===
 
 *Example commands:*
@@ -262,9 +262,13 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 [[governance-ruleset-validate]]
 == governance ruleset validate
 
-`> governance ruleset validate [options] <ruleset-zip-file> | <ruleset-folder> | <exchange-json-file> | <ruleset-yaml-file>`
+`> governance ruleset validate [options] <rulesets>`
 
-This command validates the definition format of specified rulesets. You can specify the path to the ruleset definition YAML file (`ruleset-yaml-file`), ZIP file (`ruleset-zip-file`), or folder (`ruleset-folder`). If you specify a folder, you can optionally specify additional parameters for the `exchange.json` file (`exchange-json-file`) and a ruleset YAML file (`ruleset-yaml-file`) after the folder name to more specifically identify the rulesets you want to validate.
+This command validates the ruleset definitions passed using the `rulesets` parameter. You can pass one of the following as the `rulesets` parameter:
+
+* A ruleset definition YAML file  
+* A ZIP file with one or more ruleset definitions
+* A folder with one or more ruleset definitions
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
