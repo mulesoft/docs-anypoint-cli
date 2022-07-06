@@ -24,7 +24,7 @@
 
 `> governance api validate [options] <api-definition>`
 
-This command validates the API definition passed in `api-definition` against specified rulesets. `api-definition` can be a ZIP file or a project folder. If the API project specified includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. If the ZIP file does not include ruleset dependency information, you must also use the `--ruleset` option and specify the ruleset YAML files against which you want to validate, separated by commas. 
+This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be a ZIP file or a project folder. If the API project specified includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. If the ZIP file does not include ruleset dependency information, you must also use the `--ruleset` option and specify the ruleset YAML files against which you want to validate, separated by commas. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -281,9 +281,8 @@ anypoint-cli governance ruleset validate ~/temp/myruleset.yaml
 
 anypoint-cli governance ruleset validate ~/temp/myrulesets.zip
 
-anypoint-cli governance ruleset validate ~/temp/myfolder
+anypoint-cli governance ruleset validate ~/temp/myrulesetfolder
 
-anypoint-cli governance ruleset validate ~/temp/myfolder exchange.json myruleset.yaml
 ----
 
 *Example output for a valid ruleset:*
