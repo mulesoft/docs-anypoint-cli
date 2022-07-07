@@ -269,8 +269,8 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 This command validates the ruleset definitions passed using the `rulesets` parameter. You can pass one of the following as the `rulesets` parameter:
 
 * A ruleset definition YAML file  
-* A ZIP file that contains an API project with an `exchange.json` file that specifies ruleset dependencies
-* A folder that contains an API project with an `exchange.json` file that specifies ruleset dependencies
+* A ZIP file that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
+* A folder that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
