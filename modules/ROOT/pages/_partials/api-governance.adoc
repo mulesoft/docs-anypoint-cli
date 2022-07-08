@@ -24,7 +24,7 @@
 
 `> governance api validate [options] <api-definition>`
 
-This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be an API project ZIP file or folder. If the API project includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
+This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be an API project ZIP file or folder. If the API project includes the `exchange.json` file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
 
 If the project dependencies do not include all of the rulesets against which you want to validate, use the `--rulesets` option and specify additional ruleset YAML files against which you want to validate, separated by commas. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
 
@@ -98,7 +98,9 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 `> governance profile create [options] <profile-name> <ruleset-asset-identifiers>`
 
-This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
+
+You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
 To get the ruleset asset identifiers:
 
