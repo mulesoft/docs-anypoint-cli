@@ -26,7 +26,7 @@
 
 This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be an API project ZIP file or folder. If the API project includes the `exchange.json` file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
 
-If the project dependencies do not include all of the rulesets against which you want to validate, use the `--rulesets` option and specify additional ruleset YAML files against which you want to validate, separated by commas. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
+If the project dependencies do not include all of the rulesets against which you want to validate, use the `--rulesets` option and specify additional ruleset YAML files separated by commas. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
