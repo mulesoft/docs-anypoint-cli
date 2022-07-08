@@ -24,7 +24,9 @@
 
 `> governance api validate [options] <api-definition>`
 
-This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be a ZIP file or a project folder. If the API project specified includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. If the ZIP file does not include ruleset dependency information, you must also use the `--ruleset` option and specify the ruleset YAML files against which you want to validate, separated by commas. 
+This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be an API project ZIP file or folder. If the API project includes the 'exchange.json' file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
+
+If the project dependencies do not include all of the rulesets against which you want to validate, use the `--rulesets` option and specify additional ruleset YAML files against which you want to validate, separated by commas. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -35,8 +37,6 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
 |The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
 |===
-
-If the same ruleset is included in the project dependencies and in the `--rulesets` option, both will be validated.
 
 *Example commands:*
 
@@ -196,7 +196,7 @@ Filter     	tag:best
 [[governance-profile-list]]
 == governance profile list
 
-`> governance profile list [options] `
+`> governance profile list [options]`
 
 This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
