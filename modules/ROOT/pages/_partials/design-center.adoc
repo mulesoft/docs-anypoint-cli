@@ -74,7 +74,10 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command downloads the Design Center project passed in `name` to your local directory specified in `targetDir`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+Use the `--branch` option to select the branch you want to download content from.
+
+This command also accepts the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
 
 == designcenter project publish
 
@@ -98,6 +101,7 @@ Options that are not specified are extracted from exchange.json
 | `--groupId` | The asset's groupId. | `designcenter project publish --groupId com.mulesoft.com`
 | `--assetId`  | The asset's assetId. | `designcenter project publish --assetId project`
 | `--version` | The asset's version. | `designcenter project publish --version 1.0`
+| `--branch` | The asset's branch. | `designcenter project publish --branch main`
 |===
 
 == designcenter project upload
@@ -108,10 +112,12 @@ Options that are not specified are extracted from exchange.json
 
 This Command uploads a Design Center project from your local directory passed in `projDir` and names it using the name passed in `name`.
 
-By default, this command ignores all hidden files and directories. To include hidden files and directories, use the `--include-dot-files` option. +
+By default, this command ignores all hidden files and directories. To include hidden files and directories, use the `--include-dot-files` option. 
 When the `--include-dot-files` option is used, the command uploads hidden files and folders from your specified directory.
 
-Besides the `--include-dot-files`, this command takes the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+Use the `--branch` option to select the branch you want to upload content to.
+
+This command also accepts the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
 
 == designcenter project list
 
