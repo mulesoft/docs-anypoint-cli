@@ -110,7 +110,7 @@ Options that are not specified are extracted from exchange.json
 > designcenter project upload [options] <name> <projDir>
 ----
 
-This Command uploads a Design Center project from your local directory passed in `projDir` and names it using the name passed in `name`.
+This Command uploads a Design Center project from your local directory passed in `projDir` into an already existing Design Center project identified with `name`.
 
 By default, this command ignores all hidden files and directories. To include hidden files and directories, use the `--include-dot-files` option. 
 When the `--include-dot-files` option is used, the command uploads hidden files and folders from your specified directory.
