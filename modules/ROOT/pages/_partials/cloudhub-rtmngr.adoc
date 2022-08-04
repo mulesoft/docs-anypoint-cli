@@ -1,0 +1,134 @@
+= CLI for CloudHub 2.0
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|<<runtime-mgr cloudhub2-application list>>| Lists all Cloudhub2 applications in an organization
+|<<runtime-mgr cloudhub2-application describe>>| Describes a Cloudhub2 application
+|<<runtime-mgr cloudhub2-application describe-json>>| Describes a Cloudhub2 application in raw JSON response
+|<<runtime-mgr cloudhub2-application stop>>| Stops running a Cloudhub2 application
+|<<runtime-mgr cloudhub2-application start>>| Starts a stopped Clodhub2 application
+|<<runtime-mgr cloudhub2-application delete>>| Deletes a Cloudhub2 application
+|<<runtime-mgr cloudhub2-application download-logs>>| Downloads logs of a Cloudhub2 application from a specification field to a specified directory 
+|<<runtime-mgr cloudhub2-application tail-logs>>| Tails logs of a Cloudhub2 application from a specification field
+|<<runtime-mgr cloudhub2-application deploy>>| Deploys an application with a specified target using an exchange application and running the specified runtime Version
+|<<runtime-mgr cloudhub2-application modify>>| Modifies a deployed application
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+== runtime-mgr cloudhub2-application list
+
+----
+> runtime-mgr cloudhub2-application list [options]
+----
+This command lists all applications in your organization. 
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== runtime-mgr cloudhub2-application describe 
+
+----
+> runtime-mgr cloudhub2-application describe [options] <appid>
+----
+This command displays information about the application specified in `<appID>`. To get this placeholder.
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== runtime-mgr cloudhub2-application describe-json 
+
+----
+> cloudhub load-balancer describe [options] <appid>
+----
+This command displays a raw JSON response from the application  specified in `<id>`.
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== runtime-mgr cloudhub2-application stop
+
+----
+> runtime-mgr cloudhub2-application stop [options] <appid>
+----
+This command stops running the application specified in `<appid>`.
+
+You can start typing your Cloudhub2 application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== runtime-mgr cloudhub2-application start
+
+----
+> runtime-mgr cloudhub2-application start [options] <appid>
+----
+This command starts running the application specified in `<appid>`.
+
+You can start typing your Cloudhub2 application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== runtime-mgr cloudhub2-application delete
+
+----
+> runtime-mgr cloudhub2-application delete [options] <appid>
+----
+This command deletes the running application specified in `<appid>`.
+
+[WARNING]
+This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== runtime-mgr cloudhub2-application download-logs
+
+----
+> runtime-mgr cloudhub2-application download-logs [options] <appid> <specid> <directory>
+----
+
+This command downloads logs for the application specified in `<appid>` from the specification specified in `<specid>` to the selected directory.
+
+You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+== runtime-mgr cloudhub2-application tail-log
+
+----
+> runtime-mgr cloudhub2-application tail-log [options] <appId> <specID> 
+----
+This command tails application logs for the application specificied in `<appId>` from the specification specified in `<specId>`.
+
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+
+== runtime-mgr cloudhub2-application deploy
+
+----
+> runtime-mgr cloudhub2-application deploy [options] <name> <deploymentTargetID> <runtimeVersion> <artifactId> 
+----
+This command deploys the Cloudhub2 application specified in `<name>` to the deployment target specified using the options below.
+
+[%header,cols="12a,68a,20a"]
+|===
+|Value |Description |Example
+|`name` |Name of the Cloudhub2 application to deploy. |`testcloudhubapp`
+|`deploymentTargetID` |test.  |1
+|`runtimeVersion` |test |1.0.1
+|`ArtifactId` |test |`{app}-example`
+|===
+
+
+== runtime-mgr cloudhub2-application modify
+
+----
+> runtime-mgr cloudhub2-application modify [options] <appId> <certificateName>
+----
+This command updates the settings of an existing application specified in `<appId>`.
+
+
+// end::commands[]

@@ -11,6 +11,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
+* <<cloudhub-rtmngr>>
 * <<datagraph-load-balancers>>
 * <<datagraph-source>>
 * <<design-center>>
