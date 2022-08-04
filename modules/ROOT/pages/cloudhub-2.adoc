@@ -2,4 +2,4 @@
 
 include::anypoint-cli::partial$cloudhub-2.adoc[tag=summary]
 
-include::anypoint-cli::partial$cloudhub2.adoc[tag=commands]
+include::anypoint-cli::partial$cloudhub-2.adoc[tag=commands]
