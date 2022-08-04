@@ -211,6 +211,13 @@ This command lists information for all governance profiles for an organization. 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
+*Example command:*
+
+[source,copy]
+----
+anypoint-cli governance profile list
+----
+
 *Example output:*
 
 ----
