@@ -98,6 +98,7 @@ All headers and query params defined in the command line, and all header and que
 
 === Example Command
 
+[source,copy]
 ----
 datagraph sources add 18dc11ee-4a09-4aae-9c6c-4371a87eafa8/product-api/1.0.0/  --url http://test.com
 ----
@@ -196,6 +197,8 @@ All headers and query params defined in the command line, and all header and que
 === Example Command
 
 In this example, the `environmentId` is changed after running the `promote` command.
+
+[source,copy]
 ----
 datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd e7e8da65-9cf1-569e-c9d2-brd2r0rc7rd6 --auth-none
 ----
@@ -303,6 +306,7 @@ All headers and query params defined in the command line, and all header and que
 
 The following command updates the URL of the source API and changes its authentication from `auth-none` to `auth-basic`, adding a client ID and secret.
 
+[source,copy]
 ----
 > datagraph sources update b6cb82a6-51dc-4968-861a-aa04447c3442 --url http://test2.com --version 1.0.0 --auth-basic --credentials client-test:client-secret
 ----
@@ -339,6 +343,7 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+[source,copy]
 ----
 datagraph scale 300
 ----
@@ -406,6 +411,7 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+[source,copy]
 ----
 datagraph sources delete d40df394-785d-4c91-8aeb-f07568dd57c
 ----
@@ -431,6 +437,7 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+[source,copy]
 ----
 datagraph sources get d1d27987-939a-4b41-b3ef-411568ee5bdd
 ----
@@ -459,6 +466,7 @@ datagraph sources get d1d27987-939a-4b41-b3ef-411568ee5bdd
 
 == datagraph sources list
 
+[source,copy]
 ----
 > datagraph sources list
 ----
@@ -505,6 +513,7 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
   
 == datagraph describe 
 
+[source,copy]
 ----
 > datagraph describe
 ----
@@ -551,6 +560,7 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 === Example Command
 
+[source,copy]
 ----
 datagraph validate asset 73b0d8f2-5a2f-4107-884d-fcd80f30bc51/sales-api/1.0.0
 ----
