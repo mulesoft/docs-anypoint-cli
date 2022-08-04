@@ -165,6 +165,25 @@ include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 |xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub vpc firewall-rules remove]| Remove a firewall rule for Mule applications in this Anypoint VPC
 |===
 
+
+[[cloudhub-2.adoc]]
+== Cloudhub 2.0
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:cloudhub-2.adoc#acruntime-mgr-cloudhub2-application-list[runtime-mgr cloudhub2-application list]| Lists all Cloudhub2 applications in an organization
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-describe[runtime-mgr cloudhub2-application describe]| Describes a Cloudhub2 application
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-describe-json[runtime-mgr cloudhub2-application describe-json]| Describes a Cloudhub2 application in raw JSON response
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-stop[runtime-mgr cloudhub2-application stop]| Stops running an application
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-start[runtime-mgr cloudhub2-application start]| Starts a stopped application
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-delete[runtime-mgr cloudhub2-application delete]| Deletes an application
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-download-logs[runtime-mgr cloudhub2-application download-logs]|Downloads logs of an application from a specification field to a specified directory
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-tail-logs[runtime-mgr cloudhub2-application tail-logs]|Tails logs of an application from a specification field
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-deploy[runtime-mgr cloudhub2-application deploy]|Deploys an application with a specified target using an exchange application and running the specified runtime Version
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-modify[runtime-mgr cloudhub2-application modify]|Modifies a deployed application
+|===
+
 [[datagraph-load-balancers]]
 == DataGraph Load Balancers
 
