@@ -11,7 +11,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
-* <<cloudhub-rtmngr>>
+* <<cloudhub-2>>
 * <<datagraph-load-balancers>>
 * <<datagraph-source>>
 * <<design-center>>
@@ -166,7 +166,7 @@ include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 |===
 
 
-[[cloudhub-2.adoc]]
+[[cloudhub-2]]
 == Cloudhub 2.0
 
 [%header,cols="35a,65a"]
