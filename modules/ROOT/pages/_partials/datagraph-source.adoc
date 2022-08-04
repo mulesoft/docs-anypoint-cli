@@ -231,7 +231,7 @@ datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd e7e8da65-9cf1-569
 
 [NOTE]
 --
-DataGraph supports only `stable` state API versions.
+DataGraph supports only `stable` state API versions. The `update` command updates only patch and minor versions of an API source.
 --
 
 This command updates the version of an API source `<sourceId>`. 
