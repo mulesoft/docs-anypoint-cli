@@ -44,7 +44,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 > cloudhub load-balancer describe [options] <appID>
 ----
-This command displays a raw JSON response from the application  specified in `<appid>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+This command displays a raw JSON response from the application specified in `<appid>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
@@ -130,7 +130,8 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |===
 |Value |Description |Example
 |`assetVersion` | Version of the exchange application to use. By default it uses the latest application version. | `2.0.4`
-|`groupID` | Group ID of the asset to deploy. By default it uses the selected organization ID. | `org.mule.testgroup`
+|`groupID` | Group ID of the asset to deploy. +
+By default, it uses the selected organization ID. | `org.mule.testgroup`
 |`replicas` | Number of replicas. Must be above `0`. The default value is `1`. | `2`
 |`replicaSize`| Size of replicas in Vcores. The default value is `0.1`. | `0.5`
 |`objectStoreV2`| Enables object store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
@@ -167,7 +168,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
 |`ArtifactId` |ID of the application retrieved from exchange. | `93485`
 |`assetVersion` | Version of the exchange application to use. By default it uses the latest application version. | `2.0.4`
-|`groupID` | Group ID of the asset to deploy. By default it uses the selected organization ID. | `org.mule.testgroup`
+|`groupID` | Group ID of the asset to deploy. By default, it uses the selected organization ID. | `org.mule.testgroup`
 |`replicas` | Number of replicas. Must be above `0`. The default value is `1`. | `2`
 |`replicaSize`| Size of replicas in Vcores. The default value is `0.1`. | `0.5`
 |`objectStoreV2`| Enables object store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
