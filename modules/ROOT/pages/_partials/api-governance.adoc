@@ -22,13 +22,31 @@
 [[governance-api-validate]]
 == governance api validate
 
-`> governance api validate <governance-ruleset> <api-definition-zip-file>`
+`> governance api validate [options] <api-definition>`
 
-This command validates an API definition against a specified ruleset.
+This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be an API project ZIP file or folder. If the API project includes the `exchange.json` file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
 
-*Example command:*
+If the project dependencies do not include all of the rulesets against which you want to validate, use the `--rulesets` option and specify additional ruleset YAML files separated by commas. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
 
-`anypoint-cli governance api validate ~/Downloads/ruleset.yaml ~/Downloads/order-api-1.0.0-raml.zip`
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
+|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
+|===
+
+*Example commands:*
+
+----
+anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml.zip
+
+anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml
+
+anypoint-cli governance api validate --ruleset /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+----
 
 *Example output:*
 
@@ -54,12 +72,17 @@ For a specification that is nonconformant to the ruleset:
 [[governance-document]]
 == governance document
 
-`> governance document [options] <ruleset> <file>`
+`> governance document [options] <ruleset> <doc-file>`
 
-This command creates the documentation for an API Governance ruleset definition .zip file that you want to upload and publish to Exchange. 
+This command creates the documentation for the API Governance ruleset definition ZIP file specified in `ruleset`. It puts the documentation in the `doc-file` ZIP file for you to upload and publish to Exchange. 
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 *Example command:*
-`anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip`
+
+----
+anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
+----
 
 *Example output:*
 
@@ -67,12 +90,6 @@ This command creates the documentation for an API Governance ruleset definition 
  validation name [ 'scalar-parameters' ]
  Saving to /Users/janedoe/temp/prof-1.doc.zip
 ----
-
-This command accepts the following options:
-
-* Default options: `--help`, `-f`/`--fields` and `-o`/`--output`
-
-* Other options: `--files.docs.zip`
 
 // end::governance-document[]
 
@@ -83,22 +100,16 @@ This command accepts the following options:
 
 `> governance profile create [options] <profile-name> <ruleset-asset-identifiers>`
 
-This command creates a governance profile. 
+This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-<profile-name>
-
-A string value for the new governance profile name.
-
-<ruleset-asset-identifiers>
-
-A list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
 To get the ruleset asset identifiers:
 
 * If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
 * If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
 [cols="1,1"]
 |===
@@ -113,7 +124,9 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 *Example command:*
 
-`anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --tags best --description "Profile for OAS Best Practices"`
+----
+anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --tags best --description "Profile for OAS Best Practices"
+----
 
 *Example output:*
 
@@ -133,12 +146,17 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 [[governance-profile-delete]]
 == governance profile delete
 
-`> governance profile delete <profile-id>`
+`> governance profile delete [options] <profile-id>`
 
-This command deletes a specific governance profile.
+This command deletes a specific governance profile specified by `profile-id`. To get this ID, run the `governance profile info` or `governance profile list` command.
+
+The `governance profile delete` command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 *Example command:*
-`anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362`
+
+----
+anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362
+----
 
 *Example output:*
 
@@ -153,22 +171,26 @@ This command deletes a specific governance profile.
 [[governance-profile-info]]
 == governance profile info
 
-`> governance profile info <profile-id>`
+`> governance profile info [options] <profile-id>`
 
 This command lists all information for a governance profile ID.
 
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
 *Example command:*
 
-`anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362`
+----
+anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362
+----
 
 *Example output:*
 
 ----
- Id         	19fb211b-8775-43cc-865a-46228921d6ed                                                                                                    
- Name       	Best Practices                                                                                                                          
- Description	Best Practices Profile                                                                                                                  
- Rulesets   	gav://3280b56c-e887-40f9-a9aa-db1118f719d5/best-practices/1.0.0 gav://68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
- Filter     	tag:best 
+Id         	19fb211b-8775-43cc-865a-46228921d6ed                                                                                                    
+Name       	Best Practices                                                                                                                          
+Description	Best Practices Profile                                                                                                                  
+Rulesets   	gav://3280b56c-e887-40f9-a9aa-db1118f719d5/best-practices/1.0.0 gav://68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
+Filter     	tag:best 
 ----
 
 // end::governance-profile-info[]
@@ -178,9 +200,11 @@ This command lists all information for a governance profile ID.
 [[governance-profile-list]]
 == governance profile list
 
-`> governance profile list`
+`> governance profile list [options]`
 
 This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 *Example output:*
 
@@ -199,14 +223,12 @@ This command lists information for all governance profiles for an organization. 
 
 `> governance profile update [options] <profile-id>`
 
-This command updates an existing governance profile. You can update the governance profile's
-governance rulesets, name, tags, and description.
+This command updates the governance profile specified in `profile-id`. To get this ID, run the `governance profile info` or `governance profile list` command.
 
-NOTE: You must know the governance profile ID to edit a governance profile. You can get the
-governance profile IDs for all of the governance profiles for an organization using the
-`governance profile list` command. 
+You can update the governance profile's
+governance name, rulesets, tags, and description. 
 
-*Options:* 
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
 [cols="1,1"]
 |===
@@ -228,12 +250,15 @@ These are the asset's identifiers.
 |===
 
 *Example command:*
- `anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --profile-name "New Name"``
+
+----
+anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --profile-name "New Name"
+----
 
 *Example output:*
 
 ----
- Profile updated 51f9f94c-fb0c-43d4-9895-22c9e64f1537`
+ Profile updated 51f9f94c-fb0c-43d4-9895-22c9e64f1537
 ----
 
 // end::governance-profile-update[]
@@ -243,17 +268,26 @@ These are the asset's identifiers.
 [[governance-ruleset-validate]]
 == governance ruleset validate
 
-`> governance ruleset validate <governance-ruleset>`
+`> governance ruleset validate [options] <governance-ruleset>`
 
-This command validates the governance ruleset definition's format.
+This command validates the ruleset definitions passed using the `governance-ruleset` parameter. You can pass one of the following as the `governance-ruleset` parameter:
 
-<governance-ruleset>    
- 
-Specify the file location and file name of the ruleset definition .zip file that you want to validate.	
+* A ruleset definition YAML file  
+* A ZIP file that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
+* A folder that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
 
-*Example command:*
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-`anypoint-cli governance ruleset validate ~/temp/prof-1-bad.yaml`
+*Example commands:*
+
+----
+anypoint-cli governance ruleset validate ~/temp/myruleset.yaml
+
+anypoint-cli governance ruleset validate ~/temp/myruleset.zip
+
+anypoint-cli governance ruleset validate ~/temp/myrulesetfolder
+
+----
 
 *Example output for a valid ruleset:*
 
@@ -268,7 +302,7 @@ Ruleset does not conform with Dialect
 ModelId: file:///Users/janedoe/temp/prof-1-bad.yaml
 Profile: Validation Profile 1.0
 Conforms: false
-Number of results: 1`
+Number of results: 1
 
 Level: Violation
 
