@@ -44,16 +44,16 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 > cloudhub load-balancer describe [options] <appID>
 ----
-This command displays a raw JSON response from the application specified in `<appid>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+This command displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 == runtime-mgr cloudhub2-application stop
 
 ----
-> runtime-mgr cloudhub2-application stop [options] <appid>
+> runtime-mgr cloudhub2-application stop [options] <appID>
 ----
-This command stops running the application specified in `<appid>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+This command stops running the application specified in `<appID>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
@@ -96,9 +96,9 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 == runtime-mgr cloudhub2-application tail-log
 
 ----
-> runtime-mgr cloudhub2-application tail-log [options] <appId> <specID> 
+> runtime-mgr cloudhub2-application tail-log [options] <appID> <specID> 
 ----
-This command tails application logs for the application specificied in `<appId>` from the specification specified in `<specId>`.
+This command tails application logs for the application specificied in `<appID>` from the specification specified in `<specID>`.
 
 To get the `<appID>`, run the `runtime-mgr cloudhub2-application list` command.
 
@@ -119,9 +119,10 @@ This command deploys the application specified in `<appID>` to the deployment ta
 |===
 |Value |Description | Example
 |`name` |Name of the application to deploy. | `testCloudhub2app`
-|`deploymentTargetID` |test.  | test
+|`deploymentTargetID` |ID of the deployment target. +
+You can get this ID directly from runtime manager.  | test
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
-|`ArtifactId` |ID of the application retrieved from exchange. | `93485`
+|`ArtifactId` |Artifact ID of the application retrieved from exchange. | `mule-test-plugin`
 |===
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
@@ -131,33 +132,42 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |Value |Description |Example
 |`assetVersion` | Version of the exchange application to use. By default it uses the latest application version. | `2.0.4`
 |`groupID` | Group ID of the asset to deploy. +
-By default, it uses the selected organization ID. | `org.mule.testgroup`
-|`replicas` | Number of replicas. Must be above `0`. The default value is `1`. | `2`
-|`replicaSize`| Size of replicas in Vcores. The default value is `0.1`. | `0.5`
+By default, it uses the selected organization ID. | `org.mule.test`
+|`replicas` | Number of replicas. Must be above `0`. +
+The default value is `1`. | `2`
+|`replicaSize`| Size of replicas in Vcores. +
+The default value is `0.1`. | `0.5`
 |`objectStoreV2`| Enables object store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
-|`updateStrategy`| Updates the strategy used. The default value is `rolling`. | `recreation`
-|`clustered`| Enables clustered, which requires at least two replicas. It is disabled by default. Supported values: `true`, `false`. |`false` 
-|`lastMileSecurity`| Enables Last Mile Security. It is disabled by default. Supported values: `true`, `false`. | `true`
-|`disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. It is enabled by default. Supported values: `true`, `false`. |`true`
+|`updateStrategy`| Updates the strategy used. +
+The default value is `rolling`. | `recreate`
+|`clustered`| Enables clustered, which requires at least two replicas. It is disabled by default. +
+Supported values: `true`, `false`. |`false` 
+|`lastMileSecurity`| Enables Last Mile Security. It is disabled by default. +
+Supported values: `true`, `false`. | `true`
+|`disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. It is enabled by default. +
+Supported values: `true`, `false`. |`true`
 |`property`| Set a property writing its name. Can be specified multiple times. | `testproperty`
-|`propertiesFile`| Replace all properties with values from a selected file. Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.pem`
-|`scopeLoggingConfigFile`| Upload a file to define scope logging. + 
+|`propertiesFile`| Replace all properties with values from a selected file. +
+ Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.pem`
+|`scopeLoggingConfigFile`| Upload a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.pem`
 |`scopeLoggingConfig`| Define scope logging. +
-Format: `scopeName: logLevel`. Separated by commas, no spaces. | `sdsadsa`
+Format: `scopeName: logLevel`. Separated by commas, no spaces. | ``testscope1:WARN,testscope2:DEBUG``
 |`forwardSslSession`| Enable SSL session forwarding. It is disabled by default. +
 Values: `true`, `false`.| `false`
-|`pathRewrite`| Supply the base path expected by the HTTP listener in your application. Must begin with `/` | `/test`
-|`publicEndpoints`| Supply endpoints to reach via the public internet. Separated by commas, no spaces. | `my-superapp-example: /status?limit=10my-superapp-example: /status?limit=10`
+|`pathRewrite`| Supply the base path expected by the HTTP listener in your application. +
+Must begin with `/` | `/test`
+|`publicEndpoints`| Supply endpoints to reach via the public internet. +
+Format: Separated by commas, no spaces. | `my-superapp-example: /status?limit=10`
 |===
 
 
 == runtime-mgr cloudhub2-application modify
 
 ----
-> runtime-mgr cloudhub2-application modify [options] <appId> <certificateName>
+> runtime-mgr cloudhub2-application modify [options] <appID> <certificateName>
 ----
-This command updates the settings of an existing application specified in `<appId>`. 
+This command updates the settings of an existing application specified in `<appID>`. 
 To get the `<appID>`, run the `runtime-mgr cloudhub2-application list` command.
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
@@ -166,26 +176,37 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |===
 |Value |Description |Example
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
-|`ArtifactId` |ID of the application retrieved from exchange. | `93485`
-|`assetVersion` | Version of the exchange application to use. By default it uses the latest application version. | `2.0.4`
-|`groupID` | Group ID of the asset to deploy. By default, it uses the selected organization ID. | `org.mule.testgroup`
-|`replicas` | Number of replicas. Must be above `0`. The default value is `1`. | `2`
-|`replicaSize`| Size of replicas in Vcores. The default value is `0.1`. | `0.5`
-|`objectStoreV2`| Enables object store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
-|`updateStrategy`| Updates the strategy used. The default value is `rolling`. | `recreation`
-|`clustered`| Enables clustered, which requires at least two replicas. It is disabled by default. Supported values: `true`, `false`. |`false` 
-|`lastMileSecurity`| Enables Last Mile Security. It is disabled by default. Supported values: `true`, `false`. | `true`
-|`disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. It is enabled by default. Supported values: `true`, `false`. |`true`
+|`ArtifactId` |ID of the application retrieved from exchange. | `mule-maven-plugin`
+|`assetVersion` | Version of the exchange application to use. +
+By default it uses the latest application version. | `2.0.4`
+|`groupID` | Group ID of the asset to deploy. +
+By default, it uses the selected organization ID. | `org.mule.testgroup`
+|`replicas` | Number of replicas. Must be above `0`. +
+The default value is `1`. | `2`
+|`replicaSize`| Size of replicas in Vcores. +
+The default value is `0.1`. | `0.5`
+|`objectStoreV2`| Enables object store v2. It is disabled by default. +
+Supported values: `true`, `false`. | `true`
+|`updateStrategy`| Updates the strategy used. +
+The default value is `rolling`. | `recreate`
+|`clustered`| Enables clustered, which requires at least two replicas. It is disabled by default. +
+Supported values: `true`, `false`. |`false` 
+|`lastMileSecurity`| Enables Last Mile Security. It is disabled by default. +
+Supported values: `true`, `false`. | `true`
+|`disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. It is enabled by default. +
+Supported values: `true`, `false`. |`true`
 |`property`| Set a property writing its name. Can be specified multiple times. | `testproperty`
-|`propertiesFile`| Replace all properties with values from a selected file. Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.pem`
-|`scopeLoggingConfigFile`| Upload a file to define scope logging. + 
+|`propertiesFile`| Replace all properties with values from a selected file. +
+Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.pem`
+|`scopeLoggingConfigFile`| Upload a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.pem`
 |`scopeLoggingConfig`| Define scope logging. +
-Format: `scopeName: logLevel`. Separated by commas, no spaces. | `sdsadsa`
+Format: `scopeName: logLevel`. Separated by commas, no spaces. | `testscope1:WARN,testscope2:DEBUG`
 |`forwardSslSession`| Enable SSL session forwarding. It is disabled by default. +
 Values: `true`, `false`.| `false`
 |`pathRewrite`| Supply the base path expected by the HTTP listener in your application. Must begin with `/` | `/test`
-|`publicEndpoints`| Supply endpoints to reach via the public internet. Separated by commas, no spaces. | `my-superapp-example: /status?limit=10my-superapp-example: /status?limit=10`
+|`publicEndpoints`| Supply endpoints to reach via the public internet. +
+ Format: Separated by commas, no spaces. | `my-superapp-example: /status?limit=10`
 |===
 
 
