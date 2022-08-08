@@ -172,9 +172,9 @@ include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:cloudhub-2.adoc#acruntime-mgr-cloudhub2-application-list[runtime-mgr cloudhub2-application list]| Lists all Cloudhub2 applications in an organization
-|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-describe[runtime-mgr cloudhub2-application describe]| Describes a Cloudhub2 application
-|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-describe-json[runtime-mgr cloudhub2-application describe-json]| Describes a Cloudhub2 application in raw JSON response
+|xref:cloudhub-2.adoc#acruntime-mgr-cloudhub2-application-list[runtime-mgr cloudhub2-application list]| Lists all applications in an organization
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-describe[runtime-mgr cloudhub2-application describe]| Describes an application
+|xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-describe-json[runtime-mgr cloudhub2-application describe-json]| Describes an application in raw JSON response
 |xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-stop[runtime-mgr cloudhub2-application stop]| Stops running an application
 |xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-start[runtime-mgr cloudhub2-application start]| Starts a stopped application
 |xref:cloudhub-2.adoc#runtime-mgr-cloudhub2-application-delete[runtime-mgr cloudhub2-application delete]| Deletes an application
