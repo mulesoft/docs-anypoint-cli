@@ -22,3 +22,4 @@
  ** xref:server-clusters.adoc[Local Cluster Servers]
  ** xref:server-groups.adoc[Local Server Groups]
  ** xref:rtf-instances.adoc[Runtime Fabric Instances]
+ ** xref:runtime-manager-2.adoc[Runtime Manager for Cloudhub 2.0]

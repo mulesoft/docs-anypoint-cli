@@ -1,117 +1,119 @@
-= CLI for CloudHub 2.0
+= CLI for Runtime Manager
+
+This set of commands can be used for applications in Cloudhub 2.0 and Runtime Fabric.
 
 // tag::summary[]
 
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr cloudhub2-application list>>| Lists all applications in an organization
-|<<runtime-mgr cloudhub2-application describe>>| Describes an application
-|<<runtime-mgr cloudhub2-application describe-json>>| Describes an application in raw JSON response
-|<<runtime-mgr cloudhub2-application stop>>| Stops running an application
-|<<runtime-mgr cloudhub2-application start>>| Starts a stopped application
-|<<runtime-mgr cloudhub2-application delete>>| Deletes an application
-|<<runtime-mgr cloudhub2-application download-logs>>| Downloads logs of an application from a specification to a specified directory 
-|<<runtime-mgr cloudhub2-application tail-logs>>| Tails logs of an application from a specification field
-|<<runtime-mgr cloudhub2-application deploy>>| Deploys an application with a specified target using an exchange application and running the specified runtime Version
-|<<runtime-mgr cloudhub2-application modify>>| Modifies a deployed application
+|<<runtime-mgr application list>>| Lists all applications in an organization
+|<<runtime-mgr application describe>>| Describes an application
+|<<runtime-mgr application describe-json>>| Describes an application in raw JSON response
+|<<runtime-mgr application stop>>| Stops running an application
+|<<runtime-mgr application start>>| Starts a stopped application
+|<<runtime-mgr application delete>>| Deletes an application
+|<<runtime-mgr application download-logs>>| Downloads logs of an application from a specification to a specified directory 
+|<<runtime-mgr application tail-logs>>| Tails logs of an application from a specification field
+|<<runtime-mgr application deploy>>| Deploys an application with a specified target using an exchange application and running the specified runtime Version
+|<<runtime-mgr application modify>>| Modifies a deployed application
 |===
 
 // end::summary[]
 
 // tag::commands[]
 
-== runtime-mgr cloudhub2-application list
+== runtime-mgr application list
 
 ----
-> runtime-mgr cloudhub2-application list [options]
+> runtime-mgr application list [options]
 ----
 This command lists all applications in your organization. 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr cloudhub2-application describe 
+== runtime-mgr application describe 
 
 ----
-> runtime-mgr cloudhub2-application describe [options] <appID>
+> runtime-mgr application describe [options] <appID>
 ----
-This command displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+This command displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr cloudhub2-application describe-json 
+== runtime-mgr application describe-json 
 
 ----
-> cloudhub load-balancer describe [options] <appID>
+> runtime-mgr application describe-json [options] <appID>
 ----
-This command displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+This command displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr cloudhub2-application stop
+== runtime-mgr application stop
 
 ----
-> runtime-mgr cloudhub2-application stop [options] <appID>
+> runtime-mgr application stop [options] <appID>
 ----
-This command stops running the application specified in `<appID>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+This command stops running the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr cloudhub2-application start
+== runtime-mgr application start
 
 ----
-> runtime-mgr cloudhub2-application start [options] <appid>
+> runtime-mgr application start [options] <appid>
 ----
-This command starts running the application specified in `<appid>`. To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+This command starts running the application specified in `<appid>`. To get this ID, run the `runtime-mgr application list` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr cloudhub2-application delete
+== runtime-mgr application delete
 
 ----
-> runtime-mgr cloudhub2-application delete [options] <appID>
+> runtime-mgr application delete [options] <appID>
 ----
 This command deletes the running application specified in `<appID>`.
-To get this ID, run the `runtime-mgr cloudhub2-application list` command.
+To get this ID, run the `runtime-mgr application list` command.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr cloudhub2-application download-logs
+== runtime-mgr application download-logs
 
 ----
-> runtime-mgr cloudhub2-application download-logs [options] <appID> <specid> <directory>
+> runtime-mgr application download-logs [options] <appID> <specid> <directory>
 ----
 
 This command downloads logs for the application specified in `<appID>` from the specification specified in `<specID>` to the selected directory.
 
-To get the `<appID>`, run the `runtime-mgr cloudhub2-application list` command.
+To get the `<appID>`, run the `runtime-mgr application list` command.
 
-To get the `<specID>` run the `runtime-mgr cloudhub2-application describe` command.
+To get the `<specID>` run the `runtime-mgr application describe` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr cloudhub2-application tail-log
+== runtime-mgr application tail-log
 
 ----
-> runtime-mgr cloudhub2-application tail-log [options] <appID> <specID> 
+> runtime-mgr application tail-log [options] <appID> <specID> 
 ----
 This command tails application logs for the application specificied in `<appID>` from the specification specified in `<specID>`.
 
-To get the `<appID>`, run the `runtime-mgr cloudhub2-application list` command.
+To get the `<appID>`, run the `runtime-mgr application list` command.
 
-To get the `<specID>` run the `runtime-mgr cloudhub2-application describe` command.
+To get the `<specID>` run the `runtime-mgr application describe` command.
 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 
-== runtime-mgr cloudhub2-application deploy
+== runtime-mgr application deploy
 
 ----
-> runtime-mgr cloudhub2-application deploy [options] <appID> <deploymentTargetID> <runtimeVersion> <artifactID> 
+> runtime-mgr application deploy [options] <appID> <deploymentTargetID> <runtimeVersion> <artifactID> 
 ----
 This command deploys the application specified in `<appID>` to the deployment target specified using the options below:
 
@@ -120,7 +122,7 @@ This command deploys the application specified in `<appID>` to the deployment ta
 |Value |Description | Example
 |`name` |Name of the application to deploy. | `testCloudhub2app`
 |`deploymentTargetID` |ID of the deployment target. +
-You can get this ID directly from runtime manager.  | test
+You can get this ID directly from runtime manager.  | `app.runetime`
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
 |`ArtifactId` |Artifact ID of the application retrieved from exchange. | `mule-test-plugin`
 |===
@@ -148,27 +150,27 @@ Supported values: `true`, `false`. | `true`
 Supported values: `true`, `false`. |`true`
 |`property`| Set a property writing its name. Can be specified multiple times. | `testproperty`
 |`propertiesFile`| Replace all properties with values from a selected file. +
- Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.pem`
+ Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
 |`scopeLoggingConfigFile`| Upload a file to define scope logging. +
-Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.pem`
+Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.txt`
 |`scopeLoggingConfig`| Define scope logging. +
 Format: `scopeName: logLevel`. Separated by commas, no spaces. | ``testscope1:WARN,testscope2:DEBUG``
 |`forwardSslSession`| Enable SSL session forwarding. It is disabled by default. +
 Values: `true`, `false`.| `false`
 |`pathRewrite`| Supply the base path expected by the HTTP listener in your application. +
-Must begin with `/` | `/test`
+Must begin with `/` | `/http://localhost:3000`
 |`publicEndpoints`| Supply endpoints to reach via the public internet. +
-Format: Separated by commas, no spaces. | `my-superapp-example: /status?limit=10`
+Format: Separated by commas, no spaces. | `my-superapp-example:/status?limit=10`
 |===
 
 
-== runtime-mgr cloudhub2-application modify
+== runtime-mgr application modify
 
 ----
-> runtime-mgr cloudhub2-application modify [options] <appID> <certificateName>
+> runtime-mgr application modify [options] <appID> <certificateName>
 ----
 This command updates the settings of an existing application specified in `<appID>`. 
-To get the `<appID>`, run the `runtime-mgr cloudhub2-application list` command.
+To get the `<appID>`, run the `runtime-mgr application list` command.
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
 
@@ -197,14 +199,14 @@ Supported values: `true`, `false`. | `true`
 Supported values: `true`, `false`. |`true`
 |`property`| Set a property writing its name. Can be specified multiple times. | `testproperty`
 |`propertiesFile`| Replace all properties with values from a selected file. +
-Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.pem`
+Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
 |`scopeLoggingConfigFile`| Upload a file to define scope logging. +
-Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.pem`
+Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.txt`
 |`scopeLoggingConfig`| Define scope logging. +
 Format: `scopeName: logLevel`. Separated by commas, no spaces. | `testscope1:WARN,testscope2:DEBUG`
 |`forwardSslSession`| Enable SSL session forwarding. It is disabled by default. +
 Values: `true`, `false`.| `false`
-|`pathRewrite`| Supply the base path expected by the HTTP listener in your application. Must begin with `/` | `/test`
+|`pathRewrite`| Supply the base path expected by the HTTP listener in your application. Must begin with `/` | `/http://localhost:3000`
 |`publicEndpoints`| Supply endpoints to reach via the public internet. +
  Format: Separated by commas, no spaces. | `my-superapp-example: /status?limit=10`
 |===

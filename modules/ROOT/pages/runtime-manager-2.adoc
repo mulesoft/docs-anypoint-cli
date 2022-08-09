@@ -1,0 +1,5 @@
+= CLI for Cloudhub 2.0
+
+include::anypoint-cli::partial$runtime-manager-2.adoc[tag=summary]
+
+include::anypoint-cli::partial$runtime-manager-2.adoc[tag=commands]
