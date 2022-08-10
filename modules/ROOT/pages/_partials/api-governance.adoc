@@ -46,7 +46,7 @@ anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml.zip
 
 anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml
 
-anypoint-cli governance api validate --ruleset /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli governance api validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
