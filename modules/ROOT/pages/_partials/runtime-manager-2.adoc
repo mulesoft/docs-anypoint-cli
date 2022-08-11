@@ -156,7 +156,7 @@ Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` e
 |`scopeLoggingConfig`| Define scope logging. +
 Format: `scopeName: logLevel`. Separated by commas, no spaces. | ``testscope1:WARN,testscope2:DEBUG``
 |`forwardSslSession`| Enable SSL session forwarding. It is disabled by default. +
-Values: `true`, `false`.| `false`
+Values: `true`, `false`| `false`
 |`pathRewrite`| Supply the base path expected by the HTTP listener in your application. +
 Must begin with `/` | `/http://localhost:3000`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
