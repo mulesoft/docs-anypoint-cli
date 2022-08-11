@@ -124,7 +124,7 @@ This command deploys the application specified in `<appID>` to the deployment ta
 |`deploymentTargetID` |ID of the deployment target. +
 You can get this ID directly from Runtime Manager.  | `app.runetime`
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
-|`ArtifactId` |Artifact ID of the application retrieved from exchange. | `mule-test-plugin`
+|`ArtifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
 |===
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
