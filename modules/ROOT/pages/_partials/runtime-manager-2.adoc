@@ -127,7 +127,7 @@ You can get this ID directly from Runtime Manager.  | `app.runetime`
 |`ArtifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
 |===
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes these options:
 
 [%header,cols="12a,53a,35a"]
 |===
