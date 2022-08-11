@@ -331,14 +331,15 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:runtime-manager-2.adoc#acruntime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
+|xref:runtime-manager-2.adoc#runtime-mgr-application-delete[runtime-mgr application delete]| Deletes an application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy]|Deploys an application with a specified target using an exchange application and running the specified runtime Version
 |xref:runtime-manager-2.adoc#runtime-mgr-application-describe[runtime-mgr application describe]| Describes an application
 |xref:runtime-manager-2.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json]| Describes an  application in raw JSON response
-|xref:runtime-manager-2.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
-|xref:runtime-manager-2.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
-|xref:runtime-manager-2.adoc#runtime-mgr-application-delete[runtime-mgr application delete]| Deletes an application
 |xref:runtime-manager-2.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs]|Downloads logs of an application from a specification field to a specified directory
-|xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails logs of an application from a specification field
-|xref:runtime-manager-2.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy]|Deploys an application with a specified target using an exchange application and running the specified runtime Version
+|xref:runtime-manager-2.adoc#acruntime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
 |xref:runtime-manager-2.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs
+|xref:runtime-manager-2.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-stop[runtime-mgr application tail-logs]|Tails logs of an application from a specification field
 |===
