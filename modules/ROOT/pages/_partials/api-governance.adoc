@@ -5,6 +5,7 @@
 
 |===
 |Command |Description
+| xref:api-governance.adoc#governance-api-evaluate[governance api evaluate] | Evaluates an API project to determine which rulesets would be applied to this API for given filters
 | xref:api-governance.adoc#governance-api-validate[governance api validate] | Validates an API definition against a specified governance ruleset
 | xref:api-governance.adoc#governance-document[governance document] | Creates the documentation file for a governance ruleset definition
 | xref:api-governance.adoc#governance-profile-create[governance profile create] | Creates a governance profile
@@ -16,6 +17,42 @@
 |===
 
 // end::summary[]
+
+// tag::governance-api-evaluate[]
+
+[[governance-api-evaluate]]
+== governance api evaluate
+
+`> governance api evaluate [options] <api-project-zip>`
+
+This command evaluates the API project and uses the filters such as API type, tags, and categories in the `exchange.json` file to determine the rulesets that would be applied to this API for those filters. This gives developers a way to determine the rulesets that their APIs pass or fail for the same filters a governance administrator might set in an API Governance profile. 
+
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|xxx
+|===
+
+*Example commands:*
+
+[source,copy]
+----
+anypoint-cli governance api evaluate ~/Downloads/order-api-1.0.0-raml.zip
+----
+
+*Example output:*
+
+----
+This API's exchange.json has the following tags: <list of tags from exchange.json> and categories: (...) and if published, would be targeted by the following rulesets:
+- <ruleset_1>
+- <ruleset_2>
+- (...)
+----
+
+// end::governance-api-evaluate[]
 
 // tag::governance-api-validate[]
 
