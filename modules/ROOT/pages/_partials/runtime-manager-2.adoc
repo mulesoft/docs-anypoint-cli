@@ -15,7 +15,7 @@ Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
 |<<runtime-mgr application delete>>| Deletes an application
 |<<runtime-mgr application download-logs>>| Downloads logs of an application from a specification to a specified directory 
 |<<runtime-mgr application tail-logs>>| Tails logs of an application from a specification field
-|<<runtime-mgr application deploy>>| Deploys an application with a specified target using an exchange application and running the specified runtime Version
+|<<runtime-mgr application deploy>>| Deploys an application to a specified target using an Exchange application and runs the specified runtime version
 |<<runtime-mgr application modify>>| Modifies a deployed application
 |===
 
@@ -30,7 +30,7 @@ Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
 ----
 This command lists all applications in your organization. 
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`
 
 == runtime-mgr application describe 
 
@@ -115,19 +115,19 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 > runtime-mgr application deploy [options] <appID> <deploymentTargetID> <runtimeVersion> <artifactID> 
 ----
-This command deploys the application specified in `<appID>` to the deployment target specified using the options below:
+This command deploys the application specified in `<appID>` to the deployment target specified using the following options:
 
 [%header,cols="12a,53a,35a"]
 |===
 |Value |Description | Example
 |`name` |Name of the application to deploy. | `testCloudhub2app`
 |`deploymentTargetID` |ID of the deployment target. +
-You can get this ID directly from runtime manager.  | `app.runetime`
+You can get this ID directly from Runtime Manager.  | `app.runetime`
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
-|`ArtifactId` |Artifact ID of the application retrieved from exchange. | `mule-test-plugin`
+|`ArtifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
 |===
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes these options:
 
 [%header,cols="12a,53a,35a"]
 |===
@@ -139,7 +139,7 @@ By default, it uses the selected organization ID. | `org.mule.test`
 The default value is `1`. | `2`
 |`replicaSize`| Size of replicas in Vcores. +
 The default value is `0.1`. | `0.5`
-|`objectStoreV2`| Enables object store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
+|`objectStoreV2`| Enables Object Store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
 |`updateStrategy`| Updates the strategy used. +
 The default value is `rolling`. | `recreate`
 |`clustered`| Enables clustered, which requires at least two replicas. It is disabled by default. +
@@ -150,16 +150,16 @@ Supported values: `true`, `false`. | `true`
 Supported values: `true`, `false`. |`true`
 |`property`| Set a property writing its name. Can be specified multiple times. | `testproperty`
 |`propertiesFile`| Replace all properties with values from a selected file. +
- Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
+ Format: one or more lines in `name: value` style| `/Users/mule/Documents/properties.txt`
 |`scopeLoggingConfigFile`| Upload a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.txt`
 |`scopeLoggingConfig`| Define scope logging. +
 Format: `scopeName: logLevel`. Separated by commas, no spaces. | ``testscope1:WARN,testscope2:DEBUG``
 |`forwardSslSession`| Enable SSL session forwarding. It is disabled by default. +
-Values: `true`, `false`.| `false`
+Values: `true`, `false`| `false`
 |`pathRewrite`| Supply the base path expected by the HTTP listener in your application. +
 Must begin with `/` | `/http://localhost:3000`
-|`publicEndpoints`| Supply endpoints to reach via the public internet. +
+|`publicEndpoints`| Supplies endpoints to reach via the public internet. +
 Format: Separated by commas, no spaces. | `my-superapp-example:/status?limit=10`
 |===
 
@@ -172,14 +172,14 @@ Format: Separated by commas, no spaces. | `my-superapp-example:/status?limit=10`
 This command updates the settings of an existing application specified in `<appID>`. 
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes these options:
 
 [%header,cols="12a,53a,35a"]
 |===
 |Value |Description |Example
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
-|`ArtifactId` |ID of the application retrieved from exchange. | `mule-maven-plugin`
-|`assetVersion` | Version of the exchange application to use. +
+|`ArtifactId` |ID of the application retrieved from Exchange. | `mule-maven-plugin`
+|`assetVersion` | Version of the Exchange application to use. +
 By default it uses the latest application version. | `2.0.4`
 |`groupID` | Group ID of the asset to deploy. +
 By default, it uses the selected organization ID. | `org.mule.testgroup`
@@ -206,7 +206,7 @@ Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` e
 Format: `scopeName: logLevel`. Separated by commas, no spaces. | `testscope1:WARN,testscope2:DEBUG`
 |`forwardSslSession`| Enable SSL session forwarding. It is disabled by default. +
 Values: `true`, `false`.| `false`
-|`pathRewrite`| Supply the base path expected by the HTTP listener in your application. Must begin with `/` | `/http://localhost:3000`
+|`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. Must begin with `/` | `/http://localhost:3000`.
 |`publicEndpoints`| Supply endpoints to reach via the public internet. +
  Format: Separated by commas, no spaces. | `my-superapp-example: /status?limit=10`
 |===
