@@ -15,7 +15,7 @@ This set of commands can be used for applications in Cloudhub 2.0 and Runtime Fa
 |<<runtime-mgr application delete>>| Deletes an application
 |<<runtime-mgr application download-logs>>| Downloads logs of an application from a specification to a specified directory 
 |<<runtime-mgr application tail-logs>>| Tails logs of an application from a specification field
-|<<runtime-mgr application deploy>>| Deploys an application with a specified target using an exchange application and running the specified runtime Version
+|<<runtime-mgr application deploy>>| Deploys an application to a specified target using an Exchange application and runs the specified runtime version
 |<<runtime-mgr application modify>>| Modifies a deployed application
 |===
 
