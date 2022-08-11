@@ -150,7 +150,7 @@ Supported values: `true`, `false`. | `true`
 Supported values: `true`, `false`. |`true`
 |`property`| Set a property writing its name. Can be specified multiple times. | `testproperty`
 |`propertiesFile`| Replace all properties with values from a selected file. +
- Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
+ Format: one or more lines in `name: value` style| `/Users/mule/Documents/properties.txt`
 |`scopeLoggingConfigFile`| Upload a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.txt`
 |`scopeLoggingConfig`| Define scope logging. +
