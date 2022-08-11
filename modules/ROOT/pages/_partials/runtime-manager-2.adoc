@@ -178,7 +178,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |===
 |Value |Description |Example
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
-|`ArtifactId` |ID of the application retrieved from exchange. | `mule-maven-plugin`
+|`ArtifactId` |ID of the application retrieved from Exchange. | `mule-maven-plugin`
 |`assetVersion` | Version of the exchange application to use. +
 By default it uses the latest application version. | `2.0.4`
 |`groupID` | Group ID of the asset to deploy. +
