@@ -115,7 +115,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 > runtime-mgr application deploy [options] <appID> <deploymentTargetID> <runtimeVersion> <artifactID> 
 ----
-This command deploys the application specified in `<appID>` to the deployment target specified using the options below:
+This command deploys the application specified in `<appID>` to the deployment target specified using the following options:
 
 [%header,cols="12a,53a,35a"]
 |===
