@@ -72,7 +72,7 @@ Values: `true`, `false`| `false`
 Default: selected organization ID | `org.mule.test`
 |`lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` +
-Supported values: `true`, `false`. | `true`
+Supported values: `true`, `false` | `true`
 |`objectStoreV2`| Enables Object Store v2. +
 Default: `disabled`. +
  Supported values: `true`, `false` | `true`
@@ -81,7 +81,7 @@ Format: must begin with `/` | `/http://localhost:3000`
 |`property`| Sets a property. +
 Format: `name:value` | `testproperty:true`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
-Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
+Format: one or more lines in `name: value` style| `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
 Format: Separated by commas, no spaces. | `my-superapp-example:/status?limit=10`
 |`replicas` | Number of replicas. Must be above `0`. +
@@ -166,7 +166,7 @@ Default: `enabled` +
 Supported values: `true`, `false` |`true`
 |`forwardSslSession`| Enables SSL session forwarding. +
 Default: `disabled` +
-Values: `true`, `false`.| `false`
+Values: `true`, `false`| `false`
 |`groupID` | Group ID of the asset to deploy. +
 Default: selected organization ID.| `org.mule.testgroup`
 |`lastMileSecurity`| Enables Last Mile Security. +
