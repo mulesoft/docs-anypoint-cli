@@ -1,6 +1,6 @@
 = CLI for Runtime Manager
 
-This set of commands can be used for applications in Cloudhub 2.0 and Runtime Fabric.
+Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
 
 // tag::summary[]
 
@@ -95,10 +95,10 @@ To get the `<specID>` run the `runtime-mgr application describe` command.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
-== runtime-mgr application tail-log
+== runtime-mgr application tail-logs
 
 ----
-> runtime-mgr application tail-log [options] <appID> <specID> 
+> runtime-mgr application tail-logs [options] <appID> <specID> 
 ----
 This command tails application logs for the application specificied in `<appID>` from the specification specified in `<specID>`.
 
