@@ -341,5 +341,5 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:runtime-manager-2.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
 |xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs
 |xref:runtime-manager-2.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
-|xref:runtime-manager-2.adoc#runtime-mgr-application-stop[runtime-mgr application tail-logs]|Tails logs of an application from a specification field
+|xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails logs of an application from a specification field
 |===
