@@ -33,7 +33,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |===
 |Option |Description
 
-|xxx
+|xxx | xxx
 |===
 
 *Example commands:*
