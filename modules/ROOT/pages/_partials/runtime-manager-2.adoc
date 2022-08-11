@@ -172,7 +172,7 @@ Format: Separated by commas, no spaces. | `my-superapp-example:/status?limit=10`
 This command updates the settings of an existing application specified in `<appID>`. 
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes these options:
 
 [%header,cols="12a,53a,35a"]
 |===
