@@ -122,7 +122,7 @@ This command deploys the application specified in `<appID>` to the deployment ta
 |Value |Description | Example
 |`name` |Name of the application to deploy. | `testCloudhub2app`
 |`deploymentTargetID` |ID of the deployment target. +
-You can get this ID directly from runtime manager.  | `app.runetime`
+You can get this ID directly from Runtime Manager.  | `app.runetime`
 |`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
 |`ArtifactId` |Artifact ID of the application retrieved from exchange. | `mule-test-plugin`
 |===
