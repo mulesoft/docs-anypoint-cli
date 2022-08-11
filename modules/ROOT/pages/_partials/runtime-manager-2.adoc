@@ -139,7 +139,7 @@ By default, it uses the selected organization ID. | `org.mule.test`
 The default value is `1`. | `2`
 |`replicaSize`| Size of replicas in Vcores. +
 The default value is `0.1`. | `0.5`
-|`objectStoreV2`| Enables object store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
+|`objectStoreV2`| Enables Object Store v2. It is disabled by default. Supported values: `true`, `false`. | `true`
 |`updateStrategy`| Updates the strategy used. +
 The default value is `rolling`. | `recreate`
 |`clustered`| Enables clustered, which requires at least two replicas. It is disabled by default. +
