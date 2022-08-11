@@ -157,7 +157,7 @@ Default: selected organization ID. | `org.mule.testgroup`
 Default: `1`. | `2`
 |`replicaSize`| Size of replicas in Vcores. +
 Default: `0.1`. | `0.5`
-|`objectStoreV2`| Enables object store v2. +
+|`objectStoreV2`| Enables Object Store v2. +
 Default: disabled. +
 Supported values: `true`, `false`. | `true`
 |`updateStrategy`| Updates the strategy used. +
