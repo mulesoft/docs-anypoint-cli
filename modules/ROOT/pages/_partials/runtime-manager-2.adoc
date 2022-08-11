@@ -162,7 +162,7 @@ Default: disabled. +
 Supported values: `true`, `false`. | `true`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling`. | `recreate`
-|`clustered`| Enables clustered nodes, which requires at least two replicas. +
+|`clustered`| Enables clustered nodes, which require at least two replicas. +
 Default: `disabled`. +
 Supported values: `true`, `false`. |`false` 
 |`lastMileSecurity`| Enables Last Mile Security. +
