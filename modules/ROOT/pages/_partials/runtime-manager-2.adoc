@@ -30,7 +30,7 @@ This set of commands can be used for applications in Cloudhub 2.0 and Runtime Fa
 ----
 This command lists all applications in your organization. 
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`
 
 == runtime-mgr application describe 
 
