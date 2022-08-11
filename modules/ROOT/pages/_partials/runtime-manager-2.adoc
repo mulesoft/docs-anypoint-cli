@@ -139,7 +139,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 > runtime-mgr application modify [options] <appID> <certificateName>
 ----
-Updates the settings of an existing application specified in `<appID>`. 
+Updates the settings of an existing application specified by `<appID>`. 
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
 Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes these options:
