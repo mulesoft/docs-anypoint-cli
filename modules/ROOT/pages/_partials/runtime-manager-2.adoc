@@ -185,7 +185,7 @@ Values: `true`, `false`.| `false`
 |`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/`. | `/http://localhost:3000`.
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
- Format: Separated by commas, no spaces. | `my-superapp-example: /status?limit=10`
+ Format: separated by commas, no spaces| `my-superapp-example: /status?limit=10`
 |===
 
 == runtime-mgr application start
