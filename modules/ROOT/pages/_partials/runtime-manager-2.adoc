@@ -159,7 +159,7 @@ Format: `scopeName: logLevel`. Separated by commas, no spaces. | ``testscope1:WA
 Values: `true`, `false`.| `false`
 |`pathRewrite`| Supply the base path expected by the HTTP listener in your application. +
 Must begin with `/` | `/http://localhost:3000`
-|`publicEndpoints`| Supply endpoints to reach via the public internet. +
+|`publicEndpoints`| Supplies endpoints to reach via the public internet. +
 Format: Separated by commas, no spaces. | `my-superapp-example:/status?limit=10`
 |===
 
