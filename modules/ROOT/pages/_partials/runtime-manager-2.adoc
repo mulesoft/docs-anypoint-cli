@@ -16,7 +16,7 @@ Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
 |<<runtime-mgr application modify>>| Modifies a deployed application
 |<<runtime-mgr application start>>| Starts a stopped application
 |<<runtime-mgr application stop>>| Stops running an application
-|<<runtime-mgr application tail-logs>>| Tails an application's logs from a specification field
+|<<runtime-mgr application tail-logs>>| Tails an application's logs from a specification 
 |===
 
 // end::summary[]
@@ -78,18 +78,18 @@ Supported values: `true`, `false`. | `true`
 Default: `enabled`. +
 Supported values: `true`, `false`. |`true`
 |`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
+Format: `name:value`. | `testproperty:true`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
- Format: one or more lines in `name: value` style| `/Users/mule/Documents/properties.txt`
+ Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]`. |`/Users/mule/Documents/cert.txt`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`. Separated by commas, no spaces. | ``testscope1:WARN,testscope2:DEBUG``
 |`forwardSslSession`| Enables SSL session forwarding. +
 Default: `disabled`. +
-Values: `true`, `false`| `false`
+Values: `true`, `false`.| `false`
 |`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
-Must begin with `/` | `/http://localhost:3000`
+Format: must begin with `/`. | `/http://localhost:3000`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
 Format: Separated by commas, no spaces. | `my-superapp-example:/status?limit=10`
 |===
@@ -161,7 +161,7 @@ Default: `0.1`. | `0.5`
 Default: disabled. +
 Supported values: `true`, `false`. | `true`
 |`updateStrategy`| Updates the strategy used. +
-Default:`rolling`. | `recreate`
+Default: `rolling`. | `recreate`
 |`clustered`| Enables clustered nodes, which requires at least two replicas. +
 Default: `disabled`. +
 Supported values: `true`, `false`. |`false` 
@@ -172,7 +172,7 @@ Supported values: `true`, `false`. | `true`
 Default: `enabled`. +
 Supported values: `true`, `false`. |`true`
 |`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
+Format: `name:value`. | `testproperty:true`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
@@ -182,7 +182,8 @@ Format: `scopeName: logLevel`. Separated by commas, no spaces. | `testscope1:WAR
 |`forwardSslSession`| Enables SSL session forwarding. +
 Default: `disabled`. +
 Values: `true`, `false`.| `false`
-|`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. Must begin with `/` | `/http://localhost:3000`.
+|`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
+Format: must begin with `/`. | `/http://localhost:3000`.
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
  Format: Separated by commas, no spaces. | `my-superapp-example: /status?limit=10`
 |===
