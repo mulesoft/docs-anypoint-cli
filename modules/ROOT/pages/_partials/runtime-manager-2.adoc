@@ -74,14 +74,14 @@ Default: selected organization ID | `org.mule.test`
 Default: `disabled` +
 Supported values: `true`, `false` | `true`
 |`objectStoreV2`| Enables Object Store v2. +
-Default: `disabled`. +
+Default: `disabled` +
  Supported values: `true`, `false` | `true`
 |`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `/http://localhost:3000`
 |`property`| Sets a property. +
 Format: `name:value` | `testproperty:true`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
-Format: one or more lines in `name: value` style| `/Users/mule/Documents/properties.txt`
+Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
 Format: separated by commas, no spaces | `my-superapp-example:/status?limit=10`
 |`replicas` | Number of replicas. Must be above `0`. +
@@ -180,7 +180,7 @@ Format: must begin with `/` | `/http://localhost:3000`.
 |`property`| Sets a property. +
 Format: `name:value` | `testproperty:true`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
-Format: one or more lines in `name: value` style. | `/Users/mule/Documents/properties.txt`
+Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
  Format: separated by commas, no spaces | `my-superapp-example: /status?limit=10`
 |`replicas` | Number of replicas. Must be above `0`. +
