@@ -37,7 +37,9 @@
 ----
 This command lists all alerts associated with your current environment.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`
 
 [[runtime-mgr-cloudhub-alert-history-describe]]
 == runtime-mgr:cloudhub-alert-history:describe
@@ -47,7 +49,9 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 ----
 This command describes the history of the alarm passed in `<name>`.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command accepts only the default option `--help` 
 
 [[runtime-mgr-cloudhub-application-list]]
 == runtime-mgr:cloudhub-application:list
@@ -58,7 +62,9 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 
 This command lists all applications available in your Anypoint Platform CLI. It returns your application name, its status, the number of vCores assigned and the last time it was updated.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`
 
 [[runtime-mgr-cloudhub-application-describe]]
 == runtime-mgr:cloudhub-application:describe
@@ -72,7 +78,9 @@ Use the option `-o json` to get the raw JSON response of the application you spe
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 The command returns data such as the application's domain, its status, the last time it was updated, the Mule version, the ZIP file name, the region, monitoring, and workers; as well as `TRUE` or `FALSE` information for persistent queues and static IPs enablement.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`
 
 // == runtime-mgr:cloudhub-application:describe-json
 
@@ -96,7 +104,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 This command stops the running application you specify in `<name>` +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`
 
 [[runtime-mgr-cloudhub-application-start]]
 == runtime-mgr:cloudhub-application:start
@@ -108,7 +116,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 This command starts the running application you specify in `<name>` +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help` 
 
 [[runtime-mgr-cloudhub-application-restart]]
 == runtime-mgr:cloudhub-application:restart
@@ -120,7 +128,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 This command restarts the running application you specify in `<name>` +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help` 
 
 [[runtime-mgr-cloudhub-application-delete]]
 == runtime-mgr:cloudhub-application:delete
@@ -134,7 +142,7 @@ This command deletes the running application you specify in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help` 
 
 [[deploy-to-cloudhub]]
 == runtime-mgr:cloudhub-application:deploy
@@ -174,8 +182,11 @@ Character `:` is not supported for the property's name.
 |--persistentQueuesEncrypted  | Enable or disable persistent queue encryption. Can take `true` or `false` values. (This value is `false` by default)
 |--staticIPsEnabled                                      | Enable or disable static IPs. Can take `true` or `false` values. (This value is `false` by default)
 |--objectStoreV1                   | Enable or disable Object Store V1. Can take `true` or `false` values
-|--autoRestart                            | Automatically restart app when not responding. Can take `true` or `false` values. (This value is `true` by default.)
-|--help                                                  | output usage information
+|--autoRestart                            | Automatically restart app when not responding. Can take `true` or `false` values. (This value is `true` by default.)|
+--output | Specify the response format. Supported values are `table` (default) and `json`
+
+|--help                                                  | 
+Output usage information
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
 
@@ -241,7 +252,7 @@ Keep in mind that contrarily to what you see in the UI, the logs you download fr
 This command tails application logs. +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help` 
 
 // == runtime-mgr cloudhub-application upgrade-runtime
 //
@@ -290,7 +301,7 @@ If the Anypoint Platform CLI is using the QA environment in the Services organiz
 [NOTE]
 Running this command requires your user to have read/write access to the `/tmp` directory of the OS where CLI is installed.
 
-In addition to the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also accepts:
+In addition to the default `--help`, and `-f`/`--fields`  options, this command also accepts:
 
 [%header,cols="30a,70a"]
 |===

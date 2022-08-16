@@ -41,7 +41,9 @@
 ----
 This command lists all load balancers in your Anypoint Platform. It displays load balancer's name, domain, its state, and the Anypoint VPC ID to which the load balancer is bound.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`
 
 [[cloudhub-load-balancer-describe]]
 == cloudhub load-balancer describe
@@ -57,7 +59,9 @@ You can start typing your load balancer's name and press`tab` for Anypoint Platf
 
 It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help` 
 
 // == cloudhub:load-balancer:describe-json
 
@@ -96,7 +100,7 @@ By default, your load balancer listens external requests on HTTPS and communicat
 If you configured your Mule application within the Anypoint VPC to listen on HTTPS, make sure you set `upstreamProtocol` to HTTPS when creating the mapping list using the <<cloudhub-load-balancer-mappings-add,load-balancer mappings add>> command.
 --
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30a,70a"]
 |===
@@ -121,7 +125,7 @@ For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.a
 > cloudhub:load-balancer:start [options] <name>
 ----
 This command starts the load balancer specified in `<name>`. +
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`. 
 
 [[cloudhub-load-balancer-stop]]
 == cloudhub:load-balancer:stop
@@ -130,7 +134,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 > cloudhub:load-balancer:stop [options] <name>
 ----
 This command stops the load balancer specified in `<name>`. +
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[cloudhub-load-balancer-delete]]
 == cloudhub:load-balancer:delete
@@ -144,7 +148,7 @@ This command deletes the load balancer specified in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[cloudhub-load-balancer-ssl-endpoint-add]]
 == cloudhub:load-balancer:ssl-endpoint:add
@@ -167,7 +171,7 @@ Your private key file needs to be passphraseless. | `/Users/mule/Documents/priva
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` and `-o` options, this command also accepts:
 
 [%header,cols="15a,85a"]
 |===
@@ -191,7 +195,7 @@ This command removes the ssl certificate specified in `<certificateName>` from t
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[cloudhub-load-balancer-ssl-endpoint-set-default]]
 == cloudhub:load-balancer:ssl-endpoint:set-default
@@ -202,7 +206,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 This command sets the certificate specified in `<certificateName>` as the default  certificate for the load balancer passed in `<name>`. +
 
 You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30a,70a"]
 |===
@@ -219,7 +223,9 @@ Besides the default `--help` and `-o`/`--output` options, this command also acce
 This command shows information about the configuration of the load balancer passed in `<name>` for the the certificate specified in `<certificateName>`. +
 You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
 
 [[cloudhub-load-balancer-allowlist-add]]
 == cloudhub:load-balancer:allowlist:add
@@ -232,8 +238,9 @@ This command adds a range of IP addresses specified in `<cidrBlock>` to the allo
 [NOTE]
 The allowlist works at the load balancer level, not at the CN certificate level. Make sure you only pass IP addresses formatted in https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation].
 
-You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
-This command accepts only the default options: `--help` and `-o`/`--output`
+You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. 
+
+This command accepts only the default option `--help`.
 
 [[cloudhub-load-balancer-allowlist-remove]]
 == cloudhub:load-balancer:allowlist:remove
@@ -246,7 +253,7 @@ This command removes an IP or range of IPs addresses specified in `<cidrBlock>` 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[cloudhub-load-balancer-mappings-describe]]
 == cloudhub:load-balancer:mappings:describe
@@ -257,7 +264,9 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 This command lists the mapping rules for the load balancer specified in `<name>`. +
 If no `certificateName` is passed, Anypoint Platform CLI returns the mappings for the default SSL endpoint.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
 
 [[cloudhub-load-balancer-mappings-add]]
 == cloudhub:load-balancer:mappings:add
@@ -300,7 +309,8 @@ Supported Values: `http`, `https`
 ----
 This command removes the proxy mapping rules from the load balancer specified in `<name>` at the priority index specified in `<index>` and the CN specified as the `certificateName` option.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
+
 If no `certificateName` is passed, Anypoint Platform CLI removes the mappings for the default SSL endpoint.
 
 [[cloudhub-load-balancer-dynamic-ips-enable]]
@@ -310,7 +320,7 @@ If no `certificateName` is passed, Anypoint Platform CLI removes the mappings fo
 > cloudhub:load-balancer:dynamic-ips:enable [options] <name>
 ----
 This command enables dynamic IPs for the load balancer specified in `<name>`.
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[cloudhub-load-balancer-dynamic-ips-disable]]
 == cloudhub:load-balancer:dynamic-ips:disable
@@ -319,7 +329,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 > cloudhub:load-balancer:dynamic-ips:disable [options] <name>
 ----
 This command disables dynamic IPs for the load balancer specified in `<name>`.
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[cloudhub-region-list]]
 == cloudhub:region:list
@@ -329,7 +339,9 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 ----
 This command lists all supported regions.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
 
 [[cloudhub-runtime-list]]
 == cloudhub:runtime:list
@@ -339,7 +351,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 ----
 This command lists all supported runtimes.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 
 // end::commands[]

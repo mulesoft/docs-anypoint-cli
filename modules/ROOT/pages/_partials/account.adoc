@@ -31,7 +31,7 @@ This command simply returns the information for your account. This includes your
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json` +
 
-This command also accepts  the default options: `--help` and `-o`
+This command also accepts  the default option `--help`
 
 [[account-business-group-list]]
 == account:business-group:list
@@ -44,7 +44,7 @@ This command displays all xref:access-management::business-groups.adoc[business 
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default options: `--help` and `-o`
+This command also accepts the default option `--help` 
 
 [[account-business-group-describe]]
 == account:business-group:describe
@@ -69,7 +69,7 @@ It returns data such as the owner, the type, subscription information, the entit
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default options: `--help` and `-o`
+This command also accepts the default option `--help`
 
 [[account-environment-list]]
 == account:environment:list
@@ -81,7 +81,7 @@ This command lists all your environments in Anypoint Platform. It returns your e
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts  the default options: `--help` and `-o`
+This command also accepts  the default option `--help`
 
 [[account-environment-create]]
 == account:environment:create
@@ -101,7 +101,7 @@ If no type is specified, the command creates a production environment.
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-This command also has the default options: `--help`, and `-o`
+This command also has the default option `--help`
 
 [[account-environment-delete]]
 == account:environment:delete
@@ -114,7 +114,7 @@ This command deletes the environment specified in `<name>` +
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help` and `-o`
+This command accepts only the default option `--help`
 
 [[account-environment-describe]]
 == account:environment:describe
@@ -128,6 +128,6 @@ If no `<name>` is provided, this command returns information about the current s
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default options: `--help` and `-o`
+This command also accepts the default option `--help`
 
 // end::commands[]

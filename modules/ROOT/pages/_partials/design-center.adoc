@@ -30,7 +30,8 @@ This Command creates a new Design Center project with the name specified in `<na
 [IMPORTANT]
 This command does not support Mule application types.
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -53,6 +54,8 @@ Supported fragments type are:
 * `library`
 * `type`
 * `user-documentation` | `designcenter:project:create --type raml-fragment --fragment-type user-documentation`
+|`--output` | Specify the response format. |`designcenter:project:create --output json`
+
 |===
 
 [[designcenter-project-delete]]
@@ -67,7 +70,7 @@ This Command deletes the Design Center project specified in `name`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[designcenter-project-download]]
 == designcenter:project:download
@@ -78,7 +81,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 
 This command downloads the Design Center project passed in `name` to your local directory specified in `targetDir`.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[designcenter-project-publish]]
 == designcenter:project:publish
@@ -88,7 +91,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 ----
 
 This Command publishes the Design Center project passed in `projectName` to Exchange. +
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [TIP]
 Options that are not specified are extracted from exchange.json
@@ -117,7 +120,7 @@ This Command uploads a Design Center project from your local directory passed in
 By default, this command ignores all hidden files and directories. To include hidden files and directories, use the `--include-dot-files` option. +
 When the `--include-dot-files` option is used, the command uploads hidden files and folders from your specified directory.
 
-Besides the `--include-dot-files`, this command has the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+Besides the `--include-dot-files`, this command has the default `--help`, and `-f`/`--fields` options.
 
 [[designcenter-project-list]]
 == designcenter:project:list
@@ -129,13 +132,15 @@ Besides the `--include-dot-files`, this command has the default `--help`, `-f`/`
 This Command lists all your Design Center projects. +
 You can start typing your project's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30a,40a,30a"]
 |===
 |Command | Description |  Example
 |`--pageIndex` | Number of page to retrieve | `designcenter:project:list --pageIndex 3`
 |`--pageSize` | Number of results to retrieve per page | `designcenter:project:list --pageSize 5`
+|`--output` | Specify the response format. | `designcenter:project:list --output json`
+
 |===
 
 // end::commands[]

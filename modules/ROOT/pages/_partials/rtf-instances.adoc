@@ -21,7 +21,11 @@
 
 This command lists available Runtime Fabric instances.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts  the default option `--help`.
+
 
 For information about managing your Runtime Fabric instances using the command line, see
 xref:runtime-fabric::install-rtfctl.adoc#supported-commands[Supported rtfctl Commands].

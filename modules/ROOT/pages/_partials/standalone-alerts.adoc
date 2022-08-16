@@ -26,7 +26,9 @@
 
 This command describes the alert passed in `alertId`.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
 
 [[runtime-mgr-standalone-alert-create]]
 == runtime-mgr:standalone-alert:create
@@ -39,7 +41,7 @@ This command creates a new alert for a standalone runtime with the ID passed in 
 The alert `name` is limited to 256 characters.
 
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30,70"]
 |===
@@ -66,7 +68,7 @@ Besides the default `--help` and `-o`/`--output` options, this command also acce
 
 This command modifies the alert passed in `alertId`.
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30,70"]
 |===
@@ -94,7 +96,9 @@ Besides the default `--help` and `-o`/`--output` options, this command also acce
 
 This command lists all alerts for standalone Mules in the current environment.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
 
 // end::commands[]
 

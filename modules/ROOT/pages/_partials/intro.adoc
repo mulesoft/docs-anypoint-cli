@@ -25,11 +25,5 @@ If you run a command and there is an error, the application exits and returns a 
 Anypoint Platform CLI commands have the following default options:
 
 * `--help` displays command usage information.
-* `-o` or `--output` outputs command results in one of the following formats: 
- ** `table`
- ** `text`
- ** `json`
-+
-The default is `text`.
 
 // end::syntax[]

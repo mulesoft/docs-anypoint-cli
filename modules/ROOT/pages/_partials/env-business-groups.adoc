@@ -23,7 +23,7 @@ This command is only available for interactive mode.
 ----
 This command makes active the environment specified in `<name>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default options: `--help`, and `-f`/`--fields`.
 
 == use business-group
 

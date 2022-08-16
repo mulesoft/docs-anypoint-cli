@@ -27,7 +27,9 @@
 
 This command describes the server passed in `serverId`.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command accepts only the default option `--help`.
 
 [[runtime-mgr-server-modify]]
 == runtime-mgr:server:modify
@@ -40,7 +42,7 @@ This command modifies the server passed in `serverId`.
 
 In order to update the id for the cluster, you need to pass the  `--name` option.
 
-Besides the `--name` option, this command also has the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+Besides the `--name` option, this command also has the default `--help`, and `-f`/`--fields` options.
 
 [[runtime-mgr-server-token]]
 == runtime-mgr:server:token
@@ -51,7 +53,7 @@ Besides the `--name` option, this command also has the default `--help`, `-f`/`-
 
 This command gets server registration token. This token needs to be used to register a new server.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[runtime-mgr-server-delete]]
 == runtime-mgr:server:delete
@@ -62,7 +64,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 
 This command deletes the server passed in `serverId`.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -76,5 +78,8 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This server lists all servers in your environment.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default options: `--help`.
+//end::commands[]
 

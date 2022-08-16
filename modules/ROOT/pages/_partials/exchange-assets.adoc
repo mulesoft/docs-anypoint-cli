@@ -271,7 +271,7 @@ This command modifies the Exchange asset identified with `<assetIdentifier>`. +
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -291,7 +291,7 @@ This command downloads the Exchange asset identified with `<assetIdentifier>` to
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-list]]
 == exchange:asset:list
@@ -305,7 +305,7 @@ This command lists all assets in Exchange.
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -314,6 +314,8 @@ Besides the default `--help` and `-o`/`--output` options, this command also acce
 |`--offset` | Offsets the number of APIs passed | `exchange:asset:list --offset 3`
 |`--sort` | Sorts the results in the field name passed | `exchange:asset:list --sort "Latest Version"`
 |`--organizationId` | Filters by organization id | `exchange:asset:list --organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
+| `--output` | Specifies the response format. | `exchange:asset:list --output json`
+
 |===
 
 [[exchange-asset-page-download]]
@@ -333,7 +335,7 @@ Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 The description page in downloaded in Markdown format. When `name` is not specified, all pages are downloaded.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-page-modify]]
 == exchange:asset:page:modify
@@ -349,7 +351,7 @@ This command only supports published pages.
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-Besides the default `--help` and `-o`/`--output` options, this command also accepts the `--name` option to set a new asset page name.
+Besides the default `--help` option, this command also accepts the `--name` option to set a new asset page name.
 
 [[exchange-asset-page-upload]]
 == exchange:asset:page:upload
@@ -366,7 +368,7 @@ This command publishes all active drafts as part of the operation.
 
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-page-update]]
 == exchange:asset:page:update
@@ -383,7 +385,7 @@ This command publishes all active drafts as part of the operation.
 
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-page-delete]]
 == exchange:asset:page:delete
@@ -402,7 +404,7 @@ This command only supports published pages.
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-page-list]]
 == exchange:asset:page:list
@@ -418,7 +420,9 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 [NOTE]
 This command only supports published pages.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
 
 [[exchange-asset-copy]]
 == exchange:asset:copy
@@ -431,7 +435,7 @@ This command copies the Exchange asset from `<source>` to `<target>`. +
 Arguments `<source>` and `<target>` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts the default options `--help`, `-f/--fields`, and `-o/--output`, and also:
+This command accepts the default options `--help`, `-f/--fields`, and also:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -453,7 +457,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-deprecate]]
 == exchange:asset:deprecate
@@ -467,7 +471,7 @@ This command deprecates the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-undeprecate]]
 == exchange:asset:undeprecate
@@ -481,7 +485,7 @@ This command undeprecates the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-describe]]
 == exchange:asset:describe
@@ -495,7 +499,9 @@ This command describes the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default options: `--help`.
 
 [[exchange-asset-resource-upload]]
 == exchange:asset:resource:upload
@@ -515,7 +521,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 The successful output command will be a markdown codesnippet.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-resource-list]]
 == exchange:asset:resource:list
@@ -533,7 +539,12 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 This command lists published resources by default. +
 You can use the `--draft` option to list draft resources from the asset portal.
 
-Besides the default `--help` and `-o`/`--output` options, this command also accepts the `--draft` option to list non-published resources in the asset portal.
+This command accepts the `--draft` option to list non-published resources in the asset portal.
+
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
+
 
 [[exchange-asset-resource-download]]
 == exchange:asset:resource:download
@@ -553,7 +564,7 @@ You can list all published resources using the <<exchange:asset:resource:list,as
 [NOTE]
 This command only supports published resources.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[exchange-asset-resource-delete]]
 == exchange:asset:resource:delete
@@ -573,6 +584,6 @@ You can list all published resources using the <<exchange:asset:resource:list,as
 [CAUTION]
 This command publishes all active drafts as part of the operation.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default options: `--help`.
 
 // end::commands[]
