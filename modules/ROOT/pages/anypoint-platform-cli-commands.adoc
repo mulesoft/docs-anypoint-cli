@@ -21,6 +21,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<server-groups>>
 * <<server-clusters>>
 * <<rtf-instances>>
+* <<runtime-manager-2>>
+
 
 
 [[account]]
@@ -321,4 +323,25 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |===
 |Command |Description
 |xref:rtf-instances.adoc#runtime-mgr-rtf-list[runtime-mgr rtf list]  | Lists available Runtime Fabric instances
+|===
+
+[[runtime-manager-2]]
+== Runtime Manager
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:runtime-manager-2.adoc#runtime-mgr-application-delete[runtime-mgr application delete]| Deletes an application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy]|Deploys an application to a specified target using an Exchange application and runs the specified runtime version
+|xref:runtime-manager-2.adoc#runtime-mgr-application-describe[runtime-mgr application describe]| Describes an application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json]| Describes an  application in raw JSON response
+|xref:runtime-manager-2.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs]|Downloads logs of an application from a specification to a specified directory
+|xref:runtime-manager-2.adoc#acruntime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
+|xref:runtime-manager-2.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs
+|xref:runtime-manager-2.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
+|xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails an application's logs from a specification
+
+
 |===

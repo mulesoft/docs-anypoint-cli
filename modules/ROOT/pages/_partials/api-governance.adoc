@@ -40,12 +40,13 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 *Example commands:*
 
+[source,copy]
 ----
 anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml.zip
 
 anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml
 
-anypoint-cli governance api validate --ruleset /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli governance api validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
@@ -80,6 +81,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 *Example command:*
 
+[source,copy]
 ----
 anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 ----
@@ -124,6 +126,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 *Example command:*
 
+[source,copy]
 ----
 anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --tags best --description "Profile for OAS Best Practices"
 ----
@@ -154,6 +157,7 @@ The `governance profile delete` command accepts only the default options: `--hel
 
 *Example command:*
 
+[source,copy]
 ----
 anypoint-cli governance profile delete 8ffd463f-86b2-4132-afc6-44d179209362
 ----
@@ -179,6 +183,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 *Example command:*
 
+[source,copy]
 ----
 anypoint-cli governance profile info 8ffd463f-86b2-4132-afc6-44d179209362
 ----
@@ -205,6 +210,13 @@ Filter     	tag:best
 This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+*Example command:*
+
+[source,copy]
+----
+anypoint-cli governance profile list
+----
 
 *Example output:*
 
@@ -251,6 +263,7 @@ These are the asset's identifiers.
 
 *Example command:*
 
+[source,copy]
 ----
 anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --profile-name "New Name"
 ----
@@ -280,6 +293,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 *Example commands:*
 
+[source,copy]
 ----
 anypoint-cli governance ruleset validate ~/temp/myruleset.yaml
 
