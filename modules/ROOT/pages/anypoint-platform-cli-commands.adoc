@@ -339,7 +339,6 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |xref:runtime-manager-2.adoc#acruntime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
 |xref:runtime-manager-2.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
 |xref:runtime-manager-2.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
-|xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs
 |xref:runtime-manager-2.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
 |xref:runtime-manager-2.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails an application's logs from a specification
 
