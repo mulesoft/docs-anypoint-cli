@@ -329,6 +329,7 @@ This command accepts only the default option `--help`.
 > cloudhub:load-balancer:dynamic-ips:disable [options] <name>
 ----
 This command disables dynamic IPs for the load balancer specified in `<name>`.
+
 This command accepts only the default option `--help`.
 
 [[cloudhub-region-list]]
