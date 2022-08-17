@@ -8,6 +8,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<env-business-groups>>
 * <<api-governance>>
 * <<api-mgr>>
+* <<cloudhub2-apps>>
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
@@ -21,7 +22,6 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<server-groups>>
 * <<server-clusters>>
 * <<rtf-instances>>
-* <<runtime-manager-2>>
 
 
 
