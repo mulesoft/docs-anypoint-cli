@@ -1,6 +1,6 @@
 = CLI for Cloudhub 2.0 
 
-Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
+Use these commands for for deploying and managing applications in applications in Cloudhub 2.0.
 
 include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
 
