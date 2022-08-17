@@ -6,6 +6,7 @@
 * xref:env-business-groups.adoc[Environments and Business Groups]
 * xref:api-governance.adoc[API Governance]
 * xref:api-mgr.adoc[API Manager]
+* xref:cloudhub2-apps.adoc[Cloudhub 2.0]
 * xref:cloudhub.adoc[CloudHub]
  ** xref:cloudhub-apps.adoc[CloudHub Applications]
  ** xref:cloudhub-dlb.adoc[CloudHub Dedicated Load Balancers]
@@ -22,4 +23,3 @@
  ** xref:server-clusters.adoc[Local Cluster Servers]
  ** xref:server-groups.adoc[Local Server Groups]
  ** xref:rtf-instances.adoc[Runtime Fabric Instances]
- ** xref:runtime-manager-2.adoc[Runtime Manager for Cloudhub 2.0]
