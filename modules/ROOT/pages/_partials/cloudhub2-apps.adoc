@@ -1,4 +1,4 @@
-= CLI for Runtime Manager
+= CLI for Cloudhub 2.0
 
 Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
 
