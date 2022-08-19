@@ -93,12 +93,12 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 
 <1> Total of functional and conformance validation issues found
 <2> Conformance issues section 
-<3> The constraint is the ruleset to which this set of issues applies 
-<4> Severity level is shown for each issue
-<5> The message describes the issue
-<6> The target is the node in AMF 
-<7> The range is the beginning line number and offset and the end line number and offset in the API definition where the issue occurs
-<8> The location is the file in which the issue occurs; it could be the main file or any of its dependencies
+<3> Ruleset to which this set of issues applies 
+<4> Severity level for the issue
+<5> Description of the issue
+<6> Node in AMF 
+<7> Beginning line number and offset and end line number and offset in the API definition where the issue occurs
+<8> The file in which the issue occurs, either the main file or one of its dependencies
 
 // end::governance-api-validate[]
 
