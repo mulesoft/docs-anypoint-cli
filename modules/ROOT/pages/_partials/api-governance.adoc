@@ -96,7 +96,7 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 <3> Ruleset and rule to which this set of issues applies 
 <4> Severity level for the issue
 <5> Description of the issue
-<6> AMF model node ID, for those interested in implementing rulesets; see xref:api-governance::create-custom-rulesets.adoc#[Creating Custom Governance Rulesets] 
+<6> AMF model node ID; for information on the AMF model, see xref:api-governance::create-custom-rulesets.adoc#[Creating Custom Governance Rulesets] 
 <7> Beginning line number and column and end line number and column in the API definition where the issue occurs, where column is the offset from the beginning of the line and numbering for the offset starts at 0
 <8> The file in which the issue occurs, either the main file or one of its dependencies
 
