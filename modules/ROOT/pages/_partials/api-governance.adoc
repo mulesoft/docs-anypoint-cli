@@ -93,11 +93,11 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 
 <1> Total of functional and conformance validation issues found
 <2> Conformance issues section 
-<3> Ruleset to which this set of issues applies 
+<3> Ruleset and rule to which this set of issues applies 
 <4> Severity level for the issue
 <5> Description of the issue
-<6> Node in AMF 
-<7> Beginning line number and offset and end line number and offset in the API definition where the issue occurs
+<6> AMF model node ID, for those interested in implementing rulesets; see xref:api-governance::create-custom-rulesets.adoc#[Creating Custom Governance Rulesets] 
+<7> Beginning line number and column and end line number and column in the API definition where the issue occurs, where column is the offset from the beginning of the line and numbering for the offset starts at 0
 <8> The file in which the issue occurs, either the main file or one of its dependencies
 
 // end::governance-api-validate[]
