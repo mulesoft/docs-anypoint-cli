@@ -60,11 +60,45 @@ For a specification that is conformant to the ruleset:
 For a specification that is nonconformant to the ruleset:
 
 ----
- Ruleset /path/Downloads/ruleset.yaml
- Spec /path/Downloads/order-api-1.0.0-raml.zip
- Spec does not conform with Ruleset
- [.. full report shown here..]
+Conforms: false 
+Number of results: 3 <1>
+
+Functional Validations 
+----------------------
+
+Constraint: http://a.ml/vocabularies/amf/core#declaration-not-found
+Severity: Violation
+Message: not supported scalar for documentation
+Target: null
+Range: [(6,3)-(6,3)]
+Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-raml
+
+Conformance Validations <2>
+-----------------------
+
+Constraint: file:///exchange_modules/68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0/ruleset.yaml#/encodes/validations/api-must-have-documentation <3>
+Severity: Warning <4>
+Message: Provide the documentation for the API. <5>
+Target: amf://id#2 <6>
+Range: [(2,0)-(6,4)] <7>
+Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-raml <8>
+
+Constraint: file:///exchange_modules/8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0/bestpractices.yaml#/encodes/validations/api-must-have-documentation
+Severity: Violation
+Message: Provide the documentation for the API
+Target: amf://id#2
+Range: [(2,0)-(6,4)]
+Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-raml
 ----
+
+<1> Total of functional and conformance validation issues found
+<2> Conformance issues section 
+<3> Ruleset and rule to which this set of issues applies 
+<4> Severity level for the issue
+<5> Description of the issue
+<6> AMF model node ID; for information on the AMF model, see xref:api-governance::create-custom-rulesets.adoc#[Creating Custom Governance Rulesets] 
+<7> Beginning line number and column and end line number and column in the API definition where the issue occurs, where column is the offset from the beginning of the line and numbering for the offset starts at 0
+<8> The file in which the issue occurs, either the main file or one of its dependencies
 
 // end::governance-api-validate[]
 
