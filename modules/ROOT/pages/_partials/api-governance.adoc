@@ -27,14 +27,7 @@
 
 This command evaluates the API project and uses the filters such as API type, tags, and categories in the `exchange.json` file to determine the rulesets that would be applied to this API for those filters. This gives developers a way to determine the rulesets that their APIs pass or fail for the same filters a governance administrator might set in an API Governance profile. 
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
-
-[cols="1,1"]
-|===
-|Option |Description
-
-|xxx | xxx
-|===
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 *Example commands:*
 
