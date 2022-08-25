@@ -151,8 +151,11 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |===
 |Option |Description
 
-|--tags <tags>
-|The `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
+|--criteria <tags>
+|The `criteria` option has the filters to apply to the profile to select the list APIs to which the profile rulesets will apply. The option is followed by a comma separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+
+|--tags <tags> *DEPRECATED!*
+|*DEPRECATED! The `--criteria` option replaces the `tags` option starting with Anypoint CLI version xxx.* The `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
 |--description <description>
 |The `description` option is followed by a string that is the new governance profile's description.
@@ -162,7 +165,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 [source,copy]
 ----
-anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --tags best --description "Profile for OAS Best Practices"
+anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria=tag:best --description "Profile for OAS Best Practices"
 ----
 
 *Example output:*
