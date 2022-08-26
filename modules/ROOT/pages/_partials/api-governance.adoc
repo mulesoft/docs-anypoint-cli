@@ -51,13 +51,13 @@ anypoint-cli governance api validate --rulesets /MyRulesets/ruleset1.yaml,/MyRul
 
 *Example output:*
 
-For a specification that is conformant to the ruleset:
+For a definition that is conformant to the ruleset:
 
 ----
  Spec conforms with Ruleset
 ----
 
-For a specification that is nonconformant to the ruleset:
+For a definition that is nonconformant to the ruleset:
 
 ----
 Conforms: false 
