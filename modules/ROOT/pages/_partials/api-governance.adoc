@@ -52,9 +52,8 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 To get the ruleset asset identifiers:
 
-If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
-
-If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
+* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
+* If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
 
 *Example commands:*
 
