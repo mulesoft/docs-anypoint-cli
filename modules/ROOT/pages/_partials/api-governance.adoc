@@ -24,9 +24,15 @@
 
 `> governance api validate [options] <api-definition>`
 
-This command validates the API definition passed in `api-definition` against specified rulesets. The API definition passed in `api-definition` can be an API project ZIP file or folder. If the API project includes the `exchange.json` file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
+This command validates the API definition passed in `api-definition` against specified rulesets. 
 
-If the project dependencies do not include all of the rulesets against which you want to validate, use the `--rulesets` option and specify additional ruleset YAML files separated by commas. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
+The API definition passed in `api-definition` can be an API project ZIP file or folder. The rulesets against which to validate are determined as follows:
+
+* If you want to validate directly against rulesets published in Exchange, use the `--remote-rulesets` option. 
+
+* If you want to validate against local rulesets, use the `--rulesets` option.
+
+* If the API project includes an `exchange.json` file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -35,8 +41,20 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
-|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
+|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
+|--remote-rulesets <ruleset-asset-identifiers>
+|The `remote-rulesets` option is followed by `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (GAV), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`. See <<ruleset-asset-identifiers>>.
+
 |===
+
+[[ruleset-asset-identifiers]]
+=== Ruleset Asset Identifiers
+
+To get the ruleset asset identifiers:
+
+If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
+
+If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
 
 *Example commands:*
 
@@ -47,6 +65,8 @@ anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml.zip
 anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml
 
 anypoint-cli governance api validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+
+anypoint-cli governance api validate --remote-rulesets xxx  ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
