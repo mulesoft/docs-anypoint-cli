@@ -45,17 +45,11 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
 |The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
 |--remote-rulesets <ruleset-asset-identifier>,<ruleset-asset-identifier>,...
-|The `remote-rulesets` option is followed by a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`. See <<ruleset-asset-identifiers>>.
+|The `remote-rulesets` option is followed by a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+
+See <<exchange-asset-identifiers>>.
 
 |===
-
-[[ruleset-asset-identifiers]]
-=== Ruleset Asset Identifiers
-
-To get the ruleset asset identifiers:
-
-* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
-* If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
 
 *Example commands:*
 
@@ -159,12 +153,9 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
-To get the ruleset asset identifiers:
-
-* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
-* If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
+See <<exchange-asset-identifiers>>.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -385,3 +376,15 @@ Level: Violation
 ----
 
 // end::governance-ruleset-validate[]
+
+// tag::exchange-asset-identifier[]
+
+[[exchange-asset-identifiers]]
+=== Get Exchange Asset Identifiers (GAVs)
+
+To get the GAVs for Exchange assets:
+
+* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
+* If you are using the web UI, select the asset in Exchange and then copy the group ID and asset ID from the URL. 
+
+// end::exchange-asset-identifier[]
