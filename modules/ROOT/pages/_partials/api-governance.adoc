@@ -26,13 +26,15 @@
 
 This command validates the API definition passed in `api-definition` against specified rulesets. 
 
-The API definition passed in `api-definition` can be an API project ZIP file or folder. The rulesets against which to validate are determined as follows:
+You can specify `api-definition` as an API project ZIP file or folder and specify rulesets against which to validate using one or more of the following:
 
-* If you want to validate directly against rulesets published in Exchange, use the `--remote-rulesets` option. 
+* To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that it is included in the folder or ZIP file that you specify in `api-definition`. If the `exchange.json` file is present, the command downloads all dependencies and validates against the rulesets in the project. 
 
-* If you want to validate against local rulesets, use the `--rulesets` option.
+* To validate directly against rulesets published in Exchange, use the `--remote-rulesets` option. 
 
-* If the API project includes an `exchange.json` file that defines dependencies, the command downloads all dependencies and validates against the rulesets in the project. 
+* To validate against local rulesets, use the `--rulesets` option.
+
+NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets may be validated multiple times.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -41,9 +43,9 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
-|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. If a duplicate ruleset is included in the project dependencies and the `--rulesets` option list, that ruleset will be validated twice.
-|--remote-rulesets <ruleset-asset-identifiers>
-|The `remote-rulesets` option is followed by `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (GAV), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`. See <<ruleset-asset-identifiers>>.
+|The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
+|--remote-rulesets <ruleset-asset-identifier>,<ruleset-asset-identifier>,...
+|The `remote-rulesets` option is followed by a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`. See <<ruleset-asset-identifiers>>.
 
 |===
 
