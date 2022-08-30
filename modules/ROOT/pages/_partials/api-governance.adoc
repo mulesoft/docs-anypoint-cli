@@ -345,9 +345,6 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 |--remove=<list_rules_to_disable> 
 |The `remove` option is followed by the rule IDs for the rules to comment out, and therefore effectively disable, in the ruleset YAML. 
-
-|--xxx <xxx>
-|The `xxx` option is xxx 
 |===
 
 *Example commands:*
