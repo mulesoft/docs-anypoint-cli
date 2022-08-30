@@ -12,6 +12,7 @@
 | xref:api-governance.adoc#governance-profile-info[governance profile info] | Lists information for a specific governance profile ID
 | xref:api-governance.adoc#governance-profile-list[governance profile list] | Lists all governance profiles for an organization
 | xref:api-governance.adoc#governance-profile-update[governance profile update] | Updates a governance profile
+| xref:api-governance.adoc#governance-ruleset-clone[governance ruleset clone] | Clones a governance ruleset and applies specified updates to rules
 | xref:api-governance.adoc#governance-ruleset-validate[governance ruleset validate] | Validates a governance ruleset definition's format
 |===
 
@@ -138,7 +139,7 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (GAV), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
 To get the ruleset asset identifiers:
 
@@ -281,18 +282,18 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--profile-name <profile-name>
-|The `profile-name` argument is followed by a string that is the new governance profile name.
+|The `profile-name` option is followed by a string that is the new governance profile name.
 
 |--ruleset-gavs <ruleset-gavs>
-|The `ruleset-gavs` argument is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+|The `ruleset-gavs` option is followed by comma-separated list with the group ID, asset ID, and version (GAV) for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
 These are the asset's identifiers.
 
 |--tags <tags>
-|The `tags` argument is followed by a comma separated list of tags formatted as follows: `tag1,tag2,tag3`.
+|The `tags` option is followed by a comma-separated list of tags formatted as follows: `tag1,tag2,tag3`.
 
 |--description <description>
-|The `description` argument is followed by a string that is the new governance profile description.
+|The `description` option is followed by a string that is the new governance profile description.
 |===
 
 *Example command:*
@@ -309,6 +310,55 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 ----
 
 // end::governance-profile-update[]
+
+// tag::governance-ruleset-clone[]
+
+[[governance-ruleset-clone]]
+== governance ruleset clone
+
+`> governance ruleset clone [options] <ruleset_gavs> <new_title> <new_description>` 
+
+This command clones a governance ruleset to create a new custom ruleset and applies specified updates to rules based on the options.
+
+The `ruleset-gavs` parameter is followed by comma-separated list with the group ID, asset ID, and version (GAV) for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+
+These are the asset's identifiers.
+
+The `new-title` parameter gives the title for the new ruleset.
+
+The `new description` parameter gives the description for the new ruleset.
+
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--error=<list_rules_to_move_to_error>
+|The `error` option is followed by the rule IDs for the rules to move to the error severity level section of the ruleset YAML.
+
+|--warning=<list_rules_to_move_to_warning> 
+|The `warning` option is followed by the rule IDs for the rules to move to the warning severity level section of the ruleset YAML.
+
+|--info=<list_rules_to_move_to_info> 
+|The `info` option is followed by the rule IDs for the rules to move to the info severity level section of the ruleset YAML.
+
+|--remove=<list_rules_to_disable> 
+|The `remove` option is followed by the rule IDs for the rules to comment out, and therefore effectively disable, in the ruleset YAML. 
+
+|--xxx <xxx>
+|The `xxx` option is xxx 
+|===
+
+*Example commands:*
+
+[source,copy]
+----
+anypoint-cli governance ruleset clone xxx
+
+----
+
+// end::governance-ruleset-clone[]
 
 // tag::governance-ruleset-validate[]
 
