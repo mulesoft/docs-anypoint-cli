@@ -496,6 +496,18 @@ For example, `api-mgr policy apply --configFile ./config.json`
 For example `api-mgr policy apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
 |===
 
+The following example defines a rate limit of one request every ten seconds:
+
+----
+{
+        "rateLimits": [{
+            "maximumRequests": 1,
+            "timePeriodInMilliseconds": 10000
+        }],
+        "clusterizable": true,
+        "exposeHeaders": false
+    }
+----
 == api-mgr policy describe
 
 ----
