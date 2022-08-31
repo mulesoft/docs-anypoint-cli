@@ -298,7 +298,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |--ruleset-gavs <ruleset-gavs>
 |The `ruleset-gavs` argument is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
-These are the asset's identifiers.
+These are the asset's identifiers. See <<exchange-asset-identifiers>>.
 
 |--tags <tags>
 |The `tags` argument is followed by a comma separated list of tags formatted as follows: `tag1,tag2,tag3`.
