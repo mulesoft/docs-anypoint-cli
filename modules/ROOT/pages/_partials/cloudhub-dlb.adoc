@@ -281,9 +281,9 @@ This command does not take any options, except for the default ones: `--help`, `
 == cloudhub load-balancer mappings add
 
 ----
-> cloudhub load-balancer mappings add [options] <name> <index> <inputUri> <appName> <appUri> [certificateName]
+> cloudhub load-balancer mappings add [options] <name> <inputUri> <appName> <appUri> [certificateName]
 ----
-This command adds a proxy mapping rule to the load balancer specified in `<name>` at the priority index specified in `<index>` in the CN passed under the `certificateName` option. +
+This command adds a proxy mapping rule to the load balancer specified in `<name>` in the CN passed under the `certificateName` option. +
 If no `certificateName` is passed, Anypoint Platform CLI adds the mappings to the default SSL endpoint.
 
 
@@ -291,7 +291,6 @@ If no `certificateName` is passed, Anypoint Platform CLI adds the mappings to th
 |===
 |Value |Description |Example
 |`name` |Name of the load balancer to which this rule is applied. |`testloadbalancer`
-|`index` |Priority of the rule.  |1
 |`inputUri` |Name of the URI of your input URL |example.com
 |`appName` |Name of the app of your output URL to which the request is forwarded |`{app}-example`
 |`appUri` |URI of the app of your output URL to which the request is forwarded |/
