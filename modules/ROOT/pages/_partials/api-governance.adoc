@@ -5,6 +5,7 @@
 
 |===
 |Command |Description
+| xref:api-governance.adoc#governance-api-inspect[governance api inspect] | Inspects an API definition to determine the API type
 | xref:api-governance.adoc#governance-api-validate[governance api validate] | Validates an API definition against a specified governance ruleset
 | xref:api-governance.adoc#governance-document[governance document] | Creates the documentation file for a governance ruleset definition
 | xref:api-governance.adoc#governance-profile-create[governance profile create] | Creates a governance profile
@@ -12,10 +13,38 @@
 | xref:api-governance.adoc#governance-profile-info[governance profile info] | Lists information for a specific governance profile ID
 | xref:api-governance.adoc#governance-profile-list[governance profile list] | Lists all governance profiles for an organization
 | xref:api-governance.adoc#governance-profile-update[governance profile update] | Updates a governance profile
+| xref:api-governance.adoc#governance-ruleset-init[governance ruleset init] | Initializes a governance ruleset definition based on a data schema
 | xref:api-governance.adoc#governance-ruleset-validate[governance ruleset validate] | Validates a governance ruleset definition's format
 |===
 
 // end::summary[]
+
+// tag::governance-api-inspect[]
+
+[[governance-api-inspect]]
+== governance api inspect
+
+`> governance api inspect [options] <api-definition>`
+
+This command inspects the API definition passed in `api-definition` to determine the API type. 
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+*Example command:*
+
+[source,copy]
+----
+anypoint-cli governance api inspect ~/Downloads/order-api-1.0.0-raml.zip
+
+----
+
+*Example output:*
+
+----
+ xxx
+----
+
+// end::governance-api-inspect[]
 
 // tag::governance-api-validate[]
 
@@ -309,6 +338,47 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 ----
 
 // end::governance-profile-update[]
+
+// tag::governance-ruleset-init[]
+
+[[governance-ruleset-init]]
+== governance ruleset init
+
+`> governance ruleset init [options] <schema>`
+
+This command initializes a ruleset based on the data schema passed in the `schema` parameter. 
+
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--types <types>
+|The `types` option gives the target types to export as rules.
+
+|--name <name>
+|The `name` option is the name of the ruleset.
+
+|--output <output>
+|The `output` option is the name of the ruleset YAML output file.
+|===
+
+*Example command:*
+
+[source,copy]
+----
+anypoint-cli governance init --types=restapi,asyncapi --name=my-ruleset --output=~/temp/myruleset.yaml
+
+----
+
+*Example output:*
+
+----
+ xxx
+----
+
+// end::governance-ruleset-init[]
 
 // tag::governance-ruleset-validate[]
 
