@@ -12,6 +12,7 @@
 | xref:api-governance.adoc#governance-profile-info[governance profile info] | Lists information for a specific governance profile ID
 | xref:api-governance.adoc#governance-profile-list[governance profile list] | Lists all governance profiles for an organization
 | xref:api-governance.adoc#governance-profile-update[governance profile update] | Updates a governance profile
+| xref:api-governance.adoc#governance-ruleset-info[governance ruleset info] | Lists ruleset rules
 | xref:api-governance.adoc#governance-ruleset-validate[governance ruleset validate] | Validates a governance ruleset definition's format
 |===
 
@@ -309,6 +310,33 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 ----
 
 // end::governance-profile-update[]
+
+// tag::governance-ruleset-info[]
+
+[[governance-ruleset-info]]
+== governance ruleset info
+
+`> governance ruleset info [options] <governance-ruleset>`
+
+This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
+
+This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
+*Example command:*
+
+[source,copy]
+----
+anypoint-cli governance ruleset info ~/temp/myruleset.yaml
+
+----
+
+*Example output:*
+
+----
+ xxx
+----
+
+// end::governance-ruleset-info[]
 
 // tag::governance-ruleset-validate[]
 
