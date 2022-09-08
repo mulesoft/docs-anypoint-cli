@@ -320,20 +320,42 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 
 This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-*Example command:*
+[cols="1,1"]
+|===
+|Option |Description
+
+|--remote
+|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier (GAV) for the ruleset.
+|===
+
+*Example commands:*
 
 [source,copy]
 ----
 anypoint-cli governance ruleset info ~/temp/myruleset.yaml
+
+anypoint-cli governance ruleset info 668ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
 
 ----
 
 *Example output:*
 
 ----
- xxx
+Ruleset /Users/myuser/temp/myruleset.yaml
+Violation	operation-default-response
+Violation	operation-operationId     
+Warning  	operation-singular-tag    
+Warning  	tag-description           
+Warning  	info-contact              
+Warning  	info-description          
+Warning  	info-license              
+Warning  	license-url               
+Warning  	openapi-tags              
+Warning  	operation-description     
+Warning  	operation-tags            
+Warning  	operation-tag-defined  
 ----
 
 // end::governance-ruleset-info[]
