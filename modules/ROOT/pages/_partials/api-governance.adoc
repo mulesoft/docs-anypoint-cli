@@ -336,7 +336,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 ----
 anypoint-cli governance ruleset info ~/temp/myruleset.yaml
 
-anypoint-cli governance ruleset info 668ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
+anypoint-cli governance ruleset info 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 --remote
 
 ----
 
