@@ -8,7 +8,7 @@
 | <<datagraph sources add>> | Adds an API source 
 | <<datagraph sources promote>> | Promotes an API source
 | <<datagraph sources update>> | Updates an API source
-| <<datagraph scale>> | Scales API calls made to the unified schema
+| <<datagraph scale>> | Configures the number of replicas deployed for a DataGraph application
 | <<datagraph schema-download>> | Downloads the unified schema
 | <<datagraph sources delete>> | Deletes an API source
 | <<datagraph sources get>> | Gets an API source
@@ -337,7 +337,9 @@ The following command updates the URL of the source API and changes its authenti
 > datagraph scale <concurrent-api-calls>
 ----
 
-This command enables you to configure the number of concurrent API calls permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
+This command enables you to configure the number of replicas deployed for your DataGraph application in CloudHub or CloudHub 2.0. Increase or decrease replicas to process higher workloads and optimize your consumption when needed.
+
+For applications deployed to CloudHub 2.0, you can also set the number of vCores to use per replica. 
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
@@ -345,14 +347,14 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
 
 [source,copy]
 ----
-datagraph scale 300
+datagraph scale 2
 ----
 
 === Example Output
 
 ----
 {
-  "message": "Api calls updated"
+  "message": "Number of replicas updated"
 }
 ----
 
@@ -510,7 +512,68 @@ This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--ve
     "origin": "CLI"
   }
 ----
-  
+
+== datagraph get target
+
+[source,copy]
+----
+> datagraph target get
+----
+
+This response returns the target value for the current environment and organization where you've deployed, or will deploy, a DataGraph application. Values are CloudHub (default) or CloudHub 2.0. 
+
+The command returns the following information:
+
+* `organizationId`: Displays the org ID for the deployment target.
+* `environmentId`: Displays the environment ID for the deployment target.
+* `deployTargetType`: Displays the deployment target type, either CloudHub or CloudHub 2.0.
+* `deployTargetId`: Displays the ID of the deployment target type, either CloudHub or CloudHub 2.0.
+
+This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
+
+=== Example Output
+
+----
+{
+  "organizationID": "???",
+  "environmentId": "???",
+  "deployTargetType": "datagraph-example.us-e1.prod.cloudhub.io",
+  "deployTargetId": "???"
+}
+----
+
+== datagraph update target
+
+[source,copy]
+----
+datagraph target update <target> [--target-id <id>]
+----
+
+This command configures the deployment target value for the current environment and organization. Changing this value, triggers a new deployment. 
+
+In addition to the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options, this command accepts the following options:
+
+* `target`: The target where the DataGraph application will be deployed. Possible values are `CH` or `CH2`.
+* `--target-id <id>`: Use to specify a CloudHub 2.0 ID. This option is required if the deployment target is CloudHub 2.0. 
+
+The command returns the following information:
+
+* `organizationId`: Displays the org ID for the deployment target.
+* `environmentId`: Displays the environment ID for the deployment target.
+* `deployTargetType`: Displays the deployment target type, either CloudHub or CloudHub 2.0.
+* `deployTargetId`: Displays the ID of the deployment target type, either CloudHub or CloudHub 2.0.
+
+=== Example Output
+
+----
+{
+  "organizationID": "???",
+  "environmentId": "???",
+  "deployTargetType": "datagraph-example.us-e1.prod.cloudhub.io",
+  "deployTargetId": "???"
+}
+----
+
 == datagraph describe 
 
 [source,copy]
