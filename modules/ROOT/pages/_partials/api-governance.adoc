@@ -27,22 +27,30 @@
 
 This command evaluates the API project and uses the filters such as API type, tags, and categories in the `exchange.json` file to determine the rulesets that would be applied to this API for those filters. This gives developers a way to determine the rulesets that their APIs pass or fail for the same filters a governance administrator might set in an API Governance profile. 
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--criteria=<filtertype:filtervalue>,<filtertype:filtervalue>
+|A list of filters separated by commas, where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,scope:rest-api
+|===
 
 *Example commands:*
 
 [source,copy]
 ----
-anypoint-cli governance api evaluate ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli governance api evaluate --criteria=tag:best,category:API Type:Experience API,scope:rest-api ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
 
 ----
-This API's exchange.json has the following tags: <list of tags from exchange.json> and categories: (...) and if published, would be targeted by the following rulesets:
-- <ruleset_1>
-- <ruleset_2>
-- (...)
+Ruleset GAV                                                       
+68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
+8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 
+68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0 
 ----
 
 // end::governance-api-evaluate[]
