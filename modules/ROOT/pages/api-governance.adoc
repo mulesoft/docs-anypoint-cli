@@ -2,6 +2,8 @@
 
 include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-api-evaluate]
+
 include::anypoint-cli::partial$api-governance.adoc[tag=governance-api-validate]
 
 include::anypoint-cli::partial$api-governance.adoc[tag=governance-document]
