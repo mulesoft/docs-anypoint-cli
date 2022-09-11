@@ -521,7 +521,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 [source,copy]
 ----
-anypoint-cli governance init --types=restapi,asyncapi --name=my-ruleset --output=~/temp/myruleset.yaml
+anypoint-cli governance ruleset init --types=rest-api,async-api --name=my-ruleset --output=~/temp/myruleset.yaml mydataschema
 
 ----
 
