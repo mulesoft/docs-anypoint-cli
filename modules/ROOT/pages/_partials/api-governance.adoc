@@ -5,6 +5,7 @@
 
 |===
 |Command |Description
+| xref:api-governance.adoc#governance-api-evaluate[governance api evaluate] | Evaluates an API project to determine which rulesets would be applied to this API for given filters
 | xref:api-governance.adoc#governance-api-inspect[governance api inspect] | Inspects an API definition to determine the API type
 | xref:api-governance.adoc#governance-api-validate[governance api validate] | Validates an API definition against a specified governance ruleset
 | xref:api-governance.adoc#governance-document[governance document] | Creates the documentation file for a governance ruleset definition
@@ -20,6 +21,43 @@
 |===
 
 // end::summary[]
+
+// tag::governance-api-evaluate[]
+
+[[governance-api-evaluate]]
+== governance api evaluate
+
+`> governance api evaluate [options] <api-project-zip>`
+
+This command evaluates the API project and uses the filters such as API type, tags, and categories in the `exchange.json` file to determine the rulesets that would be applied to this API for those filters. This gives developers a way to determine the rulesets that their APIs pass or fail for the same filters a governance administrator might set in an API Governance profile. 
+
+Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+
+[cols="1,1"]
+|===
+|Option |Description
+
+|--criteria=<filtertype:filtervalue>,<filtertype:filtervalue>
+|A list of filters separated by commas, where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,scope:rest-api
+|===
+
+*Example commands:*
+
+[source,copy]
+----
+anypoint-cli governance api evaluate --criteria=tag:best,category:API Type:Experience API,scope:rest-api ~/Downloads/order-api-1.0.0-raml.zip
+----
+
+*Example output:*
+
+----
+Ruleset GAV                                                       
+68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
+8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 
+68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0 
+----
+
+// end::governance-api-evaluate[]
 
 // tag::governance-api-inspect[]
 
@@ -184,7 +222,7 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
 See <<exchange-asset-identifiers>>.
 
