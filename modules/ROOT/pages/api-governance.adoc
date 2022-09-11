@@ -24,6 +24,8 @@ include::anypoint-cli::partial$api-governance.adoc[tag=governance-ruleset-clone]
 
 include::anypoint-cli::partial$api-governance.adoc[tag=governance-ruleset-init]
 
+include::anypoint-cli::partial$api-governance.adoc[tag=governance-ruleset-info]
+
 include::anypoint-cli::partial$api-governance.adoc[tag=governance-ruleset-validate]
 
 include::anypoint-cli::partial$api-governance.adoc[tag=exchange-asset-identifier,leveloffset=+2]
