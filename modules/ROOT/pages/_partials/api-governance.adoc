@@ -13,9 +13,9 @@
 | xref:api-governance.adoc#governance-profile-info[governance profile info] | Lists information for a specific governance profile ID
 | xref:api-governance.adoc#governance-profile-list[governance profile list] | Lists all governance profiles for an organization
 | xref:api-governance.adoc#governance-profile-update[governance profile update] | Updates a governance profile
-| xref:api-governance.adoc#governance-ruleset-init[governance ruleset init] | Initializes a governance ruleset definition based on a data schema
 | xref:api-governance.adoc#governance-ruleset-clone[governance ruleset clone] | Clones a governance ruleset and applies specified updates to rules
 | xref:api-governance.adoc#governance-ruleset-info[governance ruleset info] | Lists ruleset rules
+| xref:api-governance.adoc#governance-ruleset-init[governance ruleset init] | Initializes a governance ruleset definition based on a data schema
 | xref:api-governance.adoc#governance-ruleset-validate[governance ruleset validate] | Validates a governance ruleset definition's format
 |===
 
@@ -384,104 +384,6 @@ anypoint-cli governance init --types=restapi,asyncapi --name=my-ruleset --output
 ----
 
 // end::governance-ruleset-init[]
-
-// tag::governance-ruleset-clone[]
-
-[[governance-ruleset-clone]]
-== governance ruleset clone
-
-`> governance ruleset clone [options] <ruleset> <new_title> <new_description>` 
-
-This command clones a governance ruleset to create a new custom ruleset and applies specified updates to rules based on the options.
-
-The `new-title` parameter gives the title for the new ruleset.
-
-The `new description` parameter gives the description for the new ruleset.
-
-TIP: Run the `governance ruleset info` command before running this command to get the rule ID information to use in this command.
-
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
-
-[cols="1,1"]
-|===
-|Option |Description
-
-|--remote
-|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier (GAV) for the ruleset.
-
-|--error=<list_rules_to_move_to_error>
-|The `error` option is followed by the rule IDs for the rules to move to the error severity level section of the ruleset YAML.
-
-|--warning=<list_rules_to_move_to_warning> 
-|The `warning` option is followed by the rule IDs for the rules to move to the warning severity level section of the ruleset YAML.
-
-|--info=<list_rules_to_move_to_info> 
-|The `info` option is followed by the rule IDs for the rules to move to the info severity level section of the ruleset YAML.
-
-|--remove=<list_rules_to_disable> 
-|The `remove` option is followed by the rule IDs for the rules to comment out, and therefore effectively disable, in the ruleset YAML. 
-|===
-
-*Example commands:*
-
-[source,copy]
-----
-anypoint-cli governance ruleset clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId >> mynewruleset.yaml
-
-anypoint-cli governance ruleset clone 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags >> my-anypoint-best-practices.yaml 
-
-----
-
-// end::governance-ruleset-clone[]
-
-// tag::governance-ruleset-info[]
-
-[[governance-ruleset-info]]
-== governance ruleset info
-
-`> governance ruleset info [options] <governance-ruleset>`
-
-This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
-
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
-
-[cols="1,1"]
-|===
-|Option |Description
-
-|--remote
-|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier (GAV) for the ruleset.
-|===
-
-*Example commands:*
-
-[source,copy]
-----
-anypoint-cli governance ruleset info ~/temp/myruleset.yaml
-
-anypoint-cli governance ruleset info 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 --remote
-
-----
-
-*Example output:*
-
-----
-Ruleset /Users/myuser/temp/myruleset.yaml
-Violation	operation-default-response
-Violation	operation-operationId     
-Warning  	operation-singular-tag    
-Warning  	tag-description           
-Warning  	info-contact              
-Warning  	info-description          
-Warning  	info-license              
-Warning  	license-url               
-Warning  	openapi-tags              
-Warning  	operation-description     
-Warning  	operation-tags            
-Warning  	operation-tag-defined  
-----
-
-// end::governance-ruleset-info[]
 
 // tag::governance-ruleset-validate[]
 
