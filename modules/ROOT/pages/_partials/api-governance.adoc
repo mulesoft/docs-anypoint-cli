@@ -135,7 +135,13 @@ types:
 
 This command validates the API definition passed in `api-definition` against specified rulesets. 
 
-You can specify `api-definition` as an API project ZIP file or folder and specify rulesets against which to validate using one or more of the following:
+You can specify `api-definition` as one of the following:
+
+* An API project ZIP file
+* An API project folder
+* A GAV for an API project in Exchange; this requires the `--remote` option
+
+You can specify rulesets against which to validate as follows:
 
 * To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that it is included in the folder or ZIP file that you specify in `api-definition`. If the `exchange.json` file is present, the command downloads all dependencies and validates against the rulesets in the project. 
 
