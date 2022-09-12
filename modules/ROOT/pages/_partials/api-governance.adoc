@@ -5,6 +5,7 @@
 
 |===
 |Command |Description
+| xref:api-governance.adoc#governance-api-evaluate[governance api evaluate] | Evaluates filter criteria to determine which rulesets would potentially apply to APIs that meet that criteria
 | xref:api-governance.adoc#governance-api-inspect[governance api inspect] | Inspects an API definition and lists its schemas
 | xref:api-governance.adoc#governance-api-validate[governance api validate] | Validates an API definition against a specified governance ruleset
 | xref:api-governance.adoc#governance-document[governance document] | Creates the documentation file for a governance ruleset definition
