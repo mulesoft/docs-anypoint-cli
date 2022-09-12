@@ -5,7 +5,7 @@
 
 |===
 |Command |Description
-| xref:api-governance.adoc#governance-api-inspect[governance api inspect] | Inspects an API definition to determine the API type
+| xref:api-governance.adoc#governance-api-inspect[governance api inspect] | Inspects an API definition and lists its schemas
 | xref:api-governance.adoc#governance-api-validate[governance api validate] | Validates an API definition against a specified governance ruleset
 | xref:api-governance.adoc#governance-document[governance document] | Creates the documentation file for a governance ruleset definition
 | xref:api-governance.adoc#governance-profile-create[governance profile create] | Creates a governance profile
@@ -26,7 +26,7 @@
 
 `> governance api inspect [options] <api-definition>`
 
-This command inspects the API definition passed in `api-definition` to determine the API type. 
+This command inspects the API definition passed in `api-definition` and lists all its schemas, such as headers, requests, and response payloads.
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
@@ -38,23 +38,11 @@ anypoint-cli governance api inspect my-healthcare-api.yaml
 
 ----
 
-*Example API Types Section*
-
-Following is an example `types` section from the `my-healthcare-api.yaml` example used in the example command.
+*Example schema*
 
 [source,copy]
 ----
 types:
-  patientdeceasedBoolean:
-    properties:
-      deceasedBoolean:
-        description: Indicates if the individual is deceased or not
-        type: boolean
-  patientdeceasedDateTime:
-    properties:
-      deceasedDateTime:
-        description: Indicates if the individual is deceased or not
-        type: FHIR_commons.dateTime
   patientmultipleBirthBoolean:
     properties:
       multipleBirthBoolean:
@@ -65,48 +53,7 @@ types:
       multipleBirthInteger:
         description: Whether patient is part of a multiple birth
         type: integer
-  Patient:
-    (rules-gen.export): true
-    type: FHIR_commons.DomainResource
-    properties:
-      identifier:
-        description: An identifier for this patient
-        type: FHIR_commons.Identifier[]
-      active:
-        description: Whether this patient's record is in active use
-        type: boolean
-      name?:
-        description: A name associated with the patient
-        type: FHIR_commons.HumanName[]
-      telecom?:
-        description: A contact detail for the individual
-        type: FHIR_commons.ContactPoint[]
-      gender?:
-        description: Gender - male | female | other | unknown
-        type: FHIR_commons.code
-        enum: [male, female, other, unknown]
-      birthDate?:
-        description: The date of birth for the individual
-        type: FHIR_commons.date
-      deceased?:
-        description: Indicates if the individual is deceased or not
-        type: patientdeceasedBoolean | patientdeceasedDateTime
-      address?:
-        description: Addresses for the individual
-        type: FHIR_commons.Address[]
-      maritalStatus?:
-        description: Marital (civil) status of a patient
-        type: FHIR_commons.CodeableConcept
-      multipleBirth?:
-        description: Whether patient is part of a multiple birth
-        type: patientmultipleBirthBoolean | patientmultipleBirthInteger
-
-      photo?:
-        description: Image of the patient
-        type: FHIR_commons.Attachment[]
-      contact?:
-        description: A contact party (e.g. guardian, partner, friend) for the patient SHALL at least contain a contact's details or a reference to an organization
-
+  
         .
         .
         .
@@ -129,10 +76,7 @@ types:
   'patientmultipleBirthBoolean',
   'PatientBundle',
   'patientmultipleBirthInteger',
-  'patientdeceasedBoolean',
-  'PatientEntry',
-  'Patient',
-  'patientdeceasedDateTime'
+  'PatientEntry'
 ----
 
 // end::governance-api-inspect[]
@@ -460,7 +404,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 [source,copy]
 ----
-anypoint-cli governance ruleset init --types=patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset --output=myruleset.yaml mydataschema
+anypoint-cli governance ruleset init --types patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset --output=myruleset.yaml mydataschema
 
 ----
 
