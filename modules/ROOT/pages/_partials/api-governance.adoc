@@ -29,16 +29,15 @@
 
 `> governance api evaluate [options]`
 
-This command evaluates on filters such as API type, tags, and categories to determine the rulesets that would be applied to your APIs for those filters. This gives developers a way through CLI to determine the rulesets that their APIs might pass or fail for the same filters a governance administrator might set in an API Governance profile. 
+This command evaluates specified filters, such as API type, tags, and categories, to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
 [cols="1,1"]
 |===
 |Option |Description
-
 |--api=<api>
-|The API definition against which you want to evaluate.
+|The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |--criteria=<filtertype:filtervalue>,<filtertype:filtervalue>
 |A list of filters against which you want to evaluate. They are separated by commas, where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,scope:rest-api
 |===
