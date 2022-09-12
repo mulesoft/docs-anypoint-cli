@@ -51,7 +51,7 @@ See <<exchange-asset-identifiers>>.
 |--remote <api-asset-identifier>,<api-asset-identifier>,...
 |Remote API definitions. The `remote` option is followed by a comma-separated list of API asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each API. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
-These are the asset's identifiers. See <<exchange-asset-identifiers>>.
+See <<exchange-asset-identifiers>>.
 |===
 
 *Example commands:*
