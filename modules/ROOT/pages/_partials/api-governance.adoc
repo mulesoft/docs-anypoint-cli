@@ -151,11 +151,11 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |===
 |Option |Description
 
-|--criteria <tags>
+|--criteria <criteria>
 |The `criteria` option has the filters to apply to the profile to select the list APIs to which the profile rulesets will apply. The option is followed by a comma separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
 
 |--tags <tags> *Deprecated*
-|*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* The `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
+|*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
 |--description <description>
 |The `description` option is followed by a string that is the new governance profile's description.
@@ -290,9 +290,10 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |The `ruleset-gavs` argument is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
 These are the asset's identifiers.
-
-|--tags <tags>
-|The `tags` argument is followed by a comma separated list of tags formatted as follows: `tag1,tag2,tag3`.
+|--criteria <criteria>
+|The `criteria` option has the filters to apply to the profile to select the list APIs to which the profile rulesets will apply. The option is followed by a comma separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+|--tags <tags> *Deprecated*
+|*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
 |--description <description>
 |The `description` argument is followed by a string that is the new governance profile description.
