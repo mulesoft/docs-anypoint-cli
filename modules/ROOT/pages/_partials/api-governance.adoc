@@ -686,7 +686,7 @@ Level: Violation
 // tag::exchange-asset-identifier[]
 
 [[exchange-asset-identifiers]]
-=== Get Exchange Asset Identifiers (GAVs)
+== Get Exchange Asset Identifiers (GAVs)
 
 To get the GAVs for Exchange assets:
 
