@@ -48,7 +48,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Remote ruleset definitions. The `remote-rulesets` option is followed by a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
-|--remote
+|--remote <api-asset-identifier>,<api-asset-identifier>,...
 |Remote API definitions. The `remote` option is followed by a comma-separated list of API asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each API. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
 These are the asset's identifiers. See <<exchange-asset-identifiers>>.
