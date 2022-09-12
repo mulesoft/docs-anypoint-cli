@@ -365,3 +365,15 @@ Level: Violation
 ----
 
 // end::governance-ruleset-validate[]
+
+// tag::exchange-asset-identifier[]
+
+[[exchange-asset-identifiers]]
+=== Get Exchange Asset Identifiers (GAVs)
+
+To get the GAVs for Exchange assets:
+
+* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
+* If you are using the web UI, select the asset in Exchange and then copy the group ID and asset ID from the URL. 
+
+// end::exchange-asset-identifier[]
