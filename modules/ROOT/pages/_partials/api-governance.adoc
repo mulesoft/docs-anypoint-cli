@@ -402,25 +402,16 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 [source,copy]
 ----
-anypoint-cli governance profile info 19fb211b-8775-43cc-865a-46228921d6ed
-----
+anypoint-cli governance profile info 19fb211b-8775-43cc-865a-46228921d6ed --output text
 
 *Example output:*
 
 ----
-┌──────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────┐
-│ Id                                               │ 19fb211b-8775-43cc-865a-46228921d6ed                                                     │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────┤
-│ Name                                             │ Best Practices                                                                           │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────┤
-│ Description                                      │ Best Practices Profile                                                                   │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────┤
-│ Rulesets                                         │ 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0                       │
-│                                                  │ 8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0                        │
-│                                                  │ 68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0                             │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────┤
-│ Criteria                                         │ tag:best,category:API Type:Experience API,scope:rest-api                                 │
-└──────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────┘
+Id         	19fb211b-8775-43cc-865a-46228921d6ed                                                                                                                                                             
+Name       	Best Practices                                                                                                                                                                                   
+Description	Best Practices Profile                                                                                                                                                                           
+Rulesets   	68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0 8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0
+Criteria   	tag:best,category:API Type:Experience API,scope:rest-api 
 ----
 
 // end::governance-profile-info[]
