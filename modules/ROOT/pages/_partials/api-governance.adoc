@@ -626,15 +626,6 @@ anypoint-cli governance ruleset init --types=patientmultipleBirthBoolean,patient
 
 ----
 
-<<<<<<< HEAD
-*Example output:*
-
-----
- xxx xxx
-----
-
-=======
->>>>>>> W-11405253-scaffold-rules-from-data-schemas-cli-bsj
 // end::governance-ruleset-init[]
 
 // tag::governance-ruleset-validate[]
