@@ -157,8 +157,8 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Remote ruleset definitions. The `remote-rulesets` option is followed by a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
-|--remote <api-asset-identifier>,<api-asset-identifier>,...
-|Remote API definitions. The `remote` option is followed by a comma-separated list of API asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each API. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+|--remote 
+|Flag to indicate that the validatation should be done against a published API. The value passed in `api-definition` is the API asset identifier, which is the group ID, asset ID, and version (GAV) that uniquely identifies the API. For example: `<group_id>/<asset_id>/<version>
 
 See <<exchange-asset-identifiers>>.
 |===
@@ -174,6 +174,8 @@ anypoint-cli governance api validate ~/Downloads/order-api-1.0.0-raml
 anypoint-cli governance api validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
 
 anypoint-cli governance api validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1  ~/Downloads/order-api-1.0.0-raml.zip
+
+anypoint-cli governance api validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
 ----
 
 *Example output:*
@@ -632,6 +634,6 @@ Level: Violation
 To get the GAVs for Exchange assets:
 
 * If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
-* If you are using the web UI, select the asset in Exchange and then copy the group ID and asset ID from the URL. 
+* If you are using the web UI, select the asset in Exchange and then copy the group ID and asset ID from the URL. Add the version node for the version you are viewing. For example, the GAV for the OpenAPI Best Practices ruleset in Exchange is `68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`.
 
 // end::exchange-asset-identifier[]
