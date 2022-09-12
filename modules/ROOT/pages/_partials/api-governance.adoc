@@ -34,14 +34,105 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 [source,copy]
 ----
-anypoint-cli governance api inspect ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli governance api inspect my-healthcare-api.yaml
+
+----
+
+*Example API Types Section*
+
+Following is an example `types` section from the `my-healthcare-api.yaml` example used in the example command.
+
+[source,copy]
+----
+types:
+  patientdeceasedBoolean:
+    properties:
+      deceasedBoolean:
+        description: Indicates if the individual is deceased or not
+        type: boolean
+  patientdeceasedDateTime:
+    properties:
+      deceasedDateTime:
+        description: Indicates if the individual is deceased or not
+        type: FHIR_commons.dateTime
+  patientmultipleBirthBoolean:
+    properties:
+      multipleBirthBoolean:
+        description: Whether patient is part of a multiple birth
+        type: boolean
+  patientmultipleBirthInteger:
+    properties:
+      multipleBirthInteger:
+        description: Whether patient is part of a multiple birth
+        type: integer
+  Patient:
+    (rules-gen.export): true
+    type: FHIR_commons.DomainResource
+    properties:
+      identifier:
+        description: An identifier for this patient
+        type: FHIR_commons.Identifier[]
+      active:
+        description: Whether this patient's record is in active use
+        type: boolean
+      name?:
+        description: A name associated with the patient
+        type: FHIR_commons.HumanName[]
+      telecom?:
+        description: A contact detail for the individual
+        type: FHIR_commons.ContactPoint[]
+      gender?:
+        description: Gender - male | female | other | unknown
+        type: FHIR_commons.code
+        enum: [male, female, other, unknown]
+      birthDate?:
+        description: The date of birth for the individual
+        type: FHIR_commons.date
+      deceased?:
+        description: Indicates if the individual is deceased or not
+        type: patientdeceasedBoolean | patientdeceasedDateTime
+      address?:
+        description: Addresses for the individual
+        type: FHIR_commons.Address[]
+      maritalStatus?:
+        description: Marital (civil) status of a patient
+        type: FHIR_commons.CodeableConcept
+      multipleBirth?:
+        description: Whether patient is part of a multiple birth
+        type: patientmultipleBirthBoolean | patientmultipleBirthInteger
+
+      photo?:
+        description: Image of the patient
+        type: FHIR_commons.Attachment[]
+      contact?:
+        description: A contact party (e.g. guardian, partner, friend) for the patient SHALL at least contain a contact's details or a reference to an organization
+
+        .
+        .
+        .
+
+  PatientEntry:
+    type: FHIR_commons.Entry
+    properties:
+      resource: Patient
+
+  PatientBundle:
+    type: FHIR_commons.Bundle
+    properties:
+      entry?: PatientEntry[]
 
 ----
 
 *Example output:*
 
 ----
- xxx
+  'patientmultipleBirthBoolean',
+  'PatientBundle',
+  'patientmultipleBirthInteger',
+  'patientdeceasedBoolean',
+  'PatientEntry',
+  'Patient',
+  'patientdeceasedDateTime'
 ----
 
 // end::governance-api-inspect[]
