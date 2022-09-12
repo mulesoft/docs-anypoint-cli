@@ -502,7 +502,7 @@ anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --pr
 
 `> governance ruleset clone [options] <ruleset> <new_title> <new_description>` 
 
-This command clones a governance ruleset to create a new custom ruleset and applies specified updates to rules based on the options.
+This command clones a governance ruleset to create a new custom ruleset and applies specified updates to rules based on the options. The new ruleset is written to standard output.
 
 The `new-title` parameter gives the title for the new ruleset.
 
@@ -536,9 +536,9 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 [source,copy]
 ----
-anypoint-cli governance ruleset clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId >> mynewruleset.yaml
+anypoint-cli governance ruleset clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId > mynewruleset.yaml
 
-anypoint-cli governance ruleset clone 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags >> my-anypoint-best-practices.yaml 
+anypoint-cli governance ruleset clone 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
 
 ----
 
