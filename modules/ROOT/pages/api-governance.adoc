@@ -18,4 +18,4 @@ include::anypoint-cli::partial$api-governance.adoc[tag=governance-profile-update
 
 include::anypoint-cli::partial$api-governance.adoc[tag=governance-ruleset-validate]
 
-include::anypoint-cli::partial$api-governance.adoc[tag=exchange-asset-identifier,leveloffset=+2]
+include::anypoint-cli::partial$api-governance.adoc[tag=exchange-asset-identifier,leveloffset=+1]
