@@ -27,9 +27,9 @@
 [[governance-api-evaluate]]
 == governance api evaluate
 
-`> governance api evaluate [options] <api-project-zip>`
+`> governance api evaluate [options]`
 
-This command evaluates the API project and uses the filters such as API type, tags, and categories in the `exchange.json` file to determine the rulesets that would be applied to this API for those filters. This gives developers a way to determine the rulesets that their APIs pass or fail for the same filters a governance administrator might set in an API Governance profile. 
+This command evaluates on filters such as API type, tags, and categories to determine the rulesets that would be applied to your APIs for those filters. This gives developers a way through CLI to determine the rulesets that their APIs pass or fail for the same filters a governance administrator might set in an API Governance profile. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -37,15 +37,21 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |===
 |Option |Description
 
+|--api=<api>
+|The API definition against which you want to evaluate.
 |--criteria=<filtertype:filtervalue>,<filtertype:filtervalue>
-|A list of filters separated by commas, where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,scope:rest-api
+|A list of filters against which you want to evaluate. They are separated by commas, where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,scope:rest-api
 |===
+
+NOTE: This command must be run with either the `criteria` or the `api` option.  
 
 *Example commands:*
 
 [source,copy]
 ----
-anypoint-cli governance api evaluate --criteria=tag:best,category:API Type:Experience API,scope:rest-api ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli governance api evaluate --criteria=tag:best,category:API Type:Experience API,scope:rest-api
+
+anypoint-cli governance api evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
