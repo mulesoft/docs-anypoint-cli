@@ -138,12 +138,9 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a list with the group ID, asset ID, and version (gav), which is the unique asset identifiers for each ruleset. Use a comma separated list formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
-To get the ruleset asset identifiers:
-
-* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
-* If you are using the web UI, select the ruleset asset in Exchange and then copy the group ID and asset ID from the URL. 
+See <<exchange-asset-identifiers>>.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -289,7 +286,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |--ruleset-gavs <ruleset-gavs>
 |The `ruleset-gavs` argument is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
-These are the asset's identifiers.
+These are the asset's identifiers. See <<exchange-asset-identifiers>>.
 |--criteria <criteria>
 |The `criteria` option has the filters to apply to the profile to select the list APIs to which the profile rulesets will apply. The option is followed by a comma separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
 |--tags <tags> *Deprecated*
