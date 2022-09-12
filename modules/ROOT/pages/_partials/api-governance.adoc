@@ -404,6 +404,8 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 ----
 anypoint-cli governance profile info 19fb211b-8775-43cc-865a-46228921d6ed --output text
 
+----
+
 *Example output:*
 
 ----
