@@ -394,17 +394,14 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |The `types` option gives the target types to export as rules. You can use the `governance api inspect` command to identify the types to specify in this option. See <<governance-api-inspect>>.
 
 |--name <name>
-|The `name` option is the name of the ruleset.
-
-|--output <output>
-|The `output` option is the name of the ruleset YAML output file.
+|The `name` option is the name of the ruleset. Defaults to `GeneratedRuleset`.
 |===
 
 *Example command:*
 
 [source,copy]
 ----
-anypoint-cli governance ruleset init --types patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset --output=myruleset.yaml mydataschema
+anypoint-cli governance ruleset init --types patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset mydataschema
 
 ----
 
