@@ -28,7 +28,7 @@
 
 `> governance api evaluate [options]`
 
-This command evaluates on filters such as API type, tags, and categories to determine the rulesets that would be applied to your APIs for those filters. This gives developers a way through CLI to determine the rulesets that their APIs pass or fail for the same filters a governance administrator might set in an API Governance profile. 
+This command evaluates on filters such as API type, tags, and categories to determine the rulesets that would be applied to your APIs for those filters. This gives developers a way through CLI to determine the rulesets that their APIs might pass or fail for the same filters a governance administrator might set in an API Governance profile. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
