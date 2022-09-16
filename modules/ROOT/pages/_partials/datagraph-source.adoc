@@ -339,7 +339,7 @@ The following command updates the URL of the source API and changes its authenti
 
 This command enables you to configure the number of replicas deployed for your DataGraph application in CloudHub or CloudHub 2.0. Increase or decrease replicas to process higher workloads and optimize your consumption when needed.
 
-For applications deployed to CloudHub 2.0, you can also set the number of vCores to use per replica. 
+For applications deployed to CloudHub 2.0, you can also set the machine size to use per replica. 
 
 This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
 
