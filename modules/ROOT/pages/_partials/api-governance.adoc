@@ -284,7 +284,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--criteria <criteria>
-|The `criteria` option The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. The option is followed by a comma-separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. The option is followed by a comma-separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
 
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
@@ -424,7 +424,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 These are the asset's identifiers. See <<exchange-asset-identifiers>>.
 |--criteria <criteria>
-|The `criteria` option has the filters to apply to the profile to select the list APIs to which the profile rulesets will apply. The option is followed by a comma separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. The option is followed by a comma-separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
