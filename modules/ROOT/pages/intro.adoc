@@ -45,13 +45,6 @@ Your Anypoint Platform session expires based on the *Default session timeout* co
 
 For information about Master Organization settings, see xref:access-management::organization.adoc#manage-root-organization-settings[Manage Root Organization Settings].
 
-[[autocomplete]]
-== Command Autocompletion
-
-You can use command autocompletion with Anypoint CLI commands. To use autocompletion:
-
-* Start typing the name of the command or option and press Tab for autocomplete or press Tab+Tab for a list of options.
-
 [[data-collection]]
 == Anonymized Usage Data
 
