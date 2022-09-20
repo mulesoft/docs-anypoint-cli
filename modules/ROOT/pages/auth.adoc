@@ -1,4 +1,4 @@
-= Authentication
+= Authentication to the Anypoint Platform CLI
 
 To authenticate to Anypoint CLI, you must use one of the authentication option combinations:
 
@@ -115,13 +115,13 @@ You can authenticate to Anypoint Platform through command line by running the `a
 * Authenticate on the command line using username and password
 +
 ----
-$ anypoint-cli-v4 --username myUserName --password myPassword --organization myOrgId account:environment:list
+$ anypoint-cli-v4 account:environment:list --username myUserName --password myPassword --organization myOrgId 
 ----
 
 * Authenticate on the command line  using client ID and client secret
 +
 ----
-$ anypoint-cli-v4 --client_id myClientID myClientSecret --organization myOrgId account:environment:list
+$ anypoint-cli-v4 account:environment:list --client_id myClientID myClientSecret --organization myOrgId 
 ----
 
 * Authenticate on the command line  using a bearer token
@@ -129,7 +129,7 @@ $ anypoint-cli-v4 --client_id myClientID myClientSecret --organization myOrgId a
 You can generate a bearer token in Anypoint Platform and pass it to Anypoint CLI directly. When you provide a bearer token, Anypoint CLI ignores any provided user or client credentials.
 +
 ----
-$ anypoint-cli-v4 --bearer myBearerToken --organization myOrgId account:environment:list
+$ anypoint-cli-v4 account:environment:list --bearer myBearerToken --organization myOrgId 
 ----
 +
 Your Anypoint Platform session expires when the bearer token expires.
