@@ -158,7 +158,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
-|Local ruleset definitions.The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
+|Local ruleset definitions. The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
 |--remote-rulesets <ruleset-asset-identifier>,<ruleset-asset-identifier>,...
 |Remote ruleset definitions. The `remote-rulesets` option is followed by a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
@@ -284,7 +284,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--criteria <criteria>
-|The `criteria` option has the filters to apply to the profile to select the list APIs to which the profile rulesets will apply. The option is followed by a comma separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. The option is followed by a comma-separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
 
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
@@ -424,7 +424,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 These are the asset's identifiers. See <<exchange-asset-identifiers>>.
 |--criteria <criteria>
-|The `criteria` option has the filters to apply to the profile to select the list APIs to which the profile rulesets will apply. The option is followed by a comma separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. The option is followed by a comma-separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
@@ -639,7 +639,7 @@ Level: Violation
 
 To get the GAVs for Exchange assets:
 
-* If you are using the CLI, run the `anypoint-cli exchange asset list` command. 
-* If you are using the web UI, select the asset in Exchange and then copy the group ID and asset ID from the URL. Add the version node for the version you are viewing. For example, the GAV for the OpenAPI Best Practices ruleset in Exchange is `68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`.
+* If you are using the Exchange CLI, run the `anypoint-cli exchange asset list` command. 
+* If you are using the Exchange web UI, select the asset in Exchange and then copy the group ID and asset ID from the URL. Add the version node for the version you are viewing. For example, the GAV for the OpenAPI Best Practices ruleset in Exchange is `68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`.
 
 // end::exchange-asset-identifier[]
