@@ -8,14 +8,14 @@
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-list[runtime-mgr:cloudhub-alert:list]| Lists all alerts in the environment
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-history-describe[runtime-mgr:cloudhub-alert-history:describe]| Describes the history of the alarm
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-list[runtime-mgr:cloudhub-application:list]| Lists all applications in the environment
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe[runtime-mgr:cloudhub-application:describe]| Show application details
+|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe[runtime-mgr:cloudhub-application:describe]| Shows application details
 // |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe-json//[runtime-mgr:cloudhub-application:describe-json]| Show raw application JSON response
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-stop[runtime-mgr:cloudhub-application:stop]| Stop a running application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-start[runtime-mgr:cloudhub-application:start]| Start an application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-restart[runtime-mgr:cloudhub-application:restart]| Restart a running application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-delete[runtime-mgr:cloudhub-application:delete]| Delete an application
-|xref:cloudhub-apps.adoc#deploy-to-cloudhub[runtime-mgr:cloudhub-application:deploy]| Deploy a new application
-|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-modify[runtime-mgr:cloudhub-application:modify]| Modify an existing application, optionally updating the ZIP file
+|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-stop[runtime-mgr:cloudhub-application:stop]| Stops a running application
+|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-start[runtime-mgr:cloudhub-application:start]| Starts an application
+|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-restart[runtime-mgr:cloudhub-application:restart]| Restarts a running application
+|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-delete[runtime-mgr:cloudhub-application:delete]| Deletes an application
+|xref:cloudhub-apps.adoc#deploy-to-cloudhub[runtime-mgr:cloudhub-application:deploy]| Deploys a new application
+|xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-modify[runtime-mgr:cloudhub-application:modify]| Modifies an existing application, optionally updating the ZIP file
 // |<<runtime-mgr application revert-runtime]| Reverts application to its previous runtime
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-download-logs[runtime-mgr:cloudhub-application:download-logs]| Download application logs to specified directory
 |xref:cloudhub-apps.adoc#runtime-mgr-cloudhub-application-tail-logs[runtime-mgr:cloudhub-application:tail-logs]| Tail application logs

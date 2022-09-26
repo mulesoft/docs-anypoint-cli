@@ -6,8 +6,8 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<use environment>>| Make specified environment active
-|<<use business-group>>| Make specified business-group active
+|<<use environment>>| Makes specified environment active
+|<<use business-group>>| Makes specified business-group active
 |===
 
 // end::summary[]

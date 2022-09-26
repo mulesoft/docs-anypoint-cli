@@ -20,8 +20,8 @@
 |xref:exchange-assets.adoc#exchange-asset-copy[exchange:asset:copy] | Copies an Exchange asset
 |xref:exchange-assets.adoc#exchange-asset-delete[exchange:asset:delete] | Deletes an asset from Exchange
 |xref:exchange-assets.adoc#exchange-asset-deprecate[exchange:asset:deprecate] | Deprecates an asset
-|xref:exchange-assets.adoc#exchange-asset-undeprecate[exchange:asset:undeprecate] | Undeprecate an asset
-|xref:exchange-assets.adoc#exchange-asset-describe[exchange:asset:describe] | Show a given asset's information
+|xref:exchange-assets.adoc#exchange-asset-undeprecate[exchange:asset:undeprecate] | Undeprecates an asset
+|xref:exchange-assets.adoc#exchange-asset-describe[exchange:asset:describe] | Shows a given asset's information
 |xref:exchange-assets.adoc#exchange-asset-resource-upload[exchange:asset:resource:upload] | Uploads a resource to an asset portal
 |xref:exchange-assets.adoc#exchange-asset-resource-list[exchange:asset:resource:list] | Lists published resources in the asset portal
 |xref:exchange-assets.adoc#exchange-asset-resource-download[exchange:asset:resource:download] | Downloads resource from the asset portal

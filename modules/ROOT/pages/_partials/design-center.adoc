@@ -11,7 +11,7 @@
 | xref:design-center.adoc#designcenter-project-download[designcenter:project:download] | Downloads the content of a Design Center project
 | xref:design-center.adoc#designcenter-project-publish[designcenter:project:publish] | Publishes a Design Center project to Exchange
 | xref:design-center.adoc#designcenter-project-upload[designcenter:project:upload] | Uploads the content of a project to Design Center
-| xref:design-center.adoc#designcenter-project-list[designcenter:project:list] | List all Design Center projects
+| xref:design-center.adoc#designcenter-project-list[designcenter:project:list] | Lists all Design Center projects
 |===
 
 // end::summary[]
