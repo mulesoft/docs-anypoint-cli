@@ -6,22 +6,25 @@ To authenticate to Anypoint CLI, you must use one of the authentication option c
 * Client ID and client secret
 * Bearer token (command line only)
 
+NOTE: As a part of Multi-factor authentication (MFA) enablement for all users, starting October 2022, the only way to use Anypoint CLI will be through xref:access-management::connected-apps-overview.adoc[Connected Apps].
+
+
 The default host, environment, and organization are used if you do not specify them.
 
-You can pass Anypoint CLI credentials using the following methods:
+Pass Anypoint CLI credentials by using the following methods:
 
-* <<single-signon,Using single signon (SSO)>>
+* <<single-signon,Using single sign-on (SSO)>>
 * <<credentials-file,Using a credentials configuration file>>
-* <<command-line-parameters,Using command line parameters>>
+* <<command-line-parameters,Using command-line parameters>>
 * <<env-variables,Using environment variables>>
 
 Configuration settings are overridden as follows:
 
-* Command line parameters override all other methods. 
+* Command-line parameters override all other methods. 
 
-* Environment variables are used if command line parameters are not specified and override any credentials configuration file settings.
+* Environment variables are used if command-line parameters are not specified and override any credentials configuration file settings.
 
-* Credentials configuration file parameters are used if no command line parameters or environment variables are set.
+* Credentials configuration file parameters are used if no command-line parameters or environment variables are set.
 
 [[single-signon]]
 == SSO
@@ -31,7 +34,7 @@ If you have configured Anypoint Platform to use SSO with the system on which you
 [[credentials-file]]
 == Credentials Configuration File
 
-If you are not using SSO, MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
+If you are not using SSO, pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
 
 You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` option to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
 
@@ -47,7 +50,7 @@ session.selectedOrganization.id
 
 To create your configuration file:
 
-* Run the "anypoint-cli-v4 conf" command with the parameters you want to use to set the authentication method. For example, the following command sets the username and password.
+* Run the `anypoint-cli-v4 conf` command with the parameters you want to use to set the authentication method. For example, the following command sets the username and password.
 +
 ----
 $ anypoint-cli-v4 conf username <username>
@@ -96,9 +99,9 @@ $ anypoint-cli-v4 account:environment:list
 ----
 
 [[command-line-parameters]]
-== Command Line Parameters
+== Command-Line Parameters
 
-You can authenticate to Anypoint Platform through command line by running the `anypoint-cli-v4` command with a combination of the following parameters:
+You can authenticate to Anypoint Platform through command-line by running the `anypoint-cli-v4` command with a combination of the following parameters:
 
 ----
 --username
