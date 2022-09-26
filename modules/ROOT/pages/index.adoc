@@ -42,6 +42,8 @@ $ npm install -g anypoint-cli@latest
 You can configure Anypoint CLI authentication with username and password, client ID and client secret, or a bearer token.
 At least one method is required.
 
+NOTE: As a part of Multi-factor authentication (MFA) enablement for all users, starting October 2022, the only way to use Anypoint CLI will be through xref:access-management::connected-apps-overview.adoc[Connected Apps].
+
 [[username-pw]]
 === Username and Password
 
