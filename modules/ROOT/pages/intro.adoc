@@ -37,7 +37,7 @@ You can use environment variables to define option values in Anypoint CLI. Follo
 * Environment variables override credentials file parameters.
 * Command-line parameters override environment variables. 
 * If you do not pass a command-line option, the default profile properties are used.
-* If environment is not specified, the default is production.
+* If you do not specify an environment, the default is production.
 
 [[session-timeout]]
 == Session Timeout
