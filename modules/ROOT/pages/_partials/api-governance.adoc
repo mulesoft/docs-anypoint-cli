@@ -29,7 +29,7 @@
 
 `> governance api evaluate [options]`
 
-This command evaluates specified filters, such as API type, tags, and categories, to determine the rulesets that would be applied to your APIs that meet that criteria.  
+This command evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
@@ -38,8 +38,8 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 |--api=<api>
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
-|--criteria=<filtertype:filtervalue>,<filtertype:filtervalue>
-|A list of filters against which you want to evaluate. They are separated by commas, where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,scope:rest-api
+|--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...
+|A list of comma-separated filters against which you want to evaluate. Each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 |===
 
 NOTE: This command must be run with either the `criteria` or the `api` option.  
@@ -48,7 +48,7 @@ NOTE: This command must be run with either the `criteria` or the `api` option.
 
 [source,copy]
 ----
-anypoint-cli governance api evaluate --criteria=tag:best,category:API Type:Experience API,scope:rest-api
+anypoint-cli governance api evaluate --criteria tag:best,category:API Type:Experience API,scope:rest-api
 
 anypoint-cli governance api evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
 ----
@@ -283,8 +283,8 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |===
 |Option |Description
 
-|--criteria <criteria>
-|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. The option is followed by a comma-separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+|--criteria <filtertype:filtervalue>,...
+|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
@@ -423,8 +423,8 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |The `ruleset-gavs` option is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
 
 These are the asset's identifiers. See <<exchange-asset-identifiers>>.
-|--criteria <criteria>
-|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. The option is followed by a comma-separated list of identifiers for tags, categories, and scope as follows: `tag:tag1,tag:tag2,category:catname:cat1,scope:apitype`
+|--criteria <filtertype:filtervalue>,...
+|The `criteria` option enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
