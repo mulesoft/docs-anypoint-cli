@@ -102,8 +102,8 @@ include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 |xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr application describe]| Describes an application
 |xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json]| Describes an  application in raw JSON response
 |xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs]|Downloads logs of an application from a specification to a specified directory
-|xref:cloudhub2-apps2.adoc#acruntime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
-|xref:rucloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
+|xref:cloudhub2-apps2.adoc#runtime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
 |xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
 |xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
 |xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails an application's logs from a specification
