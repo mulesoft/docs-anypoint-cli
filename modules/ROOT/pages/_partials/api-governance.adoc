@@ -293,11 +293,11 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |The `description` option is followed by a string that is the new governance profile's description.
 |===
 
-*Example command:*
+*Example commands:*
 
 [source,copy]
 ----
-anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria=tag:best --description "Profile for OAS Best Practices"
+anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria `tag:oas,category:API Type:Experience API,status:development,scope:rest-api` --description "Profile for OAS Best Practices"
 ----
 
 *Example output:*
