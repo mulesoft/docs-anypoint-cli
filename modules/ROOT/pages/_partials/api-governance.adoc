@@ -48,7 +48,7 @@ NOTE: This command must be run with either the `criteria` or the `api` option.
 
 [source,copy]
 ----
-anypoint-cli governance api evaluate --criteria tag:best,category:API Type:Experience API,scope:rest-api
+anypoint-cli governance api evaluate --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
 
 anypoint-cli governance api evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
 ----
@@ -385,15 +385,18 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 [source,copy]
 ----
-anypoint-cli governance profile list
+anypoint-cli governance profile list -o text
 ----
 
 *Example output:*
 
 ----
- Profile Name  	     Profile Id                          
+Profile Name                 	Profile Id                          
 	
- OAS Best Practices	 4f98e59d-8efb-420f-ac95-9cd0af15bd45
+Minimum Security Requirements	1f418cf4-b870-4b31-8734-f55f28d45f8f
+Best Practices               	19fb211b-8775-43cc-865a-46228921d6ed
+New Best Practices           	4eaf9176-3ef9-4021-a67c-6e4bc10d3763
+OAS Standards                	51ae8795-2278-407e-942f-becba29af986
 
 ----
 // end::governance-profile-list[]
@@ -432,11 +435,13 @@ These are the asset's identifiers. See <<exchange-asset-identifiers>>.
 |The `description` option is followed by a string that is the new governance profile description.
 |===
 
-*Example command:*
+*Example commands:*
 
 [source,copy]
 ----
-anypoint-cli governance profile update 51f9f94c-fb0c-43d4-9895-22c9e64f1537 --profile-name "New Name"
+anypoint-cli governance profile update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
+
+anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
 ----
 
 *Example output:*
