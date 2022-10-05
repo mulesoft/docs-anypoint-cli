@@ -8,7 +8,7 @@
 | <<datagraph sources add>> | Adds an API source 
 | <<datagraph sources promote>> | Promotes an API source
 | <<datagraph sources update>> | Updates an API source
-| <<datagraph scale>> | Configures the number of replicas deployed for a DataGraph application
+| <<datagraph scale>> | Configures the number and size of deployed replicas
 | <<datagraph schema-download>> | Downloads the unified schema
 | <<datagraph sources delete>> | Deletes an API source
 | <<datagraph sources get>> | Gets an API source
