@@ -2,17 +2,16 @@
 
 // tag::summary[]
 
-
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr cluster add server>> | Adds server to cluster
-|<<runtime-mgr cluster delete>> | Deletes cluster
-|<<runtime-mgr cluster list>> | Lists all clusters in the environment
-|<<runtime-mgr cluster remove server>> | Removes server from a cluster
-|<<runtime-mgr cluster create>> | Creates new cluster
-|<<runtime-mgr cluster describe>> | Describes server cluster
-|<<runtime-mgr cluster modify>> | Modifies cluster
+|xref:server-clusters.adoc#runtime-mgr-cluster-add-server[runtime-mgr:cluster:add:server] | Adds server to cluster
+|xref:server-clusters.adoc#runtime-mgr-cluster-delete[runtime-mgr:cluster:delete] | Deletes cluster
+|xref:server-clusters.adoc#runtime-mgr-cluster-list[runtime-mgr:cluster:list] | Lists all clusters in the environment
+|xref:server-clusters.adoc#runtime-mgr-cluster-remove-server[runtime-mgr:cluster:remove:server] | Removes server from a cluster
+|xref:server-clusters.adoc#runtime-mgr-cluster-create[runtime-mgr:cluster:create] | Creates new cluster
+|xref:server-clusters.adoc#runtime-mgr-cluster-describe[runtime-mgr:cluster:describe] | Describes server cluster
+|xref:server-clusters.adoc#runtime-mgr-cluster-modify[runtime-mgr:cluster:modify] | Modifies cluster
 |===
 
 // end::summary[]
@@ -20,58 +19,65 @@
 
 // tag::commands[]
 
-== runtime-mgr cluster add server
+[[runtime-mgr-cluster-add-server]]
+== runtime-mgr:cluster:add:server
 
 ----
-> runtime-mgr cluster add server [options] <clusterId> <serverId>
+> runtime-mgr:cluster:add:server [options] <clusterId> <serverId>
 ----
 
 This command adds the cluster in `clusterId` to the server passed in `serverId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
-== runtime-mgr cluster delete
+[[runtime-mgr-cluster-delete]]
+== runtime-mgr:cluster:delete
 
 ----
-> runtime-mgr cluster delete [options] <clusterId>
+> runtime-mgr:cluster:delete [options] <clusterId>
 ----
 
 This command deletes the cluster passed in `clusterId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-== runtime-mgr cluster list
+[[runtime-mgr-cluster-list]]
+== runtime-mgr:cluster:list
 
 ----
-> runtime-mgr cluster list [options]
+> runtime-mgr:cluster:list [options]
 ----
 
 This command lists all clusters in the environment.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-== runtime-mgr cluster remove server
+This command also accepts the default option `--help`.
+
+[[runtime-mgr-cluster-remove-server]]
+== runtime-mgr:cluster:remove:server
 
 ----
-> runtime-mgr cluster remove server [options] <clusterId> <serverId>
+> runtime-mgr:cluster:remove:server [options] <clusterId> <serverId>
 ----
 
 This command removes the server passed in `serverId` from the cluster passed in `clusterId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
-== runtime-mgr cluster create
+[[runtime-mgr-cluster-create]]
+== runtime-mgr:cluster:create
 
 ----
-> runtime-mgr cluster create [options] <name>
+> runtime-mgr:cluster:create [options] <name>
 ----
 
 This command creates a cluster using the id passed in `name`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 [%header,cols="30,70"]
 |===
 |Value | Description
@@ -79,25 +85,29 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |`--server <id:ip>` | Pair of server ID and IP address. Latter is optional for multicast cluster. Provide multiple values to add multiple servers
 |===
 
-== runtime-mgr cluster describe
+[[runtime-mgr-cluster-describe]]
+== runtime-mgr:cluster:describe
 
 ----
-> runtime-mgr cluster describe [options] <clusterId>
+> runtime-mgr:cluster:describe [options] <clusterId>
 ----
 
 This command describes the cluster passed in `clusterId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-== runtime-mgr cluster modify
+This command also accepts the default option `--help`.
+
+[[runtime-mgr-cluster-modify]]
+== runtime-mgr:cluster:modify
 
 ----
-> runtime-mgr cluster modify [options] <clusterId>
+> runtime-mgr:cluster:modify [options] <clusterId>
 ----
 
 This command modifies the cluster passed in `clusterId`. +
 In order to update the id for the cluster, you need to pass the  `--name` option.
 
-Besides the `--name` option, this command also takes the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+Besides the `--name` option, this command also has the default `--help`,and `-f`/`--fields` options.
 
 // end::commands[]
