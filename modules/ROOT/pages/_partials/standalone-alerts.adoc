@@ -6,10 +6,10 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr standalone-alert describe>> | Describes an alert
-|<<runtime-mgr standalone-alert create>> | Creates new alert for standalone runtime
-|<<runtime-mgr standalone-alert modify>> | Modifies alert for standalone runtime
-|<<runtime-mgr standalone-alert list>> | Lists all alerts for standalone runtimes in the environment
+|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-describe[runtime-mgr:standalone-alert:describe] | Describes an alert
+|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-create[runtime-mgr:standalone-alert:create] | Creates new alert for standalone runtime
+|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-modify[runtime-mgr:standalone-alert:modify] | Modifies alert for standalone runtime
+|xref:standalone-alerts.adoc#runtime-mgr-standalone-alert-list[runtime-mgr:standalone-alert:list] | Lists all alerts for standalone runtimes in the environment
 |===
 
 // end::summary[]
@@ -17,27 +17,31 @@
 
 // tag::commands[]
 
-== runtime-mgr standalone-alert describe
+[[runtime-mgr-standalone-alert-describe]]
+== runtime-mgr:standalone-alert:describe
 
 ----
-> runtime-mgr standalone-alert describe [options] <alertId>
+> runtime-mgr:standalone-alert:describe [options] <alertId>
 ----
 
 This command describes the alert passed in `alertId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-== runtime-mgr standalone-alert create
+This command also accepts the default option `--help`.
+
+[[runtime-mgr-standalone-alert-create]]
+== runtime-mgr:standalone-alert:create
 
 ----
-> runtime-mgr standalone-alert create [options] <name>
+> runtime-mgr:standalone-alert:create [options] <name>
 ----
 
 This command creates a new alert for a standalone runtime with the ID passed in `name`.
 The alert `name` is limited to 256 characters.
 
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30,70"]
 |===
@@ -55,15 +59,16 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--email [emailAddress]` | Email address to send alert notification to. Can be used multiple times to specify up to 20 email addresses.
 |===
 
-== runtime-mgr standalone-alert modify
+[[runtime-mgr-standalone-alert-modify]]
+== runtime-mgr:standalone-alert:modify
 
 ----
-> runtime-mgr standalone-alert modify [options] <alertId>
+> runtime-mgr:standalone-alert:modify [options] <alertId>
 ----
 
 This command modifies the alert passed in `alertId`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30,70"]
 |===
@@ -82,15 +87,18 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--email [emailAddress]` | Email address to send alert notification to. Can be used multiple times to specify up to 20 email addresses.
 |===
 
-== runtime-mgr standalone-alert list
+[[runtime-mgr-standalone-alert-list]]
+== runtime-mgr:standalone-alert:list
 
 ----
-> runtime-mgr standalone-alert list [options]
+> runtime-mgr:standalone-alert:list [options]
 ----
 
 This command lists all alerts for standalone Mules in the current environment.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+
+This command also accepts the default option `--help`.
 
 // end::commands[]
 

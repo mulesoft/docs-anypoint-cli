@@ -5,48 +5,50 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<api-mgr alert add>> | Creates an API instance alert
-|<<api-mgr alert list>> | Lists alerts for an API instance
-|<<api-mgr api change-specification>> | Changes the asset version for an API instance by choosing a new version from Exchange
-|<<api-mgr api classify>> |Classifies an API instance in a given environment
-|<<api-mgr api delete>> | Deletes an API
-|<<api-mgr api deploy>> | Deploys an API to CloudHub, hybrid server, or Runtime Fabric
-|<<api-mgr api deprecate>> | Deprecates an API instance
-|<<api-mgr api describe>> | Shows details of an API
-|<<api-mgr api download-proxy>> | Downloads the API proxy ZIP file to a local directory
-|<<api-mgr api edit>> | Edits an API instance
-|<<api-mgr api list>> | Lists all APIs in API Manager 2.x
-|<<api-mgr api manage>> | Manages a new API, API version, or new API instance with an asset from Exchange
-|<<api-mgr api promote>> | Promotes an API instance from source environment
-|<<api-mgr api redeploy>> | Redeploys an API to CloudHub, Hybrid server, or Runtime Fabric
-|<<api-mgr api undeprecate>> | Undeprecates an API instance
-|<<api-mgr contract delete>> | Deletes a given API contract
-|<<api-mgr contract list>> | Lists all contracts to a given API instance.
-|<<api-mgr policy apply>> | Applies a policy to a given API instance
-|<<api-mgr policy describe>> | Shows the description and available configuration properties of a given policy template
-|<<api-mgr policy disable>> | Disables policy from a given API instance
-|<<api-mgr policy edit>> | Edits the policy configuration of a given API instance
-|<<api-mgr policy enable>> | Enables a policy on a given API instance
-|<<api-mgr policy list>> | Lists policies
-|<<api-mgr policy remove>> | Removes a policy from a given API instance
-|<<api-mgr tier add>> | Creates an SLA tier
-|<<api-mgr tier copy>> | Copies an SLA tier from source to a target API Instance
-|<<api-mgr tier delete>> | Deletes an SLA tier from an API instance
-|<<api-mgr tier list>> | Lists the SLA tiers of an API instance
+|xref:api-mgr.adoc#api-mgr-alert-add[api-mgr:alert:add] | Creates an API instance alert
+|xref:api-mgr.adoc#api-mgr-alert-list[api-mgr:alert:list] | Lists alerts for an API instance
+|xref:api-mgr.adoc#api-mgr-api-change-specification[api-mgr:api:change-specification] | Changes the asset version for an API instance by choosing a new version from Exchange
+|xref:api-mgr.adoc#api-mgr-api-classify[api-mgr:api:classify] |Classifies an API instance in a given environment
+|xref:api-mgr.adoc#api-mgr-api-delete[api-mgr:api:delete] | Deletes an API
+|xref:api-mgr.adoc#api-mgr-api-deploy[api-mgr:api:deploy] | Deploys an API to CloudHub, hybrid server, or Runtime Fabric
+|xref:api-mgr.adoc#api-mgr-api-deprecate[api-mgr:api:deprecate] | Deprecates an API instance
+|xref:api-mgr.adoc#api-mgr-api-describe[api-mgr:api:describe] | Shows details of an API
+|xref:api-mgr.adoc#api-mgr-api-download-proxy[api-mgr:api:download-proxy] | Downloads the API proxy ZIP file to a local directory
+|xref:api-mgr.adoc#api-mgr-api-edit[api-mgr:api:edit] | Edits an API instance
+|xref:api-mgr.adoc#api-mgr-api-list[api-mgr:api:list] | Lists all APIs in API Manager 2.x
+|xref:api-mgr.adoc#api-mgr-api-manage[api-mgr:api:manage] | Manages a new API, API version, or new API instance with an asset from Exchange
+|xref:api-mgr.adoc#api-mgr-api-promote[api-mgr:api:promote] | Promotes an API instance from source environment
+|xref:api-mgr.adoc#api-mgr-api-redeploy[api-mgr:api:redeploy] | Redeploys an API to CloudHub, Hybrid server, or Runtime Fabric
+|xref:api-mgr.adoc#api-mgr-api-undeprecate[api-mgr:api:undeprecate] | Undeprecates an API instance
+|xref:api-mgr.adoc#api-mgr-contract-delete[api-mgr:contract:delete] | Deletes a given API contract
+|xref:api-mgr.adoc#api-mgr-contract-list[api-mgr:contract:list] | Lists all contracts to a given API instance.
+|xref:api-mgr.adoc#api-mgr-policy-apply[api-mgr:policy:apply] | Applies a policy to a given API instance
+|xref:api-mgr.adoc#api-mgr-policy-describe[api-mgr:policy:describe] | Shows the description and available configuration properties of a given policy template
+|xref:api-mgr.adoc#api-mgr-policy-disable[api-mgr:policy:disable] | Disables policy from a given API instance
+|xref:api-mgr.adoc#api-mgr-policy-edit[api-mgr:policy:edit] | Edits the policy configuration of a given API instance
+|xref:api-mgr.adoc#api-mgr-policy-enable[api-mgr:policy:enable] | Enables a policy on a given API instance
+|xref:api-mgr.adoc#api-mgr-policy-list[api-mgr:policy:list] | Lists policies
+|xref:api-mgr.adoc#api-mgr-policy-remove[api-mgr:policy:remove] | Removes a policy from a given API instance
+|xref:api-mgr.adoc#api-mgr-tier-add[api-mgr:tier:add] | Creates an SLA tier
+|xref:api-mgr.adoc#api-mgr-tier-copy[api-mgr:tier:copy] | Copies an SLA tier from source to a target API Instance
+|xref:api-mgr.adoc#api-mgr-tier-delete[api-mgr:tier:delete] | Deletes an SLA tier from an API instance
+|xref:api-mgr.adoc#api-mgr-tier-list[api-mgr:tier:list] | Lists the SLA tiers of an API instance
 |===
 
 // end::summary[]
 
 // tag::commands[]
-== api-mgr alert add
+
+[[api-mgr-alert-add]]
+== api-mgr:alert:add
 
 ----
-> api-mgr alert add [options] <apiInstanceId> <name>
+> api-mgr:alert:add [options] <apiInstanceId> <name>
 ----
 
 This command creates an API instance alert with the name passed in `name` for the API Instance Id passed in `<apiInstanceId>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -99,58 +101,63 @@ You can pass this option multiple times to specify multiple codes.
 | ID of a policy applied to API instance to trigger `response-code` alert type.
 |===
 
-== api-mgr alert list
+[[api-mgr-alert-list]]
+== api-mgr:alert:list
 
 ----
-> api-mgr alert list [options] <apiInstanceId>
+> api-mgr:alert:list [options] <apiInstanceId>
 ----
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Value |Description | Example
-| `--offset` | Offsets the amount of APIs passed | `api-mgr alert list --offset 3`
-| `--sort` | Sorts the results in the field name passed | `api-mgr alert list --sort "Latest Version"`
+|`--output`| Specify the response format. |`api-mgr:alert:list --output json`
+| `--offset` | Offsets the amount of APIs passed | `api-mgr:alert:list --offset 3`
+| `--sort` | Sorts the results in the field name passed | `api-mgr:alert:list --sort "Latest Version"`
 |===
 
-
-== api-mgr api change-specification
+[[api-mgr-api-change-specification]]
+== api-mgr:api:change-specification
 
 ----
-> api-mgr api change-specification [options] <apiInstanceId> <assetVersion>
+> api-mgr:api:change-specification [options] <apiInstanceId> <assetVersion>
 ----
 
 Changes the asset version for the API instance passed in `<apiInstanceId`,  by choosing a new version from Exchange passed in `<assetVersion>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`
 
-== api-mgr api classify
+[[api-mgr-api-classify]]
+== api-mgr:api:classify
 
 ----
-> api-mgr api classify [options] <destEnvName> <apiInstanceId>
+> api-mgr:api:classify [options] <destEnvName> <apiInstanceId>
 ----
 
 Classifies the API instance passed in `<apiInstanceId>` in the  environment passed in `<destEnvName>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`
 
-== api-mgr api delete
+[[api-mgr-api-delete]]
+== api-mgr:api:delete
 
 ----
-> api-mgr api delete [options] <apiInstanceId>
+> api-mgr:api:delete [options] <apiInstanceId>
 ----
 
 This command deletes the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help` 
 
-== api-mgr api deploy
+[[api-mgr-api-deploy]]
+== api-mgr:api:deploy
 
 ----
-> api-mgr api deploy [options] <apiInstanceId>
+> api-mgr:api:deploy [options] <apiInstanceId>
 ----
 
 This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the options described below.
@@ -158,88 +165,94 @@ This command deploys the API instance passed in <apiInstanceId> to the deploymen
 [NOTE]
 This command is only supported for endpoints with proxy.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Value |Description | Example
 | `target <id>`
 | Hybrid or RTF deployment target ID. +
-| `api-mgr api deploy --target 1598794 643404`
+| `api-mgr:api:deploy --target 1598794 643404`
 
 | `applicationName <name>`
 | Application name
-| `api-mgr api deploy --applicationName myMuleApp 643404`
+| `api-mgr:api:deploy --applicationName myMuleApp 643404`
 
 | `environmentName <name>`
 | Target environment name. Should only be used when deploying APIs from unclassified environments.
-| `api-mgr api deploy --environmentName TestEnv 643404`
+| `api-mgr:api:deploy --environmentName TestEnv 643404`
 
 | `gatewayVersion <version>`
 | The CloudHub Gateway version
-| `api-mgr api deploy --gatewayVersion: 9.9.9.9  643404`
+| `api-mgr:api:deploy --gatewayVersion: 9.9.9.9  643404`
 
 | `overwrite`
 | Update application if it exists. +
-It takes `true` or `false` values.
-| `api-mgr api deploy --overwrite: true  643404`
+It has `true` or `false` values.
+| `api-mgr:api:deploy --overwrite: true  643404`
 
 |===
 
-== api-mgr api deprecate
+[[api-mgr-api-deprecate]]
+== api-mgr:api:deprecate
 
 ----
-> api-mgr api deprecate [options] <apiInstanceId>
+> api-mgr:api:deprecate [options] <apiInstanceId>
 ----
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help` 
 
-== api-mgr api describe
+[[api-mgr-api-describe]]
+== api-mgr:api:describe
 
 ----
-> api-mgr api describe [options] <apiInstanceId>
+> api-mgr:api:describe [options] <apiInstanceId>
 ----
 
 Shows details of the API Instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-== api-mgr api download-proxy
+This command also accepts the default option `--help`
+
+[[api-mgr-api-download-proxy]]
+== api-mgr:api:download-proxy
 
 ----
-> api-mgr api download-proxy [options] <apiInstanceId> <targetPath>
+> api-mgr:api:download-proxy [options] <apiInstanceId> <targetPath>
 ----
 
 This command downloads the API proxy ZIP file of the API Instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes a `gatewayVersion` option to specify the gateway version you want to download.
-For example: `api-mgr api download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
+Besides the default `--help` option, this command also accepts a `gatewayVersion` option to specify the gateway version you want to download.
+For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
-== api-mgr api edit
+[[api-mgr-api-edit]]
+== api-mgr:api:edit
 
 ----
-> api-mgr api edit [options] <apiInstanceId>
+> api-mgr:api:edit [options] <apiInstanceId>
 ----
 
 Edits the API instance passed in `<apiInstanceId>`. +
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether you are managing this API in Mule 4 or above. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `--deploymentType <value>`
 | Deployment type. +
@@ -278,15 +291,16 @@ Supported values are `http`, or `https`.
 
 |===
 
-== api-mgr api list
+[[api-mgr-api-list]]
+== api-mgr:api:list
 
 ----
-> api-mgr api list [options]
+> api-mgr:api:list [options]
 ----
 
 Lists all APIs in API Manager 2.x.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -296,18 +310,20 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--instanceLabel <value>` | API instance label by which  filter results.
 | `--limit <num>`           | Number of results to retrieve.
 | `--offset` | Offsets the amount of APIs passed
+|`--output` | Specify the response format.
 | `--sort` | Sorts the results in the field name passed
 |===
 
-== api-mgr api manage
+[[api-mgr-api-manage]]
+== api-mgr:api:manage
 
 ----
-> api-mgr api manage [options] <assetId> <assetVersion>
+> api-mgr:api:manage [options] <assetId> <assetVersion>
 ----
 
 Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -318,15 +334,15 @@ Accepted values are `http`, `raml`, or `wsdl`.
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether you are managing this API in Mule 4 or above. +
-This option takes `true` or `false` values.
+This option has `true` or `false` values.
 
 | `--deploymentType <value>`
 | Deployment type. +
@@ -340,7 +356,7 @@ Supported values are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--scheme <value>`
 | Proxy scheme. +
-Supported values are `http`, or `https`.
+Supported values are `http` or `https`.
 
 | `--port <value>`
 | Proxy port.
@@ -364,43 +380,43 @@ Supported values are `http`, or `https`.
 | WSDL service port.
 |===
 
-
-== api-mgr api promote
+[[api-mgr-api-promote]]
+== api-mgr:api:promote
 
 ----
-> api-mgr api promote [options] <apiInstanceId> <sourceEnvId>
+> api-mgr:api:promote [options] <apiInstanceId> <sourceEnvId>
 ----
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-a, --copyAlerts`
 | Indicates whether to copy alerts. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 
 | `-p, --copyPolicies`
 |Indicates whether to copy policies. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 
 | `-t, --copyTiers`
 |Indicates whether to copy tiers. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 |===
 
-
-== api-mgr api redeploy
+[[api-mgr-api-redeploy]]
+== api-mgr:api:redeploy
 
 ----
-> api-mgr api redeploy [options] <apiInstanceId>
+> api-mgr:api:redeploy [options] <apiInstanceId>
 ----
 
 Redeploys the API Instance passed in `<apiInstanceId>` to the deployment target set up in the options described below.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -420,34 +436,36 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 | `--overwrite`
 | Update application if exists. +
-This option takes `true` or `false` values. Default Value is `true`
+This option has `true` or `false` values. Default Value is `true`
 |===
 
-
-== api-mgr api undeprecate
+[[api-mgr-api-undeprecate]]
+== api-mgr:api:undeprecate
 
 ----
-> api-mgr api undeprecate [options] <apiInstanceId>
+> api-mgr:api:undeprecate [options] <apiInstanceId>
 ----
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`
 
-== api-mgr contract delete
+[[api-mgr-contract-delete]]
+== api-mgr:contract:delete
 
 ----
-> api-mgr contract delete [options] <apiInstanceId> <clientId>
+> api-mgr:contract:delete [options] <apiInstanceId> <clientId>
 ----
 
 This command deletes the contract between the API Instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`
 
-== api-mgr contract list
+[[api-mgr-contract-list]]
+== api-mgr:contract:list
 
 ----
-> api-mgr contract list [options] <apiInstanceId> [searchText]
+> api-mgr:contract:list [options] <apiInstanceId> [searchText]
 ----
 
 Lists all contracts of the API passed in `<apiInstanceId>`.
@@ -455,20 +473,22 @@ Lists all contracts of the API passed in `<apiInstanceId>`.
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Value |Description |Example
-|`--limit` | Number of results to retrieve | `exchange asset list --limit 2`
-|`--offset` | Offsets the amount of APIs passed | `api-mgr contract list --offset 3 643404`
-|`--sort` | Sorts the results in the field name passed | `api-mgr contract list --sort "Latest Version" 643404`
+|`--limit` | Number of results to retrieve | `exchange:asset:list --limit 2`
+|`--offset` | Offsets the amount of APIs passed | `api-mgr:contract:list --offset 3 643404`
+| `--output` |Specify the response format. | `api-mgr:contract:list --output json`
+|`--sort` | Sorts the results in the field name passed | `api-mgr:contract:list --sort "Latest Version" 643404`
 |===
 
-== api-mgr policy apply
+[[api-mgr-policy-apply]]
+== api-mgr:policy:apply
 
 ----
-> api-mgr policy apply [options] <apiInstanceId> <policyId>
+> api-mgr:policy:apply [options] <apiInstanceId> <policyId>
 ----
 
 Applies the policy passed in `<policyId>` to the API instance passed in `<apiInstanceId>`.
@@ -485,26 +505,40 @@ If no value is provided, this value defaults to MuleSoft group ID.
 
 | `-c, --config [configJSON]`
 | Pass the configuration data as a JSON string. +
-For example, `api-mgr policy apply -c '{"property": "value"}'`
+For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 
-| `--configFlag [file]`
+| `--configFile [file]`
 | Pass the configuration data as a file. +
 For example, `api-mgr policy apply --configFile ./config.json`
 
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings. +
-For example `api-mgr policy apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
+For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
 |===
 
-== api-mgr policy describe
+The following example defines a rate limit of one request every ten seconds:
 
 ----
-> api-mgr policy describe [options] <policyId>
+{
+        "rateLimits": [{
+            "maximumRequests": 1,
+            "timePeriodInMilliseconds": 10000
+        }],
+        "clusterizable": true,
+        "exposeHeaders": false
+    }
+----
+
+[[api-mgr-policy-describe]]
+== api-mgr:policy:describe
+
+----
+> api-mgr:policy:describe [options] <policyId>
 ----
 
 This command shows the description and available configuration properties of the policy passed in `<policyId>`. +
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -515,89 +549,96 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--groupId <value>`
 | Mule4 policy group ID. +
 Defaults to MuleSoft group ID when not provided.
+| `--output` <value>. | Specify the response format. + 
+Supported values are `table` (default) and `json`
+
 |===
 
-
-== api-mgr policy disable
+[[api-mgr-policy-disable]]
+== api-mgr:policy:disable
 
 ----
-> api-mgr policy disable [options] <apiInstanceId> <policyId>
+> api-mgr:policy:disable [options] <apiInstanceId> <policyId>
 ----
 
 This command disables the policy passed in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`
 
-== api-mgr policy edit
+[[api-mgr-policy-edit]]
+== api-mgr:policy:edit
 
 ----
-> api-mgr policy edit [options] <apiInstanceId> <policyId>
+> api-mgr:policy:edit [options] <apiInstanceId> <policyId>
 ----
 
 This command edits the policy configuration passed in `<policyId>` of the API Instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-c, --config [configJSON`]
 | Pass the configuration data as a JSON string. +
-For example, `api-mgr policy apply -c '{"property": "value"}'`
+For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings. +
-For example `api-mgr policy apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
+For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
 |===
 
-== api-mgr policy enable
+[[api-mgr-policy-enable]]
+== api-mgr:policy:enable
 
 ----
-> api-mgr policy enable [options] <apiInstanceId> <policyId>
+> api-mgr:policy:enable [options] <apiInstanceId> <policyId>
 ----
 
 This command enables the policy passed in `<policyId>` for the API Instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help` 
 
-== api-mgr policy list
+[[api-mgr-policy-list]]
+== api-mgr:policy:list
 
 ----
-> api-mgr policy list [options] [apiInstanceId]
+> api-mgr:policy:list [options] [apiInstanceId]
 ----
 
 This command lists all policies for all APIs in API Manager 2.x. +
-When the `[apiInstanceId]` parameter is specified, this command lists the policies applied to that API instance.
+When the `[apiInstanceId]` option is specified, this command lists the policies applied to that API instance.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes the `-m, --muleVersion4OrAbove` option which takes `true` or `false` values. +
+Besides the default `--help` option, this command also accepts the `-m, --muleVersion4OrAbove` option which has `true` or `false` values. +
 
-
-== api-mgr policy remove
+[[api-mgr-policy-remove]]
+== api-mgr:policy:remove
 
 ----
-> api-mgr policy remove [options] <apiInstanceId> <policyId>
+> api-mgr:policy:remove [options] <apiInstanceId> <policyId>
 ----
 
 This command removes the policy specified in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help` 
 
-== api-mgr tier add
+[[api-mgr-tier-add]]
+== api-mgr:tier:add
 
 ----
-> api-mgr tier add [options] <apiInstanceId>
+> api-mgr:tier:add [options] <apiInstanceId>
 ----
 
 This command creates an SLA tier for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-a, --autoApprove`
 | Indicates whether the SAL tier should be auto-approved. +
-This command only takes `true` or `false` values.
+This command only has `true` or `false` values.
 
 | `--name <value>`
 | Tier name
@@ -628,42 +669,47 @@ For example: `-l true,100,sec -l false,20,min`
 
 |===
 
-
-== api-mgr tier copy
+[[api-mgr-tier-copy]]
+== api-mgr:tier:copy
 
 ----
-> api-mgr tier copy [options] <sourceAPIInstanceId> <targetAPIInstanceId>
+> api-mgr:tier:copy [options] <sourceAPIInstanceId> <targetAPIInstanceId>
 ----
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help` 
 
-== api-mgr tier delete
+[[api-mgr-tier-delete]]
+== api-mgr:tier:delete
 
 ----
-> api-mgr tier delete [options] <apiInstanceId> <tierId>
+> api-mgr:tier:delete [options] <apiInstanceId> <tierId>
 ----
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option: `--help` `
 
-== api-mgr tier list
+[[api-mgr-tier-list]]
+== api-mgr:tier:list
 ----
-> api-mgr tier list [options] <apiInstanceId> [searchText]
+> api-mgr:tier:list [options] <apiInstanceId> [searchText]
 ----
 
 This command lists the SLA tiers of the  API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
+Besides the default `--help` option, this command also accepts:
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
 |Value |Description | Example
-|`--limit` | Number of results to retrieve | `api-mgr tier list --limit 2`
-|`--offset` | Offsets the amount of APIs passed | `api-mgr tier list --offset 3`
-|`--sort` | Sorts the results in the field name passed | `api-mgr tier list --sort "Latest Version"`
+|`--limit` | Number of results to retrieve | `api-mgr:tier:list --limit 2`
+|`--offset` | Offsets the amount of APIs passed | `api-mgr:tier:list --offset 3`
+| `--output`| Specify the response format. |  `api-mgr:tier:list --output json`
+|`--sort` | Sorts the results in the field name passed | `api-mgr:tier:list --sort "Latest Version"`
+
+
 |===
 
 // end::commands[]
