@@ -1,5 +1,5 @@
 = Anypoint CLI 4.x List of Commands
-//:page-aliases: runtime-manager::anypoint-platform-cli-commands.adoc, env-business-groups.adoc
+:page-aliases: runtime-manager::anypoint-platform-cli-commands.adoc, env-business-groups.adoc
 
 
 Anypoint Platform CLI provides the ability to manage these features in Anypoint Platform:
