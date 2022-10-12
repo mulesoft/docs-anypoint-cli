@@ -6,93 +6,80 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr server describe>> | Describes server
-|<<runtime-mgr server modify>> | Modifies server
-|<<runtime-mgr server token>> | Gets server registration token. This token needs to be used to register a new server
-|<<runtime-mgr server delete>> | Deletes server
-|<<runtime-mgr server list>> | Changes an standalone application artifact
-// |<<runtime-mgr server register>> | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
+|xref:servers.adoc#runtime-mgr-server-describe[runtime-mgr:server:describe] | Describes server
+|xref:servers.adoc#runtime-mgr-server-modify[runtime-mgr:server:modify] | Modifies server
+|xref:servers.adoc#runtime-mgr-server-token[runtime-mgr:server:token] | Gets server registration token. This token needs to be used to register a new server
+|xref:servers.adoc#runtime-mgr-server-delete[runtime-mgr:server:delete] | Deletes server
+|xref:servers.adoc#runtime-mgr-server-list[runtime-mgr:server:list] | Changes an standalone application artifact
+// |xref:servers.adoc#runtime-mgr-server-register[runtime-mgr server register] | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
 |===
 
 // end::summary[]
 
 // tag::commands[]
 
-== runtime-mgr server describe
+[[runtime-mgr-server-describe]]
+== runtime-mgr:server:describe
 
 ----
-> runtime-mgr server describe [options] <serverId>
+> runtime-mgr:server:describe [options] <serverId>
 ----
 
 This command describes the server passed in `serverId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-== runtime-mgr server modify
+This command accepts only the default option `--help`.
+
+[[runtime-mgr-server-modify]]
+== runtime-mgr:server:modify
 
 ----
-> runtime-mgr server modify [options] <serverId>
+> runtime-mgr:server:modify [options] <serverId>
 ----
 
 This command modifies the server passed in `serverId`.
 
 In order to update the id for the cluster, you need to pass the  `--name` option.
 
-Besides the `--name` option, this command also takes the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+Besides the `--name` option, this command also has the default `--help`, and `-f`/`--fields` options.
 
-== runtime-mgr server token
+[[runtime-mgr-server-token]]
+== runtime-mgr:server:token
 
 ----
-> runtime-mgr server token [options]
+> runtime-mgr:server:token [options]
 ----
 
 This command gets server registration token. This token needs to be used to register a new server.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
-== runtime-mgr server delete
+[[runtime-mgr-server-delete]]
+== runtime-mgr:server:delete
 
 ----
-> runtime-mgr server delete [options] <serverId>
+> runtime-mgr:server:delete [options] <serverId>
 ----
 
 This command deletes the server passed in `serverId`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-== runtime-mgr server list
+[[runtime-mgr-server-list]]
+== runtime-mgr:server:list
 
 ----
-> runtime-mgr server list [options]
+> runtime-mgr:server:list [options]
 ----
 
 This server lists all servers in your environment.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-// TODO: Deprecated server register
-// == runtime-mgr server register
-//
-// [source,Example]
-// ----
-// > runtime-mgr server register [options] <name> <directory>
-// ----
-//
-// This command registers a new server with the name passed in `name`. This command returns a signed certificate which is downloaded to `directory` path.
-//
-// Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this command also takes:
-//
-// [%header,cols="30,70"]
-// |===
-// |Value |Description
-// | --signature <signatureStr> | Signature for Sign Certificate Request.
-// | --mule <version> | Mule version
-// | --gateway <version> | Gateway version
-// |===
-
-
-// end::commands[]
+This command also accepts the default options: `--help`.
+//end::commands[]
 
