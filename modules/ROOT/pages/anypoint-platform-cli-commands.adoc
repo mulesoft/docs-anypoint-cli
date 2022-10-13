@@ -74,19 +74,7 @@ include::anypoint-cli::partial$datagraph.adoc[tag=summary]
 [[datagraph-source]]
 == DataGraph API Source Management
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-| xref:datagraph-source.adoc#datagraph-sources-add[datagraph sources add] | Adds an API source 
-| xref:datagraph-source.adoc#datagraph-sources-promote[datagraph sources promote] | Promotes an API source
-| xref:datagraph-source.adoc#datagraph-sources-update[datagraph sources update] | Updates an API source
-| xref:datagraph-source.adoc#datagraph-scale[datagraph scale] | Scales API calls made to the unified schema
-| xref:datagraph-source.adoc#datagraph-schema-download[datagraph schema-download] | Downloads the unified schema
-| xref:datagraph-source.adoc#datagraph-sources-delete[datagraph sources delete] | Deletes an API source
-| xref:datagraph-source.adoc#datagraph-sources-get[datagraph sources get] | Gets an API source
-| xref:datagraph-source.adoc#datagraph-sources-list[datagraph sources list] | Lists all API sources
-| xref:datagraph-source.adoc#datagraph-describe[datagraph describe] | Returns information about DataGraph
-|===
+include::anypoint-cli::partial$datagraph-source.adoc[tag=summary]
 
 [[design-center]]
 == Design Center Projects
