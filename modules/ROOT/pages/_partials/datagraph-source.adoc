@@ -5,26 +5,26 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-| <<datagraph sources add>> | Adds an API source 
-| <<datagraph sources promote>> | Promotes an API source
-| <<datagraph sources update>> | Updates an API source
-| <<datagraph scale>> | Scales API calls made to the unified schema
-| <<datagraph schema-download>> | Downloads the unified schema
-| <<datagraph sources delete>> | Deletes an API source
-| <<datagraph sources get>> | Gets an API source
-| <<datagraph sources list>> | Lists all API sources
-| <<datagraph describe>> | Returns information about DataGraph
-| <<datagraph validate>> | Validates an API source for the unified schema
+| xref:datagraph-source.adoc#datagraph-sources-add[datagraph:sources:add] | Adds an API source 
+|  xref:datagraph-source.adoc#datagraph-sources-promote[datagraph:sources:promote] | Promotes an API source
+|  xref:datagraph-source.adoc#datagraph-sources-update[datagraph:sources:update]  | Updates an API source
+|  xref:datagraph-source.adoc#datagraph-scale[datagraph:scale]  | Scales API calls made to the unified schema
+| xref:datagraph-source.adoc#datagraph-schema-download[datagraph:schema:download]  | Downloads the unified schema
+|  xref:datagraph-source.adoc#datagraph-sources-delete[datagraph:sources:delete] | Deletes an API source
+|  xref:datagraph-source.adoc#datagraph-sources-get[datagraph:sources:get]  | Gets an API source
+|  xref:datagraph-source.adoc#datagraph-sources-list[datagraph:sources:list] | Lists all API sources
+|  xref:datagraph-source.adoc#datagraph-describe[datagraph:describe]  | Returns information about DataGraph
+|  xref:datagraph-source.adoc#datagraph-validate[datagraph:validate]  | Validates an API source for the unified schema
 |===
 
 // end::summary[]
 
 // tag::commands[]
-
-== datagraph sources add
+[[datagraph-sources-add]]
+== datagraph:sources:add
 
 ----
-> datagraph sources add <g/a/v>
+> datagraph:sources:add <g/a/v>
 ----
 
 [NOTE]
@@ -34,7 +34,7 @@ DataGraph supports only `stable` state API versions.
 
 This command adds an API source, specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command uses the current organization ID. 
  
-In addition to the default `--help`, `-f/--fields`, and `--verbose` options, this command accepts the following options:
+In addition to the default `--help`option, this command also accepts:
 
 [%header,cols="35a,65a"]
 |===
@@ -100,7 +100,7 @@ All headers and query params defined in the command line, and all header and que
 
 [source,copy]
 ----
-datagraph sources add 18dc11ee-4a09-4aae-9c6c-4371a87eafa8/product-api/1.0.0/  --url http://test.com
+datagraph:sources:add 18dc11ee-4a09-4aae-9c6c-4371a87eafa8/product-api/1.0.0/  --url http://test.com
 ----
 
 === Example Output
@@ -122,16 +122,16 @@ datagraph sources add 18dc11ee-4a09-4aae-9c6c-4371a87eafa8/product-api/1.0.0/  -
   "origin": "CLI"
 }
 ----
- 
-== datagraph sources promote
+ [[datagraph-sources-promote]]
+== datagraph:sources:promote
 
 ----
-> datagraph sources promote <sourceId> <target-EnvID>
+> datagraph:sources:promote <sourceId> <target-EnvID>
 ----
 
 This command promotes an API source `<sourceId>` to the target environment `<targetEnv>`.
 
-In addition to the default `--help`, `-f/--fields`, and `--verbose` options, this command accepts the following options:
+In addition to the default `--help`option, this command also accepts:
 
 [%header,cols="35a,65a"]
 |===
@@ -200,7 +200,7 @@ In this example, the `environmentId` is changed after running the `promote` comm
 
 [source,copy]
 ----
-datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd e7e8da65-9cf1-569e-c9d2-brd2r0rc7rd6 --auth-none
+datagraph:sources:promote d1d27987-939a-4b41-b3ef-411568ee5bdd e7e8da65-9cf1-569e-c9d2-brd2r0rc7rd6 --auth-none
 ----
 
 === Example Output
@@ -222,11 +222,11 @@ datagraph sources promote d1d27987-939a-4b41-b3ef-411568ee5bdd e7e8da65-9cf1-569
   "origin": "CLI"
 }
 ----
-
-== datagraph sources update 
+[[datagraph-sources-update]]
+== datagraph:sources:update 
 
 ----
-> datagraph sources update <sourceId>
+> datagraph:sources:update <sourceId>
 ----
 
 [NOTE]
@@ -236,7 +236,7 @@ DataGraph supports only `stable` state API versions. The `update` command update
 
 This command updates the version of an API source `<sourceId>`. 
 
-In addition to the default `--help`, `-f/--fields`, and `--verbose` options, this command accepts the following options:
+In addition to the default `--help`option, this command also accepts:
 
 [%header,cols="35a,65a"]
 |===
@@ -308,7 +308,7 @@ The following command updates the URL of the source API and changes its authenti
 
 [source,copy]
 ----
-> datagraph sources update b6cb82a6-51dc-4968-861a-aa04447c3442 --url http://test2.com --version 1.0.0 --auth-basic --credentials client-test:client-secret
+> datagraph:sources:update b6cb82a6-51dc-4968-861a-aa04447c3442 --url http://test2.com --version 1.0.0 --auth-basic --credentials client-test:client-secret
 ----
 
 === Example Output
@@ -330,22 +330,22 @@ The following command updates the URL of the source API and changes its authenti
   "origin": "CLI"
 }
 ----
-
-== datagraph scale 
+[[datagraph-scale]]
+== datagraph:scale 
 
 ----
-> datagraph scale <concurrent-api-calls>
+> datagraph:scale <concurrent-api-calls>
 ----
 
 This command enables you to configure the number of concurrent API calls permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
 
-This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
+This command accepts only the default option `--help`.
 
 === Example Command
 
 [source,copy]
 ----
-datagraph scale 300
+datagraph:scale 300
 ----
 
 === Example Output
@@ -355,16 +355,16 @@ datagraph scale 300
   "message": "Api calls updated"
 }
 ----
-
-== datagraph schema-download
+[[datagraph-schema-download]]
+== datagraph:schema:download
 
 ----
-> datagraph schema-download
+> datagraph:schema:download
 ----
 
 This command downloads the unified schema for the current environment. 
 
-This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
+This command accepts only the default option `--help`.
 
 === Example Output
 
@@ -398,22 +398,22 @@ type Query {
   ordersProductsByOrderId(productsCounts: Int, orderId: String!): [OrderProduct!]
 }
 ----
-
-== datagraph sources delete
+[[datagraph-sources-delete]]
+== datagraph:sources:delete
 
 ----
-> datagraph sources delete <sourceId>
+> datagraph:sources:delete <sourceId>
 ----
 
 This command deletes the specified API source.
 
-This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
+This command accepts only the default option `--help`.
 
 === Example Command
 
 [source,copy]
 ----
-datagraph sources delete d40df394-785d-4c91-8aeb-f07568dd57c
+datagraph:sources:delete d40df394-785d-4c91-8aeb-f07568dd57c
 ----
 
 === Example Output
@@ -424,22 +424,22 @@ datagraph sources delete d40df394-785d-4c91-8aeb-f07568dd57c
   "sourceId": "620afe93-b196-42eb-ae77-b68a0a937b6a"
 }
 ----
-
-== datagraph sources get 
+[[datagraph-sources-get]]
+== datagraph:sources:get 
 
 ----
-> datagraph sources get <sourceId>
+> datagraph:sources:get <sourceId>
 ----
 
 This command gets the specified API source.
 
-This command takes the default `--help`, `-f/--fields`, `-o/--output`, and `--verbose` options.
+This command accepts only the default option `--help`.
 
 === Example Command
 
 [source,copy]
 ----
-datagraph sources get d1d27987-939a-4b41-b3ef-411568ee5bdd
+datagraph:sources:get d1d27987-939a-4b41-b3ef-411568ee5bdd
 ----
 
 === Example Output
@@ -463,18 +463,17 @@ datagraph sources get d1d27987-939a-4b41-b3ef-411568ee5bdd
   "origin": "CLI"
 }
 ----
-
-== datagraph sources list
+[[datagraph-sources-list]]
+== datagraph:sources:list
 
 [source,copy]
 ----
-> datagraph sources list
+> datagraph:sources:list
 ----
 
 This command lists all API sources for the current environment. 
 
-This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
-
+This command accepts only the default option `--help`.
 
 === Example Output
 
@@ -510,12 +509,12 @@ This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
     "origin": "CLI"
   }
 ----
-  
-== datagraph describe 
+  [[datagraph-describe]]
+== datagraph:describe 
 
 [source,copy]
 ----
-> datagraph describe
+> datagraph:describe
 ----
 
 This command returns the following information about DataGraph:
@@ -527,7 +526,7 @@ This command returns the following information about DataGraph:
 * `envStatus`: Displays the status of the current environment.
 * `dlbEndpoint`: Displays the load balancer endpoint.
 
-This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
+This command accepts only the default option `--help`.
 
 === Example Output
 
@@ -539,11 +538,11 @@ This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
   "envStatus": "STARTED"
 }
 ----
-
-== datagraph validate
+[[datagraph-validate]]
+== datagraph:validate
 
 ----
-> datagraph validate asset <g/a/v>
+> datagraph:validate asset <g/a/v>
 ----
 
 This command validates if it’s possible to add an API source to the unified schema. To do so, the command:
@@ -556,13 +555,13 @@ If any of these steps generates a conflict or error, the command returns the res
 
 The API source to validate is specified by `<g/a/v>`, in which `g` is the group ID, `a` the asset ID, and `v` the version ID of the API source. The group ID is optional. If you don't specify a group ID, the command uses the current organization ID.
 
-This command takes the default `--help`, `-f/--fields`, and `--verbose` options.
+This command accepts only the default option `--help`.
 
 === Example Command
 
 [source,copy]
 ----
-datagraph validate asset 73b0d8f2-5a2f-4107-884d-fcd80f30bc51/sales-api/1.0.0
+datagraph:validate:asset 73b0d8f2-5a2f-4107-884d-fcd80f30bc51/sales-api/1.0.0
 ----
 
 === Example Output
