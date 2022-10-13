@@ -69,7 +69,7 @@ include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
 [[datagraph-load-balancers]]
 == DataGraph Load Balancers
 
-include::anypoint-cli::partial$datagraph.adoc[tag=summary]
+include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
 
 [[datagraph-source]]
 == DataGraph API Source Management
