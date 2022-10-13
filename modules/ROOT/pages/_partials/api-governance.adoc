@@ -311,6 +311,10 @@ anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b
  Filter     	tag:best    
 ----
 
+=== Limitations
+
+You cannot configure notifications using the `governance profile create` command. After you create a profile using the CLI, you can configure notifications by editing the profile in the API Governance console. See xref:api-governance::create-profiles.adoc#update-a-governance-profile-using-the-api-governance-console[Update a Governance Profile Using the API Governance Console].
+
 // end::governance-profile-create[]
 
 // tag::governance-profile-delete[]
@@ -449,6 +453,10 @@ anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --cr
 ----
  Profile updated 51f9f94c-fb0c-43d4-9895-22c9e64f1537
 ----
+
+=== Limitations
+
+You cannot configure notifications using the `governance profile update` command. After you create a profile using the CLI, you can configure notifications by editing the profile in the API Governance console. See xref:api-governance::create-profiles.adoc#update-a-governance-profile-using-the-api-governance-console[Update a Governance Profile Using the API Governance Console].
 
 // end::governance-profile-update[]
 
