@@ -1,5 +1,5 @@
 = CLI for DataGraph Load Balancers
 
-include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
 
-include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$datagraph-load-balancer.adoc[tag=commands]

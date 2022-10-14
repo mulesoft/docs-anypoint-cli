@@ -1,6 +1,5 @@
 = CLI for Local Server Groups
 
-include::anypoint-cli::partial$server-groups.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$server-groups.adoc[tag=summary]
 
-include::anypoint-cli::partial$server-groups.adoc[tag=commands]
-
+include::3.x@anypoint-cli::partial$server-groups.adoc[tag=commands]

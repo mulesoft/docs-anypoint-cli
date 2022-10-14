@@ -1,5 +1,5 @@
 = Use Anypoint CLI
 
-include::anypoint-cli::partial$intro.adoc[tag=syntax]
+include::3.x@anypoint-cli::partial$intro.adoc[tag=syntax]
 
-include::anypoint-cli::partial$intro.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$intro.adoc[tag=commands]
