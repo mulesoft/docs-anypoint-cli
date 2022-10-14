@@ -1,5 +1,5 @@
 = CLI for Local Cluster Servers
 
-include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$server-clusters.adoc[tag=summary]
 
-include::anypoint-cli::partial$server-clusters.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$server-clusters.adoc[tag=commands]

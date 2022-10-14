@@ -51,7 +51,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 [[api-governance]]
 == API Governance
 
-include::anypoint-cli::partial$api-governance.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$api-governance.adoc[tag=summary]
 
 [[api-mgr]]
 == API Manager
@@ -342,4 +342,3 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |Command |Description
 |xref:rtf-instances.adoc#runtime-mgr-rtf-list[runtime-mgr rtf list]  | Lists available Runtime Fabric instances
 |===
-
