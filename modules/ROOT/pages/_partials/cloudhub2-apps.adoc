@@ -1,6 +1,6 @@
 = CLI for Cloudhub 2.0
 
-Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
+Use these commands for applications in Cloudhub 2.0.
 
 // tag::summary[]
 
@@ -8,7 +8,9 @@ Use these commands for applications in Cloudhub 2.0 and Runtime Fabric.
 |===
 |Command |Description
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr:application:delete] | Deletes an application
+// tag::excludeAppDeploy[]
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr:application:deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
+// end::excludeAppDeploy[]
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr:application:describe] | Describes an application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr:application:describe-json] | Describes an application in a raw JSON response
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr:application:download-logs] | Downloads logs of an application from a specification to a specified directory 
@@ -35,6 +37,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command accepts only the default option `--help`.
 
+// tag::excludeAppDeploy[]
 [[runtime-mgr-application-deploy]]
 == runtime-mgr:application:deploy
 
@@ -96,13 +99,8 @@ Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WAR
 Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
-
-
-
-
-
-
 |===
+// end::excludeAppDeploy[]
 
 [[runtime-mgr-application-describe]]
 == runtime-mgr:application:describe 
