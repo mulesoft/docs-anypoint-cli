@@ -2,5 +2,5 @@
 
 Anypoint CLI supports managing these Runtime Fabric features:
 
-* xref:runtime-fabric-apps.adoc[Runtime Fabric App Deployments]
+* xref:runtime-fabric-apps.adoc[Runtime Fabric App Management]
 * xref:rtf-instances.adoc[Runtime Fabric Instances]
