@@ -34,22 +34,7 @@ include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
 [[cloudhub2-apps]]
 == Cloudhub 2.0
 
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr application delete]| Deletes an application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy]|Deploys an application to a specified target using an Exchange application and runs the specified runtime version
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr application describe]| Describes an application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json]| Describes an  application in raw JSON response
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs]|Downloads logs of an application from a specification to a specified directory
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails an application's logs from a specification
-
-
-|===
+include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
 
 [[cloudhub-apps]]
 == CloudHub Applications
@@ -128,12 +113,6 @@ include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
 
 [[rtf-instances]]
 == Runtime Fabric Instances
-
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:rtf-instances.adoc#runtime-mgr-rtf-list[runtime-mgr:rtf:list]  | Lists available Runtime Fabric instances
-|===
 
 include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
 
