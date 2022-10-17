@@ -46,10 +46,10 @@ This command has the `--output` option. Use the `--output` option to specify the
 This command also accepts the default option `--help`
 
 [[cloudhub-load-balancer-describe]]
-== cloudhub load-balancer describe
+== cloudhub:load-balancer:describe
 
 ----
-> cloudhub load-balancer describe [options] <name>
+> cloudhub:load-balancer:describe [options] <name>
 ----
 This command displays information about the load balancer that is specified in `<name>`.
 

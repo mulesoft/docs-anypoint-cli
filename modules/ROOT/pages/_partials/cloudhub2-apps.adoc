@@ -165,7 +165,7 @@ This command accepts only the default option `--help`.
 == runtime-mgr:application:modify
 
 ----
-> runtime-mgr application modify [options] <appID> <certificateName>
+> runtime-mgr:application:modify [options] <appID> <certificateName>
 ----
 Updates the settings of an existing application specified in `<appID>`. 
 To get the `<appID>`, run the `runtime-mgr application list` command.
