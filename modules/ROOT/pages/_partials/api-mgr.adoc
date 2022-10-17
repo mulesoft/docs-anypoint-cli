@@ -129,7 +129,7 @@ Besides the default `--help` option, this command also accepts:
 
 Changes the asset version for the API instance passed in `<apiInstanceId`,  by choosing a new version from Exchange passed in `<assetVersion>`.
 
-This command accepts only the default option `--help`
+This command accepts only the default option `--help`.
 
 [[api-mgr-api-classify]]
 == api-mgr:api:classify
@@ -140,7 +140,7 @@ This command accepts only the default option `--help`
 
 Classifies the API instance passed in `<apiInstanceId>` in the  environment passed in `<destEnvName>`.
 
-This command accepts only the default option `--help`
+This command accepts only the default option `--help`.
 
 [[api-mgr-api-delete]]
 == api-mgr:api:delete
@@ -151,7 +151,7 @@ This command accepts only the default option `--help`
 
 This command deletes the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help` 
+This command accepts only the default option `--help`.
 
 [[api-mgr-api-deploy]]
 == api-mgr:api:deploy
@@ -202,7 +202,7 @@ It has `true` or `false` values.
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help` 
+This command accepts only the default option `--help`.
 
 [[api-mgr-api-describe]]
 == api-mgr:api:describe
@@ -215,7 +215,7 @@ Shows details of the API Instance passed in `<apiInstanceId>`.
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default option `--help`
+This command also accepts the default option `--help`.
 
 [[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
@@ -448,7 +448,7 @@ This option has `true` or `false` values. Default Value is `true`
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`
+This command accepts only the default option `--help`.
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
@@ -459,7 +459,7 @@ This command accepts only the default option `--help`
 
 This command deletes the contract between the API Instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command accepts only the default option `--help`
+This command accepts only the default option `--help`.
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
@@ -563,7 +563,7 @@ Supported values are `table` (default) and `json`
 
 This command disables the policy passed in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`
+This command accepts only the default option `--help`.
 
 [[api-mgr-policy-edit]]
 == api-mgr:policy:edit
@@ -597,7 +597,7 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTempla
 
 This command enables the policy passed in `<policyId>` for the API Instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help` 
+This command accepts only the default option `--help`.
 
 [[api-mgr-policy-list]]
 == api-mgr:policy:list
@@ -620,7 +620,7 @@ Besides the default `--help` option, this command also accepts the `-m, --muleVe
 
 This command removes the policy specified in `<policyId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help` 
+This command accepts only the default option `--help`.
 
 [[api-mgr-tier-add]]
 == api-mgr:tier:add
@@ -678,7 +678,7 @@ For example: `-l true,100,sec -l false,20,min`
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command accepts only the default option `--help` 
+This command accepts only the default option `--help`.
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
@@ -689,7 +689,7 @@ This command accepts only the default option `--help`
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option: `--help` `
+This command accepts only the default option: `--help`.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list

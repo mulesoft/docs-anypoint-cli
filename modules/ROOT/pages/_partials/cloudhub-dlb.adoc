@@ -41,9 +41,9 @@
 ----
 This command lists all load balancers in your Anypoint Platform. It displays load balancer's name, domain, its state, and the Anypoint VPC ID to which the load balancer is bound.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`
+This command also accepts the default option `--help`.
 
 [[cloudhub-load-balancer-describe]]
 == cloudhub:load-balancer:describe
@@ -59,9 +59,9 @@ You can start typing your load balancer's name and press`tab` for Anypoint Platf
 
 It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help` 
+This command also accepts the default option `--help`.
 
 // == cloudhub:load-balancer:describe-json
 
@@ -171,7 +171,7 @@ Your private key file needs to be passphraseless. | `/Users/mule/Documents/priva
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
-Besides the default `--help` and `-o` options, this command also accepts:
+Besides the default `--help` option, this command also accepts:
 
 [%header,cols="15a,85a"]
 |===
@@ -264,7 +264,7 @@ This command accepts only the default option `--help`.
 This command lists the mapping rules for the load balancer specified in `<name>`. +
 If no `certificateName` is passed, Anypoint Platform CLI returns the mappings for the default SSL endpoint.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default option `--help`.
 
@@ -340,7 +340,7 @@ This command accepts only the default option `--help`.
 ----
 This command lists all supported regions.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.   
 
 This command also accepts the default option `--help`.
 

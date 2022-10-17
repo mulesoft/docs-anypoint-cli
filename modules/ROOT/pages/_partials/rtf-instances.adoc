@@ -22,9 +22,9 @@
 This command lists available Runtime Fabric instances.
 
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts  the default option `--help`.
+This command also accepts the default option `--help`.
 
 
 For information about managing your Runtime Fabric instances using the command line, see

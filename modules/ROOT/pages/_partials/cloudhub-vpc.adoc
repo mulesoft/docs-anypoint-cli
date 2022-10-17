@@ -35,7 +35,7 @@
 ----
 This command lists all available Anypoint VPCs. It returns ID, region, and environment of the network and whether it is the default Anypoint VPC or not.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 
 [[cloudhub-vpc-describe]]
@@ -50,7 +50,7 @@ Use the option `-o json` to get the raw JSON response of the application you spe
 
 You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts only the default option `--help`.
 
@@ -67,7 +67,7 @@ An Anypoint VPC needs to be bound to a business group within your organization. 
 
 Besides the default `--help` option, this command also has the `--default` option. When passed, the Anypoint VPC is created as the default Anypoint VPC for the selected environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 
 [[cloudhub-vpc-delete]]
@@ -124,7 +124,7 @@ This command removes the Anypoint VPC defined in `<vpc>` from the business group
 [WARNING]
 This command does not prompt twice before removing the Anypoint VPC from the specified resource. If you send a remove instruction, it does not ask for confirmation.
 
-This command accepts only the default option`--help`.
+This command accepts only the default option `--help`.
 
 [[cloudhub-vpc-dns-servers-set]]
 == cloudhub:vpc:dns-servers:set
@@ -172,7 +172,7 @@ This command accepts only the default option `--help`.
 ----
 This command describes all the firewall rules for the Anypoint VPC defined in `<vpc>`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default option`--help`.
 

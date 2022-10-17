@@ -63,7 +63,7 @@
 > exchange:asset:upload [properties] <assetIdentifier>
 ----
 
-This command uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, example, policy, extension, external-library or connector asset using the ID passed in <assetIdentifier>.
+This command uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, example, policy, extension, external-library or connector asset using the ID passed in `<assetIdentifier>`.
 
 Use the following format for the _assetIdentifier_ argument:
 
@@ -501,7 +501,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default options: `--help`.
+This command also accepts the default option`--help`.
 
 [[exchange-asset-resource-upload]]
 == exchange:asset:resource:upload
