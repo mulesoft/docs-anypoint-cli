@@ -27,7 +27,7 @@
 
 This command describes the server passed in `serverId`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts only the default option `--help`.
 
@@ -78,8 +78,8 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This server lists all servers in your environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default options: `--help`.
+This command also accepts the default option `--help`.
 //end::commands[]
 

@@ -29,7 +29,7 @@
 
 Returns your account information, including your username, your full name, your email address, and the creation date of your account. 
 
- Use the `--output` option to specify the response format. Supported values are `table` (default) and `json` +
+Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default option `--help`.
 
@@ -40,9 +40,9 @@ This command accepts the default option `--help`.
 > account:business-group:list [options]
 ----
 
- Displays all xref:access-management::business-groups.adoc[business groups]. It returns the name of the business group, the type ('Master' or 'Business unit'), and the ID.
+Displays all xref:access-management::business-groups.adoc[business groups]. It returns the name of the business group, the type ('Master' or 'Business unit'), and the ID.
 
- Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default option `--help`.
 
@@ -65,9 +65,9 @@ If your business group or organization name contains spaces, enclose its name be
 ----
 --
 
- Returns the business group owner, type, subscription information, the entitlements of the group and in which environment is running.
+Returns the business group owner, type, subscription information, the entitlements of the group and in which environment is running.
 
- Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default option `--help`.
 
@@ -99,7 +99,7 @@ Supported values for environment types are:
 
 If no type is specified, the command creates a sandbox environment.
 
- Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default option `--help`.
 

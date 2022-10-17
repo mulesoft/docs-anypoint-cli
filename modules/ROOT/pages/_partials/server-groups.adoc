@@ -27,7 +27,7 @@
 
 This command creates a server group with the name passed in `name` using the server Id(s) passed as argument(s) thereafter.
 
-This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts only the default option `--help`.
 
 [[runtime-mgr-servergroup-describe]]
 == runtime-mgr:serverGroup:describe
@@ -38,7 +38,7 @@ This command accepts only the default options: `--help` and `-o`/`--output`
 
 This command describes the server group passed in `serverGroupId`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default option `--help`.
 
@@ -89,7 +89,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command lists all server groups in the environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default option `--help`.
 
