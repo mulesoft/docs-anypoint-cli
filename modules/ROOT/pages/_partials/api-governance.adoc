@@ -124,6 +124,10 @@ types:
   'PatientEntry'
 ----
 
+=== Limitations
+
+The `governance api inspect` command supports only RAML APIs. 
+
 // end::governance-api-inspect[]
 
 // tag::governance-api-validate[]
