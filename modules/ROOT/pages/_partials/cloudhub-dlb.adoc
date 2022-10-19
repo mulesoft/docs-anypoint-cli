@@ -118,7 +118,7 @@ CloudHub does not implement the Online Certificate Status Protocol (OCSP). To ke
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
 
-[[== cloudhub-load-balancer-start]]
+[[cloudhub-load-balancer-start]]
 == cloudhub:load-balancer:start
 
 ----

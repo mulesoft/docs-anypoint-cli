@@ -2,7 +2,7 @@
 
 // tag::summary[]
 
-For the Anypoint Platform CLI to recognize your target servers, each server must be manually registered with the platform.
+CAUTION: For the Anypoint Platform CLI to recognize your target servers, each server must be manually registered with the platform.
 
 [%header,cols="35a,65a"]
 |===

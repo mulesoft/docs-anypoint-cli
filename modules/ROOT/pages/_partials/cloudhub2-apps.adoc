@@ -10,13 +10,13 @@ Use these commands for applications in Cloudhub 2.0.
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr:application:delete] | Deletes an application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr:application:deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr:application:describe] | Describes an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr:application:describe-json] | Describes an application in a raw JSON response
+// | xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr:application:describe-json] | Describes an application in a raw JSON response
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr:application:download-logs] | Downloads logs of an application from a specification to a specified directory 
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-list[runtime-mgr:application:list] | Lists all applications in an organization
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr:application:modify] | Modifies a deployed application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr:application:start] | Starts a stopped application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr:application:stop] | Stops running an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr:application:tail-logs] | Tails an application's logs from a specification 
+| xref:cloudhub2-apps.adoc#runtime-mgr-application-logs[runtime-mgr:application:logs] | Tails an application's logs from a specification 
 |===
 
 // end::summary[]
@@ -34,7 +34,7 @@ Use these commands for applications in Cloudhub 2.0.
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr:application:modify] | Modifies a deployed application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr:application:start] | Starts a stopped application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr:application:stop] | Stops running an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr:application:tail-logs] | Tails an application's logs from a specification 
+| xref:cloudhub2-apps.adoc#runtime-mgr-application-logs[runtime-mgr:application:logs] | Tails an application's logs from a specification 
 |===
 
 // end::summary-rtf[]
@@ -236,17 +236,17 @@ Stops running the application specified in `<appID>`. To get this ID, run the `r
 
 This command accepts only the default option `--help`.
 
-[[runtime-mgr-application-tail-logs]]
-== runtime-mgr:application:tail-logs
+[[runtime-mgr-application-logs]]
+== runtime-mgr:application:logs
 
 ----
-> runtime-mgr:application:tail-logs [options] <appID> <specID> 
+> runtime-mgr:application:logs [options] <appID> <specID> 
 ----
 Tails application logs for the application specificied in `<appID>` from the specification specified in `<specID>`.
 
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-To get the `<specID>` run the `runtime-mgr application describe` command.
+To get the `<specID>`, run the `runtime-mgr application describe` command.
 
 
 This command accepts only the default option `--help`.
@@ -342,15 +342,15 @@ Displays information about the application specified in `<appID>`. To get this I
 
 This command accepts only the default option `--help`.
 
-[[runtime-mgr-application-describe-json]]
-== runtime-mgr:application:describe-json 
+// [[runtime-mgr-application-describe-json]]
+// == runtime-mgr:application:describe-json 
 
-----
-> runtime-mgr:application:describe-json [options] <appID>
-----
-Displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
+//----
+//> runtime-mgr:application:describe-json [options] <appID>
+//----
+//Displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
-This command accepts only the default option `--help`.
+//This command accepts only the default option `--help`. 
 
 [[runtime-mgr-application-download-logs]]
 == runtime-mgr:application:download-logs
@@ -436,9 +436,9 @@ Default: `rolling` | `recreate`
 == runtime-mgr:application:start
 
 ----
-> runtime-mgr:application:start [options] <appid>
+> runtime-mgr:application:start [options] <appID>
 ----
-Starts running the application specified in `<appid>`. To get this ID, run the `runtime-mgr application list` command.
+Starts running the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
 This command accepts only the default option `--help`.
 
@@ -452,17 +452,17 @@ Stops running the application specified in `<appID>`. To get this ID, run the `r
 
 This command accepts only the default option `--help`.
 
-[[runtime-mgr-application-tail-logs]]
-== runtime-mgr:application:tail-logs
+[[runtime-mgr-application-logs]]
+== runtime-mgr:application:logs
 
 ----
-> runtime-mgr:application:tail-logs [options] <appID> <specID> 
+> runtime-mgr:application:logs [options] <appID> <specID> 
 ----
 Tails application logs for the application specificied in `<appID>` from the specification specified in `<specID>`.
 
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-To get the `<specID>` run the `runtime-mgr application describe` command.
+To get the `<specID>`, run the `runtime-mgr application describe` command.
 
 
 This command accepts only the default option `--help`.

@@ -74,9 +74,6 @@ include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
 [[standalone-apps]]
 == Hybrid Applications
 
-[CAUTION]
-For the Anypoint Platform CLI to recognize your target servers, each server needs to be manually registered with the platform.
-
 include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
 
 [[standalone-alerts]]
