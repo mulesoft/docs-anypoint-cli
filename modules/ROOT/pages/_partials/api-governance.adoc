@@ -277,7 +277,7 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest'. 
 
 See <<exchange-asset-identifiers>>.
 
@@ -431,9 +431,9 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |The `profile-name` option is followed by a string that is the new governance profile name.
 
 |--ruleset-gavs <ruleset-gavs>
-|The `ruleset-gavs` option is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+|The `ruleset-gavs` option is a list with the group ID, asset ID, and version (GAV) for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest'.
 
-These are the asset's identifiers. See <<exchange-asset-identifiers>>.
+See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
 |Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 |--tags <tags> *Deprecated*
@@ -529,7 +529,10 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--remote
-|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier (GAV) for the ruleset.
+|Indicates that the ruleset to clone is published in Exchange and that the `governance-ruleset` parameter is the asset identifier (GAV) for the ruleset. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest'. 
+
+See <<exchange-asset-identifiers>>.
+
 |===
 
 *Example commands:*
