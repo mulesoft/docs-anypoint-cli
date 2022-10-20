@@ -5,10 +5,10 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr-cluster:add-server>> | Adds server to cluster
+|<<runtime-mgr-cluster-add-server>> | Adds server to cluster
 |<<runtime-mgr-cluster-delete>> | Deletes cluster
 |<<runtime-mgr-cluster-list>> | Lists all clusters in the environment
-|<<runtime-mgr-cluster:remove-server>> | Removes server from a cluster
+|<<runtime-mgr-cluster-remove-server>> | Removes server from a cluster
 |<<runtime-mgr-cluster-create>> | Creates new cluster
 |<<runtime-mgr-cluster-describe>> | Describes server cluster
 |<<runtime-mgr-cluster-modify>> | Modifies cluster
