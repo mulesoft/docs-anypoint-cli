@@ -52,7 +52,7 @@ A target can be either a server, server group, or cluster.
 
 This command accepts only the default option `--help`.
 
-To redeploy an app and set a logging level or turn on Insight event tracking, see <<runtime-mgr:standalone-application:modify>>.
+To redeploy an app and set a logging level or turn on Insight event tracking, see <<runtime-mgr-standalone-application-modify>>.
 
 // == runtime-mgr:standalone-application:describe-json
 
