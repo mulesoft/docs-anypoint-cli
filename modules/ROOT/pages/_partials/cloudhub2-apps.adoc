@@ -111,7 +111,7 @@ Default: `0.1` | `0.5`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 |===
@@ -211,7 +211,7 @@ Default: `0.1` | `0.5`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 
@@ -327,7 +327,7 @@ Default: `0.1` | `0.5`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 |===
@@ -427,7 +427,7 @@ Default: `0.1` | `0.5`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 
