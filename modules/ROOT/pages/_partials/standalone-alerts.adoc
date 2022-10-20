@@ -18,10 +18,10 @@
 // tag::commands[]
 
 [[runtime-mgr-standalone-alert-describe]]
-== runtime-mgr-standalone-alert-describe
+== runtime-mgr:standalone-alert:describe
 
 ----
-> runtime-mgr-standalone-alert-describe [options] <alertId>
+> runtime-mgr:standalone-alert:describe [options] <alertId>
 ----
 
 This command describes the alert passed in `alertId`.
@@ -31,10 +31,10 @@ This command has the `--output` option. Use the `--output` option to specify the
 This command also accepts the default option `--help`.
 
 [[runtime-mgr-standalone-alert-create]]
-== runtime-mgr-standalone-alert-create
+== runtime-mgr:standalone-alert:create
 
 ----
-> runtime-mgr-standalone-alert-create [options] <name>
+> runtime-mgr:standalone-alert:create [options] <name>
 ----
 
 This command creates a new alert for a standalone runtime with the ID passed in `name`.
@@ -60,10 +60,10 @@ Besides the default `--help` option, this command also accepts:
 |===
 
 [[runtime-mgr-standalone-alert-modify]]
-== runtime-mgr-standalone-alert-modify
+== runtime-mgr:standalone-alert:modify
 
 ----
-> runtime-mgr-standalone-alert-modify [options] <alertId>
+> runtime-mgr:standalone-alert:modify [options] <alertId>
 ----
 
 This command modifies the alert passed in `alertId`.
@@ -88,10 +88,10 @@ Besides the default `--help` option, this command also accepts:
 |===
 
 [[runtime-mgr-standalone-alert-list]]
-== runtime-mgr-standalone-alert-list
+== runtime-mgr:standalone-alert:list
 
 ----
-> runtime-mgr-standalone-alert-list [options]
+> runtime-mgr:standalone-alert:list [options]
 ----
 
 This command lists all alerts for standalone Mules in the current environment.
