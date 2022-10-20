@@ -6,12 +6,12 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:servers.adoc#runtime-mgr-server-describe[runtime-mgr:server:describe] | Describes server
-|xref:servers.adoc#runtime-mgr-server-modify[runtime-mgr:server:modify] | Modifies server
-|xref:servers.adoc#runtime-mgr-server-token[runtime-mgr:server:token] | Gets server registration token. This token needs to be used to register a new server
-|xref:servers.adoc#runtime-mgr-server-delete[runtime-mgr:server:delete] | Deletes server
-|xref:servers.adoc#runtime-mgr-server-list[runtime-mgr:server:list] | Changes an standalone application artifact
-// |xref:servers.adoc#runtime-mgr-server-register[runtime-mgr server register] | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
+|<<runtime-mgr-server-describe>> | Describes server
+|<<runtime-mgr-server-modify>> | Modifies server
+|<<runtime-mgr-server-token>> | Gets server registration token. This token needs to be used to register a new server
+|<<runtime-mgr-server-delete>> | Deletes server
+|<<runtime-mgr-server-list>> | Changes an standalone application artifact
+// |<<runtime-mgr-server-register>> | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
 |===
 
 // end::summary[]
@@ -82,4 +82,3 @@ This command has the `--output` option. Use the `--output` option to specify the
 
 This command also accepts the default option `--help`.
 //end::commands[]
-
