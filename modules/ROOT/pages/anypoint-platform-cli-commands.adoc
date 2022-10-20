@@ -51,7 +51,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 [[api-governance]]
 == API Governance
 
-include::anypoint-cli::partial$api-governance.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$api-governance.adoc[tag=summary]
 
 [[api-mgr]]
 == API Manager
@@ -87,6 +87,26 @@ include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 |xref:api-mgr.adoc#api-mgr-tier-copy[api-mgr tier copy] | Copies an SLA tier from source to a target API Instance
 |xref:api-mgr.adoc#api-mgr-tier-delete[api-mgr tier delete] | Deletes an SLA tier from an API instance
 |xref:api-mgr.adoc#api-mgr-tier-list[api-mgr tier list] | Lists the SLA tiers of an API instance
+|===
+
+[[cloudhub2-apps]]
+== Cloudhub 2.0
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr application delete]| Deletes an application
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy]|Deploys an application to a specified target using an Exchange application and runs the specified runtime version
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr application describe]| Describes an application
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json]| Describes an  application in raw JSON response
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs]|Downloads logs of an application from a specification to a specified directory
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
+|xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails an application's logs from a specification
+
+
 |===
 
 [[cloudhub-apps]]
@@ -321,24 +341,4 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |===
 |Command |Description
 |xref:rtf-instances.adoc#runtime-mgr-rtf-list[runtime-mgr rtf list]  | Lists available Runtime Fabric instances
-|===
-
-[[runtime-manager-2]]
-== Cloudhub 2.0
-
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr application delete]| Deletes an application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy]|Deploys an application to a specified target using an Exchange application and runs the specified runtime version
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr application describe]| Describes an application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json]| Describes an  application in raw JSON response
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs]|Downloads logs of an application from a specification to a specified directory
-|xref:cloudhub2-apps.adoc#acruntime-mgr-application-list[runtime-mgr application list]| Lists all applications in an organization
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr application modify]|Modifies a deployed application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr application start]| Starts a stopped application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop]| Stops running an application
-|xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs]|Tails an application's logs from a specification
-
-
 |===

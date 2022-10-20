@@ -1,5 +1,5 @@
 = CLI for DataGraph API Source Management
 
-include::anypoint-cli::partial$datagraph-source.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$datagraph-source.adoc[tag=summary]
 
-include::anypoint-cli::partial$datagraph-source.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$datagraph-source.adoc[tag=commands]

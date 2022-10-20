@@ -1,5 +1,5 @@
 = CLI for Exchange Assets
 
-include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$exchange-assets.adoc[tag=summary]
 
-include::anypoint-cli::partial$exchange-assets.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$exchange-assets.adoc[tag=commands]

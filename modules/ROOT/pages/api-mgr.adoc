@@ -1,5 +1,5 @@
 = CLI for API Manager
 
-include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$api-mgr.adoc[tag=summary]
 
-include::anypoint-cli::partial$api-mgr.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$api-mgr.adoc[tag=commands]

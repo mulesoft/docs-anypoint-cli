@@ -1,5 +1,5 @@
 = CLI for CloudHub Applications
 
-include::anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
 
-include::anypoint-cli::partial$cloudhub-apps.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$cloudhub-apps.adoc[tag=commands]
