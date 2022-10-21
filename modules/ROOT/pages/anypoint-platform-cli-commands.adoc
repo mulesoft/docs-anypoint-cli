@@ -10,8 +10,6 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
-* <<datagraph-load-balancers>>
-* <<datagraph-source>>
 * <<design-center>>
 * <<exchange-assets>>
 * <<standalone-apps>>
@@ -50,16 +48,6 @@ include::anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
 == CloudHub Anypoint VPCs
 
 include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
-
-[[datagraph-load-balancers]]
-== DataGraph Load Balancers
-
-include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
-
-[[datagraph-source]]
-== DataGraph API Source Management
-
-include::anypoint-cli::partial$datagraph-source.adoc[tag=summary]
 
 [[design-center]]
 == Design Center Projects
