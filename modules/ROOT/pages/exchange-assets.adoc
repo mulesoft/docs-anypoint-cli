@@ -6,4 +6,4 @@ include::anypoint-cli::partial$exchange-assets.adoc[tag=commands]
 
 // == See Also
 
-// * xref:api-catalog.adoc[API Catalog]
+* xref:exchange::apicat-about-api-catalog-cli.adoc[Autocataloging APIs Using API Catalog CLI]
