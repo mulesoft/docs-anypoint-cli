@@ -4,100 +4,35 @@
 
 Anypoint Platform CLI provides the ability to manage these features in Anypoint Platform:
 
-* <<account>>
-* <<api-mgr>>
-* <<cloudhub2-apps>>
-* <<cloudhub-apps>>
-* <<cloudhub-dlb>>
-* <<cloudhub-vpc>>
-// * <<datagraph-load-balancers>>
-// * <<datagraph-source>>
-* <<design-center>>
-* <<exchange-assets>>
-* <<standalone-apps>>
-* <<standalone-alerts>>
-* <<servers>>
-* <<server-groups>>
-* <<server-clusters>>
-* <<rtf-instances>>
-
-[[account]]
-== Anypoint Platform Account
-
-xref:account.adoc[Accounts]
-
-[[api-mgr]]
-== API Manager
+xref:account.adoc[Anypoint Platform Accounts]
 
 xref:api-mgr.adoc[API Manager]
 
-[[cloudhub2-apps]]
-== Cloudhub 2.0
-
 xref:cloudhub2-apps.adoc[Cloudhub 2.0]
-
-[[cloudhub-apps]]
-== CloudHub Applications
 
 xref:cloudhub-apps.adoc[Cloudhub Apps]
 
-[[cloudhub-dlb]]
-== CloudHub Dedicated Load Balancers
-
 xref:cloudhub-dlb.adoc[Cloughub Dedicated Load Balancers]
-
-[[cloudhub-vpc]]
-== CloudHub Anypoint VPCs
 
 xref:cloudhub-vpc.adoc[Cloudhub Anypoint VPCs]
 
-// [[datagraph-load-balancers]]
-// == DataGraph Load Balancers
-
 // xref:datagraph-load-balancer.adoc[DataGraph Load Balancer]
-
-// [[datagraph-source]]
-// == DataGraph API Source Management
 
 // xref:datagraph-source.adoc[DataGraph Source]
 
-[[design-center]]
-== Design Center Projects
-
 xref:design-center.adoc[Design Center]
 
-[[exchange-assets]]
-== Exchange Assets
+xref:exchange-assets.adoc[Exchange Assets]
 
-exchange-assets.adoc[Exchange Assets]
-
-[[standalone-apps]]
-== Hybrid Applications
-
-standalone-apps.adoc[Hybrid Applications]
-
-[[standalone-alerts]]
-== Alerts for Hybrid Applications
+xref:standalone-apps.adoc[Hybrid Applications]
 
 xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
 
-[[servers]]
-== Local Servers
-
 xref:servers.adoc[Local Servers]
-
-[[server-groups]]
-== Local Server Groups
 
 xref:server-groups.adoc[Local Server Groups]
 
-[[server-clusters]]
-== Local Cluster Servers
-
 xref:server-clusters.adoc[Local Server Clusters]
-
-[[rtf-instances]]
-== Runtime Fabric Instances
 
 xref:rtf-instances.adoc[Runtime Fabric Instances]
 
