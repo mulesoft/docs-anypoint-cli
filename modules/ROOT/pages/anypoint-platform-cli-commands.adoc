@@ -10,8 +10,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<cloudhub-apps>>
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
-* <<datagraph-load-balancers>>
-* <<datagraph-source>>
+// * <<datagraph-load-balancers>>
+// * <<datagraph-source>>
 * <<design-center>>
 * <<exchange-assets>>
 * <<standalone-apps>>
@@ -24,82 +24,82 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 [[account]]
 == Anypoint Platform Account
 
-include::anypoint-cli::partial$account.adoc[tag=summary]
+xref:account.adoc[Accounts]
 
 [[api-mgr]]
 == API Manager
 
-include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
+xref:api-mgr.adoc[API Manager]
 
 [[cloudhub2-apps]]
 == Cloudhub 2.0
 
-include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
+xref:cloudhub2-apps.adoc[Cloudhub 2.0]
 
 [[cloudhub-apps]]
 == CloudHub Applications
 
-include::anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
+xref:cloudhub-apps.adoc[Cloudhub Apps]
 
 [[cloudhub-dlb]]
 == CloudHub Dedicated Load Balancers
 
-include::anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
+xref:cloudhub-dlb.adoc[Cloughub Dedicated Load Balancers]
 
 [[cloudhub-vpc]]
 == CloudHub Anypoint VPCs
 
-include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
+xref:cloudhub-vpc.adoc[Cloudhub Anypoint VPCs]
 
-[[datagraph-load-balancers]]
-== DataGraph Load Balancers
+// [[datagraph-load-balancers]]
+// == DataGraph Load Balancers
 
-include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
+// xref:datagraph-load-balancer.adoc[DataGraph Load Balancer]
 
-[[datagraph-source]]
-== DataGraph API Source Management
+// [[datagraph-source]]
+// == DataGraph API Source Management
 
-include::anypoint-cli::partial$datagraph-source.adoc[tag=summary]
+// xref:datagraph-source.adoc[DataGraph Source]
 
 [[design-center]]
 == Design Center Projects
 
-include::anypoint-cli::partial$design-center.adoc[tag=summary]
+xref:design-center.adoc[Design Center]
 
 [[exchange-assets]]
 == Exchange Assets
 
-include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
+exchange-assets.adoc[Exchange Assets]
 
 [[standalone-apps]]
 == Hybrid Applications
 
-include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
+standalone-apps.adoc[Hybrid Applications]
 
 [[standalone-alerts]]
 == Alerts for Hybrid Applications
 
-include::anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
+xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
 
 [[servers]]
 == Local Servers
 
-include::anypoint-cli::partial$servers.adoc[tag=summary]
+xref:servers.adoc[Local Servers]
 
 [[server-groups]]
 == Local Server Groups
 
-include::anypoint-cli::partial$server-groups.adoc[tag=summary]
+xref:server-groups.adoc[Local Server Groups]
 
 [[server-clusters]]
 == Local Cluster Servers
 
-include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
+xref:server-clusters.adoc[Local Server Clusters]
 
 [[rtf-instances]]
 == Runtime Fabric Instances
 
-include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
+xref:rtf-instances.adoc[Runtime Fabric Instances]
 
 == See Also
 
