@@ -30,11 +30,53 @@ xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
 
 xref:servers.adoc[Local Servers]
 
+<<<<<<< HEAD
 xref:server-groups.adoc[Local Server Groups]
 
 xref:server-clusters.adoc[Local Server Clusters]
 
 xref:rtf-instances.adoc[Runtime Fabric Instances]
+=======
+[[design-center]]
+== Design Center Projects
+
+include::anypoint-cli::partial$design-center.adoc[tag=summary]
+
+[[exchange-assets]]
+== Exchange Assets
+
+include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
+
+[[standalone-apps]]
+== Hybrid Applications
+
+include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
+
+[[standalone-alerts]]
+== Alerts for Hybrid Applications
+
+include::anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
+
+[[servers]]
+== Local Servers
+
+include::anypoint-cli::partial$servers.adoc[tag=summary]
+
+[[server-groups]]
+== Local Server Groups
+
+include::anypoint-cli::partial$server-groups.adoc[tag=summary]
+
+[[server-clusters]]
+== Local Cluster Servers
+
+include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
+
+[[rtf-instances]]
+== Runtime Fabric Instances
+
+include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
+>>>>>>> v4.x
 
 == See Also
 
