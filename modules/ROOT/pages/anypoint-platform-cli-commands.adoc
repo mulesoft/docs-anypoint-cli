@@ -12,7 +12,7 @@ xref:cloudhub2-apps.adoc[Cloudhub 2.0]
 
 xref:cloudhub-apps.adoc[Cloudhub Apps]
 
-xref:cloudhub-dlb.adoc[Cloughub Dedicated Load Balancers]
+xref:cloudhub-dlb.adoc[Cloudhub Dedicated Load Balancers]
 
 xref:cloudhub-vpc.adoc[Cloudhub Anypoint VPCs]
 
