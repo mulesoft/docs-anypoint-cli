@@ -5,13 +5,13 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:server-clusters.adoc#runtime-mgr-cluster-add-server[runtime-mgr:cluster:add:server] | Adds server to cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-delete[runtime-mgr:cluster:delete] | Deletes cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-list[runtime-mgr:cluster:list] | Lists all clusters in the environment
-|xref:server-clusters.adoc#runtime-mgr-cluster-remove-server[runtime-mgr:cluster:remove:server] | Removes server from a cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-create[runtime-mgr:cluster:create] | Creates new cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-describe[runtime-mgr:cluster:describe] | Describes server cluster
-|xref:server-clusters.adoc#runtime-mgr-cluster-modify[runtime-mgr:cluster:modify] | Modifies cluster
+|<<runtime-mgr-cluster-add-server>> | Adds server to cluster
+|<<runtime-mgr-cluster-delete>> | Deletes cluster
+|<<runtime-mgr-cluster-list>> | Lists all clusters in the environment
+|<<runtime-mgr-cluster-remove-server>> | Removes server from a cluster
+|<<runtime-mgr-cluster-create>> | Creates new cluster
+|<<runtime-mgr-cluster-describe>> | Describes server cluster
+|<<runtime-mgr-cluster-modify>> | Modifies cluster
 |===
 
 // end::summary[]

@@ -7,16 +7,16 @@ Use these commands for applications in Cloudhub 2.0.
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr:application:delete] | Deletes an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr:application:deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr:application:describe] | Describes an application
-// | xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr:application:describe-json] | Describes an application in a raw JSON response
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr:application:download-logs] | Downloads logs of an application from a specification to a specified directory 
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-list[runtime-mgr:application:list] | Lists all applications in an organization
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr:application:modify] | Modifies a deployed application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr:application:start] | Starts a stopped application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr:application:stop] | Stops running an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-logs[runtime-mgr:application:logs] | Tails an application's logs from a specification 
+|<<runtime-mgr-application-delete>> | Deletes an application
+|<<runtime-mgr-application-deploy>> | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
+|<<runtime-mgr-application-describe>> | Describes an application
+// | <<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
+|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory 
+|<<runtime-mgr-application-list>> | Lists all applications in an organization
+|<<cloudhub2-apps.adoc>> | Modifies a deployed application
+|<<runtime-mgr-application-start>> | Starts a stopped application
+|<<runtime-mgr-application-stop>> | Stops running an application
+|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification 
 |===
 
 // end::summary[]
@@ -26,15 +26,15 @@ Use these commands for applications in Cloudhub 2.0.
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr:application:delete] | Deletes an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr:application:describe] | Describes an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr:application:describe-json] | Describes an application in a raw JSON response
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr:application:download-logs] | Downloads logs of an application from a specification to a specified directory 
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-list[runtime-mgr:application:list] | Lists all applications in an organization
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr:application:modify] | Modifies a deployed application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr:application:start] | Starts a stopped application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr:application:stop] | Stops running an application
-| xref:cloudhub2-apps.adoc#runtime-mgr-application-logs[runtime-mgr:application:logs] | Tails an application's logs from a specification 
+|<<runtime-mgr-application-delete>> | Deletes an application
+|<<runtime-mgr-application-describe>> | Describes an application
+|<<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
+|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory 
+|<<runtime-mgr-application-list>> | Lists all applications in an organization
+|<<runtime-mgr-application-modify>> | Modifies a deployed application
+|<<runtime-mgr-application-start>> | Starts a stopped application
+|<<runtime-mgr-application-stop>> | Stops running an application
+|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification 
 |===
 
 // end::summary-rtf[]
@@ -111,7 +111,7 @@ Default: `0.1` | `0.5`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 |===
@@ -211,7 +211,7 @@ Default: `0.1` | `0.5`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 
@@ -365,7 +365,7 @@ Default: `0.1` | `0.5`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 
