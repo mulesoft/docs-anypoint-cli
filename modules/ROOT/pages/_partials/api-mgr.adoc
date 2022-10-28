@@ -607,7 +607,7 @@ This command accepts only the default option `--help`.
 ----
 
 This command lists all policies for all APIs in API Manager 2.x. +
-When the `[apiInstanceId]` option is specified, this command lists the policies applied to that API instance.
+When the `[apiInstanceId]` option is specified, this command lists the policies applied to that API instance. Not specifying the `[apiInstanceId]` will list all policies for all APIs in API Manager 2.x.
 
 Besides the default `--help` option, this command also accepts the `-m, --muleVersion4OrAbove` option which has `true` or `false` values. +
 
