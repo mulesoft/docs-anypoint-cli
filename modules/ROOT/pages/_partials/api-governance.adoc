@@ -164,7 +164,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 See <<exchange-asset-identifiers>>.
 |--remote 
-|Flag to indicate that the validation should be done against a published API. The value passed in `api-definition` is the asset identifier, which is the group ID, asset ID, and version (GAV) that uniquely identifies the API in Exchange. For example: `<group_id>/<asset_id>/<version>
+|Flag to indicate that the validation should be done against a published API. The value passed in `api-definition` is the asset identifier, which is the group ID, asset ID, and version (GAV) that uniquely identifies the API in Exchange. For example: `<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 |===
@@ -482,7 +482,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--remote
-|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. The asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies the ruleset in Exchange. For example: `<group_id>/<asset_id>/<version>
+|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. The asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies the ruleset in Exchange. For example: `<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 
@@ -527,7 +527,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--remote
-|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. The asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies the ruleset in Exchange. For example: `<group_id>/<asset_id>/<version>
+|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. The asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies the ruleset in Exchange. For example: `<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 |===
