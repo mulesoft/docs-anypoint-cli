@@ -59,7 +59,7 @@ anypoint-cli governance api evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
 Ruleset GAV                                                       
 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
 8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 
-68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0 
+68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0
 ----
 
 // end::governance-api-evaluate[]
@@ -507,7 +507,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 ----
 anypoint-cli governance ruleset clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId > mynewruleset.yaml
 
-anypoint-cli governance ruleset clone 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
+anypoint-cli governance ruleset clone 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
 
 ----
 
@@ -541,7 +541,9 @@ See <<exchange-asset-identifiers>>.
 ----
 anypoint-cli governance ruleset info ~/temp/myruleset.yaml
 
-anypoint-cli governance ruleset info 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 --remote
+anypoint-cli governance ruleset info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
+
+anypoint-cli governance ruleset info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/latest --remote
 
 ----
 
