@@ -139,7 +139,7 @@ You can specify `api-definition` as one of the following:
 
 * An API project ZIP file
 * An API project folder
-* A GAV for an API project in Exchange; this requires the `--remote` option
+* An asset identifier, which is a group ID, asset ID, and version (GAV) that uniquely identifies an API project in Exchange. This requires the `--remote` option. 
 
 You can specify rulesets against which to validate as follows:
 
@@ -164,7 +164,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 See <<exchange-asset-identifiers>>.
 |--remote 
-|Flag to indicate that the validatation should be done against a published API. The value passed in `api-definition` is the asset identifier, which is the group ID, asset ID, and version (GAV) that uniquely identifies the API in Exchange. For example: `<group_id>/<asset_id>/<version>
+|Flag to indicate that the validation should be done against a published API. The value passed in `api-definition` is the asset identifier, which is the group ID, asset ID, and version (GAV) that uniquely identifies the API in Exchange. For example: `<group_id>/<asset_id>/<version>
 
 See <<exchange-asset-identifiers>>.
 |===
@@ -427,9 +427,9 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |The `profile-name` option is followed by a string that is the new governance profile name.
 
 |--ruleset-gavs <ruleset-gavs>
-|The `ruleset-gavs` option is a list with the group ID, asset ID, and version for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>` 
+|The `ruleset-gavs` option is a list with the asset identifier for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`. An asset identifier is a unique group ID, asset ID, and version (GAV) that identifies each ruleset in Exchange.
 
-These are the asset's identifiers. See <<exchange-asset-identifiers>>.
+See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
 |Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 |--tags <tags> *Deprecated*
