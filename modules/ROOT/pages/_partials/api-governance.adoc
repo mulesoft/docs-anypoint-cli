@@ -505,7 +505,7 @@ See <<exchange-asset-identifiers>>.
 ----
 anypoint-cli governance ruleset clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId > mynewruleset.yaml
 
-anypoint-cli governance ruleset clone 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
+anypoint-cli governance ruleset clone 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
 
 ----
 
@@ -527,7 +527,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--remote
-|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
+|Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 |===
@@ -538,7 +538,7 @@ See <<exchange-asset-identifiers>>.
 ----
 anypoint-cli governance ruleset info ~/temp/myruleset.yaml
 
-anypoint-cli governance ruleset info 668ef6520-13e9-5cf2-c2f6-720225690914/anypoint-best-practices/1.0.2 --remote
+anypoint-cli governance ruleset info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
 
 ----
 
