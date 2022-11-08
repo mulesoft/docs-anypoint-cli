@@ -5,19 +5,19 @@
 
 |===
 |Command |Description
-<<governance-api-evaluate>> | Evaluates filter criteria to determine which rulesets apply to APIs that meet that criteria
-<<governance-api-inspect>> | Inspects an API definition and lists its schemas
-<<governance-api-validate>> | Validates an API definition against a specified governance ruleset
-<<governance-document>> | Creates the documentation file for a governance ruleset definition
-<<governance-profile-create>> | Creates a governance profile
-<<governance-profile-delete>> | Deletes a governance profile
-<<governance-profile-info>> | Lists information for a specific governance profile ID
-<<governance-profile-list>> | Lists all governance profiles for an organization
-<<governance-profile-update>> | Updates a governance profile
-<<governance-ruleset-clone>> | Clones a governance ruleset and applies specified updates to rules
-<<governance-ruleset-info>> | Lists ruleset rules
-<<governance-ruleset-init>> | Initializes a governance ruleset definition based on a data schema
-<<governance-ruleset-validate>> | Validates a governance ruleset definition's format
+|<<governance-api-evaluate>> | Evaluates filter criteria to determine which rulesets apply to APIs that meet that criteria
+|<<governance-api-inspect>> | Inspects an API definition and lists its schemas
+|<<governance-api-validate>> | Validates an API definition against a specified governance ruleset
+|<<governance-document>> | Creates the documentation file for a governance ruleset definition
+|<<governance-profile-create>> | Creates a governance profile
+|<<governance-profile-delete>> | Deletes a governance profile
+|<<governance-profile-info>> | Lists information for a specific governance profile ID
+|<<governance-profile-list>> | Lists all governance profiles for an organization
+|<<governance-profile-update>> | Updates a governance profile
+|<<governance-ruleset-clone>> | Clones a governance ruleset and applies specified updates to rules
+|<<governance-ruleset-info>> | Lists ruleset rules
+|<<governance-ruleset-init>> | Initializes a governance ruleset definition based on a data schema
+|<<governance-ruleset-validate>> | Validates a governance ruleset definition's format
 |===
 
 // end::summary[]
