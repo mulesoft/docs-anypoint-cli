@@ -31,7 +31,7 @@
 
 This command evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+Besides the default --help option, this command also accepts:
 
 [cols="1,1"]
 |===
@@ -73,7 +73,7 @@ Ruleset GAV
 
 This command inspects the API definition passed in `api-definition` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance:ruleset:init>>.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
 *Example command:*
 
@@ -151,7 +151,7 @@ You can specify rulesets against which to validate as follows:
 
 NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets may be validated multiple times.
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+Besides the default --help option, this command also accepts:
 
 [cols="1,1"]
 |===
@@ -246,7 +246,7 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 
 This command creates the documentation for the API Governance ruleset definition ZIP file specified in `ruleset`. It puts the documentation in the `doc-file` ZIP file for you to upload and publish to Exchange. 
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
 *Example command:*
 
@@ -277,7 +277,7 @@ You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset 
 
 See <<exchange-asset-identifiers>>.
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+Besides the default --help option, this command also accepts:
 
 [cols="1,1"]
 |===
@@ -326,7 +326,7 @@ You cannot configure notifications using the `governance:profile:create` command
 
 This command deletes a specific governance profile specified by `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
 
-The `governance:profile:delete` command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+The `governance:profile:delete` command accepts only the default option `--help`.
 
 *Example command:*
 
@@ -352,7 +352,7 @@ anypoint-cli governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 
 This command lists all information for a governance profile ID.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
 *Example command:*
 
@@ -383,7 +383,7 @@ Criteria   	tag:best,category:API Type:Experience API,scope:rest-api
 
 This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
 *Example command:*
 
@@ -417,7 +417,7 @@ This command updates the governance profile specified in `profile-id`. To get th
 You can update the governance profile's
 governance name, rulesets, tags, and description. 
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+Besides the default --help option, this command also accepts:
 
 [cols="1,1"]
 |===
@@ -475,7 +475,7 @@ The `new description` parameter gives the description for the new ruleset.
 
 TIP: Run the `governance:ruleset:info` command before running this command to get the rule ID information to use in this command.
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+Besides the default --help option, this command also accepts:
 
 [cols="1,1"]
 |===
@@ -520,7 +520,7 @@ anypoint-cli governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/anypo
 
 This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+Besides the default --help option, this command also accepts:
 
 [cols="1,1"]
 |===
@@ -571,7 +571,7 @@ Warning  	operation-tag-defined
 
 This command initializes a ruleset based on the data schema passed in the `schema` parameter. 
 
-Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
+Besides the default --help option, this command also accepts:
 
 [cols="1,1"]
 |===
@@ -607,7 +607,7 @@ This command validates the ruleset definitions passed using the `governance-rule
 * A ZIP file that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
 * A folder that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+This command accepts only the default option `--help`.
 
 *Example commands:*
 
