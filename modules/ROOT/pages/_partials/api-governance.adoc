@@ -291,13 +291,25 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 |--description <description>
 |The `description` option is followed by a string that is the new governance profile's description.
+
+|--notify-publisher
+|Enables notifications and sets the recipient to the API publisher.
+
+|--notify-contact
+|Enables notifications and sets the recipient to the contact set for the API.
+
+|--notify-others <email ID,email ID,...>
+|Enables notifications and sets the recipient to the specified list of email IDs.
+
 |===
 
 *Example commands:*
 
 [source,copy]
 ----
-anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+anypoint-cli governance profile create "Open API Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+
+anypoint-cli governance profile create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 ----
 
 *Example output:*
@@ -310,10 +322,6 @@ anypoint-cli governance profile create "OAS Best Practices" 68ef9520-24e9-4cf2-b
  Rulesets   	gav://68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
  Filter     	tag:best    
 ----
-
-=== Limitations
-
-You cannot configure notifications using the `governance profile create` command. After you create a profile using the CLI, you can configure notifications by editing the profile in the API Governance console. See xref:api-governance::create-profiles.adoc#update-a-governance-profile-using-the-api-governance-console[Update a Governance Profile Using the API Governance Console].
 
 // end::governance-profile-create[]
 
@@ -437,6 +445,15 @@ See <<exchange-asset-identifiers>>.
 
 |--description <description>
 |The `description` option is followed by a string that is the new governance profile description.
+
+|--notify-publisher
+|Enables notifications and sets the recipient to the API publisher.
+
+|--notify-contact
+|Enables notifications and sets the recipient to the contact set for the API.
+
+|--notify-others <email ID,email ID,...>
+|Enables notifications and sets the recipient to the specified list of email IDs.
 |===
 
 *Example commands:*
@@ -446,6 +463,8 @@ See <<exchange-asset-identifiers>>.
 anypoint-cli governance profile update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
 
 anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
+
+anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 ----
 
 *Example output:*
