@@ -71,6 +71,7 @@ You can install the following plugins with Anypoint CLI:
 | anypoint-cli-designcenter-plugin | Design Center command topics
 | anypoint-cli-exchange-plugin| Exhange command topics
 | anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
+| anypoint-cli-datagraph-plugin | Anypoint DataGraph command topics
 |===
 
 [[verify-installation]]
