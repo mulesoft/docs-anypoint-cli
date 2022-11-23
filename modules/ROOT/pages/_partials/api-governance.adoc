@@ -48,9 +48,9 @@ NOTE: This command must be run with either the `criteria` or the `api` option.
 
 [source,copy]
 ----
-anypoint-cli governance:api:evaluate --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
+governance:api:evaluate --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
 
-anypoint-cli governance:api:evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
+governance:api:evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
@@ -79,7 +79,7 @@ This command accepts only the default option `--help`.
 
 [source,copy]
 ----
-anypoint-cli governance:api:inspect my-healthcare-api.yaml
+governance:api:inspect my-healthcare-api.yaml
 
 ----
 
@@ -173,15 +173,15 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-anypoint-cli governance:api:validate ~/Downloads/order-api-1.0.0-raml.zip
+governance:api:validate ~/Downloads/order-api-1.0.0-raml.zip
 
-anypoint-cli governance:api:validate ~/Downloads/order-api-1.0.0-raml
+governance:api:validate ~/Downloads/order-api-1.0.0-raml
 
-anypoint-cli governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
 
-anypoint-cli governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1  ~/Downloads/order-api-1.0.0-raml.zip
+governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1  ~/Downloads/order-api-1.0.0-raml.zip
 
-anypoint-cli governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
+governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
 ----
 
 *Example output:*
@@ -252,7 +252,7 @@ This command accepts only the default option `--help`.
 
 [source,copy]
 ----
-anypoint-cli governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
+governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 ----
 
 *Example output:*
@@ -297,7 +297,7 @@ Besides the default --help option, this command also accepts:
 
 [source,copy]
 ----
-anypoint-cli governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
 ----
 
 *Example output:*
@@ -332,7 +332,7 @@ The `governance:profile:delete` command accepts only the default option `--help`
 
 [source,copy]
 ----
-anypoint-cli governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
+governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 ----
 
 *Example output:*
@@ -358,18 +358,24 @@ This command accepts only the default option `--help`.
 
 [source,copy]
 ----
-anypoint-cli governance:profile:info 19fb211b-8775-43cc-865a-46228921d6ed --output text
+governance:profile:info 19fb211b-8775-43cc-865a-46228921d6ed
 
 ----
 
 *Example output:*
 
 ----
-Id         	19fb211b-8775-43cc-865a-46228921d6ed                                                                                                                                                             
-Name       	Best Practices                                                                                                                                                                                   
-Description	Best Practices Profile                                                                                                                                                                           
-Rulesets   	68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0 8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0
-Criteria   	tag:best,category:API Type:Experience API,scope:rest-api 
+╔═══════════════════════════════╤══════════════════════════════════════╗
+║ Profile Name                  │ Profile Id                           ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ Minimum Security Requirements │ 1f418cf4-b870-4b31-8734-f55f28d45f8f ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ Best Practices                │ 19fb211b-8775-43cc-865a-46228921d6ed ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ New Best Practices            │ 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ OAS Standards                 │ 51ae8795-2278-407e-942f-becba29af986 ║
+╚═══════════════════════════════╧══════════════════════════════════════╝
 ----
 
 // end::governance-profile-info[]
@@ -389,19 +395,23 @@ This command accepts only the default option `--help`.
 
 [source,copy]
 ----
-anypoint-cli governance:profile:list -o text
+governance:profile:list
 ----
 
 *Example output:*
 
 ----
-Profile Name                 	Profile Id                          
-	
-Minimum Security Requirements	1f418cf4-b870-4b31-8734-f55f28d45f8f
-Best Practices               	19fb211b-8775-43cc-865a-46228921d6ed
-New Best Practices           	4eaf9176-3ef9-4021-a67c-6e4bc10d3763
-OAS Standards                	51ae8795-2278-407e-942f-becba29af986
-
+╔═══════════════════════════════╤══════════════════════════════════════╗
+║ Profile Name                  │ Profile Id                           ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ Minimum Security Requirements │ 1f418cf4-b870-4b31-8734-f55f28d45f8f ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ Best Practices                │ 19fb211b-8775-43cc-865a-46228921d6ed ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ New Best Practices            │ 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 ║
+╟───────────────────────────────┼──────────────────────────────────────╢
+║ OAS Standards                 │ 51ae8795-2278-407e-942f-becba29af986 ║
+╚═══════════════════════════════╧══════════════════════════════════════╝
 ----
 // end::governance-profile-list[]
 
@@ -443,9 +453,9 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-anypoint-cli governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
+governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
 
-anypoint-cli governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
+governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
 ----
 
 *Example output:*
@@ -503,9 +513,9 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-anypoint-cli governance:ruleset:clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId > mynewruleset.yaml
+governance:ruleset:clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId > mynewruleset.yaml
 
-anypoint-cli governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
+governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
 
 ----
 
@@ -536,9 +546,9 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-anypoint-cli governance:ruleset:info ~/temp/myruleset.yaml
+governance:ruleset:info ~/temp/myruleset.yaml
 
-anypoint-cli governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
+governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
 
 ----
 
@@ -588,8 +598,7 @@ Besides the default --help option, this command also accepts:
 
 [source,copy]
 ----
-anypoint-cli governance:ruleset:init --types patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset mydataschema
-
+governance:ruleset:init --types patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset mydataschema
 ----
 
 // end::governance-ruleset-init[]
@@ -613,11 +622,11 @@ This command accepts only the default option `--help`.
 
 [source,copy]
 ----
-anypoint-cli governance:ruleset:validate ~/temp/myruleset.yaml
+governance:ruleset:validate ~/temp/myruleset.yaml
 
-anypoint-cli governance:ruleset:validate ~/temp/myruleset.zip
+governance:ruleset:validate ~/temp/myruleset.zip
 
-anypoint-cli governance:ruleset:validate ~/temp/myrulesetfolder
+governance:ruleset:validate ~/temp/myrulesetfolder
 
 ----
 
@@ -656,7 +665,7 @@ Level: Violation
 
 To get the GAVs for Exchange assets:
 
-* If you are using the Exchange CLI, run the `anypoint-cli exchange asset list` command. 
+* If you are using the Exchange CLI, run the `exchange:asset:list` command. 
 * If you are using the Exchange web UI, select the asset in Exchange and then copy the group ID and asset ID from the URL. Add the version node for the version you are viewing. For example, the GAV for the OpenAPI Best Practices ruleset in Exchange is `68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`.
 
 // end::exchange-asset-identifier[]
