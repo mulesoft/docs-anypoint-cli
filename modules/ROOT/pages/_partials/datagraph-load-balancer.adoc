@@ -6,9 +6,9 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-| xref:datagraph.adoc#datagraph-load-balancer-config-add[datagraph:load-balancer-config:add] | Adds a dedicated load balancer configuration to Anypoint DataGraph
-| xref:datagraph.adoc#datagraph-load-balancer-config-describe[datagraph:load-balancer-config:describe] | Displays a dedicated load balancer configuration for Anypoint DataGraph
-| xref:datagraph.adoc#datagraph-load-balancer-config-remove[datagraph:load-balancer-config:remove]| Removes a dedicated load balancer configuration from Anypoint DataGraph
+| <<datagraph-load-balancer-config-add>> | Adds a dedicated load balancer configuration to Anypoint DataGraph
+| <<datagraph-load-balancer-config-describe>> | Displays a dedicated load balancer configuration for Anypoint DataGraph
+| <<datagraph-load-balancer-config-remove>> | Removes a dedicated load balancer configuration from Anypoint DataGraph
 |===
 
 
@@ -40,9 +40,7 @@ This command accepts only the default option `--help`.
 
 This command displays a dedicated load balancer URL for Anypoint DataGraph.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
-
-This command also accepts the default option `--help`.
+This command accepts only the default option `--help`.
 
 [[datagraph-load-balancer-config-remove]]
 == datagraph:load-balancer-config:remove

@@ -4,102 +4,37 @@
 
 Anypoint Platform CLI provides the ability to manage these features in Anypoint Platform:
 
-* <<account>>
-* <<api-mgr>>
-* <<cloudhub2-apps>>
-* <<cloudhub-apps>>
-* <<cloudhub-dlb>>
-* <<cloudhub-vpc>>
-* <<datagraph-load-balancers>>
-* <<datagraph-source>>
-* <<design-center>>
-* <<exchange-assets>>
-* <<standalone-apps>>
-* <<standalone-alerts>>
-* <<servers>>
-* <<server-groups>>
-* <<server-clusters>>
-* <<rtf-instances>>
+xref:account.adoc[Anypoint Platform Accounts]
 
-[[account]]
-== Anypoint Platform Account
+xref:api-mgr.adoc[API Manager]
 
-include::anypoint-cli::partial$account.adoc[tag=summary]
+xref:cloudhub2-apps.adoc[Cloudhub 2.0]
 
-[[api-mgr]]
-== API Manager
+xref:cloudhub-apps.adoc[Cloudhub Apps]
 
-include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
+xref:cloudhub-dlb.adoc[Cloudhub Dedicated Load Balancers]
 
-[[cloudhub2-apps]]
-== Cloudhub 2.0
+xref:cloudhub-vpc.adoc[Cloudhub Anypoint VPCs]
 
-include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
+xref:datagraph-load-balancer.adoc[DataGraph Load Balancer]
 
-[[cloudhub-apps]]
-== CloudHub Applications
+// xref:datagraph-source.adoc[DataGraph Source]
 
-include::anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
+xref:design-center.adoc[Design Center]
 
-[[cloudhub-dlb]]
-== CloudHub Dedicated Load Balancers
+xref:exchange-assets.adoc[Exchange Assets]
 
-include::anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
+xref:standalone-apps.adoc[Hybrid Applications]
 
-[[cloudhub-vpc]]
-== CloudHub Anypoint VPCs
+xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
 
-include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
+xref:servers.adoc[Local Servers]
 
-[[datagraph-load-balancers]]
-== DataGraph Load Balancers
+xref:server-groups.adoc[Local Server Groups]
 
-include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
+xref:server-clusters.adoc[Local Server Clusters]
 
-[[datagraph-source]]
-== DataGraph API Source Management
-
-include::anypoint-cli::partial$datagraph-source.adoc[tag=summary]
-
-[[design-center]]
-== Design Center Projects
-
-include::anypoint-cli::partial$design-center.adoc[tag=summary]
-
-[[exchange-assets]]
-== Exchange Assets
-
-include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
-
-[[standalone-apps]]
-== Hybrid Applications
-
-include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
-
-[[standalone-alerts]]
-== Alerts for Hybrid Applications
-
-include::anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
-
-[[servers]]
-== Local Servers
-
-include::anypoint-cli::partial$servers.adoc[tag=summary]
-
-[[server-groups]]
-== Local Server Groups
-
-include::anypoint-cli::partial$server-groups.adoc[tag=summary]
-
-[[server-clusters]]
-== Local Cluster Servers
-
-include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
-
-[[rtf-instances]]
-== Runtime Fabric Instances
-
-include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
+xref:rtf-instances.adoc[Runtime Fabric Instances]
 
 == See Also
 

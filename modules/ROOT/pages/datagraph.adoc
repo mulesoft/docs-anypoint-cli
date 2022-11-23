@@ -1,6 +1,0 @@
-= CLI for Anypoint DataGraph
-
-Anypoint CLI supports managing these DataGraph features:
-
-* xref:datagraph-source.adoc[DataGraph API Source Management]
-* xref:datagraph-load-balancer.adoc[DataGraph Load Balancers]

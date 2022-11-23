@@ -68,10 +68,10 @@ You can install the following plugins with Anypoint CLI:
 | anypoint-cli-account-plugin | Account command topics
 | anypoint-cli-api-mgr-plugin | API Manager command topics
 | anypoint-cli-cloudhub-plugin | CloudHub command topics
-| anypoint-cli-datagraph-plugin | DataGraph command topics
 | anypoint-cli-designcenter-plugin | Design Center command topics
 | anypoint-cli-exchange-plugin| Exhange command topics
 | anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
+| anypoint-cli-datagraph-plugin | Anypoint DataGraph command topics
 |===
 
 [[verify-installation]]
@@ -150,7 +150,6 @@ anypoint-cli-account-plugin 1.0.0 (core)
 anypoint-cli-api-mgr-plugin 1.0.0 (core)
 anypoint-cli-cloudhub-plugin 1.0.0 (core)
 anypoint-cli-command 1.0.1 (core)
-anypoint-cli-datagraph-plugin 1.0.0 (core)
 anypoint-cli-designcenter-plugin 1.0.2 (core)
 anypoint-cli-exchange-plugin 1.0.0 (core)
 └─conf-cli 0.1.9 (core)
