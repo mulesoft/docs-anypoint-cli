@@ -66,9 +66,9 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 |Value |Description | Example
 |`ArtifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
 |`deploymentTargetID` |ID of the deployment target. +
-You can get this ID directly from Runtime Manager.  | `app.runetime`
+You can get this ID directly from Runtime Manager.  | `cloudhub-app-northeast-1`
 |`name` |Name of the application to deploy. | `testCloudhub2app`
-|`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
+|`runtimeVersion` |Runtime version of the deployment target.|`4.4.0`
 
 |===
 
@@ -207,7 +207,7 @@ Format: one or more lines in `name: value` style | `/Users/mule/Documents/proper
 Default: `1` | `2`
 |`replicaSize`| Size of replicas in Vcores. +
 Default: `0.1` | `0.5`
-|`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
+|`runtimeVersion` |Runtime version of the deployment target.|`4.4.0`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
