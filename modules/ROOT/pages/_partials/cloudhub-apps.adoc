@@ -172,7 +172,7 @@ Tap your `tab` key after this option for the CLI to show you all your available 
 |--workerSize                               | Size of the workers in vCores. (This value is '1' by default)
 |--region                                        | Name of the region to deploy to. +
 For a list of all supported regions, use the xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-region-list[cloudhub:region:list] command.
-|--property                                    | Set a property (`name:value`). Can be specified multiple times. +
+|--property                                    | Set a property (`name:value`). +
 The property to be set must be passed enclosed in quotes and characters `:` and `=` must be escaped. +
 (e.g. `--property "salesforce.password:qa\=34534"`).
 
@@ -306,7 +306,7 @@ In addition to the default `--help`, and `-f`/`--fields`  options, this command 
 [%header,cols="30a,70a"]
 |===
 |Option |Description
-|--property  | Set a property (`name:value`). Can be specified multiple times.
+|--property  | Set a property (`name:value`). 
 
 Enclose the property in quotes and escape the `:` and `=` characters,
 for example:
