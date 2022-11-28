@@ -470,6 +470,8 @@ anypoint-cli governance profile update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --pr
 anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
 
 anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
+
+anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
 ----
 
 *Example output:*
