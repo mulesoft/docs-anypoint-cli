@@ -448,8 +448,7 @@ See <<exchange-asset-identifiers>>.
 |The `description` option is followed by a string that is the new governance profile description.
 
 |--notify-off
-|Disables notification|--notify-contact
-|Enables notifications and sets the recipient to the contact set for the API.
+|Disables notifications.
 
 |--notify-contact
 |Enables notifications and sets the recipient to the contact set for the API.
