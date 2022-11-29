@@ -10,7 +10,7 @@ Anypoint CLI 4.x introduces the following changes:
 
 * *CLI Name* The new CLI is named `anypoint-cli-v4`. 
 * *Installation* Command groups for Anypoint Platform components are packaged as plugins that can optionally be installed and uninstalled separately from the core installation package.
-* *Authentication* Instead of using the credentials file located in `$HOME/.anypoint/credentials`, you set credentials using the `anypoint-cli-v4 conf` command. 
+* *Authentication* Instead of using the credentials file located in `~/.config/@mulesoft/anypoint-cli-v4-nodejs/config.json`, you set credentials using the `anypoint-cli-v4 conf` command. 
 * *Command Syntax* The separator between command parameters is a colon (:) instead of a space. For example, the command to get the Exchange asset resource list is now `anypoint-cli-v4 exchange:asset:resource:list`.
 * *Commands and Properties* The following commands and properties have changed:
 
