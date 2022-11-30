@@ -148,12 +148,12 @@ This command accepts only the default option `--help`.
 == runtime-mgr:cloudhub-application:deploy
 
 ----
-> runtime-mgr:cloudhub-application:deploy  [options] <name> <zipfile>
+> runtime-mgr:cloudhub-application:deploy  [options] <name> <file>
 ----
 
-This command deploys the Mule deployable archive ZIP file that you specify in `<zipfile>` using the name you set in `<name>`. +
+This command deploys the Mule deployable archive file that you specify in `<file>` using the name you set in `<name>`. If you are using Mule 4, the file must be in `.jar` format. If you are using Mule 3, the file must be in `.zip` format. +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
-You will have to provide the absolute or relative path to the deployable ZIP file in your local hard drive and the name you give to your application has to be unique.
+You will have to provide the absolute or relative path to the deployable file in your local hard drive and the name you give to your application has to be unique.
 
 [NOTE]
 If successful, this command's output includes the deployment status of `UNDEPLOYED`,
