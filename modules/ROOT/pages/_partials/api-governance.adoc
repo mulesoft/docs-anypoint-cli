@@ -275,7 +275,7 @@ This command creates a governance profile using a string value for the new gover
 
 You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
-You can use one the notify options to configure notifications for the profile you are creating. If you do not use a notify option, no notifications are configured by the command.  
+You can use one the notify options to configure notifications for the profile you are creating. If you do not use a notify option, no notifications are configured by the command. Notifications are off by default. 
 
 See <<exchange-asset-identifiers>>.
 
