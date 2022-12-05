@@ -426,7 +426,7 @@ OAS Standards                	51ae8795-2278-407e-942f-becba29af986
 This command updates the governance profile specified in `profile-id`. To get this ID, run the `governance profile info` or `governance profile list` command.
 
 You can update the governance profile's
-governance name, rulesets, filters, description, and notification configuration. You can use one of the notify options to update the notification configuration or turn off notifications. Any changes override existing notification configurations. If you do not use a notify option, no changes are made to the notification configuration.  
+general information, rulesets, filter criteria, and notification configuration. You can use one of the `notify` options to update the notification configuration or turn off notifications. Any changes override existing notification configurations. If you do not use a `notify` option, no changes are made to the notification configuration.  
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
