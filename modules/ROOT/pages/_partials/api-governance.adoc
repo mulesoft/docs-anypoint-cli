@@ -531,7 +531,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--remote
-|Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
+|Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
 |===
