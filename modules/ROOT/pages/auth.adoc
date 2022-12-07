@@ -26,11 +26,6 @@ Configuration settings are overridden as follows:
 
 * Credentials configuration file parameters are used if no command-line parameters or environment variables are set.
 
-[[single-signon]]
-== SSO
-
-If you have configured Anypoint Platform to use SSO with the system on which you are running Anypoint CLI, run the Anypoint CLI command with no credential parameters and it will log in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
-
 [[credentials-file]]
 == Credentials Configuration File
 
