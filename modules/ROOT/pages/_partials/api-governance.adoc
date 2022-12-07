@@ -59,7 +59,7 @@ anypoint-cli governance api evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
 Ruleset GAV                                                       
 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
 8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 
-68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0 
+68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0
 ----
 
 // end::governance-api-evaluate[]
@@ -273,7 +273,7 @@ anypoint-cli governance document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 You can use one the notify options to configure notifications for the profile you are creating. If you do not use a notify option, no notifications are configured by the command. Notifications are off by default. 
 
@@ -312,6 +312,8 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 anypoint-cli governance profile create "Open API Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
 
 anypoint-cli governance profile create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
+
+anypoint-cli governance profile create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
 ----
 
 *Example output:*
@@ -438,7 +440,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |The `profile-name` option is followed by a string that is the new governance profile name.
 
 |--ruleset-gavs <ruleset-gavs>
-|The `ruleset-gavs` option is a list with the asset identifier for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`. An asset identifier is a unique group ID, asset ID, and version (GAV) that identifies each asset in Exchange.
+|The `ruleset-gavs` option is a list with the asset identifier for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. An asset identifier is a unique group ID, asset ID, and version (GAV) that identifies each asset in Exchange. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
@@ -474,6 +476,8 @@ anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --cr
 anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
 anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
+
+anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*
@@ -555,7 +559,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--remote
-|Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
+|Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
 |===
@@ -567,6 +571,8 @@ See <<exchange-asset-identifiers>>.
 anypoint-cli governance ruleset info ~/temp/myruleset.yaml
 
 anypoint-cli governance ruleset info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
+
+anypoint-cli governance ruleset info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/latest --remote
 
 ----
 
