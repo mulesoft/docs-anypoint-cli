@@ -55,8 +55,6 @@ This command displays information about the load balancer that is specified in `
 
 Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`.
 
-You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
 It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
@@ -69,8 +67,6 @@ This command also accepts the default option `--help`.
 // > cloudhub load-balancer describe [options] <name>
 // ----
 // This command displays a raw JSON response from the load balancer that is specified in `<name>`.
-
-// You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
 // This command accepts only the default options: `--help` and `-o`/`--output`
 
@@ -205,7 +201,6 @@ This command accepts only the default option `--help`.
 ----
 This command sets the certificate specified in `<certificateName>` as the default  certificate for the load balancer passed in `<name>`. +
 
-You can start typing your load balancer's name and press`tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 Besides the default `--help` option, this command also accepts:
 
 [%header,cols="30a,70a"]
@@ -215,13 +210,12 @@ Besides the default `--help` option, this command also accepts:
 |===
 
 [[cloudhub-load-balancer-ssl-endpoint-set-describe]]
-== cloudhub:load-balancer:ssl-endpoint:set-describe
+== cloudhub:load-balancer:ssl-endpoint:describe
 
 ----
 > cloudhub:load-balancer:ssl-endpoint:set-describe [options] <name> <certificateName>
 ----
 This command shows information about the configuration of the load balancer passed in `<name>` for the the certificate specified in `<certificateName>`. +
-You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
 
@@ -237,8 +231,6 @@ This command adds a range of IP addresses specified in `<cidrBlock>` to the allo
 
 [NOTE]
 The allowlist works at the load balancer level, not at the CN certificate level. Make sure you only pass IP addresses formatted in https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation].
-
-You can start typing your load balancer's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. 
 
 This command accepts only the default option `--help`.
 
