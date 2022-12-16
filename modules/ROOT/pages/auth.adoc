@@ -13,7 +13,6 @@ The default host, environment, and organization are used if you do not specify t
 
 Pass Anypoint CLI credentials by using the following methods:
 
-* <<single-signon,Using single sign-on (SSO)>>
 * <<credentials-file,Using a credentials configuration file>>
 * <<command-line-parameters,Using command-line parameters>>
 * <<env-variables,Using environment variables>>
@@ -29,7 +28,7 @@ Configuration settings are overridden as follows:
 [[credentials-file]]
 == Credentials Configuration File
 
-If you are not using SSO, pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
+Pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
 
 You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` option to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
 

@@ -130,7 +130,6 @@ Besides the `--include-dot-files`, this command has the default `--help`, and `-
 ----
 
 This Command lists all your Design Center projects. +
-You can start typing your project's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 
 Besides the default `--help` option, this command also accepts:
 

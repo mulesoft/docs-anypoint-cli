@@ -7,7 +7,7 @@
 |Command |Description
 // |xref:exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset
 |xref:exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset using Exchange Experience API
-|xref:exchange-assets.adoc#exchange-asset-mutabledataupload[exchange:asset:mutableDataUpload] | Modifies mutable data of an existing Exchange asset
+|xref:exchange-assets.adoc#exchange-asset-mutableDataUpload[exchange:asset:mutableDataUpload] | Modifies mutable data of an existing Exchange asset
 |xref:exchange-assets.adoc#exchange-asset-modify[exchange:asset:modify] | Modifies an Exchange asset
 |xref:exchange-assets.adoc#exchange-asset-download[exchange:asset:download] | Downloads an Exchange asset
 |xref:exchange-assets.adoc#exchange-asset-list[exchange:asset:list] | Lists all assets
@@ -26,6 +26,7 @@
 |xref:exchange-assets.adoc#exchange-asset-resource-list[exchange:asset:resource:list] | Lists published resources in the asset portal
 |xref:exchange-assets.adoc#exchange-asset-resource-download[exchange:asset:resource:download] | Downloads resource from the asset portal
 |xref:exchange-assets.adoc#exchange-asset-resource-delete[exchange:asset:resource:delete] | Deletes resource from the asset portal
+|xref:exchange-assets.adoc#exchange-asset-updateStatus[exchange:asset:updateStatus] | Modifies the status of an existing asset
 |===
 
 // end::summary[]

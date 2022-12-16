@@ -28,7 +28,6 @@ Use these commands for applications in Cloudhub 2.0.
 |Command |Description
 |<<runtime-mgr-application-delete>> | Deletes an application
 |<<runtime-mgr-application-describe>> | Describes an application
-|<<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
 |<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory 
 |<<runtime-mgr-application-list>> | Lists all applications in an organization
 |<<runtime-mgr-application-modify>> | Modifies a deployed application
@@ -123,16 +122,6 @@ Default: `rolling` | `recreate`
 > runtime-mgr:application:describe [options] <appID>
 ----
 Displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
-
-This command accepts only the default option `--help`.
-
-[[runtime-mgr-application-describe-json]]
-== runtime-mgr:application:describe-json 
-
-----
-> runtime-mgr:application:describe-json [options] <appID>
-----
-Displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
 This command accepts only the default option `--help`.
 
