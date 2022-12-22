@@ -48,9 +48,9 @@ NOTE: This command must be run with either the `criteria` or the `api` option.
 
 [source,copy]
 ----
-governance:api:evaluate --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
+anypoint-cli-v4 governance:api:evaluate --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
 
-governance:api:evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
 ----
 
 *Example output:*
@@ -173,15 +173,15 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-governance:api:validate ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml.zip
 
-governance:api:validate ~/Downloads/order-api-1.0.0-raml
+anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml
 
-governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
 
-governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1  ~/Downloads/order-api-1.0.0-raml.zip
 
-governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
+anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
 ----
 
 *Example output:*
@@ -297,9 +297,9 @@ Besides the default flags, this command also accepts:
 
 [source,copy]
 ----
-governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+anypoint-cli-v4 governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
 
-anypoint-cli governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
+anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
 ----
 
 *Example output:*
@@ -455,11 +455,11 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
+anypoint-cli-v4 governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
 
-governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
+anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
 
-anypoint-cli governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
+anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*
@@ -517,9 +517,9 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-governance:ruleset:clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId > mynewruleset.yaml
+anypoint-cli-v4 governance:ruleset:clone ~/Downloads/ruleset.yaml 'New Ruleset from Clone' 'Cloned from ruleset.yaml' --warning=operation-default-response,operation-operationId > mynewruleset.yaml
 
-governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
+anypoint-cli-v4 governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 'Custom Anypoint Best Practices' 'Cloned from MuleSoft Anypoint Best Practices' --remote --remove=openapi-tags,operation-tags > my-anypoint-best-practices.yaml 
 
 ----
 
@@ -550,11 +550,11 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-governance:ruleset:info ~/temp/myruleset.yaml
+anypoint-cli-v4 governance:ruleset:info ~/temp/myruleset.yaml
 
-governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
+anypoint-cli-v4 governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
 
-anypoint-cli governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/latest --remote
+anypoint-cli-v4  governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/latest --remote
 ----
 
 *Example output:*
@@ -627,11 +627,11 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-governance:ruleset:validate ~/temp/myruleset.yaml
+anypoint-cli-v4 governance:ruleset:validate ~/temp/myruleset.yaml
 
-governance:ruleset:validate ~/temp/myruleset.zip
+anypoint-cli-v4 governance:ruleset:validate ~/temp/myruleset.zip
 
-governance:ruleset:validate ~/temp/myrulesetfolder
+anypoint-cli-v4 governance:ruleset:validate ~/temp/myrulesetfolder
 
 ----
 
