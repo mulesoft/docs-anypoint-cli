@@ -27,7 +27,7 @@
 [[governance-api-evaluate]]
 == governance:api:evaluate
 
-`> governance:api:evaluate [options]`
+`> governance:api:evaluate [flags]`
 
 This command evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
@@ -35,7 +35,7 @@ Besides the default flags, this command also accepts:
 
 [cols="1,1"]
 |===
-|Option |Description
+|Flag |Description
 |--api=<api>
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...
@@ -69,7 +69,7 @@ Ruleset GAV
 [[governance-api-inspect]]
 == governance:api:inspect
 
-`> governance:api:inspect [options] <api-definition>`
+`> governance:api:inspect [flags] <api-definition>`
 
 This command inspects the API definition passed in `api-definition` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance:ruleset:init>>.
 
@@ -131,7 +131,7 @@ types:
 [[governance-api-validate]]
 == governance:api:validate
 
-`> governance:api:validate [options] <api-definition>`
+`> governance:api:validate [flags] <api-definition>`
 
 This command validates the API definition passed in `api-definition` against specified rulesets. 
 
@@ -155,7 +155,7 @@ Besides the default flags, this command also accepts:
 
 [cols="1,1"]
 |===
-|Option |Description
+|Flag |Description
 
 |--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
 |Local ruleset definitions. The `rulesets` option is followed by a comma-separated list of ruleset YAML files. 
@@ -242,7 +242,7 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 [[governance-document]]
 == governance:document
 
-`> governance:document [options] <ruleset> <doc-file>`
+`> governance:document [flags] <ruleset> <doc-file>`
 
 This command creates the documentation for the API Governance ruleset definition ZIP file specified in `ruleset`. It puts the documentation in the `doc-file` ZIP file for you to upload and publish to Exchange. 
 
@@ -269,7 +269,7 @@ anypoint-cli-v4 governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 [[governance-profile-create]]
 == governance:profile:create
 
-`> governance:profile:create [options] <profile-name> <ruleset-asset-identifiers>`
+`> governance:profile:create [flags] <profile-name> <ruleset-asset-identifiers>`
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
@@ -281,7 +281,7 @@ Besides the default flags, this command also accepts:
 
 [cols="1,1"]
 |===
-|Option |Description
+|Flag |Description
 
 |--criteria <filtertype:filtervalue>,...
 |Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
@@ -333,7 +333,7 @@ anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-
 [[governance-profile-delete]]
 == governance:profile:delete
 
-`> governance:profile:delete [options] <profile-id>`
+`> governance:profile:delete [flags] <profile-id>`
 
 This command deletes a specific governance profile specified by `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
 
@@ -359,7 +359,7 @@ anypoint-cli-v4 governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 [[governance-profile-info]]
 == governance:profile:info
 
-`> governance:profile:info [options] <profile-id>`
+`> governance:profile:info [flags] <profile-id>`
 
 This command lists all information for a governance profile ID.
 
@@ -391,7 +391,7 @@ NotificationConfig  Contact,Publisher
 [[governance-profile-list]]
 == governance:profile:list
 
-`> governance:profile:list [options]`
+`> governance:profile:list [flags]`
 
 This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
@@ -421,7 +421,7 @@ OAS Standards                	51ae8795-2278-407e-942f-becba29af986
 [[governance-profile-update]]
 == governance:profile:update
 
-`> governance:profile:update [options] <profile-id>`
+`> governance:profile:update [flags] <profile-id>`
 
 This command updates the governance profile specified in `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
 
@@ -432,7 +432,7 @@ Besides the default flags, this command also accepts:
 
 [cols="1,1"]
 |===
-|Option |Description
+|Flag |Description
 
 |--profile-name <profile-name>
 |The `profile-name` option is followed by a string that is the new governance profile name.
@@ -490,7 +490,7 @@ anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed -
 [[governance-ruleset-clone]]
 == governance:ruleset:clone
 
-`> governance:ruleset:clone [options] <ruleset> <new_title> <new_description>` 
+`> governance:ruleset:clone [flags] <ruleset> <new_title> <new_description>` 
 
 This command clones a governance ruleset to create a new custom ruleset and applies specified updates to rules based on the options. The new ruleset is written to standard output.
 
@@ -504,7 +504,7 @@ Besides the default flags, this command also accepts:
 
 [cols="1,1"]
 |===
-|Option |Description
+|Flag |Description
 
 |--remote
 |Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
@@ -541,7 +541,7 @@ anypoint-cli-v4 governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/an
 [[governance-ruleset-info]]
 == governance:ruleset:info
 
-`> governance:ruleset:info [options] <governance-ruleset>`
+`> governance:ruleset:info [flags] <governance-ruleset>`
 
 This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
 
@@ -549,7 +549,7 @@ Besides the default flags, this command also accepts:
 
 [cols="1,1"]
 |===
-|Option |Description
+|Flag |Description
 
 |--remote
 |Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
@@ -593,7 +593,7 @@ Warning  	operation-tag-defined
 [[governance-ruleset-init]]
 == governance:ruleset:init
 
-`> governance:ruleset:init [options] <schema>`
+`> governance:ruleset:init [flags] <schema>`
 
 This command initializes a ruleset based on the data schema passed in the `schema` parameter. 
 
@@ -601,7 +601,7 @@ Besides the default flags, this command also accepts:
 
 [cols="1,1"]
 |===
-|Option |Description
+|Flag |Description
 
 |--types <types>
 |The `types` option gives the target types to export as rules. You can use the `governance:api:inspect` command to identify the types to specify in this option. See <<governance-api-inspect>>.
@@ -624,7 +624,7 @@ anypoint-cli-v4 governance:ruleset:init --types patientmultipleBirthBoolean,pati
 [[governance-ruleset-validate]]
 == governance:ruleset:validate
 
-`> governance:ruleset:validate [options] <governance-ruleset>`
+`> governance:ruleset:validate [flags] <governance-ruleset>`
 
 This command validates the ruleset definitions passed using the `governance-ruleset` parameter. You can pass one of the following as the `governance-ruleset` parameter:
 
