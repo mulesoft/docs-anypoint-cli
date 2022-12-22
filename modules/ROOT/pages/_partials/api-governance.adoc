@@ -79,7 +79,7 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-governance:api:inspect my-healthcare-api.yaml
+anypoint-cli-v4 governance:api:inspect my-healthcare-api.yaml
 
 ----
 
@@ -252,7 +252,7 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
+anypoint-cli-v4 governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 ----
 
 *Example output:*
@@ -273,9 +273,9 @@ governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
+You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile. See <<exchange-asset-identifiers>>.
 
-See <<exchange-asset-identifiers>>.
+You can use one of the `notify` options to configure notifications for the profile you are creating. If you do not use a `notify` option, no notifications are configured by the command. Notifications are off by default.
 
 Besides the default flags, this command also accepts:
 
@@ -291,6 +291,15 @@ Besides the default flags, this command also accepts:
 
 |--description <description>
 |The `description` option is followed by a string that is the new governance profile's description.
+
+|--notify-contact
+|Enables notifications and sets the recipient to the contact set for the API.
+
+|--notify-publisher
+|Enables notifications and sets the recipient to the API publisher.
+
+|--notify-others <email ID,email ID,...>
+|Enables notifications and sets the recipient to the specified list of email IDs.
 |===
 
 *Example commands:*
@@ -298,6 +307,10 @@ Besides the default flags, this command also accepts:
 [source,copy]
 ----
 anypoint-cli-v4 governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+
+anypoint-cli-v4 governance:profile:create "Open API Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+
+anypoint-cli-v4 governance:profile:create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
 anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
 ----
@@ -312,10 +325,6 @@ anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-
  Rulesets   	gav://68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
  Filter     	tag:best    
 ----
-
-=== Limitations
-
-You cannot configure notifications using the `governance:profile:create` command. After you create a profile using the CLI, you can configure notifications by editing the profile in the API Governance console. See xref:api-governance::create-profiles.adoc#update-a-governance-profile-using-the-api-governance-console[Update a Governance Profile Using the API Governance Console].
 
 // end::governance-profile-create[]
 
@@ -334,7 +343,7 @@ The `governance:profile:delete` command accepts only the default flags.
 
 [source,copy]
 ----
-governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
+anypoint-cli-v4 governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 ----
 
 *Example output:*
@@ -360,24 +369,19 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-governance:profile:info 19fb211b-8775-43cc-865a-46228921d6ed
+anypoint-cli-v4 governance:profile:info 19fb211b-8775-43cc-865a-46228921d6ed
 
 ----
 
 *Example output:*
 
 ----
-╔═══════════════════════════════╤══════════════════════════════════════╗
-║ Profile Name                  │ Profile Id                           ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ Minimum Security Requirements │ 1f418cf4-b870-4b31-8734-f55f28d45f8f ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ Best Practices                │ 19fb211b-8775-43cc-865a-46228921d6ed ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ New Best Practices            │ 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ OAS Standards                 │ 51ae8795-2278-407e-942f-becba29af986 ║
-╚═══════════════════════════════╧══════════════════════════════════════╝
+Id         	        19fb211b-8775-43cc-865a-46228921d6ed
+Name       	        Best Practices
+Description	        Best Practices Profile
+Rulesets   	        68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0 8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0
+Criteria   	        tag:best,category:API Type:Experience API,scope:rest-api
+NotificationConfig  Contact,Publisher
 ----
 
 // end::governance-profile-info[]
@@ -397,23 +401,18 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-governance:profile:list
+anypoint-cli-v4 governance:profile:list
 ----
 
 *Example output:*
 
 ----
-╔═══════════════════════════════╤══════════════════════════════════════╗
-║ Profile Name                  │ Profile Id                           ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ Minimum Security Requirements │ 1f418cf4-b870-4b31-8734-f55f28d45f8f ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ Best Practices                │ 19fb211b-8775-43cc-865a-46228921d6ed ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ New Best Practices            │ 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 ║
-╟───────────────────────────────┼──────────────────────────────────────╢
-║ OAS Standards                 │ 51ae8795-2278-407e-942f-becba29af986 ║
-╚═══════════════════════════════╧══════════════════════════════════════╝
+Profile Name                 	Profile Id
+
+Minimum Security Requirements	1f418cf4-b870-4b31-8734-f55f28d45f8f
+Best Practices               	19fb211b-8775-43cc-865a-46228921d6ed
+New Best Practices           	4eaf9176-3ef9-4021-a67c-6e4bc10d3763
+OAS Standards                	51ae8795-2278-407e-942f-becba29af986
 ----
 // end::governance-profile-list[]
 
@@ -427,7 +426,7 @@ governance:profile:list
 This command updates the governance profile specified in `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
 
 You can update the governance profile's
-governance name, rulesets, tags, and description. 
+general information, rulesets, filter criteria, and notification configuration. You can use one of the `notify` options to update the notification configuration or turn off notifications. Any changes override existing notification configurations. If you do not use a `notify` option, no changes are made to the notification configuration. 
 
 Besides the default flags, this command also accepts:
 
@@ -449,6 +448,18 @@ See <<exchange-asset-identifiers>>.
 
 |--description <description>
 |The `description` option is followed by a string that is the new governance profile description.
+
+|--notify-off
+|Disables notifications.
+
+|--notify-contact
+|Enables notifications and sets the recipient to the contact set for the API.
+
+|--notify-publisher
+|Enables notifications and sets the recipient to the API publisher.
+
+|--notify-others <email ID,email ID,...>
+|Enables notifications and sets the recipient to the specified list of email IDs.
 |===
 
 *Example commands:*
@@ -458,6 +469,10 @@ See <<exchange-asset-identifiers>>.
 anypoint-cli-v4 governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
 
 anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
+
+anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
+
+anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
 
 anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
@@ -603,7 +618,7 @@ Besides the default flags, this command also accepts:
 
 [source,copy]
 ----
-governance:ruleset:init --types patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset mydataschema
+anypoint-cli-v4 governance:ruleset:init --types patientmultipleBirthBoolean,patientBundle,patientmultipleBirthInteger --name=my-ruleset mydataschema
 ----
 
 // end::governance-ruleset-init[]
