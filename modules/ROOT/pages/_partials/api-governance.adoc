@@ -273,7 +273,7 @@ governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
 
 This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
-You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
 
@@ -298,6 +298,8 @@ Besides the default flags, this command also accepts:
 [source,copy]
 ----
 governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+
+anypoint-cli governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
 ----
 
 *Example output:*
@@ -437,7 +439,7 @@ Besides the default flags, this command also accepts:
 |The `profile-name` option is followed by a string that is the new governance profile name.
 
 |--ruleset-gavs <ruleset-gavs>
-|The `ruleset-gavs` option is a list with the asset identifier for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`. An asset identifier is a unique group ID, asset ID, and version (GAV) that identifies each asset in Exchange.
+|The `ruleset-gavs` option is a list with the asset identifier for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. An asset identifier is a unique group ID, asset ID, and version (GAV) that identifies each asset in Exchange. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
@@ -456,6 +458,8 @@ See <<exchange-asset-identifiers>>.
 governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
 
 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
+
+anypoint-cli governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*
@@ -537,7 +541,7 @@ Besides the default flags, this command also accepts:
 |Option |Description
 
 |--remote
-|Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
+|Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
 |===
@@ -550,6 +554,7 @@ governance:ruleset:info ~/temp/myruleset.yaml
 
 governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
 
+anypoint-cli governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/latest --remote
 ----
 
 *Example output:*
