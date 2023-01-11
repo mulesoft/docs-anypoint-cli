@@ -7,6 +7,7 @@
  ** xref:diff-earlier-ver.adoc[How Version 4.x Differs from Previous Versions]
 * xref:anypoint-platform-cli-commands.adoc[List of Commands]
 * xref:account.adoc[Anypoint Platform Account]
+* xref:api-governance.adoc[API Governance]
 * xref:api-mgr.adoc[API Manager]
 * xref:cloudhub2-apps.adoc[Cloudhub 2.0]
 * xref:cloudhub.adoc[CloudHub]

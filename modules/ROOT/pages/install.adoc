@@ -69,7 +69,8 @@ You can install the following plugins with Anypoint CLI:
 | anypoint-cli-api-mgr-plugin | API Manager command topics
 | anypoint-cli-cloudhub-plugin | CloudHub command topics
 | anypoint-cli-designcenter-plugin | Design Center command topics
-| anypoint-cli-exchange-plugin| Exhange command topics
+| anypoint-cli-exchange-plugin| Exchange command topics
+| anypoint-cli-governance-plugin| API Governance command topics
 | anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
 | anypoint-cli-datagraph-plugin | Anypoint DataGraph command topics
 |===
