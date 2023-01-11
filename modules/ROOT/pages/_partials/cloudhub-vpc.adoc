@@ -48,8 +48,6 @@ This command displays information about the Anypoint VPC that is specified in `<
 
 Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`.
 
-You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
 This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts only the default option `--help`.
@@ -200,8 +198,6 @@ If your Anypoint VPC name contains spaces, you need to pass it between ´"´ cha
 When creating an Anypoint VPC, make sure to allow your outbound address. +
 By default, all IP addresses are blocked, and you need to authorize IP addresses or range of addresses to your Anypoint VPC firewall rule.
 --
-
-You can start typing your Anypoint VPC's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
 This command accepts only the default option `--help`.
 

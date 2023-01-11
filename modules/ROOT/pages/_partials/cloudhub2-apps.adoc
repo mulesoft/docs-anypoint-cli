@@ -28,7 +28,6 @@ Use these commands for applications in Cloudhub 2.0.
 |Command |Description
 |<<runtime-mgr-application-delete>> | Deletes an application
 |<<runtime-mgr-application-describe>> | Describes an application
-|<<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
 |<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory 
 |<<runtime-mgr-application-list>> | Lists all applications in an organization
 |<<runtime-mgr-application-modify>> | Modifies a deployed application
@@ -66,9 +65,9 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 |Value |Description | Example
 |`ArtifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
 |`deploymentTargetID` |ID of the deployment target. +
-You can get this ID directly from Runtime Manager.  | `app.runetime`
+You can get this ID directly from Runtime Manager.  | `cloudhub-app-northeast-1`
 |`name` |Name of the application to deploy. | `testCloudhub2app`
-|`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
+|`runtimeVersion` |Runtime version of the deployment target.|`4.4.0`
 
 |===
 
@@ -123,16 +122,6 @@ Default: `rolling` | `recreate`
 > runtime-mgr:application:describe [options] <appID>
 ----
 Displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
-
-This command accepts only the default option `--help`.
-
-[[runtime-mgr-application-describe-json]]
-== runtime-mgr:application:describe-json 
-
-----
-> runtime-mgr:application:describe-json [options] <appID>
-----
-Displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
 This command accepts only the default option `--help`.
 
@@ -207,7 +196,7 @@ Format: one or more lines in `name: value` style | `/Users/mule/Documents/proper
 Default: `1` | `2`
 |`replicaSize`| Size of replicas in Vcores. +
 Default: `0.1` | `0.5`
-|`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
+|`runtimeVersion` |Runtime version of the deployment target.|`4.4.0`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +

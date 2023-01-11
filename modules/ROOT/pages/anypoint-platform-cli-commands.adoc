@@ -18,7 +18,7 @@ xref:cloudhub-dlb.adoc[Cloudhub Dedicated Load Balancers]
 
 xref:cloudhub-vpc.adoc[Cloudhub Anypoint VPCs]
 
-// xref:datagraph-load-balancer.adoc[DataGraph Load Balancer]
+xref:datagraph-load-balancer.adoc[DataGraph Load Balancer]
 
 // xref:datagraph-source.adoc[DataGraph Source]
 
