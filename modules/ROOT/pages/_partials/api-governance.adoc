@@ -360,7 +360,16 @@ anypoint-cli-v4 governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 
 This command lists all information for a governance profile ID.
 
-This command accepts only the default flags.
+Besides the default flags, this command also accepts:
+
+[cols="1,1"]
+|===
+|Flag |Description
+
+|--output <output-format>
+|Format for the command output. Supported values are `table` (default) and `json`.
+
+|===
 
 *Example command:*
 
@@ -392,7 +401,16 @@ NotificationConfig  Contact,Publisher
 
 This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
-This command accepts only the default flags.
+Besides the default flags, this command also accepts:
+
+[cols="1,1"]
+|===
+|Flag |Description
+
+|--output <output-format>
+|Format for the command output. Supported values are `table` (default) and `json`.
+
+|===
 
 *Example command:*
 
