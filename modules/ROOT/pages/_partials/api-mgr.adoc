@@ -585,7 +585,7 @@ For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings. +
-For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET|PUT","uriTemplateRegex":"/users*"}]'`
+For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
 |===
 
 [[api-mgr-policy-enable]]
