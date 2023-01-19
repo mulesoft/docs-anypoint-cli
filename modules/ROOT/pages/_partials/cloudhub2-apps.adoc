@@ -13,7 +13,7 @@ Use these commands for applications in Cloudhub 2.0.
 // | <<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
 |<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory 
 |<<runtime-mgr-application-list>> | Lists all applications in an organization
-|<<cloudhub2-apps.adoc>> | Modifies a deployed application
+|<<runtime-mgr-application-modify>> | Modifies a deployed application
 |<<runtime-mgr-application-start>> | Starts a stopped application
 |<<runtime-mgr-application-stop>> | Stops running an application
 |<<runtime-mgr-application-logs>> | Tails an application's logs from a specification 
