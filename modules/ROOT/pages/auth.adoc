@@ -26,9 +26,7 @@ Configuration settings are overridden as follows:
 * Credentials configuration file parameters are used if no command-line parameters or environment variables are set.
 
 [[credentials-file]]
-== Credentials Configuration File
-
-Pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
+== Set Credentials Using the Conf command
 
 You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` option to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
 
@@ -107,6 +105,7 @@ You can authenticate to Anypoint Platform through command-line by running the `a
 --environment
 ----
 
+NOTE: The `--organization` parameter is optional. It defaults to your main organization from Anypoint Platform.
 *Examples:*
 
 * Authenticate on the command line using username and password
