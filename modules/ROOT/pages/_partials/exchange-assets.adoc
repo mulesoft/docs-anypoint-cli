@@ -87,7 +87,7 @@ For example:
 * `properties='{"assetLink":"\http://api.com"}'`
 * `properties='{"mainFile":"main.raml","apiVersion":"v1","assetLink":"\http://api.com"}'`
 
-| `--files` | Asset file, identified as `classifier.packaging` or `packaging`, and its file path, for example, `--files='{"oas.zip":"​/-api.raml"}'`
+| `--files` | Asset file, identified as `classifier.packaging` or `packaging` and its file path, for example, `--files='{"oas.zip":"​/my-api.raml"}'`
 
 To send multiple files, use the same option multiple times:
 
