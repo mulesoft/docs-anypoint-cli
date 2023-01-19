@@ -87,11 +87,11 @@ For example:
 * `properties='{"assetLink":"\http://api.com"}'`
 * `properties='{"mainFile":"main.raml","apiVersion":"v1","assetLink":"\http://api.com"}'`
 
-| `--files` | Asset file, identified as `classifier.packaging` or `packaging`, for example, `--files='{"raml.zip":"​/file-path/raml.zip"}'`
+| `--files` | Asset file, identified as `classifier.packaging` or `packaging` and its file path, for example, `--files='{"oas.zip":"​/my-api.raml"}'`
 
 To send multiple files, use the same option multiple times:
 
-`--files.custom.zip custom.zip --files.pom.xml pom.xml` | `exchange:asset:uploadv2 --files.mule-application.jar /..../file-path/mule-app.jar --files.pom /..../file-path/mule-app.pom fa7b266c-3817-4cbb-ae49-7f3cc6c8cd9e/my-mule-app/1.0.0`
+`--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` | `exchange:asset:uploadv2 --files'{"pom.xml": "directory/pom-file.xml"}' --files='{"raml.raml": "./my-api.raml"}'`
 | `--type` | Asset type
 
 Required if no file is specified.
