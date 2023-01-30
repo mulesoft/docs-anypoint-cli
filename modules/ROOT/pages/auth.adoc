@@ -53,9 +53,9 @@ The commands store the credential information in the `config.json` file in the f
 
 * MacOS: `~/Library/Preferences/@mulesoft/anypoint-cli-v4-nodejs/config.json`
 
-* Windows: `%LOCALAPPDATA%\anypoint-cli-v4-nodejs\Config`
+* Windows: `%APPDATA%\anypoint-cli-v4-nodejs\Config`
 
-* Unix: `~/.config/mycli`
+* Unix: `~/.config/anypoint-cli-v4-nodejs/`
 
 *Examples:*
 
