@@ -1,5 +1,7 @@
 = CLI for CloudHub Dedicated Load Balancers
 
+include::reuse::partial$non-inclusive-banner.adoc[]
+
 include::3.x@anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
 
 include::3.x@anypoint-cli::partial$cloudhub-dlb.adoc[tag=commands]
