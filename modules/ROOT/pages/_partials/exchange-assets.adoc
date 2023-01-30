@@ -72,11 +72,11 @@ Use the following format for the _assetIdentifier_ argument:
 
 If _group_id_ is not specified, it defaults to the currently selected organization ID.
 
-[%header,cols="40a,30a,30a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
 | Command | Description |  Example
 | `--name` | Asset name (required if no pom file is specified) .3+|
-`exchange:asset:uploadv2 --name "Raml Asset" --description "RAML"  --properties='{"apiVersion":"v1", "mainFile": "api.raml"}' --files='{"raml.zip":"​/file-path/raml.zip"}'`
+`exchange:asset:upload --name "Raml Asset" --description "RAML"  --properties='{"apiVersion":"v1", "mainFile": "api.raml"}' --files='{"raml.zip":"​/file-path/raml.zip"}'`
 | `--description` | Asset description 
 | `--properties` | Asset properties 
 
@@ -91,7 +91,7 @@ For example:
 
 To send multiple files, use the same option multiple times:
 
-`--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` | `exchange:asset:uploadv2 --files'{"pom.xml": "directory/pom-file.xml"}' --files='{"raml.raml": "./my-api.raml"}'`
+`--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` | `exchange:asset:upload --files'{"pom.xml": "directory/pom-file.xml"}' --files='{"raml.raml": "./my-api.raml"}'`
 | `--type` | Asset type
 
 Required if no file is specified.
