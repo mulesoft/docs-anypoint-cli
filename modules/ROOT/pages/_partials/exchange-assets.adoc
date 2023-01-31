@@ -72,7 +72,7 @@ Use the following format for the _assetIdentifier_ argument:
 
 If _group_id_ is not specified, it defaults to the currently selected organization ID.
 
-[%header%autowidth.spread,cols="a,a,a"]
+[%header,cols="30a,50a,30a"]
 |===
 | Command | Description |  Example
 | `--name` | Asset name (required if no pom file is specified) .3+|
