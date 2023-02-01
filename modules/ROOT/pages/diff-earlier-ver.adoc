@@ -23,7 +23,7 @@ Anypoint CLI 4.x introduces the following changes:
  ** `runtime-mgr:pcf-application:describe -o JSON` replaces `runtime-mgr pcf-application describe-json`.
  ** `cloudhub:vpc:describe -o JSON` replaces `cloudhub vpc describe-json`.
  ** Environments and Business Groups commands are no longer supported.
- ** Datagraph API Source Management commans are no longer supported.
+ ** Datagraph API Source Management commands are no longer supported.
 
 * *Interactive Mode* Because interactive mode is no longer supported, the following commands and options are no longer available:
 
