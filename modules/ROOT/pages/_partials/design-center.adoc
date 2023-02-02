@@ -40,7 +40,7 @@ Supported values are:
 
 * `raml`
 * `raml-fragment` | `designcenter project create --type raml`
-| `--fragment-type` | The fragment type if the application type is a RAML fragment.
+| `--fragment-type` | The fragment type. Always use with `--type raml-fragment`, even for OAS 3.0 and JSON schema fragments.
 
 This field is required if the type option was set as `raml-fragment`
 
@@ -50,7 +50,9 @@ Supported fragments type are:
 * `resource-type`
 * `library`
 * `type`
-* `user-documentation` | `designcenter project create --type raml-fragment --fragment-type user-documentation`
+* `user-documentation` 
+* `oas-components`
+* `json-schema` | `designcenter project create --type raml-fragment --fragment-type user-documentation`
 |===
 
 == designcenter project delete
