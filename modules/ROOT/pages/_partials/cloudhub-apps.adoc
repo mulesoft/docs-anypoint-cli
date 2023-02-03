@@ -142,7 +142,7 @@ This command deletes the running application you specify in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default flags `--help`.
+This command accepts only the default flag `--help`.
 
 [[deploy-to-cloudhub]]
 == runtime-mgr:cloudhub-application:deploy
