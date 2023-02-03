@@ -128,7 +128,7 @@ This command accepts only the default flag `--help`.
 This command restarts the running application you specify in `<name>` +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default flags `--help`. 
+This command accepts only the default flag `--help`. 
 
 [[runtime-mgr-cloudhub-application-delete]]
 == runtime-mgr:cloudhub-application:delete
