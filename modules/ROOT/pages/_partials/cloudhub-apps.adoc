@@ -98,7 +98,7 @@ This command also accepts the default flag `--help`.
 == runtime-mgr:cloudhub-application:stop
 
 ----
-> runtime-mgr:cloudhub-application:stop  [flag] <name>
+> runtime-mgr:cloudhub-application:stop  [flags] <name>
 ----
 
 This command stops the running application you specify in `<name>` +
