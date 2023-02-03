@@ -85,7 +85,7 @@ This command accepts only the default flag `--help`.
 == cloudhub:vpc:environments:add
 
 ----
-> cloudhub:vpc:environments:add [flag] <vpc> [environments...]
+> cloudhub:vpc:environments:add [flags] <vpc> [environments...]
 ----
 This command assigns the Anypoint VPC defined in `<vpc>` to the environment(s) passed as argument(s) thereafter. +
 The `--default` flag allows setting an Anypoint VPC as the default for the organization, which applies to all environments which don't have an Anypoint VPC explicitly associated.
