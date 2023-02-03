@@ -90,6 +90,8 @@ $ anypoint-cli-v4 conf organization myOrgId
 $ anypoint-cli-v4 account:environment:list
 ----
 
+NOTE: The `organization` flag is optional. It defaults to your main organization from Anypoint Platform.
+
 [[command-line-parameters]]
 == Command-Line Parameters
 
