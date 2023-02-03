@@ -295,7 +295,7 @@ Supported values are `http`, or `https`.
 == api-mgr:api:list
 
 ----
-> api-mgr:api:list [flag]
+> api-mgr:api:list [flags]
 ----
 
 Lists all APIs in API Manager 2.x.
