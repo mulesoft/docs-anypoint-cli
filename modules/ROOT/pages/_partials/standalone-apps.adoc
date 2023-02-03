@@ -129,7 +129,7 @@ Use the flag `-o json` to get the raw JSON response of the application you speci
 
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default flag `--help`.
+This command also accepts the default flags `--help`.
 
 [[runtime-mgr-standalone-application-list]]
 == runtime-mgr:standalone-application:list
