@@ -44,7 +44,7 @@ This command also accepts the default flag `--help`.
 == runtime-mgr:serverGroup:modify
 
 ----
-> runtime-mgr:serverGroup:modify [flag] <serverGroupId>
+> runtime-mgr:serverGroup:modify [flags] <serverGroupId>
 ----
 
 This command modifies the server group passed in `serverGroupId`.
