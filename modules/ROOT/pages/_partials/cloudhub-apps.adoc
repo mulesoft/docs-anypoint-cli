@@ -33,54 +33,54 @@
 == runtime-mgr:cloudhub-alert:list
 
 ----
-> runtime-mgr:cloudhub-alert:list [options]
+> runtime-mgr:cloudhub-alert:list [flags]
 ----
 This command lists all alerts associated with your current environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 [[runtime-mgr-cloudhub-alert-history-describe]]
 == runtime-mgr:cloudhub-alert-history:describe
 
 ----
-> runtime-mgr:cloudhub-alert-history:describe [options] <name>
+> runtime-mgr:cloudhub-alert-history:describe [flags] <name>
 ----
 This command describes the history of the alarm passed in `<name>`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-list]]
 == runtime-mgr:cloudhub-application:list
 
 ----
-> runtime-mgr:cloudhub-application:list [options]
+> runtime-mgr:cloudhub-application:list [flags]
 ----
 
 This command lists all applications available in your Anypoint Platform CLI. It returns your application name, its status, the number of vCores assigned and the last time it was updated.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-describe]]
 == runtime-mgr:cloudhub-application:describe
 
 ----
-> runtime-mgr:cloudhub-application:describe [options] <name>
+> runtime-mgr:cloudhub-application:describe [flags] <name>
 ----
 
 This command displays information on the application you pass in `<name>`. +
-Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`. +
+Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>`. +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 The command returns data such as the application's domain, its status, the last time it was updated, the Mule version, the ZIP file name, the region, monitoring, and workers; as well as `TRUE` or `FALSE` information for persistent queues and static IPs enablement.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 // == runtime-mgr:cloudhub-application:describe-json
 
@@ -98,43 +98,43 @@ This command also accepts the default option `--help`.
 == runtime-mgr:cloudhub-application:stop
 
 ----
-> runtime-mgr:cloudhub-application:stop  [options] <name>
+> runtime-mgr:cloudhub-application:stop  [flag] <name>
 ----
 
 This command stops the running application you specify in `<name>` +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-start]]
 == runtime-mgr:cloudhub-application:start
 
 ----
-> runtime-mgr:cloudhub-application:start [options] <name>
+> runtime-mgr:cloudhub-application:start [flags] <name>
 ----
 
 This command starts the running application you specify in `<name>` +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-restart]]
 == runtime-mgr:cloudhub-application:restart
 
 ----
-> runtime-mgr:cloudhub-application:restart  [options] <name>
+> runtime-mgr:cloudhub-application:restart  [flags] <name>
 ----
 
 This command restarts the running application you specify in `<name>` +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default option `--help`. 
+This command accepts only the default flags `--help`. 
 
 [[runtime-mgr-cloudhub-application-delete]]
 == runtime-mgr:cloudhub-application:delete
 
 ----
-> runtime-mgr:cloudhub-application:delete [options] <name>
+> runtime-mgr:cloudhub-application:delete [flags] <name>
 ----
 
 This command deletes the running application you specify in `<name>`.
@@ -142,13 +142,13 @@ This command deletes the running application you specify in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flags `--help`.
 
 [[deploy-to-cloudhub]]
 == runtime-mgr:cloudhub-application:deploy
 
 ----
-> runtime-mgr:cloudhub-application:deploy  [options] <name> <zipfile>
+> runtime-mgr:cloudhub-application:deploy  [flags] <name> <zipfile>
 ----
 
 This command deploys the Mule deployable archive ZIP file that you specify in `<zipfile>` using the name you set in `<name>`. +
@@ -159,14 +159,13 @@ You will have to provide the absolute or relative path to the deployable ZIP fil
 If successful, this command's output includes the deployment status of `UNDEPLOYED`,
 which indicates that CloudHub uploaded the application successfully.
 
-The options this command can take are:
+The flags this command can take are:
 [%header,cols="30a,70a"]
 |===
-|Option |Description
+|Flag |Description
 |--runtime                                   | Name and version of the runtime environment. +
-Use this option to specify the name and version of the runtime you want to deploy. +
+Use this flag to specify the name and version of the runtime you want to deploy. +
 Some examples of this value are `2.1.1-API-Gateway`, `3.9.1-visualizer` or   `4.1.1`. +
-Tap your `tab` key after this option for the CLI to show you all your available options.
 (This value is the latest CloudHub Runtime version by default.)
 |--workers                                      | Number of workers. (This value is '1' by default)
 |--workerSize                               | Size of the workers in vCores. (This value is '1' by default)
@@ -190,32 +189,24 @@ Output usage information
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
 
-After typing any option, you can double tap the `tab` key for a full list of all possible options.
-For example:
-----
-> deploy <app name> --runtime [tab][tab]
-----
-Lists all possible runtimes you can select.
-
 [IMPORTANT]
 ====
-If you deploy without using any options, your application will deploy using all your default values.
+If you deploy without using any flags, your application will deploy using all your default values.
 ====
 
 [[runtime-mgr-cloudhub-application-modify]]
 == runtime-mgr:cloudhub-application:modify
 
 ----
-> runtime-mgr:cloudhub-application:modify  [options] <name> [zipfile]
+> runtime-mgr:cloudhub-application:modify  [flags] <name> [zipfile]
 ----
 This command updates the settings of an existing application. Optionally you can update it by uploading a new ZIP file. +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-This command can take all the same options as the `deploy` option.
+This command can take all the same flags as the `deploy` command.
 
 [NOTE]
 This command's output includes `Status`, which is the application's previous deployment status state.
 
-You can also start typing your option and press `tab` for Anypoint Platform CLI to autocomplete it for you.
 
 //TODO Check revert-runtime deprecation
 // == runtime-mgr application revert-runtime
@@ -234,7 +225,7 @@ You can also start typing your option and press `tab` for Anypoint Platform CLI 
 == runtime-mgr:cloudhub-application:download-logs
 
 ----
-> runtime-mgr:cloudhub-application:download-logs [options] <name> <directory>
+> runtime-mgr:cloudhub-application:download-logs [flags] <name> <directory>
 ----
 This command downloads logs the for application specified in `<name>` to the specified directory.
 
@@ -246,13 +237,13 @@ Keep in mind that contrarily to what you see in the UI, the logs you download fr
 == runtime-mgr:cloudhub-application:tail-logs
 
 ----
-> runtime-mgr:cloudhub-application:tail-logs [options] <name>
+> runtime-mgr:cloudhub-application:tail-logs [flags] <name>
 ----
 
 This command tails application logs. +
 You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 // == runtime-mgr cloudhub-application upgrade-runtime
 //
@@ -277,7 +268,7 @@ This command accepts only the default option `--help`.
 == runtime-mgr:cloudhub-application:copy
 
 ----
-> runtime-mgr:cloudhub-application:copy [options] <source> <target>
+> runtime-mgr:cloudhub-application:copy [flags] <source> <target>
 ----
 
 This command copies the CloudHub application passed in `source` to the target passed in `target`.
@@ -301,11 +292,11 @@ If the Anypoint Platform CLI is using the QA environment in the Services organiz
 [NOTE]
 Running this command requires your user to have read/write access to the `/tmp` directory of the OS where CLI is installed.
 
-In addition to the default `--help`, and `-f`/`--fields`  options, this command also accepts:
+In addition to the default `--help`, and `-f`/`--fields`  flags, this command also accepts:
 
 [%header,cols="30a,70a"]
 |===
-|Option |Description
+|Flag |Description
 |--property  | Set a property (`name:value`). 
 
 Enclose the property in quotes and escape the `:` and `=` characters,
@@ -315,7 +306,7 @@ for example:
 |===
 
 [NOTE]
-When copying an application containing safely hidden application properties, pass the properties in the `copy` command using the `--property` option.
+When copying an application containing safely hidden application properties, pass the properties in the `copy` command using the `--property` flag.
 For information about safely hidden application properties, see xref:runtime-manager::secure-application-properties.adoc[Safely Hide Application Properties].
 
 // end::commands[]

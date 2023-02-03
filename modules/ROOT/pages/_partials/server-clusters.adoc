@@ -23,23 +23,23 @@
 == runtime-mgr:cluster:add:server
 
 ----
-> runtime-mgr:cluster:add:server [options] <clusterId> <serverId>
+> runtime-mgr:cluster:add:server [flags] <clusterId> <serverId>
 ----
 
 This command adds the cluster in `clusterId` to the server passed in `serverId`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cluster-delete]]
 == runtime-mgr:cluster:delete
 
 ----
-> runtime-mgr:cluster:delete [options] <clusterId>
+> runtime-mgr:cluster:delete [flags] <clusterId>
 ----
 
 This command deletes the cluster passed in `clusterId`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -48,36 +48,36 @@ This command does not prompt twice before deleting. If you send a delete instruc
 == runtime-mgr:cluster:list
 
 ----
-> runtime-mgr:cluster:list [options]
+> runtime-mgr:cluster:list [flags]
 ----
 
 This command lists all clusters in the environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 [[runtime-mgr-cluster-remove-server]]
 == runtime-mgr:cluster:remove:server
 
 ----
-> runtime-mgr:cluster:remove:server [options] <clusterId> <serverId>
+> runtime-mgr:cluster:remove:server [flags] <clusterId> <serverId>
 ----
 
 This command removes the server passed in `serverId` from the cluster passed in `clusterId`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cluster-create]]
 == runtime-mgr:cluster:create
 
 ----
-> runtime-mgr:cluster:create [options] <name>
+> runtime-mgr:cluster:create [flag] <name>
 ----
 
 This command creates a cluster using the id passed in `name`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` f, this command also accepts:
 [%header,cols="30,70"]
 |===
 |Value | Description
@@ -89,25 +89,25 @@ Besides the default `--help` option, this command also accepts:
 == runtime-mgr:cluster:describe
 
 ----
-> runtime-mgr:cluster:describe [options] <clusterId>
+> runtime-mgr:cluster:describe [flags] <clusterId>
 ----
 
 This command describes the cluster passed in `clusterId`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 [[runtime-mgr-cluster-modify]]
 == runtime-mgr:cluster:modify
 
 ----
-> runtime-mgr:cluster:modify [options] <clusterId>
+> runtime-mgr:cluster:modify [flags] <clusterId>
 ----
 
 This command modifies the cluster passed in `clusterId`. +
-In order to update the id for the cluster, you need to pass the  `--name` option.
+In order to update the id for the cluster, you need to pass the  `--name` flag.
 
-Besides the `--name` option, this command also has the default `--help`,and `-f`/`--fields` options.
+Besides the `--name` flag, this command also has the default `--help` flag.
 
 // end::commands[]
