@@ -25,10 +25,10 @@ Anypoint CLI 4.x introduces the following changes:
  ** Environments and Business Groups commands are no longer supported.
  ** Datagraph API Source Management commands are no longer supported.
 
-* *Interactive Mode* Because interactive mode is no longer supported, the following commands and options are no longer available:
+* *Interactive Mode* Because interactive mode is no longer supported, the following commands and flags are no longer available:
 
  ** `use business-group` command
  ** `use environment` command
  ** `exit` command
- ** `-f, --fields` options
+ ** `-f, --fields` flag
  ** Ability to interactively enter the password if you omit it

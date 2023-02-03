@@ -22,49 +22,49 @@
 == runtime-mgr:server:describe
 
 ----
-> runtime-mgr:server:describe [options] <serverId>
+> runtime-mgr:server:describe [flags] <serverId>
 ----
 
 This command describes the server passed in `serverId`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-server-modify]]
 == runtime-mgr:server:modify
 
 ----
-> runtime-mgr:server:modify [options] <serverId>
+> runtime-mgr:server:modify [flags] <serverId>
 ----
 
 This command modifies the server passed in `serverId`.
 
-In order to update the id for the cluster, you need to pass the  `--name` option.
+In order to update the id for the cluster, you need to pass the  `--name` flag.
 
-Besides the `--name` option, this command also has the default `--help`, and `-f`/`--fields` options.
+Besides the `--name` flag, this command also has the default `--help` flag.
 
 [[runtime-mgr-server-token]]
 == runtime-mgr:server:token
 
 ----
-> runtime-mgr:server:token [options]
+> runtime-mgr:server:token [flags]
 ----
 
 This command gets server registration token. This token needs to be used to register a new server.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-server-delete]]
 == runtime-mgr:server:delete
 
 ----
-> runtime-mgr:server:delete [options] <serverId>
+> runtime-mgr:server:delete [flags] <serverId>
 ----
 
 This command deletes the server passed in `serverId`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -73,12 +73,12 @@ This command does not prompt twice before deleting. If you send a delete instruc
 == runtime-mgr:server:list
 
 ----
-> runtime-mgr:server:list [options]
+> runtime-mgr:server:list [flags]
 ----
 
 This server lists all servers in your environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 //end::commands[]

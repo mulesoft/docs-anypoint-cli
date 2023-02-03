@@ -1,4 +1,4 @@
-= General Use of Commands and Options
+= General Use of Commands and Flags
 
 // tag::usageintro[]
 
@@ -18,12 +18,5 @@ $ anypoint-cli-v4 [command] [options]
 ----
 
 If you run a command and there is an error, the application exits and returns a description of the issue.
-
-[[default-options]]
-== Default Options
-
-Anypoint Platform CLI commands have the following default options:
-
-* `--help` displays command usage information.
 
 // end::syntax[]

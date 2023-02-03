@@ -43,12 +43,12 @@
 == api-mgr:alert:add
 
 ----
-> api-mgr:alert:add [options] <apiInstanceId> <name>
+> api-mgr:alert:add [flags] <apiInstanceId> <name>
 ----
 
 This command creates an API instance alert with the name passed in `name` for the API Instance Id passed in `<apiInstanceId>`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -84,18 +84,18 @@ Supported values: days, hours, minutes.
 
 | `recipient [username]`
 | Username to send alert notification to. +
-You can pass this option multiple times to specify multiple usernames.
+You can pass this flag multiple times to specify multiple usernames.
 
 | `email [emailAddress]`
 | Email to send alert notification to. +
-You can pass this option multiple times to specify multiple emails.
+You can pass this flag multiple times to specify multiple emails.
 
 | `responseTime [num]`
 | Response time to trigger `response-time` alert type.
 
 | `responseCode [code]`
 | Response codes to trigger `response-code` alert type. +
-You can pass this option multiple times to specify multiple codes.
+You can pass this flag multiple times to specify multiple codes.
 
 | `policyInstanceId [num]`
 | ID of a policy applied to API instance to trigger `response-code` alert type.
@@ -105,12 +105,12 @@ You can pass this option multiple times to specify multiple codes.
 == api-mgr:alert:list
 
 ----
-> api-mgr:alert:list [options] <apiInstanceId>
+> api-mgr:alert:list [flags] <apiInstanceId>
 ----
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -124,48 +124,48 @@ Besides the default `--help` option, this command also accepts:
 == api-mgr:api:change-specification
 
 ----
-> api-mgr:api:change-specification [options] <apiInstanceId> <assetVersion>
+> api-mgr:api:change-specification [flags] <apiInstanceId> <assetVersion>
 ----
 
 Changes the asset version for the API instance passed in `<apiInstanceId`,  by choosing a new version from Exchange passed in `<assetVersion>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-api-classify]]
 == api-mgr:api:classify
 
 ----
-> api-mgr:api:classify [options] <destEnvName> <apiInstanceId>
+> api-mgr:api:classify [flags] <destEnvName> <apiInstanceId>
 ----
 
 Classifies the API instance passed in `<apiInstanceId>` in the  environment passed in `<destEnvName>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-api-delete]]
 == api-mgr:api:delete
 
 ----
-> api-mgr:api:delete [options] <apiInstanceId>
+> api-mgr:api:delete [flags] <apiInstanceId>
 ----
 
 This command deletes the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-api-deploy]]
 == api-mgr:api:deploy
 
 ----
-> api-mgr:api:deploy [options] <apiInstanceId>
+> api-mgr:api:deploy [flags] <apiInstanceId>
 ----
 
-This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the options described below.
+This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below.
 
 [NOTE]
 This command is only supported for endpoints with proxy.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -197,62 +197,62 @@ It has `true` or `false` values.
 == api-mgr:api:deprecate
 
 ----
-> api-mgr:api:deprecate [options] <apiInstanceId>
+> api-mgr:api:deprecate [flags] <apiInstanceId>
 ----
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-api-describe]]
 == api-mgr:api:describe
 
 ----
-> api-mgr:api:describe [options] <apiInstanceId>
+> api-mgr:api:describe [flags] <apiInstanceId>
 ----
 
 Shows details of the API Instance passed in `<apiInstanceId>`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 [[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
 
 ----
-> api-mgr:api:download-proxy [options] <apiInstanceId> <targetPath>
+> api-mgr:api:download-proxy [flags] <apiInstanceId> <targetPath>
 ----
 
 This command downloads the API proxy ZIP file of the API Instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`.
 
-Besides the default `--help` option, this command also accepts a `gatewayVersion` option to specify the gateway version you want to download.
+Besides the default `--help` flag, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
 [[api-mgr-api-edit]]
 == api-mgr:api:edit
 
 ----
-> api-mgr:api:edit [options] <apiInstanceId>
+> api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
 Edits the API instance passed in `<apiInstanceId>`. +
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-This option has `true` or `false` values.
+This flag has `true` or `false` values.
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-This option has `true` or `false` values.
+This flag has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether you are managing this API in Mule 4 or above. +
-This option has `true` or `false` values.
+This flag has `true` or `false` values.
 
 | `--deploymentType <value>`
 | Deployment type. +
@@ -295,12 +295,12 @@ Supported values are `http`, or `https`.
 == api-mgr:api:list
 
 ----
-> api-mgr:api:list [options]
+> api-mgr:api:list [flags]
 ----
 
 Lists all APIs in API Manager 2.x.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -318,12 +318,12 @@ Besides the default `--help` option, this command also accepts:
 == api-mgr:api:manage
 
 ----
-> api-mgr:api:manage [options] <assetId> <assetVersion>
+> api-mgr:api:manage [flags] <assetId> <assetVersion>
 ----
 
 Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -334,15 +334,15 @@ Accepted values are `http`, `raml`, or `wsdl`.
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-This option has `true` or `false` values.
+This flag has `true` or `false` values.
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-This option has `true` or `false` values.
+This flag has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether you are managing this API in Mule 4 or above. +
-This option has `true` or `false` values.
+This flag has `true` or `false` values.
 
 | `--deploymentType <value>`
 | Deployment type. +
@@ -384,39 +384,39 @@ Supported values are `http` or `https`.
 == api-mgr:api:promote
 
 ----
-> api-mgr:api:promote [options] <apiInstanceId> <sourceEnvId>
+> api-mgr:api:promote [flags] <apiInstanceId> <sourceEnvId>
 ----
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Value |Description
 | `-a, --copyAlerts`
 | Indicates whether to copy alerts. +
-This option has `true` or `false` values. Default Value is `true`
+This flag has `true` or `false` values. Default Value is `true`
 
 | `-p, --copyPolicies`
 |Indicates whether to copy policies. +
-This option has `true` or `false` values. Default Value is `true`
+This flag has `true` or `false` values. Default Value is `true`
 
 | `-t, --copyTiers`
 |Indicates whether to copy tiers. +
-This option has `true` or `false` values. Default Value is `true`
+This flag has `true` or `false` values. Default Value is `true`
 |===
 
 [[api-mgr-api-redeploy]]
 == api-mgr:api:redeploy
 
 ----
-> api-mgr:api:redeploy [options] <apiInstanceId>
+> api-mgr:api:redeploy [flags] <apiInstanceId>
 ----
 
-Redeploys the API Instance passed in `<apiInstanceId>` to the deployment target set up in the options described below.
+Redeploys the API Instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -436,36 +436,36 @@ Besides the default `--help` option, this command also accepts:
 
 | `--overwrite`
 | Update application if exists. +
-This option has `true` or `false` values. Default Value is `true`
+This flag has `true` or `false` values. Default Value is `true`
 |===
 
 [[api-mgr-api-undeprecate]]
 == api-mgr:api:undeprecate
 
 ----
-> api-mgr:api:undeprecate [options] <apiInstanceId>
+> api-mgr:api:undeprecate [flags] <apiInstanceId>
 ----
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
 
 ----
-> api-mgr:contract:delete [options] <apiInstanceId> <clientId>
+> api-mgr:contract:delete [flags] <apiInstanceId> <clientId>
 ----
 
 This command deletes the contract between the API Instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
 
 ----
-> api-mgr:contract:list [options] <apiInstanceId> [searchText]
+> api-mgr:contract:list [flags] <apiInstanceId> [searchText]
 ----
 
 Lists all contracts of the API passed in `<apiInstanceId>`.
@@ -473,7 +473,7 @@ Lists all contracts of the API passed in `<apiInstanceId>`.
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -488,7 +488,7 @@ Besides the default `--help` option, this command also accepts:
 == api-mgr:policy:apply
 
 ----
-> api-mgr:policy:apply [options] <apiInstanceId> <policyId>
+> api-mgr:policy:apply [flags] <apiInstanceId> <policyId>
 ----
 
 Applies the policy passed in `<policyId>` to the API instance passed in `<apiInstanceId>`.
@@ -533,12 +533,12 @@ The following example defines a rate limit of one request every ten seconds:
 == api-mgr:policy:describe
 
 ----
-> api-mgr:policy:describe [options] <policyId>
+> api-mgr:policy:describe [flags] <policyId>
 ----
 
 This command shows the description and available configuration properties of the policy passed in `<policyId>`. +
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -558,23 +558,23 @@ Supported values are `table` (default) and `json`
 == api-mgr:policy:disable
 
 ----
-> api-mgr:policy:disable [options] <apiInstanceId> <policyInstanceId>
+> api-mgr:policy:disable [flags] <apiInstanceId> <policyInstanceId>
 ----
 
 This command disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-policy-edit]]
 == api-mgr:policy:edit
 
 ----
-> api-mgr:policy:edit [options] <apiInstanceId> <policyInstanceId>
+> api-mgr:policy:edit [flags] <apiInstanceId> <policyInstanceId>
 ----
 
 This command edits the policy configuration passed in `<policyInstanceId>` of the API Instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -592,46 +592,46 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTempl
 == api-mgr:policy:enable
 
 ----
-> api-mgr:policy:enable [options] <apiInstanceId> <policyInstanceId>
+> api-mgr:policy:enable [flags] <apiInstanceId> <policyInstanceId>
 ----
 
 This command enables the policy passed in `<policyInstanceId>` for the API Instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-policy-list]]
 == api-mgr:policy:list
 
 ----
-> api-mgr:policy:list [options] [apiInstanceId]
+> api-mgr:policy:list [flags] [apiInstanceId]
 ----
 
 This command lists all policies for all APIs in API Manager 2.x. +
-When the `[apiInstanceId]` option is specified, this command lists the policies applied to that API instance. Not specifying the `[apiInstanceId]` will list all policies for all APIs.
+When the `[apiInstanceId]` flag is specified, this command lists the policies applied to that API instance. Not specifying the `[apiInstanceId]` will list all policies for all APIs.
 
-Besides the default `--help` option, this command also accepts the `-m, --muleVersion4OrAbove` option which has `true` or `false` values. +
+Besides the default `--help` flag, this command also accepts the `-m, --muleVersion4OrAbove` flag which has `true` or `false` values. +
 
 [[api-mgr-policy-remove]]
 == api-mgr:policy:remove
 
 ----
-> api-mgr:policy:remove [options] <apiInstanceId> <policyInstanceId>
+> api-mgr:policy:remove [flags] <apiInstanceId> <policyInstanceId>
 ----
 
 This command removes the policy specified in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-tier-add]]
 == api-mgr:tier:add
 
 ----
-> api-mgr:tier:add [options] <apiInstanceId>
+> api-mgr:tier:add [flags] <apiInstanceId>
 ----
 
 This command creates an SLA tier for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -673,33 +673,33 @@ For example: `-l true,100,sec -l false,20,min`
 == api-mgr:tier:copy
 
 ----
-> api-mgr:tier:copy [options] <sourceAPIInstanceId> <targetAPIInstanceId>
+> api-mgr:tier:copy [flags] <sourceAPIInstanceId> <targetAPIInstanceId>
 ----
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
 
 ----
-> api-mgr:tier:delete [options] <apiInstanceId> <tierId>
+> api-mgr:tier:delete [flags] <apiInstanceId> <tierId>
 ----
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default option: `--help`.
+This command accepts only the default flag: `--help`.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list
 ----
-> api-mgr:tier:list [options] <apiInstanceId> [searchText]
+> api-mgr:tier:list [flags] <apiInstanceId> [searchText]
 ----
 
 This command lists the SLA tiers of the  API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===

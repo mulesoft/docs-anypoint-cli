@@ -21,27 +21,27 @@
 == runtime-mgr:standalone-alert:describe
 
 ----
-> runtime-mgr:standalone-alert:describe [options] <alertId>
+> runtime-mgr:standalone-alert:describe [flags] <alertId>
 ----
 
 This command describes the alert passed in `alertId`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 [[runtime-mgr-standalone-alert-create]]
 == runtime-mgr:standalone-alert:create
 
 ----
-> runtime-mgr:standalone-alert:create [options] <name>
+> runtime-mgr:standalone-alert:create [flags] <name>
 ----
 
 This command creates a new alert for a standalone runtime with the ID passed in `name`.
 The alert `name` is limited to 256 characters.
 
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30,70"]
 |===
@@ -63,12 +63,12 @@ Besides the default `--help` option, this command also accepts:
 == runtime-mgr:standalone-alert:modify
 
 ----
-> runtime-mgr:standalone-alert:modify [options] <alertId>
+> runtime-mgr:standalone-alert:modify [flags] <alertId>
 ----
 
 This command modifies the alert passed in `alertId`.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30,70"]
 |===
@@ -91,13 +91,13 @@ Besides the default `--help` option, this command also accepts:
 == runtime-mgr:standalone-alert:list
 
 ----
-> runtime-mgr:standalone-alert:list [options]
+> runtime-mgr:standalone-alert:list [flags]
 ----
 
 This command lists all alerts for standalone Mules in the current environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 // end::commands[]
