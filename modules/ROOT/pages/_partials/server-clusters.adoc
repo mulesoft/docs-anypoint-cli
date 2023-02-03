@@ -77,7 +77,7 @@ This command accepts only the default flag `--help`.
 
 This command creates a cluster using the id passed in `name`.
 
-Besides the default `--help` f, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 [%header,cols="30,70"]
 |===
 |Value | Description
