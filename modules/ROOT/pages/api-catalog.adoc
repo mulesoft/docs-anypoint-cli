@@ -1,0 +1,5 @@
+= API Catalog
+
+include::anypoint-cli::partial$api-catalog.adoc[tag=summary]
+
+include::anypoint-cli::partial$api-catalog.adoc[tag=commands]

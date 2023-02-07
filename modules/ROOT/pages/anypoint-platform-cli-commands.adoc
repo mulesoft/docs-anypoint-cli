@@ -6,6 +6,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 
 xref:account.adoc[Anypoint Platform Accounts]
 
+xref:api-catalog.adoc[API Catalog]
+
 xref:api-governance.adoc[API Governance]
 
 xref:api-mgr.adoc[API Manager]
