@@ -167,6 +167,7 @@ Character `:` is not supported for the property's name.
 |--objectStoreV1                   | Enable or disable Object Store V1. Can take `true` or `false` values
 |--autoRestart                            | Automatically restart app when not responding. Can take `true` or `false` values. (This value is `true` by default.)
 |--help                                                  | output usage information
+|--timeout | Set the timeout value in miliseconds. Can take values between `60000` and `300000`.
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
 
