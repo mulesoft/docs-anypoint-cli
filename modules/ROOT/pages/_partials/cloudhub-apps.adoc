@@ -186,6 +186,8 @@ Character `:` is not supported for the property's name.
 
 |--help                                                  | 
 Output usage information
+|--timeout | Set the timeout value in miliseconds. Can take values between `60000` and `300000`.
+
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
 
