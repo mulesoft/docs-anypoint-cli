@@ -15,7 +15,7 @@
 |<<cloudhub-vpc-environments-remove>> | Modifies the Anypoint VPC association to Runtime Manager environments.
 |<<cloudhub-vpc-business-groups-add>> | Shares an Anypoint VPC with a list of Business Groups.
 |<<cloudhub-vpc-business-groups-remove>> | Shares an Anypoint VPC with a list of Business Groups.
-|<<cloudhub-vpc-dns-servers-set>> | Sets the domain names that are resolved using your internal DNS servers. If used with no option, internal DNS will be disabled
+|<<cloudhub-vpc-dns-servers-set>> | Sets the domain names that are resolved using your internal DNS servers. If used with no flag, internal DNS will be disabled
 |<<cloudhub-vpc-dns-servers-unset>> | Clears the list domain names that are resolved using your internal DNS servers
 |<<cloudhub-vpc-firewall-rules-describe>> | Shows firewall rule for Mule applications in this Anypoint VPC
 |<<cloudhub-vpc-firewall-rules-add>> | Adds a firewall rule for Mule applications in this Anypoint VPC
@@ -31,41 +31,41 @@
 == cloudhub:vpc:list
 
 ----
-> cloudhub:vpc:list [options]
+> cloudhub:vpc:list [flags]
 ----
 This command lists all available Anypoint VPCs. It returns ID, region, and environment of the network and whether it is the default Anypoint VPC or not.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 
 [[cloudhub-vpc-describe]]
 == cloudhub:vpc:describe
 
 ----
-> cloudhub:vpc:describe [options] <name>
+> cloudhub:vpc:describe [flags] <name>
 ----
 This command displays information about the Anypoint VPC that is specified in `<name>`.
 
-Use the option `-o json` to get the raw JSON response of the application you specify in `<name>`.
+Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[cloudhub-vpc-create]]
 == cloudhub:vpc:create
 
 ----
-> cloudhub:vpc:create [options] <name> <region> <cidrBlock> [environments...]
+> cloudhub:vpc:create [flags] <name> <region> <cidrBlock> [environments...]
 ----
 This command creates an Anypoint VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::vpc-provisioning-concept#faq_how_to_size_vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environments] passed as argument(s) thereafter.
 
 [NOTE]
 An Anypoint VPC needs to be bound to a business group within your organization. When creating an Anypoint VPC, make sure to assign it a business group using the <<cloudhub:vpc:business-groups:add, business-groups add>> command.
 
-Besides the default `--help` option, this command also has the `--default` option. When passed, the Anypoint VPC is created as the default Anypoint VPC for the selected environment.
+Besides the default `--help` flag, this command also has the `--default` flag. When passed, the Anypoint VPC is created as the default Anypoint VPC for the selected environment.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 
 [[cloudhub-vpc-delete]]
@@ -79,56 +79,56 @@ This command deletes the Anypoint VPC specified in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[cloudhub-vpc-environments-add]]
 == cloudhub:vpc:environments:add
 
 ----
-> cloudhub:vpc:environments:add [options] <vpc> [environments...]
+> cloudhub:vpc:environments:add [flags] <vpc> [environments...]
 ----
 This command assigns the Anypoint VPC defined in `<vpc>` to the environment(s) passed as argument(s) thereafter. +
-The `--default` option allows setting an Anypoint VPC as the default for the organization, which applies to all environments which don't have an Anypoint VPC explicitly associated.
+The `--default` flag allows setting an Anypoint VPC as the default for the organization, which applies to all environments which don't have an Anypoint VPC explicitly associated.
 
-This command also has the default `--help` option.
+This command also has the default `--help` flag.
 
 [[cloudhub-vpc-environments-remove]]
 == cloudhub:vpc:environments:remove
 
 ----
-> cloudhub:vpc:environments:remove [options] <vpc> [environments...]
+> cloudhub:vpc:environments:remove [flag] <vpc> [environments...]
 ----
 This command removes the Anypoint VPC defined in `<vpc>` from the environment(s) passed as argument(s) thereafter. +
-Besides the default `--help` option, this command also has the option `--default`, that removes this Anypoint VPC as the default Anypoint VPC for the environment.
+Besides the default `--help` flag, this command also has the `--default` flag, that removes this Anypoint VPC as the default Anypoint VPC for the environment.
 
 [[cloudhub-vpc-business-groups-add]]
 == cloudhub:vpc:business-groups:add
 
 ----
-> cloudhub:vpc:business-groups:add [options] <vpc> <businessGroups...>
+> cloudhub:vpc:business-groups:add [flags] <vpc> <businessGroups...>
 ----
 This command assigns the Anypoint VPC defined in `<vpc>` to the business group(s) passed as argument(s) thereafter.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[cloudhub-vpc-business-groups-remove]]
 == cloudhub:vpc:business-groups:remove
 
 ----
-> cloudhub:vpc:business-groups:remove [options] <vpc> <businessGroups...>
+> cloudhub:vpc:business-groups:remove [flags] <vpc> <businessGroups...>
 ----
 This command removes the Anypoint VPC defined in `<vpc>` from the business group(s) passed as argument(s) thereafter +
 
 [WARNING]
 This command does not prompt twice before removing the Anypoint VPC from the specified resource. If you send a remove instruction, it does not ask for confirmation.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[cloudhub-vpc-dns-servers-set]]
 == cloudhub:vpc:dns-servers:set
 
 ----
-> cloudhub:vpc:dns-servers:set [options] <vpc>
+> cloudhub:vpc:dns-servers:set [flags] <vpc>
 ----
 This command sets a list of local host names (internal domain names) to be resolved using your DNS servers for which you need to provide their IP addresses (whether private or public addresses). +
 Whenever those private domains are provided, your worker resolves them using your private DNS, so you can still use the internal host names of your private network.
@@ -137,11 +137,11 @@ Whenever those private domains are provided, your worker resolves them using you
 This feature is supported by workers running Mule versions 3.5.x, 3.6.x, 3.7.4, 3.8.0-HF1, 3.8.1 and 3.8.2.
 
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="20a,80a"]
 |===
-|Option |Description
+|Flag |Description
 | `server` | IP address for a DNS server to resolve special domains on. Can be specified up to 3 times
 | `domain` | A domain to resolve on the special DNS server list. Can be specified multiple times
 |===
@@ -156,11 +156,11 @@ To remove a DNS set, you need to use the <<cloudhub:vpc:dns-servers:unset,vpc dn
 == cloudhub:vpc:dns-servers:unset
 
 ----
-> cloudhub:vpc:dns-servers:unset [options] <vpc>
+> cloudhub:vpc:dns-servers:unset [flags] <vpc>
 ----
 This command clears the list of local host names (internal domain names) to be resolved using your DNS servers from the Anypoint VPC passed in `<vpc>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[cloudhub-vpc-firewall-rules-describe]]
 == cloudhub:vpc:firewall-rules:describe
@@ -170,15 +170,15 @@ This command accepts only the default option `--help`.
 ----
 This command describes all the firewall rules for the Anypoint VPC defined in `<vpc>`.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default option`--help`.
+This command also accepts the default flag `--help`.
 
 [[cloudhub-vpc-firewall-rules-add]]
 == cloudhub:vpc:firewall-rules:add
 
 ----
-> cloudhub:vpc:firewall-rules:add [options] <vpc> <cidrBlock> <protocol> <fromPort> [toPort]
+> cloudhub:vpc:firewall-rules:add [flags] <vpc> <cidrBlock> <protocol> <fromPort> [toPort]
 ----
 This command adds a firewall rule to the Anypoint VPC defined in `<vpc>` using the values set in the variables: +
 
@@ -199,7 +199,7 @@ When creating an Anypoint VPC, make sure to allow your outbound address. +
 By default, all IP addresses are blocked, and you need to authorize IP addresses or range of addresses to your Anypoint VPC firewall rule.
 --
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[cloudhub-vpc-firewall-rules-remove]]
 == cloudhub:vpc:firewall-rules:remove
@@ -209,7 +209,7 @@ This command accepts only the default option `--help`.
 ----
 This command removes the firewall rule from the workers inside the Anypoint VPC specified in `<vpc>` at the index passed in the `<index>`.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 
 // end::commands[]

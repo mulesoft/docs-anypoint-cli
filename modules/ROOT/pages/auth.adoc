@@ -90,6 +90,8 @@ $ anypoint-cli-v4 conf organization myOrgId
 $ anypoint-cli-v4 account:environment:list
 ----
 
+NOTE: The `organization` flag is optional. It defaults to your main organization from Anypoint Platform.
+
 [[command-line-parameters]]
 == Command-Line Parameters
 
@@ -105,7 +107,7 @@ You can authenticate to Anypoint Platform through command-line by running the `a
 --environment
 ----
 
-NOTE: The `--organization` parameter is optional. It defaults to your main organization from Anypoint Platform.
+NOTE: The `--organization` flag is optional. It defaults to your main organization from Anypoint Platform.
 *Examples:*
 
 * Authenticate on the command line using username and password

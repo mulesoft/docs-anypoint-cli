@@ -10,7 +10,9 @@ Anypoint CLI 4.x introduces the following changes:
 
 * *CLI Name* The new CLI is named `anypoint-cli-v4`. 
 * *Installation* Command groups for Anypoint Platform components are packaged as plugins that can optionally be installed and uninstalled separately from the core installation package.
-* *Authentication* Instead of using the credentials file located in `~/.config/@mulesoft/anypoint-cli-v4-nodejs/config.json`, you set credentials using the `anypoint-cli-v4 conf` command. 
+* *Authentication* 
+** Instead of using the credentials file located in `~/.config/@mulesoft/anypoint-cli-v4-nodejs/config.json`, you set credentials using the `anypoint-cli-v4 conf` command. +
+** SSO is no longer supported. As a part of Multi-factor authentication (MFA) enablement for all users, the only way to use Anypoint CLI is through xref:access-management::connected-apps-overview.adoc[Connected Apps].
 * *Command Syntax* The separator between command parameters is a colon (:) instead of a space. For example, the command to get the Exchange asset resource list is now `anypoint-cli-v4 exchange:asset:resource:list`.
 * *Commands and Properties* The following commands and properties have changed:
 
@@ -20,11 +22,13 @@ Anypoint CLI 4.x introduces the following changes:
  ** `runtime-mgr:cloudhub-application:describe -o JSON` replaces `runtime-mgr cloudhub-application describe-json`.
  ** `runtime-mgr:pcf-application:describe -o JSON` replaces `runtime-mgr pcf-application describe-json`.
  ** `cloudhub:vpc:describe -o JSON` replaces `cloudhub vpc describe-json`.
+ ** Environments and Business Groups commands are no longer supported.
+ ** Datagraph API Source Management commands are no longer supported.
 
-* *Interactive Mode* Because interactive mode is no longer supported, the following commands and options are no longer available:
+* *Interactive Mode* Because interactive mode is no longer supported, the following commands and flags are no longer available:
 
  ** `use business-group` command
  ** `use environment` command
  ** `exit` command
- ** `-f, --fields` options
+ ** `-f, --fields` flag
  ** Ability to interactively enter the password if you omit it

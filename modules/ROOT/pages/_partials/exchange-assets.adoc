@@ -61,7 +61,7 @@
 == exchange:asset:upload
 
 ----
-> exchange:asset:upload [properties] <assetIdentifier>
+> exchange:asset:upload [flags] <assetIdentifier>
 ----
 
 This command uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, example, policy, extension, external-library or connector asset using the ID passed in `<assetIdentifier>`.
@@ -74,7 +74,7 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 
 [%header,cols="30a,50a,30a"]
 |===
-| Command | Description |  Example
+| Flags | Description |  Example
 | `--name` | Asset name (required if no pom file is specified) .3+|
 `exchange:asset:upload --name "Raml Asset" --description "RAML"  --properties='{"apiVersion":"v1", "mainFile": "api.raml"}' --files='{"raml.zip":"​/file-path/raml.zip"}'`
 | `--description` | Asset description 
@@ -89,7 +89,7 @@ For example:
 
 | `--files` | Asset file, identified as `classifier.packaging` or `packaging` and its file path, for example, `--files='{"oas.zip":"​/my-api.raml"}'`
 
-To send multiple files, use the same option multiple times:
+To send multiple files, use the same flag multiple times:
 
 `--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` | `exchange:asset:upload --files'{"pom.xml": "directory/pom-file.xml"}' --files='{"raml.raml": "./my-api.raml"}'`
 | `--type` | Asset type
@@ -185,7 +185,7 @@ Default value:
 == exchange:asset:mutableDataUpload
 
 ----
-> exchange:asset:mutableDataUpload [properties] <assetIdentifier>
+> exchange:asset:mutableDataUpload [flags] <assetIdentifier>
 ----
 
 This command modifies the mutable data of an already created asset, including tags, categories, fields, and documentation.
@@ -224,7 +224,7 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 == exchange:asset:updateStatus
 
 ----
-> exchange:asset:updateStatus [properties] <assetIdentifier>
+> exchange:asset:updateStatus [flags] <assetIdentifier>
 ----
 
 This command modifies the status of an already created asset.
@@ -237,7 +237,7 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 
 [%header,cols="40a,30a,30a"]
 |===
-| Command | Description |  Example
+| Flag | Description |  Example
 | `--status` | Asset status
 
 Supported Values:
@@ -265,18 +265,18 @@ Note that the `published` state corresponds to the `stable` state
 == exchange:asset:modify
 
 ----
-> exchange:asset:modify [options] <assetIdentifier>
+> exchange:asset:modify [flags] <assetIdentifier>
 ----
 
 This command modifies the Exchange asset identified with `<assetIdentifier>`. +
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30a,40a,30a"]
 |===
-|Command | Description |  Example
+|Flag | Description |  Example
 |`--name` | New asset name .2+<.<| `exchange:asset:modify --name newName --tags test,sample`
 |`--tags` | Comma-separated tags for the asset
 |===
@@ -285,20 +285,20 @@ Besides the default `--help` option, this command also accepts:
 == exchange:asset:download
 
 ----
-> exchange:asset:download [options] <assetIdentifier> <directory>
+> exchange:asset:download [flags] <assetIdentifier> <directory>
 ----
 
 This command downloads the Exchange asset identified with `<assetIdentifier>` to the directory passed in `<directory>`. +
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-list]]
 == exchange:asset:list
 
 ----
-> exchange:asset:list [options] [searchText]
+> exchange:asset:list [flags] [searchText]
 ----
 
 This command lists all assets in Exchange.
@@ -306,11 +306,11 @@ This command lists all assets in Exchange.
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-Besides the default `--help` option, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30a,40a,30a"]
 |===
-|Command | Description |  Example
+|Flag | Description |  Example
 |`--limit` | Number of results to retrieve | `exchange:asset:list --limit 2`
 |`--offset` | Offsets the number of APIs passed | `exchange:asset:list --offset 3`
 |`--sort` | Sorts the results in the field name passed | `exchange:asset:list --sort "Latest Version"`
@@ -323,7 +323,7 @@ Besides the default `--help` option, this command also accepts:
 == exchange:asset:page:download
 
 ----
-> exchange:asset:page:download [options] <assetIdentifier> <directory> [pageName]
+> exchange:asset:page:download [flags] <assetIdentifier> <directory> [pageName]
 ----
 
 This command downloads the description page specified in `<pageName>` for the Exchange asset identified with `<assetIdentifier>` to the directory passed in `<directory>`. +
@@ -336,13 +336,13 @@ Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
 The description page in downloaded in Markdown format. When `name` is not specified, all pages are downloaded.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-page-modify]]
 == exchange:asset:page:modify
 
 ----
-> exchange:asset:page:modify [options] <assetIdentifier> <pageName>
+> exchange:asset:page:modify [flags] <assetIdentifier> <pageName>
 ----
 
 This command modifies the description page specified in `<pageName>`, for the Exchange asset identified with `<assetIdentifier>`.
@@ -352,13 +352,13 @@ This command only supports published pages.
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-Besides the default `--help` option, this command also accepts the `--name` option to set a new asset page name.
+Besides the default `--help` flag, this command also accepts the `--name` flag to set a new asset page name.
 
 [[exchange-asset-page-upload]]
 == exchange:asset:page:upload
 
 ----
-> exchange:asset:page:upload [options] <assetIdentifier> <pageName> <mdPath>
+> exchange:asset:page:upload [flags] <assetIdentifier> <pageName> <mdPath>
 ----
 
 This command uploads an asset description page from the path passed in `<mdPath>` using the name specified in `<pageName>` to the Exchange asset identified with `<assetIdentifier>`. +
@@ -369,13 +369,13 @@ This command publishes all active drafts as part of the operation.
 
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-page-update]]
 == exchange:asset:page:update
 
 ----
-> exchange:asset:page:update [options] <assetIdentifier> <pageName> <mdPath>
+> exchange:asset:page:update [flags] <assetIdentifier> <pageName> <mdPath>
 ----
 
 This command updates the content of an asset description page from the path passed in `<mdPath>` using the name specified in `<pageName>` to the Exchange asset identified with `<assetIdentifier>`. +
@@ -386,13 +386,13 @@ This command publishes all active drafts as part of the operation.
 
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-page-delete]]
 == exchange:asset:page:delete
 
 ----
-> exchange:asset:page:delete [options] <assetIdentifier> <pageName>
+> exchange:asset:page:delete [flags] <assetIdentifier> <pageName>
 ----
 
 This command deletes the description page specified in `<pageName>`, for the asset identified with `<assetIdentifier>`. +
@@ -405,7 +405,7 @@ This command only supports published pages.
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-page-list]]
 == exchange:asset:page:list
@@ -421,26 +421,26 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 [NOTE]
 This command only supports published pages.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 [[exchange-asset-copy]]
 == exchange:asset:copy
 
 ----
-> exchange:asset:copy [options] <source> <target>
+> exchange:asset:copy [flags] <source> <target>
 ----
 
 This command copies the Exchange asset from `<source>` to `<target>`. +
 Arguments `<source>` and `<target>` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts the default options `--help`, `-f/--fields`, and also:
+This command accepts the default flag `--help`, and also:
 
 [%header,cols="30a,40a,30a"]
 |===
-| Command | Description |  Example
+| Flag | Description |  Example
 |`--targetOrganizationId` | Organization ID to copy asset into | `exchange:asset:copy --targetOrganizationId organization_id source_group_id/source_asset_id/source_version target_group_id/target_asset_id/target_version`
 |===
 
@@ -448,7 +448,7 @@ This command accepts the default options `--help`, `-f/--fields`, and also:
 == exchange:asset:delete
 
 ----
-> exchange:asset:delete [options] <assetIdentifier>
+> exchange:asset:delete [flags] <assetIdentifier>
 ----
 
 This command deletes the Exchange asset passed in `<assetIdentifier>`.
@@ -458,7 +458,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID. +
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-deprecate]]
 == exchange:asset:deprecate
@@ -472,7 +472,7 @@ This command deprecates the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-undeprecate]]
 == exchange:asset:undeprecate
@@ -486,7 +486,7 @@ This command undeprecates the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-describe]]
 == exchange:asset:describe
@@ -500,15 +500,15 @@ This command describes the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default option`--help`.
+This command also accepts the default flag `--help`.
 
 [[exchange-asset-resource-upload]]
 == exchange:asset:resource:upload
 
 ----
-> exchange:asset:resource:upload [options] <assetIdentifier> <filepath>
+> exchange:asset:resource:upload [flags] <assetIdentifier> <filepath>
 ----
 
 This command uploads the resource specified in `<filepath>` to a page in the asset portal described in `<assetIdentifier>`.
@@ -522,13 +522,13 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 The successful output command will be a markdown codesnippet.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-resource-list]]
 == exchange:asset:resource:list
 
 ----
-> exchange:asset:resource:list [options] <assetIdentifier>
+> exchange:asset:resource:list [flags] <assetIdentifier>
 ----
 
 This command lists the resources in the asset portal of the asset specified in `<assetIdentifier>`.
@@ -538,20 +538,20 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 [NOTE]
 This command lists published resources by default. +
-You can use the `--draft` option to list draft resources from the asset portal.
+You can use the `--draft` flag to list draft resources from the asset portal.
 
-This command accepts the `--draft` option to list non-published resources in the asset portal.
+This command accepts the `--draft` flag to list non-published resources in the asset portal.
 
-This command has the `--output` option. Use the `--output` option to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
-This command also accepts the default option `--help`.
+This command also accepts the default flag `--help`.
 
 
 [[exchange-asset-resource-download]]
 == exchange:asset:resource:download
 
 ----
-> exchange:asset:resource:download [options] <assetIdentifier> <resourcePath> <filePath>
+> exchange:asset:resource:download [flags] <assetIdentifier> <resourcePath> <filePath>
 ----
 
 This command downloads the published resource specified in `<resourcePath>` from the asset portal of the asset specified in `<assetIdentifier>` to the file specified in `<filePath>`.
@@ -565,13 +565,13 @@ You can list all published resources using the <<exchange:asset:resource:list,as
 [NOTE]
 This command only supports published resources.
 
-This command accepts only the default option `--help`.
+This command accepts only the default flag `--help`.
 
 [[exchange-asset-resource-delete]]
 == exchange:asset:resource:delete
 
 ----
-> exchange:asset:resource:delete [options] <assetIdentifier> <resourcePath>
+> exchange:asset:resource:delete [flags] <assetIdentifier> <resourcePath>
 ----
 
 This command deletes the resource specified in `<resourcePath>` from the asset portal of the asset specified in `<assetIdentifier>` by publishing a new portal in which `resourcePath` has been deleted.
@@ -585,6 +585,6 @@ You can list all published resources using the <<exchange:asset:resource:list,as
 [CAUTION]
 This command publishes all active drafts as part of the operation.
 
-This command accepts only the default options: `--help`.
+This command accepts only the default flag `--help`.
 
 // end::commands[]
