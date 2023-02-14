@@ -74,7 +74,7 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 
 [%header,cols="30a,50a,30a"]
 |===
-| Flags | Description |  Example
+| Flag | Description |  Example
 | `--name` | Asset name (required if no pom file is specified) .3+|
 `exchange:asset:upload --name "Raml Asset" --description "RAML"  --properties='{"apiVersion":"v1", "mainFile": "api.raml"}' --files='{"raml.zip":"​/file-path/raml.zip"}'`
 | `--description` | Asset description 
@@ -82,10 +82,10 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 
 For example:
 
-* `properties='{"mainFile":"main.raml"}'`
-* `properties='{"apiVersion":"v1"}'`
-* `properties='{"assetLink":"\http://api.com"}'`
-* `properties='{"mainFile":"main.raml","apiVersion":"v1","assetLink":"\http://api.com"}'`
+* `--properties='{"mainFile":"main.raml"}'`
+* `--properties='{"apiVersion":"v1"}'`
+* `--properties='{"assetLink":"\http://api.com"}'`
+* `--properties='{"mainFile":"main.raml","apiVersion":"v1","assetLink":"\http://api.com"}'`
 
 | `--files` | Asset file, identified as `classifier.packaging` or `packaging` and its file path, for example, `--files='{"oas.zip":"​/my-api.raml"}'`
 
@@ -198,25 +198,25 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 
 [%header,cols="40a,30a,30a"]
 |===
-| Command | Description |  Example
+| Flag | Description |  Example
 | `--docs` | Documentation file. (Should specify the "zip" file path. Example: "--docs /.../file-path/docs.zip") |
-`exchange:asset:mutableDataUpload --docs /Users/llucas/Desktop/examples/docs.zip --tags "tag1,tag2" --categories.beach sun --fields.central park fa7b266c-3817-4cbb-ae49-7f3cc6c8cd9e/asset-id/1.0.0`
+`--docs /Users/llucas/Desktop/examples/docs.zip --tags "tag1,tag2" --categories.beach sun --fields.central park fa7b266c-3817-4cbb-ae49-7f3cc6c8cd9e/asset-id/1.0.0`
 
 | `--categories` | Categories |
 
-`categories.someKey value`
+`--categories.someKey value`
 
-`categories.anotherKey anotherValue`
+`--categories.anotherKey anotherValue`
 
 | `--fields` | Fields |
 
-`fields.someKey value`
+`--fields.someKey value`
 
-`fields.anotherKey anotherValue`
+`--fields.anotherKey anotherValue`
 
 | `--tags` | Tags (comma-separated)|
 
-`api,tag1,tag2`
+`--tags api,tag1,tag2`
 
 |===
 
@@ -245,7 +245,7 @@ Supported Values:
 * `published`
 * `deprecated` |
 
-`exchange:asset:updateStatus --status deprecated`
+`--status deprecated`
 
 |===
 
@@ -277,8 +277,8 @@ Besides the default `--help` flag, this command also accepts:
 [%header,cols="30a,40a,30a"]
 |===
 |Flag | Description |  Example
-|`--name` | New asset name .2+<.<| `exchange:asset:modify --name newName --tags test,sample`
-|`--tags` | Comma-separated tags for the asset
+|`--name` | New asset name .2+<.< | `--name newName --tags test,sample`
+|`--tags` | Comma-separated tags for the asset | `--tags tag1,tag2`
 |===
 
 [[exchange-asset-download]]
@@ -311,11 +311,11 @@ Besides the default `--help` flag, this command also accepts:
 [%header,cols="30a,40a,30a"]
 |===
 |Flag | Description |  Example
-|`--limit` | Number of results to retrieve | `exchange:asset:list --limit 2`
-|`--offset` | Offsets the number of APIs passed | `exchange:asset:list --offset 3`
-|`--sort` | Sorts the results in the field name passed | `exchange:asset:list --sort "Latest Version"`
-|`--organizationId` | Filters by organization id | `exchange:asset:list --organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
-| `--output` | Specifies the response format. | `exchange:asset:list --output json`
+|`--limit` | Number of results to retrieve | `--limit 2`
+|`--offset` | Offsets the number of APIs passed | `--offset 3`
+|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
+|`--organizationId` | Filters by organization id | `--organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
+| `--output` | Specifies the response format. | `--output json`
 
 |===
 
@@ -441,7 +441,7 @@ This command accepts the default flag `--help`, and also:
 [%header,cols="30a,40a,30a"]
 |===
 | Flag | Description |  Example
-|`--targetOrganizationId` | Organization ID to copy asset into | `exchange:asset:copy --targetOrganizationId organization_id source_group_id/source_asset_id/source_version target_group_id/target_asset_id/target_version`
+|`--targetOrganizationId` | Organization ID to copy asset into | `--targetOrganizationId organization_id source_group_id/source_asset_id/source_version target_group_id/target_asset_id/target_version`
 |===
 
 [[exchange-asset-delete]]
@@ -500,7 +500,7 @@ This command describes the asset passed in `<assetIdentifier>`.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>`. +
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -542,7 +542,7 @@ You can use the `--draft` flag to list draft resources from the asset portal.
 
 This command accepts the `--draft` flag to list non-published resources in the asset portal.
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 

@@ -142,8 +142,8 @@ Besides the default `--help` flag, this command also accepts:
 [%header,cols="20a,80a"]
 |===
 |Flag |Description
-| `server` | IP address for a DNS server to resolve special domains on. Can be specified up to 3 times
-| `domain` | A domain to resolve on the special DNS server list. Can be specified multiple times
+| `--server` | IP address for a DNS server to resolve special domains on. Can be specified up to 3 times
+| `--domain` | A domain to resolve on the special DNS server list. Can be specified multiple times
 |===
 
 You can pass as many domains as you need, and up to 3 IP addresses. +
@@ -186,11 +186,11 @@ This command adds a firewall rule to the Anypoint VPC defined in `<vpc>` using t
 |===
 |Value |Description |Example
 | `vpc` |Name of the Anypoint VPC to which this load balancer is bound. +
-If your Anypoint VPC name contains spaces, you need to pass it between ´"´ characters | vpc-demo
-| `cidrBlock` | IP address in CIDR notation for the firewall to allow  | 192.0.1.0/27
-| `protocol` | The protocol to use in the rules. It can be `tcp` or `udp` | tcp
-| `fromPort` | The port from which the firewall will allow requests. It can go from 0 to 65535 | 8888
-| `toPort` | *optional* In case a port range is needed, the `fromPort` and `toPort` variables define such range | 8090
+If your Anypoint VPC name contains spaces, you need to pass it between ´"´ characters | `vpc-demo`
+| `cidrBlock` | IP address in CIDR notation for the firewall to allow  | `192.0.1.0/27`
+| `protocol` | The protocol to use in the rules. It can be `tcp` or `udp` | `tcp`
+| `fromPort` | The port from which the firewall will allow requests. It can go from 0 to 65535 | `8888`
+| `toPort` | *optional* In case a port range is needed, the `fromPort` and `toPort` variables define such range | `8090`
 |===
 
 [CAUTION]

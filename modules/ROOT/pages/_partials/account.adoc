@@ -50,7 +50,7 @@ This command accepts the default flag `--help`.
 == account:business-group:describe
 
 ----
-> account:business-group:describe  [flags] <name>
+> account:business-group:describe [flags] <name>
 ----
 
 This command displays information on the business group you pass in `<name>`. +

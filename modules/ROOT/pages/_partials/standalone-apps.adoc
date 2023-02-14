@@ -81,7 +81,7 @@ In addition to the default `--help` flag, this command also accepts:
 
 [%header,cols="30,50a"]
 |===
-|Value |Description
+|Flag |Description
 | `--insight` | Stores message metadata of every Mule transaction.
 | `--log [level:scope]` | Sets the logging level and scope pair:
 
@@ -144,7 +144,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `--limit <num>` | Specifies the number of results to retrieve
 | `--offset <num>`      | Offsets the number of applications passed
 |`--output` <value> | Specifies the response format. 
