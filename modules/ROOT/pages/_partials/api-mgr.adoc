@@ -52,52 +52,52 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
-| `enabled`
+|Flag |Description
+| `--enabled`
 | Sets whether the alert should be enabled or not. +
 Possible values are `true` or `false`.
 
-| `severity <val>`
+| `--severity <val>`
 | Alert severity. +
 Supported values: `Info`, `Warning`, `Critical`.
 
-| `type <val>`
+| `--type <val>`
 | Alert type/condition. +
 Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
 
-| `operator <val>`
+| `--operator <val>`
 | Condition operator explaining values relation to threshold. +
 Supported values: gt, lt, eq
 
-| `threshold <num>`
+| `--threshold <num>`
 | Condition occurrences threshold number.
 
-| `periods <num>`
+| `--periods <num>`
 | Number of consecutive periods condition should occur for.
 
-| `duration <num>`
+| `--duration <num>`
 | Condition occurrence period duration.
 
-| `durationUnit <val>`
+| `--durationUnit <val>`
 | Condition occurrence period duration unit. +
 Supported values: days, hours, minutes.
 
-| `recipient [username]`
+| `--recipient [username]`
 | Username to send alert notification to. +
 You can pass this flag multiple times to specify multiple usernames.
 
-| `email [emailAddress]`
+| `--email [emailAddress]`
 | Email to send alert notification to. +
 You can pass this flag multiple times to specify multiple emails.
 
-| `responseTime [num]`
+| `--responseTime [num]`
 | Response time to trigger `response-time` alert type.
 
-| `responseCode [code]`
+| `--responseCode [code]`
 | Response codes to trigger `response-code` alert type. +
 You can pass this flag multiple times to specify multiple codes.
 
-| `policyInstanceId [num]`
+| `--policyInstanceId [num]`
 | ID of a policy applied to API instance to trigger `response-code` alert type.
 |===
 
@@ -114,10 +114,10 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Value |Description | Example
-|`--output`| Specify the response format. |`api-mgr:alert:list --output json`
-| `--offset` | Offsets the amount of APIs passed | `api-mgr:alert:list --offset 3`
-| `--sort` | Sorts the results in the field name passed | `api-mgr:alert:list --sort "Latest Version"`
+|Flag |Description | Example
+|`--output`| Specify the response format. |`--output json`
+| `--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 |===
 
 [[api-mgr-api-change-specification]]
@@ -169,27 +169,27 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Value |Description | Example
-| `target <id>`
+|Flag |Description | Example
+| `--target <id>`
 | Hybrid or RTF deployment target ID. +
-| `api-mgr:api:deploy --target 1598794 643404`
+| `--target 1598794 643404`
 
-| `applicationName <name>`
+| `--applicationName <name>`
 | Application name
-| `api-mgr:api:deploy --applicationName myMuleApp 643404`
+| `--applicationName myMuleApp 643404`
 
-| `environmentName <name>`
+| `--environmentName <name>`
 | Target environment name. Should only be used when deploying APIs from unclassified environments.
-| `api-mgr:api:deploy --environmentName TestEnv 643404`
+| `--environmentName TestEnv 643404`
 
-| `gatewayVersion <version>`
+| `--gatewayVersion <version>`
 | The CloudHub Gateway version
-| `api-mgr:api:deploy --gatewayVersion: 9.9.9.9  643404`
+| `--gatewayVersion: 9.9.9.9  643404`
 
-| `overwrite`
+| `--overwrite`
 | Update application if it exists. +
 It has `true` or `false` values.
-| `api-mgr:api:deploy --overwrite: true  643404`
+| `--overwrite: true  643404`
 
 |===
 
@@ -241,7 +241,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
 This flag has `true` or `false` values.
@@ -304,7 +304,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `--assetId <value>`       | Asset ID by which filter results.
 | `--apiVersion <value>`    | API version by which filter results.
 | `--instanceLabel <value>` | API instance label by which  filter results.
@@ -327,7 +327,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `--type <value>`
 | Endpoint type. +
 Accepted values are `http`, `raml`, or `wsdl`.
@@ -393,7 +393,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `-a, --copyAlerts`
 | Indicates whether to copy alerts. +
 This flag has `true` or `false` values. Default Value is `true`
@@ -420,7 +420,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `--target <id>`
 | Hybrid or RTF deployment target ID.
 
@@ -477,11 +477,11 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Value |Description |Example
-|`--limit` | Number of results to retrieve | `exchange:asset:list --limit 2`
-|`--offset` | Offsets the amount of APIs passed | `api-mgr:contract:list --offset 3 643404`
-| `--output` |Specify the response format. | `api-mgr:contract:list --output json`
-|`--sort` | Sorts the results in the field name passed | `api-mgr:contract:list --sort "Latest Version" 643404`
+|Flag |Description |Example
+|`--limit` | Number of results to retrieve | `--limit 2`
+|`--offset` | Offsets the amount of APIs passed | `--offset 3 643404`
+| `--output` |Specify the response format. | `--output json`
+|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version" 643404`
 |===
 
 [[api-mgr-policy-apply]]
@@ -495,7 +495,7 @@ Applies the policy passed in `<policyId>` to the API instance passed in `<apiIns
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `--policyVersion <value>`
 | Mule 4 policy version.
 
@@ -542,7 +542,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `--policyVersion <value>`
 | Mule4 policy version.
 
@@ -578,7 +578,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `-c, --config [configJSON`]
 | Pass the configuration data as a JSON string. +
 For example, `api-mgr:policy:apply -c '{"property": "value"}'`
@@ -635,7 +635,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Flag |Description
 | `-a, --autoApprove`
 | Indicates whether the SAL tier should be auto-approved. +
 This command only has `true` or `false` values.
@@ -703,11 +703,11 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Value |Description | Example
-|`--limit` | Number of results to retrieve | `api-mgr:tier:list --limit 2`
-|`--offset` | Offsets the amount of APIs passed | `api-mgr:tier:list --offset 3`
-| `--output`| Specify the response format. |  `api-mgr:tier:list --output json`
-|`--sort` | Sorts the results in the field name passed | `api-mgr:tier:list --sort "Latest Version"`
+|Flag |Description | Example
+|`--limit` | Number of results to retrieve | `--limit 2`
+|`--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--output`| Specify the response format. |  `--output json`
+|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 
 
 |===

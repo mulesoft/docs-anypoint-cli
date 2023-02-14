@@ -80,7 +80,7 @@ This command creates a cluster using the id passed in `name`.
 Besides the default `--help` flag, this command also accepts:
 [%header,cols="30,70"]
 |===
-|Value | Description
+|Flag | Description
 |`--multicast` | Whether cluster should be multicast
 |`--server <id:ip>` | Pair of server ID and IP address. Latter is optional for multicast cluster. Provide multiple values to add multiple servers
 |===

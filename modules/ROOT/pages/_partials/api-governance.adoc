@@ -36,9 +36,9 @@ Besides the default flags, this command also accepts:
 [cols="1,1"]
 |===
 |Flag |Description
-|--api=<api>
+|`--api=<api>`
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
-|--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...
+|`--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...`
 |Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 |===
 
@@ -157,13 +157,13 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...
+|`--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...`
 |Local ruleset definitions. The `rulesets` flag is followed by a comma-separated list of ruleset YAML files. 
-|--remote-rulesets <ruleset-asset-identifier>,<ruleset-asset-identifier>,...
+|`--remote-rulesets <ruleset-asset-identifier>,<ruleset-asset-identifier>,...`
 |Remote ruleset definitions. The `remote-rulesets` flag is followed by a comma-separated list of ruleset asset identifiers. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
-|--remote 
+|`--remote`
 |Flag to indicate that the validation should be done against a published API. The value passed in `api-definition` is the API's asset identifier. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
@@ -283,19 +283,19 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--criteria <filtertype:filtervalue>,...
+|`--criteria <filtertype:filtervalue>,...`
 |Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 
-|--description <description>
+|`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile's description.
 
-|--notify-contact
+|`--notify-contact`
 |Enables notifications and sets the recipient to the contact set for the API.
 
-|--notify-publisher
+|`--notify-publisher`
 |Enables notifications and sets the recipient to the API publisher.
 
-|--notify-others <email ID,email ID,...>
+|`--notify-others <email ID,email ID,...>`
 |Enables notifications and sets the recipient to the specified list of email IDs.
 |===
 
@@ -366,7 +366,7 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--output <output-format>
+|`--output <output-format>`
 |Format for the command output. Supported values are `table` (default) and `json`.
 
 |===
@@ -407,7 +407,7 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--output <output-format>
+|`--output <output-format>`
 |Format for the command output. Supported values are `table` (default) and `json`.
 
 |===
@@ -449,29 +449,29 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--profile-name <profile-name>
+|`--profile-name <profile-name>`
 |The `profile-name` flag is followed by a string that is the new governance profile name.
 
-|--ruleset-gavs <ruleset-gavs>
+|`--ruleset-gavs <ruleset-gavs>`
 |The `ruleset-gavs` flag is followed by a list with the asset identifier for each ruleset, formatted as follows: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. An asset identifier is a unique group ID, asset ID, and version (GAV) that identifies each asset in Exchange. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
-|--criteria <filtertype:filtervalue>,...
+|`--criteria <filtertype:filtervalue>,...`
 |Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 
-|--description <description>
+|`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile description.
 
-|--notify-off
+|`--notify-off`
 |Disables notifications.
 
-|--notify-contact
+|`--notify-contact`
 |Enables notifications and sets the recipient to the contact set for the API.
 
-|--notify-publisher
+|`--notify-publisher`
 |Enables notifications and sets the recipient to the API publisher.
 
-|--notify-others <email ID,email ID,...>
+|`--notify-others <email ID,email ID,...>`
 |Enables notifications and sets the recipient to the specified list of email IDs.
 |===
 
@@ -519,21 +519,21 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--remote
+|`--remote`
 |Indicates that the ruleset to clone is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 
-|--error=<list_rules_to_move_to_error>
+|`--error=<list_rules_to_move_to_error>`
 |The `error` flag is followed by the rule IDs for the rules to move to the error severity level section of the ruleset YAML.
 
-|--warning=<list_rules_to_move_to_warning> 
+|`--warning=<list_rules_to_move_to_warning>`
 |The `warning` flag is followed by the rule IDs for the rules to move to the warning severity level section of the ruleset YAML.
 
-|--info=<list_rules_to_move_to_info> 
+|`--info=<list_rules_to_move_to_info>` 
 |The `info` flag is followed by the rule IDs for the rules to move to the info severity level section of the ruleset YAML.
 
-|--remove=<list_rules_to_disable> 
+|`--remove=<list_rules_to_disable>`
 |The `remove` flag is followed by the rule IDs for the rules to comment out, and therefore effectively disable, in the ruleset YAML. 
 |===
 
@@ -564,7 +564,7 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--remote
+|`--remote`
 |Indicates that the ruleset for which to get information is published in Exchange and that the `ruleset` parameter is the asset identifier for the ruleset. An asset identifier is the group ID, asset ID, and version (GAV) that uniquely identifies an asset in Exchange. For example: `<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile.
 
 See <<exchange-asset-identifiers>>.
@@ -616,10 +616,10 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|--types <types>
+|`--types <types>`
 |The `types` flag gives the target types to export as rules. You can use the `governance:api:inspect` command to identify the types to specify for this flag. See <<governance-api-inspect>>.
 
-|--name <name>
+|`--name <name>`
 |The `name` flag is the name of the ruleset. Defaults to `GeneratedRuleset`.
 |===
 

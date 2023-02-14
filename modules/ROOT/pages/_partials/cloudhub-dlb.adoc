@@ -100,13 +100,13 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30a,70a"]
 |===
-|Value |Description
-|`http` | Specifies the Load balancer HTTP behavior. It can be set to `on` (accepts HTTP requests and forwards it to your configured default `_sslendpoint_`), `off` (refuses all HTTP requests), or `redirect` (redirects to HTTPS).
-|`clientCertificate` | Client certificate file
-|`verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always), `off` (don't verify), or `optional` (verification optional).
-|`crl` | Certificate revocation list file
-|`tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
-|`dynamic-ips` | Uses dynamic IPs, which are not persistent through restarts
+|Flag |Description
+|`--http` | Specifies the Load balancer HTTP behavior. It can be set to `on` (accepts HTTP requests and forwards it to your configured default `_sslendpoint_`), `off` (refuses all HTTP requests), or `--redirect` (redirects to HTTPS).
+|`--clientCertificate` | Client certificate file
+|`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always), `off` (don't verify), or `optional` (verification optional).
+|`--crl` | Certificate revocation list file
+|`--tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
+|`--dynamic-ips` | Uses dynamic IPs, which are not persistent through restarts
 |===
 
 [NOTE]
@@ -171,11 +171,11 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="15a,85a"]
 |===
-|Value |Description
-|clientCertificate | Client certificate file
-|verificationMode  | Specifies the client verification mode. It can be set to `on` (verify always) `off` (don't verify) or `optional` (Verification optional).
-|crl | Certificate Revocation List file
-|tlsv1  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
+|Flag |Description
+|`--clientCertificate` | Client certificate file
+|`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always) `off` (don't verify) or `optional` (Verification optional).
+|`--crl` | Certificate Revocation List file
+|`--tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
 |===
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
@@ -205,8 +205,8 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30a,70a"]
 |===
-|Value |Description
-|`http` | Specifies the Load balancer HTTP behavior
+|Flag |Description
+|`--http` | Specifies the Load balancer HTTP behavior
 |===
 
 [[cloudhub-load-balancer-ssl-endpoint-set-describe]]
