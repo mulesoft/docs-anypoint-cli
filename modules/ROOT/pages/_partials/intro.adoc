@@ -19,4 +19,5 @@ $ anypoint-cli-v4 [command] [options]
 
 If you run a command and there is an error, the application exits and returns a description of the issue.
 
+NOTE: You can write all commands separated by spaces or colons. For example: `runtime-mgr:application:list` can also be `runtime-mgr application list`.
 // end::syntax[]

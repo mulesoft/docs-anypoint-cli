@@ -15,15 +15,15 @@ Anypoint Platform CLI commands have the following default flags:
 |===
 |Flag|Description
 |`--help` | Displays command usage information
-| `organization` | Your organization within Anypoint Platform
+| `--organization` | Your organization within Anypoint Platform
 
 You can also pass this value using the environment variable `export ANYPOINT_ORG=<name>`.
 
-| `environment` | Your Anypoint Platform environment
+| `--environment` | Your Anypoint Platform environment
 
 You can also pass this value using the environment variable `export ANYPOINT_ENV=<name>`.
 
-| `host` | The host of your Anypoint Platform Installation +
+| `--host` | The host of your Anypoint Platform Installation +
 This value defaults to `anypoint.mulesoft.com`. +
 
 * If you are using Anypoint Platform PCE, pass the address where you are hosting the platform.
