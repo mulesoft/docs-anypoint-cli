@@ -13,7 +13,8 @@ Anypoint CLI 4.x introduces the following changes:
 * *Authentication* 
 ** Instead of using the credentials file located in `~/.config/@mulesoft/anypoint-cli-v4-nodejs/config.json`, you set credentials using the `anypoint-cli-v4 conf` command. +
 ** SSO is no longer supported. As a part of Multi-factor authentication (MFA) enablement for all users, the only way to use Anypoint CLI is through xref:access-management::connected-apps-overview.adoc[Connected Apps].
-* *Command Syntax* The separator between command parameters is a colon (:) instead of a space. For example, the command to get the Exchange asset resource list is now `anypoint-cli-v4 exchange:asset:resource:list`.
+* *Command Syntax* The separator between command parameters can be either a colon (:) or a space. For example, the command to get the Exchange asset resource list can be either `anypoint-cli-v4 exchange:asset:resource:list` or `anypoint-cli-v4 exchange asset resource list`.
+
 * *Commands and Properties* The following commands and properties have changed:
 
  ** `exchange:asset:upload` replaces `exchange:asset:uploadv2`.

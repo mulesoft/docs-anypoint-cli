@@ -50,11 +50,12 @@ This command accepts the default flag `--help`.
 == account:business-group:describe
 
 ----
-> account:business-group:describe [flags] <name>
+> account:business-group:describe  [flags] <identifier> 
 ----
 
-This command displays information on the business group you pass in `<name>`. +
-If `<name>` is not specified, the command describes the business group on the current session.
+This command displays information on the business group you pass in `<identifier>`. +
+If `<identifier>` is not specified, the command describes the business group on the current session.
+Identifier searches for ID match first, then name.
 
 [NOTE]
 --

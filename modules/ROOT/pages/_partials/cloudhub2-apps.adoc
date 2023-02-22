@@ -148,7 +148,10 @@ This command accepts only the default flag `--help`.
 ----
 Lists all applications in your organization. 
 
-This command accepts only the default flag `--help`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command accepts the default flag `--help`.
+
 
 [[runtime-mgr-application-modify]]
 == runtime-mgr:application:modify
