@@ -43,11 +43,12 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 == account business-group describe
 
 ----
-> account business-group describe  [options] <name>
+> account business-group describe  [options] <identifier>
 ----
 
-This command displays information on the business group you pass in `<name>`. +
-If `<name>` is not specified, the command describes the business group on the current session.
+This command displays information on the business group you pass in `<identifier>`. +
+If `<identifier>` is not specified, the command describes the business group on the current session.
+Identifier searches for id match first, then name.
 
 [NOTE]
 --
