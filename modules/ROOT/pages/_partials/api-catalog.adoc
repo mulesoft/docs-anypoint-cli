@@ -77,13 +77,13 @@ This command accepts the following flags:
 |===
 | Flag | Description 
 
-| -d, --delete | Deletes the config file entry for the given key
+| `-d`, `--delete` | Deletes the config file entry for the given key
 
-| -h, --help | Shows the help for this command
+| `-h`, `--help` | Shows the help for this command
 
-| -k, --key=key | Shows the value that corresponds with the given key
+| `-k`, `--key=key` | Shows the value that corresponds with the given key
 
-| -v, --value=value | Shows the key that corresponds with the given value
+| `-v`, `--value=value` | Shows the key that corresponds with the given value
 
 |===
 
@@ -103,11 +103,11 @@ This command accepts the following flags:
 [%header,cols="20a,80a"]
 |===
 | Flag | Description 
-| -d, --file=file |
+| `-d`, `--file=file` |
 Default: `catalog.yaml`
 
 The name and location in which to save the generated catalog descriptor file
-|  --external | Generates an `exchange.json` file for each API described in the descriptor file and adds a reference to each of those in the descriptor file using the `ref` tag in the `projects` section
+|  `--external` | Generates an `exchange.json` file for each API described in the descriptor file and adds a reference to each of those in the descriptor file using the `ref` tag in the `projects` section
 |===
 
 // end::create-descriptor-command[]
@@ -126,7 +126,7 @@ This command accepts the following flag:
 [%header,cols="20a,80a"]
 |===
 | Flag | Description 
-| -d, --descriptor-file=descriptor-file |
+| `-d`, `--descriptor-file=descriptor-file` |
 Default: `catalog.yaml`
 
 The name and location in which to save the updated catalog descriptor file information
@@ -149,9 +149,9 @@ This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[gen
 |===
 | Flag | Description 
 
-| --async |  Runs the publish job asynchronously. 
+| `--async` |  Runs the publish job asynchronously. 
 
-|  -d, --descriptor-file=descriptor-file 
+|  `-d`, `--descriptor-file=descriptor-file`
 
 or
 
@@ -167,18 +167,18 @@ The name and location of the catalog descriptor file.
   
 See xref:apicat-create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI]. 
 
-| --dry-run | Runs the command to verify that the descriptor file is valid. No APIs are published. 
+| `--dry-run` | Runs the command to verify that the descriptor file is valid. No APIs are published. 
 
-| --force-publish |  Bypasses the comparison and 
+| `--force-publish` |  Bypasses the comparison and 
  creates a new version of the asset in Exchange regardless of the content.
 
-| --force-update-metadata | Updates the asset's metadata, such as tags, in the latest version in Exchange regardless of the content. This does not republish the asset. 
+| `--force-update-metadata` | Updates the asset's metadata, such as tags, in the latest version in Exchange regardless of the content. This does not republish the asset. 
 
-| --json | Prints the execution result in JSON format. 
+| `--json` | Prints the execution result in JSON format. 
 
-| -s, --silent | Enables silent logging.
+| `-s`, `--silent` | Enables silent logging.
 
-| -t, --trigger-criteria=<descriptor-tag>:<value> --trigger-criteria=<descriptor-tag>:value  | This flag works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger-criteria` flags for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger-criteria` flag values.
+| `-t`, `--trigger-criteria=<descriptor-tag>:<value>` `--trigger-criteria=<descriptor-tag>:value`  | This flag works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger-criteria` flags for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger-criteria` flag values.
 
 Example:
 
@@ -186,9 +186,9 @@ Example:
 
 See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
-| -v, --verbose | Enables verbose logging. 
+| `-v`, `--verbose` | Enables verbose logging. 
 
-| --version-strategy-criteria=<descriptor-tag>:<value> --version-strategy-criteria=<descriptor-tag>:<value>  | This flag works in conjunction with the `versionStrategyConditions` section in the descriptor file. The `api-catalog publish-asset` command compares the version strategy criteria values to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs. To match multiple conditions, specify separate `--version-strategy-criteria` flags for each condition. 
+| `--version-strategy-criteria=<descriptor-tag>:<value>`  | This flag works in conjunction with the `versionStrategyConditions` section in the descriptor file. The `api-catalog publish-asset` command compares the version strategy criteria values to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs. To match multiple conditions, specify separate `--version-strategy-criteria` flags for each condition. 
 
 Example:
 
@@ -211,49 +211,49 @@ Following are the general and authentication flags for commands that authenticat
 |===
 | Flag | Description 
 
-| --client_id=client_id 
+| `--client_id=client_id` 
 
 or
 
-ANYPOINT_CLIENT_ID environment variable
+`ANYPOINT_CLIENT_ID` environment variable
 
 | Connected app client ID 
 
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
-| --client_secret 
+| `--client_secret` 
 
 or
 
-ANYPOINT_CLIENT_SECRET environment variable
+`ANYPOINT_CLIENT_SECRET` environment variable
 
 | Prompt for the connected app secret for the client ID
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
-| --collectMetrics
+| `--collectMetrics`
 
 or
 
-COLLECT_METRICS environment variable
+`COLLECT_METRICS` environment variable
 
 | Not currently used
 
 // Collect metrics. 
 
-| --environment=environment 
+| `--environment=environment` 
 
 or
 
-ANYPOINT_ENV environment variable
+`ANYPOINT_ENV` environment variable
 
 | The name of the Anypoint Platform environment where the APIs are cataloged  
  
-|   --host=host
+|   `--host=host`
 
 or
 
-ANYPOINT_HOST environment variable
+`ANYPOINT_HOST` environment variable
 
 | Default: 
 ----
@@ -274,35 +274,35 @@ For the European Anypoint Platform, use:
 eu1.anypoint.mulesoft.com
 ----
 
-| --organization=organization 
+| `--organization=organization` 
 
 or
 
-ANYPOINT_ORG environment variable
+`ANYPOINT_ORG` environment variable
 
 | The ID of the Anypoint Platform organization where the APIs are cataloged  
 
-|  -o, --output=output  
+|  `-o`, `--output=output`  
 
 | Not currently used
 
 // Format for the command output.  
 
-| -p, --password 
+| `-p`, `--password` 
 
 or
 
-ANYPOINT_PASSWORD environment variable
+`ANYPOINT_PASSWORD` environment variable
 
 | Anypoint user password 
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
-| -u, --username=username 
+| `-u`, `--username=username` 
 
 or
 
-ANYPOINT_USERNAME environment variable
+`ANYPOINT_USERNAME` environment variable
 
 | Anypoint username
 

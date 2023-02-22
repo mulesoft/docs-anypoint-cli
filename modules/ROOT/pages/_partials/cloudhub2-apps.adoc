@@ -63,8 +63,8 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 [%header,cols="12a,53a,35a"]
 |===
 |Value |Description | Example
-|`ArtifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
-|`deploymentTargetID` |ID of the deployment target. +
+|`artifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
+|`deploymentTargetId` |ID of the deployment target. +
 You can get this ID directly from Runtime Manager.  | `cloudhub-app-northeast-1`
 |`name` |Name of the application to deploy. | `testCloudhub2app`
 |`runtimeVersion` |Runtime version of the deployment target.|`4.4.0`
@@ -75,44 +75,44 @@ Besides the default `--help` flag this command also takes:
 
 [%header,cols="12a,53a,35a"]
 |===
-|Value |Description |Example
-|`assetVersion` | Version of the Exchange application to use. +
-Default: latest application version | `2.0.4`
-|`clustered`| Enables clustered nodes, which requires at least two replicas. +
+|Flag |Description |Example
+|`--assetVersion` | Version of the Exchange application to use. +
+Default: latest application version | `--assetVersion 2.0.4`
+|`--clustered`| Enables clustered nodes, which requires at least two replicas. +
  Default:.`disabled` +
-Supported values: `true`, `false` |`false` 
-|`disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
+Supported values: `true`, `false` |`--clustered false` 
+|`--disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
 Default: `enabled` +
-Supported values: `true`, `false` |`true`
-|`forwardSslSession`| Enables SSL session forwarding. +
+Supported values: `true`, `false` |`--disableAmLogForwarding true`
+|`--forwardSslSession`| Enables SSL session forwarding. +
 Default: `disabled` +
-Values: `true`, `false`| `false`
-|`groupID` | Group ID of the asset to deploy. +
-Default: selected organization ID | `org.mule.test`
-|`lastMileSecurity`| Enables Last Mile Security. +
+Values: `true`, `false`| `--forwardSslSession false`
+|`--groupId` | Group ID of the asset to deploy. +
+Default: selected organization ID | `--groupId org.mule.test`
+|`--lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` +
-Supported values: `true`, `false` | `true`
-|`objectStoreV2`| Enables Object Store v2. +
+Supported values: `true`, `false` | `--lastMileSecurity true`
+|`--objectStoreV2`| Enables Object Store v2. +
 Default: `disabled` +
- Supported values: `true`, `false` | `true`
-|`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
-Format: must begin with `/` | `/http://localhost:3000`
-|`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
-|`propertiesFile`| Replaces all properties with values from a selected file. +
-Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
-|`publicEndpoints`| Supplies endpoints to reach via the public internet. +
-Format: separated by commas, no spaces | `my-superapp-example:/status?limit=10`
-|`replicas` | Number of replicas. Must be above `0`. +
-Default: `1` | `2`
-|`replicaSize`| Size of replicas in Vcores. +
-Default: `0.1` | `0.5`
-|`scopeLoggingConfig`| Defines scope logging. +
-Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
-|`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
-|`updateStrategy`| Updates the strategy used. +
-Default: `rolling` | `recreate`
+ Supported values: `true`, `false` | `--objectStoreV2 true`
+|`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
+Format: must begin with `/` | `--pathRewrite /http://localhost:3000`
+|`--property`| Sets a property. +
+Format: `name:value` | `--property testproperty:true`
+|`--propertiesFile`| Replaces all properties with values from a selected file. +
+Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
+|`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
+Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example:/status?limit=10`
+|`--replicas` | Number of replicas. Must be above `0`. +
+Default: `1` | `--replicas 2`
+|`--replicaSize`| Size of replicas in Vcores. +
+Default: `0.1` | `--replicaSize 0.5`
+|`--scopeLoggingConfig`| Defines scope logging. +
+Format: `scopeName: logLevel`, separated by commas, no spaces | `--scopeLoggingConfig testscope1:WARN,testscope2:DEBUG`
+|`--scopeLoggingConfigFile`| Uploads a file to define scope logging. +
+Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`--scopeLoggingConfigFile /Users/mule/Documents/cert.txt`
+|`--updateStrategy`| Updates the strategy used. +
+Default: `rolling` | `--updateStrategy recreate`
 |===
 
 [[runtime-mgr-application-describe]]
@@ -166,46 +166,46 @@ Besides the default `--help` flag, this command also takes:
 
 [%header,cols="12a,53a,35a"]
 |===
-|Value |Description |Example
-|`ArtifactId` |ID of the application retrieved from Exchange. | `mule-maven-plugin`
-|`assetVersion` | Version of the Exchange application to use. +
-Default: latest application version | `2.0.4`
-|`clustered`| Enables clustered nodes, which requires at least two replicas. +
+|Flag |Description |Example
+|`--artifactId` |ID of the application retrieved from Exchange. | `--artifactId mule-maven-plugin`
+|`--assetVersion` | Version of the Exchange application to use. +
+Default: latest application version | `-assetVersion 2.0.4`
+|`--clustered`| Enables clustered nodes, which requires at least two replicas. +
 Default: `disabled` +
-Supported values: `true`, `false` |`false` 
-|`disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
+Supported values: `true`, `false` |`--clustered false` 
+|`--disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
 Default: `enabled` +
-Supported values: `true`, `false` |`true`
-|`forwardSslSession`| Enables SSL session forwarding. +
+Supported values: `true`, `false` |`--disableAmLogForwarding true`
+|`--forwardSslSession`| Enables SSL session forwarding. +
 Default: `disabled` +
-Values: `true`, `false`| `false`
-|`groupID` | Group ID of the asset to deploy. +
-Default: selected organization ID.| `org.mule.testgroup`
-|`lastMileSecurity`| Enables Last Mile Security. +
+Values: `true`, `false`| `--forwardSslSession false`
+|`--groupId` | Group ID of the asset to deploy. +
+Default: selected organization ID.| `--groupId org.mule.testgroup`
+|`--lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` +
-Supported values: `true`, `false` | `true`
-|`objectStoreV2`| Enables object store v2. +
+Supported values: `true`, `false` | `--lastMileSecurity true`
+|`--objectStoreV2`| Enables object store v2. +
 Default: `disabled` +
-Supported values: `true`, `false` | `true`
-|`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
-Format: must begin with `/` | `/http://localhost:3000`.
-|`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
-|`propertiesFile`| Replaces all properties with values from a selected file. +
-Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
-|`publicEndpoints`| Supplies endpoints to reach via the public internet. +
- Format: separated by commas, no spaces | `my-superapp-example: /status?limit=10`
-|`replicas` | Number of replicas. Must be above `0`. +
-Default: `1` | `2`
-|`replicaSize`| Size of replicas in Vcores. +
-Default: `0.1` | `0.5`
-|`runtimeVersion` |Runtime version of the deployment target.|`4.4.0`
-|`scopeLoggingConfig`| Defines scope logging. +
-Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
-|`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
-|`updateStrategy`| Updates the strategy used. +
-Default: `rolling` | `recreate`
+Supported values: `true`, `false` | `--objectStoreV2 true`
+|`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
+Format: must begin with `/` | `--pathRewrite /http://localhost:3000`.
+|`--property`| Sets a property. +
+Format: `name:value` | `--property testproperty:true`
+|`--propertiesFile`| Replaces all properties with values from a selected file. +
+Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
+|`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
+ Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example: /status?limit=10`
+|`--replicas` | Number of replicas. Must be above `0`. +
+Default: `1` | `--replicas 2`
+|`--replicaSize`| Size of replicas in Vcores. +
+Default: `0.1` | `--replicaSize 0.5`
+|`--runtimeVersion` |Runtime version of the deployment target.|`--runtimeVersion 4.4.0`
+|`--scopeLoggingConfig`| Defines scope logging. +
+Format: `scopeName: logLevel`, separated by commas, no spaces | `--scopeLoggingConfig testscope1:WARN,testscope2:DEBUG`
+|`--scopeLoggingConfigFile`| Uploads a file to define scope logging. +
+Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`--scopeLoggingConfigFile /Users/mule/Documents/cert.txt`
+|`--updateStrategy`| Updates the strategy used. +
+Default: `rolling` | `--updateStrategy recreate`
 
 |===
 [[runtime-mgr-application-start]]
@@ -320,46 +320,46 @@ Besides the default `--help` flag, this command also takes:
 
 [%header,cols="12a,53a,35a"]
 |===
-|Value |Description |Example
-|`ArtifactId` |ID of the application retrieved from Exchange. | `mule-maven-plugin`
-|`assetVersion` | Version of the Exchange application to use. +
-Default: latest application version | `2.0.4`
-|`clustered`| Enables clustered nodes, which requires at least two replicas. +
+|Flag |Description |Example
+|`--artifactId` |ID of the application retrieved from Exchange. | `--artifactId mule-maven-plugin`
+|`--assetVersion` | Version of the Exchange application to use. +
+Default: latest application version | `-assetVersion 2.0.4`
+|`--clustered`| Enables clustered nodes, which requires at least two replicas. +
 Default: `disabled` +
-Supported values: `true`, `false` |`false` 
-|`disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
+Supported values: `true`, `false` |`--clustered false` 
+|`--disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
 Default: `enabled` +
-Supported values: `true`, `false` |`true`
-|`forwardSslSession`| Enables SSL session forwarding. +
+Supported values: `true`, `false` |`--disableAmLogForwarding true`
+|`--forwardSslSession`| Enables SSL session forwarding. +
 Default: `disabled` +
-Values: `true`, `false`| `false`
-|`groupID` | Group ID of the asset to deploy. +
-Default: selected organization ID.| `org.mule.testgroup`
-|`lastMileSecurity`| Enables Last Mile Security. +
+Values: `true`, `false`| `--forwardSslSession false`
+|`--groupId` | Group ID of the asset to deploy. +
+Default: selected organization ID.| `-groupId org.mule.testgroup`
+|`--lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` +
-Supported values: `true`, `false` | `true`
-|`objectStoreV2`| Enables object store v2. +
+Supported values: `true`, `false` | `--lastMileSecurity true`
+|`--objectStoreV2`| Enables object store v2. +
 Default: `disabled` +
-Supported values: `true`, `false` | `true`
-|`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
-Format: must begin with `/` | `/http://localhost:3000`.
-|`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
-|`propertiesFile`| Replaces all properties with values from a selected file. +
-Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
-|`publicEndpoints`| Supplies endpoints to reach via the public internet. +
- Format: separated by commas, no spaces | `my-superapp-example: /status?limit=10`
-|`replicas` | Number of replicas. Must be above `0`. +
-Default: `1` | `2`
-|`replicaSize`| Size of replicas in Vcores. +
-Default: `0.1` | `0.5`
-|`runtimeVersion` |Runtime version of the deployment target.|`1.0.1`
-|`scopeLoggingConfig`| Defines scope logging. +
-Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
-|`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
-|`updateStrategy`| Updates the strategy used. +
-Default: `rolling` | `recreate`
+Supported values: `true`, `false` | `--objectStoreV2 true`
+|`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
+Format: must begin with `/` | `--pathRewrite /http://localhost:3000`.
+|`--property`| Sets a property. +
+Format: `name:value` | `--property testproperty:true`
+|`--propertiesFile`| Replaces all properties with values from a selected file. +
+Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
+|`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
+ Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example: /status?limit=10`
+|`--replicas` | Number of replicas. Must be above `0`. +
+Default: `1` | `--replicas 2`
+|`--replicaSize`| Size of replicas in Vcores. +
+Default: `0.1` | `--replicaSize 0.5`
+|`--runtimeVersion` |Runtime version of the deployment target.|`--runtimeVersion 1.0.1`
+|`--scopeLoggingConfig`| Defines scope logging. +
+Format: `scopeName: logLevel`, separated by commas, no spaces | `--scopeLoggingConfig testscope1:WARN,testscope2:DEBUG`
+|`--scopeLoggingConfigFile`| Uploads a file to define scope logging. +
+Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`--scopeLoggingConfigFile /Users/mule/Documents/cert.txt`
+|`--updateStrategy`| Updates the strategy used. +
+Default: `rolling` | `--updateStrategy recreate`
 
 |===
 [[runtime-mgr-application-start]]

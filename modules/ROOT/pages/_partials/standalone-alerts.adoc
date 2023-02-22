@@ -45,7 +45,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30,70"]
 |===
-|Value |Description
+| Flag | Description 
 | `--severity <val>` | Alert severity
 | `--resourceType <type>` | Alert resource type
 | `--resource [id]` | Alert resource ID. Can be used multiple types. If not provided alert triggers for all resources. Depending on `resourceType` resource can be application, server, server-group or cluster.
@@ -72,7 +72,7 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header,cols="30,70"]
 |===
-|Value |Description
+|Flag |Description
 | `--name <value>` | Alert name
 | `--severity <value>` | Alert severity
 | `--resourceType <type>` | Alert resource type

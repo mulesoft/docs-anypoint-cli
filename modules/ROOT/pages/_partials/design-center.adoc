@@ -42,7 +42,7 @@ This field is required.
 Supported values are:
 
 * `raml`
-* `raml-fragment` | `designcenter:project:create --type raml`
+* `raml-fragment` | `--type raml`
 | `--fragment-type` | The fragment type. Always use with `--type raml-fragment`, even for OAS 3.0 and JSON schema fragments.
 
 This field is required if the type flag was set as `raml-fragment`
@@ -55,8 +55,8 @@ Supported fragments type are:
 * `type`
 * `user-documentation` 
 * `oas-components`
-* `json-schema`| `designcenter:project:create --type raml-fragment --fragment-type user-documentation`
-|`--output` | Specify the response format. |`designcenter:project:create --output json`
+* `json-schema`| `--type raml-fragment --fragment-type user-documentation`
+|`--output` | Specify the response format. |`--output json`
 
 |===
 
@@ -101,10 +101,10 @@ Flags that are not specified are extracted from exchange.json
 [%header,cols="30a,40a,30a"]
 |===
 |Flag | Description |  Example
-| `--name` | The name for the asset | `designcenter:project:publish --name sampleProject`
-| `--main` | The name of the main file name. | `designcenter:project:publish --main sample.xml`
-| `--apiVersion` | The API version if your project is an API specification project. | `designcenter:project:publish --main sample.raml --apiVersion 1.0`
-| `--tags` | Comma separated list of tags. | `designcenter:project:publish --tags test,sample,integration`
+| `--name` | The name for the asset | `--name sampleProject`
+| `--main` | The name of the main file name. | `--main sample.xml`
+| `--apiVersion` | The API version if your project is an API specification project. | `--main sample.raml --apiVersion 1.0`
+| `--tags` | Comma separated list of tags. | `--tags test,sample,integration`
 | `--groupId` | The asset's groupId. | `designcenter:project:publish --groupId com.mulesoft.com`
 | `--assetId`  | The asset's assetId. | `designcenter:project:publish --assetId project`
 | `--version` | The asset's version. | `designcenter:project:publish --version 1.0`
@@ -138,9 +138,9 @@ Besides the default `--help` flag, this command also accepts:
 [%header,cols="30a,40a,30a"]
 |===
 |Flag | Description |  Example
-|`--pageIndex` | Number of page to retrieve | `designcenter:project:list --pageIndex 3`
-|`--pageSize` | Number of results to retrieve per page | `designcenter:project:list --pageSize 5`
-|`--output` | Specify the response format. | `designcenter:project:list --output json`
+|`--pageIndex` | Number of page to retrieve | `--pageIndex 3`
+|`--pageSize` | Number of results to retrieve per page | `--pageSize 5`
+|`--output` | Specify the response format. | `--output json`
 
 |===
 
