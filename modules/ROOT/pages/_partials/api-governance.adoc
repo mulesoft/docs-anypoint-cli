@@ -39,7 +39,7 @@ Besides the default flags, this command also accepts:
 |`--api=<api>`
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |`--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...`
-|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
+|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 |===
 
 NOTE: This command must be run with either the `--criteria` or the `--api` flag.  
@@ -284,7 +284,7 @@ Besides the default flags, this command also accepts:
 |Flag |Description
 
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 
 |`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile's description.
@@ -457,7 +457,7 @@ Besides the default flags, this command also accepts:
 
 See <<exchange-asset-identifiers>>.
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
 
 |`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile description.
