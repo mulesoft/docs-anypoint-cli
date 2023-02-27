@@ -39,7 +39,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |--api=<api>
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...
-|Enables you to apply filters against which to evaluate to identify rulesets. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types such as `rest-api`, `oas-api`, and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+|Enables you to apply filters against which to evaluate to identify rulesets. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types, `rest-api` and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 |===
 
 NOTE: This command must be run with either the `criteria` or the `api` option.  
@@ -286,7 +286,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |Option |Description
 
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types such as `rest-api`, `oas-api`, and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-id:6997d355-a4ee-4ac0-9fa4-22b5c141a493
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types, `rest-api` and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-id:6997d355-a4ee-4ac0-9fa4-22b5c141a493
 
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
@@ -313,7 +313,7 @@ anypoint-cli governance profile create "Open API Best Practices" 68ef9520-24e9-4
 
 anypoint-cli governance profile create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
-anypoint-cli governance profile create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
+anypoint-cli governance profile create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api,env-id:0683ce02-cd53-4028-a543-832a38a8af30" --description "Profile for Primary API Standards"
 ----
 
 *Example output:*
@@ -444,7 +444,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types such as `rest-api`, `oas-api`, and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types, `rest-api` and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
@@ -478,7 +478,7 @@ anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --no
 
 anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
 
-anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
+anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*
