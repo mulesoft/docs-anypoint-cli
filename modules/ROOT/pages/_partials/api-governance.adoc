@@ -33,13 +33,31 @@ This command evaluates specified filters to determine the rulesets that would be
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[cols="1a,1a"]
 |===
 |Option |Description
 |--api=<api>
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
-|--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...
-|Enables you to apply filters against which to evaluate to identify rulesets. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types, `rest-api` and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+|--criteria <filtertype:filtervalue>,...
+|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filterType:filterValue`. 
+
+Available filters include:
+
+* `category`: Category defined for APIs in Exchange
+* `tag`: Tag defined for APIs in Exchange
++
+Filter by `category` or `tag` fields only if your APIs in Exchange have tags or categories.
++
+* `status`: Lifecycle state of development or stable
+* `env-type`: Environment type of any, production, or sandbox
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
++
+If `env-type` or `env-id` is used, only APIs that have instances are filtered. APIs in the development lifecycle do not have instances. 
++
+* `scope`: Targeted API types, `rest-api` or `async-api` 
+
+Example: 
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 |===
 
 NOTE: This command must be run with either the `criteria` or the `api` option.  
@@ -281,12 +299,30 @@ See <<exchange-asset-identifiers>>.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[cols="1a,1a"]
 |===
 |Option |Description
 
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types, `rest-api` and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-id:6997d355-a4ee-4ac0-9fa4-22b5c141a493
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filterType:filterValue`. 
+
+Available filters include:
+
+* `category`: Category defined for APIs in Exchange
+* `tag`: Tag defined for APIs in Exchange
++
+Filter by `category` or `tag` fields only if your APIs in Exchange have tags or categories.
++
+* `status`: Lifecycle state of development or stable
+* `env-type`: Environment type of any, production, or sandbox
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
++
+If `env-type` or `env-id` is used, only APIs that have instances are filtered. APIs in the development lifecycle do not have instances. 
++
+* `scope`: Targeted API types, `rest-api` or `async-api` 
+
+Example: 
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
@@ -432,7 +468,7 @@ general information, rulesets, filter criteria, and notification configuration. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[cols="1a,1a"]
 |===
 |Option |Description
 
@@ -444,7 +480,25 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include `category`, `tag`, `status` (lifecycle state), `env-type` (production or sandbox), `env-id` (environment ID), and `scope` (the targeted API types, `rest-api` and `async-api`). If `env-type` or `env-id` is used, only APIs that have instances are filtered. Example: tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filterType:filterValue`. 
+
+Available filters include:
+
+* `category`: Category defined for APIs in Exchange
+* `tag`: Tag defined for APIs in Exchange
++
+Filter by `category` or `tag` fields only if your APIs in Exchange have tags or categories.
++
+* `status`: Lifecycle state of development or stable
+* `env-type`: Environment type of any, production, or sandbox
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
++
+If `env-type` or `env-id` is used, only APIs that have instances are filtered. APIs in the development lifecycle do not have instances. 
++
+* `scope`: Targeted API types, `rest-api` or `async-api` 
+
+Example: 
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
