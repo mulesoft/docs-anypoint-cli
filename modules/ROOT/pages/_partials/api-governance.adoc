@@ -33,13 +33,13 @@ This command evaluates specified filters to determine the rulesets that would be
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1a,1a"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 |--api=<api>
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filterType:filterValue`. 
+|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format filtertype:filtervalue. 
 
 Available filters include:
 
@@ -171,7 +171,7 @@ NOTE: Duplicate rulesets are not detected, so if you use more than one of the pr
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -299,12 +299,12 @@ See <<exchange-asset-identifiers>>.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1a,1a"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filterType:filterValue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filtertype:filtervalue. 
 
 Available filters include:
 
@@ -468,7 +468,7 @@ general information, rulesets, filter criteria, and notification configuration. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1a,1a"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -480,7 +480,7 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filterType:filterValue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filtertype:filtervalue. 
 
 Available filters include:
 
@@ -564,7 +564,7 @@ TIP: Run the `governance ruleset info` command before running this command to ge
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -609,7 +609,7 @@ This command lists the ruleset rules in the ruleset definition passed in the `go
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -662,7 +662,7 @@ This command initializes a ruleset based on the data schema passed in the `schem
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
