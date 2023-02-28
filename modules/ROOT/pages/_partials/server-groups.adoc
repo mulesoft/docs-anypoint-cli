@@ -5,13 +5,13 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr-serverGroup-create>> | Creates server group from servers
-|<<runtime-mgr-serverGroup-describe>> | Describes server group
-|<<runtime-mgr-serverGroup-modify>> | Modifies server group
-|<<runtime-mgr-serverGroup-add-server>> | Adds server to a server group
-|<<runtime-mgr-serverGroup-delete>> | Deletes server group
-|<<runtime-mgr-serverGroup-list>> | Lists all server groups in the environment
-|<<runtime-mgr-serverGroup-remove-server>> | Removes server from a server group
+|<<runtime-mgr-servergroup-create>> | Creates server group from servers
+|<<runtime-mgr-servergroup-describe>> | Describes server group
+|<<runtime-mgr-servergroup-modify>> | Modifies server group
+|<<runtime-mgr-servergroup-add-server>> | Adds server to a server group
+|<<runtime-mgr-servergroup-delete>> | Deletes server group
+|<<runtime-mgr-servergroup-list>> | Lists all server groups in the environment
+|<<runtime-mgr-servergroup-remove-server>> | Removes server from a server group
 |===
 
 // end::summary[]
