@@ -121,7 +121,7 @@ For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.a
 > cloudhub:load-balancer:start [flags] <name>
 ----
 This command starts the load balancer specified in `<name>`. +
-This command accepts only the default flag `--help`. 
+This command accepts only the default flag `--help`.
 
 [[cloudhub-load-balancer-stop]]
 == cloudhub:load-balancer:stop
@@ -209,7 +209,7 @@ Besides the default `--help` flag, this command also accepts:
 |`--http` | Specifies the Load balancer HTTP behavior
 |===
 
-[[cloudhub-load-balancer-ssl-endpoint-set-describe]]
+[[cloudhub-load-balancer-ssl-endpoint-describe]]
 == cloudhub:load-balancer:ssl-endpoint:describe
 
 ----
@@ -332,7 +332,7 @@ This command accepts only the default flag `--help`.
 ----
 This command lists all supported regions.
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.   
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
