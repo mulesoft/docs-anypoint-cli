@@ -39,18 +39,18 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 |--api=<api>
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value, in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
-* `category`: Category defined for APIs in Exchange
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle do not have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
@@ -308,18 +308,17 @@ Available filters include:
 
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
-* `category`: Category defined for APIs in Exchange
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle do not have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
 Example: 
 tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
-
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
@@ -482,12 +481,12 @@ Available filters include:
 
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
-* `category`: Category defined for APIs in Exchange
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle do not have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
