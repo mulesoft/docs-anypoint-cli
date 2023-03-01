@@ -48,7 +48,7 @@ Available filters include:
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
-* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
 If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
@@ -311,7 +311,7 @@ Available filters include:
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
-* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
 If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
@@ -484,7 +484,7 @@ Available filters include:
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
-* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Manage Environments*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
 If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
