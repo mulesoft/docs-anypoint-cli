@@ -33,13 +33,29 @@ This command evaluates specified filters to determine the rulesets that would be
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 |--api=<api>
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
-|--criteria <filtertype:filtervalue>,<filtertype:filtervalue>,...
-|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
+|--criteria <filtertype:filtervalue>,...
+|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value, in the format `filtertype:filtervalue`. 
+
+Available filters include:
+
+* `scope`: API type, `rest-api` or `async-api` 
+* `tag`: Tag defined for APIs in Exchange
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
+* `status`: Lifecycle state of stable, development, or deprecated
+* `env-type`: Environment type of any, production, or sandbox
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
++
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
++
+To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
+
+Example: 
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 |===
 
 NOTE: This command must be run with either the `criteria` or the `api` option.  
@@ -153,7 +169,7 @@ NOTE: Duplicate rulesets are not detected, so if you use more than one of the pr
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -281,13 +297,28 @@ See <<exchange-asset-identifiers>>.
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
+Available filters include:
+
+* `scope`: API type, `rest-api` or `async-api` 
+* `tag`: Tag defined for APIs in Exchange
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
+* `status`: Lifecycle state of stable, development, or deprecated
+* `env-type`: Environment type of any, production, or sandbox
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
++
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
++
+To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
+
+Example: 
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
@@ -313,7 +344,7 @@ anypoint-cli governance profile create "Open API Best Practices" 68ef9520-24e9-4
 
 anypoint-cli governance profile create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
-anypoint-cli governance profile create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
+anypoint-cli governance profile create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api,env-id:0683ce02-cd53-4028-a543-832a38a8af30" --description "Profile for Primary API Standards"
 ----
 
 *Example output:*
@@ -432,7 +463,7 @@ general information, rulesets, filter criteria, and notification configuration. 
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -444,7 +475,24 @@ Besides the default options `--help`, `-f/--fields` and `-o/--output` options, t
 
 See <<exchange-asset-identifiers>>.
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format filterType:filterValue. Available filters include category, tag, status (lifecycle state), and scope (the targeted API types). Example: tag:tag1,category:category1:value,category:category2:value2,scope:async-api,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+
+Available filters include:
+
+* `scope`: API type, `rest-api` or `async-api` 
+* `tag`: Tag defined for APIs in Exchange
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
+* `status`: Lifecycle state of stable, development, or deprecated
+* `env-type`: Environment type of any, production, or sandbox
+* `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
++
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
++
+To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
+
+Example: 
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+
 |--tags <tags> *Deprecated*
 |*The `--criteria` option replaces the `tags` option starting with Anypoint CLI version v3.17.0.* In versions prior to v3.17.0, the `tags` option is followed by a comma separated list of tags to be applied to the new governance profile, formatted as follows: `tag1,tag2,tag3`
 
@@ -477,7 +525,7 @@ anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --no
 
 anypoint-cli governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
 
-anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
+anypoint-cli governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:production,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*
@@ -509,7 +557,7 @@ TIP: Run the `governance ruleset info` command before running this command to ge
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -554,7 +602,7 @@ This command lists the ruleset rules in the ruleset definition passed in the `go
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
@@ -607,7 +655,7 @@ This command initializes a ruleset based on the data schema passed in the `schem
 
 Besides the default options `--help`, `-f/--fields` and `-o/--output` options, this command also takes:
 
-[cols="1,1"]
+[%header,cols="35a,65a"]
 |===
 |Option |Description
 
