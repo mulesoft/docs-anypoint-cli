@@ -75,7 +75,6 @@ This command also accepts the default flag `--help`.
 
 This command displays information on the application you pass in `<name>`. +
 Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>`. +
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
 The command returns data such as the application's domain, its status, the last time it was updated, the Mule version, the ZIP file name, the region, monitoring, and workers; as well as `TRUE` or `FALSE` information for persistent queues and static IPs enablement.
 
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
@@ -101,9 +100,7 @@ This command also accepts the default flag `--help`.
 > runtime-mgr:cloudhub-application:stop  [flags] <name>
 ----
 
-This command stops the running application you specify in `<name>` +
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
+This command stops the running application you specify in `<name>`.
 This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-start]]
@@ -113,9 +110,7 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:cloudhub-application:start [flags] <name>
 ----
 
-This command starts the running application you specify in `<name>` +
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
+This command starts the running application you specify in `<name>`. 
 This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-restart]]
@@ -125,8 +120,7 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:cloudhub-application:restart  [flags] <name>
 ----
 
-This command restarts the running application you specify in `<name>` +
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+This command restarts the running application you specify in `<name>`.
 
 This command accepts only the default flag `--help`. 
 
@@ -151,8 +145,7 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:cloudhub-application:deploy  [flags] <name> <zipfile>
 ----
 
-This command deploys the Mule deployable archive ZIP file that you specify in `<zipfile>` using the name you set in `<name>`. +
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass. +
+This command deploys the Mule deployable archive ZIP file that you specify in `<zipfile>` using the name you set in `<name>`. 
 You will have to provide the absolute or relative path to the deployable ZIP file in your local hard drive and the name you give to your application has to be unique.
 
 [NOTE]
@@ -202,8 +195,7 @@ If you deploy without using any flags, your application will deploy using all yo
 ----
 > runtime-mgr:cloudhub-application:modify  [flags] <name> [zipfile]
 ----
-This command updates the settings of an existing application. Optionally you can update it by uploading a new ZIP file. +
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+This command updates the settings of an existing application. Optionally you can update it by uploading a new ZIP file.
 This command can take all the same flags as the `deploy` command.
 
 [NOTE]
@@ -231,8 +223,6 @@ This command's output includes `Status`, which is the application's previous dep
 ----
 This command downloads logs the for application specified in `<name>` to the specified directory.
 
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
 Keep in mind that contrarily to what you see in the UI, the logs you download from the CLI won't separate system logs from worker logs.
 
 [[runtime-mgr-cloudhub-application-tail-logs]]
@@ -242,8 +232,7 @@ Keep in mind that contrarily to what you see in the UI, the logs you download fr
 > runtime-mgr:cloudhub-application:tail-logs [flags] <name>
 ----
 
-This command tails application logs. +
-You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+This command tails application logs. 
 
 This command accepts only the default flag `--help`.
 
