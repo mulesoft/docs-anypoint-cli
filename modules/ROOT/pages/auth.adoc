@@ -89,8 +89,9 @@ $ anypoint-cli-v4 conf organization myOrgId
 ----
 $ anypoint-cli-v4 account:environment:list
 ----
+The `organization` flag is optional. It defaults to your main organization from Anypoint Platform.
 
-NOTE: The `organization` flag is optional. It defaults to your main organization from Anypoint Platform.
+NOTE: You can get your `client_id` and `client_secret` via Connected Apps. For more information see xref:access-management::connected-apps-developers.adoc[Connected Apps for Developers].
 
 [[command-line-parameters]]
 == Command-Line Parameters
@@ -147,6 +148,7 @@ ANYPOINT_CLIENT_SECRET
 ANYPOINT_ORG
 ANYPOINT_ENV
 ANYPOINT_HOST
+ANYPOINT_CERTIFICATE
 ----
 
 *Examples:*
