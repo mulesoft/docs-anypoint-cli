@@ -195,7 +195,7 @@ If you deploy without using any flags, your application will deploy using all yo
 ----
 > runtime-mgr:cloudhub-application:modify  [flags] <name> [zipfile]
 ----
-This command updates the settings of an existing application. Optionally you can update it by uploading a new ZIP file.
+This command updates the settings of an existing application. Optionally, you can update it by uploading a new ZIP file.
 This command can take all the same flags as the `deploy` command.
 
 [NOTE]
