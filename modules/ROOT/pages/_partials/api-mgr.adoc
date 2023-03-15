@@ -332,16 +332,20 @@ Besides the default `--help` flag, this command also accepts:
 | Endpoint type. +
 Accepted values are `http`, `raml`, or `wsdl`.
 
+| `-f, --isFlex`
+| Indicates whether you are managing this API in Mule 4 or above. +
+If you do not provide this flag or `-m`, it is infered you are managing APIs in Flex Gateway.
+
+| `-m, --muleVersion4OrAbove`
+| Indicates whether you are managing this API in Flex Gateway. +
+This flag has `true` or `false` values.
+
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
 This flag has `true` or `false` values.
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-This flag has `true` or `false` values.
-
-| `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API in Mule 4 or above. +
 This flag has `true` or `false` values.
 
 | `--deploymentType <value>`
@@ -364,10 +368,10 @@ Supported values are `http` or `https`.
 | `--path <value>`
 | Proxy path.
 
-| `--responseTimeout <value>`
+| `--responseTimeout=<value>`
 | Response timeout.
 
-| `--apiInstanceLabel <value>`
+| `--apiInstanceLabel=<value>`
 | (Optional) API instance label.
 
 | `--serviceName <value>`
