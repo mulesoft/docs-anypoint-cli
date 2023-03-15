@@ -53,52 +53,27 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--enabled`
-| Sets whether the alert should be enabled or not. +
-Possible values are `true` or `false`.
-
-| `--severity <val>`
-| Alert severity. +
-Supported values: `Info`, `Warning`, `Critical`.
-
-| `--type <val>`
-| Alert type/condition. +
-Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
-
-| `--operator <val>`
-| Condition operator explaining values relation to threshold. +
-Supported values: gt, lt, eq
-
-| `--threshold <num>`
-| Condition occurrences threshold number.
-
-| `--periods <num>`
-| Number of consecutive periods condition should occur for.
-
-| `--duration <num>`
-| Condition occurrence period duration.
-
-| `--durationUnit <val>`
-| Condition occurrence period duration unit. +
+| `--duration <num>` | Condition occurrence period duration.
+| `--durationUnit <val>` | Condition occurrence period duration unit. +
 Supported values: days, hours, minutes.
-
-| `--recipient [username]`
-| Username to send alert notification to. +
-You can pass this flag multiple times to specify multiple usernames.
-
-| `--email [emailAddress]`
-| Email to send alert notification to. +
+| `--email <emailAddress>` | Email to send alert notification to. +
 You can pass this flag multiple times to specify multiple emails.
-
-| `--responseTime [num]`
-| Response time to trigger `response-time` alert type.
-
-| `--responseCode [code]`
-| Response codes to trigger `response-code` alert type. +
+| `--enabled` | Sets whether the alert should be enabled or not. +
+Possible values are `true` or `false`.
+| `--operator=<value>` | Condition operator explaining values relation to threshold. +
+Supported values: gt, lt, eq
+| `--periods <num>` | Number of consecutive periods condition should occur for.
+| `--policyInstanceId=<num>` | ID of a policy applied to API instance to trigger `response-code` alert type.
+| `--recipient=<username>` | Username to send alert notification to. +
+You can pass this flag multiple times to specify multiple usernames.
+| `--responseCode=<code>` | Response codes to trigger `response-code` alert type. +
 You can pass this flag multiple times to specify multiple codes.
-
-| `--policyInstanceId [num]`
-| ID of a policy applied to API instance to trigger `response-code` alert type.
+| `--responseTime=<num>` | Response time to trigger `response-time` alert type.
+| `--severity=<value>` | Alert severity. +
+Supported values: `Info`, `Warning`, `Critical`.
+| `--threshold=<num>` | Condition occurrences threshold number.
+| `--type=<value>` | Alert type/condition. +
+Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
 |===
 
 [[api-mgr-alert-list]]
@@ -114,10 +89,10 @@ Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description | Example
-|`--output`| Specify the response format. |`--output json`
-| `--offset` | Offsets the amount of APIs passed | `--offset 3`
-| `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
+|Flag |Description 
+|`--limit=<value>` | Number of results to retrieve, default is 10 results
+| `--offset=<value>` | Offsets the amount of APIs passed, for example`--offset 3`
+| `--sort` | Sorts the results in the field name passed, for example, `--sort "Latest Version"`
 |===
 
 [[api-mgr-api-change-specification]]
@@ -170,16 +145,13 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description | Example
-| `--target <id>`
-| Hybrid or RTF deployment target ID. +
-| `--target 1598794 643404`
 
 | `--applicationName <name>`
 | Application name
 | `--applicationName myMuleApp 643404`
 
-| `--environmentName <name>`
-| Target environment name. Should only be used when deploying APIs from unclassified environments.
+| `--environmentNam=<name>`
+| Target environment name, used only when deploying APIs from unclassified environments.
 | `--environmentName TestEnv 643404`
 
 | `--gatewayVersion <version>`
@@ -190,6 +162,10 @@ Besides the default `--help` flag, this command also accepts:
 | Update application if it exists. +
 It has `true` or `false` values.
 | `--overwrite: true  643404`
+
+| `--target=<id>`
+| Hybrid or RTF deployment target ID. +
+| `--target 1598794 643404`
 
 |===
 
@@ -242,6 +218,14 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
+| ` -f, --isFlex`
+| Indicates whether you are managing this API in FlexGateway. +
+This flag has `true` or `false` values.
+
+| `-m, --muleVersion4OrAbove`
+| Indicates whether you are managing this API in Mule 4 or above. +
+This flag has `true` or `false` values.
+
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
 This flag has `true` or `false` values.
@@ -250,35 +234,31 @@ This flag has `true` or `false` values.
 | Indicates whether a proxy should reference a user domain. +
 This flag has `true` or `false` values.
 
-| `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API in Mule 4 or above. +
-This flag has `true` or `false` values.
+| `--apiInstanceLabel <value>`
+| (Optional) API instance label.
 
-| `--deploymentType <value>`
+| `--deploymentType=<option>`
 | Deployment type. +
-Supported values are `cloudhub`, `hybrid`, or `rtf`.
+Supported options are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--endpointUri <value>`
 | Consumer endpoint URI.
 
-| `--uri <value>`
-| Implementation URI.
+| `--path=<value>`
+| Proxy path.
 
-| `--scheme <value>`
-| Proxy scheme. +
-Supported values are `http`, or `https`.
-
-| `--port <value>`
+| `--port=<value>`
 | Proxy port.
 
-| `--path <value>`
-| Proxy path.
+| `--providerId=<value>`
+| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
 
 | `--responseTimeout <value>`
 | Your maximum response timeout.
 
-| `--apiInstanceLabel <value>`
-| (Optional) API instance label.
+| `--scheme <value>`
+| Proxy scheme. +
+Supported values are `http`, or `https`.
 
 | `--serviceName <value>`
 | WSDL service name.
@@ -288,6 +268,9 @@ Supported values are `http`, or `https`.
 
 | `--servicePort <value>`
 | WSDL service port.
+
+| `--uri <value>`
+| Implementation URI.
 
 |===
 
@@ -305,12 +288,11 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--assetId <value>`       | Asset ID by which filter results.
-| `--apiVersion <value>`    | API version by which filter results.
-| `--instanceLabel <value>` | API instance label by which  filter results.
-| `--limit <num>`           | Number of results to retrieve.
-| `--offset` | Offsets the amount of APIs passed
-|`--output` | Specify the response format.
+| `--apiVersion=<value>`    | API version by which filter results.
+| `--assetId=<value>`       | Asset ID by which filter results.
+| `--instanceLabel=<value>` | API instance label by which  filter results.
+| `--limit=<num>`           | Number of results to retrieve.
+| `--offset=value` | Offsets the amount of APIs passed
 | `--sort` | Sorts the results in the field name passed
 |===
 
@@ -328,16 +310,13 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--type <value>`
-| Endpoint type. +
-Accepted values are `http`, `raml`, or `wsdl`.
 
-| `-f, --isFlex`
-| Indicates whether you are managing this API in Mule 4 or above. +
-If you do not provide this flag or `-m`, it is infered you are managing APIs in Flex Gateway.
+| ` -f, --isFlex`
+| Indicates whether you are managing this API in FlexGateway. +
+This flag has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API in Flex Gateway. +
+| Indicates whether you are managing this API in Mule 4 or above. +
 This flag has `true` or `false` values.
 
 | `-p, --withProxy`
@@ -348,31 +327,31 @@ This flag has `true` or `false` values.
 | Indicates whether a proxy should reference a user domain. +
 This flag has `true` or `false` values.
 
-| `--deploymentType <value>`
+| `--apiInstanceLabel=<value>`
+| (Optional) API instance label.
+
+| `--deploymentType=<option>`
 | Deployment type. +
 Supported values are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--endpointUri <value>`
 | Consumer endpoint URI.
 
-| `--uri <value>`
-| Implementation URI.
-
-| `--scheme <value>`
-| Proxy scheme. +
-Supported values are `http` or `https`.
+| `--path <value>`
+| Proxy path.
 
 | `--port <value>`
 | Proxy port.
 
-| `--path <value>`
-| Proxy path.
+| `--providerId=<value>`
+| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
 
 | `--responseTimeout=<value>`
 | Response timeout.
 
-| `--apiInstanceLabel=<value>`
-| (Optional) API instance label.
+| `--scheme <value>`
+| Proxy scheme. +
+Supported values are `http` or `https`.
 
 | `--serviceName <value>`
 | WSDL service name.
@@ -382,6 +361,12 @@ Supported values are `http` or `https`.
 
 | `--servicePort <value>`
 | WSDL service port.
+
+| `--type=<option>` | Endpoint type. Supported options are http, raml, and wsdl, <options: http|raml|wsdl>.
+
+| `--uri <value>`
+| Implementation URI.
+
 |===
 
 [[api-mgr-api-promote]]
@@ -393,7 +378,7 @@ Supported values are `http` or `https`.
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help` flag and standrad flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -425,22 +410,23 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--target <id>`
-| Hybrid or RTF deployment target ID.
-
-| `--applicationName <name>`
+| `--applicationName=<name>`
 | Application name.
 
-| `--environmentName <name>`
+| `--environmentName=<name>`
 | Target environment name. +
  Must be provided to redeploy APIs from unclassified environments.
 
-| `--gatewayVersion <version>`
+| `--gatewayVersion=<version>`
 | CloudHub Gateway version.
 
 | `--overwrite`
 | Update application if exists. +
 This flag has `true` or `false` values. Default Value is `true`
+
+| `--target=<id>`
+| Hybrid or RTF deployment target ID.
+
 |===
 
 [[api-mgr-api-undeprecate]]
@@ -452,7 +438,7 @@ This flag has `true` or `false` values. Default Value is `true`
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default flag, `--help`.
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
@@ -484,7 +470,7 @@ Besides the default `--help` flag, this command also accepts:
 |Flag |Description |Example
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3 643404`
-| `--output` |Specify the response format. | `--output json`
+
 |`--sort` | Sorts the results in the field name passed | `--sort "Latest Version" 643404`
 |===
 
@@ -500,13 +486,6 @@ Applies the policy passed in `<policyId>` to the API instance passed in `<apiIns
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--policyVersion <value>`
-| Mule 4 policy version.
-
-| `--groupId <value>`
-| Mule 4 policy group ID. +
-If no value is provided, this value defaults to MuleSoft group ID.
-
 | `-c, --config [configJSON]`
 | Pass the configuration data as a JSON string. +
 For example, `api-mgr:policy:apply -c '{"property": "value"}'`
@@ -515,9 +494,17 @@ For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 | Pass the configuration data as a file. +
 For example, `api-mgr policy apply --configFile ./config.json`
 
+| `--groupId <value>`
+| Mule 4 policy group ID. +
+If no value is provided, this value defaults to MuleSoft group ID.
+
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings. +
 For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+
+| `--policyVersion <value>`
+| Mule 4 policy version.
+
 |===
 
 The following example defines a rate limit of one request every ten seconds:
@@ -547,12 +534,13 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--policyVersion <value>`
-| Mule4 policy version.
+
 
 | `--groupId <value>`
 | Mule4 policy group ID. +
 Defaults to MuleSoft group ID when not provided.
+| `--policyVersion <value>`
+| Mule4 policy version.
 | `--output` <value>. | Specify the response format. + 
 Supported values are `table` (default) and `json`
 
@@ -693,7 +681,7 @@ This command accepts only the default flag `--help`.
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag: `--help`.
+This command accepts only the default flag `--help`s.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list
@@ -712,8 +700,6 @@ Besides the default `--help` flag, this command also accepts:
 |`--offset` | Offsets the amount of APIs passed | `--offset 3`
 | `--output`| Specify the response format. |  `--output json`
 |`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
-
-
 |===
 
 // end::commands[]
