@@ -54,25 +54,25 @@ Besides the default `--help` flag, this command also accepts:
 |===
 |Flag |Description
 | `--duration <num>` | Condition occurrence period duration.
-| `--durationUnit <val>` | Condition occurrence period duration unit. +
+| `--durationUnit <value>` | Condition occurrence period duration unit. +
 Supported values: days, hours, minutes.
 | `--email <emailAddress>` | Email to send alert notification to. +
 You can pass this flag multiple times to specify multiple emails.
 | `--enabled` | Sets whether the alert should be enabled or not. +
 Possible values are `true` or `false`.
-| `--operator=<value>` | Condition operator explaining values relation to threshold. +
+| `--operator <value>` | Condition operator explaining values relation to threshold. +
 Supported values: gt, lt, eq
 | `--periods <num>` | Number of consecutive periods condition should occur for.
-| `--policyInstanceId=<num>` | ID of a policy applied to API instance to trigger `response-code` alert type.
-| `--recipient=<username>` | Username to send alert notification to. +
+| `--policyInstanceId <num>` | ID of a policy applied to API instance to trigger `response-code` alert type.
+| `--recipient <username>` | Username to send alert notification to. +
 You can pass this flag multiple times to specify multiple usernames.
-| `--responseCode=<code>` | Response codes to trigger `response-code` alert type. +
+| `--responseCode <code>` | Response codes to trigger `response-code` alert type. +
 You can pass this flag multiple times to specify multiple codes.
-| `--responseTime=<num>` | Response time to trigger `response-time` alert type.
-| `--severity=<value>` | Alert severity. +
+| `--responseTime <num>` | Response time to trigger `response-time` alert type.
+| `--severity <value>` | Alert severity. +
 Supported values: `Info`, `Warning`, `Critical`.
-| `--threshold=<num>` | Condition occurrences threshold number.
-| `--type=<value>` | Alert type/condition. +
+| `--threshold <num>` | Condition occurrences threshold number.
+| `--type <value>` | Alert type/condition. +
 Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
 |===
 
@@ -90,8 +90,8 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description 
-|`--limit=<value>` | Number of results to retrieve, default is 10 results
-| `--offset=<value>` | Offsets the amount of APIs passed, for example`--offset 3`
+|`--limit <value>` | Number of results to retrieve, default is 10 results
+| `--offset <value>` | Offsets the amount of APIs passed, for example`--offset 3`
 | `--sort` | Sorts the results in the field name passed, for example, `--sort "Latest Version"`
 |===
 
@@ -150,7 +150,7 @@ Besides the default `--help` flag, this command also accepts:
 | Application name
 | `--applicationName myMuleApp 643404`
 
-| `--environmentNam=<name>`
+| `--environmentNam <name>`
 | Target environment name, used only when deploying APIs from unclassified environments.
 | `--environmentName TestEnv 643404`
 
@@ -163,7 +163,7 @@ Besides the default `--help` flag, this command also accepts:
 It has `true` or `false` values.
 | `--overwrite: true  643404`
 
-| `--target=<id>`
+| `--target <id>`
 | Hybrid or RTF deployment target ID. +
 | `--target 1598794 643404`
 
@@ -237,20 +237,20 @@ This flag has `true` or `false` values.
 | `--apiInstanceLabel <value>`
 | (Optional) API instance label.
 
-| `--deploymentType=<option>`
+| `--deploymentType <option>`
 | Deployment type. +
 Supported options are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--endpointUri <value>`
 | Consumer endpoint URI.
 
-| `--path=<value>`
+| `--path <value>`
 | Proxy path.
 
-| `--port=<value>`
+| `--port <value>`
 | Proxy port.
 
-| `--providerId=<value>`
+| `--providerId <value>`
 | Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
 
 | `--responseTimeout <value>`
@@ -288,10 +288,10 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--apiVersion=<value>`    | API version by which filter results.
-| `--assetId=<value>`       | Asset ID by which filter results.
-| `--instanceLabel=<value>` | API instance label by which  filter results.
-| `--limit=<num>`           | Number of results to retrieve.
+| `--apiVersion <value>`    | API version by which filter results.
+| `--assetId <value>`       | Asset ID by which filter results.
+| `--instanceLabel <value>` | API instance label by which  filter results.
+| `--limit <num>`           | Number of results to retrieve.
 | `--offset=value` | Offsets the amount of APIs passed
 | `--sort` | Sorts the results in the field name passed
 |===
@@ -327,10 +327,10 @@ This flag has `true` or `false` values.
 | Indicates whether a proxy should reference a user domain. +
 This flag has `true` or `false` values.
 
-| `--apiInstanceLabel=<value>`
+| `--apiInstanceLabel <value>`
 | (Optional) API instance label.
 
-| `--deploymentType=<option>`
+| `--deploymentType <option>`
 | Deployment type. +
 Supported values are `cloudhub`, `hybrid`, or `rtf`.
 
@@ -343,10 +343,10 @@ Supported values are `cloudhub`, `hybrid`, or `rtf`.
 | `--port <value>`
 | Proxy port.
 
-| `--providerId=<value>`
+| `--providerId <value>`
 | Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
 
-| `--responseTimeout=<value>`
+| `--responseTimeout <value>`
 | Response timeout.
 
 | `--scheme <value>`
@@ -362,7 +362,7 @@ Supported values are `http` or `https`.
 | `--servicePort <value>`
 | WSDL service port.
 
-| `--type=<option>` | Endpoint type. Supported options are http, raml, and wsdl, <options: http|raml|wsdl>.
+| `--type <option>` | Endpoint type. Supported options are http, raml, and wsdl, <options: http|raml|wsdl>.
 
 | `--uri <value>`
 | Implementation URI.
@@ -410,21 +410,21 @@ Besides the default `--help` flag, this command also accepts:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--applicationName=<name>`
+| `--applicationName <name>`
 | Application name.
 
-| `--environmentName=<name>`
+| `--environmentName <name>`
 | Target environment name. +
  Must be provided to redeploy APIs from unclassified environments.
 
-| `--gatewayVersion=<version>`
+| `--gatewayVersion <version>`
 | CloudHub Gateway version.
 
 | `--overwrite`
 | Update application if exists. +
 This flag has `true` or `false` values. Default Value is `true`
 
-| `--target=<id>`
+| `--target <id>`
 | Hybrid or RTF deployment target ID.
 
 |===
