@@ -378,7 +378,7 @@ Supported values are `http` or `https`.
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-Besides the default `--help` flag and standrad flags, this command also accepts:
+Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
