@@ -703,5 +703,3 @@ Besides the default `--help` flag, this command also accepts:
 |===
 
 // end::commands[]
-
-include::api-catalog.adoc[tags=common-options]
