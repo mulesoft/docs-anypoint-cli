@@ -30,7 +30,7 @@
 |xref:api-mgr.adoc#api-mgr-policy-list[api-mgr:policy:list] | Lists policies
 |xref:api-mgr.adoc#api-mgr-policy-remove[api-mgr:policy:remove] | Removes a policy from a given API instance
 |xref:api-mgr.adoc#api-mgr-tier-add[api-mgr:tier:add] | Creates an SLA tier
-|xref:api-mgr.adoc#api-mgr-tier-copy[api-mgr:tier:copy] | Copies an SLA tier from source to a target API Instance
+|xref:api-mgr.adoc#api-mgr-tier-copy[api-mgr:tier:copy] | Copies an SLA tier from source to a target API instance
 |xref:api-mgr.adoc#api-mgr-tier-delete[api-mgr:tier:delete] | Deletes an SLA tier from an API instance
 |xref:api-mgr.adoc#api-mgr-tier-list[api-mgr:tier:list] | Lists the SLA tiers of an API instance
 |===
@@ -46,7 +46,7 @@
 > api-mgr:alert:add [flags] <apiInstanceId> <name>
 ----
 
-This command creates an API instance alert with the name passed in `name` for the API Instance Id passed in `<apiInstanceId>`.
+This command creates an API instance alert with the name passed in `name` for the API instance Id passed in `<apiInstanceId>`.
 
 Besides the default `--help` flag, this command also accepts:
 
@@ -124,7 +124,7 @@ This command accepts only the default flag `--help`.
 > api-mgr:api:delete [flags] <apiInstanceId>
 ----
 
-This command deletes the API instance passed in `<apiInstanceId>`.
+This command deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command first undeploys the API instance before deleting.
 
 This command accepts only the default flag `--help`.
 
@@ -187,7 +187,7 @@ This command accepts only the default flag `--help`.
 > api-mgr:api:describe [flags] <apiInstanceId>
 ----
 
-Shows details of the API Instance passed in `<apiInstanceId>`.
+Shows details of the API instance passed in `<apiInstanceId>`.
 
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
@@ -200,7 +200,7 @@ This command also accepts the default flag `--help`.
 > api-mgr:api:download-proxy [flags] <apiInstanceId> <targetPath>
 ----
 
-This command downloads the API proxy ZIP file of the API Instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`.
+This command downloads the API proxy ZIP file of the API instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`. You cannot download the API proxy of a Flex Gateway API instance.
 
 Besides the default `--help` flag, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
@@ -212,18 +212,18 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-Edits the API instance passed in `<apiInstanceId>`. +
+This command edits the API instance passed in `<apiInstanceId>`. If the API instance is currently deployed, this command redeploys the edited API instance. +
 Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
 | ` -f, --isFlex`
-| Indicates whether you are managing this API in FlexGateway. +
+| Indicates whether you are managing this API instance in FlexGateway. +
 This flag has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API in Mule 4 or above. +
+| Indicates whether you are managing this API instance in Mule 4 or above. +
 This flag has `true` or `false` values.
 
 | `-p, --withProxy`
@@ -312,11 +312,11 @@ Besides the default `--help` flag, this command also accepts:
 |Flag |Description
 
 | ` -f, --isFlex`
-| Indicates whether you are managing this API in FlexGateway. +
+| Indicates whether you are managing this API instance in FlexGateway. +
 This flag has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API in Mule 4 or above. +
+| Indicates whether you are managing this API instance in Mule 4 or above. +
 This flag has `true` or `false` values.
 
 | `-p, --withProxy`
@@ -403,7 +403,7 @@ This flag has `true` or `false` values. Default Value is `true`
 > api-mgr:api:redeploy [flags] <apiInstanceId>
 ----
 
-Redeploys the API Instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
+Redeploys the API instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
 
 Besides the default `--help` flag, this command also accepts:
 
@@ -447,7 +447,7 @@ This command accepts only the default flag, `--help`.
 > api-mgr:contract:delete [flags] <apiInstanceId> <clientId>
 ----
 
-This command deletes the contract between the API Instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
+This command deletes the contract between the API instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
 This command accepts only the default flag `--help`.
 
@@ -564,7 +564,7 @@ This command accepts only the default flag `--help`.
 > api-mgr:policy:edit [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command edits the policy configuration passed in `<policyInstanceId>` of the API Instance passed in `<apiInstanceId>`.
+This command edits the policy configuration passed in `<policyInstanceId>` of the API instance passed in `<apiInstanceId>`.
 
 Besides the default `--help` flag, this command also accepts:
 
@@ -587,7 +587,7 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTempl
 > api-mgr:policy:enable [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command enables the policy passed in `<policyInstanceId>` for the API Instance passed in `<apiInstanceId>`.
+This command enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
 This command accepts only the default flag `--help`.
 
