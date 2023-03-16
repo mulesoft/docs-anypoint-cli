@@ -681,7 +681,7 @@ This command accepts only the default flag `--help`.
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`s.
+This command accepts only the default flag `--help`.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list
