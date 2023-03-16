@@ -48,7 +48,7 @@
 
 This command creates an API instance alert with the name passed in `name` for the API instance Id passed in `<apiInstanceId>`.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help` flag and the xref:api-catalog.adoc#common-options[general and authentication flags], this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
