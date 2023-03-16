@@ -63,7 +63,7 @@ Possible values are `true` or `false`.
 | `--operator <value>` | Condition operator explaining values relation to threshold. +
 Supported values: gt, lt, eq
 | `--periods <num>` | Number of consecutive periods condition should occur for.
-| `--policyInstanceId <num>` | ID of a policy applied to API instance to trigger `response-code` alert type.
+| `--policyInstanceId <num>` | ID of a policy applied to the API instance to trigger `response-code` alert type.
 | `--recipient <username>` | Username to send alert notification to. +
 You can pass this flag multiple times to specify multiple usernames.
 | `--responseCode <code>` | Response codes to trigger `response-code` alert type. +
@@ -124,7 +124,7 @@ This command accepts only the default `--help`, general, and authentication flag
 > api-mgr:api:delete [flags] <apiInstanceId>
 ----
 
-This command deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command first undeploys the API instance before deleting.
+This command deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting.
 
 This command accepts only the default `--help`, general, and authentication flags.
 
@@ -135,7 +135,7 @@ This command accepts only the default `--help`, general, and authentication flag
 > api-mgr:api:deploy [flags] <apiInstanceId>
 ----
 
-This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below.
+This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below. You can deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
 
 [NOTE]
 This command is only supported for endpoints with proxy.
@@ -164,7 +164,7 @@ It has `true` or `false` values.
 | `--overwrite: true  643404`
 
 | `--target <id>`
-| Hybrid or RTF deployment target ID. +
+| Hybrid or RTF deployment target ID +
 | `--target 1598794 643404`
 
 |===
@@ -235,42 +235,42 @@ This flag has `true` or `false` values.
 This flag has `true` or `false` values.
 
 | `--apiInstanceLabel <value>`
-| (Optional) API instance label.
+| API instance label, optional
 
 | `--deploymentType <option>`
-| Deployment type. +
+| Deployment type +
 Supported options are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--endpointUri <value>`
-| Consumer endpoint URI.
+| Consumer endpoint URI
 
 | `--path <value>`
-| Proxy path.
+| Proxy path
 
 | `--port <value>`
-| Proxy port.
+| Proxy port
 
 | `--providerId <value>`
 | Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
 
 | `--responseTimeout <value>`
-| Your maximum response timeout.
+| Your maximum response timeout
 
 | `--scheme <value>`
 | Proxy scheme. +
 Supported values are `http`, or `https`.
 
 | `--serviceName <value>`
-| WSDL service name.
+| WSDL service name
 
 | `--serviceNamespace <value>`
-| WSDL service namespace.
+| WSDL service namespace
 
 | `--servicePort <value>`
-| WSDL service port.
+| WSDL service port
 
 | `--uri <value>`
-| Implementation URI.
+| Implementation URI
 
 |===
 
@@ -288,12 +288,12 @@ Besides the default `--help`, general, and authentication flags, this command al
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--apiVersion <value>`    | API version by which filter results.
-| `--assetId <value>`       | Asset ID by which filter results.
-| `--instanceLabel <value>` | API instance label by which  filter results.
-| `--limit <num>`           | Number of results to retrieve.
-| `--offset=value` | Offsets the amount of APIs passed
-| `--sort` | Sorts the results in the field name passed
+| `--apiVersion <value>`    | API version by which to filter results
+| `--assetId <value>`       | Asset ID by which to filter results
+| `--instanceLabel <value>` | API instance label by which to filter results
+| `--limit <num>`           | Number of results to retrieve
+| `--offset=value` | Offsets the amount of APIs passed.
+| `--sort` | Sorts the results in the field name passed.
 |===
 
 [[api-mgr-api-manage]]
@@ -305,6 +305,8 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
 
+If you do not indicated if this is a Flex Gateway or Mule API instance, the command assumes it is a Flex Gateway instance.
+
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
@@ -312,7 +314,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |Flag |Description
 
 | ` -f, --isFlex`
-| Indicates whether you are managing this API instance in FlexGateway. +
+| Indicates whether you are managing this API instance in Flex Gateway. +
 This flag has `true` or `false` values.
 
 | `-m, --muleVersion4OrAbove`
@@ -328,44 +330,44 @@ This flag has `true` or `false` values.
 This flag has `true` or `false` values.
 
 | `--apiInstanceLabel <value>`
-| (Optional) API instance label.
+| API instance label, optional
 
 | `--deploymentType <option>`
 | Deployment type. +
 Supported values are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--endpointUri <value>`
-| Consumer endpoint URI.
+| Consumer endpoint URI
 
 | `--path <value>`
-| Proxy path.
+| Proxy path
 
 | `--port <value>`
-| Proxy port.
+| Proxy port
 
 | `--providerId <value>`
 | Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
 
 | `--responseTimeout <value>`
-| Response timeout.
+| Response timeout
 
 | `--scheme <value>`
 | Proxy scheme. +
 Supported values are `http` or `https`.
 
 | `--serviceName <value>`
-| WSDL service name.
+| WSDL service name. Flex Gateway does not support this flag.
 
 | `--serviceNamespace <value>`
-| WSDL service namespace.
+| WSDL service namespace. Flex Gateway does not support this flag.
 
 | `--servicePort <value>`
-| WSDL service port.
+| WSDL service port. Flex Gateway does not support this flag.
 
 | `--type <option>` | Endpoint type. Supported options are http, raml, and wsdl, <options: http|raml|wsdl>.
 
 | `--uri <value>`
-| Implementation URI.
+| Implementation URI
 
 |===
 
@@ -411,21 +413,21 @@ Besides the default `--help`, general, and authentication flags, this command al
 |===
 |Flag |Description
 | `--applicationName <name>`
-| Application name.
+| Application name
 
 | `--environmentName <name>`
 | Target environment name. +
  Must be provided to redeploy APIs from unclassified environments.
 
 | `--gatewayVersion <version>`
-| CloudHub Gateway version.
+| CloudHub Gateway version
 
 | `--overwrite`
 | Update application if exists. +
 This flag has `true` or `false` values. Default Value is `true`
 
 | `--target <id>`
-| Hybrid or RTF deployment target ID.
+| Hybrid or RTF deployment target ID
 
 |===
 
@@ -505,7 +507,7 @@ If no value is provided, this value defaults to MuleSoft group ID.
 For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
 
 | `--policyVersion <value>`
-| Mule 4 policy version.
+| Mule 4 policy version
 
 |===
 
@@ -542,7 +544,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 | Mule4 policy group ID. +
 Defaults to MuleSoft group ID when not provided.
 | `--policyVersion <value>`
-| Mule4 policy version.
+| Mule4 policy version
 | `--output` <value>. | Specify the response format. + 
 Supported values are `table` (default) and `json`
 
@@ -700,7 +702,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |Flag |Description | Example
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3`
-| `--output`| Specify the response format. |  `--output json`
+| `--output`| Specifies the response format |  `--output json`
 |`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 |===
 
