@@ -150,7 +150,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 | Application name
 | `--applicationName myMuleApp 643404`
 
-| `--environmentNam <name>`
+| `--environmentName <name>`
 | Target environment name, used only when deploying APIs from unclassified environments.
 | `--environmentName TestEnv 643404`
 
@@ -305,7 +305,6 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
 
-If you do not indicated if this is a Flex Gateway or Mule API instance, the command assumes it is a Flex Gateway instance.
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
@@ -315,7 +314,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 | ` -f, --isFlex`
 | Indicates whether you are managing this API instance in Flex Gateway. +
-This flag has `true` or `false` values.
+This flag has `true` or `false` values. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether you are managing this API instance in Mule 4 or above. +
@@ -334,7 +333,7 @@ This flag has `true` or `false` values.
 
 | `--deploymentType <option>`
 | Deployment type. +
-Supported values are `cloudhub`, `hybrid`, or `rtf`.
+Supported values are `cloudhub`, `hybrid`, or `rtf`. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
 
 | `--endpointUri <value>`
 | Consumer endpoint URI
