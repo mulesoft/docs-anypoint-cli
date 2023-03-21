@@ -91,12 +91,17 @@ For example:
 
 To send multiple files, use the same flag multiple times:
 
-`--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` | `exchange:asset:upload --files'{"pom.xml": "directory/pom-file.xml"}' --files='{"raml.raml": "./my-api.raml"}'`
+`--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` 
+
+|To upload a POM file and a RAML specification:
+
+`exchange:asset:upload --files'{"pom.xml": "directory/pom-file.xml"}' --files='{"raml.raml": "./my-api.raml"}'`
+
+To upload a ruleset and its documentation:
+
+`--files.ruleset.zip ~/temp/ruleset.yaml --files.docs.zip ~/temp/ruleset.doc.zip`
+
 | `--type` | Asset type
-
-To upload a ruleset:
-
-`anypoint-cli exchange asset upload --name "cli ruleset asset" --description "cli ruleset asset description" --properties.mainFile ruleset.yaml --files.ruleset.zip ~/temp/ruleset.yaml cli-ruleset-asset/1.0.0 --files.docs.zip ~/temp/ruleset.doc.zip`
 
 Required if no file is specified.
 
