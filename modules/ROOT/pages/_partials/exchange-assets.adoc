@@ -57,6 +57,8 @@
 // | `--classifier` | Valid asset classifiers are `oas`, `raml`, `wsdl`, `http`, and `custom`.
 // |===
 
+NOTE: exchange commands are currently not available for GovCloud.
+
 [[exchange-asset-upload]]
 == exchange:asset:upload
 
