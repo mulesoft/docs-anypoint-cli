@@ -7,6 +7,7 @@
 |Command |Description
 |xref:api-mgr.adoc#api-mgr-alert-add[api-mgr:alert:add] | Creates an API instance alert
 |xref:api-mgr.adoc#api-mgr-alert-list[api-mgr:alert:list] | Lists alerts for an API instance
+|xref:api-mgr.adoc#api-mgr-api-autodiscovery[api-mgr:api:autodiscovery] | Lists the autodiscovery properties
 |xref:api-mgr.adoc#api-mgr-api-change-specification[api-mgr:api:change-specification] | Changes the asset version for an API instance by choosing a new version from Exchange
 |xref:api-mgr.adoc#api-mgr-api-classify[api-mgr:api:classify] |Classifies an API instance in a given environment
 |xref:api-mgr.adoc#api-mgr-api-delete[api-mgr:api:delete] | Deletes an API
@@ -110,6 +111,8 @@ You can pass this flag multiple times to specify multiple codes.
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
 Besides the default `--help` flag, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
@@ -119,6 +122,19 @@ Besides the default `--help` flag, this command also accepts:
 | `--offset` | Offsets the amount of APIs passed | `--offset 3`
 | `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 |===
+
+[[api-mgr-api-autodiscovery]]
+== api-mgr:api:autodiscovery
+
+----
+> api-mgr:api:autodiscovery [flags] <apiInstanceId> <name>
+----
+
+This command lists the autodiscovery properties required for a gateway to track the API Instance Id passed in `<apiInstanceId>`.
+
+Besides the default `--help` flag, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
+For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
+
 
 [[api-mgr-api-change-specification]]
 == api-mgr:api:change-specification
@@ -405,6 +421,7 @@ This flag has `true` or `false` values. Default Value is `true`
 | `-t, --copyTiers`
 |Indicates whether to copy tiers. +
 This flag has `true` or `false` values. Default Value is `true`
+| `-providerId` | Indicates the provider's ID associated with the API.
 |===
 
 [[api-mgr-api-redeploy]]
