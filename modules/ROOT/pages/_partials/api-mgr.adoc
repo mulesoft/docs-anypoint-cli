@@ -133,7 +133,7 @@ Besides the default `--help` flag, this command also accepts:
 This command lists the autodiscovery properties required for a gateway to track the API Instance Id passed in `<apiInstanceId>`.
 
 Besides the default `--help` flag, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
-For example: `api-mgr:api:a --gatewayVersion: 4.0.1  643404 /tmp/`
+For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
 
 
 [[api-mgr-api-change-specification]]
