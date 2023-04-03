@@ -245,20 +245,18 @@ Supported options are `cloudhub`, `hybrid`, or `rtf`.
 | Consumer endpoint URI
 
 | `--inboundSecretGroupId <value>` 
-| Inbound secret group ID. +
-You cannot create secret groups with CLI, but you can apply already created secret groups.
+| Inbound secret group ID
 
 | `--inboundTlsContextId <value>` 
 | Outbound TLS Context ID. +
-You must supply the `--inboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`
 
 | `--outboundSecretGroupId <value>`
-| Outbound secret group ID +
-You cannot create secret groups with CLI, but you can apply already created secret groups.
+| Outbound secret group ID 
 
 | `--outboundTlsContextId <value>`
 | Outbound TLS Context ID. +
-You must supply the `--outboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"` 
 
 | `--path <value>`
 | Proxy path
@@ -358,20 +356,18 @@ Supported values are `cloudhub`, `hybrid`, or `rtf`. When deploying a Flex Gatew
 | Consumer endpoint URI
 
 | `--inboundSecretGroupId <value>` 
-| Inbound secret group ID. +
-You cannot create secret groups with CLI, but you can apply already created secret groups.
+| Inbound secret group ID
 
 | `--inboundTlsContextId <value>` 
 | Outbound TLS Context ID. +
-You must supply the `--inboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group.
 
 | `--outboundSecretGroupId <value>`
-| Outbound secret group ID +
-You cannot create secret groups with CLI, but you can apply already created secret groups.
+| Outbound secret group ID 
 
 | `--outboundTlsContextId <value>`
 | Outbound TLS Context ID. +
-You must supply the `--outboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group.
 
 | `--path <value>`
 | Proxy path
