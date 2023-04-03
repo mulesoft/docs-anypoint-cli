@@ -244,6 +244,22 @@ Supported options are `cloudhub`, `hybrid`, or `rtf`.
 | `--endpointUri <value>`
 | Consumer endpoint URI
 
+| `--inboundSecretGroupId <value>` 
+| Inbound secret group ID. +
+You cannot create secret groups with CLI, but you can apply already created secret groups.
+
+| `--inboundTlsContextId <value>` 
+| Outbound TLS Context ID. +
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
+
+| `--outboundSecretGroupId <value>`
+| Outbound secret group ID +
+You cannot create secret groups with CLI, but you can apply already created secret groups.
+
+| `--outboundTlsContextId <value>`
+| Outbound TLS Context ID. +
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
+
 | `--path <value>`
 | Proxy path
 
@@ -268,6 +284,9 @@ Supported values are `http`, or `https`.
 
 | `--servicePort <value>`
 | WSDL service port
+
+| `--updateApisInSamePort`
+| Updates the TLS context of API instances sharing the port of this API.
 
 | `--uri <value>`
 | Implementation URI
@@ -337,6 +356,22 @@ Supported values are `cloudhub`, `hybrid`, or `rtf`. When deploying a Flex Gatew
 
 | `--endpointUri <value>`
 | Consumer endpoint URI
+
+| `--inboundSecretGroupId <value>` 
+| Inbound secret group ID. +
+You cannot create secret groups with CLI, but you can apply already created secret groups.
+
+| `--inboundTlsContextId <value>` 
+| Outbound TLS Context ID. +
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
+
+| `--outboundSecretGroupId <value>`
+| Outbound secret group ID +
+You cannot create secret groups with CLI, but you can apply already created secret groups.
+
+| `--outboundTlsContextId <value>`
+| Outbound TLS Context ID. +
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group. You cannot create TLS Contexts with CLI, but you can apply already created TLS Contexts.
 
 | `--path <value>`
 | Proxy path
