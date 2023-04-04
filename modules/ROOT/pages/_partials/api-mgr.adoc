@@ -212,7 +212,7 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-This command edits the API instance passed in `<apiInstanceId>`. If the API instance is currently deployed, this command redeploys the edited API instance. +
+This command edits the API instance passed in `<apiInstanceId>`. If you edit a Flex Gateway API instance that is currently deployed, this command redeploys the edited Flex Gateway API instance. +
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
