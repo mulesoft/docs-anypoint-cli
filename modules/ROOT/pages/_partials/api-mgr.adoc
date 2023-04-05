@@ -114,7 +114,7 @@ Besides the `--help`, general, and authentication flags, this command also accep
 |Flag |Description 
 |`--gatewayVersion` | Specifies the gateway version you want to download. + 
 For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
-| `--output <value> `| Specifies the response format. + 
+| `--output <value>`| Specifies the response format. + 
 Supported values are `table` (default) and `json`
 |===
 
@@ -233,7 +233,8 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-This command edits the API instance passed in `<apiInstanceId>`. If you edit a Flex Gateway API instance that is currently deployed, this command redeploys the edited Flex Gateway API instance. +
+This command edits the API instance passed in `<apiInstanceId>`. If you edit a Flex Gateway API instance that is currently deployed, this command redeploys the edited Flex Gateway API instance. 
+
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
@@ -270,14 +271,14 @@ Supported options are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--inboundTlsContextId <value>` 
 | Outbound TLS Context ID. +
-You must supply the `--inboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
 
 | `--outboundSecretGroupId <value>`
 | Outbound secret group ID 
 
 | `--outboundTlsContextId <value>`
 | Outbound TLS Context ID. +
-You must supply the `--outboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"` 
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
 
 | `--path <value>`
 | Proxy path
@@ -296,13 +297,13 @@ You must supply the `--outboundSecretGroupId` of the TLS Context's secret group 
 Supported values are `http`, or `https`.
 
 | `--serviceName <value>`
-| WSDL service name
+| WSDL service name. Flex Gateway does not support this flag.
 
 | `--serviceNamespace <value>`
-| WSDL service namespace
+| WSDL service namespace. Flex Gateway does not support this flag.
 
 | `--servicePort <value>`
-| WSDL service port
+| WSDL service port. Flex Gateway does not support this flag.
 
 | `--updateApisInSamePort`
 | Updates the TLS context of API instances sharing the port of this API.
@@ -330,9 +331,9 @@ Besides the default `--help`, general, and authentication flags, this command al
 | `--assetId <value>`       | Asset ID by which to filter results
 | `--instanceLabel <value>` | API instance label by which to filter results
 | `--limit <num>`           | Number of results to retrieve
-| `--offset <value>` | Offsets the amount of APIs passed.
+| `--offset <value>` | Offsets the amount of APIs passed
 
-| `--sort` | Sorts the results in the field name passed.
+| `--sort` | Sorts the results in the field name passed
 |===
 
 [[api-mgr-api-manage]]
