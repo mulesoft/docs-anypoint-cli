@@ -722,7 +722,7 @@ For example: `-l true,100,sec -l false,20,min`
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command accepts only the default `--help`, general, and authentication flags`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
