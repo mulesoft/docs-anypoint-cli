@@ -330,7 +330,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 | `--assetId <value>`       | Asset ID by which to filter results
 | `--instanceLabel <value>` | API instance label by which to filter results
 | `--limit <num>`           | Number of results to retrieve
-| `--offset=value` | Offsets the amount of APIs passed.
+| `--offset <value>` | Offsets the amount of APIs passed.
 
 | `--sort` | Sorts the results in the field name passed.
 |===
