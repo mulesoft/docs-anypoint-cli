@@ -88,7 +88,7 @@ Lists alerts for the API instance passed in `<apiInstanceId>`.
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
-[%header%autowidth.spread,cols="a,a,a"]
+[%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description 
 |`--limit <value>` | Number of results to retrieve, default is 10 results
@@ -109,7 +109,7 @@ This command lists the autodiscovery properties required for a gateway to track 
 
 Besides the `--help`, general, and authentication flags, this command also accepts:
 
-[%header%autowidth.spread,cols="a,a,a"]
+[%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description 
 |`--gatewayVersion` | Specifies the gateway version you want to download. + 
