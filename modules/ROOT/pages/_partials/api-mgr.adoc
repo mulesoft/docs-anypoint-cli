@@ -499,7 +499,7 @@ This command accepts only the default `--help`, general, and authentication flag
 
 This command deletes the contract between the API instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command accepts only the default `--help`, general, and authentication flags`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
