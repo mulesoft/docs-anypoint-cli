@@ -240,7 +240,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| ` -f, --isFlex`
+| `-f, --isFlex`
 | Indicates whether you are managing this API instance in FlexGateway. +
 This flag has `true` or `false` values.
 
@@ -352,7 +352,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |===
 |Flag |Description
 
-| ` -f, --isFlex`
+| `-f, --isFlex`
 | Indicates whether you are managing this API instance in Flex Gateway. +
 This flag has `true` or `false` values. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
 
