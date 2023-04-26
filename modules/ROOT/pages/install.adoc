@@ -37,7 +37,7 @@ Run the following command to install the Anypoint CLI core package and all defau
 
 [source,text,linenums]
 ----
-$ npm install -g anypoint-cli-v4
+npm install -g anypoint-cli-v4
 ----
 
 [[install-plugins]]
@@ -47,14 +47,14 @@ After installing the Anypoint CLI 4.x core package, you can install nondefault p
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4 plugins:install <plugin-name>
+anypoint-cli-v4 plugins:install <plugin-name>
 ----
 
 For example, to install the account plugin, use the following command:
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4 plugins:install anypoint-cli-account-plugin
+anypoint-cli-v4 plugins:install anypoint-cli-account-plugin
 ----
 
 [[plugin-list]]
@@ -91,7 +91,7 @@ To view the version of the core package:
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4 --version
+anypoint-cli-v4 --version
 ----
 
 The output shows the version of the installed core package as follows:
@@ -107,7 +107,7 @@ To verify a plugin installation and view a list of all installed  plugins, use t
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4
+anypoint-cli-v4
 ----
 
 The output shows the installed plugins under the `TOPICS` section. The following example shows that only the account plugin is installed: 
@@ -136,7 +136,7 @@ To see the list of installed plugins along with full version information, use th
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4 plugins --core
+anypoint-cli-v4 plugins --core
 ----
 
 The output shows the version information: 
@@ -168,14 +168,14 @@ To uninstall a plugin:
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4 plugins:uninstall anypoint-cli-<plugin-name>-plugin
+anypoint-cli-v4 plugins:uninstall anypoint-cli-<plugin-name>-plugin
 ----
 
 For example, the following command uninstalls the account plugin:
 
 [source,text,linenums]
 ----
-$ anypoint-cli-v4 plugins:uninstall anypoint-cli-account-plugin
+anypoint-cli-v4 plugins:uninstall anypoint-cli-account-plugin
 ----
 
 See <<plugin-list,List of Plugins>>.
@@ -189,5 +189,5 @@ To uninstall the Anypoint CLI:
 
 [source,text,linenums]
 ----
-$ $ npm uninstall -g anypoint-cli-v4
+npm uninstall -g anypoint-cli-v4
 ----
