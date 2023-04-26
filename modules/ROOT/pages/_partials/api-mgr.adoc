@@ -31,7 +31,7 @@
 |xref:api-mgr.adoc#api-mgr-policy-list[api-mgr:policy:list] | Lists policies
 |xref:api-mgr.adoc#api-mgr-policy-remove[api-mgr:policy:remove] | Removes a policy from a given API instance
 |xref:api-mgr.adoc#api-mgr-tier-add[api-mgr:tier:add] | Creates an SLA tier
-|xref:api-mgr.adoc#api-mgr-tier-copy[api-mgr:tier:copy] | Copies an SLA tier from source to a target API Instance
+|xref:api-mgr.adoc#api-mgr-tier-copy[api-mgr:tier:copy] | Copies an SLA tier from source to a target API instance
 |xref:api-mgr.adoc#api-mgr-tier-delete[api-mgr:tier:delete] | Deletes an SLA tier from an API instance
 |xref:api-mgr.adoc#api-mgr-tier-list[api-mgr:tier:list] | Lists the SLA tiers of an API instance
 |===
@@ -47,59 +47,34 @@
 > api-mgr:alert:add [flags] <apiInstanceId> <name>
 ----
 
-This command creates an API instance alert with the name passed in `name` for the API Instance Id passed in `<apiInstanceId>`.
+This command creates an API instance alert with the name passed in `name` for the API instance Id passed in `<apiInstanceId>`.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--enabled`
-| Sets whether the alert should be enabled or not. +
-Possible values are `true` or `false`.
-
-| `--severity <val>`
-| Alert severity. +
-Supported values: `Info`, `Warning`, `Critical`.
-
-| `--type <val>`
-| Alert type/condition. +
-Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
-
-| `--operator <val>`
-| Condition operator explaining values relation to threshold. +
-Supported values: gt, lt, eq
-
-| `--threshold <num>`
-| Condition occurrences threshold number.
-
-| `--periods <num>`
-| Number of consecutive periods condition should occur for.
-
-| `--duration <num>`
-| Condition occurrence period duration.
-
-| `--durationUnit <val>`
-| Condition occurrence period duration unit. +
+| `--duration <num>` | Condition occurrence period duration.
+| `--durationUnit <value>` | Condition occurrence period duration unit. +
 Supported values: days, hours, minutes.
-
-| `--recipient [username]`
-| Username to send alert notification to. +
-You can pass this flag multiple times to specify multiple usernames.
-
-| `--email [emailAddress]`
-| Email to send alert notification to. +
+| `--email <emailAddress>` | Email to send alert notification to. +
 You can pass this flag multiple times to specify multiple emails.
-
-| `--responseTime [num]`
-| Response time to trigger `response-time` alert type.
-
-| `--responseCode [code]`
-| Response codes to trigger `response-code` alert type. +
+| `--enabled` | Sets whether the alert should be enabled or not. +
+Possible values are `true` or `false`.
+| `--operator <value>` | Condition operator explaining values relation to threshold. +
+Supported values: gt, lt, eq
+| `--periods <num>` | Number of consecutive periods condition should occur for.
+| `--policyInstanceId <num>` | ID of a policy applied to the API instance to trigger `response-code` alert type.
+| `--recipient <username>` | Username to send alert notification to. +
+You can pass this flag multiple times to specify multiple usernames.
+| `--responseCode <code>` | Response codes to trigger `response-code` alert type. +
 You can pass this flag multiple times to specify multiple codes.
-
-| `--policyInstanceId [num]`
-| ID of a policy applied to API instance to trigger `response-code` alert type.
+| `--responseTime <num>` | Response time to trigger `response-time` alert type.
+| `--severity <value>` | Alert severity. +
+Supported values: `Info`, `Warning`, `Critical`.
+| `--threshold <num>` | Condition occurrences threshold number.
+| `--type <value>` | Alert type/condition. +
+Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
 |===
 
 [[api-mgr-alert-list]]
@@ -111,16 +86,16 @@ You can pass this flag multiple times to specify multiple codes.
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
-Besides the default `--help` flag, this command also accepts:
-
-[%header%autowidth.spread,cols="a,a,a"]
+[%header%autowidth.spread,cols="a,a"]
 |===
-|Flag |Description | Example
-|`--output`| Specify the response format. |`--output json`
-| `--offset` | Offsets the amount of APIs passed | `--offset 3`
-| `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
+|Flag |Description 
+|`--limit <value>` | Number of results to retrieve, default is 10 results
+| `--offset <value>` | Offsets the amount of APIs passed, for example`--offset 3`
+| `--output <value>`| Specifies the response format. + 
+Supported values are `table` (default) and `json`
+| `--sort` | Sorts the results in the field name passed, for example, `--sort "Latest Version"`
 |===
 
 [[api-mgr-api-autodiscovery]]
@@ -132,9 +107,16 @@ Besides the default `--help` flag, this command also accepts:
 
 This command lists the autodiscovery properties required for a gateway to track the API Instance Id passed in `<apiInstanceId>`.
 
-Besides the default `--help` flag, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
-For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
+Besides the `--help`, general, and authentication flags, this command also accepts:
 
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description 
+|`--gatewayVersion` | Specifies the gateway version you want to download. + 
+For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
+| `--output <value>`| Specifies the response format. + 
+Supported values are `table` (default) and `json`
+|===
 
 [[api-mgr-api-change-specification]]
 == api-mgr:api:change-specification
@@ -145,7 +127,7 @@ For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
 
 Changes the asset version for the API instance passed in `<apiInstanceId`,  by choosing a new version from Exchange passed in `<assetVersion>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-api-classify]]
 == api-mgr:api:classify
@@ -156,7 +138,7 @@ This command accepts only the default flag `--help`.
 
 Classifies the API instance passed in `<apiInstanceId>` in the  environment passed in `<destEnvName>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-api-delete]]
 == api-mgr:api:delete
@@ -165,9 +147,9 @@ This command accepts only the default flag `--help`.
 > api-mgr:api:delete [flags] <apiInstanceId>
 ----
 
-This command deletes the API instance passed in `<apiInstanceId>`.
+This command deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-api-deploy]]
 == api-mgr:api:deploy
@@ -176,26 +158,23 @@ This command accepts only the default flag `--help`.
 > api-mgr:api:deploy [flags] <apiInstanceId>
 ----
 
-This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below.
+This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below. You can deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
 
 [NOTE]
 This command is only supported for endpoints with proxy.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description | Example
-| `--target <id>`
-| Hybrid or RTF deployment target ID. +
-| `--target 1598794 643404`
 
 | `--applicationName <name>`
 | Application name
 | `--applicationName myMuleApp 643404`
 
 | `--environmentName <name>`
-| Target environment name. Should only be used when deploying APIs from unclassified environments.
+| Target environment name, used only when deploying APIs from unclassified environments.
 | `--environmentName TestEnv 643404`
 
 | `--gatewayVersion <version>`
@@ -206,6 +185,10 @@ Besides the default `--help` flag, this command also accepts:
 | Update application if it exists. +
 It has `true` or `false` values.
 | `--overwrite: true  643404`
+
+| `--target <id>`
+| Hybrid or RTF deployment target ID +
+| `--target 1598794 643404`
 
 |===
 
@@ -218,7 +201,7 @@ It has `true` or `false` values.
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-api-describe]]
 == api-mgr:api:describe
@@ -227,11 +210,9 @@ This command accepts only the default flag `--help`.
 > api-mgr:api:describe [flags] <apiInstanceId>
 ----
 
-Shows details of the API Instance passed in `<apiInstanceId>`.
+Shows details of the API instance passed in `<apiInstanceId>`.
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
-
-This command also accepts the default flag `--help`.
+Besides the default `--help`, general, and authentication flags, this command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
@@ -240,9 +221,9 @@ This command also accepts the default flag `--help`.
 > api-mgr:api:download-proxy [flags] <apiInstanceId> <targetPath>
 ----
 
-This command downloads the API proxy ZIP file of the API Instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`.
+This command downloads the API proxy ZIP file of the API instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`. You cannot download the API proxy of a Flex Gateway API instance.
 
-Besides the default `--help` flag, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
+Besides the default `--help`, general, and authentication flags, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
 [[api-mgr-api-edit]]
@@ -252,12 +233,21 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-Edits the API instance passed in `<apiInstanceId>`. +
-Besides the default `--help` flag, this command also accepts:
+This command edits the API instance passed in `<apiInstanceId>`. If you edit a Flex Gateway API instance that is currently deployed, this command redeploys the edited Flex Gateway API instance. 
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
+| `-f, --isFlex`
+| Indicates whether you are managing this API instance in FlexGateway. +
+This flag has `true` or `false` values.
+
+| `-m, --muleVersion4OrAbove`
+| Indicates whether you are managing this API instance in Mule 4 or above. +
+This flag has `true` or `false` values.
+
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
 This flag has `true` or `false` values.
@@ -266,44 +256,60 @@ This flag has `true` or `false` values.
 | Indicates whether a proxy should reference a user domain. +
 This flag has `true` or `false` values.
 
-| `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API in Mule 4 or above. +
-This flag has `true` or `false` values.
+| `--apiInstanceLabel <value>`
+| API instance label, optional
 
-| `--deploymentType <value>`
-| Deployment type. +
-Supported values are `cloudhub`, `hybrid`, or `rtf`.
+| `--deploymentType <option>`
+| Deployment type +
+Supported options are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--endpointUri <value>`
-| Consumer endpoint URI.
+| Consumer endpoint URI
 
-| `--uri <value>`
-| Implementation URI.
+| `--inboundSecretGroupId <value>` 
+| Inbound secret group ID
+
+| `--inboundTlsContextId <value>` 
+| Outbound TLS Context ID. +
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
+
+| `--outboundSecretGroupId <value>`
+| Outbound secret group ID 
+
+| `--outboundTlsContextId <value>`
+| Outbound TLS Context ID. +
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
+
+| `--path <value>`
+| Proxy path
+
+| `--port <value>`
+| Proxy port
+
+| `--providerId <value>`
+| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
+
+| `--responseTimeout <value>`
+| Your maximum response timeout
 
 | `--scheme <value>`
 | Proxy scheme. +
 Supported values are `http`, or `https`.
 
-| `--port <value>`
-| Proxy port.
-
-| `--path <value>`
-| Proxy path.
-
-| `--responseTimeout <value>`
-| Your maximum response timeout.
-
-| `--apiInstanceLabel <value>`
-| (Optional) API instance label.
-
 | `--serviceName <value>`
-| WSDL service name.
+| WSDL service name. Flex Gateway does not support this flag.
 
 | `--serviceNamespace <value>`
-| WSDL service namespace.
+| WSDL service namespace. Flex Gateway does not support this flag.
 
 | `--servicePort <value>`
-| WSDL service port.
+| WSDL service port. Flex Gateway does not support this flag.
+
+| `--updateApisInSamePort`
+| Updates the TLS context of API instances sharing the port of this API.
+
+| `--uri <value>`
+| Implementation URI
 
 |===
 
@@ -316,17 +322,17 @@ Supported values are `http`, or `https`.
 
 Lists all APIs in API Manager 2.x.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--assetId <value>`       | Asset ID by which filter results.
-| `--apiVersion <value>`    | API version by which filter results.
-| `--instanceLabel <value>` | API instance label by which  filter results.
-| `--limit <num>`           | Number of results to retrieve.
-| `--offset` | Offsets the amount of APIs passed
-|`--output` | Specify the response format.
+| `--apiVersion <value>`    | API version by which to filter results
+| `--assetId <value>`       | Asset ID by which to filter results
+| `--instanceLabel <value>` | API instance label by which to filter results
+| `--limit <num>`           | Number of results to retrieve
+| `--offset <value>` | Offsets the amount of APIs passed
+
 | `--sort` | Sorts the results in the field name passed
 |===
 
@@ -339,14 +345,20 @@ Besides the default `--help` flag, this command also accepts:
 
 Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
 
-Besides the default `--help` flag, this command also accepts:
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--type <value>`
-| Endpoint type. +
-Accepted values are `http`, `raml`, or `wsdl`.
+
+| `-f, --isFlex`
+| Indicates whether you are managing this API instance in Flex Gateway. +
+This flag has `true` or `false` values. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
+
+| `-m, --muleVersion4OrAbove`
+| Indicates whether you are managing this API instance in Mule 4 or above. +
+This flag has `true` or `false` values.
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
@@ -356,44 +368,60 @@ This flag has `true` or `false` values.
 | Indicates whether a proxy should reference a user domain. +
 This flag has `true` or `false` values.
 
-| `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API in Mule 4 or above. +
-This flag has `true` or `false` values.
+| `--apiInstanceLabel <value>`
+| API instance label, optional
 
-| `--deploymentType <value>`
+| `--deploymentType <option>`
 | Deployment type. +
-Supported values are `cloudhub`, `hybrid`, or `rtf`.
+Supported values are `cloudhub`, `hybrid`, or `rtf`. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
 
 | `--endpointUri <value>`
-| Consumer endpoint URI.
+| Consumer endpoint URI
 
-| `--uri <value>`
-| Implementation URI.
+| `--inboundSecretGroupId <value>` 
+| Inbound secret group ID
+
+| `--inboundTlsContextId <value>` 
+| Outbound TLS Context ID. +
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group.
+
+| `--outboundSecretGroupId <value>`
+| Outbound secret group ID 
+
+| `--outboundTlsContextId <value>`
+| Outbound TLS Context ID. +
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group.
+
+| `--path <value>`
+| Proxy path
+
+| `--port <value>`
+| Proxy port
+
+| `--providerId <value>`
+| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
+
+| `--responseTimeout <value>`
+| Response timeout
 
 | `--scheme <value>`
 | Proxy scheme. +
 Supported values are `http` or `https`.
 
-| `--port <value>`
-| Proxy port.
-
-| `--path <value>`
-| Proxy path.
-
-| `--responseTimeout <value>`
-| Response timeout.
-
-| `--apiInstanceLabel <value>`
-| (Optional) API instance label.
-
 | `--serviceName <value>`
-| WSDL service name.
+| WSDL service name. Flex Gateway does not support this flag.
 
 | `--serviceNamespace <value>`
-| WSDL service namespace.
+| WSDL service namespace. Flex Gateway does not support this flag.
 
 | `--servicePort <value>`
-| WSDL service port.
+| WSDL service port. Flex Gateway does not support this flag.
+
+| `--type <option>` | Endpoint type. Supported options are http, raml, and wsdl, <options: http|raml|wsdl>.
+
+| `--uri <value>`
+| Implementation URI
+
 |===
 
 [[api-mgr-api-promote]]
@@ -405,7 +433,7 @@ Supported values are `http` or `https`.
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -431,29 +459,30 @@ This flag has `true` or `false` values. Default Value is `true`
 > api-mgr:api:redeploy [flags] <apiInstanceId>
 ----
 
-Redeploys the API Instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
+Redeploys the API instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--target <id>`
-| Hybrid or RTF deployment target ID.
-
 | `--applicationName <name>`
-| Application name.
+| Application name
 
 | `--environmentName <name>`
 | Target environment name. +
  Must be provided to redeploy APIs from unclassified environments.
 
 | `--gatewayVersion <version>`
-| CloudHub Gateway version.
+| CloudHub Gateway version
 
 | `--overwrite`
 | Update application if exists. +
 This flag has `true` or `false` values. Default Value is `true`
+
+| `--target <id>`
+| Hybrid or RTF deployment target ID
+
 |===
 
 [[api-mgr-api-undeprecate]]
@@ -465,7 +494,7 @@ This flag has `true` or `false` values. Default Value is `true`
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
@@ -474,9 +503,9 @@ This command accepts only the default flag `--help`.
 > api-mgr:contract:delete [flags] <apiInstanceId> <clientId>
 ----
 
-This command deletes the contract between the API Instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
+This command deletes the contract between the API instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
@@ -490,14 +519,14 @@ Lists all contracts of the API passed in `<apiInstanceId>`.
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description |Example
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3 643404`
-| `--output` |Specify the response format. | `--output json`
+| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json`.|  `--output json`
 |`--sort` | Sorts the results in the field name passed | `--sort "Latest Version" 643404`
 |===
 
@@ -510,16 +539,11 @@ Besides the default `--help` flag, this command also accepts:
 
 Applies the policy passed in `<policyId>` to the API instance passed in `<apiInstanceId>`.
 
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--policyVersion <value>`
-| Mule 4 policy version.
-
-| `--groupId <value>`
-| Mule 4 policy group ID. +
-If no value is provided, this value defaults to MuleSoft group ID.
-
 | `-c, --config [configJSON]`
 | Pass the configuration data as a JSON string. +
 For example, `api-mgr:policy:apply -c '{"property": "value"}'`
@@ -528,9 +552,17 @@ For example, `api-mgr:policy:apply -c '{"property": "value"}'`
 | Pass the configuration data as a file. +
 For example, `api-mgr policy apply --configFile ./config.json`
 
+| `--groupId <value>`
+| Mule 4 policy group ID. +
+If no value is provided, this value defaults to MuleSoft group ID.
+
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings. +
 For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+
+| `--policyVersion <value>`
+| Mule 4 policy version
+
 |===
 
 The following example defines a rate limit of one request every ten seconds:
@@ -555,18 +587,19 @@ The following example defines a rate limit of one request every ten seconds:
 
 This command shows the description and available configuration properties of the policy passed in `<policyId>`. +
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--policyVersion <value>`
-| Mule4 policy version.
+
 
 | `--groupId <value>`
 | Mule4 policy group ID. +
 Defaults to MuleSoft group ID when not provided.
-| `--output` <value>. | Specify the response format. + 
+| `--policyVersion <value>`
+| Mule4 policy version
+| `--output <value>` | Specify the response format. + 
 Supported values are `table` (default) and `json`
 
 |===
@@ -580,7 +613,7 @@ Supported values are `table` (default) and `json`
 
 This command disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default flag `--help`, general, and authentication flags.
 
 [[api-mgr-policy-edit]]
 == api-mgr:policy:edit
@@ -589,9 +622,9 @@ This command accepts only the default flag `--help`.
 > api-mgr:policy:edit [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command edits the policy configuration passed in `<policyInstanceId>` of the API Instance passed in `<apiInstanceId>`.
+This command edits the policy configuration passed in `<policyInstanceId>` of the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -612,9 +645,9 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTempl
 > api-mgr:policy:enable [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command enables the policy passed in `<policyInstanceId>` for the API Instance passed in `<apiInstanceId>`.
+This command enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default flag `--help`, general, and authentication flags.
 
 [[api-mgr-policy-list]]
 == api-mgr:policy:list
@@ -626,7 +659,7 @@ This command accepts only the default flag `--help`.
 This command lists all policies for all APIs in API Manager 2.x. +
 When the `[apiInstanceId]` flag is specified, this command lists the policies applied to that API instance. Not specifying the `[apiInstanceId]` will list all policies for all APIs.
 
-Besides the default `--help` flag, this command also accepts the `-m, --muleVersion4OrAbove` flag which has `true` or `false` values. +
+Besides the default `--help`, general, and authentication flags, this command also accepts the `-m, --muleVersion4OrAbove` flag which has `true` or `false` values. +
 
 [[api-mgr-policy-remove]]
 == api-mgr:policy:remove
@@ -637,7 +670,7 @@ Besides the default `--help` flag, this command also accepts the `-m, --muleVers
 
 This command removes the policy specified in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default flag `--help`, general, and authentication flags.
 
 [[api-mgr-tier-add]]
 == api-mgr:tier:add
@@ -648,7 +681,7 @@ This command accepts only the default flag `--help`.
 
 This command creates an SLA tier for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -695,7 +728,7 @@ For example: `-l true,100,sec -l false,20,min`
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command accepts only the default flag `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
@@ -706,7 +739,7 @@ This command accepts only the default flag `--help`.
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag: `--help`.
+This command accepts only the default `--help`, general, and authentication flags.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list
@@ -716,17 +749,15 @@ This command accepts only the default flag: `--help`.
 
 This command lists the SLA tiers of the  API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help` flag, this command also accepts:
+Besides the default `--help`, general, and authentication flags, this command also accepts:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description | Example
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3`
-| `--output`| Specify the response format. |  `--output json`
+| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json`.|  `--output json`
 |`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
-
-
 |===
 
 // end::commands[]

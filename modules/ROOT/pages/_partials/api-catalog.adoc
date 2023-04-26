@@ -282,9 +282,6 @@ or
 
 | The ID of the Anypoint Platform organization where the APIs are cataloged  
 
-|  `-o`, `--output=output`  
-
-| Not currently used
 
 // Format for the command output.  
 
