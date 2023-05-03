@@ -11,12 +11,12 @@ Use these commands for applications in Cloudhub 2.0.
 |<<runtime-mgr-application-deploy>> | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
 |<<runtime-mgr-application-describe>> | Describes an application
 // | <<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
-|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory 
+|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory
 |<<runtime-mgr-application-list>> | Lists all applications in an organization
 |<<runtime-mgr-application-modify>> | Modifies a deployed application
 |<<runtime-mgr-application-start>> | Starts a stopped application
 |<<runtime-mgr-application-stop>> | Stops running an application
-|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification 
+|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification
 |===
 
 // end::summary[]
@@ -28,12 +28,12 @@ Use these commands for applications in Cloudhub 2.0.
 |Command |Description
 |<<runtime-mgr-application-delete>> | Deletes an application
 |<<runtime-mgr-application-describe>> | Describes an application
-|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory 
+|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory
 |<<runtime-mgr-application-list>> | Lists all applications in an organization
 |<<runtime-mgr-application-modify>> | Modifies a deployed application
 |<<runtime-mgr-application-start>> | Starts a stopped application
 |<<runtime-mgr-application-stop>> | Stops running an application
-|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification 
+|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification
 |===
 
 // end::summary-rtf[]
@@ -56,7 +56,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:application:deploy
 
 ----
-> runtime-mgr:application:deploy [flags] <appID> <deploymentTargetID> <runtimeVersion> <artifactID> 
+> runtime-mgr:application:deploy [flags] <appID> <deploymentTargetID> <runtimeVersion> <artifactID>
 ----
 Deploys the application specified in `<appID>` to the deployment target specified using the following options:
 
@@ -78,23 +78,18 @@ Besides the default `--help` flag this command also takes:
 |Flag |Description |Example
 |`--assetVersion` | Version of the Exchange application to use. +
 Default: latest application version | `--assetVersion 2.0.4`
-|`--clustered`| Enables clustered nodes, which requires at least two replicas. +
- Default:.`disabled` +
-Supported values: `true`, `false` |`--clustered false` 
-|`--disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
-Default: `enabled` +
-Supported values: `true`, `false` |`--disableAmLogForwarding true`
-|`--forwardSslSession`| Enables SSL session forwarding. +
-Default: `disabled` +
-Values: `true`, `false`| `--forwardSslSession false`
+|`--[no-]clustered`| Enables clustered nodes, which requires at least two replicas. +
+ Default:.`disabled` |`--no-clustered`
+|`--[no-]disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
+Default: `enabled` |`--disableAmLogForwarding`
+|`--[no-]forwardSslSession`| Enables SSL session forwarding. +
+Default: `disabled` | `--no-forwardSslSession`
 |`--groupId` | Group ID of the asset to deploy. +
 Default: selected organization ID | `--groupId org.mule.test`
-|`--lastMileSecurity`| Enables Last Mile Security. +
-Default: `disabled` +
-Supported values: `true`, `false` | `--lastMileSecurity true`
-|`--objectStoreV2`| Enables Object Store v2. +
-Default: `disabled` +
- Supported values: `true`, `false` | `--objectStoreV2 true`
+|`--[no-]lastMileSecurity`| Enables Last Mile Security. +
+Default: `disabled` | `--no-lastMileSecurity`
+|`--[no-]objectStoreV2`| Enables Object Store v2. +
+Default: `disabled` | `--no-objectStoreV2`
 |`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `--pathRewrite /http://localhost:3000`
 |`--property`| Sets a property. +
@@ -116,7 +111,7 @@ Default: `rolling` | `--updateStrategy recreate`
 |===
 
 [[runtime-mgr-application-describe]]
-== runtime-mgr:application:describe 
+== runtime-mgr:application:describe
 
 ----
 > runtime-mgr:application:describe [flags] <appID>
@@ -129,7 +124,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:application:download-logs
 
 ----
-> runtime-mgr:application:download-logs [flags] <appID> <directory> <specID> 
+> runtime-mgr:application:download-logs [flags] <appID> <directory> <specID>
 ----
 
 Downloads logs for the application specified in `<appID>` from the specification specified in `<specID>` to the selected directory.
@@ -146,7 +141,7 @@ This command accepts only the default flag `--help`.
 ----
 > runtime-mgr:application:list [flags]
 ----
-Lists all applications in your organization. 
+Lists all applications in your organization.
 
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
@@ -159,7 +154,7 @@ This command accepts the default flag `--help`.
 ----
 > runtime-mgr:application:modify [flags] <appID> <certificateName>
 ----
-Updates the settings of an existing application specified in `<appID>`. 
+Updates the settings of an existing application specified in `<appID>`.
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
 Besides the default `--help` flag, this command also takes:
@@ -170,23 +165,18 @@ Besides the default `--help` flag, this command also takes:
 |`--artifactId` |ID of the application retrieved from Exchange. | `--artifactId mule-maven-plugin`
 |`--assetVersion` | Version of the Exchange application to use. +
 Default: latest application version | `-assetVersion 2.0.4`
-|`--clustered`| Enables clustered nodes, which requires at least two replicas. +
-Default: `disabled` +
-Supported values: `true`, `false` |`--clustered false` 
-|`--disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
-Default: `enabled` +
-Supported values: `true`, `false` |`--disableAmLogForwarding true`
-|`--forwardSslSession`| Enables SSL session forwarding. +
-Default: `disabled` +
-Values: `true`, `false`| `--forwardSslSession false`
+|`--[no-]clustered`| Enables clustered nodes, which requires at least two replicas. +
+Default: `disabled` |`--no-clustered`
+|`--[no-]disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
+Default: `enabled` |`--disableAmLogForwarding`
+|`--[no-]forwardSslSession`| Enables SSL session forwarding. +
+Default: `disabled` | `--no-forwardSslSession`
 |`--groupId` | Group ID of the asset to deploy. +
 Default: selected organization ID.| `--groupId org.mule.testgroup`
-|`--lastMileSecurity`| Enables Last Mile Security. +
-Default: `disabled` +
-Supported values: `true`, `false` | `--lastMileSecurity true`
-|`--objectStoreV2`| Enables object store v2. +
-Default: `disabled` +
-Supported values: `true`, `false` | `--objectStoreV2 true`
+|`--[no-]lastMileSecurity`| Enables Last Mile Security. +
+Default: `disabled` | `--no-lastMileSecurity`
+|`--[no-]objectStoreV2`| Enables object store v2. +
+Default: `disabled`  | `--no-objectStoreV2`
 |`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `--pathRewrite /http://localhost:3000`.
 |`--property`| Sets a property. +
@@ -232,7 +222,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:application:logs
 
 ----
-> runtime-mgr:application:logs [flags] <appID> <specID> 
+> runtime-mgr:application:logs [flags] <appID> <specID>
 ----
 Tails application logs for the application specificied in `<appID>` from the specification specified in `<specID>`.
 
@@ -263,7 +253,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 This command accepts only the default flag `--help`.
 
 [[runtime-mgr-application-describe]]
-== runtime-mgr:application:describe 
+== runtime-mgr:application:describe
 
 ----
 > runtime-mgr:application:describe [flags] <appID>
@@ -273,20 +263,20 @@ Displays information about the application specified in `<appID>`. To get this I
 This command accepts only the default flag `--help`.
 
 // [[runtime-mgr-application-describe-json]]
-// == runtime-mgr:application:describe-json 
+// == runtime-mgr:application:describe-json
 
 //----
 //> runtime-mgr:application:describe-json [options] <appID>
 //----
 //Displays a raw JSON response from the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
-//This command accepts only the default option `--help`. 
+//This command accepts only the default option `--help`.
 
 [[runtime-mgr-application-download-logs]]
 == runtime-mgr:application:download-logs
 
 ----
-> runtime-mgr:application:download-logs [flags] <appID> <directory> <specID> 
+> runtime-mgr:application:download-logs [flags] <appID> <directory> <specID>
 ----
 
 Downloads logs for the application specified in `<appID>` from the specification specified in `<specID>` to the selected directory.
@@ -303,7 +293,7 @@ This command accepts only the default flag `--help`.
 ----
 > runtime-mgr:application:list [flags]
 ----
-Lists all applications in your organization. 
+Lists all applications in your organization.
 
 This command accepts only the default flag `--help`.
 
@@ -313,7 +303,7 @@ This command accepts only the default flag `--help`.
 ----
 > runtime-mgr application modify [flags] <appID> <certificateName>
 ----
-Updates the settings of an existing application specified in `<appID>`. 
+Updates the settings of an existing application specified in `<appID>`.
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
 Besides the default `--help` flag, this command also takes:
@@ -324,23 +314,18 @@ Besides the default `--help` flag, this command also takes:
 |`--artifactId` |ID of the application retrieved from Exchange. | `--artifactId mule-maven-plugin`
 |`--assetVersion` | Version of the Exchange application to use. +
 Default: latest application version | `-assetVersion 2.0.4`
-|`--clustered`| Enables clustered nodes, which requires at least two replicas. +
-Default: `disabled` +
-Supported values: `true`, `false` |`--clustered false` 
-|`--disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
-Default: `enabled` +
-Supported values: `true`, `false` |`--disableAmLogForwarding true`
-|`--forwardSslSession`| Enables SSL session forwarding. +
-Default: `disabled` +
-Values: `true`, `false`| `--forwardSslSession false`
+|`--[no-]clustered`| Enables clustered nodes, which requires at least two replicas. +
+Default: `disabled` |`--no-clustered`
+|`--[no-]disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
+Default: `enabled` |`--disableAmLogForwarding`
+|`--[no-]forwardSslSession`| Enables SSL session forwarding. +
+Default: `disabled` | `--no-forwardSslSession`
 |`--groupId` | Group ID of the asset to deploy. +
 Default: selected organization ID.| `-groupId org.mule.testgroup`
-|`--lastMileSecurity`| Enables Last Mile Security. +
-Default: `disabled` +
-Supported values: `true`, `false` | `--lastMileSecurity true`
-|`--objectStoreV2`| Enables object store v2. +
-Default: `disabled` +
-Supported values: `true`, `false` | `--objectStoreV2 true`
+|`--[no-]lastMileSecurity`| Enables Last Mile Security. +
+Default: `disabled` | `--no-lastMileSecurity`
+|`--[no-]objectStoreV2`| Enables object store v2. +
+Default: `disabled` | `--no-objectStoreV2`
 |`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `--pathRewrite /http://localhost:3000`.
 |`--property`| Sets a property. +
@@ -386,7 +371,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:application:logs
 
 ----
-> runtime-mgr:application:logs [flags] <appID> <specID> 
+> runtime-mgr:application:logs [flags] <appID> <specID>
 ----
 Tails application logs for the application specificied in `<appID>` from the specification specified in `<specID>`.
 

@@ -110,7 +110,7 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:cloudhub-application:start [flags] <name>
 ----
 
-This command starts the running application you specify in `<name>`. 
+This command starts the running application you specify in `<name>`.
 This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-restart]]
@@ -122,7 +122,7 @@ This command accepts only the default flag `--help`.
 
 This command restarts the running application you specify in `<name>`.
 
-This command accepts only the default flag `--help`. 
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-delete]]
 == runtime-mgr:cloudhub-application:delete
@@ -145,7 +145,7 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:cloudhub-application:deploy  [flags] <name> <zipfile>
 ----
 
-This command deploys the Mule deployable archive ZIP file that you specify in `<zipfile>` using the name you set in `<name>`. 
+This command deploys the Mule deployable archive ZIP file that you specify in `<zipfile>` using the name you set in `<name>`.
 You will have to provide the absolute or relative path to the deployable ZIP file in your local hard drive and the name you give to your application has to be unique.
 
 [NOTE]
@@ -170,14 +170,15 @@ The property to be set must be passed enclosed in quotes and characters `:` and 
 
 Character `:` is not supported for the property's name.
 |--propertiesFile                        | Overwrite all properties with values from this file. The file format is 1 or more lines in `name:value` format. Set the absolute path of the properties file in your local hard drive.
-|--persistentQueues                   | Enable or disable persistent queues. Can take `true` or `false` values. (This value is `false` by default)
-|--persistentQueuesEncrypted  | Enable or disable persistent queue encryption. Can take `true` or `false` values. (This value is `false` by default)
-|--staticIPsEnabled                                      | Enable or disable static IPs. Can take `true` or `false` values. (This value is `false` by default)
-|--objectStoreV1                   | Enable or disable Object Store V1. Can take `true` or `false` values
-|--autoRestart                            | Automatically restart app when not responding. Can take `true` or `false` values. (This value is `true` by default.)|
+|--[no-]persistentQueues                   | Enable or disable persistent queues (This value is `disabled` by default)
+|--[no-]persistentQueuesEncrypted  | Enable or disable persistent queue encryption (This value is `disabled` by default)
+|--[no-]staticIPsEnabled                                      | Enable or disable static IPs. This value is `enabled` by default.
+|--[no-]objectStoreV1                   | Enable or disable Object Store V1. This value is `disabled` by default.
+|--[no-]objectStoreV2                   | Enable or disable Object Store V2. This value is `enabled` by default.
+|--[no-]autoRestart                            | Automatically restart app when not responding. This value is `enabled` by default.|
 --output | Specify the response format. Supported values are `table` (default) and `json`
 
-|--help                                                  | 
+|--help                                                  |
 Output usage information
 |--timeout | Set the timeout value in miliseconds. Can take values between `60000` and `300000`.
 
@@ -232,7 +233,7 @@ Keep in mind that contrarily to what you see in the UI, the logs you download fr
 > runtime-mgr:cloudhub-application:tail-logs [flags] <name>
 ----
 
-This command tails application logs. 
+This command tails application logs.
 
 This command accepts only the default flag `--help`.
 
@@ -288,7 +289,7 @@ In addition to the default `--help`, and `-f`/`--fields`  flags, this command al
 [%header,cols="30a,70a"]
 |===
 |Flag |Description
-|--property  | Set a property (`name:value`). 
+|--property  | Set a property (`name:value`).
 
 Enclose the property in quotes and escape the `:` and `=` characters,
 for example:

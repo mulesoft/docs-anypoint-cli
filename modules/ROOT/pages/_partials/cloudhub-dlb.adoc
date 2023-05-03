@@ -105,8 +105,8 @@ Besides the default `--help` flag, this command also accepts:
 |`--clientCertificate` | Client certificate file
 |`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always), `off` (don't verify), or `optional` (verification optional).
 |`--crl` | Certificate revocation list file
-|`--tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
-|`--dynamic-ips` | Uses dynamic IPs, which are not persistent through restarts
+|`--[no-]tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
+|`--[no-]dynamic-ips` | Uses dynamic IPs, which are not persistent through restarts
 |===
 
 [NOTE]
