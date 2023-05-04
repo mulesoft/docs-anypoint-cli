@@ -172,9 +172,9 @@ Character `:` is not supported for the property's name.
 |--propertiesFile                        | Overwrite all properties with values from this file. The file format is 1 or more lines in `name:value` format. Set the absolute path of the properties file in your local hard drive.
 |--[no-]persistentQueues                   | Enable or disable persistent queues (This value is `disabled` by default)
 |--[no-]persistentQueuesEncrypted  | Enable or disable persistent queue encryption (This value is `disabled` by default)
-|--[no-]staticIPsEnabled                                      | Enable or disable static IPs. This value is `enabled` by default.
-|--[no-]objectStoreV1                   | Enable or disable Object Store V1. This value is `disabled` by default.
-|--[no-]objectStoreV2                   | Enable or disable Object Store V2. This value is `enabled` by default.
+|--[no-]staticIPsEnabled                                      | Enable or disable static IPs. This value is `disabled` by default.
+|--[no-]objectStoreV1                   | Enable or disable Object Store V1.
+|--[no-]objectStoreV2                   | Enable or disable Object Store V2.
 |--[no-]autoRestart                            | Automatically restart app when not responding. This value is `enabled` by default.|
 --output | Specify the response format. Supported values are `table` (default) and `json`
 
