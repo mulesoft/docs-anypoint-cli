@@ -173,8 +173,10 @@ Character `:` is not supported for the property's name.
 |--[no-]persistentQueues                   | Enable or disable persistent queues (This value is `disabled` by default)
 |--[no-]persistentQueuesEncrypted  | Enable or disable persistent queue encryption (This value is `disabled` by default)
 |--[no-]staticIPsEnabled                                      | Enable or disable static IPs. This value is `disabled` by default.
-|--[no-]objectStoreV1                   | Enable or disable Object Store V1. This flag cannot be specified alongside the other `Object Store V2` flag.
-|--[no-]objectStoreV2                   | Enable or disable Object Store V2. This flag cannot be specified alongside the other `Object Store V1` flag.
+|--[no-]objectStoreV1                   | Enable or disable Object Store V1. +
+`objectStoreV2` cannot also be provided when using `objectStoreV1` flag.
+|--[no-]objectStoreV2                   | Enable or disable Object Store V2. +
+`objectStoreV1` cannot also be provided when using `objectStoreV2` flag.
 |--[no-]autoRestart                            | Automatically restart app when not responding. This value is `enabled` by default.|
 --output | Specify the response format. Supported values are `table` (default) and `json`
 
