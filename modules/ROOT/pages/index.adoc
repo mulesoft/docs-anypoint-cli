@@ -233,6 +233,8 @@ Depending on your operating system, use the following commands:
 --
 `$ export HTTP_PROXY=http://__proxy-server__:80`
 
+or
+
 `$ export HTTPS_PROXY=https://__proxy-server__:443`
 --
 
@@ -240,6 +242,8 @@ Depending on your operating system, use the following commands:
 +
 --
 `> set HTTP_PROXY=http://__proxy-server__:80`
+
+or
 
 `> set HTTPS_PROXY=https//__proxy-server__:443`
 --
@@ -251,6 +255,8 @@ If the proxy server requires authentication, use these commands:
 --
 `$ export HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
 
+or
+
 `$ export HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
 
@@ -258,6 +264,8 @@ If the proxy server requires authentication, use these commands:
 +
 --
 `> set HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
+
+or
 
 `> set HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
