@@ -417,8 +417,7 @@ Supported values are `http` or `https`.
 | `--servicePort <value>`
 | WSDL service port. Flex Gateway does not support this flag.
 
-| `--type <option>` | Endpoint type. Supported options are http, raml, and wsdl, <options: http|raml|wsdl>.
-
+| `--type <option>` | Endpoint type. Supported options are `http`, `raml`, and `wsdl`.
 | `--uri <value>`
 | Implementation URI
 
