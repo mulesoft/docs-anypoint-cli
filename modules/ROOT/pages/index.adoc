@@ -20,7 +20,7 @@ Use Runtime Manager to manage Mule applications deployed to CloudHub (hosted by 
  
 * Download and install NodeJS and npm (node package manager) on your system.
 +
-Minimum versions required are: NodeJS 14.15.0 and npm 6.14.8
+Minimum versions required are: Node.js version 16.0.0 to 18.14.0 and npm 6.14.8
 +
 See the https://nodejs.org/en/download/[NodeJS download page].
 
@@ -224,7 +224,8 @@ See xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI 3.x List of C
 [[network-proxy]]
 === Use Anypoint CLI Through a Network Proxy
 
-To use the Anypoint CLI through a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` environment variables with the hostname or IP addresses of your proxy servers.
+To use the Anypoint CLI through a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` (uppercase) environment variables with the hostname or IP addresses of your proxy servers.
+
 
 Depending on your operating system, use the following commands:
 
@@ -233,6 +234,8 @@ Depending on your operating system, use the following commands:
 --
 `$ export HTTP_PROXY=http://__proxy-server__:80`
 
+or
+
 `$ export HTTPS_PROXY=https://__proxy-server__:443`
 --
 
@@ -240,6 +243,8 @@ Depending on your operating system, use the following commands:
 +
 --
 `> set HTTP_PROXY=http://__proxy-server__:80`
+
+or
 
 `> set HTTPS_PROXY=https//__proxy-server__:443`
 --
@@ -251,6 +256,8 @@ If the proxy server requires authentication, use these commands:
 --
 `$ export HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
 
+or
+
 `$ export HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
 
@@ -258,6 +265,8 @@ If the proxy server requires authentication, use these commands:
 +
 --
 `> set HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
+
+or
 
 `> set HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
