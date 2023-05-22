@@ -187,16 +187,38 @@ See <<exchange-asset-identifiers>>.
 
 *Example commands:*
 
+* Validates using the rulesets and APIs defined in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`.
++
 [source,copy]
 ----
 anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml.zip
-
+----
++
+* Validates using the rulesets and APIs defined in the `exchange.json` file in the folder named `order-api-1.0.0-raml`.
++
+[source,copy]
+----
 anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml
-
+----
++
+* Validates using the rulesets listed with the --rulesets flag and any listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs defined in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`.
++
+[source,copy]
+----
 anypoint-cli-v4 governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
-
+----
++
+* Validates using the remote ruleset specified using the ruleset identifier (GAV) and any rulesets listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs defined in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`.
++
+[source,copy]
+----
 anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1  ~/Downloads/order-api-1.0.0-raml.zip
-
+----
++
+* Validates using the remote ruleset specified using the ruleset identifier (GAV) and any rulesets listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the remote API specified using the API identifier (GAV).
++
+[source,copy]
+----
 anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
 ----
 
