@@ -187,28 +187,28 @@ See <<exchange-asset-identifiers>>.
 
 *Example commands:*
 
-* Validates using the rulesets and APIs defined in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`.
+* Validates using the rulesets in the `exchange.json` file in the zipped folder `order-api-1.0.0-raml.zip`. It validates the APIs found in the zipped folder `order-api-1.0.0-raml.zip`.
 +
 [source,copy]
 ----
 anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml.zip
 ----
 +
-* Validates using the rulesets and APIs defined in the `exchange.json` file in the folder named `order-api-1.0.0-raml`.
+* Validates using the rulesets and APIs found in the folder `order-api-1.0.0-raml`.
 +
 [source,copy]
 ----
 anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml
 ----
 +
-* Validates using the rulesets listed with the --rulesets flag and any listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs defined in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`.
+* Validates using the rulesets listed with the --rulesets flag and any listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs found in the zipped folder  `order-api-1.0.0-raml.zip`.
 +
 [source,copy]
 ----
-anypoint-cli-v4 governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml ~/Downloads/order-api-1.0.0-raml.zip
 ----
 +
-* Validates using the remote ruleset specified using the ruleset identifier (GAV) and any rulesets listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs defined in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`.
+* Validates using the remote ruleset specified using the ruleset identifier (GAV) and any rulesets listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs found in the zipped folder `order-api-1.0.0-raml.zip`.
 +
 [source,copy]
 ----
