@@ -79,7 +79,7 @@ In addition to the default `--help`, `-f`/`--fields` and `-o`/`--output` options
 
 [%header,cols="30,50a"]
 |===
-|Value |Description
+|Option |Description
 | `--insight` | Stores message metadata of every Mule transaction.
 | `--log [level:scope]` | Sets the logging level and scope pair:
 
@@ -135,7 +135,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-|Value |Description
+|Option |Description
 | `--limit <num>` | Specifies the number of results to retrieve
 | `--offset <num>`      | Offsets the number of applications passed
 |===

@@ -41,7 +41,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header,cols="30,70"]
 |===
-|Value |Description
+|Option |Description
 | `--severity <val>` | Alert severity
 | `--resourceType <type>` | Alert resource type
 | `--resource [id]` | Alert resource ID. Can be used multiple types. If not provided alert triggers for all resources. Depending on `resourceType` resource can be application, server, server-group or cluster.
@@ -67,7 +67,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header,cols="30,70"]
 |===
-|Value |Description
+|Option |Description
 | `--name <value>` | Alert name
 | `--severity <value>` | Alert severity
 | `--resourceType <type>` | Alert resource type
@@ -93,4 +93,3 @@ This command lists all alerts for standalone Mules in the current environment.
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
 // end::commands[]
-

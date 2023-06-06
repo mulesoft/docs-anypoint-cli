@@ -87,7 +87,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 //
 // [%header,cols="30,70"]
 // |===
-// |Value |Description
+// |Option |Description
 // | --signature <signatureStr> | Signature for Sign Certificate Request.
 // | --mule <version> | Mule version
 // | --gateway <version> | Gateway version
@@ -95,4 +95,3 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 
 // end::commands[]
-

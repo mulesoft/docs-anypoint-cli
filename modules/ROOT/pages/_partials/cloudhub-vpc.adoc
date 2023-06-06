@@ -174,7 +174,7 @@ This command adds a firewall rule to the Anypoint VPC defined in `<vpc>` using t
 
 [%header,cols="18a,62a,20a"]
 |===
-|Value |Description |Example
+|Option |Description |Example
 | `vpc` |Name of the Anypoint VPC to which this load balancer is bound. +
 If your Anypoint VPC name contains spaces, you need to pass it between ´"´ characters | vpc-demo
 | `cidrBlock` | IP address in CIDR notation for the firewall to allow  | 192.0.1.0/27

@@ -32,7 +32,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header,cols="30a,40a,30a"]
 |===
-|Command | Description |  Example
+|Option | Description |  Example
 | `--type (required)` | The project type. +
 This field is required.
 
@@ -95,7 +95,7 @@ Options that are not specified are extracted from exchange.json
 
 [%header,cols="30a,40a,30a"]
 |===
-|Command | Description |  Example
+|Option | Description |  Example
 | `--name` | The name for the asset | `designcenter project publish --name sampleProject`
 | `--main` | The name of the main file name. | `designcenter project publish --main sample.xml`
 | `--apiVersion` | The API version if your project is an API specification project. | `designcenter project publish --main sample.raml --apiVersion 1.0`
@@ -134,7 +134,7 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 
 [%header,cols="30a,40a,30a"]
 |===
-|Command | Description |  Example
+|Option | Description |  Example
 |`--pageIndex` | Number of page to retrieve | `designcenter project list --pageIndex 3`
 |`--pageSize` | Number of results to retrieve per page | `designcenter project list --pageSize 5`
 |===
