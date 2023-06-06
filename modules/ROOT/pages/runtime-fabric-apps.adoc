@@ -1,0 +1,7 @@
+= CLI for Managing Apps in Runtime Fabric
+
+Use these commands for managing applications in Runtime Fabric.
+
+include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary-rtf]
+
+include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=commands-rtf]

@@ -1,4 +1,4 @@
-= DataGraph
+= DataGraph Load Balancers
 
 
 // tag::summary[]
@@ -19,6 +19,7 @@
 
 == datagraph load-balancer-config add
 
+[source,copy]
 ----
 > datagraph load-balancer-config add <dlbUrl>
 ----
@@ -30,6 +31,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 == datagraph load-balancer-config describe
 
+[source,copy]
 ----
 > datagraph load-balancer-config describe [options]
 ----
@@ -40,6 +42,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 == datagraph load-balancer-config remove
 
+[source,copy]
 ----
 > datagraph load-balancer-config remove [options]
 ----

@@ -1,5 +1,5 @@
 = CLI for Anypoint Platform Accounts
 
-include::anypoint-cli::partial$account.adoc[tag=summary]
+include::3.x@anypoint-cli::partial$account.adoc[tag=summary]
 
-include::anypoint-cli::partial$account.adoc[tag=commands]
+include::3.x@anypoint-cli::partial$account.adoc[tag=commands]

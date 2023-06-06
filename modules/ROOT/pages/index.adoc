@@ -1,12 +1,13 @@
 = Anypoint CLI 3.x
-:page-aliases: runtime-manager::anypoint-platform-cli.adoc
 
 Anypoint Platform provides a scripting and command-line tool for both Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 The command-line interface (CLI) supports both the interactive shell and standard CLI modes and works with:
 
 * xref:exchange::index.adoc[Anypoint Exchange]
+* xref:datagraph::index.adoc[Anypoint DataGraph]
 * xref:access-management::index.adoc[Access management]
 * xref:runtime-manager::index.adoc[Anypoint Runtime Manager]
+* xref:api-governance::index.adoc[API Governance]
 +
 Use Runtime Manager to manage Mule applications deployed to CloudHub (hosted by MuleSoft) and locally hosted Mule servers.
 * xref:runtime-manager::virtual-private-cloud.adoc[VPCs]
@@ -16,42 +17,37 @@ Use Runtime Manager to manage Mule applications deployed to CloudHub (hosted by 
 
 [[prereqs]]
 == Prerequisites
-
+ 
 * Download and install NodeJS and npm (node package manager) on your system.
 +
+Minimum versions required are: Node.js version 16.0.0 to 18.14.0 and npm 6.14.8
++
 See the https://nodejs.org/en/download/[NodeJS download page].
+
+
 * Download and install the Git version management on your system.
 +
 See the https://git-scm.com/downloads[Git download site].
 
+NOTE: Depending on the configuration of your system, you might need to run these commands using administrator credentials.
+
 [[installation]]
 == Installation
-
-Depending on the configuration of your system, you might need to run these commands using administrator credentials.
 
 [source,text,linenums]
 ----
 $ npm install -g anypoint-cli@latest
 ----
+NOTE: Depending on the configuration of your system, you might need to run these commands using administrator credentials.
 
-If the installation command fails with the following error, ensure that the Git client is installed on your computer and the git protocol is not blocked by your firewall or network:
 
-[source,text,linenums]
-----
-fatal: read error: Invalid argument
-----
-
-If the git protocol is blocked, you can configure Git to use `https://` instead of `git://`:
-
-[source,text,linenums]
-----
-git config --global url."https://".insteadOf git://
-----
 [[authentication]]
 == Authentication
 
 You can configure Anypoint CLI authentication with username and password, client ID and client secret, or a bearer token.
 At least one method is required.
+
+NOTE: As a part of Multi-factor authentication (MFA) enablement for all users, starting October 2022, the only way to use Anypoint CLI will be through xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
 [[username-pw]]
 === Username and Password
@@ -122,10 +118,10 @@ You can also pass this value using the environment variable `export ANYPOINT_ORG
 You can also pass this value using the environment variable `export ANYPOINT_ENV=<name>`.
 
 | `host` | The host of your Anypoint Platform Installation +
-By default, this value points to `\https://anypoint.mulesoft.com`. +
+By default, this value points to `anypoint.mulesoft.com`. +
 
 * If you are using Anypoint Platform PCE, pass the address where you are hosting the platform.
-* If you are using Anypoint Platform EU Cloud, pass your EU control plane URL.
+* If you are using Anypoint Platform EU Cloud, pass your EU control plane address.
 
 You can also pass this value using a dedicated environment variable `ANYPOINT_HOST=<name>`.
 
@@ -140,9 +136,9 @@ Keep the following in mind while using the Anypoint CLI:
 If you don't pass a command-line parameter, the default profile properties are used.
 . If not specified, the default environment is production.
 +
-. Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
+. Your Anypoint session expires based on the *Default session timeout* configured in your Organization settings.
 +
-For information about Master Organization settings, see xref:access-management::organization.adoc#manage-root-organization-settings[Manage Root Organization Settings].
+For information about your Organization settings, see xref:access-management::organization.adoc#manage-root-organization-settings[Manage Root Organization Settings].
 . The Anypoint CLI works with autocomplete.
 +
 You can start typing the name of the command or parameter and press Tab for autocomplete or press Tab+Tab for a list of options.
@@ -228,7 +224,8 @@ See xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI 3.x List of C
 [[network-proxy]]
 === Use Anypoint CLI Through a Network Proxy
 
-To use the Anypoint CLI through a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` environment variables with the hostname or IP addresses of your proxy servers.
+To use the Anypoint CLI through a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` (uppercase) environment variables with the hostname or IP addresses of your proxy servers.
+
 
 Depending on your operating system, use the following commands:
 
@@ -237,6 +234,8 @@ Depending on your operating system, use the following commands:
 --
 `$ export HTTP_PROXY=http://__proxy-server__:80`
 
+or
+
 `$ export HTTPS_PROXY=https://__proxy-server__:443`
 --
 
@@ -244,6 +243,8 @@ Depending on your operating system, use the following commands:
 +
 --
 `> set HTTP_PROXY=http://__proxy-server__:80`
+
+or
 
 `> set HTTPS_PROXY=https//__proxy-server__:443`
 --
@@ -255,6 +256,8 @@ If the proxy server requires authentication, use these commands:
 --
 `$ export HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
 
+or
+
 `$ export HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
 
@@ -262,6 +265,8 @@ If the proxy server requires authentication, use these commands:
 +
 --
 `> set HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
+
+or
 
 `> set HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --

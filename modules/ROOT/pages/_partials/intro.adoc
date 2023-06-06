@@ -26,7 +26,7 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 
 If you choose not to pass a command, Anypoint Platform CLI runs in interactive mode.
-If you choose to pass a specific command and there is an error, the application exits and return you a description of the issue.
+If you choose to pass a specific command and there is an error, the application exits and returns a description of the issue.
 
 The Anypoint Platform CLI provides three default options:
 

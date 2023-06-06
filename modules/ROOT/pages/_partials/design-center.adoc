@@ -40,7 +40,7 @@ Supported values are:
 
 * `raml`
 * `raml-fragment` | `designcenter project create --type raml`
-| `--fragment-type` | The fragment type if the application type is a RAML fragment.
+| `--fragment-type` | The fragment type. Always use with `--type raml-fragment`, even for OAS 3.0 and JSON schema fragments.
 
 This field is required if the type option was set as `raml-fragment`
 
@@ -50,7 +50,9 @@ Supported fragments type are:
 * `resource-type`
 * `library`
 * `type`
-* `user-documentation` | `designcenter project create --type raml-fragment --fragment-type user-documentation`
+* `user-documentation` 
+* `oas-components`
+* `json-schema` | `designcenter project create --type raml-fragment --fragment-type user-documentation`
 |===
 
 == designcenter project delete
@@ -74,7 +76,10 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 
 This command downloads the Design Center project passed in `name` to your local directory specified in `targetDir`.
 
-This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+Use the `--branch` option to select the branch you want to download content from.
+
+This command also accepts the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
+
 
 == designcenter project publish
 
@@ -98,6 +103,7 @@ Options that are not specified are extracted from exchange.json
 | `--groupId` | The asset's groupId. | `designcenter project publish --groupId com.mulesoft.com`
 | `--assetId`  | The asset's assetId. | `designcenter project publish --assetId project`
 | `--version` | The asset's version. | `designcenter project publish --version 1.0`
+| `--branch` | The asset's branch. | `designcenter project publish --branch main`
 |===
 
 == designcenter project upload
@@ -106,12 +112,14 @@ Options that are not specified are extracted from exchange.json
 > designcenter project upload [options] <name> <projDir>
 ----
 
-This Command uploads a Design Center project from your local directory passed in `projDir` and names it using the name passed in `name`.
+This Command uploads content from a Design Center project from your local directory passed in `projDir` into an already existing Design Center project identified with `name`.
 
-By default, this command ignores all hidden files and directories. To include hidden files and directories, use the `--include-dot-files` option. +
+By default, this command ignores all hidden files and directories. To include hidden files and directories, use the `--include-dot-files` option. 
 When the `--include-dot-files` option is used, the command uploads hidden files and folders from your specified directory.
 
-Besides the `--include-dot-files`, this command takes the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+Use the `--branch` option to select the branch you want to upload content to.
+
+This command also accepts the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
 
 == designcenter project list
 
