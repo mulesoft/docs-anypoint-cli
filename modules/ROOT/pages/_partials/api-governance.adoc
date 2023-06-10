@@ -187,38 +187,16 @@ See <<exchange-asset-identifiers>>.
 
 *Example commands:*
 
-* The following example command validates using the rulesets in the `exchange.json` file in the zipped folder `order-api-1.0.0-raml.zip` in the `/MyApis/` directory path. It validates the APIs found in the zipped folder `order-api-1.0.0-raml.zip` in the `/MyApis/` directory path.
-+
 [source,copy]
 ----
 anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip
-----
-+
-* The following example command validates using the rulesets and APIs found in the folder `order-api-1.0.0-raml` in the `/MyApis/` directory path.
-+
-[source,copy]
-----
+
 anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml
-----
-+
-* The following example command validates using the rulesets listed with the `--rulesets` flag and any listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs found in the zipped folder  `order-api-1.0.0-raml.zip` in the `/MyApis/` directory path.
-+
-[source,copy]
-----
-anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml
-----
-+
-* The following example command validates using the remote ruleset specified using the ruleset identifier (GAV) and any rulesets listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip`. It validates the APIs found in the zipped folder `order-api-1.0.0-raml.zip` in the `/MyApis/` directory path.
-+
-[source,copy]
-----
+
+anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --rulesets /MyRulesets/ruleset1.yaml /MyRulesets/ruleset2.yaml
+
 anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
-----
-+
-* The following example command validates using the remote ruleset specified using the ruleset identifier (GAV) and any rulesets listed in the `exchange.json` file in the zipped folder named `order-api-1.0.0-raml.zip` in the `~/Downloads/` directory path. It validates the remote API specified using the API identifier (GAV).
-+
-[source,copy]
-----
+
 anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
 ----
 
