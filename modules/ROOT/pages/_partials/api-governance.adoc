@@ -159,7 +159,7 @@ You can specify `api-definition` as one of the following:
 
 You can specify rulesets against which to validate as follows:
 
-* To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that the `exchange.json` file is included in the folder or ZIP file that you specify in `api-definition`. If the `exchange.json` file is present, the command downloads all the ruleset dependencies and validates against those rulesets. The ruleset dependencies are present in the `exchange.json` file only if dependencies are defined for that API project in API Designer. See xref:api-governance::find-conformance-issues.adoc#add-rulesets[Add Rulesets to Your Project].
+* To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that the `exchange.json` file is included in the folder or ZIP file that you specify in `api-definition`. If the `exchange.json` file is present, the command downloads all of the ruleset dependencies and validates against those rulesets. The ruleset dependencies are present in the `exchange.json` file only if dependencies are defined for that API project in API Designer. See xref:api-governance::find-conformance-issues.adoc#add-rulesets[Add Rulesets to Your Project].
 
 * To validate directly against rulesets published in Exchange, use the `--remote-rulesets` flag. 
 
