@@ -147,9 +147,11 @@ types:
 [[governance-api-validate]]
 == governance:api:validate
 
-`> governance:api:validate [flags] <api-definition>`
+`> governance:api:validate <api-definition> [flags]`
 
 This command validates the API definition passed in `api-definition` against specified rulesets. 
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 You can specify `api-definition` as one of the following:
 
@@ -173,10 +175,10 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|`--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...`
-|Local ruleset definitions. The `rulesets` flag is followed by a comma-separated list of ruleset YAML files. 
-|`--remote-rulesets <ruleset-asset-identifier>,<ruleset-asset-identifier>,...`
-|Remote ruleset definitions. The `remote-rulesets` flag is followed by a comma-separated list of ruleset asset identifiers. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+|`--rulesets <ruleset-yaml-file1> <ruleset-yaml-file2> ...`
+|Local ruleset definitions. The `rulesets` flag is followed by a list of ruleset YAML files separated by spaces. 
+|`--remote-rulesets <ruleset-asset-identifier> <ruleset-asset-identifier> ...`
+|Remote ruleset definitions. The `remote-rulesets` flag is followed by a list of ruleset asset identifiers separated by spaces. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 |`--remote`
@@ -601,9 +603,11 @@ anypoint-cli-v4 governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/an
 [[governance-ruleset-info]]
 == governance:ruleset:info
 
-`> governance:ruleset:info [flags] <governance-ruleset>`
+`> governance:ruleset:info <governance-ruleset> [flags]`
 
 This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 Besides the default flags, this command also accepts:
 
