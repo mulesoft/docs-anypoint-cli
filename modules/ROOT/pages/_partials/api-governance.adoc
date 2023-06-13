@@ -147,9 +147,11 @@ types:
 [[governance-api-validate]]
 == governance:api:validate
 
-`> governance:api:validate [flags] <api-definition>`
+`> governance:api:validate <api-definition> [flags]`
 
 This command validates the API definition passed in `api-definition` against specified rulesets. 
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 You can specify `api-definition` as one of the following:
 
@@ -159,7 +161,7 @@ You can specify `api-definition` as one of the following:
 
 You can specify rulesets against which to validate as follows:
 
-* To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that it is included in the folder or ZIP file that you specify in `api-definition`. If the `exchange.json` file is present, the command downloads all dependencies and validates against the rulesets in the project. 
+* To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that the `exchange.json` file is included in the folder or ZIP file that you specify in `api-definition`. If the `exchange.json` file is present, the command downloads all of the ruleset dependencies and validates against those rulesets. The ruleset dependencies are present in the `exchange.json` file only if dependencies are defined for that API project in API Designer. See xref:api-governance::find-conformance-issues.adoc#add-rulesets[Add Rulesets to Your Project].
 
 * To validate directly against rulesets published in Exchange, use the `--remote-rulesets` flag. 
 
@@ -173,10 +175,10 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 
-|`--rulesets <ruleset-yaml-file1>,<ruleset-yaml-file2>,...`
-|Local ruleset definitions. The `rulesets` flag is followed by a comma-separated list of ruleset YAML files. 
-|`--remote-rulesets <ruleset-asset-identifier>,<ruleset-asset-identifier>,...`
-|Remote ruleset definitions. The `remote-rulesets` flag is followed by a comma-separated list of ruleset asset identifiers. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
+|`--rulesets <ruleset-yaml-file1> <ruleset-yaml-file2> ...`
+|Local ruleset definitions. The `rulesets` flag is followed by a list of ruleset YAML files separated by spaces. 
+|`--remote-rulesets <ruleset-asset-identifier> <ruleset-asset-identifier> ...`
+|Remote ruleset definitions. The `remote-rulesets` flag is followed by a list of ruleset asset identifiers separated by spaces. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 |`--remote`
@@ -189,13 +191,13 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip
 
-anypoint-cli-v4 governance:api:validate ~/Downloads/order-api-1.0.0-raml
+anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml
 
-anypoint-cli-v4 governance:api:validate --rulesets /MyRulesets/ruleset1.yaml,/MyRulesets/ruleset2.yaml  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --rulesets /MyRulesets/ruleset1.yaml /MyRulesets/ruleset2.yaml
 
-anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1  ~/Downloads/order-api-1.0.0-raml.zip
+anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
 
 anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
 ----
@@ -601,9 +603,11 @@ anypoint-cli-v4 governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/an
 [[governance-ruleset-info]]
 == governance:ruleset:info
 
-`> governance:ruleset:info [flags] <governance-ruleset>`
+`> governance:ruleset:info <governance-ruleset> [flags]`
 
 This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 Besides the default flags, this command also accepts:
 
