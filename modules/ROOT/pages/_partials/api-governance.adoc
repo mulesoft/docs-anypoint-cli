@@ -151,7 +151,7 @@ types:
 
 This command validates the API definition passed in `api-definition` against specified rulesets. 
 
-NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use "-- " (two dashes followed by a space) before the parameter.
 
 You can specify `api-definition` as one of the following:
 
@@ -607,7 +607,7 @@ anypoint-cli-v4 governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/an
 
 This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
 
-NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use "-- " (two dashes followed by a space) before the parameter.
 
 Besides the default flags, this command also accepts:
 
