@@ -63,11 +63,12 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 [%header,cols="12a,53a,35a"]
 |===
 |Value |Description | Example
-|`artifactId` |Artifact ID of the application retrieved from Exchange. | `mule-test-plugin`
-|`deploymentTargetId` |ID of the deployment target. +
-You can get this ID directly from Runtime Manager.  | `cloudhub-us-east-1`
-|`name` |Name of the application to deploy. | `testcloudhub2app`
-|`runtimeVersion` |Runtime version of the deployment target.|`4.4.0`
+|`--artifactId` |Artifact ID of the application retrieved from Exchange. | `--artifactId mule-test-plugin`
+|`--deploymentTargetId` |ID of the deployment target. +
+You can get this ID directly from Runtime Manager.  | `--deploymentTargetId cloudhub-us-east-1`
+|`--name` |Name of the application to deploy. | `--name testcloudhub2app`
+|`--runtimeVersion` |Runtime version of the deployment target.|`--runtimeVersion 4.4.0`
+|`--secureProperty` | Sets an encripted property. | `--secureProperty camtest2:3 d1519c7b-16ac-45f3-a771-5bcdcf23dda4`
 
 |===
 
@@ -190,8 +191,10 @@ Default: `1` | `--replicas 2`
 |`--replicaSize`| Size of replicas in Vcores. +
 Default: `0.1` | `--replicaSize 0.5`
 |`--runtimeVersion` |Runtime version of the deployment target.|`--runtimeVersion 4.4.0`
+|`--secureProperty` | Sets an encripted property. | `--secureProperty camtest2:3 d1519c7b-16ac-45f3-a771-5bcdcf23dda4`
 |`--scopeLoggingConfig`| Defines scope logging. +
-Format: `scopeName: logLevel`, separated by commas, no spaces | `--scopeLoggingConfig testscope1:WARN,testscope2:DEBUG`
+Format: `scopeName: logLevel`, separated by commas, no spaces | 
+`--scopeLoggingConfig testscope1:WARN,testscope2:DEBUG`
 |`--scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`--scopeLoggingConfigFile /Users/mule/Documents/cert.txt`
 |`--updateStrategy`| Updates the strategy used. +
