@@ -59,7 +59,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 Supported values: days, hours, minutes.
 | `--email <emailAddress>` | Email to send alert notification to. +
 You can pass this flag multiple times to specify multiple emails.
-| `--enabled` | Sets whether the alert should be enabled or not. + Include the flag to enable it.
+| `--enabled` | Sets whether the alert should be enabled or not. Include the flag to enable it.
 | `--operator <value>` | Condition operator explaining values relation to threshold. +
 Supported values: gt, lt, eq
 | `--periods <num>` | Number of consecutive periods condition should occur for.
