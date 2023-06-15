@@ -6,8 +6,8 @@
 |===
 |Command |Description
 |<<governance-api-evaluate>> | Evaluates filter criteria to determine which rulesets apply to APIs that meet that criteria
-|<<governance-api-inspect>> | Inspects an API definition and lists its schemas
-|<<governance-api-validate>> | Validates an API definition against a specified governance ruleset
+|<<governance-api-inspect>> | Inspects an API specification and lists its schemas
+|<<governance-api-validate>> | Validates an API specification against a specified governance ruleset
 |<<governance-document>> | Creates the documentation file for a governance ruleset definition
 |<<governance-profile-create>> | Creates a governance profile
 |<<governance-profile-delete>> | Deletes a governance profile
@@ -85,9 +85,9 @@ Ruleset GAV
 [[governance-api-inspect]]
 == governance:api:inspect
 
-`> governance:api:inspect [flags] <api-definition>`
+`> governance:api:inspect [flags] <api-specification>`
 
-This command inspects the API definition passed in `api-definition` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance:ruleset:init>>.
+This command inspects the API specification passed in `api-specification` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance:ruleset:init>>.
 
 This command accepts only the default flags.
 
@@ -147,13 +147,13 @@ types:
 [[governance-api-validate]]
 == governance:api:validate
 
-`> governance:api:validate <api-definition> [flags]`
+`> governance:api:validate <api-specification> [flags]`
 
-This command validates the API definition passed in `api-definition` against specified rulesets. 
+This command validates the API specification passed in `api-specification` against specified rulesets. 
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use "-- " (two dashes followed by a space) before the parameter.
 
-You can specify `api-definition` as one of the following:
+You can specify `api-specification` as one of the following:
 
 * An API project ZIP file
 * An API project folder
@@ -161,7 +161,7 @@ You can specify `api-definition` as one of the following:
 
 You can specify rulesets against which to validate as follows:
 
-* To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that the `exchange.json` file is included in the folder or ZIP file that you specify in `api-definition`. If the `exchange.json` file is present, the command downloads all of the ruleset dependencies and validates against those rulesets. The ruleset dependencies are present in the `exchange.json` file only if dependencies are defined for that API project in API Designer. See xref:api-governance::find-conformance-issues.adoc#add-rulesets[Add Rulesets to Your Project].
+* To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that the `exchange.json` file is included in the folder or ZIP file that you specify in `api-specification`. If the `exchange.json` file is present, the command downloads all of the ruleset dependencies and validates against those rulesets. The ruleset dependencies are present in the `exchange.json` file only if dependencies are defined for that API project in API Designer. See xref:api-governance::find-conformance-issues.adoc#add-rulesets[Add Rulesets to Your Project].
 
 * To validate directly against rulesets published in Exchange, use the `--remote-rulesets` flag. 
 
@@ -182,7 +182,7 @@ Besides the default flags, this command also accepts:
 
 See <<exchange-asset-identifiers>>.
 |`--remote`
-|Flag to indicate that the validation should be done against a published API. The value passed in `api-definition` is the API's asset identifier. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
+|Flag to indicate that the validation should be done against a published API. The value passed in `api-specification` is the API's asset identifier. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
 
 See <<exchange-asset-identifiers>>.
 |===
@@ -204,13 +204,13 @@ anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f
 
 *Example output:*
 
-For a definition that is conformant to the ruleset:
+For a specification that is conformant to the ruleset:
 
 ----
  Spec conforms with Ruleset
 ----
 
-For a definition that is nonconformant to the ruleset:
+For a specification that is nonconformant to the ruleset:
 
 ----
 Conforms: false 
@@ -250,7 +250,7 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 <4> Severity level for the issue
 <5> Description of the issue
 <6> AMF model node ID; for information on the AMF model, see xref:api-governance::create-custom-rulesets.adoc#[Creating Custom Governance Rulesets] 
-<7> Beginning line number and column and end line number and column in the API definition where the issue occurs, where column is the offset from the beginning of the line and numbering for the offset starts at 0
+<7> Beginning line number and column and end line number and column in the API specification where the issue occurs, where column is the offset from the beginning of the line and numbering for the offset starts at 0
 <8> The file in which the issue occurs, either the main file or one of its dependencies
 
 // end::governance-api-validate[]
