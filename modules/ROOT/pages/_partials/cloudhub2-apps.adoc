@@ -56,7 +56,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:application:deploy
 
 ----
-> runtime-mgr:application:deploy [flags] <appID> <deploymentTargetID> <runtimeVersion> <artifactID>
+> runtime-mgr:application:deploy <appID> <deploymentTargetID> <runtimeVersion> <artifactID> [flags]
 ----
 Deploys the application specified in `<appID>` to the deployment target specified using the following options:
 
@@ -111,6 +111,9 @@ Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` 
 Default: `rolling` | `--updateStrategy recreate`
 |===
 
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+
 [[runtime-mgr-application-describe]]
 == runtime-mgr:application:describe
 
@@ -153,7 +156,7 @@ This command accepts the default flag `--help`.
 == runtime-mgr:application:modify
 
 ----
-> runtime-mgr:application:modify [flags] <appID> <certificateName>
+> runtime-mgr:application:modify <appID> <certificateName> [flags]
 ----
 Updates the settings of an existing application specified in `<appID>`.
 To get the `<appID>`, run the `runtime-mgr application list` command.
@@ -201,6 +204,9 @@ Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` en
 Default: `rolling` | `--updateStrategy recreate`
 
 |===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
 [[runtime-mgr-application-start]]
 == runtime-mgr:application:start
 

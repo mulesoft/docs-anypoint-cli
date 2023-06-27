@@ -33,3 +33,5 @@ Anypoint CLI 4.x introduces the following changes:
  ** `exit` command
  ** `-f, --fields` flag
  ** Ability to interactively enter the password if you omit it
+
+*When using multi-option flags in a command in Anypoint CLI 4.x,you need to either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter to make it work.

@@ -72,7 +72,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:cluster:create
 
 ----
-> runtime-mgr:cluster:create [flag] <name>
+> runtime-mgr:cluster:create <name> [flags]
 ----
 
 This command creates a cluster using the id passed in `name`.
@@ -84,6 +84,9 @@ Besides the default `--help` flag, this command also accepts:
 |`--multicast` | Whether cluster should be multicast
 |`--server <id:ip>` | Pair of server ID and IP address. Latter is optional for multicast cluster. Provide multiple values to add multiple servers
 |===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
 
 [[runtime-mgr-cluster-describe]]
 == runtime-mgr:cluster:describe
