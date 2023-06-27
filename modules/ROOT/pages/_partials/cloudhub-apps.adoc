@@ -142,7 +142,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:cloudhub-application:deploy
 
 ----
-> runtime-mgr:cloudhub-application:deploy  [flags] <name> <zipfile>
+> runtime-mgr:cloudhub-application:deploy  <name> <zipfile> [flags]
 ----
 
 This command deploys the Mule deployable archive ZIP file that you specify in `<zipfile>` using the name you set in `<name>`.
@@ -187,22 +187,28 @@ Output usage information
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
 
+
 [IMPORTANT]
 ====
 If you deploy without using any flags, your application will deploy using all your default values.
 ====
 
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
 [[runtime-mgr-cloudhub-application-modify]]
 == runtime-mgr:cloudhub-application:modify
 
 ----
-> runtime-mgr:cloudhub-application:modify  [flags] <name> [zipfile]
+> runtime-mgr:cloudhub-application:modify  <name> [zipfile] [flags]
 ----
 This command updates the settings of an existing application. Optionally, you can update it by uploading a new ZIP file.
 This command can take all the same flags as the `deploy` command.
 
 [NOTE]
 This command's output includes `Status`, which is the application's previous deployment status state.
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
 
 
 //TODO Check revert-runtime deprecation
@@ -262,7 +268,7 @@ This command accepts only the default flag `--help`.
 == runtime-mgr:cloudhub-application:copy
 
 ----
-> runtime-mgr:cloudhub-application:copy [flags] <source> <target>
+> runtime-mgr:cloudhub-application:copy <source> <target> [flags]
 ----
 
 This command copies the CloudHub application passed in `source` to the target passed in `target`.
@@ -299,8 +305,12 @@ for example:
 `--property "salesforce.password:qa\=34534"`
 |===
 
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+
 [NOTE]
 When copying an application containing safely hidden application properties, pass the properties in the `copy` command using the `--property` flag.
 For information about safely hidden application properties, see xref:runtime-manager::secure-application-properties.adoc[Safely Hide Application Properties].
+
 
 // end::commands[]

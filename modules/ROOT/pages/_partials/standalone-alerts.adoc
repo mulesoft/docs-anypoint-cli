@@ -34,7 +34,7 @@ This command also accepts the default flag `--help`.
 == runtime-mgr:standalone-alert:create
 
 ----
-> runtime-mgr:standalone-alert:create [flags] <name>
+> runtime-mgr:standalone-alert:create <name> [flags]
 ----
 
 This command creates a new alert for a standalone runtime with the ID passed in `name`.
@@ -59,11 +59,14 @@ Besides the default `--help` flag, this command also accepts:
 | `--email [emailAddress]` | Email address to send alert notification to. Can be used multiple times to specify up to 20 email addresses.
 |===
 
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+
 [[runtime-mgr-standalone-alert-modify]]
 == runtime-mgr:standalone-alert:modify
 
 ----
-> runtime-mgr:standalone-alert:modify [flags] <alertId>
+> runtime-mgr:standalone-alert:modify <alertId> [flags]
 ----
 
 This command modifies the alert passed in `alertId`.
@@ -86,6 +89,9 @@ Besides the default `--help` flag, this command also accepts:
 | `--recipient [username]` | Username to send alert notification to. Can be used multiple times to specify up to 20 platform user IDs.
 | `--email [emailAddress]` | Email address to send alert notification to. Can be used multiple times to specify up to 20 email addresses.
 |===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
 
 [[runtime-mgr-standalone-alert-list]]
 == runtime-mgr:standalone-alert:list

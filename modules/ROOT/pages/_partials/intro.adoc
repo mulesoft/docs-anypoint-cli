@@ -14,10 +14,25 @@ The Anypoint Platform CLI command set has the following syntax:
 
 [source,console]
 ----
-$ anypoint-cli-v4 [command] [flags] [parameters]
+$ anypoint-cli-v4 [command]  [parameters] [flags]
 ----
 
 If you run a command and there is an error, the application exits and returns a description of the issue.
 
+When using multi-option flags in a command, either put the parameter before the flags:
+
+[source,console]
+----
+anypoint-cli-v4 governance:api:validate param1 param2 --rulesets value1 --rulesets value2 --rulesets value3 
+----
+
+Or use a `-- ` (two dashes followed by a space) before the parameter:
+
+[source,console]
+----
+anypoint-cli-v4 governance:api:validate --rulesets value1 --rulesets value2 --rulesets value3 -- param1 param2
+----
+
 NOTE: You can write all commands separated by spaces or colons. For example: `runtime-mgr:application:list` can also be `runtime-mgr application list`.
+
 // end::syntax[]

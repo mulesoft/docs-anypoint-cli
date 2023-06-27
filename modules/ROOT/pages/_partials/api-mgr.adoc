@@ -44,7 +44,7 @@
 == api-mgr:alert:add
 
 ----
-> api-mgr:alert:add [flags] <apiInstanceId> <name>
+> api-mgr:alert:add <apiInstanceId> <name> [flags]
 ----
 
 This command creates an API instance alert with the name passed in `name` for the API instance Id passed in `<apiInstanceId>`.
@@ -75,6 +75,8 @@ Supported values: `Info`, `Warning`, `Critical`.
 | `--type <value>` | Alert type/condition. +
 Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
 |===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 [[api-mgr-alert-list]]
 == api-mgr:alert:list
