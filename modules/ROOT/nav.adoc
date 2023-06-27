@@ -1,5 +1,6 @@
 .xref:index.adoc[Anypoint CLI]
 * xref:index.adoc[Get Started with Anypoint CLI 4.x]
+* xref:anypoint-cli-release-notes.adoc[Release Notes]
 * xref:install.adoc[Install Anypoint CLI 4.x]
 * xref:intro.adoc[General Use of Commands and Flags]
  ** xref:auth.adoc[Authenticate to Anypoint Platform]
