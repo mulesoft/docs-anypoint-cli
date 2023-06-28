@@ -87,7 +87,7 @@ Ruleset GAV
 
 `> governance:api:inspect [flags] <api-specification>`
 
-This command inspects the API specification passed in `api-specification` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance:ruleset:init>>.
+This command inspects the API specification passed in `api-specification` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance-ruleset-init>>.
 
 This command accepts only the default flags.
 
