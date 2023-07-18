@@ -120,7 +120,7 @@ $ anypoint-cli-v4 account:environment:list --username myUserName --password myPa
 * Authenticate on the command line  using client ID and client secret
 +
 ----
-$ anypoint-cli-v4 account:environment:list --client_id myClientID myClientSecret --organization myOrgId 
+$ anypoint-cli-v4 account:environment:list --client_id myClientID --client_secret myClientSecret --organization myOrgId 
 ----
 
 * Authenticate on the command line  using a bearer token
