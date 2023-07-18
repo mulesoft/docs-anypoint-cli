@@ -19,7 +19,7 @@ Use these commands for applications in Cloudhub 2.0.
 |<<runtime-mgr-application-logs>> | Tails an application's logs from a specification
 |===
 
-NOTE: This commands can be used for Cloudhub 2.0 and Runtime Fabric applications.
+NOTE: These commands can be used for Cloudhub 2.0 and Runtime Fabric applications.
 
 // end::summary[]
 
