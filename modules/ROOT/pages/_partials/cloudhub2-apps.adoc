@@ -19,24 +19,10 @@ Use these commands for applications in Cloudhub 2.0.
 |<<runtime-mgr-application-logs>> | Tails an application's logs from a specification
 |===
 
+NOTE: This commands can be used for Cloudhub 2.0 and Runtime Fabric applications.
+
 // end::summary[]
 
-// tag::summary-rtf[]
-
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|<<runtime-mgr-application-delete>> | Deletes an application
-|<<runtime-mgr-application-describe>> | Describes an application
-|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory
-|<<runtime-mgr-application-list>> | Lists all applications in an organization
-|<<runtime-mgr-application-modify>> | Modifies a deployed application
-|<<runtime-mgr-application-start>> | Starts a stopped application
-|<<runtime-mgr-application-stop>> | Stops running an application
-|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification
-|===
-
-// end::summary-rtf[]
 
 // tag::commands[]
 [[runtime-mgr-application-delete]]
@@ -243,11 +229,6 @@ To get the `<specID>`, run the `runtime-mgr application describe` command.
 This command accepts only the default flag `--help`.
 
 
-
-// end::commands[]
-
-// tag::commands-rtf[]
-
 [[runtime-mgr-application-delete]]
 == runtime-mgr:application:delete
 
@@ -393,4 +374,4 @@ This command accepts only the default flag `--help`.
 
 
 
-// end::commands-rtf[]
+// end::commands[]
