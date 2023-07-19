@@ -536,7 +536,7 @@ anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 -
 
 anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
 
-anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:production,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
+anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:stable,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*
