@@ -6,10 +6,10 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr-standalone-alert-describe>> | Describes an alert
-|<<runtime-mgr-standalone-alert-create>> | Creates new alert for standalone runtime
-|<<runtime-mgr-standalone-alert-modify>> | Modifies alert for standalone runtime
-|<<runtime-mgr-standalone-alert-list>> | Lists all alerts for standalone runtimes in the environment
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-describe[runtime-mgr:standalone-alert:describe] | Describes an alert
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-create[runtime-mgr:standalone-alert:create] | Creates new alert for standalone runtime
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-modify[runtime-mgr:standalone-alert:modify] | Modifies alert for standalone runtime
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-list[runtime-mgr:standalone-alert:list] | Lists all alerts for standalone runtimes in the environment
 |===
 
 // end::summary[]
