@@ -5,7 +5,7 @@
 
 |===
 |Command |Description
-|<<governance-api-evaluate>> | Evaluates filter criteria to determine which rulesets apply to APIs that meet that criteria
+|<<governance-api-evaluate>> | Evaluates filter criteria to determine which rulesets apply to API specifications that meet that criteria
 |<<governance-api-inspect>> | Inspects an API specification and lists its schemas
 |<<governance-api-validate>> | Validates an API specification against a specified governance ruleset
 |<<governance-document>> | Creates the documentation file for a governance ruleset definition
@@ -29,7 +29,7 @@
 
 `> governance:api:evaluate [flags]`
 
-This command evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
+This command evaluates specified filters to determine the rulesets that would be applied to your API specifications that meet that criteria.  
 
 Besides the default flags, this command also accepts:
 
@@ -49,7 +49,7 @@ Available filters include:
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only API specifications that have instances are filtered.  
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
@@ -300,7 +300,7 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of API specifications to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
@@ -310,7 +310,7 @@ Available filters include:
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only API specifications that have instances are filtered.
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
@@ -488,7 +488,7 @@ Besides the default flags, this command also accepts:
 
 See <<exchange-asset-identifiers>>.
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of API specifications to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
@@ -498,7 +498,7 @@ Available filters include:
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only API specifications that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
