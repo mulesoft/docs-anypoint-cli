@@ -6,7 +6,7 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:account.adoc#account-user-describe[account:user:describe]| Show account details
+|xref:anypoint-cli::account.adoc#account-user-describe[account:user:describe]| Show account details
 |xref:account.adoc#account-business-group-list[account:business-group:list]| Lists business groups
 |xref:account.adoc#account-business-group-describe[account:business-group:describe]| Show details of a business group
 |xref:account.adoc#account-environment-list[account:environment:list]| Lists environments
