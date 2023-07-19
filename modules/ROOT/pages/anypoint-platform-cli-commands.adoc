@@ -116,15 +116,6 @@ include::4.x@anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
 include::4.x@anypoint-cli::partial$rtf-instances.adoc[tag=summary]
 
 
-
-
-
-
-
-
-
-
-
 == See Also
 
 * xref:exchange::index.adoc[Anypoint Exchange Documentation]
