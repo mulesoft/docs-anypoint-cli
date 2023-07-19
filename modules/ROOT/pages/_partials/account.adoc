@@ -7,12 +7,12 @@
 |===
 |Command |Description
 |xref:anypoint-cli::account.adoc#account-user-describe[account:user:describe]| Show account details
-|xref:account.adoc#account-business-group-list[account:business-group:list]| Lists business groups
-|xref:account.adoc#account-business-group-describe[account:business-group:describe]| Show details of a business group
-|xref:account.adoc#account-environment-list[account:environment:list]| Lists environments
-|xref:account.adoc#account-environment-create[account:environment:create]| Create new environment
-|xref:account.adoc#account-environment-delete[account:environment:delete]| Delete an environment
-|xref:account.adoc#account-environment-describe[account:environment:describe]| Shows details of an environment
+|xref:anypoint-cli::account.adoc#account-business-group-list[account:business-group:list]| Lists business groups
+|xref:anypoint-cli::account.adoc#account-business-group-describe[account:business-group:describe]| Show details of a business group
+|xref:anypoint-cli::account.adoc#account-environment-list[account:environment:list]| Lists environments
+|xref:anypoint-cli::account.adoc#account-environment-create[account:environment:create]| Create new environment
+|xref:anypoint-cli::account.adoc#account-environment-delete[account:environment:delete]| Delete an environment
+|xref:anypoint-cli::account.adoc#account-environment-describe[account:environment:describe]| Shows details of an environment
 |===
 
 // end::summary[]

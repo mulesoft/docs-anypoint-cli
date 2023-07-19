@@ -6,11 +6,11 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:servers.adoc#runtime-mgr-server-describe[runtime-mgr:server:describe] | Describes server
-|xref:servers.adoc#runtime-mgr-server-modify[runtime-mgr:server:modify] | Modifies server
-|xref:servers.adoc#runtime-mgr-server-token[runtime-mgr:server:token] | Gets server registration token. This token needs to be used to register a new server
-|xref:servers.adoc#runtime-mgr-server-delete[runtime-mgr:server:delete] | Deletes server
-|xref:servers.adoc#runtime-mgr-server-list[runtime-mgr:server:list] | Changes an standalone application artifact
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-describe[runtime-mgr:server:describe] | Describes server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-modify[runtime-mgr:server:modify] | Modifies server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-token[runtime-mgr:server:token] | Gets server registration token. This token needs to be used to register a new server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-delete[runtime-mgr:server:delete] | Deletes server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-list[runtime-mgr:server:list] | Changes an standalone application artifact
 // |<<runtime-mgr-server-register>> | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
 |===
 

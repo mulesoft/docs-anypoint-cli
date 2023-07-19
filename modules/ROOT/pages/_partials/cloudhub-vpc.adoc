@@ -7,19 +7,19 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-list[cloudhub:vpc:list] | Lists all Anypoint VPCs
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-describe[cloudhub:vpc:describe] | Show Anypoint VPC details
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-create[cloudhub:vpc:create] | Creates a new Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-delete[cloudhub:vpc:delete] | Deletes an existing Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-environments-add[cloudhub:vpc:environments:add] | Modifies the Anypoint VPC association to Runtime Manager environments.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-environments-remove[cloudhub:vpc:environments:remove] | Modifies the Anypoint VPC association to Runtime Manager environments.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-business-groups-add[cloudhub:vpc:business-groups:add] | Shares an Anypoint VPC with a list of Business Groups.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-business-groups-remove[cloudhub:vpc:business-groups:remove] | Shares an Anypoint VPC with a list of Business Groups.
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-dns-servers-set[cloudhub:vpc:dns-servers:set] | Sets the domain names that are resolved using your internal DNS servers. If used with no flag, internal DNS will be disabled
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-dns-servers-unset[cloudhub:vpc:dns-servers:unset] | Clears the list domain names that are resolved using your internal DNS servers
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-describe[cloudhub:vpc:firewall-rules:describe] | Shows firewall rule for Mule applications in this Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-add[cloudhub:vpc:firewall-rules:add] | Adds a firewall rule for Mule applications in this Anypoint VPC
-|xref:cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub:vpc:firewall-rules:remove] | Removes a firewall rule for Mule applications in this Anypoint VPC
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-list[cloudhub:vpc:list] | Lists all Anypoint VPCs
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-describe[cloudhub:vpc:describe] | Show Anypoint VPC details
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-create[cloudhub:vpc:create] | Creates a new Anypoint VPC
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-delete[cloudhub:vpc:delete] | Deletes an existing Anypoint VPC
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-environments-add[cloudhub:vpc:environments:add] | Modifies the Anypoint VPC association to Runtime Manager environments.
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-environments-remove[cloudhub:vpc:environments:remove] | Modifies the Anypoint VPC association to Runtime Manager environments.
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-business-groups-add[cloudhub:vpc:business-groups:add] | Shares an Anypoint VPC with a list of Business Groups.
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-business-groups-remove[cloudhub:vpc:business-groups:remove] | Shares an Anypoint VPC with a list of Business Groups.
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-dns-servers-set[cloudhub:vpc:dns-servers:set] | Sets the domain names that are resolved using your internal DNS servers. If used with no flag, internal DNS will be disabled
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-dns-servers-unset[cloudhub:vpc:dns-servers:unset] | Clears the list domain names that are resolved using your internal DNS servers
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-describe[cloudhub:vpc:firewall-rules:describe] | Shows firewall rule for Mule applications in this Anypoint VPC
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-add[cloudhub:vpc:firewall-rules:add] | Adds a firewall rule for Mule applications in this Anypoint VPC
+|xref:anypoint-cli::cloudhub-vpc.adoc#cloudhub-vpc-firewall-rules-remove[cloudhub:vpc:firewall-rules:remove] | Removes a firewall rule for Mule applications in this Anypoint VPC
 |===
 
 // end::summary[]

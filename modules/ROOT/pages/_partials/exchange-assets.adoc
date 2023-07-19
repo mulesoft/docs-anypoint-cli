@@ -6,27 +6,27 @@
 |===
 |Command |Description
 // |xref:exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset using Exchange Experience API
-|xref:exchange-assets.adoc#exchange-asset-mutableDataUpload[exchange:asset:mutableDataUpload] | Modifies mutable data of an existing Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-modify[exchange:asset:modify] | Modifies an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-download[exchange:asset:download] | Downloads an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-list[exchange:asset:list] | Lists all assets
-|xref:exchange-assets.adoc#exchange-asset-page-download[exchange:asset:page:download] | Downloads an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-modify[exchange:asset:page:modify] | Changes an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-upload[exchange:asset:page:upload] | Uploads an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-update[exchange:asset:page:update] | Updates an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-delete[exchange:asset:page:delete] | Deletes an asset's description page from Exchange
-|xref:exchange-assets.adoc#exchange-asset-page-list[exchange:asset:page:list] | List all pages for a given asset
-|xref:exchange-assets.adoc#exchange-asset-copy[exchange:asset:copy] | Copies an Exchange asset
-|xref:exchange-assets.adoc#exchange-asset-delete[exchange:asset:delete] | Deletes an asset from Exchange
-|xref:exchange-assets.adoc#exchange-asset-deprecate[exchange:asset:deprecate] | Deprecates an asset
-|xref:exchange-assets.adoc#exchange-asset-undeprecate[exchange:asset:undeprecate] | Undeprecates an asset
-|xref:exchange-assets.adoc#exchange-asset-describe[exchange:asset:describe] | Shows a given asset's information
-|xref:exchange-assets.adoc#exchange-asset-resource-upload[exchange:asset:resource:upload] | Uploads a resource to an asset portal
-|xref:exchange-assets.adoc#exchange-asset-resource-list[exchange:asset:resource:list] | Lists published resources in the asset portal
-|xref:exchange-assets.adoc#exchange-asset-resource-download[exchange:asset:resource:download] | Downloads resource from the asset portal
-|xref:exchange-assets.adoc#exchange-asset-resource-delete[exchange:asset:resource:delete] | Deletes resource from the asset portal
-|xref:exchange-assets.adoc#exchange-asset-updateStatus[exchange:asset:updateStatus] | Modifies the status of an existing asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-upload[exchange:asset:upload] | Uploads an Exchange asset using Exchange Experience API
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-mutableDataUpload[exchange:asset:mutableDataUpload] | Modifies mutable data of an existing Exchange asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-modify[exchange:asset:modify] | Modifies an Exchange asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-download[exchange:asset:download] | Downloads an Exchange asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-list[exchange:asset:list] | Lists all assets
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-page-download[exchange:asset:page:download] | Downloads an asset's description page from Exchange
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-page-modify[exchange:asset:page:modify] | Changes an asset's description page from Exchange
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-page-upload[exchange:asset:page:upload] | Uploads an asset's description page from Exchange
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-page-update[exchange:asset:page:update] | Updates an asset's description page from Exchange
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-page-delete[exchange:asset:page:delete] | Deletes an asset's description page from Exchange
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-page-list[exchange:asset:page:list] | List all pages for a given asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-copy[exchange:asset:copy] | Copies an Exchange asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-delete[exchange:asset:delete] | Deletes an asset from Exchange
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-deprecate[exchange:asset:deprecate] | Deprecates an asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-undeprecate[exchange:asset:undeprecate] | Undeprecates an asset
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-describe[exchange:asset:describe] | Shows a given asset's information
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-resource-upload[exchange:asset:resource:upload] | Uploads a resource to an asset portal
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-resource-list[exchange:asset:resource:list] | Lists published resources in the asset portal
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-resource-download[exchange:asset:resource:download] | Downloads resource from the asset portal
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-resource-delete[exchange:asset:resource:delete] | Deletes resource from the asset portal
+|xref:anypoint-cli::exchange-assets.adoc#exchange-asset-updateStatus[exchange:asset:updateStatus] | Modifies the status of an existing asset
 |===
 
 // end::summary[]
