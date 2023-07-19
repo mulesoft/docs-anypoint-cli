@@ -5,19 +5,19 @@
 
 |===
 |Command |Description
-|<<governance-api-evaluate>> | Evaluates filter criteria to determine which rulesets apply to APIs that meet that criteria
-|<<governance-api-inspect>> | Inspects an API specification and lists its schemas
-|<<governance-api-validate>> | Validates an API specification against a specified governance ruleset
-|<<governance-document>> | Creates the documentation file for a governance ruleset definition
-|<<governance-profile-create>> | Creates a governance profile
-|<<governance-profile-delete>> | Deletes a governance profile
-|<<governance-profile-info>> | Lists information for a specific governance profile ID
-|<<governance-profile-list>> | Lists all governance profiles for an organization
-|<<governance-profile-update>> | Updates a governance profile
-|<<governance-ruleset-clone>> | Clones a governance ruleset and applies specified updates to rules
-|<<governance-ruleset-info>> | Lists ruleset rules
-|<<governance-ruleset-init>> | Initializes a governance ruleset definition based on a data schema
-|<<governance-ruleset-validate>> | Validates a governance ruleset definition's format
+|xref:api-governance.adoc#governance-api-evaluate[governance:api:evaluate] | Evaluates filter criteria to determine which rulesets apply to APIs that meet that criteria
+|xref:api-governance.adoc#governance-api-inspect[governance:api:inspect]| Inspects an API specification and lists its schemas
+|xref:api-governance.adoc#governance-api-validate[governance:api:validate]| Validates an API specification against a specified governance ruleset
+|xref:api-governance.adoc#governance-document[governance:document] | Creates the documentation file for a governance ruleset definition
+|xref:api-governance.adoc#governance-profile-create[governance:profile:create] | Creates a governance profile
+|xref:api-governance.adoc#governance-profile-delete[governance:profile:delete] | Deletes a governance profile
+|xref:api-governance.adoc#governance-profile-info[governance:profile:info] | Lists information for a specific governance profile ID
+|xref:api-governance.adoc#governance-profile-list[governance:profile:list] | Lists all governance profiles for an organization
+|xref:api-governance.adoc#governance-profile-update[governance:profile:update] | Updates a governance profile
+|xref:api-governance.adoc#governance-ruleset-clone[governance:ruleset:clone] | Clones a governance ruleset and applies specified updates to rules
+|xref:api-governance.adoc#governance-ruleset-info[governance:ruleset:info] | Lists ruleset rules
+|xref:api-governance.adoc#governance-ruleset-init[governance:ruleset:init] | Initializes a governance ruleset definition based on a data schema
+|xref:api-governance.adoc#governance-ruleset-validate[governance:ruleset:validate] | Validates a governance ruleset definition's format
 |===
 
 // end::summary[]
