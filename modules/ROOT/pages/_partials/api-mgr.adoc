@@ -63,7 +63,7 @@ You can pass this flag multiple times to specify multiple emails.
 | `--operator <value>` | Condition operator explaining values relation to threshold. +
 Supported values: gt, lt, eq
 | `--periods <num>` | Number of consecutive periods condition should occur for.
-| `--policyInstanceId <num>` | ID of a policy applied to the API instance to trigger `response-code` alert type.
+| `--policyId <num>` | ID of a policy applied to the API instance to trigger `policy-violation` alert type.
 | `--recipient <username>` | Username to send alert notification to. +
 You can pass this flag multiple times to specify multiple usernames.
 | `--responseCode <code>` | Response codes to trigger `response-code` alert type. +
