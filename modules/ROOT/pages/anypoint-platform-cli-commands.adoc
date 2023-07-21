@@ -38,7 +38,7 @@ xref:server-groups.adoc[Local Server Groups]
 
 xref:server-clusters.adoc[Local Server Clusters]
 
-xref:runetime-fabric-apps.adoc[Runetime Fabric Applications]
+xref:runtime-fabric-apps.adoc[Runetime Fabric Applications]
 
 xref:rtf-instances.adoc[Runtime Fabric Instances]
 
