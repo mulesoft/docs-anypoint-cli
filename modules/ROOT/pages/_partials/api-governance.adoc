@@ -1,5 +1,6 @@
 = API Governance
 
+Use the `governance` commands to automate your API Governance processes. For more documentation on how to use these commands, see xref:api-governance::cli-command-list.adoc[]. 
 
 // tag::summary[]
 
