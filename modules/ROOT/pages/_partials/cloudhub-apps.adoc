@@ -190,8 +190,11 @@ Note that from Anypoint Platform CLI you won't be able to allocate static IPs. Y
 
 [IMPORTANT]
 ====
-If you deploy without using any flags, your application will deploy using all your default values.
+If you deploy without using any flags, your application deploys using all your default values.
 ====
+
+[NOTE]
+include::anypoint-cli::partial$api-mule-4.5-release-channels.adoc
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
