@@ -122,7 +122,9 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 ----
 Displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
-This command accepts only the default flag `--help`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
 
 [[runtime-mgr-application-download-logs]]
 == runtime-mgr:application:download-logs
