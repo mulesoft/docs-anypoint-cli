@@ -4,4 +4,4 @@ _Major[numeric] . Minor[numeric] . Patch[numeric] : Build[numeric] Channel[e for
 
 Some examples of these values are: `4.6.0:1e` for Edge, and `4.6.0:1` for LTS. 
 
-For more information, see xref:release-notes::mule-lts-edge-release-cadence.adoc[Edge and LTS Releases for Mule].
+For more information, see xref:release-notes::mule-runtime/lts-edge-release-cadence.adoc[].
