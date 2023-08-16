@@ -1,7 +1,5 @@
 = CLI for API Governance
 
-include::anypoint-cli::partial$api-governance.adoc[tag=link-prod-doc]
-
 include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 
 include::anypoint-cli::partial$api-governance.adoc[tag=governance-api-evaluate]
