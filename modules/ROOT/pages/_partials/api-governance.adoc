@@ -54,7 +54,7 @@ Available filters include:
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
@@ -315,7 +315,7 @@ Available filters include:
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
@@ -503,7 +503,7 @@ Available filters include:
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
