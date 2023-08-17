@@ -7,36 +7,22 @@ Use these commands for applications in Cloudhub 2.0.
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<runtime-mgr-application-delete>> | Deletes an application
-|<<runtime-mgr-application-deploy>> | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
-|<<runtime-mgr-application-describe>> | Describes an application
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr:application:delete] | Deletes an application
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr:application:deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr:application:describe] | Describes an application
 // | <<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
-|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory
-|<<runtime-mgr-application-list>> | Lists all applications in an organization
-|<<runtime-mgr-application-modify>> | Modifies a deployed application
-|<<runtime-mgr-application-start>> | Starts a stopped application
-|<<runtime-mgr-application-stop>> | Stops running an application
-|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr:application:download:logs] | Downloads logs of an application from a specification to a specified directory
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-list[runtime-mgr:application:list] | Lists all applications in an organization
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr:application:modify] | Modifies a deployed application
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-start[runtime-mgr:application:start] | Starts a stopped application
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr:application:stop] | Stops running an application
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-logs[runtime-mgr:application:logs] | Tails an application's logs from a specification
 |===
+
+NOTE: These commands can be used for Cloudhub 2.0 and Runtime Fabric applications.
 
 // end::summary[]
 
-// tag::summary-rtf[]
-
-[%header,cols="35a,65a"]
-|===
-|Command |Description
-|<<runtime-mgr-application-delete>> | Deletes an application
-|<<runtime-mgr-application-describe>> | Describes an application
-|<<runtime-mgr-application-download-logs>> | Downloads logs of an application from a specification to a specified directory
-|<<runtime-mgr-application-list>> | Lists all applications in an organization
-|<<runtime-mgr-application-modify>> | Modifies a deployed application
-|<<runtime-mgr-application-start>> | Starts a stopped application
-|<<runtime-mgr-application-stop>> | Stops running an application
-|<<runtime-mgr-application-logs>> | Tails an application's logs from a specification
-|===
-
-// end::summary-rtf[]
 
 // tag::commands[]
 [[runtime-mgr-application-delete]]
@@ -122,7 +108,9 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 ----
 Displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
-This command accepts only the default flag `--help`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
 
 [[runtime-mgr-application-download-logs]]
 == runtime-mgr:application:download-logs
@@ -242,11 +230,6 @@ To get the `<specID>`, run the `runtime-mgr application describe` command.
 
 This command accepts only the default flag `--help`.
 
-
-
-// end::commands[]
-
-// tag::commands-rtf[]
 
 [[runtime-mgr-application-delete]]
 == runtime-mgr:application:delete
@@ -393,4 +376,4 @@ This command accepts only the default flag `--help`.
 
 
 
-// end::commands-rtf[]
+// end::commands[]

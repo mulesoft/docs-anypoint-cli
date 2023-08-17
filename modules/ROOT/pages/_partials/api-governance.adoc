@@ -1,24 +1,23 @@
 = API Governance
 
-Use the `governance` commands to automate your API Governance processes. For more documentation on how to use these commands, see xref:api-governance::index.adoc[the API Governance documentation]. 
 
 // tag::summary[]
 
 |===
 |Command |Description
-|<<governance-api-evaluate>> | Evaluates filter criteria to determine which rulesets apply to API specifications that meet that criteria
-|<<governance-api-inspect>> | Inspects an API specification and lists its schemas
-|<<governance-api-validate>> | Validates an API specification against a specified governance ruleset
-|<<governance-document>> | Creates the documentation file for a governance ruleset definition
-|<<governance-profile-create>> | Creates a governance profile
-|<<governance-profile-delete>> | Deletes a governance profile
-|<<governance-profile-info>> | Lists information for a specific governance profile ID
-|<<governance-profile-list>> | Lists all governance profiles for an organization
-|<<governance-profile-update>> | Updates a governance profile
-|<<governance-ruleset-clone>> | Clones a governance ruleset and applies specified updates to rules
-|<<governance-ruleset-info>> | Lists ruleset rules
-|<<governance-ruleset-init>> | Initializes a governance ruleset definition based on a data schema
-|<<governance-ruleset-validate>> | Validates a governance ruleset definition's format
+|xref:anypoint-cli::api-governance.adoc#governance-api-evaluate[governance:api:evaluate] | Evaluates filter criteria to determine which rulesets apply to APIs that meet that criteria
+|xref:anypoint-cli::api-governance.adoc#governance-api-inspect[governance:api:inspect]| Inspects an API specification and lists its schemas
+|xref:anypoint-cli::api-governance.adoc#governance-api-validate[governance:api:validate]| Validates an API specification against a specified governance ruleset
+|xref:anypoint-cli::api-governance.adoc#governance-document[governance:document] | Creates the documentation file for a governance ruleset definition
+|xref:anypoint-cli::api-governance.adoc#governance-profile-create[governance:profile:create] | Creates a governance profile
+|xref:anypoint-cli::api-governance.adoc#governance-profile-delete[governance:profile:delete] | Deletes a governance profile
+|xref:anypoint-cli::api-governance.adoc#governance-profile-info[governance:profile:info] | Lists information for a specific governance profile ID
+|xref:anypoint-cli::api-governance.adoc#governance-profile-list[governance:profile:list] | Lists all governance profiles for an organization
+|xref:anypoint-cli::api-governance.adoc#governance-profile-update[governance:profile:update] | Updates a governance profile
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-clone[governance:ruleset:clone] | Clones a governance ruleset and applies specified updates to rules
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-info[governance:ruleset:info] | Lists ruleset rules
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-init[governance:ruleset:init] | Initializes a governance ruleset definition based on a data schema
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-validate[governance:ruleset:validate] | Validates a governance ruleset definition's format
 |===
 
 // end::summary[]
@@ -30,7 +29,7 @@ Use the `governance` commands to automate your API Governance processes. For mor
 
 `> governance:api:evaluate [flags]`
 
-This command evaluates specified filters to determine the rulesets that would be applied to your API specifications that meet that criteria.  
+This command evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
 Besides the default flags, this command also accepts:
 
@@ -47,15 +46,16 @@ Available filters include:
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
+* `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only API specifications that have instances are filtered.  
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
 Example: 
-tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope:async-api,env-type:production
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 |===
 
 NOTE: This command must be run with either the `--criteria` or the `--api` flag.  
@@ -301,22 +301,23 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of API specifications to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
+* `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only API specifications that have instances are filtered.
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
 Example: 
-tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope:async-api,env-type:production
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 
 |`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile's description.
@@ -335,13 +336,13 @@ tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,scope:rest-api" --description "Profile for OAS Best Practices"
+anypoint-cli-v4 governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
 
-anypoint-cli-v4 governance:profile:create "Open API Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,scope:rest-api" --description "Profile for OAS Best Practices"
+anypoint-cli-v4 governance:profile:create "Open API Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
 
-anypoint-cli-v4 governance:profile:create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
+anypoint-cli-v4 governance:profile:create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
-anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,scope:rest-api" --description "Profile for Primary API Standards"
+anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
 ----
 
 *Example output:*
@@ -489,22 +490,23 @@ Besides the default flags, this command also accepts:
 
 See <<exchange-asset-identifiers>>.
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of API specifications to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
+* `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only API specifications that have instances are filtered. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
 Example: 
-tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope:async-api,env-type:production
+tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
 
 |`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile description.
@@ -528,13 +530,13 @@ tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope
 ----
 anypoint-cli-v4 governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
 
-anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
+anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
 
 anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
 anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
 
-anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
+anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:stable,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*

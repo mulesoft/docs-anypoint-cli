@@ -6,9 +6,9 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-| <<datagraph-load-balancer-config-add>> | Adds a dedicated load balancer configuration to Anypoint DataGraph
-| <<datagraph-load-balancer-config-describe>> | Displays a dedicated load balancer configuration for Anypoint DataGraph
-| <<datagraph-load-balancer-config-remove>> | Removes a dedicated load balancer configuration from Anypoint DataGraph
+|xref:anypoint-cli::datagraph-load-balancer.adoc#datagraph-load-balancer-config-add[datagraph:load-balancer-config:add] | Adds a dedicated load balancer configuration to Anypoint DataGraph
+|xref:anypoint-cli::datagraph-load-balancer.adoc#datagraph-load-balancer-config-describe[datagraph:load-balancer-config:describe] | Displays a dedicated load balancer configuration for Anypoint DataGraph
+|xref:anypoint-cli::datagraph-load-balancer.adoc#datagraph-load-balancer-config-remove[datagraph:load-balancer-config:remove] | Removes a dedicated load balancer configuration from Anypoint DataGraph
 |===
 
 
