@@ -1,6 +1,5 @@
 = API Governance
 
-
 // tag::summary[]
 
 |===
@@ -671,7 +670,7 @@ Besides the default flags, this command also accepts:
 |The `types` flag gives the target types to export as rules. You can use the `governance:api:inspect` command to identify the types to specify for this flag. See <<governance-api-inspect>>.
 
 |`--name <name>`
-|The `name` flag is the name of the ruleset. Defaults to `GeneratedRuleset`.
+|The `name` flag is the name of the ruleset. This defaults to `GeneratedRuleset`.
 |===
 
 *Example command:*
