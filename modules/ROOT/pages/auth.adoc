@@ -91,7 +91,12 @@ $ anypoint-cli-v4 account:environment:list
 ----
 The `organization` flag is optional. It defaults to your main organization from Anypoint Platform.
 
-NOTE: You can get your `client_id` and `client_secret` via Connected Apps. For more information see xref:access-management::connected-apps-developers.adoc[Connected Apps for Developers].
+[NOTE]
+====
+You can get your `client_id` and `client_secret` via Connected Apps. For more information see xref:access-management::connected-apps-developers.adoc[Connected Apps for Developers].
+
+Connected Apps require the `View Organization` and `View Environment` scope to authenticate to Anypoint Platform.
+====
 
 [[command-line-parameters]]
 == Command-Line Parameters
