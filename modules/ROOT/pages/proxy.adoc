@@ -1,6 +1,6 @@
 = Using Anypoint CLI with a Network Proxy
 
-Anypoint CLI can be run through a network proxy to add a layer of security. To use the Anypoint CLI with a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` environment variables with the hostname or IP addresses of your proxy servers as shown in the following sections.
+Anypoint CLI can be run through a network proxy to add a layer of security. To use the Anypoint CLI with a proxy server, configure the `HTTP_PROXY` or `HTTPS_PROXY` environment variables with the hostname or IP addresses of your proxy servers as shown in the following sections.
 
 == Configure a Proxy Server Without Authentication
 
