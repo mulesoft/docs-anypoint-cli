@@ -87,7 +87,7 @@ For example:
 * `--properties='{"mainFile":"main.raml"}'`
 * `--properties='{"apiVersion":"v1"}'`
 * `--properties='{"assetLink":"\http://api.com"}'`
-* `--properties='{"mainFile":"main.raml","apiVersion":"v1","assetLink":"\http://api.com"}'`
+* `--properties='{"mainFile":"main.raml","apiVersion":"v1","assetLink":"\http://api.com","contactEmail":"api@mulesoft.com","contactName":"Marc"}'`
 
 | `--files` | Asset file, identified as `classifier.packaging` or `packaging` and its file path, for example, `--files='{"oas.zip":"​/my-api.raml"}'`
 
