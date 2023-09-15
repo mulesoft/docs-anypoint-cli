@@ -230,8 +230,6 @@ To get the `<specID>`, run the `runtime-mgr application describe` command.
 
 This command accepts only the default flag `--help`.
 
-
-[[runtime-mgr-application-delete]]
 == runtime-mgr:application:delete
 
 ----
@@ -244,7 +242,6 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command accepts only the default flag `--help`.
 
-[[runtime-mgr-application-describe]]
 == runtime-mgr:application:describe
 
 ----
@@ -264,7 +261,6 @@ This command accepts only the default flag `--help`.
 
 //This command accepts only the default option `--help`.
 
-[[runtime-mgr-application-download-logs]]
 == runtime-mgr:application:download-logs
 
 ----
@@ -279,7 +275,6 @@ To get the `<specID>` run the `runtime-mgr application describe` command.
 
 This command accepts only the default flag `--help`.
 
-[[runtime-mgr-application-list]]
 == runtime-mgr:application:list
 
 ----
@@ -289,7 +284,6 @@ Lists all applications in your organization.
 
 This command accepts only the default flag `--help`.
 
-[[runtime-mgr-application-modify]]
 == runtime-mgr:application:modify
 
 ----
@@ -339,7 +333,6 @@ Format: 1 tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` en
 Default: `rolling` | `--updateStrategy recreate`
 
 |===
-[[runtime-mgr-application-start]]
 == runtime-mgr:application:start
 
 ----
@@ -349,7 +342,6 @@ Starts running the application specified in `<appID>`. To get this ID, run the `
 
 This command accepts only the default flag `--help`.
 
-[[runtime-mgr-application-stop]]
 == runtime-mgr:application:stop
 
 ----
@@ -359,7 +351,6 @@ Stops running the application specified in `<appID>`. To get this ID, run the `r
 
 This command accepts only the default flag `--help`.
 
-[[runtime-mgr-application-logs]]
 == runtime-mgr:application:logs
 
 ----
