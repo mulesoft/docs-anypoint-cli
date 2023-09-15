@@ -101,7 +101,7 @@ To send multiple files, use the same flag multiple times:
 
 To upload a ruleset and its documentation:
 
-`exchange:asset:upload --name "cli ruleset asset" --description "cli ruleset asset description" --properties.mainFile ruleset.yaml --files.ruleset.zip ~/temp/ruleset.zip cli-ruleset-asset/1.0.0 --files.docs.zip ~/temp/ruleset.doc.zip`
+`anypoint-cli-v4 exchange asset upload my-auth-best-practices/1.0.0 --name "My Best Practices Ruleset" --description "This ruleset enforces my  best practices for APIs."  --properties='{"mainFile":"/myRulesetFolder/mynewruleset.raml","apiVersion":"v1"}' --files='{"ruleset.yaml":"/myRulesetFolder/mynewruleset.yaml"}' --files='{"custom.zip": "/myRulesetFolder/ruleset.doc.zip"}'`
 
 | `--type` | Asset type
 
