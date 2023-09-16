@@ -74,10 +74,13 @@ Use the following format for the _assetIdentifier_ argument:
 
 If _group_id_ is not specified, it defaults to the currently selected organization ID.
 
-[%header,cols="30a,50a,30a"]
+[%header,cols="30a,70a"]
 |===
-| Flag | Description |  Example
-| `--name` | Asset name (required if no pom file is specified) .3+|
+| Flag | Description
+| `--name` | Asset name (required if no pom file is specified) 
+
+For example:
+
 `exchange:asset:upload --name "Raml Asset" --description "RAML"  --properties='{"apiVersion":"v1", "mainFile": "api.raml"}' --files='{"raml.zip":"​/file-path/raml.zip"}'`
 | `--description` | Asset description 
 | `--properties` | Asset properties 
@@ -95,13 +98,15 @@ To send multiple files, use the same flag multiple times:
 
 `--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` 
 
-|To upload a POM file and a RAML specification:
+For example:
+
+To upload a POM file and a RAML specification:
 
 `exchange:asset:upload --files'{"pom.xml": "directory/pom-file.xml"}' --files='{"raml.raml": "./my-api.raml"}'`
 
 To upload a ruleset and its documentation:
 
-`exchange:asset:upload --name "cli ruleset asset" --description "cli ruleset asset description" --properties.mainFile ruleset.yaml --files.ruleset.zip ~/temp/ruleset.zip cli-ruleset-asset/1.0.0 --files.docs.zip ~/temp/ruleset.doc.zip`
+`anypoint-cli-v4 exchange asset upload my-auth-best-practices/1.0.0 --name "My Best Practices Ruleset" --description "This ruleset enforces my  best practices for APIs."  --properties='{"mainFile":"/myRulesetFolder/mynewruleset.raml","apiVersion":"v1"}' --files='{"ruleset.yaml":"/myRulesetFolder/mynewruleset.yaml"}' --files='{"custom.zip": "/myRulesetFolder/ruleset.doc.zip"}'`
 
 | `--type` | Asset type
 
@@ -149,31 +154,39 @@ Depending on the type of asset, some possible classifier values are:
 * Connector
 ** `studio-plugin` (with `zip` as packaging) + file with no classifier and packaging `jar`
 * External Library
-** `external-library` (with `jar` as packaging) |
+** `external-library` (with `jar` as packaging) 
 
-| `--categories` | Categories |
+| `--categories` | Categories 
 
 `categories.someKey value`
 
+For example:
+
 `categories.anotherKey anotherValue`
 
-| `--fields` | Fields |
+| `--fields` | Fields 
 
 `fields.someKey value`
 
+For example:
+
 `fields.anotherKey anotherValue`
 
-| `--keywords` | Keywords (comma-separated) |
+| `--keywords` | Keywords (comma-separated) 
 
+For example:
 
 `raml,rest-api,someKeyword`
 
-| `--tags` | Tags (comma-separated)|
+| `--tags` | Tags (comma-separated)
 
+For example:
 
 `api,tag1,tag2`
 
-| `--dependencies` | Asset dependencies (comma-separated) |
+| `--dependencies` | Asset dependencies (comma-separated) 
+
+For example:
 
 `groupID:assetID:version,groupID2:assetID:version`
 
@@ -186,9 +199,7 @@ Supported Values:
 
 Default value:
 
-* `published` |
-
-`development` |
+* `published` 
 
 |===
 
