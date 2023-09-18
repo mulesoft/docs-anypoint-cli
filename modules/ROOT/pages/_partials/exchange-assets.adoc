@@ -335,7 +335,6 @@ Besides the default `--help` flag, this command also accepts:
 |Flag | Description |  Example
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the number of APIs passed | `--offset 3`
-|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 |`--organizationId` | Filters by organization id | `--organizationId a12b3c45-de6f-789g-hi01-j2klm3nop4q5`
 | `--output` | Specifies the response format. | `--output json`
 
