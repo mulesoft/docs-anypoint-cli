@@ -1,0 +1,127 @@
+= Anypoint CLI 4.x List of Commands
+:page-aliases: runtime-manager::anypoint-platform-cli-commands.adoc, env-business-groups.adoc
+
+
+Anypoint Platform CLI provides the ability to manage these features in Anypoint Platform:
+
+xref:account.adoc[Anypoint Platform Accounts]
+
+xref:api-catalog.adoc[API Catalog]
+
+xref:api-governance.adoc[API Governance]
+
+xref:api-mgr.adoc[API Manager]
+
+xref:cloudhub2-apps.adoc[Cloudhub 2.0]
+
+xref:cloudhub-apps.adoc[Cloudhub Apps]
+
+xref:cloudhub-dlb.adoc[Cloudhub Dedicated Load Balancers]
+
+xref:cloudhub-vpc.adoc[Cloudhub Anypoint VPCs]
+
+xref:datagraph-load-balancer.adoc[DataGraph Load Balancer]
+
+// xref:datagraph-source.adoc[DataGraph Source]
+
+xref:design-center.adoc[Design Center]
+
+xref:exchange-assets.adoc[Exchange Assets]
+
+xref:standalone-apps.adoc[Hybrid Applications]
+
+xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
+
+xref:servers.adoc[Local Servers]
+
+xref:server-groups.adoc[Local Server Groups]
+
+xref:server-clusters.adoc[Local Server Clusters]
+
+xref:runtime-fabric-apps.adoc[Runetime Fabric Applications]
+
+xref:rtf-instances.adoc[Runtime Fabric Instances]
+
+== Anypoint Platform Accounts
+
+include::4.x@anypoint-cli::partial$account.adoc[tag=summary]
+
+== API Catalog
+
+include::4.x@anypoint-cli::partial$api-catalog.adoc[tag=summary]
+
+
+== API Governance
+
+include::4.x@anypoint-cli::partial$api-governance.adoc[tag=summary]
+
+
+== API Manager
+
+include::4.x@anypoint-cli::partial$api-mgr.adoc[tag=summary]
+
+== Cloudhub 2.0
+
+include::4.x@anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
+
+== Cloudhub Apps
+
+include::4.x@anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
+
+== Cloudhub Dedicated Load Balancers
+
+include::4.x@anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
+
+== Cloudhub Anypoint VPCs
+
+include::4.x@anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
+
+== Datagraph Load Balancer
+
+include::4.x@anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
+
+== Design Center
+
+include::4.x@anypoint-cli::partial$design-center.adoc[tag=summary]
+
+== Exchange Assets
+
+include::4.x@anypoint-cli::partial$exchange-assets.adoc[tag=summary]
+
+== Hybrid Applications
+
+include::4.x@anypoint-cli::partial$standalone-apps.adoc[tag=summary]
+
+== Alerts for Hybrid Applications
+
+include::4.x@anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
+
+== Local Servers
+
+include::4.x@anypoint-cli::partial$servers.adoc[tag=summary]
+
+== Local Server Groups
+
+include::4.x@anypoint-cli::partial$server-groups.adoc[tag=summary]
+
+== Local Server Clusters
+include::4.x@anypoint-cli::partial$server-clusters.adoc[tag=summary]
+
+== Runtime Fabric Applications
+
+include::4.x@anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
+
+== Runtime Fabric Instances
+
+include::4.x@anypoint-cli::partial$rtf-instances.adoc[tag=summary]
+
+
+== See Also
+
+* xref:exchange::index.adoc[Anypoint Exchange Documentation]
+* xref:access-management::index.adoc[Access Management Documentation]
+* xref:runtime-manager::index.adoc[Anypoint Runtime Manager Documentation]
+* xref:runtime-manager::virtual-private-cloud.adoc[VPC Documentation]
+* xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[CloudHub Load Balancers Documentation]
+* xref:2.x@api-manager::index.adoc[API Manager 2.x (Crowd Release) Documentation]
+* xref:design-center::index.adoc[Design Center Documentation]

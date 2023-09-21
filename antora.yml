@@ -1,0 +1,6 @@
+name: anypoint-cli
+title: Anypoint CLI
+version: '4.x'
+display_version: '4.x'
+nav:
+- modules/ROOT/nav.adoc

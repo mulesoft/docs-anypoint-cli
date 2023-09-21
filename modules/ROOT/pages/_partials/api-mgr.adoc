@@ -1,0 +1,762 @@
+= API Manager
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-alert-add[api-mgr:alert:add] | Creates an API instance alert
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-alert-list[api-mgr:alert:list] | Lists alerts for an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-autodiscovery[api-mgr:api:autodiscovery] | Lists the autodiscovery properties
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-change-specification[api-mgr:api:change-specification] | Changes the asset version for an API instance by choosing a new version from Exchange
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-classify[api-mgr:api:classify] |Classifies an API instance in a given environment
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-delete[api-mgr:api:delete] | Deletes an API
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-deploy[api-mgr:api:deploy] | Deploys an API to CloudHub, hybrid server, or Runtime Fabric
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-deprecate[api-mgr:api:deprecate] | Deprecates an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-describe[api-mgr:api:describe] | Shows details of an API
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-download-proxy[api-mgr:api:download-proxy] | Downloads the API proxy ZIP file to a local directory
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-edit[api-mgr:api:edit] | Edits an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-list[api-mgr:api:list] | Lists all APIs in API Manager 2.x
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-manage[api-mgr:api:manage] | Manages a new API, API version, or new API instance with an asset from Exchange
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-promote[api-mgr:api:promote] | Promotes an API instance from source environment
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-redeploy[api-mgr:api:redeploy] | Redeploys an API to CloudHub, Hybrid server, or Runtime Fabric
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-undeprecate[api-mgr:api:undeprecate] | Undeprecates an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-contract-delete[api-mgr:contract:delete] | Deletes a given API contract
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-contract-list[api-mgr:contract:list] | Lists all contracts to a given API instance.
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-apply[api-mgr:policy:apply] | Applies a policy to a given API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-describe[api-mgr:policy:describe] | Shows the description and available configuration properties of a given policy template
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-disable[api-mgr:policy:disable] | Disables policy from a given API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-edit[api-mgr:policy:edit] | Edits the policy configuration of a given API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-enable[api-mgr:policy:enable] | Enables a policy on a given API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-list[api-mgr:policy:list] | Lists policies
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-remove[api-mgr:policy:remove] | Removes a policy from a given API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-tier-add[api-mgr:tier:add] | Creates an SLA tier
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-tier-copy[api-mgr:tier:copy] | Copies an SLA tier from source to a target API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-tier-delete[api-mgr:tier:delete] | Deletes an SLA tier from an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-tier-list[api-mgr:tier:list] | Lists the SLA tiers of an API instance
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+[[api-mgr-alert-add]]
+== api-mgr:alert:add
+
+----
+> api-mgr:alert:add <apiInstanceId> <name> [flags]
+----
+
+This command creates an API instance alert with the name passed in `name` for the API instance Id passed in `<apiInstanceId>`.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `--duration <num>` | Condition occurrence period duration.
+| `--durationUnit <value>` | Condition occurrence period duration unit. +
+Supported values: days, hours, minutes.
+| `--email <emailAddress>` | Email to send alert notification to. +
+You can pass this flag multiple times to specify multiple emails.
+| `--enabled` | Sets whether the alert should be enabled or not. Include the flag to enable it.
+| `--operator <value>` | Condition operator explaining values relation to threshold. +
+Supported values: gt, lt, eq
+| `--periods <num>` | Number of consecutive periods condition should occur for.
+| `--policyId <num>` | ID of a policy applied to the API instance to trigger `policy-violation` alert type.
+| `--recipient <username>` | Username to send alert notification to. +
+You can pass this flag multiple times to specify multiple usernames.
+| `--responseCode <code>` | Response codes to trigger `response-code` alert type. +
+You can pass this flag multiple times to specify multiple codes.
+| `--responseTime <num>` | Response time to trigger `response-time` alert type.
+| `--severity <value>` | Alert severity. +
+Supported values: `Info`, `Warning`, `Critical`.
+| `--threshold <num>` | Condition occurrences threshold number.
+| `--type <value>` | Alert type/condition. +
+Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
+|===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+[[api-mgr-alert-list]]
+== api-mgr:alert:list
+
+----
+> api-mgr:alert:list [flags] <apiInstanceId>
+----
+
+Lists alerts for the API instance passed in `<apiInstanceId>`.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description 
+|`--limit <value>` | Number of results to retrieve, default is 10 results
+| `--offset <value>` | Offsets the amount of APIs passed, for example`--offset 3`
+| `--output <value>`| Specifies the response format. + 
+Supported values are `table` (default) and `json`
+| `--sort` | Sorts the results in the field name passed, for example, `--sort "Latest Version"`
+|===
+
+[[api-mgr-api-autodiscovery]]
+== api-mgr:api:autodiscovery
+
+----
+> api-mgr:api:autodiscovery [flags] <apiInstanceId> <name>
+----
+
+This command lists the autodiscovery properties required for a gateway to track the API Instance Id passed in `<apiInstanceId>`.
+
+Besides the `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description 
+|`--gatewayVersion` | Specifies the gateway version you want to download. + 
+For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
+| `--output <value>`| Specifies the response format. + 
+Supported values are `table` (default) and `json`
+|===
+
+[[api-mgr-api-change-specification]]
+== api-mgr:api:change-specification
+
+----
+> api-mgr:api:change-specification [flags] <apiInstanceId> <assetVersion>
+----
+
+Changes the asset version for the API instance passed in `<apiInstanceId`,  by choosing a new version from Exchange passed in `<assetVersion>`.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-api-classify]]
+== api-mgr:api:classify
+
+----
+> api-mgr:api:classify [flags] <destEnvName> <apiInstanceId>
+----
+
+Classifies the API instance passed in `<apiInstanceId>` in the  environment passed in `<destEnvName>`.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-api-delete]]
+== api-mgr:api:delete
+
+----
+> api-mgr:api:delete [flags] <apiInstanceId>
+----
+
+This command deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-api-deploy]]
+== api-mgr:api:deploy
+
+----
+> api-mgr:api:deploy [flags] <apiInstanceId>
+----
+
+This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below. You can deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
+
+[NOTE]
+This command is only supported for endpoints with proxy.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description | Example
+
+| `--applicationName <name>`
+| Application name
+| `--applicationName myMuleApp 643404`
+
+| `--environmentName <name>`
+| Target environment name, used only when deploying APIs from unclassified environments.
+| `--environmentName TestEnv 643404`
+
+| `--gatewayVersion <version>`
+| The CloudHub Gateway version
+| `--gatewayVersion: 9.9.9.9  643404`
+
+| `--overwrite`
+| Update application if it exists. +
+| `--overwrite:  643404`
+
+| `--target <id>`
+| Hybrid or RTF deployment target ID +
+| `--target 1598794 643404`
+
+|===
+
+[[api-mgr-api-deprecate]]
+== api-mgr:api:deprecate
+
+----
+> api-mgr:api:deprecate [flags] <apiInstanceId>
+----
+
+Deprecates the API instance passed in `<apiInstanceId>`.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-api-describe]]
+== api-mgr:api:describe
+
+----
+> api-mgr:api:describe [flags] <apiInstanceId>
+----
+
+Shows details of the API instance passed in `<apiInstanceId>`.
+
+Besides the default `--help`, general, and authentication flags, this command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+[[api-mgr-api-download-proxy]]
+== api-mgr:api:download-proxy
+
+----
+> api-mgr:api:download-proxy [flags] <apiInstanceId> <targetPath>
+----
+
+This command downloads the API proxy ZIP file of the API instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`. You cannot download the API proxy of a Flex Gateway API instance.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
+For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
+
+[[api-mgr-api-edit]]
+== api-mgr:api:edit
+
+----
+> api-mgr:api:edit [flag] <apiInstanceId>
+----
+
+This command edits the API instance passed in `<apiInstanceId>`. If you edit a Flex Gateway API instance that is currently deployed, this command redeploys the edited Flex Gateway API instance. 
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `-f, --isFlex`
+| Indicates whether you are managing this API instance in FlexGateway. +
+Include the flag to enable it.
+
+| `-m, --muleVersion4OrAbove`
+| Indicates whether you are managing this API instance in Mule 4 or above. +
+Include the flag to enable it.
+
+| `-p, --withProxy`
+| Indicates whether the endpoint should use a proxy. +
+Include the flag to enable it.
+
+| `-r, --referencesUserDomain`
+| Indicates whether a proxy should reference a user domain. +
+Include the flag to enable it.
+
+| `--apiInstanceLabel <value>`
+| API instance label, optional
+
+| `--deploymentType <option>`
+| Deployment type +
+Supported options are `cloudhub`, `hybrid`, or `rtf`.
+
+| `--endpointUri <value>`
+| Consumer endpoint URI
+
+| `--inboundSecretGroupId <value>` 
+| Inbound secret group ID
+
+| `--inboundTlsContextId <value>` 
+| Outbound TLS Context ID. +
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
+
+| `--outboundSecretGroupId <value>`
+| Outbound secret group ID 
+
+| `--outboundTlsContextId <value>`
+| Outbound TLS Context ID. +
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
+
+| `--path <value>`
+| Proxy path
+
+| `--port <value>`
+| Proxy port
+
+| `--providerId <value>`
+| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
+
+| `--responseTimeout <value>`
+| Your maximum response timeout
+
+| `--scheme <value>`
+| Proxy scheme. +
+Supported values are `http`, or `https`.
+
+| `--serviceName <value>`
+| WSDL service name. Flex Gateway does not support this flag.
+
+| `--serviceNamespace <value>`
+| WSDL service namespace. Flex Gateway does not support this flag.
+
+| `--servicePort <value>`
+| WSDL service port. Flex Gateway does not support this flag.
+
+| `--updateApisInSamePort`
+| Updates the TLS context of API instances sharing the port of this API.
+
+| `--uri <value>`
+| Implementation URI
+
+|===
+
+[[api-mgr-api-list]]
+== api-mgr:api:list
+
+----
+> api-mgr:api:list [flags]
+----
+
+Lists all APIs in API Manager 2.x.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `--apiVersion <value>`    | API version by which to filter results
+| `--assetId <value>`       | Asset ID by which to filter results
+| `--instanceLabel <value>` | API instance label by which to filter results
+| `--limit <num>`           | Number of results to retrieve
+| `--offset <value>` | Offsets the amount of APIs passed
+
+| `--sort` | Sorts the results in the field name passed
+|===
+
+[[api-mgr-api-manage]]
+== api-mgr:api:manage
+
+----
+> api-mgr:api:manage [flags] <assetId> <assetVersion>
+----
+
+Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
+
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+
+| `-f, --isFlex`
+| Indicates whether you are managing this API instance in Flex Gateway. +
+Include the flag to enable it. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
+
+| `-m, --muleVersion4OrAbove`
+| Indicates whether you are managing this API instance in Mule 4 or above. +
+Include the flag to enable it.
+
+| `-p, --withProxy`
+| Indicates whether the endpoint should use a proxy. +
+Include the flag to enable it.
+
+| `-r, --referencesUserDomain`
+| Indicates whether a proxy should reference a user domain. +
+Include the flag to enable it.
+
+| `--apiInstanceLabel <value>`
+| API instance label, optional
+
+| `--deploymentType <option>`
+| Deployment type. +
+Supported values are `cloudhub`, `hybrid`, or `rtf`. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
+
+| `--endpointUri <value>`
+| Consumer endpoint URI
+
+| `--inboundSecretGroupId <value>` 
+| Inbound secret group ID
+
+| `--inboundTlsContextId <value>` 
+| Outbound TLS Context ID. +
+You must supply the `--inboundSecretGroupId` of the TLS Context's secret group.
+
+| `--outboundSecretGroupId <value>`
+| Outbound secret group ID 
+
+| `--outboundTlsContextId <value>`
+| Outbound TLS Context ID. +
+You must supply the `--outboundSecretGroupId` of the TLS Context's secret group.
+
+| `--path <value>`
+| Proxy path
+
+| `--port <value>`
+| Proxy port
+
+| `--providerId <value>`
+| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
+
+| `--responseTimeout <value>`
+| Response timeout
+
+| `--scheme <value>`
+| Proxy scheme. +
+Supported values are `http` or `https`.
+
+| `--serviceName <value>`
+| WSDL service name. Flex Gateway does not support this flag.
+
+| `--serviceNamespace <value>`
+| WSDL service namespace. Flex Gateway does not support this flag.
+
+| `--servicePort <value>`
+| WSDL service port. Flex Gateway does not support this flag.
+
+| `--type <option>` | Endpoint type. Supported options are `http`, `raml`, and `wsdl`.
+| `--uri <value>`
+| Implementation URI
+
+|===
+
+[[api-mgr-api-promote]]
+== api-mgr:api:promote
+
+----
+> api-mgr:api:promote [flags] <apiInstanceId> <sourceEnvId>
+----
+
+Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `-a, --copyAlerts`
+| Indicates whether to copy alerts. +
+Include the flag to enable it.`
+
+| `-p, --copyPolicies`
+|Indicates whether to copy policies. +
+Include the flag to enable it.
+
+| `-t, --copyTiers`
+|Indicates whether to copy tiers. +
+Include the flag to enable it.
+| `-providerId` | Indicates the provider's ID associated with the API.
+|===
+
+[[api-mgr-api-redeploy]]
+== api-mgr:api:redeploy
+
+----
+> api-mgr:api:redeploy [flags] <apiInstanceId>
+----
+
+Redeploys the API instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `--applicationName <name>`
+| Application name
+
+| `--environmentName <name>`
+| Target environment name. +
+ Must be provided to redeploy APIs from unclassified environments.
+
+| `--gatewayVersion <version>`
+| CloudHub Gateway version
+
+| `--overwrite`
+| Update application if exists. +
+Include the flag to enable it.
+
+| `--target <id>`
+| Hybrid or RTF deployment target ID
+
+|===
+
+[[api-mgr-api-undeprecate]]
+== api-mgr:api:undeprecate
+
+----
+> api-mgr:api:undeprecate [flags] <apiInstanceId>
+----
+
+Undeprecates the API instance passed in `<apiInstanceId>`.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-contract-delete]]
+== api-mgr:contract:delete
+
+----
+> api-mgr:contract:delete [flags] <apiInstanceId> <clientId>
+----
+
+This command deletes the contract between the API instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-contract-list]]
+== api-mgr:contract:list
+
+----
+> api-mgr:contract:list [flags] <apiInstanceId> [searchText]
+----
+
+Lists all contracts of the API passed in `<apiInstanceId>`.
+
+[TIP]
+You can specify keywords in searchText to limit results to APIs containing those specific keywords.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description |Example
+|`--limit` | Number of results to retrieve | `--limit 2`
+|`--offset` | Offsets the amount of APIs passed | `--offset 3 643404`
+| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json`.|  `--output json`
+|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version" 643404`
+|===
+
+[[api-mgr-policy-apply]]
+== api-mgr:policy:apply
+
+----
+> api-mgr:policy:apply [flags] <apiInstanceId> <policyId>
+----
+
+Applies the policy passed in `<policyId>` to the API instance passed in `<apiInstanceId>`.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `-c, --config [configJSON]`
+| Pass the configuration data as a JSON string. +
+For example, `api-mgr:policy:apply -c '{"property": "value"}'`
+
+| `--configFile [file]`
+| Pass the configuration data as a file. +
+For example, `api-mgr policy apply --configFile ./config.json`
+
+| `--groupId <value>`
+| Mule 4 policy group ID. +
+If no value is provided, this value defaults to MuleSoft group ID.
+
+| `-p, --pointcut [dataJSON]`
+| Pass pointcut data as JSON strings. +
+For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+
+| `--policyVersion <value>`
+| Mule 4 policy version
+
+|===
+
+The following example defines a rate limit of one request every ten seconds:
+
+----
+{
+        "rateLimits": [{
+            "maximumRequests": 1,
+            "timePeriodInMilliseconds": 10000
+        }],
+        "clusterizable": true,
+        "exposeHeaders": false
+    }
+----
+
+[[api-mgr-policy-describe]]
+== api-mgr:policy:describe
+
+----
+> api-mgr:policy:describe [flags] <policyId>
+----
+
+This command shows the description and available configuration properties of the policy passed in `<policyId>`. +
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+
+
+| `--groupId <value>`
+| Mule4 policy group ID. +
+Defaults to MuleSoft group ID when not provided.
+| `--policyVersion <value>`
+| Mule4 policy version
+| `--output <value>` | Specify the response format. + 
+Supported values are `table` (default) and `json`
+
+|===
+
+[[api-mgr-policy-disable]]
+== api-mgr:policy:disable
+
+----
+> api-mgr:policy:disable [flags] <apiInstanceId> <policyInstanceId>
+----
+
+This command disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
+
+This command accepts only the default flag `--help`, general, and authentication flags.
+
+[[api-mgr-policy-edit]]
+== api-mgr:policy:edit
+
+----
+> api-mgr:policy:edit [flags] <apiInstanceId> <policyInstanceId>
+----
+
+This command edits the policy configuration passed in `<policyInstanceId>` of the API instance passed in `<apiInstanceId>`.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `-c, --config [configJSON`]
+| Pass the configuration data as a JSON string. +
+For example, `api-mgr:policy:apply -c '{"property": "value"}'`
+
+| `-p, --pointcut [dataJSON]`
+| Pass pointcut data as JSON strings. +
+For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+|===
+
+[[api-mgr-policy-enable]]
+== api-mgr:policy:enable
+
+----
+> api-mgr:policy:enable [flags] <apiInstanceId> <policyInstanceId>
+----
+
+This command enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
+
+This command accepts only the default flag `--help`, general, and authentication flags.
+
+[[api-mgr-policy-list]]
+== api-mgr:policy:list
+
+----
+> api-mgr:policy:list [flags] [apiInstanceId]
+----
+
+This command lists all policies for all APIs in API Manager 2.x. +
+When the `[apiInstanceId]` flag is specified, this command lists the policies applied to that API instance. Not specifying the `[apiInstanceId]` will list all policies for all APIs.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts the `-m, --muleVersion4OrAbove` flag. +
+
+[[api-mgr-policy-remove]]
+== api-mgr:policy:remove
+
+----
+> api-mgr:policy:remove [flags] <apiInstanceId> <policyInstanceId>
+----
+
+This command removes the policy specified in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
+
+This command accepts only the default flag `--help`, general, and authentication flags.
+
+[[api-mgr-tier-add]]
+== api-mgr:tier:add
+
+----
+> api-mgr:tier:add [flags] <apiInstanceId>
+----
+
+This command creates an SLA tier for the API instance passed in `<apiInstanceId>`.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag |Description
+| `-a, --autoApprove`
+| Indicates whether the SAL tier should be auto-approved. +
+Include the flag to enable it.
+
+| `--name <value>`
+| Tier name
+
+| `--description <value>`
+| Tier description
+
+| `-l, --limit <value>`
+|Single instance of an SLA tier limit in the form `--limit A,B,C` where:
+
+* `A` is a boolean indicating whether or not this limit should be visible.
+* `B` is a number of requests per "C" time period.
+* `C` is the time period unit. Time period options are:
+** `ms`(millisecond)
+** `sec`(second)
+** `min`(minute)
+** `hr`(hour)
+** `d`(day)
+** `wk`(week)
+** `mo`(month)
+** `yr`(year)
+
+For example: `--limit true,100,min` is a visible limit of 100 requests per minute. +
+
+[TIP]
+To create multiple limits, you can provide multiple `--limit` options. +
+For example: `-l true,100,sec -l false,20,min`
+
+|===
+
+[[api-mgr-tier-copy]]
+== api-mgr:tier:copy
+
+----
+> api-mgr:tier:copy [flags] <sourceAPIInstanceId> <targetAPIInstanceId>
+----
+
+This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-tier-delete]]
+== api-mgr:tier:delete
+
+----
+> api-mgr:tier:delete [flags] <apiInstanceId> <tierId>
+----
+
+This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
+
+This command accepts only the default `--help`, general, and authentication flags.
+
+[[api-mgr-tier-list]]
+== api-mgr:tier:list
+----
+> api-mgr:tier:list [flags] <apiInstanceId> [searchText]
+----
+
+This command lists the SLA tiers of the  API instance passed in `<apiInstanceId>`.
+
+Besides the default `--help`, general, and authentication flags, this command also accepts:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description | Example
+|`--limit` | Number of results to retrieve | `--limit 2`
+|`--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json`.|  `--output json`
+|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
+|===
+
+// end::commands[]

@@ -1,0 +1,14 @@
+= Getting Started with Anypoint Platform CLI 4.x
+:page-aliases: runtime-manager::anypoint-platform-cli.adoc
+
+Anypoint Platform CLI is a scripting and command-line tool for Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+
+If you are using a version of Anypoint CLI earlier than Anypoint CLI 4.x, xref:diff-earlier-ver.adoc[read this first to find out about the differences.]
+
+To get started with Anypoint CLI: 
+
+. <<install.adoc#,Install>> Anypoint CLI.
+. <<intro.adoc#,Learn the general use of the commands>>, including how to authenticate and optionally use a proxy.
+. <<anypoint-platform-cli-commands.adoc#,View the list of commands>> available for the Anypoint Platform actions you can execute using Anypoint CLI.
+. xref:auth.adoc[Authenticate to Anypoint Platform].
+. xref:proxy.adoc[Use a Proxy Server].

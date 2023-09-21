@@ -1,0 +1,84 @@
+= Local Servers
+
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-describe[runtime-mgr:server:describe] | Describes server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-modify[runtime-mgr:server:modify] | Modifies server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-token[runtime-mgr:server:token] | Gets server registration token. This token needs to be used to register a new server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-delete[runtime-mgr:server:delete] | Deletes server
+|xref:anypoint-cli::servers.adoc#runtime-mgr-server-list[runtime-mgr:server:list] | Changes an standalone application artifact
+// |<<runtime-mgr-server-register>> | Registers a new server. Returns a signed certificate which is downloaded to the `directory` path
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+[[runtime-mgr-server-describe]]
+== runtime-mgr:server:describe
+
+----
+> runtime-mgr:server:describe [flags] <serverId>
+----
+
+This command describes the server passed in `serverId`.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command accepts only the default flag `--help`.
+
+[[runtime-mgr-server-modify]]
+== runtime-mgr:server:modify
+
+----
+> runtime-mgr:server:modify [flags] <serverId>
+----
+
+This command modifies the server passed in `serverId`.
+
+In order to update the id for the cluster, you need to pass the  `--name` flag.
+
+Besides the `--name` flag, this command also has the default `--help` flag.
+
+[[runtime-mgr-server-token]]
+== runtime-mgr:server:token
+
+----
+> runtime-mgr:server:token [flags]
+----
+
+This command gets server registration token. This token needs to be used to register a new server.
+
+This command accepts only the default flag `--help`.
+
+[[runtime-mgr-server-delete]]
+== runtime-mgr:server:delete
+
+----
+> runtime-mgr:server:delete [flags] <serverId>
+----
+
+This command deletes the server passed in `serverId`.
+
+This command accepts only the default flag `--help`.
+
+[WARNING]
+This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
+
+[[runtime-mgr-server-list]]
+== runtime-mgr:server:list
+
+----
+> runtime-mgr:server:list [flags]
+----
+
+This server lists all servers in your environment.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+//end::commands[]

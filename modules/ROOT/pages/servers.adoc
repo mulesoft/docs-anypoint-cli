@@ -1,0 +1,5 @@
+= CLI for Local Servers
+
+include::anypoint-cli::partial$servers.adoc[tag=summary]
+
+include::anypoint-cli::partial$servers.adoc[tag=commands]

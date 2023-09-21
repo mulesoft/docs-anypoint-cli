@@ -1,0 +1,6 @@
+= Locally Deployed Applications Managed by Runtime Manager
+
+include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
+
+include::anypoint-cli::partial$standalone-apps.adoc[tag=commands]
+

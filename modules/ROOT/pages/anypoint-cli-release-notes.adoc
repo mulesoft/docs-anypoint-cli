@@ -1,0 +1,1 @@
+include::release-notes::partial$anypoint-cli/anypoint-cli-rn-landing-page.adoc[]

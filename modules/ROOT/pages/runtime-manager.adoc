@@ -1,0 +1,9 @@
+= CLI for Runtime Manager
+
+Anypoint CLI supports these Runtime Manager features:
+
+* xref:standalone-apps.adoc[Hybrid Applications]
+* xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
+* xref:servers.adoc[Local Servers]
+* xref:server-clusters.adoc[Local Cluster Servers]
+* xref:server-groups.adoc[Local Server Groups]

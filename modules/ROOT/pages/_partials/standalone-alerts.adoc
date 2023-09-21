@@ -1,0 +1,109 @@
+= Alerts for Locally Deployed Applications Managed by Runtime Manager
+
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-describe[runtime-mgr:standalone-alert:describe] | Describes an alert
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-create[runtime-mgr:standalone-alert:create] | Creates new alert for standalone runtime
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-modify[runtime-mgr:standalone-alert:modify] | Modifies alert for standalone runtime
+|xref:anypoint-cli::standalone-alerts.adoc#runtime-mgr-standalone-alert-list[runtime-mgr:standalone-alert:list] | Lists all alerts for standalone runtimes in the environment
+|===
+
+// end::summary[]
+
+
+// tag::commands[]
+
+[[runtime-mgr-standalone-alert-describe]]
+== runtime-mgr:standalone-alert:describe
+
+----
+> runtime-mgr:standalone-alert:describe [flags] <alertId>
+----
+
+This command describes the alert passed in `alertId`.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+[[runtime-mgr-standalone-alert-create]]
+== runtime-mgr:standalone-alert:create
+
+----
+> runtime-mgr:standalone-alert:create <name> [flags]
+----
+
+This command creates a new alert for a standalone runtime with the ID passed in `name`.
+The alert `name` is limited to 256 characters.
+
+
+Besides the default `--help` flag, this command also accepts:
+
+[%header,cols="30,70"]
+|===
+| Flag | Description 
+| `--severity <val>` | Alert severity
+| `--resourceType <type>` | Alert resource type
+| `--resource [id]` | Alert resource ID. Can be used multiple types. If not provided alert triggers for all resources. Depending on `resourceType` resource can be application, server, server-group or cluster.
+| `--condition <val>` | Alert trigger condition
+| `--period [minutes]` | Condition duration in minutes
+| `--threshold [num]` | Condition threshold number
+| `--operator [type]` | Condition operator explaining values relation to threshold.
+| `--subject <string>` | Alert notification email subject
+| `--content <string>` | Alert notification email body
+| `--recipient [username]` | Username to send alert notification to. Can be used multiple times to specify up to 20 platform user IDs.
+| `--email [emailAddress]` | Email address to send alert notification to. Can be used multiple times to specify up to 20 email addresses.
+|===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+
+[[runtime-mgr-standalone-alert-modify]]
+== runtime-mgr:standalone-alert:modify
+
+----
+> runtime-mgr:standalone-alert:modify <alertId> [flags]
+----
+
+This command modifies the alert passed in `alertId`.
+
+Besides the default `--help` flag, this command also accepts:
+
+[%header,cols="30,70"]
+|===
+|Flag |Description
+| `--name <value>` | Alert name
+| `--severity <value>` | Alert severity
+| `--resourceType <type>` | Alert resource type
+| `--resource [id]` | Alert resource ID. Can be used multiple types. If not provided alert triggers for all resources. Depending on `resourceType` resource can be application, server, server-group or cluster.
+| `--condition <value>` | Alert trigger condition
+| `--period [minutes]` | Condition duration in minutes
+| `--threshold [num]` | Condition threshold number
+| `--operator [type]` | Condition operator explaining values relation to threshold.
+| `--subject <string>` | Alert notification email subject
+| `--content <string>` | Alert notification email body
+| `--recipient [username]` | Username to send alert notification to. Can be used multiple times to specify up to 20 platform user IDs.
+| `--email [emailAddress]` | Email address to send alert notification to. Can be used multiple times to specify up to 20 email addresses.
+|===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+
+[[runtime-mgr-standalone-alert-list]]
+== runtime-mgr:standalone-alert:list
+
+----
+> runtime-mgr:standalone-alert:list [flags]
+----
+
+This command lists all alerts for standalone Mules in the current environment.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+// end::commands[]

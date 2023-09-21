@@ -1,0 +1,5 @@
+= CLI for Design Center Projects
+
+include::anypoint-cli::partial$design-center.adoc[tag=summary]
+
+include::anypoint-cli::partial$design-center.adoc[tag=commands]

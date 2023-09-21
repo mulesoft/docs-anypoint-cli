@@ -1,0 +1,5 @@
+= CLI for Runtime Fabric Instances
+
+include::anypoint-cli::partial$rtf-instances.adoc[tag=summary]
+
+include::anypoint-cli::partial$rtf-instances.adoc[tag=commands]
