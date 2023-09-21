@@ -8,7 +8,6 @@ Use these commands for applications in Cloudhub 2.0.
 |===
 |Command |Description
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr:application:delete] | Deletes an application
-|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr:application:deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr:application:describe] | Describes an application
 // | <<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr:application:download:logs] | Downloads logs of an application from a specification to a specified directory
@@ -38,66 +37,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command accepts only the default flag `--help`.
 
-[[runtime-mgr-application-deploy]]
-== runtime-mgr:application:deploy
 
-----
-> runtime-mgr:application:deploy <appID> <deploymentTargetID> <runtimeVersion> <artifactID> [flags]
-----
-Deploys the application specified in `<appID>` to the deployment target specified using the following options:
-
-[%header,cols="12a,53a,35a"]
-|===
-|Value |Description | Example
-|`--artifactId` |Artifact ID of the application retrieved from Exchange. | `--artifactId mule-test-plugin`
-|`--deploymentTargetId` |ID of the deployment target. +
-You can get this ID directly from Runtime Manager.  | `--deploymentTargetId cloudhub-us-east-1`
-|`--name` |Name of the application to deploy. | `--name testcloudhub2app`
-|`--runtimeVersion` |Runtime version of the deployment target.|`--runtimeVersion 4.4.0`
-|`--secureProperty` | Sets an encrypted property. | `--secureProperty secureTestProperty:true`
-
-|===
-
-Besides the default `--help` flag this command also takes:
-
-[%header,cols="12a,53a,35a"]
-|===
-|Flag |Description |Example
-|`--assetVersion` | Version of the Exchange application to use. +
-Default: latest application version | `--assetVersion 2.0.4`
-|`--[no-]clustered`| Enables clustered nodes, which requires at least two replicas. +
- Default:.`disabled` |`--no-clustered`
-|`--[no-]disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
-Default: `enabled` |`--disableAmLogForwarding`
-|`--[no-]forwardSslSession`| Enables SSL session forwarding. +
-Default: `disabled` | `--no-forwardSslSession`
-|`--groupId` | Group ID of the asset to deploy. +
-Default: selected organization ID | `--groupId org.mule.test`
-|`--[no-]lastMileSecurity`| Enables Last Mile Security. +
-Default: `disabled` | `--no-lastMileSecurity`
-|`--[no-]objectStoreV2`| Enables Object Store v2. +
-Default: `disabled` | `--no-objectStoreV2`
-|`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
-Format: must begin with `/` | `--pathRewrite /http://localhost:3000`
-|`--property`| Sets a property. +
-Format: `name:value` | `--property testproperty:true`
-|`--propertiesFile`| Replaces all properties with values from a selected file. +
-Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
-|`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
-Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example:/status?limit=10`
-|`--replicas` | Number of replicas. Must be above `0`. +
-Default: `1` | `--replicas 2`
-|`--replicaSize`| Size of replicas in Vcores. +
-Default: `0.1` | `--replicaSize 0.5`
-|`--scopeLoggingConfig`| Defines scope logging. +
-Format: `scopeName: logLevel`, separated by commas, no spaces | `--scopeLoggingConfig testscope1:WARN,testscope2:DEBUG`
-|`--scopeLoggingConfigFile`| Uploads a file to define scope logging. +
-Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`--scopeLoggingConfigFile /Users/mule/Documents/cert.txt`
-|`--updateStrategy`| Updates the strategy used. +
-Default: `rolling` | `--updateStrategy recreate`
-|===
-
-NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 
 [[runtime-mgr-application-describe]]
