@@ -8,9 +8,9 @@ Use these commands for applications in Cloudhub 2.0.
 |===
 |Command |Description
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-delete[runtime-mgr:application:delete] | Deletes an application
-|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr:application:deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-describe[runtime-mgr:application:describe] | Describes an application
 // | <<runtime-mgr-application-describe-json>> | Describes an application in a raw JSON response
+|xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-deploy[runtime-mgr:application:deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr:application:download:logs] | Downloads logs of an application from a specification to a specified directory
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-list[runtime-mgr:application:list] | Lists all applications in an organization
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-modify[runtime-mgr:application:modify] | Modifies a deployed application
@@ -38,13 +38,31 @@ This command does not prompt twice before deleting. If you send a delete instruc
 
 This command accepts only the default flag `--help`.
 
+
+
+
+[[runtime-mgr-application-describe]]
+== runtime-mgr:application:describe
+
+----
+> runtime-mgr:application:describe [flags] <appID>
+----
+Displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+
 [[runtime-mgr-application-deploy]]
 == runtime-mgr:application:deploy
+
 
 ----
 > runtime-mgr:application:deploy <appID> <deploymentTargetID> <runtimeVersion> <artifactID> [flags]
 ----
 Deploys the application specified in `<appID>` to the deployment target specified using the following options:
+
 
 [%header,cols="12a,53a,35a"]
 |===
@@ -56,9 +74,12 @@ You can get this ID directly from Runtime Manager.  | `--deploymentTargetId 7de3
 |`--runtimeVersion` |Runtime version of the deployment target.|`--runtimeVersion 4.4.0`
 |`--secureProperty` | Sets an encrypted property. | `--secureProperty secureTestProperty:true`
 
+
 |===
 
+
 Besides the default `--help` flag this command also takes:
+
 
 [%header,cols="12a,53a,35a"]
 |===
@@ -66,7 +87,7 @@ Besides the default `--help` flag this command also takes:
 |`--assetVersion` | Version of the Exchange application to use. +
 Default: latest application version | `--assetVersion 2.0.4`
 |`--[no-]clustered`| Enables clustered nodes, which requires at least two replicas. +
- Default:.`disabled` |`--no-clustered`
+Default:.`disabled` |`--no-clustered`
 |`--[no-]disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
 Default: `enabled` |`--disableAmLogForwarding`
 |`--[no-]forwardSslSession`| Enables SSL session forwarding. +
@@ -97,20 +118,11 @@ Format: one tuple per line, style: `{scope: scopeName, logLevel: logLevelType}` 
 Default: `rolling` | `--updateStrategy recreate`
 |===
 
+
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 
-[[runtime-mgr-application-describe]]
-== runtime-mgr:application:describe
 
-----
-> runtime-mgr:application:describe [flags] <appID>
-----
-Displays information about the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
-
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
-
-This command also accepts the default flag `--help`.
 
 [[runtime-mgr-application-download-logs]]
 == runtime-mgr:application:download-logs
