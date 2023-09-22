@@ -51,7 +51,7 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 |Value |Description | Example
 |`--artifactId` |Artifact ID of the application retrieved from Exchange. | `--artifactId mule-test-plugin`
 |`--deploymentTargetId` |ID of the deployment target. +
-You can get this ID directly from Runtime Manager.  | `--deploymentTargetId cloudhub-us-east-1`
+You can get this ID directly from Runtime Manager.  | `--deploymentTargetId 7de39400-a2b3-0a93-b2349-23eacbca9e322`
 |`--name` |Name of the application to deploy. | `--name testcloudhub2app`
 |`--runtimeVersion` |Runtime version of the deployment target.|`--runtimeVersion 4.4.0`
 |`--secureProperty` | Sets an encrypted property. | `--secureProperty secureTestProperty:true`
