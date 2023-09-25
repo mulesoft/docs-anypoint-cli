@@ -18,11 +18,9 @@ Use these commands for applications in Cloudhub 2.0.
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop] | Stops running an application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs] | Tails an application's logs from a specification 
 |===
-
 // end::summary[]
 
 // tag::summary-rtf[]
-
 [%header,cols="35a,65a"]
 |===
 |Command |Description
@@ -36,7 +34,6 @@ Use these commands for applications in Cloudhub 2.0.
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop] | Stops running an application
 | xref:cloudhub2-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs] | Tails an application's logs from a specification 
 |===
-
 // end::summary-rtf[]
 
 // tag::commands[]
@@ -245,9 +242,6 @@ To get the `<specID>` run the `runtime-mgr application describe` command.
 
 
 This command accepts only the default option `--help`.
-
-
-
 // end::commands[]
 
 // tag::commands-rtf[]
@@ -397,7 +391,4 @@ To get the `<specID>` run the `runtime-mgr application describe` command.
 
 
 This command accepts only the default options: `--help`, `-f`/`--fields` and `-o`/`--output`
-
-
-
 // end::commands-rtf[]
