@@ -601,7 +601,7 @@ Argument `<assetIdentifier>` should be formatted as follows: `[group_id]/<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
 Argument `<resourcePath>` must be a published resource. +
-You can list all published resources using the <<exchange:asset:resource:list,asset resource list>> command.
+You can list all published resources using the <<exchange-asset-resource-list,asset resource list>> command.
 
 [CAUTION]
 This command publishes all active drafts as part of the operation.
