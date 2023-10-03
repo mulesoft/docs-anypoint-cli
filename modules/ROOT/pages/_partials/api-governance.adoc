@@ -165,7 +165,7 @@ You can specify rulesets against which to validate as follows:
 
 * To validate against local rulesets, use the `--rulesets` flag.
 
-NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets may be validated multiple times.
+NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets might be validated multiple times.
 
 Besides the default flags, this command also accepts:
 
