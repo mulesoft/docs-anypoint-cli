@@ -299,7 +299,7 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
@@ -487,7 +487,7 @@ Besides the default flags, this command also accepts:
 
 See <<exchange-asset-identifiers>>.
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
