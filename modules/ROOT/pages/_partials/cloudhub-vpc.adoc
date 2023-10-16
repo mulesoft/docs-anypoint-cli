@@ -61,7 +61,7 @@ This command accepts only the default flag `--help`.
 This command creates an Anypoint VPC using the name in `<name>`, in the region specified in `<region>`, with the xref:runtime-manager::vpc-provisioning-concept#faq_how_to_size_vpc[size] passed in `<cidrBlock>` in the form of a Classless Inter-Domain Routing (CIDR) block, using https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation] and associates it to the xref:access-management::environments.adoc[environments] passed as argument(s) thereafter.
 
 [NOTE]
-An Anypoint VPC needs to be bound to a business group within your organization. When creating an Anypoint VPC, make sure to assign it a business group using the <<cloudhub:vpc:business-groups:add, business-groups add>> command.
+An Anypoint VPC needs to be bound to a business group within your organization. When creating an Anypoint VPC, make sure to assign it a business group using the <<cloudhub-vpc-business-groups-add, business-groups add>> command.
 
 Besides the default `--help` flag, this command also has the `--default` flag. When passed, the Anypoint VPC is created as the default Anypoint VPC for the selected environment.
 
@@ -150,7 +150,7 @@ You can pass as many domains as you need, and up to 3 IP addresses. +
 For example, `$ cloudhub:vpc:dns-servers:set --domain example.com --server 192.168.1.10 <VPC Name>`.
 
 Every time you run this command, you overwrite your previous DNS set command. +
-To remove a DNS set, you need to use the <<cloudhub:vpc:dns-servers:unset,vpc dns-servers unset>> command.
+To remove a DNS set, you need to use the <<cloudhub-vpc-dns-servers-unset,vpc dns-servers unset>> command.
 
 [[cloudhub-vpc-dns-servers-unset]]
 == cloudhub:vpc:dns-servers:unset

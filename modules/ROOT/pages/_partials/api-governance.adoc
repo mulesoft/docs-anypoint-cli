@@ -197,7 +197,7 @@ anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --rules
 
 anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
 
-anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
+anypoint-cli-v4 governance:api:validate 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0 --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote
 ----
 
 *Example output:*
