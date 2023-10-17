@@ -1,6 +1,6 @@
 = CLI for API Governance
 
-Use the `governance` commands to automate your API Governance processes. For more information on how to use these commands, see xref:api-governance::index.adoc[the API Governance documentation].
+Use the `governance` commands to automate your API Governance processes. For more information about how to use these commands, see xref:api-governance::index.adoc[the API Governance documentation].
 
 include::anypoint-cli::partial$api-governance.adoc[tag=summary]
 
