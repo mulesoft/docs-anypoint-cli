@@ -2,6 +2,8 @@
 
 Scripts that use versions of the Anypoint Platform CLI earlier than 4.x do not automatically use Anypoint CLI 4.x commands because the new version of the CLI has different command names and syntax. However, because the CLI version 4.x name and install package are different from previous versions, you can install Anypoint CLI 4.x and an earlier version on the same system and use both versions in your scripts. 
 
+Warning: Anypoint CLI 4.x is not backward compatible with previous versions.
+
 As you write new scripts and update existing ones, use Anypoint CLI 4.x to take advantage of new features and fixes in future releases. Plugins are available only in Anypoint Platform CLI 4.x. 
 
 == Changes
