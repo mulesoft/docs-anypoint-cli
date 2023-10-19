@@ -495,7 +495,7 @@ Undeprecates the API instance passed in `<apiInstanceId>`.
 
 This command accepts only the default `--help`, general, and authentication flags.
 
-[[api-mgr-contract-delete]]:
+[[api-mgr-contract-delete]]
 == api-mgr:contract:delete
 
 ----
