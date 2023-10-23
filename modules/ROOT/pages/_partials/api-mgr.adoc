@@ -523,11 +523,10 @@ Besides the default `--help`, general, and authentication flags, this command al
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description |Example
-|`--limit` | Number of results to retrieve | `--limit 2`
-|`--offset` | Offsets the amount of APIs passed | `--offset 3 643404`
+|`--limit <value>` | Number of results to retrieve | `--limit 2`
+|`--offset <value>` | Offsets the amount of APIs passed | `--offset 3`
 | `--output <value>` | Specifies the response format, supported values are `table` (default) and `json`.|  `--output json`
-|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version" 643404`
-|===
+|`--sort <value>` | Sorts the contracts by the criteria associated with their client applications, supported values are `createdDate`, `id`, and `name`. | `--sort id` |===
 
 [[api-mgr-policy-apply]]
 == api-mgr:policy:apply
