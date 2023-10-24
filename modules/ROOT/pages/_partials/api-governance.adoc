@@ -268,14 +268,28 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
+anypoint-cli-v4 governance:document /myrulesetfolder/mynewruleset.yaml /myrulesetfolder/ruleset.doc.zip
 ----
 
 *Example output:*
 
 ----
- validation name [ 'scalar-parameters' ]
- Saving to /Users/janedoe/temp/prof-1.doc.zip
+validation name [ 'security-fields-operation-empty' ]
+validation name [ 'access-tokens-oauth2-cleartext' ]
+validation name [ 'insecure-oauth2-grants' ]
+validation name [ 'api-keys-in-cookie' ]
+validation name [ 'api-keys-in-query' ]
+validation name [ 'api-keys-in-header' ]
+validation name [ 'api-negotiates-authentication' ]
+validation name [ 'insecure-basic-auth' ]
+validation name [ 'bearer-token-cleartext' ]
+validation name [ 'http-token-cleartext' ]
+validation name [ 'oauth1-deprecated' ]
+validation name [ 'oauth2-redirections-non-encrypted' ]
+validation name [ 'unknown-security-scheme' ]
+validation name [ 'valid-server-urltemplate' ]
+validation name [ 'valid-oauth2-redirection-urls' ]
+Saving to myRulesetFolder/ruleset.doc.zip
 ----
 
 // end::governance-document[]
@@ -621,7 +635,7 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:info ~/temp/myruleset.yaml
+anypoint-cli-v4 governance:ruleset:info myrulesetfolder/myruleset.yaml
 
 anypoint-cli-v4 governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
 
@@ -631,19 +645,41 @@ anypoint-cli-v4  governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/an
 *Example output:*
 
 ----
-Ruleset /Users/myuser/temp/myruleset.yaml
-Violation	operation-default-response
-Violation	operation-operationId     
-Warning  	operation-singular-tag    
-Warning  	tag-description           
-Warning  	info-contact              
-Warning  	info-description          
-Warning  	info-license              
-Warning  	license-url               
-Warning  	openapi-tags              
-Warning  	operation-description     
-Warning  	operation-tags            
-Warning  	operation-tag-defined  
+Ruleset myrulesetfolder/myruleset.yaml
+Ruleset conforms with Dialect
+╔═══════════╤═══════════════════════════════════╗
+║ Violation │ security-fields-operation-empty   ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ access-tokens-oauth2-cleartext    ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ insecure-oauth2-grants            ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-keys-in-cookie                ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-keys-in-query                 ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-keys-in-header                ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-negotiates-authentication     ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ insecure-basic-auth               ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ bearer-token-cleartext            ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ http-token-cleartext              ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ oauth2-redirections-non-encrypted ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ unknown-security-scheme           ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ valid-server-urltemplate          ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ valid-oauth2-redirection-urls     ║
+╟───────────┼───────────────────────────────────╢
+║ Warning   │ unknown-security-scheme           ║
+╟───────────┼───────────────────────────────────╢
+║ Warning   │ oauth1-deprecated                 ║
+╚═══════════╧═══════════════════════════════════╝ 
 ----
 
 // end::governance-ruleset-info[]
@@ -709,7 +745,8 @@ anypoint-cli-v4 governance:ruleset:validate ~/temp/myrulesetfolder
 *Example output for a valid ruleset:*
 
 ----
- Ruleset conforms with Dialect
+Ruleset User/myuser/temp/myruleset.yaml
+Ruleset conforms with Dialect
 ----
 
 *Example output for a nonvalid ruleset:*
