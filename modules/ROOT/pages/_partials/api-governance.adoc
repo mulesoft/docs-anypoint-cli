@@ -36,7 +36,7 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 |`--api=<api>`
-|The API project against which you want to evaluate. The command uses the project's `exchange.json` file as criteria.
+|The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |--criteria <filtertype:filtervalue>,...
 |Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
