@@ -60,12 +60,10 @@ NOTE: This command must be run with either the `--criteria` or the `--api` flag.
 
 *Example commands:*
 
-[source,copy]
-
 `anypoint-cli-v4 governance:api:evaluate --criteria "tag:best,category:API Type:Experience API,scope:rest-api"`
 
 `anypoint-cli-v4 governance:api:evaluate --api order-api-1.0.0-raml.zip`, 
-where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file. 
+where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file 
 
 *Example output:*
 
