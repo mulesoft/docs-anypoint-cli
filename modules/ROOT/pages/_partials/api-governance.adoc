@@ -36,7 +36,7 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 |`--api=<api>`
-|The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
+|The API project against which you want to evaluate. The command uses the ruleset dependencies in the project's `exchange.json` file as criteria.
 |--criteria <filtertype:filtervalue>,...
 |Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
@@ -61,19 +61,22 @@ NOTE: This command must be run with either the `--criteria` or the `--api` flag.
 *Example commands:*
 
 [source,copy]
-----
-anypoint-cli-v4 governance:api:evaluate --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
 
-anypoint-cli-v4 governance:api:evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
-----
+`anypoint-cli-v4 governance:api:evaluate --criteria "tag:best,category:API Type:Experience API,scope:rest-api"`
+
+`anypoint-cli-v4 governance:api:evaluate --api order-api-1.0.0-raml.zip`, 
+where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file. 
 
 *Example output:*
 
 ----
-Ruleset GAV                                                       
-68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
-8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 
-68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0 
+╔════════════════════════════════════════════════════════════════════╗
+║ Ruleset GAV                                                        ║
+╟────────────────────────────────────────────────────────────────────╢
+║ 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.5.1 ║
+╟────────────────────────────────────────────────────────────────────╢
+║ 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.1 ║
+╚════════════════════════════════════════════════════════════════════╝
 ----
 
 // end::governance-api-evaluate[]
