@@ -106,7 +106,7 @@ To upload a POM file and a RAML specification:
 
 To upload a ruleset and its documentation:
 
-`anypoint-cli-v4 exchange asset upload my-auth-best-practices/1.0.0 --name "My Best Practices Ruleset" --description "This ruleset enforces my best practices for APIs." --files='{"ruleset.yaml":"/myRulesetFolder/mynewruleset.yaml"}' --files='{"custom.zip": "/myRulesetFolder/ruleset.doc.zip"}'`
+`anypoint-cli-v4 exchange asset upload my-auth-best-practices/1.0.0 --name "My Best Practices Ruleset" --description "This ruleset enforces my best practices for APIs." --files='{"ruleset.yaml":"/myRulesetFolder/mynewruleset.yaml","docs.zip":"/myRulesetFolder/ruleset.doc.zip"}'`
 
 | `--type` | Asset type
 
