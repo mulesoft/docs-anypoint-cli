@@ -735,18 +735,18 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:validate ~/temp/myruleset.yaml
+anypoint-cli-v4 governance:ruleset:validate ~/myrulesetfolder/myruleset.yaml
 
-anypoint-cli-v4 governance:ruleset:validate ~/temp/myruleset.zip
+anypoint-cli-v4 governance:ruleset:validate ~/myrulesetfolder/myruleset.zip
 
-anypoint-cli-v4 governance:ruleset:validate ~/temp/myrulesetfolder
+anypoint-cli-v4 governance:ruleset:validate ~/myrulesetfolder/myrulesetfolder
 
 ----
 
 *Example output for a valid ruleset:*
 
 ----
-Ruleset User/myuser/temp/myruleset.yaml
+Ruleset User/myuser/myrulesetfolder/myruleset.yaml
 Ruleset conforms with Dialect
 ----
 
@@ -754,7 +754,7 @@ Ruleset conforms with Dialect
 
 ----
 Ruleset does not conform with Dialect
-ModelId: file:///Users/janedoe/temp/prof-1-bad.yaml
+ModelId: file:///Users/myuser/myrulesetfolder/prof-1-bad.yaml
 Profile: Validation Profile 1.0
 Conforms: false
 Number of results: 1
@@ -764,10 +764,10 @@ Level: Violation
 - Constraint: http://a.ml/amf/default_document#/declarations/profileNode_profile_required_validation
   Message: Property 'profile' is mandatory
   Severity: Violation
-  Target: file:///Users/janedoe/temp/prof-1-bad.yaml#/encodes
+  Target: file:///Users/myuser/myrulesetfolder/prof-1-bad.yaml#/encodes
   Property: http://schema.org/name
   Range: [(3,0)-(11,19)]
-  Location: file:///Users/janedoe/temp/prof-1-bad.yaml
+  Location: file:///Users/myuser/myrulesetfolder/prof-1-bad.yaml
 ----
 
 // end::governance-ruleset-validate[]
