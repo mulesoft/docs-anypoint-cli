@@ -61,7 +61,7 @@ Supported values: `days`, `hours`, `minutes`.
 Pass this flag multiple times to specify multiple emails.
 | `--enabled` | Sets whether the alert is enabled. Include the flag to enable the alert.
 | `--operator <value>` | Condition operator explaining values relation to threshold. +
-Supported values: `gt`, `lt`, `eq`
+Supported values: `gt`, `lt`, `eq`.
 | `--periods <num>` | Number of consecutive periods condition should occur for.
 | `--policyId <num>` | ID of a policy applied to the API instance to trigger `policy-violation` alert type.
 | `--recipient <username>` | Username to send alert notification to. +
