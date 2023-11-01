@@ -60,14 +60,14 @@ Supported values: `days`, `hours`, `minutes`.
 | `--email <emailAddress>` | Email to send alert notification to. +
 Pass this flag multiple times to specify multiple emails.
 | `--enabled` | Sets whether the alert is enabled. Include the flag to enable the alert.
-| `--operator <value>` | Condition operator explaining values relation to threshold. +
+| `--operator <value>` | Condition operator that explains values in relation to threshold. +
 Supported values: `gt`, `lt`, `eq`.
 | `--periods <num>` | Number of consecutive periods condition should occur for.
 | `--policyId <num>` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type.
 | `--recipient <username>` | Username to send alert notification to. +
-You can pass this flag multiple times to specify multiple usernames.
+Pass this flag multiple times to specify multiple usernames.
 | `--responseCode <code>` | Response codes to trigger `response-code` alert type. +
-You can pass this flag multiple times to specify multiple codes.
+Pass this flag multiple times to specify multiple codes.
 | `--responseTime <num>` | Response time to trigger `response-time` alert type.
 | `--severity <value>` | Alert severity. +
 Supported values: `Info`, `Warning`, `Critical`.
@@ -94,7 +94,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |Flag |Description 
 |`--limit <value>` | Number of results to retrieve, default is 10 results
 | `--offset <value>` | Offsets the amount of APIs passed, for example, `--offset 3`
-| `--output <value>`| Specifies the response format. + 
+| `--output <value>`| Specifies the response format + 
 Supported values are `table` (default) and `json`
 | `--sort` | Sorts the results in the field name passed, for example, `--sort "Latest Version"`
 |===
@@ -113,7 +113,7 @@ Besides the `--help`, general, and authentication flags, this command also accep
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description 
-|`--gatewayVersion` | Specifies the gateway version you want to download + 
+|`--gatewayVersion` | Specifies the gateway version to download + 
 For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
 | `--output <value>`| Specifies the response format + 
 Supported values are `table` (default) and `json`
@@ -159,7 +159,7 @@ This command accepts only the default `--help`, general, and authentication flag
 > api-mgr:api:deploy [flags] <apiInstanceId>
 ----
 
-This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below. You can deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
+This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below. Deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
 
 [NOTE]
 This command is only supported for endpoints with proxy.
@@ -223,7 +223,7 @@ Besides the default `--help`, general, and authentication flags, this command ha
 
 This command downloads the API proxy ZIP file of the API instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`. You cannot download the API proxy of a Flex Gateway API instance.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts a `gatewayVersion` flag to specify the gateway version you want to download.
+Besides the default `--help`, general, and authentication flags, this command also accepts a `gatewayVersion` flag to specify the gateway version to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
 [[api-mgr-api-edit]]
@@ -233,7 +233,7 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-This command edits the API instance passed in `<apiInstanceId>`. If you edit a Flex Gateway API instance that is currently deployed, this command redeploys the edited Flex Gateway API instance. 
+This command edits the API instance passed in `<apiInstanceId>`. Editing a Flex Gateway API instance that is currently deployed will redeploy this.
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
@@ -241,11 +241,11 @@ Besides the default `--help`, general, and authentication flags, this command al
 |===
 |Flag |Description
 | `-f, --isFlex`
-| Indicates whether you are managing this API instance in FlexGateway. +
+| Indicates whether this API instance is being managed in FlexGateway. +
 Include the flag to enable it.
 
 | `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API instance in Mule 4 or above. +
+| Indicates whether this API instance is being managed in Mule 4 or above. +
 Include the flag to enable it.
 
 | `-p, --withProxy`
@@ -271,14 +271,15 @@ Supported options are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--inboundTlsContextId <value>` 
 | Outbound TLS Context ID. +
-You must supply the `--inboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
+Supply the `--inboundSecretGroupId` of the TLS Context's secret group unless the TLS Context is being removed.
+To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
 
 | `--outboundSecretGroupId <value>`
 | Outbound secret group ID. 
 
 | `--outboundTlsContextId <value>`
 | Outbound TLS Context ID. +
-You must supply the `--outboundSecretGroupId` of the TLS Context's secret group unless if you are removing a TLS Context. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
+Supply the `--outboundSecretGroupId` of the TLS Context's secret group unless a TLS Context is being removed. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
 
 | `--path <value>`
 | Proxy path.
@@ -287,10 +288,10 @@ You must supply the `--outboundSecretGroupId` of the TLS Context's secret group 
 | Proxy port.
 
 | `--providerId <value>`
-| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
+| Optional Client Identity Provider Id that the API is associated with. Default is Anypoint Platform Client Provider.
 
 | `--responseTimeout <value>`
-| Your maximum response timeout.
+| Maximum response timeout.
 
 | `--scheme <value>`
 | Proxy scheme. +
@@ -327,9 +328,9 @@ Besides the default `--help`, general, and authentication flags, this command al
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Flag |Description
-| `--apiVersion <value>`    | API version by which to filter results
-| `--assetId <value>`       | Asset ID by which to filter results
-| `--instanceLabel <value>` | API instance label by which to filter results
+| `--apiVersion <value>`    | API version that filters results
+| `--assetId <value>`       | Asset ID that filters results
+| `--instanceLabel <value>` | API instance label that filters results
 | `--limit <num>`           | Number of results to retrieve
 | `--offset <value>` | Offsets the amount of APIs passed
 
@@ -353,11 +354,11 @@ Besides the default `--help`, general, and authentication flags, this command al
 |Flag |Description
 
 | `-f, --isFlex`
-| Indicates whether you are managing this API instance in Flex Gateway. +
+| Indicates whether this API instance is being managed in Flex Gateway. +
 Include the flag to enable it. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
 
 | `-m, --muleVersion4OrAbove`
-| Indicates whether you are managing this API instance in Mule 4 or above. +
+| Indicates whether this API instance is being managed in Mule 4 or above. +
 Include the flag to enable it.
 
 | `-p, --withProxy`
@@ -383,14 +384,14 @@ Supported values are `cloudhub`, `hybrid`, or `rtf`. When deploying a Flex Gatew
 
 | `--inboundTlsContextId <value>` 
 | Outbound TLS Context ID. +
-You must supply the `--inboundSecretGroupId` of the TLS Context's secret group.
+Supply the `--inboundSecretGroupId` of the TLS Context's secret group.
 
 | `--outboundSecretGroupId <value>`
 | Outbound secret group ID.
 
 | `--outboundTlsContextId <value>`
 | Outbound TLS Context ID. +
-You must supply the `--outboundSecretGroupId` of the TLS Context's secret group.
+Supply the `--outboundSecretGroupId` of the TLS Context's secret group.
 
 | `--path <value>`
 | Proxy path.
@@ -399,7 +400,7 @@ You must supply the `--outboundSecretGroupId` of the TLS Context's secret group.
 | Proxy port.
 
 | `--providerId <value>`
-| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platfrom Client Provider.
+| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platform Client Provider.
 
 | `--responseTimeout <value>`
 | Response timeout.
@@ -516,7 +517,7 @@ This command accepts only the default `--help`, general, and authentication flag
 Lists all contracts of the API passed in `<apiInstanceId>`.
 
 [TIP]
-You can specify keywords in searchText to limit results to APIs containing those specific keywords.
+You can specify keywords in searchText to limit results of APIs containing those specific keywords.
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
@@ -594,10 +595,10 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 | `--groupId <value>`
 | Mule 4 policy group ID +
-Defaults to MuleSoft group ID when not provided
+Defaults to the MuleSoft group ID when a value is not provided
 | `--policyVersion <value>`
 | Mule 4 policy version
-| `--output <value>` | Specify the response format + 
+| `--output <value>` | Specifies the response format + 
 Supported values are `table` (default) and `json`
 
 |===
@@ -620,7 +621,7 @@ This command accepts only the default flag `--help`, general, and authentication
 > api-mgr:policy:edit [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command edits the policy configuration passed in `<policyInstanceId>` of the API instance passed in `<apiInstanceId>`.
+This command edits the policy configuration passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
@@ -697,7 +698,7 @@ Include the flag to enable it.
 | `-l, --limit <value>`
 |Single instance of an SLA tier limit in the form `--limit A,B,C` where:
 
-* `A` is a boolean indicating whether or not this limit should be visible.
+* `A` is a boolean indicating whether this limit should be visible.
 * `B` is a number of requests per "C" time period.
 * `C` is the time period unit. Time period options are:
 ** `ms`(millisecond)
@@ -745,7 +746,7 @@ This command accepts only the default `--help`, general, and authentication flag
 > api-mgr:tier:list [flags] <apiInstanceId> [searchText]
 ----
 
-This command lists the SLA tiers of the  API instance passed in `<apiInstanceId>`.
+This command lists the SLA tiers of the API instance passed in `<apiInstanceId>`.
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
@@ -754,7 +755,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |Flag |Description | Example
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3`
-| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json`.|  `--output json`
+| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 |`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 |===
 
