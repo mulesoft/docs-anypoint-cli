@@ -126,7 +126,7 @@ Supported values are `table` (default) and `json`
 > api-mgr:api:change-specification [flags] <apiInstanceId> <assetVersion>
 ----
 
-Changes the asset version for the API instance passed in `<apiInstanceId` by choosing a new version from Exchange passed in `<assetVersion>`.
+Changes the asset version for the API instance passed in `<apiInstanceId>` by choosing a new version from Exchange passed in `<assetVersion>`.
 
 This command accepts only the default `--help`, general, and authentication flags.
 
