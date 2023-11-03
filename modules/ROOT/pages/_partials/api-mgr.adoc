@@ -56,7 +56,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |Flag |Description
 | `--duration <num>` | Condition occurrence period duration.
 | `--durationUnit <value>` | Condition occurrence period duration unit. +
-Supported values: `days`, `hours`, `minutes`.
+Supported values: `days`, `hours`, and `minutes`.
 | `--email <emailAddress>` | Email to send alert notification to. +
 Pass this flag multiple times to specify multiple emails.
 | `--enabled` | Sets whether the alert is enabled. Include the flag to enable the alert.
