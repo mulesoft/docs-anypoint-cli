@@ -159,7 +159,7 @@ This command accepts only the default `--help`, general, and authentication flag
 > api-mgr:api:deploy [flags] <apiInstanceId>
 ----
 
-This command deploys the API instance passed in <apiInstanceId> to the deployment target specified using the flags described below. Deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
+This command deploys the API instance passed in '<apiInstanceId>' to the deployment target specified using the flags described below. Deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
 
 [NOTE]
 This command is only supported for endpoints with proxy.
