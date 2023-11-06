@@ -175,7 +175,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 | `--applicationName myMuleApp 643404`
 
 | `--environmentName <name>`
-| Target environment name, used only when deploying APIs from unclassified environments
+| Target environment name, only for when deploying API instances from unclassified environments
 | `--environmentName TestEnv 643404`
 
 | `--gatewayVersion <version>`
