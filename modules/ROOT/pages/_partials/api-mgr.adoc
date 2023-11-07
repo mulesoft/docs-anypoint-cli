@@ -471,7 +471,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 | `--environmentName <name>`
 | Target environment name +
- Must be provided to redeploy APIs from unclassified environments
+Include to redeploy APIs from unclassified environments
 
 | `--gatewayVersion <version>`
 | CloudHub Gateway version
