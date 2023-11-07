@@ -271,7 +271,7 @@ Supported options are `cloudhub`, `hybrid`, or `rtf`.
 
 | `--inboundTlsContextId <value>` 
 | Outbound TLS Context ID. +
-Supply the `--inboundSecretGroupId` of the TLS Context's secret group unless the TLS Context is being removed.
+Supply the `--inboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
 To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
 
 | `--outboundSecretGroupId <value>`
