@@ -279,7 +279,7 @@ To remove a TLS Context, apply the flag with the following value: `--inboundTlsC
 
 | `--outboundTlsContextId <value>`
 | Outbound TLS Context ID. +
-Supply the `--outboundSecretGroupId` of the TLS Context's secret group unless a TLS Context is being removed. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
+Supply the `--outboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
 
 | `--path <value>`
 | Proxy path.
