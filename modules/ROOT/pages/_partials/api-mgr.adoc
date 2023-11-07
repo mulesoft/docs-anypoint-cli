@@ -245,7 +245,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 Include the flag to enable it.
 
 | `-m, --muleVersion4OrAbove`
-| Indicates whether this API instance is being managed in Mule 4 or above. +
+| Indicates whether this is a Mule 4 API instance. +
 Include the flag to enable it.
 
 | `-p, --withProxy`
