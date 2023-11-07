@@ -241,7 +241,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |===
 |Flag |Description
 | `-f, --isFlex`
-| Indicates whether this API instance is being managed in FlexGateway. +
+| Indicates whether this is a Flex Gateway API instance. +
 Include the flag to enable it.
 
 | `-m, --muleVersion4OrAbove`
