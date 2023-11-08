@@ -233,7 +233,7 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-This command edits the API instance passed in `<apiInstanceId>`. Editing a Flex Gateway API instance that is currently deployed will redeploy this.
+This command edits the API instance passed in `<apiInstanceId>`. Editing a deployed Flex Gateway API instance redeploys the instance.
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
@@ -354,7 +354,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 |Flag |Description
 
 | `-f, --isFlex`
-| Indicates whether this API instance is being managed in Flex Gateway. +
+| Indicates whether this is a Flex Gateway API instance. +
 Include the flag to enable it. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
 
 | `-m, --muleVersion4OrAbove`
