@@ -2,6 +2,7 @@
 
 Use these commands for managing applications in Runtime Fabric.
 
-include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary-rtf]
+include::3.x@anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
 
-include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=commands-rtf]
+include::3.x@anypoint-cli::partial$cloudhub2-apps.adoc[tag=commands]
+
