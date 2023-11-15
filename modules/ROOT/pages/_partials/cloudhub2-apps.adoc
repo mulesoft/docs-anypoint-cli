@@ -18,9 +18,6 @@ Use these commands for applications in Cloudhub 2.0.
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-stop[runtime-mgr:application:stop] | Stops running an application
 |xref:anypoint-cli::cloudhub2-apps.adoc#runtime-mgr-application-logs[runtime-mgr:application:logs] | Tails an application's logs from a specification
 |===
-
-NOTE: These commands can be used for Cloudhub 2.0 and Runtime Fabric applications.
-
 // end::summary[]
 
 
@@ -168,7 +165,7 @@ Besides the default `--help` flag, this command also takes:
 |Flag |Description |Example
 |`--artifactId` |ID of the application retrieved from Exchange. | `--artifactId mule-maven-plugin`
 |`--assetVersion` | Version of the Exchange application to use. +
-Default: latest application version | `-assetVersion 2.0.4`
+Default: latest application version | `--assetVersion 2.0.4`
 |`--[no-]clustered`| Enables clustered nodes, which requires at least two replicas. +
 Default: `disabled` |`--no-clustered`
 |`--[no-]disableAmLogForwarding`| Disables forwarding applications logs to Anypoint Monitoring. +
