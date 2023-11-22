@@ -783,3 +783,19 @@ To get the GAVs for Exchange assets:
 * If you are using the Exchange web UI, select the asset in Exchange and copy the group ID and asset ID from the URL. Then, add the version node for the version you are viewing. For example, the GAV for the OpenAPI Best Practices ruleset in Exchange is `68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`.
 
 // end::exchange-asset-identifier[]
+
+// tag::governance-cli-permissions[]
+
+Commands that require access to Anypoint Platform require adequate permissions to execute the functionality they are trying to execute.
+
+The `governance` commands have the following restrictions:
+
+* None:
++
+Any commands that run locally without accessing Anypoint Platform, such as `ruleset validate`, `ruleset document`, and `api validate`
++
+* The same as the API Governance UI:
++
+Any commands that require log in to Anypoint Platform to execute successfully, such as `profile create`, `profile update`, `profile delete`, and commands that use `--remote` flags
+
+// end::governance-cli-permissions[]
