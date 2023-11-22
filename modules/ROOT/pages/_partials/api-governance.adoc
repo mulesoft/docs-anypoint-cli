@@ -786,16 +786,20 @@ To get the GAVs for Exchange assets:
 
 // tag::governance-cli-permissions[]
 
-Commands that require access to Anypoint Platform require adequate permissions to execute the functionality they are trying to execute.
+Anypoint CLI commands that access functionality in Anypoint Platform require adequate permissions to execute successfully.
 
-The `governance` commands have the following restrictions:
+The `governance` commands require the following permissions:
 
 * None:
 +
 Any commands that run locally without accessing Anypoint Platform, such as `ruleset validate`, `ruleset document`, and `api validate`
 +
-* The same as the API Governance UI:
+* Governance Administrator:
 +
-Any commands that require log in to Anypoint Platform to execute successfully, such as `profile create`, `profile update`, `profile delete`, and commands that use `--remote` flags
+Commands that update API Governance entities, such as `profile create`, `profile update`, and `profile delete`
++ 
+* Governance Viewer:
++ 
+Commands that list API Governance information only, such as `api inspect` and `profile list`
 
 // end::governance-cli-permissions[]
