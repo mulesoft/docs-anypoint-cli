@@ -1,6 +1,5 @@
 = API Governance
 
-
 // tag::summary[]
 
 |===
@@ -46,36 +45,36 @@ Available filters include:
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
-* `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
 Example: 
-tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope:async-api,env-type:production
 |===
 
 NOTE: This command must be run with either the `--criteria` or the `--api` flag.  
 
 *Example commands:*
 
-[source,copy]
-----
-anypoint-cli-v4 governance:api:evaluate --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
+`anypoint-cli-v4 governance:api:evaluate --criteria "tag:best,category:API Type:Experience API,scope:rest-api"`
 
-anypoint-cli-v4 governance:api:evaluate --api ~/Downloads/order-api-1.0.0-raml.zip
-----
+`anypoint-cli-v4 governance:api:evaluate --api order-api-1.0.0-raml.zip` +
+where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file 
 
 *Example output:*
 
 ----
-Ruleset GAV                                                       
-68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.0
-8a840abd-e63a-4f8b-87ab-24052eda2017/best-practices-ruleset/1.0.0 
-68ef9520-24e9-4cf2-b2f5-620025690913/required-examples/1.0.0 
+╔════════════════════════════════════════════════════════════════════╗
+║ Ruleset GAV                                                        ║
+╟────────────────────────────────────────────────────────────────────╢
+║ 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.5.1 ║
+╟────────────────────────────────────────────────────────────────────╢
+║ 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.1 ║
+╚════════════════════════════════════════════════════════════════════╝
 ----
 
 // end::governance-api-evaluate[]
@@ -167,7 +166,7 @@ You can specify rulesets against which to validate as follows:
 
 * To validate against local rulesets, use the `--rulesets` flag.
 
-NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets may be validated multiple times.
+NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets might be validated multiple times.
 
 Besides the default flags, this command also accepts:
 
@@ -199,7 +198,7 @@ anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --rules
 
 anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
 
-anypoint-cli-v4 governance:api:validate --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0
+anypoint-cli-v4 governance:api:validate 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0 --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote
 ----
 
 *Example output:*
@@ -270,14 +269,28 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:document ~/temp/ruleset.yaml ~/temp/ruleset.doc.zip
+anypoint-cli-v4 governance:document /myrulesetfolder/mynewruleset.yaml /myrulesetfolder/ruleset.doc.zip
 ----
 
 *Example output:*
 
 ----
- validation name [ 'scalar-parameters' ]
- Saving to /Users/janedoe/temp/prof-1.doc.zip
+validation name [ 'security-fields-operation-empty' ]
+validation name [ 'access-tokens-oauth2-cleartext' ]
+validation name [ 'insecure-oauth2-grants' ]
+validation name [ 'api-keys-in-cookie' ]
+validation name [ 'api-keys-in-query' ]
+validation name [ 'api-keys-in-header' ]
+validation name [ 'api-negotiates-authentication' ]
+validation name [ 'insecure-basic-auth' ]
+validation name [ 'bearer-token-cleartext' ]
+validation name [ 'http-token-cleartext' ]
+validation name [ 'oauth1-deprecated' ]
+validation name [ 'oauth2-redirections-non-encrypted' ]
+validation name [ 'unknown-security-scheme' ]
+validation name [ 'valid-server-urltemplate' ]
+validation name [ 'valid-oauth2-redirection-urls' ]
+Saving to myRulesetFolder/ruleset.doc.zip
 ----
 
 // end::governance-document[]
@@ -301,23 +314,22 @@ Besides the default flags, this command also accepts:
 |===
 |Flag |Description
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
-* `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
 Example: 
-tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope:async-api,env-type:production
 
 |`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile's description.
@@ -336,13 +348,13 @@ tag:tag1,category:category1:value,category:category2:value2,status:stable,status
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+anypoint-cli-v4 governance:profile:create "OAS Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,scope:rest-api" --description "Profile for OAS Best Practices"
 
-anypoint-cli-v4 governance:profile:create "Open API Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,status:development,scope:rest-api" --description "Profile for OAS Best Practices"
+anypoint-cli-v4 governance:profile:create "Open API Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --criteria "tag:oas,category:API Type:Experience API,scope:rest-api" --description "Profile for OAS Best Practices"
 
-anypoint-cli-v4 governance:profile:create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
+anypoint-cli-v4 governance:profile:create "Anypoint Best Practices" 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-api-best-practices/1.0.1 --criteria "tag:raml tag:oas category:API Type:Experience API,scope:rest-api" --description "Profile for REST API Best Practices" --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
-anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,status:stable,scope:rest-api" --description "Profile for Primary API Standards"
+anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/1.0.2 --criteria "tag:prim,category:API Type:Experience API,scope:rest-api" --description "Profile for Primary API Standards"
 ----
 
 *Example output:*
@@ -490,23 +502,22 @@ Besides the default flags, this command also accepts:
 
 See <<exchange-asset-identifiers>>.
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets will apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
 * `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
-* `status`: Lifecycle state of stable, development, or deprecated
 * `env-type`: Environment type of any, production, or sandbox
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
-If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. APIs in the development lifecycle cannot have instances. 
+If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
 
 Example: 
-tag:tag1,category:category1:value,category:category2:value2,status:stable,status:development,status:deprecated,scope:rest-api,scope:async-api,env-type:production
+tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope:async-api,env-type:production
 
 |`--description <description>`
 |The `description` flag is followed by a string that is the new governance profile description.
@@ -530,13 +541,13 @@ tag:tag1,category:category1:value,category:category2:value2,status:stable,status
 ----
 anypoint-cli-v4 governance:profile:update 4eaf9176-3ef9-4021-a67c-6e4bc10d3763 --profile-name "MyOrg Best Practices"
 
-anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:development,scope:rest-api`
+anypoint-cli-v4 governance:profile:update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,scope:rest-api`
 
 anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-publisher  --notify-contact --notify-others a@a.a,b@b.com
 
 anypoint-cli-v4 governance profile update 67eff44a-28a3-43d4-93d9-bddedb92c711 --notify-off
 
-anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,status:stable,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
+anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed --criteria `tag:best,category:API Type:Experience API,scope:rest-api,env-type:production` --ruleset-gavs 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/latest,68ef9520-24e9-4cf2-b2f5-620025690913/myorg-best-practices/latest
 ----
 
 *Example output:*
@@ -625,7 +636,7 @@ See <<exchange-asset-identifiers>>.
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:info ~/temp/myruleset.yaml
+anypoint-cli-v4 governance:ruleset:info myrulesetfolder/myruleset.yaml
 
 anypoint-cli-v4 governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/anypoint-best-practices/1.0.2 --remote
 
@@ -635,19 +646,41 @@ anypoint-cli-v4  governance:ruleset:info 68ef9520-24e9-4cf2-b2f5-620025690913/an
 *Example output:*
 
 ----
-Ruleset /Users/myuser/temp/myruleset.yaml
-Violation	operation-default-response
-Violation	operation-operationId     
-Warning  	operation-singular-tag    
-Warning  	tag-description           
-Warning  	info-contact              
-Warning  	info-description          
-Warning  	info-license              
-Warning  	license-url               
-Warning  	openapi-tags              
-Warning  	operation-description     
-Warning  	operation-tags            
-Warning  	operation-tag-defined  
+Ruleset myrulesetfolder/myruleset.yaml
+Ruleset conforms with Dialect
+╔═══════════╤═══════════════════════════════════╗
+║ Violation │ security-fields-operation-empty   ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ access-tokens-oauth2-cleartext    ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ insecure-oauth2-grants            ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-keys-in-cookie                ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-keys-in-query                 ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-keys-in-header                ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ api-negotiates-authentication     ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ insecure-basic-auth               ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ bearer-token-cleartext            ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ http-token-cleartext              ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ oauth2-redirections-non-encrypted ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ unknown-security-scheme           ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ valid-server-urltemplate          ║
+╟───────────┼───────────────────────────────────╢
+║ Violation │ valid-oauth2-redirection-urls     ║
+╟───────────┼───────────────────────────────────╢
+║ Warning   │ unknown-security-scheme           ║
+╟───────────┼───────────────────────────────────╢
+║ Warning   │ oauth1-deprecated                 ║
+╚═══════════╧═══════════════════════════════════╝ 
 ----
 
 // end::governance-ruleset-info[]
@@ -671,7 +704,7 @@ Besides the default flags, this command also accepts:
 |The `types` flag gives the target types to export as rules. You can use the `governance:api:inspect` command to identify the types to specify for this flag. See <<governance-api-inspect>>.
 
 |`--name <name>`
-|The `name` flag is the name of the ruleset. Defaults to `GeneratedRuleset`.
+|The `name` flag is the name of the ruleset. This defaults to `GeneratedRuleset`.
 |===
 
 *Example command:*
@@ -702,25 +735,26 @@ This command accepts only the default flags.
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:validate ~/temp/myruleset.yaml
+anypoint-cli-v4 governance:ruleset:validate ~/myrulesetfolder/myruleset.yaml
 
-anypoint-cli-v4 governance:ruleset:validate ~/temp/myruleset.zip
+anypoint-cli-v4 governance:ruleset:validate ~/myrulesetfolder/myruleset.zip
 
-anypoint-cli-v4 governance:ruleset:validate ~/temp/myrulesetfolder
+anypoint-cli-v4 governance:ruleset:validate ~/myrulesetfolder/myrulesetfolder
 
 ----
 
 *Example output for a valid ruleset:*
 
 ----
- Ruleset conforms with Dialect
+Ruleset User/myuser/myrulesetfolder/myruleset.yaml
+Ruleset conforms with Dialect
 ----
 
 *Example output for a nonvalid ruleset:*
 
 ----
 Ruleset does not conform with Dialect
-ModelId: file:///Users/janedoe/temp/prof-1-bad.yaml
+ModelId: file:///Users/myuser/myrulesetfolder/prof-1-bad.yaml
 Profile: Validation Profile 1.0
 Conforms: false
 Number of results: 1
@@ -730,10 +764,10 @@ Level: Violation
 - Constraint: http://a.ml/amf/default_document#/declarations/profileNode_profile_required_validation
   Message: Property 'profile' is mandatory
   Severity: Violation
-  Target: file:///Users/janedoe/temp/prof-1-bad.yaml#/encodes
+  Target: file:///Users/myuser/myrulesetfolder/prof-1-bad.yaml#/encodes
   Property: http://schema.org/name
   Range: [(3,0)-(11,19)]
-  Location: file:///Users/janedoe/temp/prof-1-bad.yaml
+  Location: file:///Users/myuser/myrulesetfolder/prof-1-bad.yaml
 ----
 
 // end::governance-ruleset-validate[]

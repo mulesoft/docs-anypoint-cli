@@ -38,10 +38,6 @@ xref:server-groups.adoc[Local Server Groups]
 
 xref:server-clusters.adoc[Local Server Clusters]
 
-xref:runtime-fabric-apps.adoc[Runetime Fabric Applications]
-
-xref:rtf-instances.adoc[Runtime Fabric Instances]
-
 == Anypoint Platform Accounts
 
 include::4.x@anypoint-cli::partial$account.adoc[tag=summary]
@@ -106,14 +102,6 @@ include::4.x@anypoint-cli::partial$server-groups.adoc[tag=summary]
 
 == Local Server Clusters
 include::4.x@anypoint-cli::partial$server-clusters.adoc[tag=summary]
-
-== Runtime Fabric Applications
-
-include::4.x@anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
-
-== Runtime Fabric Instances
-
-include::4.x@anypoint-cli::partial$rtf-instances.adoc[tag=summary]
 
 
 == See Also
