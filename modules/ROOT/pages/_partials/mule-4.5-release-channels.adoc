@@ -1,7 +1,7 @@
 Starting with Mule 4.5, MuleSoft introduces two new release channels, Edge and Long-term Support (LTS). The Mule runtime versioning schema for the new release channels is:
-+
+
 _Major[numeric] . Minor[numeric] . Patch[numeric] : Build[numeric] Channel[e for edge, nothing for LTS]_
-+
+
 Some examples of these values are: `4.6.0:1e` for Edge, and `4.6.0:1` for LTS. 
-+
+
 For more information, see xref:release-notes::mule-runtime/lts-edge-release-cadence.adoc[].
