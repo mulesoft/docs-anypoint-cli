@@ -156,21 +156,21 @@ Depending on the type of asset, some possible classifier values are:
 * External Library
 ** `external-library` (with `jar` as packaging) 
 
-| `--categories` | Categories 
+| `--categories` | Categories (value should be a string in JSON format)
 
-`categories.someKey value`
-
-For example:
-
-`categories.anotherKey anotherValue`
-
-| `--fields` | Fields 
-
-`fields.someKey value`
+'{"key": "value"}'
 
 For example:
 
-`fields.anotherKey anotherValue`
+'{"Department": "IT"}'
+
+| `--fields` | Fields (value should be a string in JSON format)
+
+'{"key": "value"}'
+
+For example:
+
+'{"releaseDate": "2020-01-01T20:00:00.000Z"}'
 
 | `--keywords` | Keywords (comma-separated) 
 
