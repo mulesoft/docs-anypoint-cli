@@ -147,6 +147,7 @@ Depending on the type of asset, some possible classifier values are:
 ** `wsdl` (with `zip`, `wsld`, or `xml` as packaging)
 * Custom
 ** `custom`
+** `docs` (with `doc.zip` as packaging)
 * Application
 ** `mule-application` (with `jar` as packaging)
 * Policy
@@ -161,6 +162,8 @@ Depending on the type of asset, some possible classifier values are:
 ** `studio-plugin` (with `zip` as packaging) + file with no classifier and packaging `jar`
 * External Library
 ** `external-library` (with `jar` as packaging) 
+* Ruleset
+** `ruleset`  (with `zip` or `yaml` as packaging)
 
 | `--categories` | Categories 
 
