@@ -116,10 +116,14 @@ Default: `rolling` | `--updateStrategy recreate`
 |===
 
 
-NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
+[NOTE]
+This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
-
+[NOTE]
+====
+include::anypoint-cli::partial$mule-4.5-release-channels.adoc[]
+====
 
 [[runtime-mgr-application-download-logs]]
 == runtime-mgr:application:download-logs
