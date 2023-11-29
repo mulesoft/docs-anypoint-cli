@@ -59,6 +59,8 @@
 
 NOTE: Exchange commands are currently not available for GovCloud.
 
+// tag::exchange-asset-upload[]
+
 [[exchange-asset-upload]]
 == exchange:asset:upload
 
@@ -66,7 +68,7 @@ NOTE: Exchange commands are currently not available for GovCloud.
 > exchange:asset:upload [flags] <assetIdentifier>
 ----
 
-This command uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, example, policy, extension, external-library or connector asset using the ID passed in `<assetIdentifier>`.
+This command uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, example, policy, extension, external-library, connector asset, or ruleset using the ID passed in `<assetIdentifier>`. 
 
 Use the following format for the _assetIdentifier_ argument:
 
@@ -94,11 +96,15 @@ For example:
 
 | `--files` | Asset file, identified as `classifier.packaging` or `packaging` and its file path, for example, `--files='{"oas.zip":"​/my-api.raml"}'`
 
-To send multiple files, use the same flag multiple times:
+To send multiple files, you typically use the same flag multiple times:
 
 `--files='{"oas.zip": "my-demo-oas.zip"}' --files='{"custom.zip": "~/my-custom-file.zip"}'` 
 
-For example:
+An exception to this is when you upload ruleset documentation with a ruleset. Both sets of classifiers and packaging options must be entered in a single `--files` flag:
+
+`--files='{"ruleset.yaml":"/myRulesetFolder/mynewruleset.yaml","docs.zip":"/myRulesetFolder/ruleset.doc.zip"}'`
+
+Examples:
 
 To upload a POM file and a RAML specification:
 
@@ -202,6 +208,8 @@ Default value:
 * `published` 
 
 |===
+
+// end::exchange-asset-upload[]
 
 [[exchange-asset-mutableDataUpload]]
 == exchange:asset:mutableDataUpload
