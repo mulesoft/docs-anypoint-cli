@@ -11,6 +11,7 @@
 * xref:api-catalog.adoc[API Catalog]
 * xref:api-governance.adoc[API Governance]
 * xref:api-mgr.adoc[API Manager]
+* xref:api-project.adoc[API Project]
 * xref:cloudhub2-apps.adoc[Cloudhub 2.0]
 * xref:cloudhub.adoc[CloudHub]
  ** xref:cloudhub-apps.adoc[CloudHub Applications]

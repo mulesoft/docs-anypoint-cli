@@ -1,0 +1,7 @@
+== CLI for API Project 
+
+The API Project plugin allows you to develop API projects locally, implement governance rulesets, perform validation, and publish the project to the exchange.
+
+
+
+
