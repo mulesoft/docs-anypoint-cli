@@ -1,7 +1,80 @@
-== CLI for API Project 
+= CLI for API Project
 
 The API Project plugin allows you to develop API projects locally, implement governance rulesets, perform validation, and publish the project to the exchange.
 
+To install this plugin, you have to have the latest version of anypoint CLI 4.x installed. Then, run this command:
+`anypoint-cli-v4 plugins:install @mulesoft/anypoint-cli-api-project-plugin@0.1.0-10.init`
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::api-project.adoc#api-project-generate[api-project:generate] | Generates a new API Project
+|xref:anypoint-cli::api-project.adoc#api-project-validate[api-project:validate] | Validates an API Project
+|xref:anypoint-cli::api-project.adoc#api-project-publish[api-project:publish] | Publishes an API Project to Exchange
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+[[api-project-generate]]
+== api-project:generate
+
+----
+> api-project:generate [flags] <name> <location>
+----
+
+This command creates a new API Project, and creates a new `exchange.json` file using the name providaded in <name>, and the values for the API Specification file provided in `<location>`. If location is not specified, the API specification is created with default values and the one specified in the flags. 
+
+
+Besides the default `--help` flag, this command also accepts:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description |  Example
+| `--location` | Specify a file to use as API specification for the new API Project` | `--location`
+| `--api-version` | Override the dfefault API version in your file for the one specified | `--api-version v1.1`
+|`--classifier` | Define the project type. +
+Supported values are:
+* `raml`
+* `oas` |`--classifier raml`
+|`--format` |Define the format of the specification. +
+Supported values are:
+
+* `yaml`
+* `json` | `--format yaml`
+|`--format-version` |to be completed | `--format-version 0.8`
+|`--json` |Change the output to a JSON format. |`--json`
+|`--main` |The name of the main file name. |`--main sample.xml`
+|`--name` |The name for the project. |`--name testproject`
+|`--groupId` |The project's group ID. |`--groupId com.mulesoft.com`
+|`--assetId` |The project's asset ID. |`--assetId testproject`
+|`--asset-version` |The asset's version. |`--asset-version 1.0`
+
+
+
+
+|===
+
+
+[[api-project-validate]]
+== api-project:validate
+
+----
+> api-project:validate [flags] 
+----
+
+
+[[api-project-publish]]
+== api-project:publish
+
+----
+> api-project:publish [flags] 
+----
+
+//end::commands[]
 
 
 
