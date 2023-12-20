@@ -775,12 +775,12 @@ Level: Violation
 // tag::exchange-asset-identifier[]
 
 [[exchange-asset-identifiers]]
-== Get Exchange Asset Identifiers (GAVs)
+== Get Exchange Asset Identifiers
 
-To get the full asset identifier (group ID/asset ID/version or GAV) for Exchange assets:
+To get the full asset identifier (group ID/asset ID/version) for Exchange assets:
 
-* If you are using the Exchange CLI, run the `exchange:asset:list` command. 
-* If you are using the Exchange web UI, select the asset in Exchange and copy the group ID and asset ID from the URL. Then, add the version node for the version you are viewing. For example, the GAV for the OpenAPI Best Practices ruleset in Exchange is `68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`.
+* If you are using Anypoint CLI, run the `exchange:asset:list` command. 
+* If you are using the Anypoint Platform web UI, select the asset in Exchange and copy the group ID and asset ID from the URL. Then, add the version node for the version you are viewing. For example, the asset identifier for the OpenAPI Best Practices ruleset in Exchange is `68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`.
 
 // end::exchange-asset-identifier[]
 
