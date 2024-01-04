@@ -584,7 +584,7 @@ The following example defines a rate limit of one request every ten seconds:
 > api-mgr:policy:describe [flags] <policyId>
 ----
 
-This command shows the description and available configuration properties of the policy passed in `<policyId>`. +
+This command shows the description and available base configuration properties of the policy name passed in `<policyId>`. +
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
