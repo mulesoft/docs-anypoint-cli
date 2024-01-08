@@ -83,7 +83,10 @@ This command accepts only the default flag `--help`.
 
 This command downloads the Design Center project passed in `name` to your local directory specified in `targetDir`.
 
-This command accepts only the default flag `--help`.
+Use the `--resolveDependenciesTimeout=X` flag to specify the duration, in minutes, for which the system should await the resolution of dependencies before downloading a project. Adjust the value of X according to your desired duration.
+
+This command also accepts the default flag `--help`.
+
 
 [[designcenter-project-publish]]
 == designcenter:project:publish
