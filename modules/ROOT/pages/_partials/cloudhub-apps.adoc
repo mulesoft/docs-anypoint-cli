@@ -22,6 +22,8 @@
 |xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-copy[runtime-mgr:cloudhub:application:copy] | Copies a CloudHub application
 // |<<runtime-mgr-cloudhub-application-upgrade-runtime[>> | Upgrades application runtime to the latest patch version or if a version if specified, to that version.
 // |<<runtime-mgr-cloudhub-application-downgrade-runtime>> | Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
+|xref:anypoint-cli::cloudhub-apps.adoc#cloudhub-region-list[cloudhub:region:list] | Lists all supported regions
+|xref:anypoint-cli::cloudhub-apps.adoc#cloudhub-runtime-list[cloudhub:runtime:list] | Lists all available runtimes
 |===
 
 // end::summary[]
@@ -317,5 +319,27 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 When copying an application containing safely hidden application properties, pass the properties in the `copy` command using the `--property` flag.
 For information about safely hidden application properties, see xref:runtime-manager::secure-application-properties.adoc[Safely Hide Application Properties].
 
+
+[[cloudhub-region-list]]
+== cloudhub:region:list
+
+----
+> cloudhub:region:list [flags]
+----
+This command lists all supported regions.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+[[cloudhub-runtime-list]]
+== cloudhub:runtime:list
+
+----
+> cloudhub:runtime:list [flags]
+----
+This command lists all supported runtimes.
+
+This command accepts only the default flag `--help`.
 
 // end::commands[]
