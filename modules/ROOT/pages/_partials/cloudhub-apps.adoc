@@ -23,7 +23,7 @@
 // |<<runtime-mgr-cloudhub-application-upgrade-runtime[>> | Upgrades application runtime to the latest patch version or if a version if specified, to that version.
 // |<<runtime-mgr-cloudhub-application-downgrade-runtime>> | Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
 |xref:anypoint-cli::cloudhub-apps.adoc#cloudhub-region-list[cloudhub:region:list] | Lists all supported regions
-|xref:anypoint-cli::cloudhub-aps.adoc#cloudhub-runtime-list[cloudhub:runtime:list] | Lists all available runtimes
+|xref:anypoint-cli::cloudhub-apps.adoc#cloudhub-runtime-list[cloudhub:runtime:list] | Lists all available runtimes
 |===
 
 // end::summary[]
