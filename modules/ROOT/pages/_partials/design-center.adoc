@@ -77,6 +77,8 @@ This command accepts only the default options: `--help`, `-f`/`--fields` and `-o
 This command downloads the Design Center project passed in `name` to your local directory specified in `targetDir`.
 
 Use the `--branch` option to select the branch you want to download content from.
+Use the `--resolveDependenciesTimeout=X` flag to specify the duration, in minutes, for the commands to wait for the resolution of dependencies before downloading a project. If the specified time passes, your project downloads without the missing dependencies.
+
 
 This command also accepts the default options: `--help`, `-f`/`--fields` and `-o`/`--output`.
 
