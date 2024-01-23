@@ -24,8 +24,6 @@
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-remove[cloudhub:load-balancer:mappings:remove] | Removes a proxy mapping rule. If no `certificateName` is given, the mappings for the default SSL endpoint are shown.
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-enable[cloudhub:load-balancer:dynamic-ips:enable] | Enables dynamic IPs
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-disable[cloudhub:load-balancer:dynamic-ips:disable] | Disables dynamic IPs
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-region-list[cloudhub:region:list] | Lists all supported regions
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-runtime-list[cloudhub:runtime:list] | Lists all available runtimes
 |===
 
 // end::summary[]
@@ -321,28 +319,6 @@ This command accepts only the default flag `--help`.
 > cloudhub:load-balancer:dynamic-ips:disable [flags] <name>
 ----
 This command disables dynamic IPs for the load balancer specified in `<name>`.
-
-This command accepts only the default flag `--help`.
-
-[[cloudhub-region-list]]
-== cloudhub:region:list
-
-----
-> cloudhub:region:list [flags]
-----
-This command lists all supported regions.
-
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
-
-This command also accepts the default flag `--help`.
-
-[[cloudhub-runtime-list]]
-== cloudhub:runtime:list
-
-----
-> cloudhub:runtime:list [flags]
-----
-This command lists all supported runtimes.
 
 This command accepts only the default flag `--help`.
 
