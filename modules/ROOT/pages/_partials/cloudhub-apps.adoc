@@ -22,6 +22,8 @@
 |xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-copy[runtime-mgr:cloudhub:application:copy] | Copies a CloudHub application
 // |<<runtime-mgr-cloudhub-application-upgrade-runtime[>> | Upgrades application runtime to the latest patch version or if a version if specified, to that version.
 // |<<runtime-mgr-cloudhub-application-downgrade-runtime>> | Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
+|xref:anypoint-cli::cloudhub-apps.adoc#cloudhub-region-list[cloudhub:region:list] | Lists all supported regions
+|xref:anypoint-cli::cloudhub-apps.adoc#cloudhub-runtime-list[cloudhub:runtime:list] | Lists all available runtimes
 |===
 
 // end::summary[]
@@ -183,6 +185,8 @@ Character `:` is not supported for the property's name.
 |--help                                                  |
 Output usage information
 |--timeout | Set the timeout value in miliseconds. Can take values between `60000` and `300000`.
+|--releaseChannel| Set the name of the release channel to be used for the selected Mule version. Supported values are `NONE`, `EDGE`, `LTS`. If you don't specify the Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error.
+|--javaVersion | Set the name of the JAVA version to be used for the selected Mule version. Supported values are: `8 and `17`. If you don't specify the Mule version, the default Mule version for the selected JAVA version is used. If the JAVA version you specify is not available for the selected Mule version, you get an error.
 
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
@@ -317,5 +321,27 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 When copying an application containing safely hidden application properties, pass the properties in the `copy` command using the `--property` flag.
 For information about safely hidden application properties, see xref:runtime-manager::secure-application-properties.adoc[Safely Hide Application Properties].
 
+
+[[cloudhub-region-list]]
+== cloudhub:region:list
+
+----
+> cloudhub:region:list [flags]
+----
+This command lists all supported regions.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+[[cloudhub-runtime-list]]
+== cloudhub:runtime:list
+
+----
+> cloudhub:runtime:list [flags]
+----
+This command lists all supported runtimes.
+
+This command accepts only the default flag `--help`.
 
 // end::commands[]
