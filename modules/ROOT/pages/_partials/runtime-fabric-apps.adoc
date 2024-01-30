@@ -70,9 +70,11 @@ Default: `disabled` +
 Values: `true`, `false`| `false`
 |`groupID` | Group ID of the asset to deploy. +
 Default: selected organization ID | `org.mule.test`
+|`java` | Set the name of the JAVA version to be used for the selected Mule version. Supported values are `8` and `17`. If you don't specify a Mule version, the default Mule version for the selected JAVA version is used. If the JAVA version you select is not available for the specified Mule version, you get an error. | `8`
 |`lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` +
 Supported values: `true`, `false` | `true`
+|`memory`| The amount of memory allocated to each replica of a Mule application or API gateway. | `0.7`
 |`objectStoreV2`| Enables Object Store v2. +
 Default: `disabled` +
  Supported values: `true`, `false` | `true`
@@ -84,16 +86,19 @@ Format: `name:value` | `testproperty:true`
 Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
 Format: separated by commas, no spaces | `my-superapp-example:/status?limit=10`
+|`releaseChannel` | Number of replicas. Must be above `0`. +
+Default: `1` | `2`
 |`replicas` | Number of replicas. Must be above `0`. +
 Default: `1` | `2`
-|`replicaSize`| Size of replicas in Vcores. +
-Default: `0.1` | `0.5`
+|`replicaSize`| Set the name of the release channel to be used for the selected Mule version. Supported values are `NONE`, `EDGE`, and `LTS`. If you don't specify a Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error. | `EDGE`
+|`reservedCPU` | The amount of vCPU guaranteed to the application and reserved for its use. | `0.02`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
+|`vCPULimit`| The maximum amount of vCPU the application can use (the level to which it can burst). This is shared CPU on the worker node. | `3.9`
 |===
 
 [[runtime-mgr-application-describe]]
