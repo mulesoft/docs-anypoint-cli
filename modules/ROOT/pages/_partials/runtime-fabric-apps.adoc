@@ -70,7 +70,7 @@ Default: `disabled` +
 Values: `true`, `false`| `false`
 |`groupID` | Group ID of the asset to deploy. +
 Default: selected organization ID | `org.mule.test`
-|`java` | Set the name of the JAVA version to be used for the selected Mule version. Supported values are `8` and `17`. If you don't specify a Mule version, the default Mule version for the selected JAVA version is used. If the JAVA version you select is not available for the specified Mule version, you get an error. | `8`
+|`javaVersion` | Set the name of the JAVA version to be used for the selected Mule version. Supported values are `8` and `17`. If you don't specify a Mule version, the default Mule version for the selected JAVA version is used. If the JAVA version you select is not available for the specified Mule version, you get an error. | `8`
 |`lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` +
 Supported values: `true`, `false` | `true`
