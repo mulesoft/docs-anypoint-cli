@@ -159,7 +159,7 @@ The flags this command can take are:
 |===
 |Flag |Description
 |--runtime                                   | Name and version of the runtime environment. +
-Use this flag to specify the name and version of the runtime you want to deploy. +
+Use this flag to specify the name and version of the runtime you want to deploy. If you don’t specify a runtime version, CloudHub API deploys the latest version available considering the values you select for `--javaVersion` and `--releaseChannel` +
 Some examples of this value are `2.1.1-API-Gateway`, `3.9.1-visualizer` or   `4.1.1`. +
 (This value is the latest CloudHub Runtime version by default.)
 |--workers                                      | Number of workers. (This value is '1' by default)
