@@ -186,7 +186,7 @@ Character `:` is not supported for the property's name.
 Output usage information
 |--timeout | Set the timeout value in miliseconds. Can take values between `60000` and `300000`.
 |--releaseChannel| Set the name of the release channel to be used for the selected Mule version. Supported values are `NONE`, `EDGE`, and `LTS`. If you do not specify a value, CloudHub API imposes the default value. The default release channel is `EDGE`. If you don't specify a Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error.
-|--javaVersion | Set the name of the JAVA version to be used for the selected Mule version. Supported values are `8` and `17`. If you do not specify a value, CloudHub API imposes the default value. The default JAVA version for Mule 4.6 and earlier versions is '8'. If you don't specify a Mule version, the default Mule version for the selected JAVA version is used. If the JAVA version you select is not available for the specified Mule version, you get an error.
+|--javaVersion | Set the name of the Java version to be used for the selected Mule version. Supported values are `8` and `17`. If you do not specify a value, CloudHub API imposes the default value. The default Java version for Mule 4.6 and earlier versions is '8'. If you don't specify a Mule version, the default Mule version for the selected Java version is used. If the Java version you select is not available for the specified Mule version, you get an error.
 
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
