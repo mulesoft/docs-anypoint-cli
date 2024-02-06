@@ -6,16 +6,16 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-delete[runtime-mgr application delete] | Deletes an application
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-describe[runtime-mgr application describe] | Describes an application
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json] | Describes an application in a raw JSON response
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs] | Downloads logs of an application from a specification to a specified directory 
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-list[runtime-mgr application list] | Lists all applications in an organization
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-modify[runtime-mgr application modify] | Modifies a deployed application
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-start[runtime-mgr application start] | Starts a stopped application
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop] | Stops running an application
-| xref:anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs] | Tails an application's logs from a specification 
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-delete[runtime-mgr application delete] | Deletes an application
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-deploy[runtime-mgr application deploy] | Deploys an application to a specified target using an Exchange application and runs the specified runtime version
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-describe[runtime-mgr application describe] | Describes an application
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-describe-json[runtime-mgr application describe-json] | Describes an application in a raw JSON response
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-download-logs[runtime-mgr application download-logs] | Downloads logs of an application from a specification to a specified directory 
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-list[runtime-mgr application list] | Lists all applications in an organization
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-modify[runtime-mgr application modify] | Modifies a deployed application
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-start[runtime-mgr application start] | Starts a stopped application
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-stop[runtime-mgr application stop] | Stops running an application
+| xref:3.x@anypoint-cli::runtime-fabric-apps.adoc#runtime-mgr-application-tail-logs[runtime-mgr application tail-logs] | Tails an application's logs from a specification 
 |===
 // end::summary[]
 
@@ -70,9 +70,11 @@ Default: `disabled` +
 Values: `true`, `false`| `false`
 |`groupID` | Group ID of the asset to deploy. +
 Default: selected organization ID | `org.mule.test`
+|`javaVersion` | Set the name of the JAVA version to be used for the selected Mule version. Supported values are `8` and `17`. If you do not specify a value, Runtime Fabric imposes the default value. The default JAVA version for Mule 4.6 and earlier versions is '8'. If you don't specify a Mule version, the default Mule version for the selected JAVA version is used. If the JAVA version you select is not available for the specified Mule version, you get an error. | `8`
 |`lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` +
 Supported values: `true`, `false` | `true`
+|`memory`| The amount of memory allocated to each replica of a Mule application or API gateway. | `0.7`
 |`objectStoreV2`| Enables Object Store v2. +
 Default: `disabled` +
  Supported values: `true`, `false` | `true`
@@ -84,16 +86,19 @@ Format: `name:value` | `testproperty:true`
 Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
 Format: separated by commas, no spaces | `my-superapp-example:/status?limit=10`
+|`releaseChannel` | Set the name of the release channel to be used for the selected Mule version. Supported values are `NONE`, `EDGE`, and `LTS`. If you do not specify a value, Runtime Fabric imposes the default value. The default release channel is `EDGE`. If you don't specify a Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error. | `EDGE`
 |`replicas` | Number of replicas. Must be above `0`. +
 Default: `1` | `2`
 |`replicaSize`| Size of replicas in Vcores. +
 Default: `0.1` | `0.5`
+|`reservedCPU` | The amount of vCPU guaranteed to the application and reserved for its use. | `0.02`
 |`scopeLoggingConfig`| Defines scope logging. +
 Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
+|`vCPULimit`| The maximum amount of vCPU the application can use (the level to which it can burst). This is shared CPU on the worker node. | `3.9`
 |===
 
 [[runtime-mgr-application-describe]]
