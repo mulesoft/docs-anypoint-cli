@@ -159,8 +159,8 @@ The flags this command can take are:
 |===
 |Flag |Description
 |--runtime                                   | Name and version of the runtime environment. +
-Use this flag to specify the name and version of the runtime you want to deploy. +
-Some examples of this value are `2.1.1-API-Gateway`, `3.9.1-visualizer` or   `4.1.1`. +
+Use this flag to specify the name and version of the runtime you want to deploy. If you don’t specify a runtime version, CloudHub API deploys the latest version available considering the values you select for `--javaVersion` and `--releaseChannel`. +
+Some examples of this value are `2.1.1-API-Gateway`, `3.9.1-visualizer`, `4.1.1`, `4.5`, `4.6-e-java8`, `4.6-java8`, and `4.6-e-java17`. +
 (This value is the latest CloudHub Runtime version by default.)
 |--workers                                      | Number of workers. (This value is '1' by default)
 |--workerSize                               | Size of the workers in vCores. (This value is '1' by default)
@@ -185,6 +185,8 @@ Character `:` is not supported for the property's name.
 |--help                                                  |
 Output usage information
 |--timeout | Set the timeout value in miliseconds. Can take values between `60000` and `300000`.
+|--releaseChannel| Set the name of the release channel to be used for the selected Mule version. Supported values are `NONE`, `EDGE`, and `LTS`. If you do not specify a value, CloudHub API imposes the default value. The default release channel is `EDGE`. If you don't specify a Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error.
+|--javaVersion | Set the name of the Java version to be used for the selected Mule version. Supported values are `8` and `17`. If you do not specify a value, CloudHub API imposes the default value. The default Java version for Mule 4.6 and earlier versions is '8'. If you don't specify a Mule version, the default Mule version for the selected Java version is used. If the Java version you select is not available for the specified Mule version, you get an error.
 
 |===
 Note that from Anypoint Platform CLI you won't be able to allocate static IPs. You can simply enable and disable them.
@@ -193,11 +195,6 @@ Note that from Anypoint Platform CLI you won't be able to allocate static IPs. Y
 [IMPORTANT]
 ====
 If you deploy without using any flags, your application deploys using all your default values.
-====
-
-[NOTE]
-====
-include::anypoint-cli::partial$mule-4.5-release-channels.adoc[]
 ====
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
