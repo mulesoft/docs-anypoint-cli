@@ -346,7 +346,13 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 Manages a new API, API version, or new API instance with the Exchange asset passed in `<assetId>`, and the version passed in `<assetVersion>`.
 
-NOTE: Flex Gateway API instances created using the Anypoint CLI do not support multiple upstream services. To create Flex Gateway API instances with multiple upstream services by using the API Manager UI, see xref:api-manager::create-instance-task-flex.adoc[].
+[NOTE] 
+====
+Flex Gateway API instances created with Anypoint CLI do not support multiple upstream services. To create Flex Gateway API instances with multiple upstream services, see: 
+
+* xref:api-manager::create-instance-task-flex.adoc[Add an API in Connected Mode] 
+* xref:gateway::flex-local-publish-api-multiple-services.adoc[Add an API in Local Mode].
+====
 
 Besides the default `--help`, general, and authentication flags, this command also accepts:
 
