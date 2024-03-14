@@ -32,13 +32,15 @@ This command evaluates specified filters to determine the rulesets that would be
 
 Besides the default flags, this command also accepts:
 
-[%header,cols="35a,65a"]
+[%header,cols="12,53a,35a"]
 |===
-|Flag |Description
+|Flag |Description | Example
 |`--api=<api>`
-|The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
+|The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file. | `--api order-api-1.0.0-raml.zip` +
+Where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file
+
 |--criteria <filtertype:filtervalue>,...
-|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`.
 
 Available filters include:
 
@@ -51,19 +53,11 @@ Available filters include:
 If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
 +
 To deselect the *API Instance* filter in the profile using the CLI, update the profile using the `--criteria` flag with neither `env-type` nor `env-id`.
-
-Example: 
-tag:tag1,category:category1:value,category:category2:value2,scope:rest-api,scope:async-api,env-type:production
+| 
+`--criteria "tag:best,category:API Type:Experience API,scope:rest-api"`
 |===
 
 NOTE: This command must be run with either the `--criteria` or the `--api` flag.  
-
-*Example commands:*
-
-`anypoint-cli-v4 governance:api:evaluate --criteria "tag:best,category:API Type:Experience API,scope:rest-api"`
-
-`anypoint-cli-v4 governance:api:evaluate --api order-api-1.0.0-raml.zip` +
-where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file 
 
 *Example output:*
 
@@ -158,6 +152,8 @@ You can specify `api-specification` as one of the following:
 * An API project folder
 * An asset identifier for an API project, if the `--remote` flag is specified. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. 
 
+For example: `--anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip`
+
 You can specify rulesets against which to validate as follows:
 
 * To use an existing `exchange.json` file that defines your API project's ruleset dependencies, ensure that the `exchange.json` file is included in the folder or ZIP file that you specify in `api-specification`. If the `exchange.json` file is present, the command downloads all of the ruleset dependencies and validates against those rulesets. The ruleset dependencies are present in the `exchange.json` file only if dependencies are defined for that API project in API Designer. See xref:api-governance::find-conformance-issues.adoc#add-rulesets[Add Rulesets to Your Project].
@@ -170,36 +166,24 @@ NOTE: Duplicate rulesets are not detected, so if you use more than one of the pr
 
 Besides the default flags, this command also accepts:
 
-[%header,cols="35a,65a"]
+[%header,cols="12,53a,35a"]
 |===
-|Flag |Description
+|Flag |Description | Example
 
 |`--rulesets <ruleset-yaml-file1> <ruleset-yaml-file2> ...`
-|Local ruleset definitions. The `rulesets` flag is followed by a list of ruleset YAML files separated by spaces. 
+|Local ruleset definitions. The `rulesets` flag is followed by a list of ruleset YAML files separated by spaces. | `--rulesets /MyRulesets/ruleset1.yaml /MyRulesets/ruleset2.yaml`
 |`--remote-rulesets <ruleset-asset-identifier> <ruleset-asset-identifier> ...`
 |Remote ruleset definitions. The `remote-rulesets` flag is followed by a list of ruleset asset identifiers separated by spaces. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`
 
-See <<exchange-asset-identifiers>>.
+See <<exchange-asset-identifiers>>. | `--remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1`
 |`--remote`
-|Flag to indicate that the validation should be done against a published API. The value passed in `api-specification` is the API's asset identifier. An asset identifier is a group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>`
+|Flag to indicate that the validation should be done against a published API. The value passed in `api-specification` is the API's asset identifier.
++
 
 See <<exchange-asset-identifiers>>.
+| `--remote`
 |===
 
-*Example commands:*
-
-[source,copy]
-----
-anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip
-
-anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml
-
-anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --rulesets /MyRulesets/ruleset1.yaml /MyRulesets/ruleset2.yaml
-
-anypoint-cli-v4 governance:api:validate /MyApis/order-api-1.0.0-raml.zip --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1
-
-anypoint-cli-v4 governance:api:validate 8a840abd-e63a-4f8b-87ab-24052eda2017/order-api/1.0.0 --remote-rulesets 68ef9520-24e9-4cf2-b2f5-620025690913/open-api-best-practices/1.0.1 --remote
-----
 
 *Example output:*
 
