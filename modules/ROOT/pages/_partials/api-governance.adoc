@@ -8,7 +8,7 @@
 |xref:anypoint-cli::api-governance.adoc#governance-api-inspect[governance:api:inspect]| Inspects an API specification and lists its schemas
 |xref:anypoint-cli::api-governance.adoc#governance-api-validate[governance:api:validate]| Validates an API specification against a specified governance ruleset
 |xref:anypoint-cli::api-governance.adoc#governance-document[governance:document] | Creates the documentation file for a governance ruleset definition
-|xref:anypoint-cli::api-governance.adoc#governance-profile-create[governance:profile:create] | Creates a governance profile
+|xref:anypoint-cli::api-governance.adoc#governance-profile-create[governance:profile:create] | Creates an active governance profile
 |xref:anypoint-cli::api-governance.adoc#governance-profile-delete[governance:profile:delete] | Deletes a governance profile
 |xref:anypoint-cli::api-governance.adoc#governance-profile-info[governance:profile:info] | Lists information for a specific governance profile ID
 |xref:anypoint-cli::api-governance.adoc#governance-profile-list[governance:profile:list] | Lists all governance profiles for an organization
@@ -302,7 +302,7 @@ Saving to myRulesetFolder/ruleset.doc.zip
 
 `> governance:profile:create [flags] <profile-name> <ruleset-asset-identifiers>`
 
-This command creates a governance profile using a string value for the new governance profile name specified in `profile-name`. 
+This command creates an active governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
 You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile. See <<exchange-asset-identifiers>>.
 
