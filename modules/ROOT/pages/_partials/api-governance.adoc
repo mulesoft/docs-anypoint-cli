@@ -8,7 +8,7 @@
 |xref:anypoint-cli::api-governance.adoc#governance-api-inspect[governance:api:inspect]| Inspects an API specification and lists its schemas
 |xref:anypoint-cli::api-governance.adoc#governance-api-validate[governance:api:validate]| Validates an API specification against a specified governance ruleset
 |xref:anypoint-cli::api-governance.adoc#governance-document[governance:document] | Creates the documentation file for a governance ruleset definition
-|xref:anypoint-cli::api-governance.adoc#governance-profile-create[governance:profile:create] | Creates a governance profile
+|xref:anypoint-cli::api-governance.adoc#governance-profile-create[governance:profile:create] | Creates an active governance profile
 |xref:anypoint-cli::api-governance.adoc#governance-profile-delete[governance:profile:delete] | Deletes a governance profile
 |xref:anypoint-cli::api-governance.adoc#governance-profile-info[governance:profile:info] | Lists information for a specific governance profile ID
 |xref:anypoint-cli::api-governance.adoc#governance-profile-list[governance:profile:list] | Lists all governance profiles for an organization
