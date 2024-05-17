@@ -100,7 +100,7 @@ Format: `name:value` | `--property testproperty:true`
 |`--propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
 |`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
-Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example:/status?limit=10`
+Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example/status?limit=10`
 |--releaseChannel| Set the name of the release channel to be used for the selected Mule version. Supported values are `NONE`, `EDGE`, and `LTS`. If you do not specify a value, CloudHub API imposes the default value. The default release channel is `EDGE`. If you don't specify a Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error. | `--releaseChannel LTS`
 |`--replicas` | Number of replicas. Must be above `0`. +
 Default: `1` | `--replicas 2`
@@ -182,7 +182,7 @@ Format: `name:value` | `--property testproperty:true`
 |`--propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
 |`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
- Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example: /status?limit=10`
+ Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example/status?limit=10`
 |`--replicas` | Number of replicas. Must be above `0`. +
 Default: `1` | `--replicas 2`
 |`--replicaSize`| Size of replicas in Vcores. +
@@ -324,7 +324,7 @@ Format: `name:value` | `--property testproperty:true`
 |`--propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
 |`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
- Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example: /status?limit=10`
+ Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example/status?limit=10`
 |`--replicas` | Number of replicas. Must be above `0`. +
 Default: `1` | `--replicas 2`
 |`--replicaSize`| Size of replicas in Vcores. +
