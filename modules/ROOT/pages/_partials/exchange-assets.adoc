@@ -233,19 +233,15 @@ If _group_id_ is not specified, it defaults to the currently selected organizati
 |===
 | Flag | Description |  Example
 | `--docs` | Documentation file. (Should specify the "zip" file path. Example: "--docs /.../file-path/docs.zip") |
-`--docs /Users/llucas/Desktop/examples/docs.zip --tags "tag1,tag2" --categories.beach sun --fields.central park fa7b266c-3817-4cbb-ae49-7f3cc6c8cd9e/asset-id/1.0.0`
+`--docs /Users/llucas/Desktop/examples/docs.zip --tags "tag1,tag2" --categories='{"beach":"sun"}' --fields='{"central":"park"}' fa7b266c-3817-4cbb-ae49-7f3cc6c8cd9e/asset-id/1.0.0`
 
 | `--categories` | Categories |
 
-`--categories.someKey value`
-
-`--categories.anotherKey anotherValue`
+`--categories='{"someKey":"value", "anotherKey":"anotherValue"}'`
 
 | `--fields` | Fields |
 
-`--fields.someKey value`
-
-`--fields.anotherKey anotherValue`
+`--fields='{"someKey":"value", "anotherKey":"anotherValue"}'`
 
 | `--tags` | Tags (comma-separated)|
 
