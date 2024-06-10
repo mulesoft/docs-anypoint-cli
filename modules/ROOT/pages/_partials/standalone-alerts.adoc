@@ -104,7 +104,9 @@ In addition to the default flag `--help`, this command accepts the following fla
 | `--severity` | Alert severity |`--severity 3` 
 | `--subject <string>` | Alert notification email subject | `--subject Email Subject`
 | `--threshold` | Condition threshold number | `--threshold 10`
-|===NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+|===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
 
 // end::commands[]
