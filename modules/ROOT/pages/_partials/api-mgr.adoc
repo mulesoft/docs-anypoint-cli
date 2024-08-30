@@ -97,7 +97,8 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 | `--offset` | Offsets the amount of APIs passed | `--offset 3`
 | `--output`| Specifies the response format + 
 Supported values are `table` (default) and `json` | `--output json`
-| `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
+| `--sort` | Sorts the results in the field name passed +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate`| `--sort name`
 |===
 
 [[api-mgr-api-autodiscovery]]
@@ -364,7 +365,8 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 | `--limit`           | Number of results to retrieve | `--limit 50` 
 | `--offset` | Offsets the amount of APIs passed | `--offset 3`
 | `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
-| `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"` 
+| `--sort` | Sorts the results in the field name passed +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate` | `--sort updatedDate` 
 |===
 
 [[api-mgr-api-manage]]
@@ -591,7 +593,8 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3`
 | `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
-|`--sort` | Sorts the contracts by the criteria associated with their client applications, supported values are `createdDate`, `id`, and `name` | `--sort id` 
+|`--sort` | Sorts the contracts by the criteria associated with their client applications +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate` | `--sort id` 
 |===
 [[api-mgr-policy-apply]]
 == api-mgr:policy:apply
@@ -838,7 +841,8 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3`
 | `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
-|`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
+|`--sort` | Sorts the results in the field name passed +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate`  | `--sort id`
 |===
 
 // end::commands[]
