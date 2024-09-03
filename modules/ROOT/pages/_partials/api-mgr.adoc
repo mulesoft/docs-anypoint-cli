@@ -113,7 +113,8 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |===
 |Option |Description | Example
 | `--offset` | Offsets the amount of APIs passed | `api-mgr alert list --offset 3`
-| `--sort` | Sorts the results in the field name passed | `api-mgr alert list --sort "Latest Version"`
+| `--sort` | Sorts the results in the field name passed +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate`| `api-mgr alert list --sort updatedDate`
 |===
 
 
@@ -296,7 +297,8 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 | `--instanceLabel <value>` | API instance label by which  filter results.
 | `--limit <num>`           | Number of results to retrieve.
 | `--offset` | Offsets the amount of APIs passed
-| `--sort` | Sorts the results in the field name passed
+| `--sort` +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate`| Sorts the results in the field name passed
 |===
 
 == api-mgr api manage
@@ -462,7 +464,8 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |Option |Description |Example
 |`--limit` | Number of results to retrieve | `exchange asset list --limit 2`
 |`--offset` | Offsets the amount of APIs passed | `api-mgr contract list --offset 3 643404`
-|`--sort` | Sorts the results in the field name passed | `api-mgr contract list --sort "Latest Version" 643404`
+|`--sort` | Sorts the results in the field name passed +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate`| `api-mgr contract list --sort createdDate`
 |===
 
 == api-mgr policy apply
@@ -675,7 +678,8 @@ Besides the default `--help`, `-f`/`--fields` and `-o`/`--output` options, this 
 |Option |Description | Example
 |`--limit` | Number of results to retrieve | `api-mgr tier list --limit 2`
 |`--offset` | Offsets the amount of APIs passed | `api-mgr tier list --offset 3`
-|`--sort` | Sorts the results in the field name passed | `api-mgr tier list --sort "Latest Version"`
+|`--sort` | Sorts the results in the field name passed +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate` | `api-mgr tier list --sort id`
 |===
 
 // end::commands[]
