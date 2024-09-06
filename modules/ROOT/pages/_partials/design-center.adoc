@@ -127,12 +127,14 @@ Flags that are not specified are extracted from exchange.json
 |===
 |Flag | Description |  Example
 | `--apiVersion` | The API version if your project is an API specification project. | `--main sample.raml --apiVersion 1.0`
-| `--assetId`  | The asset's assetId. | `designcenter:project:publish --assetId project`
-| `--groupId` | The asset's groupId. | `designcenter:project:publish --groupId com.mulesoft.com`
-| `--main` | The name of the main file name. | `--main sample.xml`
+| `--assetId`  | The asset assetId | `designcenter:project:publish --assetId project`
+| `--groupId` | The asset groupId | `designcenter:project:publish --groupId com.mulesoft.com`
+| `--main` | The name of the main file name.| `--main sample.xml`
 | `--name` | The name for the asset | `--name sampleProject`
+| `--status` | The asset status +
+Supported values are: `development` and `published` (default) | `designcenter:project:publish --version 1.0`
 | `--tags` | Comma separated list of tags. | `--tags test,sample,integration`
-| `--version` | The asset's version. | `designcenter:project:publish --version 1.0`
+| `--version` | The asset version. | `designcenter:project:publish --version 1.0`
 |===
 
 [[designcenter-project-upload]]
