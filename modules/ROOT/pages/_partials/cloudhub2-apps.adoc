@@ -173,7 +173,7 @@ Default: `disabled` | `--no-forwardSslSession`
 |`--groupId` | Group ID of the asset to deploy. +
 Default: selected organization ID.| `--groupId org.mule.testgroup`
 |`--instanceType` | Instance type +
-This flag can only be used in UBP organizations, non-UBP organizations use the `--replicaSize` flag | `--instanceType 0.5`
+Only UBP organizations can use this flag. Non-UBP organizations use the `--replicaSize` flag | `--instanceType 0.5`
 |`--[no-]lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` | `--no-lastMileSecurity`
 |`--[no-]objectStoreV2`| Enables object store v2. +
