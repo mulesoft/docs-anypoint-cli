@@ -65,7 +65,11 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 |`--artifactId` |Artifact ID of the application retrieved from Exchange. | `--artifactId mule-test-plugin`
 |`--deploymentTargetId` |ID of the deployment target. +
 You can get this ID directly from Runtime Manager.  | `--deploymentTargetId cloudhub-ap-northeast-1`
+|`--instanceType` | Instance type +
+This flag can only be used in UBP organizations, non-UBP organizations use the `--replicaSize` flag | `--instanceType 0.5`
 |`--name` |Name of the application to deploy. | `--name testcloudhub2app`
+|`--replicaSize`| Size of replicas in Vcores. +
+Default: `0.1` | `--replicaSize 0.5`
 |`--runtimeVersion` |Runtime version of the deployment target. If you don’t specify a runtime version, CloudHub API deploys the latest version available considering the values you select for `--javaVersion` and `--releaseChannel` |`--runtimeVersion 4.4.0`
 |`--secureProperty` | Sets an encrypted property. | `--secureProperty secureTestProperty:true`
 |===
@@ -168,6 +172,8 @@ Default: `enabled` |`--disableAmLogForwarding`
 Default: `disabled` | `--no-forwardSslSession`
 |`--groupId` | Group ID of the asset to deploy. +
 Default: selected organization ID.| `--groupId org.mule.testgroup`
+|`--instanceType` | Instance type +
+This flag can only be used in UBP organizations, non-UBP organizations use the `--replicaSize` flag | `--instanceType 0.5`
 |`--[no-]lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` | `--no-lastMileSecurity`
 |`--[no-]objectStoreV2`| Enables object store v2. +
