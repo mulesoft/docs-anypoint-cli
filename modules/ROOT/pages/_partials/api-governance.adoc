@@ -490,7 +490,7 @@ Updates the governance profile specified in `profile-id`. To get this ID, run th
 You can update the governance profile's
 general information, rulesets, filter criteria, and notification configuration. You can use one of the `notify` flags to update the notification configuration or turn off notifications. Any changes override existing notification configurations. If you do not use a `notify` flag, no changes are made to the notification configuration. 
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
