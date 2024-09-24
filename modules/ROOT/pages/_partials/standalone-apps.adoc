@@ -131,7 +131,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 Lists all standalone (on-premises) applications.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -155,7 +155,7 @@ The `identifier` option specifies the application identifier.
 To retrieve the identifier, see
 <<runtime-mgr-standalone-application-list>>.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===

@@ -31,7 +31,7 @@ Creates a new Design Center project with the name specified in `<name>`
 This command does not support Mule application types.
 
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -97,7 +97,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 Lists all your Design Center projects
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -119,7 +119,7 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 
 Publishes the Design Center project passed in `projectName` to Exchange
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [TIP]
 Flags that are not specified are extracted from exchange.json
