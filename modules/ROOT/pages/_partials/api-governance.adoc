@@ -42,7 +42,7 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 
 Available filters include:
 
-* `scope`: API type, `rest-api` or `async-api` 
+* `scope`: API type, `http-api`, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `env-type`: Environment type of any, production, or sandbox
@@ -318,7 +318,7 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 
 Available filters include:
 
-* `scope`: API type, `rest-api` or `async-api` 
+* `scope`: API type, `http-api`, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `env-type`: Environment type of any, production, or sandbox
@@ -506,7 +506,7 @@ See <<exchange-asset-identifiers>>.
 
 Available filters include:
 
-* `scope`: API type, `rest-api` or `async-api` 
+* `scope`: API type, `http-api`, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `env-type`: Environment type of any, production, or sandbox
