@@ -82,7 +82,7 @@ If the Anypoint Platform CLI is using the QA environment in the Services organiz
 [NOTE]
 Running this command requires your user to have read/write access to the `/tmp` directory of the OS where CLI is installed.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,50a"]
 |===
@@ -127,7 +127,7 @@ You will have to provide the absolute or relative path to the deployable ZIP fil
 If successful, this command's output includes the deployment status of `UNDEPLOYED`,
 which indicates that CloudHub uploaded the application successfully.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===

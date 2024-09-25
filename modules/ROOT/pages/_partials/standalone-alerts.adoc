@@ -27,7 +27,7 @@
 Creates a new alert for a standalone runtime with the ID passed in `name`.
 The alert `name` is limited to 256 characters.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30,40,30"]
 |===
@@ -85,7 +85,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 Modifies the alert passed in `alertId`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30,40,30"]
 |===

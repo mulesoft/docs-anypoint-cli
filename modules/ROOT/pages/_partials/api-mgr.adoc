@@ -49,7 +49,7 @@
 
 Creates an API instance alert with the name passed in `name` for the API instance ID passed in `<apiInstanceId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -88,7 +88,7 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -110,7 +110,7 @@ Supported values are: `id`, `name`, `createdDate`, and `updatedDate`| `--sort na
 
 This command lists the autodiscovery properties required for a gateway to track the API Instance Id passed in `<apiInstanceId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -172,7 +172,7 @@ Deploys the API instance passed in '<apiInstanceId>' to the deployment target sp
 [NOTE]
 This command is only supported for endpoints with proxy.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -263,7 +263,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 Edits the API instance passed in `<apiInstanceId>`. Editing a deployed Flex Gateway API instance redeploys the instance.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -354,7 +354,7 @@ Flex Gateway does not support this flag | `--serviceName ExampleServerName`
 
 Lists all APIs in API Manager 2.x.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -386,7 +386,7 @@ Flex Gateway API instances created with Anypoint CLI do not support multiple ups
 * xref:gateway::flex-local-publish-api-multiple-services.adoc[Add an API in Local Mode].
 ====
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 
 [%header%autowidth.spread,cols="a,a,a"]
@@ -479,7 +479,7 @@ Supported options: `http`, `raml`, `wsdl` | `--type http`
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 
 [%header%autowidth.spread,cols="a,a,a"]
@@ -510,7 +510,7 @@ Include the flag to enable it | `--copyTiers`
 
 Redeploys the API instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 
 [%header%autowidth.spread,cols="a,a,a"]
@@ -585,7 +585,7 @@ Lists all contracts of the API passed in `<apiInstanceId>`.
 [TIP]
 You can specify keywords in searchText to limit results of APIs containing those specific keywords.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -605,7 +605,7 @@ Supported values are: `id`, `name`, `createdDate`, and `updatedDate` | `--sort i
 
 Applies the policy passed in `<policyId>` to the API instance passed in `<apiInstanceId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -654,7 +654,7 @@ NOTE: Even if you plan to use the default values, you must configure all require
 
 Shows the description and available base configuration properties of the policy name passed in `<policyId>`. +
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -694,7 +694,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 Edits the policy configuration passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -760,7 +760,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 This command creates an SLA tier for the API instance passed in `<apiInstanceId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -833,7 +833,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 This command lists the SLA tiers of the API instance passed in `<apiInstanceId>`.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===

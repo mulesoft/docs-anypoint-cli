@@ -46,7 +46,7 @@ Copies the Exchange asset from `<source>` to `<target>` +
 Arguments `<source>` and `<target>` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -128,7 +128,7 @@ Lists all assets in Exchange
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -152,7 +152,7 @@ Modifies the Exchange asset identified with `<assetIdentifier>` +
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -173,7 +173,7 @@ Modifies the mutable data of an already created asset, including tags, categorie
 Argument `assetIdentifier` should be formatted as follows: `[_<groupID>_]/_<assetID>_/_<version>_` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="40a,30a,30a"]
 |===
@@ -407,7 +407,7 @@ Modifies the status of an already created asset
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="40a,30a,30a"]
 |===
@@ -448,7 +448,7 @@ Uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, ex
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,60a,40a"]
 |===
