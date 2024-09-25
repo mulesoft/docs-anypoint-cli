@@ -75,7 +75,7 @@ Default: `0.1` | `--replicaSize 0.5`
 |===
 
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="12a,53a,35a"]
 |===
@@ -157,7 +157,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 Updates the settings of an existing application specified in `<appID>`.
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="12a,53a,35a"]
 |===

@@ -83,7 +83,7 @@ By default, your load balancer listens external requests on HTTPS and communicat
 If you configured your Mule application within the Anypoint VPC to listen on HTTPS, make sure you set `upstreamProtocol` to HTTPS when creating the mapping list using the <<cloudhub-load-balancer-mappings-add,load-balancer mappings add>> command.
 --
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,40a"]
 |===
@@ -243,7 +243,7 @@ Your private key file needs to be passphraseless. | `/Users/mule/Documents/priva
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -263,7 +263,7 @@ For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.a
 ----
 > cloudhub:load-balancer:ssl-endpoint:set-describe [flags] <name> <certificateName>
 ----
-Shows information about the configuration of the load balancer passed in `<name>` for the the certificate specified in `<certificateName>` 
+Shows information about the configuration of the load balancer passed in `<name>` for the certificate specified in `<certificateName>` 
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
@@ -290,7 +290,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 ----
 Sets the certificate specified in `<certificateName>` as the default  certificate for the load balancer passed in `<name>`
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
