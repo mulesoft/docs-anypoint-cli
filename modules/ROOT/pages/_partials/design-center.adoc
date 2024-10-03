@@ -134,7 +134,7 @@ Flags that are not specified are extracted from exchange.json
 | `--status` | The asset status +
 Supported values are: `development` and `published` (default) | `designcenter:project:publish --version 1.0`
 | `--tags` | Comma separated list of tags. | `--tags test,sample,integration`
-| `--version` | The asset version. | `designcenter:project:publish --version 1.0`
+| `--version` | The asset version | `designcenter:project:publish --version 1.0`
 |===
 
 [[designcenter-project-upload]]
