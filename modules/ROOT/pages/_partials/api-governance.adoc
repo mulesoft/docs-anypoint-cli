@@ -30,7 +30,7 @@
 
 Evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -38,14 +38,15 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 |`--api=<api>`
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. 
+Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
-* `scope`: API type, `rest-api` or `async-api` 
-* `tag`: Tag defined for APIs in Exchange
-* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
-* `env-type`: Environment type of any, production, or sandbox
+* `scope`: API type. Supported values are: `async-api`, `http-api`, or `rest-api`.
+* `tag`: Tag defined for APIs in Exchange.
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`.
+* `env-type`: Environment type. Supported values are: `any`, `production`, or `sandbox`.
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
 If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
@@ -168,7 +169,7 @@ You can specify rulesets against which to validate as follows:
 
 NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets might be validated multiple times.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -308,20 +309,21 @@ You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset 
 
 You can use one of the `notify` flags to configure notifications for the profile you are creating. If you do not use a `notify` flag, no notifications are configured by the command. Notifications are off by default.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
 |Flag |Description
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. 
+Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
-* `scope`: API type, `rest-api` or `async-api` 
-* `tag`: Tag defined for APIs in Exchange
-* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
-* `env-type`: Environment type of any, production, or sandbox
+* `scope`: API type. Supported values are: `async-api`, `http-api`, or `rest-api`.
+* `tag`: Tag defined for APIs in Exchange.
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`.
+* `env-type`: Environment type. Supported values are: `any`, `production`, or `sandbox`.
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
 If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
@@ -405,7 +407,7 @@ anypoint-cli-v4 governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 
 Lists all information for a governance profile ID
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -446,7 +448,7 @@ NotificationConfig  Contact,Publisher
 
 Lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -488,7 +490,7 @@ Updates the governance profile specified in `profile-id`. To get this ID, run th
 You can update the governance profile's
 general information, rulesets, filter criteria, and notification configuration. You can use one of the `notify` flags to update the notification configuration or turn off notifications. Any changes override existing notification configurations. If you do not use a `notify` flag, no changes are made to the notification configuration. 
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -502,14 +504,15 @@ In addition to the the xref:index.adoc#default-options[default flags], this comm
 
 See <<exchange-asset-identifiers>>.
 |`--criteria <filtertype:filtervalue>,...`
-|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
+|Enables you to apply filters to select the list of APIs to which the profile rulesets apply. 
+Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
 
-* `scope`: API type, `rest-api` or `async-api` 
-* `tag`: Tag defined for APIs in Exchange
-* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
-* `env-type`: Environment type of any, production, or sandbox
+* `scope`: API type. Supported values are: `async-api`, `http-api`, or `rest-api`.
+* `tag`: Tag defined for APIs in Exchange.
+* `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`.
+* `env-type`: Environment type. Supported values are: `any`, `production`, or `sandbox`.
 * `env-id`: The ID for the environment name in API Manager. You can get this value using *API Manager* > *Environment information*. See xref:api-manager::environments-concept.adoc[Reviewing Environment Concepts]. 
 +
 If `env-type` or `env-id` is used, the *API Instance* filter is set in the profile, so that only APIs that have instances are filtered. 
@@ -573,7 +576,7 @@ The `new description` parameter gives the description for the new ruleset.
 
 TIP: Run the `governance:ruleset:info` command before running this command to get the rule ID information to use in this command.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -620,7 +623,7 @@ Lists the ruleset rules in the ruleset definition passed in the `governance-rule
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use "-- " (two dashes followed by a space) before the parameter.
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -694,7 +697,7 @@ Ruleset conforms with Dialect
 
 Initializes a ruleset based on the data schema passed in the `schema` parameter. 
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===

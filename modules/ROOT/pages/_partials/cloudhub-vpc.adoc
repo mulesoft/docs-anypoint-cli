@@ -105,7 +105,7 @@ Whenever those private domains are provided, your worker resolves them using you
 This feature is supported by workers running Mule versions 3.5.x, 3.6.x, 3.7.4, 3.8.0-HF1, 3.8.1 and 3.8.2.
 
 
-In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
