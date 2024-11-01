@@ -694,7 +694,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 Edits the policy configuration passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-IMPORTANT: The full configuration must be resent each time a custom policy is edited.
+IMPORTANT: You must resend the full configuration each time a custom policy is edited.
 
 In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
