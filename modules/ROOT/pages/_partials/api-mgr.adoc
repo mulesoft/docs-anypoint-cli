@@ -694,7 +694,8 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 Edits the policy configuration passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-IMPORTANT: You must resend the full configuration each time a custom policy is edited.
+NOTE: If you are udpating an included Mule Gateway policy, you can include only the changed values in the configuration.
+However, if you are updating a custom policy, you must send the full configuration each time a custom policy is edited.
 
 In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
