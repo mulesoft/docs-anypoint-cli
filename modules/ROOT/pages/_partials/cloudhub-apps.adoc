@@ -162,9 +162,9 @@ Default value is `disabled` | `--[no-]persistentQueuesEncrypted`
 |`--[no-]staticIPsEnabled` | Enable or disable static IPs +
  Default value is `disabled` | `--[no-]staticIPsEnabled`
 |`--[no-]objectStoreV1` | Enable or disable Object Store V +
-`objectStoreV2` cannot also be provided when using `objectStoreV1` flag | `--[no-]objectStoreV1`
+`objectStoreV2` can't also be provided when using `objectStoreV1` flag | `--[no-]objectStoreV1`
 |`--[no-]objectStoreV2`  | Enable or disable Object Store V2 +
-`objectStoreV1` cannot also be provided when using `objectStoreV2` flag | `--[no-]objectStoreV2`
+`objectStoreV1` can't also be provided when using `objectStoreV2` flag | `--[no-]objectStoreV2`
 |`--[no-]autoRestart` | Automatically restart app when not responding +
 Default value is `enabled` |`--[no-]autoRestart` 
 |`--output` | Specify the response format +
@@ -275,9 +275,9 @@ Default value is `disabled` | `--[no-]persistentQueuesEncrypted`
 |`--[no-]staticIPsEnabled` | Enable or disable static IPs +
  Default value is `disabled` | `--[no-]staticIPsEnabled`
 |`--[no-]objectStoreV1` | Enable or disable Object Store V +
-`objectStoreV2` cannot also be provided when using `objectStoreV1` flag | `--[no-]objectStoreV1`
+`objectStoreV2` can't also be provided when using `objectStoreV1` flag | `--[no-]objectStoreV1`
 |`--[no-]objectStoreV2`  | Enable or disable Object Store V2 +
-`objectStoreV1` cannot also be provided when using `objectStoreV2` flag | `--[no-]objectStoreV2`
+`objectStoreV1` can't also be provided when using `objectStoreV2` flag | `--[no-]objectStoreV2`
 |`--[no-]autoRestart` | Automatically restart app when not responding +
 Default value is `enabled` |`--[no-]autoRestart` 
 |`--output` | Specify the response format +
