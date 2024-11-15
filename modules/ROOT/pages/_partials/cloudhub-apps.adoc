@@ -134,8 +134,8 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |Flag |Description| Example
 |`--runtime` |Name and version of the runtime environment. +
 Use this flag to specify the name and version of the runtime you want to deploy +
- If you don’t specify a runtime version, CloudHub API deploys the latest version available considering the values you select for `--javaVersion` and `--releaseChannel`.  | 
- `--runtime 2.1.1-API-Gateway`, `--runtime 4.6-e-java17`. 
+ If you don’t specify a runtime version, CloudHub API deploys the latest version available considering the values you select for `--javaVersion` and `--releaseChannel`.  
+ | `--runtime 2.1.1-API-Gateway`, `--runtime 4.6-e-java8` (Edge), `--runtime 4.6-e-java17` (Edge), `--runtime 4.6-java8` (LTS), `--runtime 4.6-java17` (LTS)
 |`--releaseChannel`| Set the name of the release channel to be used for the selected Mule version +
  Supported values are `NONE`, `EDGE`, and `LTS` +
 If you do not specify a value, CloudHub API imposes the default value. The default release channel is `EDGE` +
@@ -240,7 +240,51 @@ This command's output includes `Status`, which is the application's previous dep
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
-This command accepts the xref:index.adoc#default-options[default flags].
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag |Description| Example
+|`--runtime` |Name and version of the runtime environment. +
+Use this flag to specify the name and version of the runtime you want to deploy +
+ If you don’t specify a runtime version, CloudHub API deploys the latest version available considering the values you select for `--javaVersion` and `--releaseChannel`.  
+ | `--runtime 2.1.1-API-Gateway`, `--runtime 4.6-e-java8` (Edge), `--runtime 4.6-e-java17` (Edge), `--runtime 4.6-java8` (LTS), `--runtime 4.6-java17` (LTS)
+|`--releaseChannel`| Set the name of the release channel to be used for the selected Mule version +
+ Supported values are `NONE`, `EDGE`, and `LTS` +
+If you do not specify a value, CloudHub API imposes the default value. The default release channel is `EDGE` +
+If you don't specify a Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error. | `--releaseChannel EDGE`
+|`--javaVersion` | Set the name of the Java version to be used for the selected Mule version +
+ Supported values are `8` and `17` +
+  If you do not specify a value, CloudHub API imposes the default value. The default Java version for Mule 4.6 and earlier versions is '8'. +
+  If you don't specify a Mule version, the default Mule version for the selected Java version is used. If the Java version you select is not available for the specified Mule version, you get an error. | `--javaVersion 8`
+|`--workers` | Number of workers +
+Default value is '1' | `--workers 3`
+|`--workerSize` | Size of the workers in vCores +
+(Default value is '1' | `--workerSize 2`
+|`--region` | Name of the region to deploy to | `--region Canada`
+|`--property` | Set a property (`name:value`) +
+ Character `:` is not supported for the property's name
+|`--property "salesforce.password:qa\=34534"` 
+|`--propertiesFile | Overwrite all properties with values from this file +
+The file format is 1 or more lines in `name:value` format +
+ Set the absolute path of the properties file in your local hard drive | `--propertiesFile exampleFile.JSON`
+|`--[no-]persistentQueues` | Enable or disable persistent queues +
+Default value is `disabled` | `--[no-]persistentQueues`
+|`--[no-]persistentQueuesEncrypted ` | Enable or disable persistent queue encryption +
+Default value is `disabled` | `--[no-]persistentQueuesEncrypted`
+|`--[no-]staticIPsEnabled` | Enable or disable static IPs +
+ Default value is `disabled` | `--[no-]staticIPsEnabled`
+|`--[no-]objectStoreV1` | Enable or disable Object Store V +
+`objectStoreV2` cannot also be provided when using `objectStoreV1` flag | `--[no-]objectStoreV1`
+|`--[no-]objectStoreV2`  | Enable or disable Object Store V2 +
+`objectStoreV1` cannot also be provided when using `objectStoreV2` flag | `--[no-]objectStoreV2`
+|`--[no-]autoRestart` | Automatically restart app when not responding +
+Default value is `enabled` |`--[no-]autoRestart` 
+|`--output` | Specify the response format +
+ Supported values are `table` (default) and `json` | `--output json`
+|`--timeout` | Set the timeout value in miliseconds +
+ Can take values between `60000` and `300000` | `--timeout 90000`
+|===
 
 [[runtime-mgr-cloudhub-application-restart]]
 == runtime-mgr:cloudhub-application:restart
