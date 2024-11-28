@@ -19,7 +19,7 @@ The Anypoint CLI is built with Node.js and is installed by using npm, the packag
 
 Versions required are as follows:
 
-* Node.js LTS from version 18.0.0
+* Node.js LTS from version 18.0.0 and later
 * npm version 7 or later
 
 To install the prerequisite software:
