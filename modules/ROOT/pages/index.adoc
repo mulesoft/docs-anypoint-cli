@@ -20,7 +20,9 @@ Use Runtime Manager to manage Mule applications deployed to CloudHub (hosted by 
  
 * Download and install NodeJS and npm (node package manager) on your system.
 +
-Minimum versions required are: Node.js version 16.0.0 to 18.14.0 and npm 6.14.8
+Minimum versions required are: 
+* Node.js LTS version 18.0.0 and later
+* npm 6.14.8
 +
 See the https://nodejs.org/en/download/[NodeJS download page].
 
