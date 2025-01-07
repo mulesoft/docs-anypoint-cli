@@ -20,7 +20,7 @@ Original command:
 api-mgr:policy:apply --config '{\"username\":\"user\",\"password\":\"test\"}'
 ----
 
-Adjusted for Windows:
+Modified command for Windows:
 
 ----
 api-mgr:policy:apply --config '{\\"username\\":\\"user\\",\\"password\\":\\"test\\"}'
