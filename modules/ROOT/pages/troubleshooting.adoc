@@ -5,3 +5,23 @@ If you encounter errors when attempting to run Anypoint CLI commands, troublesho
 include::api-governance::partial$cli-commands-troubleshoot.adoc[tag=before]
 
 include::api-governance::partial$cli-commands-troubleshoot.adoc[tag=errors]
+
+== Windows Command Syntax
+
+Some commands that include special characters like backslashes `\` or pipes `|` do not behave as expected on Windows systems because of how the Windows Command Prompt interprets these characters. +
+To use the commands successfully:
+* For file paths, replace single backslashes (`\`) with double backslashes (`\\`).
+* To use pipes (`|`) in commands, add a caret (`^`) before them.
+
+Example:
+
+Original command: 
+----
+api-mgr:policy:apply --config '{\"username\":\"user\",\"password\":\"test\"}'
+----
+
+Adjusted for Windows:
+
+----
+api-mgr:policy:apply --config '{\\"username\\":\\"user\\",\\"password\\":\\"test\\"}'
+----
