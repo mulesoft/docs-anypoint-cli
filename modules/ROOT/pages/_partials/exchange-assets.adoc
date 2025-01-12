@@ -476,7 +476,7 @@ To upload a ruleset and its documentation:
 | `--name "Raml Asset"`
 | `--properties` | Asset properties +
  The file of the specified "mainFile" property must be in the uploaded zip file on the root path. The file cannot be in a subfolder.
-| `--properties='{"apiVersion":"v1", "mainFile": "api.raml"}'`
+| `--properties='{"apiVersion":"v1", "mainFile":"api.raml", "contactName":"contact", "contactEmail":"example@mulesoft.com"}'`
 | `--status` | Asset status +
  Supported Values:
 
