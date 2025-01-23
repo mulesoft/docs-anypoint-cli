@@ -7,6 +7,11 @@
 |Command |Description
 |xref:anypoint-cli::cloudhub-apps.adoc#rtf-apps-describe[rtf:apps:describe] | Shows application details
 
+
+// end::summary[]
+
+// tag::commands[]
+
 [[rtf-apps-describe]]
 
 == rtf:apps:describe
@@ -19,3 +24,5 @@ Displays information about the application specified in `<name>`
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the xref:index.adoc#default-options[default flags].
+
+// end::commands[]
