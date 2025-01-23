@@ -6,7 +6,7 @@
 |===
 |Command |Description
 |xref:anypoint-cli::cloudhub-apps.adoc#rtf-apps-describe[rtf:apps:describe] | Shows application details
-
+|===
 
 // end::summary[]
 
