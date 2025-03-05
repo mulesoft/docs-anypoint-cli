@@ -73,6 +73,7 @@ You can install the following plugins with Anypoint CLI:
 | anypoint-cli-exchange-plugin| Exchange command topics
 | anypoint-cli-governance-plugin| API Governance command topics
 | anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
+| anypoint-cli-rtf-apps-plugin | Runtime Fabric command topics
 | anypoint-cli-secrets-mgr-plugin | Secrets Manager command topics
 |===
 

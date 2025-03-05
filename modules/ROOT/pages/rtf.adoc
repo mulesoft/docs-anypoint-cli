@@ -1,0 +1,7 @@
+= CLI for Runtime Fabric Applications
+
+Use the `rtf:apps` commands to automate your Runtime Fabric processes. For more information about how to use these commands, refer to xref:runtime-fabric::index.adoc[the Runtime Fabric documentation].
+
+include::anypoint-cli::partial$rtf.adoc[tag=summary]
+
+include::anypoint-cli::partial$rtf.adoc[tag=commands]
