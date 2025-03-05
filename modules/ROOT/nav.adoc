@@ -19,6 +19,7 @@
 ** xref:datagraph-load-balancer.adoc[DataGraph Load Balancers]
 ** xref:design-center.adoc[Design Center Projects]
 ** xref:exchange-assets.adoc[Exchange Assets]
+** xref:rtf.adoc[Runtime Fabric]
 ** xref:runtime-manager.adoc[Runtime Manager]
  *** xref:standalone-apps.adoc[Hybrid Applications]
  *** xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
