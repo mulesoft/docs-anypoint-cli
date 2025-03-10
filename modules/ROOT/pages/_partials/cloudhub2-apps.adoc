@@ -70,7 +70,7 @@ Only UBP organizations can use this flag. Non-UBP organizations use the `--repli
 |`--name` |Name of the application to deploy. | `--name testcloudhub2app`
 |`--replicaSize`| Size of replicas in Vcores. +
 Default: `0.1` | `--replicaSize 0.5`
-|`--runtimeVersion` |Runtime version of the deployment target. If you don’t specify a runtime version, CloudHub API deploys the latest version available considering the values you select for `--javaVersion` and `--releaseChannel` |`--runtimeVersion 4.4.0`
+|`--runtimeVersion` |Runtime version of the deployment target. |`--runtimeVersion 4.4.0`
 |`--secureProperty` | Sets an encrypted property. | `--secureProperty secureTestProperty:true`
 |===
 
