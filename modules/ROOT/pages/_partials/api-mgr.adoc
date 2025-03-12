@@ -284,7 +284,7 @@ Include the flag to enable it | `--withProxy`
 | Indicates whether a proxy should reference a user domain. +
 Include the flag to enable it | `--referencesUserDomain`
 
-| `--apiInstanceLabel `
+| `--apiInstanceLabel`
 | API instance label | `--apiInstanceLabel exampleLabel`
 
 | `--deploymentType`
@@ -321,6 +321,7 @@ Default is Anypoint Platform Client Provider | `--providerId 1787c36ab544466698e
 
 | `--responseTimeout`
 | Maximum response timeout(required) | `--responseTimeout 10`
+|`--routing` | Configure upstream service | `--routing 50e8400-e29b-41d4-a716-446655440000`
 
 | `--scheme`
 | Proxy scheme (required) +
