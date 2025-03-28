@@ -414,7 +414,7 @@ Include the flag to enable it | `--referencesUserDomain`
 
 | `--deploymentType`
 | Deployment type +
-Options: `cloudhub`, `hybrid`, `rtf` (required) | `--deploymentType hybrid`   
+Options: `cloudhub2`, `cloudhub`, `hybrid`, `rtf` (required) | `--deploymentType hybrid`   
 
 | `--endpointUri`
 | Consumer endpoint URI (required) | `--endpointUri /udp://localhost:65432`
