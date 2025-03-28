@@ -1,4 +1,4 @@
-= API Catalog
+= API Catalog CLI
 
 // tag::summary[]
 
