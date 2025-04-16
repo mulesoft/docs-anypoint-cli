@@ -66,7 +66,7 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 |`--deploymentTargetId` |ID of the deployment target. +
 You can get this ID directly from Runtime Manager.  | `--deploymentTargetId cloudhub-ap-northeast-1`
 |`--instanceType` | Instance type +
-Only UBP organizations can use this flag. Non-UBP organizations use the `--replicaSize` flag | `--instanceType 0.5`
+Only UBP organizations can use this flag. Non-UBP organizations use the `--replicaSize` flag | `--instanceType mule.micro`
 |`--name` |Name of the application to deploy. | `--name testcloudhub2app`
 |`--replicaSize`| Size of replicas in Vcores. +
 Default: `0.1` | `--replicaSize 0.5`
@@ -173,7 +173,7 @@ Default: `disabled` | `--no-forwardSslSession`
 |`--groupId` | Group ID of the asset to deploy. +
 Default: selected organization ID.| `--groupId org.mule.testgroup`
 |`--instanceType` | Instance type +
-Only UBP organizations can use this flag. Non-UBP organizations use the `--replicaSize` flag | `--instanceType 0.5`
+Only UBP organizations can use this flag. Non-UBP organizations use the `--replicaSize` flag | `--instanceType mule.nano`
 |`--[no-]lastMileSecurity`| Enables Last Mile Security. +
 Default: `disabled` | `--no-lastMileSecurity`
 |`--[no-]objectStoreV2`| Enables object store v2. +
