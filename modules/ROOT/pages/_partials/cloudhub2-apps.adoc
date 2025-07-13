@@ -162,6 +162,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 [%header,cols="12a,53a,35a"]
 |===
 |Flag |Description |Example
+|`--javaVersion` |Specifies the Java version to use with the application (required) | `--javaVersion 17`
 |`--artifactId` |ID of the application retrieved from Exchange. | `--artifactId mule-maven-plugin`
 |`--assetVersion` | Version of the Exchange application to use. | `--assetVersion 2.0.4`
 |`--[no-]clustered`| Enables clustered nodes, which requires at least two replicas. +
