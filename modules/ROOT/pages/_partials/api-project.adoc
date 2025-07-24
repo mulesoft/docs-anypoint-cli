@@ -15,7 +15,7 @@
 
 // end::summary[]
 
-// tag::generate-command[]
+// tag::commands[]
 
 [[generate-command]]
 == api-project generate
@@ -45,9 +45,7 @@ Generates a new API Project descriptor file (`exchange.json`).
 | `--is-topic` | Adds agent topic annotations to the API spec
 |===
 
-// end::generate-command[]
 
-// tag::validate-command[]
 
 [[validate-command]]
 == api-project validate
@@ -76,9 +74,6 @@ Validates the API Project structure, rulesets, and governance policies.
 | `--asset-version=<version>` | Version of the asset
 |===
 
-// end::validate-command[]
-
-// tag::publish-command[]
 
 [[publish-command]]
 == api-project publish
@@ -98,9 +93,6 @@ Validates and publishes the API Project to Exchange.
 | `--json` | Outputs the result in JSON format
 |===
 
-// end::publish-command[]
-
-// tag::metadata-command[]
 
 [[metadata-command]]
 == api-project metadata
@@ -120,9 +112,6 @@ Retrieves metadata for the API Project from local or remote sources.
 | `--asset-version=<version>` | Asset version
 |===
 
-// end::metadata-command[]
-
-// tag::centralized-rulesets-command[]
 
 [[centralized-rulesets-command]]
 == api-project centralized-rulesets
@@ -142,9 +131,6 @@ Validates the project against centralized governance rulesets based on metadata.
 | `--asset-version=<version>` | Asset version
 |===
 
-// end::centralized-rulesets-command[]
-
-// tag::publish-instance-command[]
 
 [[publish-instance-command]]
 == api-project publish-instance
@@ -165,4 +151,4 @@ Creates API instances in API Manager based on GCL definitions in the project.
 | `--json` | Outputs the result in JSON format
 |===
 
-// end::publish-instance-command[]
+// end::commands[]
