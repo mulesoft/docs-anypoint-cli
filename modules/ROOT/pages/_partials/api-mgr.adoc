@@ -53,7 +53,7 @@ Creates an API instance alert with the name passed in `name` for the API instanc
 
 Alerts are enabled by default when created and can be paused later.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags (alphabetical):
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -90,7 +90,7 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 
 Creates an API instance alert with the name passed in `name` for the API instance ID passed in `<apiInstanceId>` using the legacy alert monitoring system.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags (alphabetical):
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -131,7 +131,7 @@ Lists alerts for the API instance passed in `<apiInstanceId>`.
 
 The **Enabled** status is derived from the alert's state (for example, a paused state means the alert is not enabled).
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags (alphabetical):
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -155,7 +155,7 @@ Lists alerts for the API instance passed in `<apiInstanceId>` from the legacy al
 
 The output reflects the structure of the legacy alert objects, including the `enabled` boolean property and the original recipient format.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags (alphabetical):
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
