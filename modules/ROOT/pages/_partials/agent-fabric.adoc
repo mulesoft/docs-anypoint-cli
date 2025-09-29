@@ -1,0 +1,273 @@
+= CLI for Agent Fabric Plugin
+
+Use these commands to author, publish, and deploy agent network projects.
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-build[agent-network:project:build] | Builds the agent network project and validates configuration
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-create[agent-network:project:create] | Creates a new agent network project and generates the initial configuration files
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-deploy[agent-network:project:deploy] | Deploys the agent network project to the target environment
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-publish[agent-network:project:publish] | Publishes the agent network project to Anypoint Exchange
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-setup-gateways[agent-network:setup:gateways] | Sets up the gateways for the agent network
+|===
+// end::summary[])
+
+
+// tag::commands[]
+
+[[agent-network-project-build]]
+== agent-network:project:build
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project build [flags]
+----
+
+Builds the current agent network project using the Maven wrapper (`mvnw` or `mvnw.cmd`).  
+This command validates the configuration and generates the artifacts required for publishing and deployment.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`--bearer <value>` | Bearer token +
+You can also set it with `ANYPOINT_BEARER` env variable | `--bearer myBearerToken`
+|`--client_id <value>` | Client ID +
+ You can also set it with the `ANYPOINT_CLIENT_ID` env variable | `--client_id myClientID`
+|`--client_secret <value>` | Client Secret +
+ You can also set it with the `ANYPOINT_CLIENT_SECRET` env variable | `--client_secret myClientSecret`
+|`--[no-]collectMetrics` | Collect metrics +
+ You can also set it with the `COLLECT_METRICS` env variable | `--no-collectMetrics`
+|`--debug` | Enable debug mode | `--debug`
+|`--environment <value>` | Environment name +
+ You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
+|`--forceUpdate` | Force update the dependencies | `--forceUpdate`
+|`--host <value>` | Host URL +
+ Default: `anypoint.mulesoft.com` +
+  You can also set it with the `ANYPOINT_HOST`  variable | `--host mycompany.anypoint.mulesoft.com`
+|`--organization <value>` | Organization name +
+ You can also set it with the `ANYPOINT_ORG` variable | `--organization MyOrg`
+|`--password <value>` | Password +
+You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
+|`--path <value>` | Path to the project +
+ Default: `.` | `--path ./my-agent-network`
+|`--username <value>` | Username +
+ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+|===
+
+[EXAMPLE]
+====
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project build
+----
+====
+
+[[agent-network-project-create]]
+== agent-network:project:create
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project create --name <projectName> [flags]
+----
+
+Creates a new agent network project in the current directory.  
+The command generates a project folder with initial configuration files, including `agent-network.yaml`.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`-n, --name <value>` | (Required) Name of the project | `--name my-agent-network`
+|`-o, --output-dir <value>` | Output directory for the project | `--output-dir ./projects`
+|`--asset-id <value>` | Asset ID (GAV) | `--asset-id my-asset`
+|`--asset-version <value>` | Asset version (GAV) +
+ Default: `1.0.0` | `--asset-version 1.2.0`
+|`--bearer <value>` | Bearer token +
+You can also set it with the `ANYPOINT_BEARER` variable | `--bearer myBearerToken`
+|`--client_id <value>` | Client ID + 
+You can also set it with the `ANYPOINT_CLIENT_ID` variable | `--client_id myClientID`
+|`--client_secret <value>` | Client Secret +
+ You can also set it with the `ANYPOINT_CLIENT_SECRET` variable | `--client_secret myClientSecret`
+|`--[no-]collectMetrics` | Collect metrics +
+ You can also set it with the `COLLECT_METRICS` variable | `--no-collectMetrics`
+|`--[no-]create-dir` | Create a new directory under `output-dir` using the project name | `--create-dir`
+|`--environment <value>` | Environment name +
+You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
+|`--group-id <value>` | Group ID (GAV) | `--group-id com.myorg`
+|`--host <value>` | Host URL +
+ Default: `anypoint.mulesoft.com` +
+  You can also set it with the `ANYPOINT_HOST` variable | `--host mycompany.anypoint.mulesoft.com`
+|`--organization <value>` | Organization name +
+ You can also set it with the `ANYPOINT_ORG` env variable | `--organization MyOrg`
+|`--password <value>` | Password +
+ You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
+|`--tab-size <value>` | Tab size for indenting the API specification +
+Default: `2` | `--tab-size 4`
+|`--username <value>` | Username +
+You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+|===
+
+[EXAMPLE]
+====
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project create --name my-agent-network
+----
+====
+
+[[agent-network-project-deploy]]
+== agent-network:project:deploy
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project deploy [flags]
+----
+
+Deploys the agent network application to the target private space.  
+By default, the command uses the `agent-network-ingress-gw` and `agent-network-egress-gw` gateways, and the `agent-network-space` private space.  
+You can override these values using flags.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`-e, --egress-gw <value>` | Name of the target egress gateway +
+Default: `agent-network-egress-gw` | `--egress-gw custom-egress`
+|`-i, --ingress-gw <value>` | Name of the target ingress gateway +
+Default: `agent-network-ingress-gw` | `--ingress-gw custom-ingress`
+|`-t, --target-space <value>` | Name of the target private space to deploy +
+ Default: `agent-network-space` | `--target-space my-space`
+|`--bearer <value>` | Bearer token +
+ You can also set it with the `ANYPOINT_BEARER` variable | `--bearer myBearerToken`
+|`--client_id <value>` | Client ID +
+ You can also set it with the `ANYPOINT_CLIENT_ID` variable | `--client_id myClientID`
+|`--client_secret <value>` | Client Secret +
+ You can also set it with the `ANYPOINT_CLIENT_SECRET` variable | `--client_secret myClientSecret`
+|`--[no-]collectMetrics` | Collect metrics +
+ You can also set it with the `COLLECT_METRICS` variable | `--no-collectMetrics`
+|`--disable-tracing` | Disable tracing functionalities | `--disable-tracing`
+|`--dont-wait-for-agent-network` | Do not wait for the agent network to be ready | `--dont-wait-for-agent-network`
+|`--environment <value>` | Environment name +
+ You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
+|`--host <value>` | Host URL +
+ Default: `anypoint.mulesoft.com` +
+  You can also set it with the `ANYPOINT_HOST` variable | `--host mycompany.anypoint.mulesoft.com`
+|`--organization <value>` | Organization name +
+ You can also set it with the `ANYPOINT_ORG` variable | `--organization MyOrg`
+|`--password <value>` | Password +
+ You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
+|`--path <value>` | Path to the project +
+ Default: `.` | `--path ./my-agent-network`
+|`--property <value>` | One or more deployment properties in `name:value` format | `--property logLevel:DEBUG`
+|`--username <value>` | Username +
+ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+|`--json` | Format output as JSON | `--json`
+|===
+
+[EXAMPLE]
+====
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project deploy
+----
+====
+
+[[agent-network-project-publish]]
+== agent-network:project:publish
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project publish [flags]
+----
+
+Publishes the current agent network project to Anypoint Exchange.  
+The command outputs links and details for all created assets.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`--bearer <value>` | Bearer token +
+You can also set it with the `ANYPOINT_BEARER` variable | `--bearer myBearerToken`
+|`--client_id <value>` | Client ID +
+ You can also set it with the `ANYPOINT_CLIENT_ID` variable | `--client_id myClientID`
+|`--client_secret <value>` | Client Secret +
+ You can also set it with the `ANYPOINT_CLIENT_SECRET` variable | `--client_secret myClientSecret`
+|`--[no-]collectMetrics` | Collect metrics +
+ You can also set it with the `COLLECT_METRICS`  variable | `--no-collectMetrics`
+|`--debug` | Enable debug mode | `--debug`
+|`--environment <value>` | Environment name +
+ You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
+|`--host <value>` | Host URL +
+ Default: `anypoint.mulesoft.com` +
+  You can also set it with the `ANYPOINT_HOST` variable | `--host mycompany.anypoint.mulesoft.com`
+|`--organization <value>` | Organization name +
+You can also set it with `ANYPOINT_ORG` env variable | `--organization MyOrg`
+|`--password <value>` | Password +
+You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
+|`--path <value>` | Path to the project +
+Default: `.` | `--path ./my-agent-network`
+|`--username <value>` | Username +
+You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+|`--json` | Format output as JSON | `--json`
+|===
+
+[EXAMPLE]
+====
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project publish
+----
+====
+
+[[agent-network-setup-gateways]]
+== agent-network:setup:gateways
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network setup gateways [flags]
+----
+
+Sets up the agent network environment with the required ingress and egress gateways in the specified target private space.  
+This step is required only if the target space does not already have gateways.  
+In the typical (happy path) workflow, you run it once per target space before the first deployment.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`-e, --egress-gw <value>` | Name of the egress gateway +
+ Default: `agent-network-egress-gw` | `--egress-gw my-egress`
+|`-i, --ingress-gw <value>` | Name of the ingress gateway +
+ Default: `agent-network-ingress-gw` | `--ingress-gw my-ingress`
+|`-t, --target-space <value>` | Name of the target private space where the gateways will be set up +
+ Default: `agent-network-space` | `--target-space my-space`
+|`--bearer <value>` | Bearer token +
+ You can also set it with the `ANYPOINT_BEARER` variable | `--bearer myBearerToken`
+|`--client_id <value>` | Client ID +
+ You can also set it with the`ANYPOINT_CLIENT_ID`  variable | `--client_id myClientID`
+|`--client_secret <value>` | Client Secret +
+ You can also set it with the`ANYPOINT_CLIENT_SECRET` variable | `--client_secret myClientSecret`
+|`--[no-]collectMetrics` | Collect metrics +
+ You can also set it with the`COLLECT_METRICS` variable | `--no-collectMetrics`
+|`--environment <value>` | Environment name +
+ You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
+|`--host <value>` | Host URL +
+Default: `anypoint.mulesoft.com` +
+ You can also set it with the `ANYPOINT_HOST` variable | `--host mycompany.anypoint.mulesoft.com`
+|`--organization <value>` | Organization name +
+ You can also set it with the `ANYPOINT_ORG` variable | `--organization MyOrg`
+|`--password <value>` | Password +
+You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
+|`--username <value>` | Username +
+You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+|===
+
+[EXAMPLE]
+====
+----
+$ anypoint-cli-agent-fabric-plugin agent-network setup gateways --target-space my-space
+----
+====
+
+// end::commands[]
