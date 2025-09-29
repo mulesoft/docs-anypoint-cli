@@ -1,0 +1,7 @@
+= CLI for Agent Fabric Plugin
+
+Use these commands to author, publish, and deploy agent network projects.
+
+include::anypoint-cli::partial$agent-fabric.adoc[tag=summary]
+
+include::anypoint-cli::partial$agent-fabric.adoc[tag=commands]
