@@ -29,7 +29,7 @@ Use these commands to author, publish, and deploy agent network projects.
 Builds the current agent network project using the Maven wrapper (`mvnw` or `mvnw.cmd`).  
 This command validates the configuration and generates the artifacts required for publishing and deployment.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -130,7 +130,7 @@ Deploys the agent network application to the target private space.
 By default, the command uses the `agent-network-ingress-gw` and `agent-network-egress-gw` gateways, and the `agent-network-space` private space.  
 You can override these values using flags.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -185,7 +185,7 @@ $ anypoint-cli-agent-fabric-plugin agent-network project deploy
 Publishes the current agent network project to Anypoint Exchange.  
 The command outputs links and details for all created assets.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -233,7 +233,7 @@ Sets up the agent network environment with the required ingress and egress gatew
 This step is required only if the target space does not already have gateways.  
 In the typical (happy path) workflow, you run it once per target space before the first deployment.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
