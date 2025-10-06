@@ -29,7 +29,7 @@ Use these commands to author, publish, and deploy agent network projects.
 Builds the current agent network project using the Maven wrapper (`mvnw` or `mvnw.cmd`).  
 This command validates the configuration and generates the artifacts required for publishing and deployment.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
