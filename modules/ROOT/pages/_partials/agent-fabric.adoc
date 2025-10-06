@@ -77,7 +77,7 @@ $ anypoint-cli-agent-fabric-plugin agent-network project build
 Creates a new agent network project in the current directory.  
 The command generates a project folder with initial configuration files, including `agent-network.yaml`.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
