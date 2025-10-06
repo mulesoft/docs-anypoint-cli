@@ -130,7 +130,7 @@ Deploys the agent network application to the target private space.
 By default, the command uses the `agent-network-ingress-gw` and `agent-network-egress-gw` gateways, and the `agent-network-space` private space.  
 You can override these values using flags.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
