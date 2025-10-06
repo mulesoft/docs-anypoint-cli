@@ -233,7 +233,7 @@ Sets up the agent network environment with the required ingress and egress gatew
 This step is required only if the target space does not already have gateways.  
 In the typical (happy path) workflow, you run it once per target space before the first deployment.
 
-In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header,cols="30a,40a,30a"]
 |===
