@@ -13,6 +13,7 @@ Use these commands to author, publish, and deploy agent network projects.
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-project-publish[agent-network:project:publish] | Publishes the agent network project to Anypoint Exchange
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-setup-gateways[agent-network:setup:gateways] | Sets up the gateways for the agent network
 |===
+
 // end::summary[])
 
 
@@ -28,7 +29,7 @@ Use these commands to author, publish, and deploy agent network projects.
 Builds the current agent network project using the Maven wrapper (`mvnw` or `mvnw.cmd`).  
 This command validates the configuration and generates the artifacts required for publishing and deployment.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -55,7 +56,8 @@ You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPasswo
 |`--path <value>` | Path to the project +
  Default: `.` | `--path ./my-agent-network`
 |`--username <value>` | Username +
- You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#64;example.com`
+
 |===
 
 [EXAMPLE]
@@ -75,7 +77,7 @@ $ anypoint-cli-agent-fabric-plugin agent-network project build
 Creates a new agent network project in the current directory.  
 The command generates a project folder with initial configuration files, including `agent-network.yaml`.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -107,7 +109,7 @@ You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
 |`--tab-size <value>` | Tab size for indenting the API specification +
 Default: `2` | `--tab-size 4`
 |`--username <value>` | Username +
-You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#64;example.com`
 |===
 
 [EXAMPLE]
@@ -128,7 +130,7 @@ Deploys the agent network application to the target private space.
 By default, the command uses the `agent-network-ingress-gw` and `agent-network-egress-gw` gateways, and the `agent-network-space` private space.  
 You can override these values using flags.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -162,7 +164,7 @@ Default: `agent-network-ingress-gw` | `--ingress-gw custom-ingress`
  Default: `.` | `--path ./my-agent-network`
 |`--property <value>` | One or more deployment properties in `name:value` format | `--property logLevel:DEBUG`
 |`--username <value>` | Username +
- You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#64;example.com`
 |`--json` | Format output as JSON | `--json`
 |===
 
@@ -183,7 +185,7 @@ $ anypoint-cli-agent-fabric-plugin agent-network project deploy
 Publishes the current agent network project to Anypoint Exchange.  
 The command outputs links and details for all created assets.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -209,7 +211,7 @@ You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPasswo
 |`--path <value>` | Path to the project +
 Default: `.` | `--path ./my-agent-network`
 |`--username <value>` | Username +
-You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#64;example.com`
 |`--json` | Format output as JSON | `--json`
 |===
 
@@ -231,7 +233,7 @@ Sets up the agent network environment with the required ingress and egress gatew
 This step is required only if the target space does not already have gateways.  
 In the typical (happy path) workflow, you run it once per target space before the first deployment.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:anypoint-cli@v4::index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -260,7 +262,7 @@ Default: `anypoint.mulesoft.com` +
 |`--password <value>` | Password +
 You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
 |`--username <value>` | Username +
-You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser@example.com`
+You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#64;example.com`
 |===
 
 [EXAMPLE]

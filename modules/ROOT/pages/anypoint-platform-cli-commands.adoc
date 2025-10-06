@@ -29,6 +29,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 include::4.x@anypoint-cli::partial$account.adoc[tag=summary]
 
 [[agent-fabric]]
+== Agent Fabric
 include::4.x@anypoint-cli::partial$agent-fabric.adoc[tag=summary]
 
 
