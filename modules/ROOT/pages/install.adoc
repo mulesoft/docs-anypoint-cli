@@ -1,16 +1,6 @@
-= Installing Anypoint CLI 4.x
+= Install Anypoint CLI 4.x
 
-You must install Anypoint CLI from npm before you can run the commands. Use the following guidelines to install:
-
-. <<prereqs,Install the prerequisite software>> before proceeding with the Anypoint CLI installation. 
-
-. <<installation,Install the Anypoint CLI 4.x package>>, which includes all of the default plugins.
-
-. <<install-plugins,Install nondefault plugins or new versions of default plugins>> if needed after you have installed Anypoint CLI 4.x. 
-
-. <<verify-installation,Verify the installation>>.
-
-. Optionally <<uninstall-plugin,uninstall plugins>> you do not use or <<uninstall-anypoint-cli,uninstall the Anypoint CLI>> from a system where it is no longer used.
+Install Anypoint Platform CLI 4.x from npm to access command-line tools for Anypoint Platform and Anypoint Platform Private Cloud Edition (PCE). The installation process includes <<prereqs,installing prerequisite software>>, <<installation,installing the CLI package with default plugins>>, and optionally <<install-plugins,installing nondefault plugins>>. <<verify-installation,Verify the installation>> to ensure proper setup for automating platform operations and managing applications. CLI supports both cloud and on-premises deployments, enabling integration with CI/CD workflows and enterprise environments.
 
 [[prereqs]]
 == Before You Begin
