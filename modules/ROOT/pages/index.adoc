@@ -1,7 +1,7 @@
 = Anypoint Platform CLI 4.x Overview
 :page-aliases: runtime-manager::anypoint-platform-cli.adoc
 
-Anypoint Platform CLI is a scripting and command-line tool for Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+Anypoint Platform CLI provides scripting and command-line capabilities for Anypoint Platform and Anypoint Platform Private Cloud Edition (PCE). Use the CLI to automate platform operations, manage applications, and integrate with CI/CD pipelines. The tool enables developers and administrators to perform common tasks efficiently through command-line interfaces. CLI supports both cloud and on-premises deployments, enabling support for various enterprise environments.
 
 include::anypoint-cli::partial$intro.adoc[tag=usageintro]
 
