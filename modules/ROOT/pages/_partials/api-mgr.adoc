@@ -611,9 +611,11 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description| Example
+| `--allowDuplicated` | Indicates whether the Policy can be applied multiple times on the API Instance. | `--allowDuplicated`
+
 | `-c, --config` 
 | Pass the configuration data as a JSON string |
-`--config '{\"username\":\"user\",\"password\":\"teste\"}'`
+`--config '{\"username\":\"user\",\"password\":\"test\"}'`
 
 | `--configFile`
 | Pass the configuration data as a file |
@@ -622,12 +624,19 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 | `--groupId`
 | Mule 4 policy group ID +
 This value defaults to the MuleSoft group ID. | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+
+| `--label`
+| An optional label to identify this policy instance | `--label user authentication policy`
+
 | `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings |
 `--pointcut '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+
 | `--policyVersion`
 | Mule 4 policy version. | `--policyVersion 1.0.2`
+
 |`--upstreamId` | Configure upstream | `--upstreamId 550e8400-e29b-41d4-a716-446655440000`
 
 |===
@@ -704,16 +713,25 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description| Example
+| `--allowDuplicated` | Indicates whether the Policy can be applied multiple times on the API Instance. | `--allowDuplicated`
+
 | `-c`, `--config`
 | Pass the configuration data as a JSON string |
-`--config '{\"username\":\"user\",\"password\":\"teste\"}'`
+`--config '{\"username\":\"user\",\"password\":\"test\"}'`
+
 | `--configFile`
 | Pass the configuration data as a file |
 `--configFile ./config.json`
+
+| `--label`
+| An optional label to identify this policy instance | `--label user authentication policy`
+
 | `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+
 | `-p, --pointcut`
 | Pass pointcut data as JSON strings |
 `-p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+
 |===
 
 [[api-mgr-policy-enable]]
