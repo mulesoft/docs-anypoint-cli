@@ -170,7 +170,7 @@ Default: `agent-network-ingress-gw` | `--ingress-gw custom-ingress`
 [[example-deploy]]
 === Example
 ----
-$ anypoint-cli-agent-fabric-plugin agent-network project deploy
+$ anypoint-cli-agent-fabric-plugin agent-network project deploy --environment Staging --target-space staging-private-space --property openai.apiKey:STAGING_API_KEY
 ----
 
 
