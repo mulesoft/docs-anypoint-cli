@@ -611,7 +611,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description| Example
-| `--allowDuplicated` | Indicates whether the Policy can be applied multiple times on the API Instance. | `--allowDuplicated`
+| `--allowDuplicated` | Indicates whether the policy can be applied multiple times on the API Instance. | `--allowDuplicated`
 
 | `-c, --config` 
 | Pass the configuration data as a JSON string |
@@ -626,7 +626,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 This value defaults to the MuleSoft group ID. | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
 | `--label`
-| An optional label to identify this policy instance | `--label user authentication policy`
+| Optional label to identify the policy instance | `--label user authentication policy`
 
 | `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 
@@ -713,7 +713,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description| Example
-| `--allowDuplicated` | Indicates whether the Policy can be applied multiple times on the API Instance. | `--allowDuplicated`
+| `--allowDuplicated` | Indicates whether the policy can be applied multiple times on the API Instance. | `--allowDuplicated`
 
 | `-c`, `--config`
 | Pass the configuration data as a JSON string |
@@ -724,7 +724,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 `--configFile ./config.json`
 
 | `--label`
-| An optional label to identify this policy instance | `--label user authentication policy`
+| Optional label to identify the policy instance | `--label user authentication policy`
 
 | `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 
