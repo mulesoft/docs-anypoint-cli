@@ -7,3 +7,4 @@ Anypoint CLI supports these Runtime Manager features:
 * xref:servers.adoc[Local Servers]
 * xref:server-clusters.adoc[Local Cluster Servers]
 * xref:server-groups.adoc[Local Server Groups]
+* xref:managed-flex-gateways.adoc[Managed Flex Gateways]

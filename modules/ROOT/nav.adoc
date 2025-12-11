@@ -26,4 +26,5 @@
  *** xref:servers.adoc[Local Servers]
  *** xref:server-clusters.adoc[Local Cluster Servers]
  *** xref:server-groups.adoc[Local Server Groups]
+ *** xref:managed-gateways.adoc[Managed Flex Gateways]
 ** xref:secrets-manager.adoc[Secrets Manager]
