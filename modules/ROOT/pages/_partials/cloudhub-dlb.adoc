@@ -91,7 +91,8 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |`--clientCertificate` | Client certificate file | `--clientCertificate /Users/mule/Documents/CertificateFile.pem`
 |`--crl` | Certificate revocation list file | `--crl /Users/mule/Documents/crlFile.pem`
 |`--http` | Specifies the Load balancer HTTP behavior. It can be set to `on` (accepts HTTP requests and forwards it to your configured default `_sslendpoint_`), `off` (refuses all HTTP requests), or `redirect` (redirects to HTTPS).| `--http off`
-|`--[no-]tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2 | `--[no-]tlsv1`
+|`--transportDownstreamProtocols`  | TLS version used for communication between customer and DLB. Supported values are TLSv1.2 and TLSv1.3| `--transportDownstreamProtocols=TLSv1.2`
+|`--transportUpstreamProtocols`  | TLS version used for communication between DLB and Mule worker. Supported values are TLSv1.2 and TLSv1.3| `--transportUpstreamProtocols=TLSv1.2`
 |`--[no-]dynamic-ips` | Uses dynamic IPs, which are not persistent through restarts | `--[no-]dynamic-ips`
 |`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always), `off` (don't verify), or `optional` (verification optional). | `--verificationMode optional`
 
@@ -250,7 +251,6 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |Flag |Description| Example
 |`--clientCertificate` | Client certificate file| `--clientCertificate /Users/mule/Documents/CertificateFile.pem`|
 `--crl` | Certificate Revocation List file | `--clientCertificate /Users/mule/Documents/crlFile.pem`
-|`--tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2 | `--tlsv1`
 |`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always) `off` (don't verify) or `optional` (Verification optional).| `--verificationMode on`
 
 |===
