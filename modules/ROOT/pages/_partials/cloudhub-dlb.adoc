@@ -253,7 +253,6 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |Flag |Description| Example
 |`--clientCertificate` | Client certificate file| `--clientCertificate /Users/mule/Documents/CertificateFile.pem`|
 `--crl` | Certificate Revocation List file | `--clientCertificate /Users/mule/Documents/crlFile.pem`
-|`--tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2 | `--tlsv1`
 |`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always) `off` (don't verify) or `optional` (Verification optional).| `--verificationMode on`
 
 |===
