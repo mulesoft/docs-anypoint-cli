@@ -1,6 +1,146 @@
-= CLI for Managed Flex Gateways
-Use the `gateways:managed` commands to work with Managed Flex Gateways. For more information about how to use these commands, refer to xref:runtime-manager::index.adoc[the Runtime Manager documentation].
+// tag::summary[]
 
-include::anypoint-cli::partial$managed-flex-gateways.adoc[tag=summary]
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-create[runtime-mgr:gateways:managed:create] | Create a Managed Flex Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-delete[runtime-mgr:gateways:managed:delete] | Delete a Managed Flex Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-describe[runtime-mgr:gateways:managed:describe] | Describe a specific Managed Flex Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-edit[runtime-mgr:gateways:managed:edit] | Edit a Managed Flex Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-list[runtime-mgr:gateways:managed:list] | Lists all Managed Flex Gateways in the environment
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-start[runtime-mgr:gateways:managed:start] | Start a Managed Flex Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-stop[runtime-mgr:gateways:managed:stop] | Stop a Managed Flex Gateway
+|===
+// end::summary[]
 
-include::anypoint-cli::partial$managed-flex-gateways.adoc[tag=commands]
+// tag::commands[]
+
+[[runtime-mgr-gateways-managed-create]]
+== runtime-mgr:gateways:managed:create
+
+----
+> runtime-mgr:gateways:managed:create <name> <targetId> <size> [flags]
+----
+
+Creates a new Managed Flex Gateway with the specified configuration +
+The gateway will be deployed to the specified `targetId`.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="25a,50a,25a"]
+|===
+|Flag |Description |Example
+|`--releaseChannel` |Release channel (required). Supported values: `edge`, `lts` |`--releaseChannel edge`
+|`--version` |Runtime version. Use `latest` for the most recent version available for the configured release channel. +
+Default: `latest` |`--version 1.10.2`
+|`--publicUrl` |Public URL(s). For multiple URLs, separate them with commas |`--publicUrl https://my-gateway.example.com/`
+|`--[no-]lastMileSecurity` |Enable or disable ingress last mile security. +
+Default: `false` |`--lastMileSecurity`
+|`--[no-]forwardSslSession` |Enable or disable ingress forward SSL session. +
+Default: `false` |`--forwardSslSession`
+|`--upstreamResponseTimeout` |Upstream response timeout in seconds. +
+Default: `15` |`--upstreamResponseTimeout 30`
+|`--connectionIdleTimeout` |Connection idle timeout in seconds. +
+Default: `60` |`--connectionIdleTimeout 120`
+|`--loggingLevel` |Logging level. Supported values: `debug`, `info`, `warn`, `error`, `fatal`. +
+Default: `info` |`--loggingLevel debug`
+|`--[no-]forwardLogs` |Enable or disable log forwarding. +
+Default: `true` |`--no-forwardLogs`
+|`--[no-]tracingEnabled` |Enable or disable tracing. +
+Default: `false` |`--tracingEnabled`
+|`--tracingSampling` |Tracing sampling percentage (1-100). Note: High values may impact performance. +
+Default: `1` |`--tracingSampling 50`
+|`--tracingLabels` |Tracing labels attributes as JSON string |`--tracingLabels '[{"type":"environment","name":"prod","keyName":"env","defaultValue":"production"}]'`
+|===
+
+[[runtime-mgr-gateways-managed-delete]]
+== runtime-mgr:gateways:managed:delete
+
+----
+> runtime-mgr:gateways:managed:delete <managedGatewayId> [flags]
+----
+
+Deletes a Managed Flex Gateway +
+If the gateway has associated APIs, the command will display a list of those APIs and prevent deletion until they are removed.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[runtime-mgr-gateways-managed-describe]]
+== runtime-mgr:gateways:managed:describe
+
+----
+> runtime-mgr:gateways:managed:describe <managedGatewayId> [flags]
+----
+
+Displays detailed information about a specific Managed Flex Gateway +
+
+This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[runtime-mgr-gateways-managed-edit]]
+== runtime-mgr:gateways:managed:edit
+
+----
+> runtime-mgr:gateways:managed:edit <managedGatewayId> [flags]
+----
+
+Edits the configuration of an existing Managed Flex Gateway. You must specify at least one flag to modify. Only the specified flags will be updated; all other settings will remain unchanged.
+
+[IMPORTANT]
+If you specify `--tracingLabels` or `--tracingSampling` without enabling tracing, the command will return an error.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="25a,50a,25a"]
+|===
+|Flag |Description |Example
+|`--releaseChannel` |Release channel. Supported values: `edge`, `lts` |`--releaseChannel lts`
+|`--version` |Runtime version. Use `latest` for the most recent version |`--version 1.10.3`
+|`--publicUrl` |Public URL(s). For multiple URLs, separate them with commas |`--publicUrl https://new-gateway.example.com/`
+|`--[no-]lastMileSecurity` |Enable or disable ingress last mile security |`--no-lastMileSecurity`
+|`--[no-]forwardSslSession` |Enable or disable ingress forward SSL session |`--forwardSslSession`
+|`--upstreamResponseTimeout` |Upstream response timeout in seconds |`--upstreamResponseTimeout 45`
+|`--connectionIdleTimeout` |Connection idle timeout in seconds |`--connectionIdleTimeout 180`
+|`--loggingLevel` |Logging level. Supported values: `debug`, `info`, `warn`, `error`, `fatal` |`--loggingLevel error`
+|`--[no-]forwardLogs` |Enable or disable log forwarding |`--no-forwardLogs`
+|`--[no-]tracingEnabled` |Enable or disable tracing |`--tracingEnabled`
+|`--tracingSampling` |Tracing sampling percentage (1-100) |`--tracingSampling 75`
+|`--tracingLabels` |Tracing labels attributes as JSON string |`--tracingLabels '[{"type":"custom","name":"region","keyName":"region","defaultValue":"us-east"}]'`
+|===
+
+[[runtime-mgr-gateways-managed-list]]
+== runtime-mgr:gateways:managed:list
+
+----
+> runtime-mgr:gateways:managed:list [flags]
+----
+
+Lists all Managed Flex Gateways in the current environment +
+The list includes gateway IDs, names, statuses, runtime versions, and target information.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[runtime-mgr-gateways-managed-start]]
+== runtime-mgr:gateways:managed:start
+
+----
+> runtime-mgr:gateways:managed:start <managedGatewayId> [flags]
+----
+
+Starts a stopped Managed Flex Gateway 
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+
+[[runtime-mgr-gateways-managed-stop]]
+== runtime-mgr:gateways:managed:stop
+
+----
+> runtime-mgr:gateways:managed:stop <managedGatewayId> [flags]
+----
+
+Stops a running Managed Flex Gateway
+
+This command accepts the xref:index.adoc#default-options[default flags].
+// end::commands[]

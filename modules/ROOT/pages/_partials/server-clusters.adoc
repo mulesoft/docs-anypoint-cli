@@ -1,4 +1,4 @@
-= Local Cluster Servers
+= Local Server Clusters
 
 // tag::summary[]
 

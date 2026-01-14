@@ -19,8 +19,9 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<standalone-apps>>
 * <<standalone-alerts>>
 * <<servers>>
-* <<server-groups>>
 * <<server-clusters>>
+* <<server-groups>>
+* <<managed-gateways>>
 
 
 [[account]]
@@ -99,14 +100,20 @@ include::4.x@anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
 
 include::4.x@anypoint-cli::partial$servers.adoc[tag=summary]
 
+[[server-clusters]]
+== Local Server Clusters
+
+include::4.x@anypoint-cli::partial$server-clusters.adoc[tag=summary]
+
 [[server-groups]]
 == Local Server Groups
 
 include::4.x@anypoint-cli::partial$server-groups.adoc[tag=summary]
 
-[[server-clusters]]
-== Local Server Clusters
-include::4.x@anypoint-cli::partial$server-clusters.adoc[tag=summary]
+[[managed-gateways]]
+== Managed Flex Gateways
+
+include::4.x@anypoint-cli::partial$managed-gateways.adoc[tag=summary]
 
 
 == See Also
