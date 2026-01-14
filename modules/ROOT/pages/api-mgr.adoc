@@ -1,6 +1,6 @@
 = CLI for API Manager
 
-Use the `api-mgr` commands to automate your API Manager Processes. For more information about how to use these commands, refer to xref:api-manager::index.adoc[the API Manager documentation].
+Use the `api-mgr` commands to automate your API Manager processes. For more information about how to use these commands, refer to the xref:api-manager::index.adoc[API Manager documentation].
 
 include::anypoint-cli::partial$api-mgr.adoc[tag=summary]
 

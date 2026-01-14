@@ -1,6 +1,6 @@
 = CLI for Cloudhub 2.0 
 
-Use these commands for deploying and managing applications in Cloudhub 2.0. For more information about how to use these commands, refer to xref:cloudhub::index.adoc[the CloudHub documentation].
+Use these commands for deploying and managing applications in Cloudhub 2.0. For more information about how to use these commands, refer to the xref:cloudhub::index.adoc[CloudHub documentation].
 
 include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
 

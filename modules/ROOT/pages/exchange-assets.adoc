@@ -1,6 +1,6 @@
 = CLI for Exchange Assets
 
-Use the `exchange` commands to automate your Exchange processes. For more information about how to use these commands, refer to xref:exchange::index.adoc[the Exchange documentation].
+Use the `exchange` commands to automate your Exchange processes. For more information about how to use these commands, refer to the xref:exchange::index.adoc[Exchange documentation].
 
 include::anypoint-cli::partial$exchange-assets.adoc[tag=summary]
 

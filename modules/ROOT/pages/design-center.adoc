@@ -1,6 +1,6 @@
 = CLI for Design Center Projects
 
-Use the `designcenter` commands for managing APIs from Design Center. For more information about how to use these commands, refer to xref:design-center::index.adoc[the Design Center documentation].
+Use the `designcenter` commands for managing APIs from Design Center. For more information about how to use these commands, refer to the xref:design-center::index.adoc[Design Center documentation].
 
 include::anypoint-cli::partial$design-center.adoc[tag=summary]
 
