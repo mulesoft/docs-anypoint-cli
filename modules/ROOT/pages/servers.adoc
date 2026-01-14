@@ -1,6 +1,6 @@
 = CLI for Local Servers
 
-Use the `servers` commands to automate your Local Servers Processes. For more information about how to use these commands, refer to xref:runtime-manager::index.adoc[the Runtime Manager documentation].
+Use the `servers` commands to automate your Local Servers processes. For more information about how to use these commands, refer to the xref:runtime-manager::index.adoc[Runtime Manager documentation].
 
 include::anypoint-cli::partial$servers.adoc[tag=summary]
 

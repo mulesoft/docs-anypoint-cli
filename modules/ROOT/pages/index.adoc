@@ -15,7 +15,7 @@ Apply consistent configurations and policies across different organizations and 
 Perform a wide range of operations on your APIs and applications, from deployment to monitoring, all from the command line.
 
 
-WARNING: Anypoint Platform CLI 4.x is not backward compatible. If you are using a version of Anypoint CLI earlier than Anypoint CLI 4.x, xref:diff-earlier-ver.adoc[read this first to find out about the differences.]
+WARNING: Anypoint Platform CLI 4.x is not backward compatible. If you are using a version of Anypoint CLI earlier than Anypoint CLI 4.x, xref:diff-earlier-ver.adoc[read this first to find out about differences.]
 
 == Before you begin 
 

@@ -1,6 +1,6 @@
 = CLI for Anypoint Virtual Private Cloud
 
-Use the `cloudhub-vpc` commands to automate your Anypoint Virtual Private CLoud processes. For more information about how to use these commands, refer to xref:cloudhub::index.adoc[the CloudHub documentation].
+Use the `cloudhub-vpc` commands to automate your Anypoint Virtual Private CLoud processes. For more information about how to use these commands, refer to the xref:cloudhub::index.adoc[CloudHub documentation].
 
 include::anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
 

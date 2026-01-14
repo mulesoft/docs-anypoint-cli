@@ -1,6 +1,6 @@
 = CLI for Managing Apps in Runtime Fabric
 
-Use these commands for managing applications in Runtime Fabric. For more information about how to use these commands, refer to xref:runtime-fabric::index.adoc[the Runtime Fabric documentation].
+Use these commands for managing applications in Runtime Fabric. For more information about how to use these commands, refer to the xref:runtime-fabric::index.adoc[Runtime Fabric documentation].
 
 include::anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
 

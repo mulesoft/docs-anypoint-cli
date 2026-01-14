@@ -1,6 +1,6 @@
 = Locally Deployed Applications Managed by Runtime Manager
 
-Use these commands to control applications deployed to your local Mule server and managed with Runtime Manager. For more information about how to use these commands, refer to xref:runtime-manager::index.adoc[the Runtime Manager documentation].
+Use these commands to control applications deployed to your local Mule server and managed with Runtime Manager. For more information about how to use these commands, refer to the xref:runtime-manager::index.adoc[Runtime Manager documentation].
 
 include::anypoint-cli::partial$standalone-apps.adoc[tag=summary]
 
