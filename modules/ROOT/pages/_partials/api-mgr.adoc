@@ -9,7 +9,7 @@
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-alert-list[api-mgr:alert:list] | Lists alerts for an API instance
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-autodiscovery[api-mgr:api:autodiscovery] | Lists the autodiscovery properties
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-change-specification[api-mgr:api:change-specification] | Changes the asset version for an API instance by choosing a new version from Exchange
-|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-classify[api-mgr:api:classify] |Classifies an API instance in a given environment
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-classify[api-mgr:api:classify] | Classifies an API instance in a given environment
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-delete[api-mgr:api:delete] | Deletes an API
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-deploy[api-mgr:api:deploy] | Deploys an API to CloudHub, CloudHub2, Hybrid Server, or Runtime Fabric
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-deprecate[api-mgr:api:deprecate] | Deprecates an API instance
@@ -21,6 +21,10 @@
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-promote[api-mgr:api:promote] | Promotes an API instance from source environment
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-redeploy[api-mgr:api:redeploy] | Redeploys an API to CloudHub, CloudHub2, Hybrid Server, or Runtime Fabric
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-undeprecate[api-mgr:api:undeprecate] | Undeprecates an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-application-add-owner[api-mgr:application:add-owner] | Adds an owner to a client application
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-application-import[api-mgr:application:import] | Imports a client application from an external client identity provider
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-application-possible-owners-list[api-mgr:application:possible-owners-list] | Lists possible owners for a client application in the current organization
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-client-provider-list-importable[api-mgr:client-provider:list-importable] | Lists client identity providers with import enabled in the current organization
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-contract-delete[api-mgr:contract:delete] | Deletes a given API contract
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-contract-list[api-mgr:contract:list] | Lists all contracts to a given API instance
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-policy-apply[api-mgr:policy:apply] | Applies a policy to a given API instance
@@ -558,6 +562,65 @@ This flag only works if the target flag was set as `RTF`, `CH`, or `CH2`
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
 This commands accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[api-mgr-application-add-owner]]
+== api-mgr:application:add-owner
+
+----
+> api-mgr:application:add-owner [flags] <applicationId> <id> <entityType>
+----
+
+Adds the owner passed in `<id>` with the entity type passed in `<entityType>` to the client application passed in `<applicationId>`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[api-mgr-application-import]]
+== api-mgr:application:import
+
+----
+> api-mgr:application:import [flags] <providerId> <clientId>
+----
+
+Imports the client application passed in `<clientId>` from the external client identity provider passed in `<providerId>`. The client identity provider must have the import feature enabled.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description |Example
+| `--description` | Description of the client application to import. | `--description "Example application description"`
+| `--url` | URL of the client application to import. | `--url https://example.com`
+|===
+
+[[api-mgr-application-possible-owners-list]]
+== api-mgr:application:possible-owners-list
+
+----
+> api-mgr:application:possible-owners-list [flags]
+----
+
+Lists the possible owners for a client application in the current organization.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description |Example
+| `--search` | Search string to filter results. | `--search example`
+| `--limit` | Number of results to retrieve. | `--limit 10`
+| `--offset` | Number of results to skip. | `--offset 10`
+|===
+
+[[api-mgr-client-provider-list-importable]]
+== api-mgr:client-provider:list-importable
+
+----
+> api-mgr:client-provider:list-importable [flags]
+----
+
+Lists the client identity providers that have the import feature enabled in the current organization.
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
