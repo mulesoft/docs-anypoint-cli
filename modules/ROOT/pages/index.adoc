@@ -29,7 +29,7 @@ See the https://nodejs.org/en/download/[NodeJS download page].
 
 * Download and install the Git version management on your system.
 +
-See the https://git-scm.com/downloads[Git download site].
+See the https://git-scm.com/downloads/[Git download site].
 
 NOTE: Depending on the configuration of your system, you might need to run these commands using administrator credentials.
 
