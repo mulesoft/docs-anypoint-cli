@@ -1,0 +1,9 @@
+= CLI for PDK Policy Projects
+
+Use the `policy-project` commands for creating Policy Development Kit (PDK) projects. +
+For more information about developing custom policies with the PDK, refer to the xref:pdk::policies-pdk-prerequisites.adoc[Policy Development Kit documentation].
+
+
+include::anypoint-cli::partial$pdk-plugin.adoc[tag=summary]
+
+include::anypoint-cli::partial$pdk-plugin.adoc[tag=commands]

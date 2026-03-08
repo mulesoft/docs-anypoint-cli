@@ -22,6 +22,7 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<server-clusters>>
 * <<server-groups>>
 * <<managed-gateways>>
+* <<policy-project>>
 
 
 [[account]]
@@ -114,6 +115,11 @@ include::4.x@anypoint-cli::partial$server-groups.adoc[tag=summary]
 == Managed Flex Gateways
 
 include::4.x@anypoint-cli::partial$managed-gateways.adoc[tag=summary]
+
+[[policy-project]]
+== PDK Policy Projects
+
+include::4.x@anypoint-cli::partial$pdk-plugin.adoc[tag=summary]
 
 
 == See Also
