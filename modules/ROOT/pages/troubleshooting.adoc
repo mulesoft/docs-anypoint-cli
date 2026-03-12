@@ -80,7 +80,7 @@ To troubleshoot these errors:
 * Ensure that there are no curly, or smart, quotation marks in your command. Replace any curly quotation marks with straight quotation marks (`'` or `"`).
 * Ensure that you're entering your information in option values. You can't run most command examples verbatim. You must use your values for parameters and options, including organization ID, environment ID, host ID, asset identifier GAV (group ID/asset ID/version), and folder and file names.
 * Ensure that you're specifying the proper folders for files in the command or that you have changed to the working directory where they're located.
-* Search the https://help.mulesoft.com[MuleSoft Help Center^] for similar errors.
+* Search the https://help.salesforce.com[Salesforce Help] for similar errors.
 
 // end::errors[]
 
