@@ -1,0 +1,28 @@
+= PDK Plugin Commands
+
+// tag::summary[]
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+| xref:anypoint-cli::pdk-plugin.adoc#policy-project-create[policy-project:create] | Creates a custom policy definition project
+|===
+
+// end::summary[]
+
+
+// tag::commands[]
+
+[[policy-project-create]]
+== policy-project:create
+
+----
+> policy-project:create [flags] <name>
+----
+
+Creates a custom policy definition project with the name specified in `<name>`
+
+This command scaffolds a new project structure for developing a custom MuleSoft policy using the Policy Development Kit (PDK).
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+// end::commands[]
