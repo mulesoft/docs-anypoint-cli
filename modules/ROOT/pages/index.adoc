@@ -101,7 +101,7 @@ When you provide a bearer token, the CLI ignores any provided user or client cre
 Your CLI session expires when the bearer token expires.
 |===
 
-For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform].
+For information about generating a bearer token, see https://help.salesforce.com/s/articleView?id=001115323&type=1[How to generate your Authorization Bearer token for Anypoint Platform].
 
 [[optional-args]]
 == Optional Arguments
