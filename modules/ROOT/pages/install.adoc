@@ -27,7 +27,7 @@ Run the following command to install the Anypoint CLI core package and all defau
 
 [source,text,linenums]
 ----
-npm install -g anypoint-cli-v4
+npm install -g anypoint-cli-v4-public
 ----
 
 [[install-plugins]]
@@ -181,5 +181,5 @@ To uninstall the Anypoint CLI:
 
 [source,text,linenums]
 ----
-npm uninstall -g anypoint-cli-v4
+npm uninstall -g anypoint-cli-v4-public
 ----
