@@ -70,7 +70,7 @@ You can install the following plugins with Anypoint CLI:
 NOTE: The API Governance plugin npm package name is now `mulesoft-anypoint-cli-governance-plugin`. The old name `anypoint-cli-governance-plugin` is deprecated. If you use the old name, see <<migrate-governance-plugin>>.
 
 [[migrate-governance-plugin]]
-== Migrate to the New Governance Plugin Package Name
+==== Migrate to the New Governance Plugin Package Name
 
 If you use the old package name `anypoint-cli-governance-plugin`, migrate to the new package name `mulesoft-anypoint-cli-governance-plugin`.
 
