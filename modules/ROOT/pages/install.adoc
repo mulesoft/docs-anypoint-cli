@@ -72,7 +72,7 @@ NOTE: The API Governance plugin npm package name is now `mulesoft-anypoint-cli-g
 [[migrate-governance-plugin]]
 ==== Migrate to the New Governance Plugin Package Name
 
-If you use the old package name `anypoint-cli-governance-plugin`, migrate to the new package name `mulesoft-anypoint-cli-governance-plugin`.
+To migrate to the new package name `mulesoft-anypoint-cli-governance-plugin`:
 
 . In your `package.json` file, replace the `"anypoint-cli-governance-plugin": "1.0.x"` dependency with `"mulesoft-anypoint-cli-governance-plugin": "1.0.19"`.
 . For oclif hosts, such as Anypoint CLI v4, update the entry in the `oclif.plugins` array from `"anypoint-cli-governance-plugin"` to `"mulesoft-anypoint-cli-governance-plugin"`.
