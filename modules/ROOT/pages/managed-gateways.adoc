@@ -1,5 +1,5 @@
-= CLI for Managed Flex Gateways
-Use the `gateways:managed` commands to work with Managed Flex Gateways. For more information about how to use these commands, refer to the xref:runtime-manager::index.adoc[Runtime Manager documentation].
+= CLI for Managed Omni Gateways
+Use the `gateways:managed` commands to work with Managed Omni Gateways. For more information about how to use these commands, refer to the xref:runtime-manager::index.adoc[Runtime Manager documentation].
 
 include::anypoint-cli::partial$managed-gateways.adoc[tag=summary]
 

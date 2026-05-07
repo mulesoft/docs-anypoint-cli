@@ -112,7 +112,7 @@ include::4.x@anypoint-cli::partial$server-clusters.adoc[tag=summary]
 include::4.x@anypoint-cli::partial$server-groups.adoc[tag=summary]
 
 [[managed-gateways]]
-== Managed Flex Gateways
+== Managed Omni Gateways
 
 include::4.x@anypoint-cli::partial$managed-gateways.adoc[tag=summary]
 

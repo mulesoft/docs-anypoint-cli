@@ -3,13 +3,13 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-create[runtime-mgr:gateways:managed:create] | Create a Managed Flex Gateway
-|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-delete[runtime-mgr:gateways:managed:delete] | Delete a Managed Flex Gateway
-|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-describe[runtime-mgr:gateways:managed:describe] | Describe a specific Managed Flex Gateway
-|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-edit[runtime-mgr:gateways:managed:edit] | Edit a Managed Flex Gateway
-|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-list[runtime-mgr:gateways:managed:list] | Lists all Managed Flex Gateways in the environment
-|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-start[runtime-mgr:gateways:managed:start] | Start a Managed Flex Gateway
-|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-stop[runtime-mgr:gateways:managed:stop] | Stop a Managed Flex Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-create[runtime-mgr:gateways:managed:create] | Create a Managed Omni Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-delete[runtime-mgr:gateways:managed:delete] | Delete a Managed Omni Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-describe[runtime-mgr:gateways:managed:describe] | Describe a specific Managed Omni Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-edit[runtime-mgr:gateways:managed:edit] | Edit a Managed Omni Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-list[runtime-mgr:gateways:managed:list] | Lists all Managed Omni Gateways in the environment
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-start[runtime-mgr:gateways:managed:start] | Start a Managed Omni Gateway
+|xref:anypoint-cli::managed-gateways.adoc#runtime-mgr-gateways-managed-stop[runtime-mgr:gateways:managed:stop] | Stop a Managed Omni Gateway
 |===
 // end::summary[]
 
@@ -22,7 +22,7 @@
 > runtime-mgr:gateways:managed:create <name> <targetId> <size> [flags]
 ----
 
-Creates a new Managed Flex Gateway with the specified configuration +
+Creates a new Managed Omni Gateway with the specified configuration +
 The gateway will be deployed to the specified `targetId`.
 
 In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
@@ -60,7 +60,7 @@ Default: `1` |`--tracingSampling 50`
 > runtime-mgr:gateways:managed:delete <managedGatewayId> [flags]
 ----
 
-Deletes a Managed Flex Gateway +
+Deletes a Managed Omni Gateway +
 If the gateway has associated APIs, the command will display a list of those APIs and prevent deletion until they are removed.
 
 This command accepts the xref:index.adoc#default-options[default flags].
@@ -72,7 +72,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 > runtime-mgr:gateways:managed:describe <managedGatewayId> [flags]
 ----
 
-Displays detailed information about a specific Managed Flex Gateway +
+Displays detailed information about a specific Managed Omni Gateway +
 
 This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
@@ -85,7 +85,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 > runtime-mgr:gateways:managed:edit <managedGatewayId> [flags]
 ----
 
-Edits the configuration of an existing Managed Flex Gateway. You must specify at least one flag to modify. Only the specified flags will be updated; all other settings will remain unchanged.
+Edits the configuration of an existing Managed Omni Gateway. You must specify at least one flag to modify. Only the specified flags will be updated; all other settings will remain unchanged.
 
 [IMPORTANT]
 If you specify `--tracingLabels` or `--tracingSampling` without enabling tracing, the command will return an error.
@@ -116,7 +116,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 > runtime-mgr:gateways:managed:list [flags]
 ----
 
-Lists all Managed Flex Gateways in the current environment +
+Lists all Managed Omni Gateways in the current environment +
 The list includes gateway IDs, names, statuses, runtime versions, and target information.
 
 This command accepts the xref:index.adoc#default-options[default flags].
@@ -128,7 +128,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 > runtime-mgr:gateways:managed:start <managedGatewayId> [flags]
 ----
 
-Starts a stopped Managed Flex Gateway 
+Starts a stopped Managed Omni Gateway 
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
@@ -140,7 +140,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 > runtime-mgr:gateways:managed:stop <managedGatewayId> [flags]
 ----
 
-Stops a running Managed Flex Gateway
+Stops a running Managed Omni Gateway
 
 This command accepts the xref:index.adoc#default-options[default flags].
 // end::commands[]
