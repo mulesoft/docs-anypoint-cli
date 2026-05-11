@@ -249,7 +249,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 > api-mgr:api:download-proxy [flags] <apiInstanceId> <targetPath>
 ----
 
-This command downloads the API proxy ZIP file of the API instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`. You cannot download the API proxy of a Flex Gateway API instance.
+This command downloads the API proxy ZIP file of the API instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`. You cannot download the API proxy of an Omni Gateway API instance.
 
 This command accepts the `--gatewayVersion` flag to specify the gateway version to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
@@ -265,7 +265,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-Edits the API instance passed in `<apiInstanceId>`. Editing a deployed Flex Gateway API instance redeploys the instance.
+Edits the API instance passed in `<apiInstanceId>`. Editing a deployed Omni Gateway API instance redeploys the instance.
 
 In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
@@ -273,7 +273,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |===
 |Flag |Description |Example
 | `-f, --isFlex`
-| Indicates whether this is a Flex Gateway API instance. +
+| Indicates whether this is an Omni Gateway API instance. +
 Include the flag to enable it | `--isFlex`
 
 | `-m, --muleVersion4OrAbove`
@@ -333,14 +333,14 @@ Supported values: `http`, `https`. | `--scheme http`
 
 | `--serviceName`
 | WSDL service name +
-Flex Gateway does not support this flag | `--serviceName ExampleServerName`
+Omni Gateway does not support this flag | `--serviceName ExampleServerName`
 
 | `--serviceNamespace`
-| WSDL service namespace. Flex Gateway does not support this flag. |`--serviceNamespace exampleServiceName`
+| WSDL service namespace. Omni Gateway does not support this flag. |`--serviceNamespace exampleServiceName`
 
 | `--servicePort`
 | WSDL service port +
- Flex Gateway does not support this flag | `--servicePort 443`
+ Omni Gateway does not support this flag | `--servicePort 443`
 
 | `--updateApisInSamePort`
 | Updates the TLS context of API instances sharing the port of this API. | `--updateApisInSamePort`
@@ -385,7 +385,7 @@ Manages a new API, API version, or new API instance with the Exchange asset pass
 
 [NOTE] 
 ====
-Flex Gateway API instances created with Anypoint CLI do not support multiple upstream services. To create Flex Gateway API instances with multiple upstream services, see: 
+Omni Gateway API instances created with Anypoint CLI do not support multiple upstream services. To create Omni Gateway API instances with multiple upstream services, see: 
 
 * xref:api-manager::create-instance-task-flex.adoc[Add an API in Connected Mode] 
 * xref:gateway::flex-local-publish-api-multiple-services.adoc[Add an API in Local Mode].
@@ -398,7 +398,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |===
 |Flag |Description |Example
 | `-f, --isFlex`
-| Indicates whether this is a Flex Gateway API instance. +
+| Indicates whether this is an Omni Gateway API instance. +
 Include the flag to enable it | `--isFlex`
 
 | `-m, --muleVersion4OrAbove`
@@ -457,14 +457,14 @@ Supported values: `http`, `https`. | `--scheme http`
 
 | `--serviceName`
 | WSDL service name +
-Flex Gateway does not support this flag | `--serviceName ExampleServerName`
+Omni Gateway does not support this flag | `--serviceName ExampleServerName`
 
 | `--serviceNamespace`
-| WSDL service namespace. Flex Gateway does not support this flag. |`--serviceNamespace exampleServiceName`
+| WSDL service namespace. Omni Gateway does not support this flag. |`--serviceNamespace exampleServiceName`
 
 | `--servicePort`
 | WSDL service port +
- Flex Gateway does not support this flag | `--servicePort 443`
+ Omni Gateway does not support this flag | `--servicePort 443`
 
 | `--type`
 | Endpoint type +
