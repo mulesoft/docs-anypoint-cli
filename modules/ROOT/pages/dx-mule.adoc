@@ -1,0 +1,7 @@
+= CLI for DX Mule Plugin
+
+Use these commands to manage Mule Runtimes, scaffold Mule projects, and introspect connector metadata from the command line.
+
+include::anypoint-cli::partial$dx-mule.adoc[tag=summary]
+
+include::anypoint-cli::partial$dx-mule.adoc[tag=commands]

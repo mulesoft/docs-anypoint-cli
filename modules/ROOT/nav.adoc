@@ -19,6 +19,7 @@
  *** xref:cloudhub-vpc.adoc[Anypoint Virtual Private Cloud]
 ** xref:datagraph-load-balancer.adoc[DataGraph Load Balancers]
 ** xref:design-center.adoc[Design Center Projects]
+** xref:dx-mule.adoc[DX Mule]
 ** xref:exchange-assets.adoc[Exchange Assets]
 ** xref:runtime-manager.adoc[Runtime Manager]
  *** xref:standalone-apps.adoc[Hybrid Applications]

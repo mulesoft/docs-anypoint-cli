@@ -14,7 +14,8 @@ Anypoint Platform CLI provides the ability to manage these features in Anypoint 
 * <<cloudhub-dlb>>
 * <<cloudhub-vpc>>
 * <<datagraph-load-balancer>>
-* <<design-center>>   
+* <<design-center>>
+* <<dx-mule>>
 * <<exchange>>
 * <<standalone-apps>>
 * <<standalone-alerts>>
@@ -80,6 +81,11 @@ include::4.x@anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
 == Design Center
 
 include::4.x@anypoint-cli::partial$design-center.adoc[tag=summary]
+
+[[dx-mule]]
+== DX Mule
+
+include::4.x@anypoint-cli::partial$dx-mule.adoc[tag=summary]
 
 [[exchange]]
 == Exchange Assets
