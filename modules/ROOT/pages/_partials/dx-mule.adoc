@@ -5,11 +5,11 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-list[dx mule runtime list] | Lists all available Mule Runtime versions from Exchange
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-download[dx mule runtime download] | Downloads a Mule Runtime to the local machine
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-path[dx mule runtime path] | Shows or sets the path to the local Mule Runtime installation
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-project-create[dx mule project create] | Scaffolds a new Mule project with Maven structure and connector dependencies
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-describe-connector[dx mule describe-connector] | Introspects a connector's operations, sources, configs, and connection providers
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-list[dx:mule:runtime:list] | Lists all available Mule Runtime versions from Exchange
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-download[dx:mule:runtime:download] | Downloads a Mule Runtime to the local machine
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-path[dx:mule:runtime:path] | Shows or sets the path to the local Mule Runtime installation
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-project-create[dx:mule:project:create] | Scaffolds a new Mule project with Maven structure and connector dependencies
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-describe-connector[dx:mule:describe-connector] | Introspects a connector's operations, sources, configs, and connection providers
 |===
 
 // end::summary[]
@@ -18,10 +18,10 @@
 // tag::commands[]
 
 [[dx-mule-runtime-list]]
-== dx mule runtime list
+== dx:mule:runtime:list
 
 ----
-> anypoint-cli-v4 dx mule runtime list [flags]
+> anypoint-cli-v4 dx:mule:runtime:list [flags]
 ----
 
 Lists all available Mule Runtime versions from Exchange.
@@ -33,10 +33,10 @@ This command requires Anypoint credentials (username/password, client ID/secret,
 This command accepts the xref:index.adoc#default-options[default flags].
 
 [[dx-mule-runtime-download]]
-== dx mule runtime download
+== dx:mule:runtime:download
 
 ----
-> anypoint-cli-v4 dx mule runtime download [flags]
+> anypoint-cli-v4 dx:mule:runtime:download [flags]
 ----
 
 Downloads a Mule Runtime to the local machine. If `--version` is omitted, the latest available version is downloaded.
@@ -52,10 +52,10 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |===
 
 [[dx-mule-runtime-path]]
-== dx mule runtime path
+== dx:mule:runtime:path
 
 ----
-> anypoint-cli-v4 dx mule runtime path [flags]
+> anypoint-cli-v4 dx:mule:runtime:path [flags]
 ----
 
 Shows the path to the local Mule Runtime installation. Use `--set` to point the CLI to a specific runtime directory.
@@ -71,10 +71,10 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |===
 
 [[dx-mule-project-create]]
-== dx mule project create
+== dx:mule:project:create
 
 ----
-> anypoint-cli-v4 dx mule project create <PROJECTNAME> --group-id <value> [flags]
+> anypoint-cli-v4 dx:mule:project:create <PROJECTNAME> --group-id <value> [flags]
 ----
 
 Scaffolds a new Mule project with a standard Maven structure and the specified connector dependencies.
@@ -92,17 +92,17 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 === Example
 
 ----
-$ anypoint-cli-v4 dx mule project create my-integration \
+$ anypoint-cli-v4 dx:mule:project:create my-integration \
   --group-id com.example \
   --dependencies "com.mulesoft.connectors:mule-salesforce-connector:10.20.0" \
   --mule-version 4.6.0
 ----
 
 [[dx-mule-describe-connector]]
-== dx mule describe-connector
+== dx:mule:describe-connector
 
 ----
-> anypoint-cli-v4 dx mule describe-connector --connector <groupId:artifactId:version> [flags]
+> anypoint-cli-v4 dx:mule:describe-connector --connector <groupId:artifactId:version> [flags]
 ----
 
 Introspects a connector and returns details about its operations, event sources, configurations, and connection providers. Use `--type` to drill into a specific component.
@@ -124,28 +124,28 @@ Supported values: `operation`, `source`, `connection-provider` | `--type operati
 
 .Get a high-level overview of a connector
 ----
-$ anypoint-cli-v4 dx mule describe-connector \
+$ anypoint-cli-v4 dx:mule:describe-connector \
   --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
   --output json
 ----
 
 .Get details for a specific operation
 ----
-$ anypoint-cli-v4 dx mule describe-connector \
+$ anypoint-cli-v4 dx:mule:describe-connector \
   --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
   --type operation --name query --output json
 ----
 
 .Get details for a specific event source
 ----
-$ anypoint-cli-v4 dx mule describe-connector \
+$ anypoint-cli-v4 dx:mule:describe-connector \
   --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
   --type source --name on-new-object --output json
 ----
 
 .Get details for a connection provider
 ----
-$ anypoint-cli-v4 dx mule describe-connector \
+$ anypoint-cli-v4 dx:mule:describe-connector \
   --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
   --type connection-provider --name basic-connection --config-name sfdc-config --output json
 ----
