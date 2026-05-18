@@ -5,9 +5,9 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-list[dx:mule:runtime:list] | Lists all available Mule Runtime versions from Exchange
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-download[dx:mule:runtime:download] | Downloads a Mule Runtime to the local machine
-|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-path[dx:mule:runtime:path] | Shows or sets the path to the local Mule Runtime installation
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-list[dx:mule:runtime:list] | Lists all available Mule runtime versions from Exchange
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-download[dx:mule:runtime:download] | Downloads a Mule runtime to the local machine
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-path[dx:mule:runtime:path] | Shows or sets the path to the local Mule runtime installation
 |xref:anypoint-cli::dx-mule.adoc#dx-mule-project-create[dx:mule:project:create] | Scaffolds a new Mule project with Maven structure and connector dependencies
 |xref:anypoint-cli::dx-mule.adoc#dx-mule-describe-connector[dx:mule:describe-connector] | Introspects a connector's operations, sources, configs, and connection providers
 |===
@@ -24,7 +24,7 @@
 > anypoint-cli-v4 dx:mule:runtime:list [flags]
 ----
 
-Lists all available Mule Runtime versions from Exchange.
+Lists all available Mule runtime versions from Exchange.
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
@@ -39,7 +39,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 > anypoint-cli-v4 dx:mule:runtime:download [flags]
 ----
 
-Downloads a Mule Runtime to the local machine. If `--version` is omitted, the latest available version is downloaded.
+Downloads a Mule runtime to the local machine. If `--version` is omitted, the latest available version is downloaded.
 
 This command requires Anypoint credentials (username/password, client ID/secret, or bearer token).
 
@@ -48,7 +48,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 [%header,cols="30a,40a,30a"]
 |===
 |Flag |Description |Example
-|`--version <value>` | Mule Runtime version to download. If omitted, downloads the latest available version. | `--version 4.6.0`
+|`--version <value>` | Mule runtime version to download. If omitted, downloads the latest available version. | `--version 4.6.0`
 |===
 
 [[dx-mule-runtime-path]]
@@ -58,7 +58,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 > anypoint-cli-v4 dx:mule:runtime:path [flags]
 ----
 
-Shows the path to the local Mule Runtime installation. Use `--set` to point the CLI to a specific runtime directory.
+Shows the path to the local Mule runtime installation. Use `--set` to point the CLI to a specific runtime directory.
 
 No Anypoint credentials are required for this command.
 
@@ -67,7 +67,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 [%header,cols="30a,40a,30a"]
 |===
 |Flag |Description |Example
-|`--set <value>` | Sets the path to the local Mule Runtime installation | `--set ~/mule-enterprise-standalone-4.11.2`
+|`--set <value>` | Sets the path to the local Mule runtime installation | `--set ~/mule-enterprise-standalone-4.11.2`
 |===
 
 [[dx-mule-project-create]]
