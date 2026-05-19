@@ -101,6 +101,9 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
+[NOTE]
+When using `--output json`, the `versions` property in the response includes information about all available versions of the asset, not only the version specified in `<assetIdentifier>`. 
+
 This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-download]]
