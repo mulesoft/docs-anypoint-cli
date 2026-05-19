@@ -1,0 +1,153 @@
+= CLI for DX Mule Plugin
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-list[dx:mule:runtime:list] | Lists all available Mule runtime versions from Exchange
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-download[dx:mule:runtime:download] | Downloads a Mule runtime to the local machine
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-runtime-path[dx:mule:runtime:path] | Shows or sets the path to the local Mule runtime installation
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-project-create[dx:mule:project:create] | Scaffolds a new Mule project with Maven structure and connector dependencies
+|xref:anypoint-cli::dx-mule.adoc#dx-mule-describe-connector[dx:mule:describe-connector] | Introspects a connector's operations, sources, configs, and connection providers
+|===
+
+// end::summary[]
+
+
+// tag::commands[]
+
+[[dx-mule-runtime-list]]
+== dx:mule:runtime:list
+
+----
+> anypoint-cli-v4 dx:mule:runtime:list [flags]
+----
+
+Lists all available Mule runtime versions from Exchange.
+
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command requires Anypoint credentials (username/password, client ID/secret, or bearer token).
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[dx-mule-runtime-download]]
+== dx:mule:runtime:download
+
+----
+> anypoint-cli-v4 dx:mule:runtime:download [flags]
+----
+
+Downloads a Mule runtime to the local machine. If `--version` is omitted, the latest available version is downloaded.
+
+This command requires Anypoint credentials (username/password, client ID/secret, or bearer token).
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag |Description |Example
+|`--version <value>` | Mule runtime version to download. If omitted, downloads the latest available version. | `--version 4.6.0`
+|===
+
+[[dx-mule-runtime-path]]
+== dx:mule:runtime:path
+
+----
+> anypoint-cli-v4 dx:mule:runtime:path [flags]
+----
+
+Shows the path to the local Mule runtime installation. Use `--set` to point the CLI to a specific runtime directory.
+
+No Anypoint credentials are required for this command.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag |Description |Example
+|`--set <value>` | Sets the path to the local Mule runtime installation | `--set ~/mule-enterprise-standalone-4.11.2`
+|===
+
+[[dx-mule-project-create]]
+== dx:mule:project:create
+
+----
+> anypoint-cli-v4 dx:mule:project:create <PROJECTNAME> --group-id <value> [flags]
+----
+
+Scaffolds a new Mule project with a standard Maven structure and the specified connector dependencies.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag |Description |Example
+|`--group-id <value>` *(required)* | Maven group ID for the project | `--group-id com.example`
+|`--dependencies <value>` | Comma-separated list of connector dependencies in `groupId:artifactId:version` (GAV) format | `--dependencies "com.mulesoft.connectors:mule-salesforce-connector:10.20.0"`
+|`--mule-version <value>` | Mule runtime version for the project. Default: `4.4.0` | `--mule-version 4.6.0`
+|===
+
+=== Example
+
+----
+$ anypoint-cli-v4 dx:mule:project:create my-integration \
+  --group-id com.example \
+  --dependencies "com.mulesoft.connectors:mule-salesforce-connector:10.20.0" \
+  --mule-version 4.6.0
+----
+
+[[dx-mule-describe-connector]]
+== dx:mule:describe-connector
+
+----
+> anypoint-cli-v4 dx:mule:describe-connector --connector <groupId:artifactId:version> [flags]
+----
+
+Introspects a connector and returns details about its operations, event sources, configurations, and connection providers. Use `--type` to drill into a specific component.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag |Description |Example
+|`--connector <value>` *(required)* | Connector GAV coordinates in `groupId:artifactId:version` format | `--connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0`
+|`--type <value>` | Detail type to return. If omitted, returns a high-level overview (namespace, operations, sources, configs). +
+Supported values: `operation`, `source`, `connection-provider` | `--type operation`
+|`--name <value>` | Name of the component to inspect. Required when `--type` is set. | `--name query`
+|`--config-name <value>` | Configuration name. Required when `--type` is `connection-provider`. | `--config-name sfdc-config`
+|`--output <value>` | Output format. Supported values: `table` (default), `json` | `--output json`
+|===
+
+=== Examples
+
+.Get a high-level overview of a connector
+----
+$ anypoint-cli-v4 dx:mule:describe-connector \
+  --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
+  --output json
+----
+
+.Get details for a specific operation
+----
+$ anypoint-cli-v4 dx:mule:describe-connector \
+  --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
+  --type operation --name query --output json
+----
+
+.Get details for a specific event source
+----
+$ anypoint-cli-v4 dx:mule:describe-connector \
+  --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
+  --type source --name on-new-object --output json
+----
+
+.Get details for a connection provider
+----
+$ anypoint-cli-v4 dx:mule:describe-connector \
+  --connector com.mulesoft.connectors:mule-salesforce-connector:10.20.0 \
+  --type connection-provider --name basic-connection --config-name sfdc-config --output json
+----
+
+// end::commands[]
