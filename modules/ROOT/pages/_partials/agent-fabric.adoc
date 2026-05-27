@@ -11,6 +11,8 @@ Use these commands to author, publish, and deploy agent network projects.
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-project-create[agent-network:project:create] | Creates a new agent network project and generates the initial configuration files
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-project-deploy[agent-network:project:deploy] | Deploys the agent network project to the target environment
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-project-publish[agent-network:project:publish] | Publishes the agent network project to Anypoint Exchange
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-undeploy[agent-network:project:undeploy] | Undeploys the agent network project and removes all deployed runtime resources
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-unpublish[agent-network:project:unpublish] | Unpublishes the agent network project asset versions from Anypoint Exchange
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-setup-gateways[agent-network:setup:gateways] | Sets up the gateways for the agent network
 |===
 
@@ -219,6 +221,78 @@ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#
 ----
 $ anypoint-cli-agent-fabric-plugin agent-network project publish
 ----
+
+[[agent-network-project-undeploy]]
+== agent-network:project:undeploy
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project undeploy [flags]
+----
+
+Undeploys the agent network application and removes all deployed runtime resources.
+Resources are removed in reverse dependency order to ensure a clean state: agent graphs and Mule applications are removed first, followed by connections and API instances, and finally Exchange external instances.
+
+The project must have been previously built using `agent-network project build`, and you must have valid organization access for the ID specified in `exchange.json`.
+
+In addition to the xref:anypoint-cli::index.adoc#default-options[default flags], this command accepts these flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`--environment <value>` | Target environment ID or name | `--environment Sandbox`
+|`--force` | Skip the interactive confirmation prompt +
+ Default: `false` | `--force`
+|`--json` | Format output as JSON. Requires `--force` +
+ Default: `false` | `--json`
+|`--organization <value>` | Target organization ID or name | `--organization MyOrg`
+|`--path <value>` | Path to the agent network project directory +
+ Default: `.` | `--path ./my-agent-network`
+|`--process-timeout <value>` | Total process timeout in milliseconds +
+ Default: `600000` | `--process-timeout 900000`
+|`--request-timeout <value>` | Timeout per HTTP request in milliseconds +
+ Default: `60000` | `--request-timeout 120000`
+|===
+
+[[example-undeploy]]
+=== Example
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project undeploy --force --json
+----
+
+
+[[agent-network-project-unpublish]]
+== agent-network:project:unpublish
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project unpublish [flags]
+----
+
+Removes agent network asset versions from Anypoint Exchange.
+By default, the command performs a soft-delete, allowing assets to be recovered by Anypoint support if necessary. Use the `--hard-delete` flag for permanent, irreversible removal.
+
+To prevent orphaned runtime references to deleted Exchange assets, run `agent-network project undeploy` before `unpublish`.
+
+In addition to the xref:anypoint-cli::index.adoc#default-options[default flags], this command accepts these flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`--force` | Skip the interactive confirmation prompt +
+ Default: `false` | `--force`
+|`--hard-delete` | Permanently delete assets from Exchange. Irreversible +
+ Default: `false` | `--hard-delete`
+|`--json` | Format output as JSON. Requires `--force` +
+ Default: `false` | `--json`
+|`--path <value>` | Path to the agent network project directory +
+ Default: `.` | `--path ./my-agent-network`
+|===
+
+[[example-unpublish]]
+=== Example
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project unpublish --hard-delete --force
+----
+
 
 [[agent-network-setup-gateways]]
 == agent-network:setup:gateways
