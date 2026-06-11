@@ -38,6 +38,11 @@
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-tier-copy[api-mgr:tier:copy] | Copies an SLA tier from source to a target API instance
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-tier-delete[api-mgr:tier:delete] | Deletes an SLA tier from an API instance
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-tier-list[api-mgr:tier:list] | Lists the SLA tiers of an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-upstream-add[api-mgr:upstream:add] | Creates an upstream for an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-upstream-bulk-edit[api-mgr:upstream:bulk-edit] | Bulk edits the TLS Context for all upstreams of an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-upstream-delete[api-mgr:upstream:delete] | Deletes an upstream from an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-upstream-edit[api-mgr:upstream:edit] | Edits an upstream of an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-upstream-list[api-mgr:upstream:list] | Lists all upstreams for an API instance
 |===
 
 // end::summary[]
@@ -325,7 +330,7 @@ Default is Anypoint Platform Client Provider | `--providerId 1787c36ab544466698e
 
 | `--responseTimeout`
 | Maximum response timeout(required) | `--responseTimeout 10`
-|`--routing` | Configure upstream service | `--routing 50e8400-e29b-41d4-a716-446655440000`
+|`--routing` | API instance routes as a JSON array. Each route defines a label, routing rules, and upstream references with weights. | `--routing '[{"label":"Rule 1","rules":{"path":"/path"},"upstreams":[{"id":"upstream-id","weight":100}]}]'`
 
 | `--scheme`
 | Proxy scheme (required) +
@@ -341,6 +346,10 @@ Omni Gateway does not support this flag | `--serviceName ExampleServerName`
 | `--servicePort`
 | WSDL service port +
  Omni Gateway does not support this flag | `--servicePort 443`
+
+| `--type`
+| Endpoint type +
+Supported options: `http`, `raml`, `wsdl`, `mcp`, `a2a`, `llm`, `grpc` | `--type http`
 
 | `--updateApisInSamePort`
 | Updates the TLS context of API instances sharing the port of this API. | `--updateApisInSamePort`
@@ -468,7 +477,7 @@ Omni Gateway does not support this flag | `--serviceName ExampleServerName`
 
 | `--type`
 | Endpoint type +
-Supported options: `http`, `raml`, `wsdl` | `--type http`
+Supported options: `http`, `raml`, `wsdl`, `mcp`, `a2a`, `llm`, `grpc` | `--type http`
 
 | `--uri`
 | Implementation URI | `--uri /udp://localhost:65432`
@@ -912,5 +921,91 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 |`--sort` | Sorts the results in the field name passed +
 Supported values are: `id`, `name`, `createdDate`, and `updatedDate`  | `--sort id`
 |===
+
+[[api-mgr-upstream-add]]
+== api-mgr:upstream:add
+
+----
+> api-mgr:upstream:add [flags] <apiInstanceId> <uri>
+----
+
+Creates an upstream for the API instance passed in `<apiInstanceId>` with the URI passed in `<uri>`.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description |Example
+| `--label` | Label for the upstream | `--label my-upstream`
+| `--tlsContextId` | TLS Context ID to set on the upstream | `--tlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--tlsContextSecretGroupId` | Secret Group ID for the TLS Context specified in `--tlsContextId` | `--tlsContextSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
+|===
+
+[[api-mgr-upstream-bulk-edit]]
+== api-mgr:upstream:bulk-edit
+
+----
+> api-mgr:upstream:bulk-edit [flags] <apiInstanceId>
+----
+
+Bulk edits the TLS Context for all upstreams of the API instance passed in `<apiInstanceId>` using a single API update.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description |Example
+| `--tlsContextId` *(required)* | TLS Context ID to set on all upstreams. Pass `null` to remove the TLS Context from all upstreams. | `--tlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--tlsContextSecretGroupId` | Secret Group ID for the TLS Context specified in `--tlsContextId` | `--tlsContextSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
+|===
+
+[[api-mgr-upstream-delete]]
+== api-mgr:upstream:delete
+
+----
+> api-mgr:upstream:delete [flags] <apiInstanceId> <upstreamId>
+----
+
+Deletes the upstream passed in `<upstreamId>` from the API instance passed in `<apiInstanceId>`.
+
+This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[api-mgr-upstream-edit]]
+== api-mgr:upstream:edit
+
+----
+> api-mgr:upstream:edit [flags] <apiInstanceId> <upstreamId>
+----
+
+Edits the upstream passed in `<upstreamId>` for the API instance passed in `<apiInstanceId>`.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description |Example
+| `--uri` | Upstream URI | `--uri https://backend.example.com`
+| `--label` | Label for the upstream | `--label my-upstream`
+| `--tlsContextId` | TLS Context ID to set on the upstream. Pass `null` to remove the TLS Context. | `--tlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--tlsContextSecretGroupId` | Secret Group ID for the TLS Context specified in `--tlsContextId` | `--tlsContextSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
+|===
+
+[[api-mgr-upstream-list]]
+== api-mgr:upstream:list
+
+----
+> api-mgr:upstream:list [flags] <apiInstanceId>
+----
+
+Lists all upstreams for the API instance passed in `<apiInstanceId>`.
+
+This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
 
 // end::commands[]

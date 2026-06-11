@@ -24,6 +24,8 @@
 
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub:load-balancer:start] | Starts a load balancer
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-stop[cloudhub:load-balancer:stop] | Stops a load balancer
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-add[cloudhub:load-balancer:whitelist:add] | Adds an IP or range of IPs to the load balancer allowlist
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-whitelist-remove[cloudhub:load-balancer:whitelist:remove] | Removes an IP or range of IPs from the load balancer allowlist
 |===
 
 // end::summary[]
@@ -331,5 +333,27 @@ Stops the load balancer specified in `<name>`
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
+
+[[cloudhub-load-balancer-whitelist-add]]
+== cloudhub:load-balancer:whitelist:add
+
+----
+> cloudhub:load-balancer:whitelist:add [flags] <name> <cidrBlock>
+----
+
+Adds a range of IP addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[cloudhub-load-balancer-whitelist-remove]]
+== cloudhub:load-balancer:whitelist:remove
+
+----
+> cloudhub:load-balancer:whitelist:remove [flags] <name> <cidrBlock>
+----
+
+Removes an IP or range of IPs specified in `<cidrBlock>` from the allowlist of the load balancer specified in `<name>`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
 
 // end::commands[]
