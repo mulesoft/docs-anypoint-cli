@@ -992,7 +992,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 | `--label` | Label for the upstream | `--label my-upstream`
 | `--tlsContextId` | TLS context ID to set on the upstream. Pass `null` to remove the TLS context. | `--tlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 | `--tlsContextSecretGroupId` | Secret group ID for the TLS context specified in `--tlsContextId` | `--tlsContextSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
-| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
+| `--output` | Format for the response, supported values are `table` (default) and `json` | `--output json`
 |===
 
 [[api-mgr-upstream-list]]
