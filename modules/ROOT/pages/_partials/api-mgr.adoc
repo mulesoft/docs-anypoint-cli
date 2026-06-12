@@ -931,7 +931,7 @@ Supported values are: `id`, `name`, `createdDate`, and `updatedDate`  | `--sort 
 
 Creates an upstream for the API instance passed in `<apiInstanceId>` with the URI passed in `<uri>`.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -939,7 +939,7 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 | `--label` | Label for the upstream | `--label my-upstream`
 | `--tlsContextId` | TLS Context ID to set on the upstream | `--tlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 | `--tlsContextSecretGroupId` | Secret Group ID for the TLS Context specified in `--tlsContextId` | `--tlsContextSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
-| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
+| `--output` | Format for the response, supported values are `table` (default) and `json` | `--output json`
 |===
 
 [[api-mgr-upstream-bulk-edit]]
@@ -951,14 +951,14 @@ In addition to the xref:index.adoc#default-options[default flags], this command 
 
 Bulk edits the TLS Context for all upstreams of the API instance passed in `<apiInstanceId>` using a single API update.
 
-In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+In addition to the xref:index.adoc#default-options[default flags], this command accepts these flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description |Example
 | `--tlsContextId` *(required)* | TLS Context ID to set on all upstreams. Pass `null` to remove the TLS Context from all upstreams. | `--tlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 | `--tlsContextSecretGroupId` | Secret Group ID for the TLS Context specified in `--tlsContextId` | `--tlsContextSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
-| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
+| `--output` | Format for the response, supported values are `table` (default) and `json` | `--output json`
 |===
 
 [[api-mgr-upstream-delete]]
