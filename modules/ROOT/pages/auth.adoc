@@ -109,11 +109,12 @@ You can authenticate to Anypoint Platform through the command line by running th
 | `--password` | `ANYPOINT_PASSWORD`
 |`--client_id`| `ANYPOINT_CLIENT_ID`
 |`--client_secret`| `ANYPOINT_CLIENT_SECRET`
-|`--bearer`| -
+|`--bearer`| `ANYPOINT_BEARER`
 |`--organization`| `ANYPOINT_ORG`
 |`--environment`| `ANYPOINT_ENV`
 | - | `ANYPOINT_CERTIFICATE`
 | - | `ANYPOINT_HOST`
+| `--[no-]collectMetrics` | `COLLECT_METRICS`
 |===
 
 NOTE: The `--organization` flag is optional. It defaults to your main organization from Anypoint Platform.

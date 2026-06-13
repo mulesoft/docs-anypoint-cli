@@ -165,6 +165,49 @@ anypoint-cli-v4 1.0.2 (core)
 
 ----
 
+[[link-plugin]]
+== Link a Local Plugin for Development
+
+To link a local plugin directory into the CLI for development purposes:
+
+[source,text,linenums]
+----
+anypoint-cli-v4 plugins:link <path>
+----
+
+For example, to link a plugin in the current directory:
+
+[source,text,linenums]
+----
+anypoint-cli-v4 plugins:link .
+----
+
+NOTE: Installing a linked plugin overrides a user-installed or core plugin that has the same commands.
+
+[[autocomplete]]
+== Enable Shell Autocomplete
+
+To display autocomplete installation instructions for your shell:
+
+[source,text,linenums]
+----
+anypoint-cli-v4 autocomplete [bash|zsh|powershell]
+----
+
+For example, to set up autocomplete for Zsh:
+
+[source,text,linenums]
+----
+anypoint-cli-v4 autocomplete zsh
+----
+
+To refresh the autocomplete cache after installing new plugins:
+
+[source,text,linenums]
+----
+anypoint-cli-v4 autocomplete --refresh-cache
+----
+
 [[uninstall-plugin]]
 == Uninstall a Plugin
 
