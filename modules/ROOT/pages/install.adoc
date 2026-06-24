@@ -56,14 +56,14 @@ You can install the following plugins with Anypoint CLI:
 |===
 |Plugin |Description
 | anypoint-cli-account-plugin | Account command topics
-| anypoint-cli-agent-fabric-plugin | Agent Fabric topics
-| anypoint-cli-api-mgr-plugin | API Manager command topics
-| anypoint-cli-cloudhub-plugin | CloudHub command topics
+| anypoint-cli-agent-fabric-plugin | Agent Fabric command topics
+| anypoint-cli-api-manager-plugin | API Manager command topics
+| anypoint-cli-cloudhub-plugin | CloudHub and CloudHub 2.0 command topics
 | anypoint-cli-datagraph-plugin | Anypoint DataGraph command topics
-| anypoint-cli-designcenter-plugin | Design Center command topics
 | anypoint-cli-dx-mule-plugin | DX Mule command topics
-| anypoint-cli-exchange-plugin| Exchange command topics
-| mulesoft-anypoint-cli-governance-plugin| API Governance command topics
+| anypoint-cli-exchange-plugin | Exchange command topics
+| mulesoft-anypoint-cli-designcenter-plugin | Design Center command topics
+| mulesoft-anypoint-cli-governance-plugin | API Governance command topics
 | anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
 | anypoint-cli-secrets-mgr-plugin | Secrets Manager command topics
 |===
@@ -116,21 +116,20 @@ To verify a plugin installation and view a list of all installed  plugins, use t
 anypoint-cli-v4
 ----
 
-The output shows the installed plugins under the `TOPICS` section. The following example shows that only the account plugin is installed: 
+The output shows the installed plugins under the `TOPICS` section. The following example shows that only the account plugin is installed:
 
 ----
 VERSION
-  anypoint-cli-v4/x.x.x linux-x64 node-v14.17.6
- 
+  anypoint-cli-v4/x.x.x <OS-version> node-vx.x.x
+
 USAGE
   $ anypoint-cli-v4 [COMMAND]
- 
+
 TOPICS
   account  Show details of a business group. If "name" is omitted, defaults to the current session's business group
   plugins  list installed plugins
- 
+
 COMMANDS
-  conf     manage configuration
   help     display help for anypoint-cli
   plugins  list installed plugins
 ----
