@@ -14,19 +14,19 @@
 |xref:anypoint-cli::api-governance.adoc#governance-profile-list[governance:profile:list] | Lists all governance profiles for an organization
 |xref:anypoint-cli::api-governance.adoc#governance-profile-update[governance:profile:update] | Updates a governance profile
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-clone[governance:ruleset:clone] | Clones a governance ruleset and applies specified updates to rules
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-classes[governance:ruleset:classes] | Lists the target classes available for governance rulesets, grouped by prefix
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-completions[governance:ruleset:completions] | Returns context-aware completions at a cursor position in a ruleset YAML file
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-constraints[governance:ruleset:constraints] | Lists valid constraints by property type
-|xref:anypoint-cli::api-governance.adoc#governance-ruleset-classes[governance:ruleset:classes] | Lists targetable classes, optionally filtered by domain
-|xref:anypoint-cli::api-governance.adoc#governance-ruleset-domains[governance:ruleset:domains] | Lists available metadata domains
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-domains[governance:ruleset:domains] | Lists available metadata domains for governance rulesets
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-generate[governance:ruleset:generate] | Returns context and instructions for generating a ruleset from a natural-language description
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-info[governance:ruleset:info] | Lists ruleset rules
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-init[governance:ruleset:init] | Initializes a governance ruleset definition based on a data schema
-|xref:anypoint-cli::api-governance.adoc#governance-ruleset-properties[governance:ruleset:properties] | Lists properties and types for a target class
-|xref:anypoint-cli::api-governance.adoc#governance-ruleset-resolve[governance:ruleset:resolve] | Resolves a user-facing alias to its canonical target class and property path
-|xref:anypoint-cli::api-governance.adoc#governance-ruleset-simplify[governance:ruleset:simplify] | Flattens nested paths and removes redundant logical wrappers in a ruleset YAML file
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-properties[governance:ruleset:properties] | Lists the properties and types for a target class
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-resolve[governance:ruleset:resolve] | Resolves a user-facing term to its canonical target class and property path
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-simplify[governance:ruleset:simplify] | Simplifies a ruleset by flattening nested paths and removing redundant logical wrappers
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-validate[governance:ruleset:validate] | Validates a governance ruleset definition's format
 |xref:anypoint-cli::api-governance.adoc#governance-ruleset-validate-authoring[governance:ruleset:validate-authoring] | Validates a ruleset against the authoring model
-|xref:anypoint-cli::api-governance.adoc#governance-ruleset-version[governance:ruleset:version] | Shows the ruleset authoring tooling version
+|xref:anypoint-cli::api-governance.adoc#governance-ruleset-version[governance:ruleset:version] | Shows the governance ruleset tooling version
 |===
 
 // end::summary[]
@@ -578,15 +578,26 @@ anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed -
 
 `> governance:ruleset:classes [flags]`
 
-Lists the classes that can be used as targets in a governance ruleset, optionally filtered by domain.
+Lists the target classes available for governance rulesets, grouped by prefix. Prints the total count of targetable classes.
 
-This command accepts the xref:index.adoc#default-options[default flags].
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
-*Example command:*
+[%header,cols="35a,65a"]
+|===
+|Flag |Description
+
+|`--domain <domain>`
+|Filters the list to classes belonging to the specified domain. Supported values are `api-spec`, `mcp`, `api-project`, `governance`, and `community`. To see all available domains, run the `governance:ruleset:domains` command.
+
+|===
+
+*Example commands:*
 
 [source,copy]
 ----
 anypoint-cli-v4 governance:ruleset:classes
+
+anypoint-cli-v4 governance:ruleset:classes --domain api-spec
 ----
 
 // end::governance-ruleset-classes[]
@@ -596,17 +607,29 @@ anypoint-cli-v4 governance:ruleset:classes
 [[governance-ruleset-completions]]
 == governance:ruleset:completions
 
-`> governance:ruleset:completions [flags] <file>`
+`> governance:ruleset:completions [flags] <ruleset>`
 
-Returns context-aware completions at a cursor position in the ruleset YAML file specified in `file`.
+Returns context-aware completions at a specific cursor position in the ruleset YAML file specified in `ruleset`. Intended for editor and tooling integration.
 
-This command accepts the xref:index.adoc#default-options[default flags].
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="35a,65a"]
+|===
+|Flag |Description
+
+|`--offset <offset>`
+|The cursor offset in the file. Required.
+
+|`--line-text <line-text>`
+|The current line text up to the cursor. Required.
+
+|===
 
 *Example command:*
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:completions myruleset.yaml
+anypoint-cli-v4 governance:ruleset:completions my-ruleset.yaml --offset 120 --line-text "    targetClass: "
 ----
 
 // end::governance-ruleset-completions[]
@@ -620,13 +643,26 @@ anypoint-cli-v4 governance:ruleset:completions myruleset.yaml
 
 Lists the valid constraints for each property type: `scalar`, `node`, `scalarArray`, and `nodeArray`.
 
-This command accepts the xref:index.adoc#default-options[default flags].
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
-*Example command:*
+[%header,cols="35a,65a"]
+|===
+|Flag |Description
+
+|`--type <type>`
+|Filters the list to constraints for the specified property type. Supported values are `scalar`, `node`, `scalarArray`, and `nodeArray`.
+
+|===
+
+*Example commands:*
 
 [source,copy]
 ----
 anypoint-cli-v4 governance:ruleset:constraints
+
+anypoint-cli-v4 governance:ruleset:constraints --type scalar
+
+anypoint-cli-v4 governance:ruleset:constraints --type nodeArray
 ----
 
 // end::governance-ruleset-constraints[]
@@ -636,9 +672,9 @@ anypoint-cli-v4 governance:ruleset:constraints
 [[governance-ruleset-domains]]
 == governance:ruleset:domains
 
-`> governance:ruleset:domains [flags]`
+`> governance:ruleset:domains`
 
-Lists the available metadata domains that can be targeted when authoring governance rulesets. Available domains include `amf`, `mcp`, `api-instance`, `api-project`, `governance`, and `community`.
+Lists the available metadata domains for governance rulesets. For each domain, the command prints the name, description, class count, and (when applicable) spec kind.
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
@@ -658,15 +694,29 @@ anypoint-cli-v4 governance:ruleset:domains
 
 `> governance:ruleset:generate [flags] <intent>`
 
-Returns the context and instructions for generating a governance ruleset from the natural-language description provided in `intent`.
+Returns the context and step-by-step instructions for generating a governance ruleset in Validation Profile 1.0 YAML format from the natural-language description provided in `intent`. When an API spec is provided, the command detects the spec type to include as context.
 
-This command accepts the xref:index.adoc#default-options[default flags].
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
-*Example command:*
+[%header,cols="35a,65a"]
+|===
+|Flag |Description
+
+|`--api-spec <api-spec>`
+|Path to an API spec for context extraction. The command detects whether the spec is RAML or OpenAPI.
+
+|`--attempt <attempt>`
+|Retry attempt number. Values greater than `1` append a note to fix errors from the previous attempt. Defaults to `1`.
+
+|===
+
+*Example commands:*
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:generate "ensure all API operations have a summary and at least one response"
+anypoint-cli-v4 governance:ruleset:generate "Every operation must have a description"
+
+anypoint-cli-v4 governance:ruleset:generate "Require rate-limit policy" --api-spec openapi.yaml
 ----
 
 // end::governance-ruleset-generate[]
@@ -676,17 +726,19 @@ anypoint-cli-v4 governance:ruleset:generate "ensure all API operations have a su
 [[governance-ruleset-properties]]
 == governance:ruleset:properties
 
-`> governance:ruleset:properties [flags] <class>`
+`> governance:ruleset:properties [flags] <targetClass>`
 
-Lists the properties and their types for the class specified in `class`. Use this information when defining property paths in a ruleset rule. To see available classes, run the `governance:ruleset:classes` command.
+Lists the properties and their types for the target class specified in `targetClass`. Property types are `scalar`, `node`, `scalarArray`, `nodeArray`, or `dynamic`. For node types, the range (target class) is also shown. Use the `governance:ruleset:classes` command to see available target classes.
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
-*Example command:*
+*Example commands:*
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:properties Operation
+anypoint-cli-v4 governance:ruleset:properties apiContract.Operation
+
+anypoint-cli-v4 governance:ruleset:properties mcp.Tool
 ----
 
 // end::governance-ruleset-properties[]
@@ -698,15 +750,17 @@ anypoint-cli-v4 governance:ruleset:properties Operation
 
 `> governance:ruleset:resolve [flags] <term>`
 
-Resolves the user-facing alias specified in `term` to its canonical target class and property path.
+Resolves the user-facing term specified in `term` to its canonical target class and property path. Matching is fuzzy: case-insensitive, ignoring spaces, dashes, and underscores.
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
-*Example command:*
+*Example commands:*
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:resolve operation-summary
+anypoint-cli-v4 governance:ruleset:resolve consumerUrl
+
+anypoint-cli-v4 governance:ruleset:resolve rate-limit-policy
 ----
 
 // end::governance-ruleset-resolve[]
@@ -716,9 +770,9 @@ anypoint-cli-v4 governance:ruleset:resolve operation-summary
 [[governance-ruleset-simplify]]
 == governance:ruleset:simplify
 
-`> governance:ruleset:simplify [flags] <file>`
+`> governance:ruleset:simplify [flags] <ruleset>`
 
-Flattens nested property paths and removes redundant logical wrappers from the ruleset YAML file specified in `file`. The simplified ruleset is written to standard output.
+Simplifies the ruleset YAML file specified in `ruleset` by flattening nested property paths and removing redundant logical wrappers. The command lists the simplifications applied and then prints the simplified ruleset YAML to standard output.
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
@@ -726,7 +780,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:simplify myruleset.yaml > myruleset-simplified.yaml
+anypoint-cli-v4 governance:ruleset:simplify my-ruleset.yaml
 ----
 
 // end::governance-ruleset-simplify[]
@@ -736,9 +790,9 @@ anypoint-cli-v4 governance:ruleset:simplify myruleset.yaml > myruleset-simplifie
 [[governance-ruleset-validate-authoring]]
 == governance:ruleset:validate-authoring
 
-`> governance:ruleset:validate-authoring [flags] <file>`
+`> governance:ruleset:validate-authoring [flags] <ruleset>`
 
-Validates the ruleset YAML file specified in `file` against the authoring model, checking for correct target classes, valid property paths, compatible constraint types, and valid severity values.
+Validates the ruleset YAML file specified in `ruleset` against the authoring model, checking target classes, property paths, constraint compatibility, and severity assignments. Prints diagnostics with line numbers. The command exits with code `1` if any errors are found; warnings and informational messages do not cause a failure.
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
@@ -746,7 +800,7 @@ This command accepts the xref:index.adoc#default-options[default flags].
 
 [source,copy]
 ----
-anypoint-cli-v4 governance:ruleset:validate-authoring myruleset.yaml
+anypoint-cli-v4 governance:ruleset:validate-authoring my-ruleset.yaml
 ----
 
 // end::governance-ruleset-validate-authoring[]
@@ -756,9 +810,9 @@ anypoint-cli-v4 governance:ruleset:validate-authoring myruleset.yaml
 [[governance-ruleset-version]]
 == governance:ruleset:version
 
-`> governance:ruleset:version [flags]`
+`> governance:ruleset:version`
 
-Shows the version of the ruleset authoring tooling bundled with the governance plugin.
+Shows the governance ruleset tooling version.
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
