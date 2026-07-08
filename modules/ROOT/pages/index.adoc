@@ -111,7 +111,7 @@ The Anypoint CLI takes the following optional arguments:
 [%header%autowidth.spread,cols="a,a"]
 |===
 |Parameter |Description
-| `organization` | Your organization within Anypoint Platform
+| `organization` | Your organization or sub-organization (business group) within Anypoint Platform. You can specify the root organization name or the name of a specific business group.
 
 You can also pass this value using the environment variable `export ANYPOINT_ORG=<name>`.
 
