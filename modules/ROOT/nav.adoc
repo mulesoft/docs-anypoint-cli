@@ -27,5 +27,5 @@
  *** xref:servers.adoc[Local Servers]
  *** xref:server-clusters.adoc[Local Server Clusters]
  *** xref:server-groups.adoc[Local Server Groups]
- *** xref:managed-gateways.adoc[Managed Flex Gateways]
+ *** xref:managed-gateways.adoc[Managed Omni Gateways]
 ** xref:secrets-manager.adoc[Secrets Manager]
