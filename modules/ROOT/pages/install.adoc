@@ -56,7 +56,7 @@ You can install the following plugins with Anypoint CLI:
 |===
 |Plugin |Description
 | anypoint-cli-account-plugin | Account command topics
-| anypoint-cli-agent-fabric-plugin | Agent Fabric command topics
+| mulesoft-anypoint-cli-agent-fabric-plugin | Agent Fabric command topics
 | anypoint-cli-api-manager-plugin | API Manager command topics
 | anypoint-cli-cloudhub-plugin | CloudHub and CloudHub 2.0 command topics
 | anypoint-cli-datagraph-plugin | Anypoint DataGraph command topics
