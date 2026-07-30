@@ -175,7 +175,6 @@ Default value:
 
 * `published` |
 
-`development` |
 
 |===
 
