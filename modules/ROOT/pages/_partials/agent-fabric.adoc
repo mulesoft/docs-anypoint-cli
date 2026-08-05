@@ -230,7 +230,7 @@ $ anypoint-cli-agent-fabric-plugin agent-network project publish
 ----
 
 Undeploys the agent network application and removes all deployed runtime resources.
-Resources are torn down in reverse dependency order to ensure a clean state: Agent Graphs and Mule applications are removed first, followed by connections and API instances, and finally Exchange external instances.
+Resources are removed in reverse dependency order to ensure a clean state: agent graphs and Mule applications are removed first, followed by connections and API instances, and finally Exchange external instances.
 
 This command requires:
 
