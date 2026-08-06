@@ -229,8 +229,8 @@ $ anypoint-cli-agent-fabric-plugin agent-network project publish
 > anypoint-cli-agent-fabric-plugin agent-network project undeploy [flags]
 ----
 
-Undeploys the agent network application and removes all deployed runtime resources.
-Resources are removed in reverse dependency order to ensure a clean state: agent graphs and Mule applications are removed first, followed by connections and API instances, and finally Exchange external instances.
+Undeploys the agent network project and removes all deployed runtime resources.
+Resources are removed in reverse dependency order to ensure a clean state: agent graphs and Mule applications are removed first, followed by connections, API instances, and then external Exchange instances.
 
 This command requires:
 
@@ -280,8 +280,8 @@ $ anypoint-cli-agent-fabric-plugin agent-network project undeploy --force --json
 > anypoint-cli-agent-fabric-plugin agent-network project unpublish [flags]
 ----
 
-Removes agent network asset versions from Anypoint Exchange.
-By default, the command performs a soft-delete, allowing assets to be recovered by Anypoint support if necessary. Use the `--hard-delete` flag for permanent, irreversible removal.
+Unpublishes an agent network project. Removes agent network asset versions from Anypoint Exchange.
+By default, the command performs a soft-delete, allowing assets to be recovered by support if necessary. Use the `--hard-delete` flag for permanent, irreversible removal.
 
 To prevent orphaned runtime references to deleted Exchange assets, run `agent-network project undeploy` before `unpublish`.
 
@@ -319,7 +319,6 @@ Unpublish with hard-delete (irreversible):
 ----
 $ anypoint-cli-agent-fabric-plugin agent-network project unpublish --hard-delete --force
 ----
-
 
 [[agent-network-setup-gateways]]
 == agent-network:setup:gateways
