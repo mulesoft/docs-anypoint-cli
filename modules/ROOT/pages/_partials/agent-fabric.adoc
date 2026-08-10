@@ -240,7 +240,7 @@ $ anypoint-cli-agent-fabric-plugin agent-network project publish
 ----
 
 Sets up the agent network environment with the required gateways in the specified target space (private space, RTF, or shared space).
-This step is required only if the target space does not already have gateways.
+This step is required only if the target space doesn't already have gateways.
 In the typical (happy path) workflow, you run it once per target space before the first deployment.
 
 In addition to the xref:anypoint-cli::index.adoc#default-options[default flags], this command accepts these flags:
@@ -251,7 +251,7 @@ In addition to the xref:anypoint-cli::index.adoc#default-options[default flags],
 |`-e, --egress-gw <value>` | Name of the egress gateway (separate-gateway mode; requires `--ingress-gw`) | `--egress-gw my-egress`
 |`-g, --gateway <value>` | Name of the gateway for single-gateway mode (recommended). Mutually exclusive with `--ingress-gw` and `--egress-gw`. | `--gateway my-gateway`
 |`-i, --ingress-gw <value>` | Name of the ingress gateway (separate-gateway mode) | `--ingress-gw my-ingress`
-|`-t, --target-space <value>` | Name of the target space (private space, RTF, or shared space) where to set up the agent network environment +
+|`-t, --target-space <value>` | Name of the target space (private space, RTF, or shared space) where you set up the agent network environment +
  Default: `agent-network-space` | `--target-space my-space`
 |`--bearer <value>` | Bearer token +
  You can also set it with the `ANYPOINT_BEARER` variable | `--bearer myBearerToken`
