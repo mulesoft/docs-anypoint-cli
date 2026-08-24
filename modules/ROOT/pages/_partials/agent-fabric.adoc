@@ -1,6 +1,6 @@
 = CLI for Agent Fabric Plugin
 
-Use these commands to author, publish, and deploy agent network projects.
+Use these commands to author, publish, deploy, undeploy, and unpublish agent network projects.
 
 // tag::summary[]
 
@@ -11,6 +11,8 @@ Use these commands to author, publish, and deploy agent network projects.
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-project-create[agent-network:project:create] | Creates a new agent network project and generates the initial configuration files
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-project-deploy[agent-network:project:deploy] | Deploys the agent network project to the target environment
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-project-publish[agent-network:project:publish] | Publishes the agent network project to Anypoint Exchange
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-undeploy[agent-network:project:undeploy] | Undeploys the agent network project and removes all deployed runtime resources
+|xref:anypoint-cli::agent-fabric.adoc#agent-network-project-unpublish[agent-network:project:unpublish] | Unpublishes the agent network project asset versions from Anypoint Exchange
 |xref:anypoint-cli::agent-fabric.adoc#agent-network-setup-gateways[agent-network:setup:gateways] | Sets up the gateways for the agent network
 |===
 
@@ -230,6 +232,156 @@ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#
 === Example
 ----
 $ anypoint-cli-agent-fabric-plugin agent-network project publish
+----
+
+[[agent-network-project-undeploy]]
+== agent-network:project:undeploy
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project undeploy [flags]
+----
+
+Undeploys the agent network application, removing all deployed resources.
+
+In addition to the xref:anypoint-cli::index.adoc#default-options[default flags], this command accepts these flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`--api-version <value>` | API version used to discover remotely deployed resources when using `--gav` +
+ Default: `v1` | `--api-version v1`
+|`--bearer <value>` | Bearer token +
+ You can also set it with the `ANYPOINT_BEARER` variable | `--bearer myBearerToken`
+|`--client_id <value>` | Client ID +
+ You can also set it with the `ANYPOINT_CLIENT_ID` variable | `--client_id myClientID`
+|`--client_secret <value>` | Client Secret +
+ You can also set it with the `ANYPOINT_CLIENT_SECRET` variable | `--client_secret myClientSecret`
+|`--[no-]collectMetrics` | Collect metrics +
+ You can also set it with the `COLLECT_METRICS` variable | `--no-collectMetrics`
+|`--dry-run` | Preview the deploy-plane resources that would be undeployed without deleting anything | `--dry-run`
+|`--environment <value>` | Environment name +
+ You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
+|`--gav <value>` | Parent asset GAV (`groupId:assetId:version`). Discovers deployed resources remotely. Requires an environment to be selected | `--gav myOrgId:my-network:0.0.0`
+|`--host <value>` | Host URL +
+ Default: `anypoint.mulesoft.com` +
+ You can also set it with the `ANYPOINT_HOST` variable | `--host mycompany.anypoint.mulesoft.com`
+|`--json` | Format output as JSON | `--json`
+|`--organization <value>` | Organization name +
+ You can also set it with the `ANYPOINT_ORG` variable | `--organization MyOrg`
+|`--password <value>` | Password +
+ You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
+|`--path <value>` | Path to the project. Discovers deployed resources remotely from the project lock file. Requires an environment to be selected. Mutually exclusive with `--gav` | `--path ./my-project`
+|`--process-timeout <value>` | Process timeout in milliseconds +
+ Default: `900000` | `--process-timeout 900000`
+|`--request-timeout <value>` | Request timeout in milliseconds +
+ Default: `60000` | `--request-timeout 60000`
+|`--username <value>` | Username +
+ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#64;example.com`
+|===
+
+[[example-undeploy]]
+=== Examples
+
+Undeploy from the current project:
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project undeploy --environment Sandbox
+----
+
+Undeploy from a specific project path:
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project undeploy --path ./my-project --environment Sandbox
+----
+
+Undeploy using GAV coordinates:
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project undeploy --gav myOrgId:my-network:0.0.0 --environment Sandbox
+----
+
+Preview resources that would be undeployed (dry run):
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project undeploy --dry-run --environment Sandbox
+----
+
+
+[[agent-network-project-unpublish]]
+== agent-network:project:unpublish
+
+----
+> anypoint-cli-agent-fabric-plugin agent-network project unpublish [flags]
+----
+
+Removes the agent network assets from Anypoint Exchange. By default performs a soft-delete; use `--hard-delete` for irreversible removal.
+
+To prevent orphaned runtime references to deleted Exchange assets, run `agent-network project undeploy` before `unpublish`.
+
+In addition to the xref:anypoint-cli::index.adoc#default-options[default flags], this command accepts these flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`--api-version <value>` | API version used to discover remotely published assets when using `--gav` +
+ Default: `v1` | `--api-version v1`
+|`--bearer <value>` | Bearer token +
+ You can also set it with the `ANYPOINT_BEARER` variable | `--bearer myBearerToken`
+|`--client_id <value>` | Client ID +
+ You can also set it with the `ANYPOINT_CLIENT_ID` variable | `--client_id myClientID`
+|`--client_secret <value>` | Client Secret +
+ You can also set it with the `ANYPOINT_CLIENT_SECRET` variable | `--client_secret myClientSecret`
+|`--[no-]collectMetrics` | Collect metrics +
+ You can also set it with the `COLLECT_METRICS` variable | `--no-collectMetrics`
+|`--dry-run` | Preview the Exchange assets that would be unpublished without deleting anything | `--dry-run`
+|`--environment <value>` | Environment name +
+ You can also set it with the `ANYPOINT_ENV` variable | `--environment Sandbox`
+|`--gav <value>` | Parent asset GAV (`groupId:assetId:version`). Discovers assets remotely. Use `--environment` to enable the active API instances safety check | `--gav myOrgId:my-network:0.0.0`
+|`--hard-delete` | Permanently delete assets from Exchange. This cannot be undone | `--hard-delete`
+|`--host <value>` | Host URL +
+ Default: `anypoint.mulesoft.com` +
+ You can also set it with the `ANYPOINT_HOST` variable | `--host mycompany.anypoint.mulesoft.com`
+|`--json` | Format output as JSON | `--json`
+|`--organization <value>` | Organization name +
+ You can also set it with the `ANYPOINT_ORG` variable | `--organization MyOrg`
+|`--password <value>` | Password +
+ You can also set it with the `ANYPOINT_PASSWORD` variable | `--password myPassword`
+|`--path <value>` | Path to the project. Reads the published assets from the project lock file. Select an environment to enable the active API instances safety check. Mutually exclusive with `--gav` | `--path ./my-project`
+|`--username <value>` | Username +
+ You can also set it with the `ANYPOINT_USERNAME` variable | `--username myuser&#64;example.com`
+|===
+
+[[example-unpublish]]
+=== Examples
+
+Unpublish with soft-delete:
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project unpublish --environment Sandbox
+----
+
+Unpublish from a specific project path:
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project unpublish --path ./my-project --environment Sandbox
+----
+
+Unpublish with hard-delete (irreversible):
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project unpublish --hard-delete --environment Sandbox
+----
+
+Unpublish using GAV coordinates:
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project unpublish --gav myOrgId:my-network:0.0.0 --environment Sandbox
+----
+
+Preview assets that would be unpublished (dry run):
+
+----
+$ anypoint-cli-agent-fabric-plugin agent-network project unpublish --dry-run --environment Sandbox
 ----
 
 [[agent-network-setup-gateways]]
