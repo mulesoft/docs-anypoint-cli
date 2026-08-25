@@ -60,7 +60,7 @@ You can install the following plugins with Anypoint CLI:
 | anypoint-cli-api-manager-plugin | API Manager command topics
 | anypoint-cli-cloudhub-plugin | CloudHub and CloudHub 2.0 command topics
 | anypoint-cli-datagraph-plugin | Anypoint DataGraph command topics
-| anypoint-cli-dx-mule-plugin | DX Mule command topics
+| @salesforce/anypoint-cli-dx-mule-plugin | DX Mule command topics
 | anypoint-cli-exchange-plugin | Exchange command topics
 | mulesoft-anypoint-cli-designcenter-plugin | Design Center command topics
 | mulesoft-anypoint-cli-governance-plugin | API Governance command topics
