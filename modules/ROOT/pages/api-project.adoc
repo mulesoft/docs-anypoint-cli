@@ -1,0 +1,7 @@
+== API Project
+
+Use the `api-project` commands to automate the creation, validation, and publication of API Projects and instances.
+
+include::anypoint-cli::partial$api-project.adoc[tag=summary]
+
+include::anypoint-cli::partial$api-project.adoc[tag=commands]

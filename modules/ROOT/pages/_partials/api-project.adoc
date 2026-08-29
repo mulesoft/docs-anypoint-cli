@@ -1,0 +1,154 @@
+= API Project CLI
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::api-project.adoc#generate-command[api-project generate] | Generates a new API Project and descriptor file
+|xref:anypoint-cli::api-project.adoc#validate-command[api-project validate] | Validates an API Project against rulesets and governance policies
+|xref:anypoint-cli::api-project.adoc#publish-command[api-project publish] | Publishes an API Project to Exchange
+|xref:anypoint-cli::api-project.adoc#metadata-command[api-project metadata] | Retrieves local or remote metadata for an API Project
+|xref:anypoint-cli::api-project.adoc#centralized-rulesets-command[api-project centralized-rulesets] | Validates an API Project using centralized governance profiles
+|xref:anypoint-cli::api-project.adoc#publish-instance-command[api-project publish-instance] | Publishes API Instances to API Manager from project definition
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+[[generate-command]]
+== api-project generate
+
+----
+> anypoint-cli-v4 api-project generate [flags]
+----
+
+Generates a new API Project descriptor file (`exchange.json`).
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description
+| `--api-spec-location=<path>` | Path to the API specification file
+| `--location=<directory>` or `-l` | Directory where the project will be generated
+| `--api-version=<version>` | Overrides the default API version (default: `v1`)
+| `--classifier=<type>` | Type of API project (raml, oas)
+| `--format=<type>` | Format of the API spec (yaml, json)
+| `--format-version=<version>` | Version of the spec format (e.g. raml 1.0, oas 3.0)
+| `--fragment-type=<type>` | Fragment type (used with raml-fragment classifier)
+| `--json` | Outputs the result in JSON format
+| `--main=<filename>` | Main file name (default: `api`)
+| `--name=<project name>` | Name of the project *(Required)*
+| `--group-id=<groupId>` | Group ID of the asset
+| `--asset-id=<assetId>` | Asset ID of the asset
+| `--asset-version=<version>` | Version of the asset
+| `--is-topic` | Adds agent topic annotations to the API spec
+|===
+
+
+
+[[validate-command]]
+== api-project validate
+
+----
+> anypoint-cli-v4 api-project validate [flags]
+----
+
+Validates the API Project structure, rulesets, and governance policies.
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description
+| `--location=<path>` | Path to the project directory (default: current directory)
+| `--local-ruleset=<file>` | Path to local ruleset file *(multi-value)*
+| `--ruleset=<remote>` | Remote ruleset in `group/asset/version` format *(multi-value)*
+| `--skip-validation` | Skip governance and GCL validations
+| `--json` | Outputs the result in JSON format
+| `--centralized-rulesets` | Enables validation against centralized governance profiles
+| `--filter-by=<field:value>` | Apply filters to the result report *(multi-value)*
+| `--page-size=<n>` | Set the number of lines in the report output
+| `--junit` | Generates a JUnit-style report
+| `--junit-loc=<path>` | Output path for JUnit report
+| `--group-id=<groupId>` | Group ID of the asset
+| `--asset-id=<assetId>` | Asset ID of the asset
+| `--asset-version=<version>` | Version of the asset
+|===
+
+
+[[publish-command]]
+== api-project publish
+
+----
+> anypoint-cli-v4 api-project publish [flags]
+----
+
+Validates and publishes the API Project to Exchange.
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description
+| `--location=<path>` | Directory of the API project (default: current directory)
+| `--skip-validation` | Skip governance and GCL validations
+| `--tag=<tag>` | Tag(s) to associate with the project *(multi-value)*
+| `--json` | Outputs the result in JSON format
+|===
+
+
+[[metadata-command]]
+== api-project metadata
+
+----
+> anypoint-cli-v4 api-project metadata [flags]
+----
+
+Retrieves metadata for the API Project from local or remote sources.
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description
+| `--location=<path>` | Directory of the API Project (default: current directory)
+| `--group-id=<groupId>` | Group ID of the asset
+| `--asset-id=<assetId>` | Asset ID of the asset
+| `--asset-version=<version>` | Asset version
+|===
+
+
+[[centralized-rulesets-command]]
+== api-project centralized-rulesets
+
+----
+> anypoint-cli-v4 api-project centralized-rulesets [flags]
+----
+
+Validates the project against centralized governance rulesets based on metadata.
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description
+| `--location=<path>` | Directory of the API Project (default: current directory)
+| `--group-id=<groupId>` | Group ID of the asset
+| `--asset-id=<assetId>` | Asset ID of the asset
+| `--asset-version=<version>` | Asset version
+|===
+
+
+[[publish-instance-command]]
+== api-project publish-instance
+
+----
+> anypoint-cli-v4 api-project publish-instance [flags]
+----
+
+Creates API instances in API Manager based on GCL definitions in the project.
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description
+| `--location=<path>` | Directory of the API Project (default: current directory)
+| `--is-flex` | Specifies that the instance targets Flex Gateway
+| `--flex-environment-id=<envID>` | Flex Gateway environment ID *(Required for Flex)*
+| `--flex-target-id=<targetID>` | Flex Gateway target ID *(Required for Flex)*
+| `--json` | Outputs the result in JSON format
+|===
+
+// end::commands[]
