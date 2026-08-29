@@ -93,7 +93,7 @@ Default: selected organization ID | `--groupId org.mule.test`
 Default: `disabled` | `--no-lastMileSecurity`
 |`--[no-]objectStoreV2`| Enables Object Store v2. +
 Default: `disabled` | `--no-objectStoreV2`
-|--javaVersion | Set the name of the Java version to be used for the selected Mule version. Supported values are `8` and `17`. If you do not specify a value, CloudHub API imposes the default value. The default Java version for Mule 4.6 and earlier versions is '8'. If you don't specify a Mule version, the default Mule version for the selected Java version is used. If the Java version you select is not available for the specified Mule version, you get an error. | `--javaVersion 8`
+|`--javaVersion` | Set the name of the Java version to be used for the selected Mule version. Supported values are `8` and `17`. If you do not specify a value, CloudHub API imposes the default value. The default Java version for Mule 4.6 and earlier versions is '8'. If you don't specify a Mule version, the default Mule version for the selected Java version is used. If the Java version you select is not available for the specified Mule version, you get an error. | `--javaVersion 8`
 |`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `--pathRewrite /http://localhost:3000`
 |`--property`| Sets a property. +
