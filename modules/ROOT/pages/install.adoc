@@ -65,6 +65,7 @@ You can install the following plugins with Anypoint CLI:
 | mulesoft-anypoint-cli-designcenter-plugin | Design Center command topics
 | mulesoft-anypoint-cli-governance-plugin | API Governance command topics
 | anypoint-cli-runtime-mgr-plugin | Runtime Manager command topics
+| anypoint-cli-rtf-apps-plugin | Runtime Fabric command topics
 | anypoint-cli-secrets-mgr-plugin | Secrets Manager command topics
 |===
 

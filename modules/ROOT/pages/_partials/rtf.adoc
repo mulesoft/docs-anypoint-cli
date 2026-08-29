@@ -1,0 +1,48 @@
+= Runtime Fabric Applications
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:anypoint-cli::rtf.adoc#rtf-apps-describe[rtf:apps:describe] | Shows application details
+|xref:anypoint-cli::rtf.adoc#rtf-apps-package[rtf:apps:package] | Creates a debugging information package
+|===
+
+// end::summary[]
+
+// tag::commands[]
+
+[[rtf-apps-describe]]
+
+== rtf:apps:describe
+
+----
+> rtf:apps:describe [flags] <name>
+----
+Displays information about the application specified in `<name>`
+
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command accepts the xref:index.adoc#default-options[default flags].
+
+[[rtf-apps-package]]
+
+== rtf:apps:package
+
+----
+> rtf:apps:package <name> [flags] 
+----
+
+Creates a debugging information package for the application specified in `<name>`
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description | Example
+|`--pod`| Specify a pod to focus on | `-pod <replica_name>`
+|`--heapdump`| Captures a JVM heap dump | `--heapdump <app_name> <destination_path>`
+|===
+
+// end::commands[]
