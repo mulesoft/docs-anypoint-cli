@@ -6,7 +6,9 @@
 |===
 |Command |Description
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-alert-add[api-mgr:alert:add] | Creates an API instance alert
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-alert-add-legacy[api-mgr:alert:add-legacy] | Creates an API instance alert from the legacy alert monitoring system
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-alert-list[api-mgr:alert:list] | Lists alerts for an API instance
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-alert-list-legacy[api-mgr:alert:list-legacy] | Lists alerts for an API instance from the legacy alert monitoring system
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-autodiscovery[api-mgr:api:autodiscovery] | Lists the autodiscovery properties
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-change-specification[api-mgr:api:change-specification] | Changes the asset version for an API instance by choosing a new version from Exchange
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-classify[api-mgr:api:classify] | Classifies an API instance in a given environment
@@ -58,6 +60,45 @@
 
 Creates an API instance alert with the name passed in `name` for the API instance ID passed in `<apiInstanceId>`.
 
+Alerts are enabled by default when created and can be paused later.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description | Example
+| `--email` | Email to send alert notification to. +
+Pass this flag multiple times to specify multiple emails. | `--email example@mulesoft.com`
+| `--message` | Custom message for the alert notification. If not provided, a default template is used. | `--message "High error rate detected"`
+| `--operator` | Condition operator that explains values in relation to threshold. +
+Supported values: `eq` (equal), `ab` (above), `abeq` (above or equals), `bleq` (below or equals), `bl` (below) | `--operator ab`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
+| `--periods` | Number of consecutive periods condition should occur for. | `--periods 34`
+| `--policyId` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type. | `--policyId http-basic-authentication`
+| `--recipient` | Username to send alert notification to. +
+Pass this flag multiple times to specify multiple usernames. | `--recipient mulesoftuser`
+| `--responseCode` | Response codes to trigger `response-code` alert type. +
+Pass this flag multiple times to specify multiple codes. | `--responseCode 400`
+| `--responseTime` | Response time to trigger `response-time` alert type. | `--responseTime 60`
+| `--severity` | Alert severity. +
+Supported values: `info`, `warning`, `critical`. | `--severity critical`
+| `--subject` | Custom subject line for the alert notification. If not provided, a default template is used. | `--subject "API Error Alert"`
+| `--threshold` | Condition occurrences threshold number. | `--threshold 3`
+| `--type` | Alert type/condition. +
+Supported values: `request-count`, `response-code`, `policy-violation`, `response-time` | `--type response-code`
+|===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+[[api-mgr-alert-add-legacy]]
+== api-mgr:alert:add-legacy
+
+----
+> api-mgr:alert:add-legacy <apiInstanceId> <name> [flags]
+----
+
+Creates an API instance alert with the name passed in `name` for the API instance ID passed in `<apiInstanceId>` using the legacy alert monitoring system.
+
 In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
@@ -71,7 +112,7 @@ Pass this flag multiple times to specify multiple emails. | `--email example@mul
 | `--enabled` | Sets whether the alert is enabled. Include the flag to enable the alert. | `--enabled`
 | `--operator` | Condition operator that explains values in relation to threshold. +
 Supported values: `gt`, `lt`, `eq`. | `--operator gt`
-| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` | `--output json`
 | `--periods` | Number of consecutive periods condition should occur for. | `--periods 34`
 | `--policyId` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type. | `--policyId http-basic-authentication`
 | `--recipient` | Username to send alert notification to. +
@@ -97,18 +138,45 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
+The **Enabled** status is derived from the alert's state (for example, a paused state means the alert is not enabled).
+
 In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description | Example 
-|`--limit` | Number of results to retrieve, default is 10 results | `--limit 5`
+| `--limit` | Number of results to retrieve, default is 10 results | `--limit 5`
 | `--offset` | Offsets the amount of APIs passed | `--offset 3`
-| `--output`| Specifies the response format + 
+| `--output` | Specifies the response format + 
 Supported values are `table` (default) and `json` | `--output json`
 | `--sort` | Sorts the results in the field name passed +
-Supported values are: `id`, `name`, `createdDate`, and `updatedDate`| `--sort name`
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate` | `--sort name`
 |===
+
+[[api-mgr-alert-list-legacy]]
+== api-mgr:alert:list-legacy
+
+----
+> api-mgr:alert:list-legacy [flags] <apiInstanceId>
+----
+
+Lists alerts for the API instance passed in `<apiInstanceId>` from the legacy alert monitoring system.
+
+The output reflects the structure of the legacy alert objects, including the `enabled` boolean property and the original recipient format.
+
+In addition to the xref:index.adoc#default-options[default flags], this command accepts the following flags:
+
+[%header%autowidth.spread,cols="a,a,a"]
+|===
+|Flag |Description | Example 
+| `--limit` | Number of results to retrieve, default is 10 results | `--limit 5`
+| `--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--output` | Specifies the response format + 
+Supported values are `table` (default) and `json` | `--output json`
+| `--sort` | Sorts the results in the field name passed +
+Supported values are: `id`, `name`, `createdDate`, and `updatedDate` | `--sort name`
+|===
+
 
 [[api-mgr-api-autodiscovery]]
 == api-mgr:api:autodiscovery
