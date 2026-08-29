@@ -124,14 +124,14 @@ This command has multi-option flags. When using multi-option flags in a command,
 == runtime-mgr:application:download-logs
 
 ----
-> runtime-mgr:application:download-logs [flags] <appID> <directory> <specID>
+> runtime-mgr:application:download-logs [flags] <appID> <specID> <directory>
 ----
 
 Downloads logs for the application specified in `<appID>` from the specification specified in `<specID>` to the selected directory.
 
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-To get the `<specID>` run the `runtime-mgr application describe` command.
+To get the `<specID>` run the `runtime-mgr application describe` command and use the `currentDeploymentVersion` field of the `replica`
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
@@ -234,7 +234,7 @@ Tails application logs for the application specificied in `<appID>` from the spe
 
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-To get the `<specID>`, run the `runtime-mgr application describe` command.
+To get the `<specID>` run the `runtime-mgr application describe` command and use the `currentDeploymentVersion` field of the `replica`
 
 This command accepts the xref:index.adoc#default-options[default flags].
 
