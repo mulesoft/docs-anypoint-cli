@@ -2,6 +2,16 @@
 
 Use these commands to author, publish, and deploy agent network projects.
 
+[IMPORTANT]
+====
+The Agent Fabric commands come from a separate plugin, `mulesoft-anypoint-cli-agent-fabric-plugin`, that isn't included in the base Anypoint CLI installation. Install it before you use these commands, using either of these methods:
+
+* As an Anypoint CLI plugin: see xref:install.adoc#install-plugins[Install a Plugin Separately].
+* As a standalone tool for xref:agent-network::af-build-agent-networks-in-a-ci-cd-environment.adoc[building agent networks in a CI/CD pipeline] through npm: run `npm install mulesoft-anypoint-cli-agent-fabric-plugin`.
+
+Run these commands with the `anypoint-cli-agent-fabric-plugin` executable, as shown in the examples.
+====
+
 include::anypoint-cli::partial$agent-fabric.adoc[tag=summary]
 
 include::anypoint-cli::partial$agent-fabric.adoc[tag=commands]
