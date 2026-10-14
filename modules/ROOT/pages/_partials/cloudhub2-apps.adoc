@@ -95,7 +95,8 @@ Default: `disabled` +
 |`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `/http://localhost:3000`
 |`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--property "gcp.privateKey:dGVzdA\=\="`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
@@ -108,6 +109,9 @@ Default: `0.1` | `0.5`
 Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+|`secureProperty`| Sets a secure property. +
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--secureProperty "gcp.privateKey:dGVzdA\=\="`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 |===
@@ -190,7 +194,8 @@ Supported values: `true`, `false` | `true`
 |`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `/http://localhost:3000`.
 |`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--property "gcp.privateKey:dGVzdA\=\="`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
@@ -204,6 +209,9 @@ Default: `0.1` | `0.5`
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+|`secureProperty`| Sets a secure property. +
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--secureProperty "gcp.privateKey:dGVzdA\=\="`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 
@@ -340,7 +348,8 @@ Supported values: `true`, `false` | `true`
 |`pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
 Format: must begin with `/` | `/http://localhost:3000`.
 |`property`| Sets a property. +
-Format: `name:value` | `testproperty:true`
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--property "gcp.privateKey:dGVzdA\=\="`
 |`propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `/Users/mule/Documents/properties.txt`
 |`publicEndpoints`| Supplies endpoints to reach via the public internet. +
@@ -354,6 +363,9 @@ Default: `0.1` | `0.5`
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+|`secureProperty`| Sets a secure property. +
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--secureProperty "gcp.privateKey:dGVzdA\=\="`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 
