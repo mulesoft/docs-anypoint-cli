@@ -95,13 +95,13 @@ Default: `disabled` | `--no-lastMileSecurity`
 Default: `disabled` | `--no-objectStoreV2`
 |--javaVersion | Set the name of the Java version to be used for the selected Mule version. Supported values are `8` and `17`. If you do not specify a value, CloudHub API imposes the default value. The default Java version for Mule 4.6 and earlier versions is '8'. If you don't specify a Mule version, the default Mule version for the selected Java version is used. If the Java version you select is not available for the specified Mule version, you get an error. | `--javaVersion 8`
 |`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
-Format: must begin with `/` | `--pathRewrite /http://localhost:3000`
+Format: must begin with `/` | `--pathRewrite /api`
 |`--property`| Sets a property. +
 Format: `name:value` | `--property testproperty:true`
 |`--propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
 |`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
-Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example/status?limit=10`
+Format: separated by commas, no spaces | `--publicEndpoints https://my-superapp.anypoint.com/status`
 |--releaseChannel| Set the name of the release channel to be used for the selected Mule version. Supported values are `NONE`, `EDGE`, and `LTS`. If you do not specify a value, CloudHub API imposes the default value. The default release channel is `EDGE`. If you don't specify a Mule version, the default Mule version for the selected release channel is used. If the selected release channel doesn't exist, you get an error. | `--releaseChannel LTS`
 |`--replicas` | Number of replicas. Must be above `0`. +
 Default: `1` | `--replicas 2`
@@ -179,13 +179,13 @@ Default: `disabled` | `--no-lastMileSecurity`
 |`--[no-]objectStoreV2`| Enables object store v2. +
 Default: `disabled`  | `--no-objectStoreV2`
 |`--pathRewrite`| Supplies the base path expected by the HTTP listener in your application. +
-Format: must begin with `/` | `--pathRewrite /http://localhost:3000`.
+Format: must begin with `/` | `--pathRewrite /api`
 |`--property`| Sets a property. +
 Format: `name:value` | `--property testproperty:true`
 |`--propertiesFile`| Replaces all properties with values from a selected file. +
 Format: one or more lines in `name: value` style | `--propertiesFile /Users/mule/Documents/properties.txt`
 |`--publicEndpoints`| Supplies endpoints to reach via the public internet. +
- Format: separated by commas, no spaces | `--publicEndpoints my-superapp-example/status?limit=10`
+Format: separated by commas, no spaces | `--publicEndpoints https://my-superapp.anypoint.com/status`
 |`--replicas` | Number of replicas. Must be above `0`. +
 Default: `1` | `--replicas 2`
 |`--replicaSize`| Size of replicas in Vcores. +
