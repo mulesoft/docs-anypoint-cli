@@ -58,6 +58,16 @@ This command accepts the xref:index.adoc#default-options[default flags].
 ----
 Deploys the application specified in `<appID>` to the deployment target specified using the following options:
 
+[NOTE]
+====
+To deploy applications using a Connected App, the Connected App must have the following scopes:
+
+* CloudHub Organization Admin
+* Read Servers
+* View Environment
+* View Organization
+====
+
 
 [%header,cols="12a,53a,35a"]
 |===
