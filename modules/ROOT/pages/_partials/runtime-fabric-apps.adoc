@@ -97,6 +97,9 @@ Default: `0.1` | `0.5`
 Format: `scopeName: logLevel`, separated by commas, no spaces | ``testscope1:WARN,testscope2:DEBUG``
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: one tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+|`secureProperty`| Sets a secure property. +
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--secureProperty "gcp.privateKey:dGVzdA\=\="`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 |`vCPULimit`| The maximum amount of vCPU the application can use (the level to which it can burst). This is shared CPU on the worker node. | `3.9`
@@ -195,6 +198,9 @@ Default: `0.1` | `0.5`
 Format: `scopeName: logLevel`, separated by commas, no spaces | `testscope1:WARN,testscope2:DEBUG`
 |`scopeLoggingConfigFile`| Uploads a file to define scope logging. +
 Format: 1 tupple per line, style: `{scope: scopeName, logLevel: logLevelType}` enclosed with `{}` `()` or `[]` |`/Users/mule/Documents/cert.txt`
+|`secureProperty`| Sets a secure property. +
+Format: `name:value`. Can be specified multiple times. +
+Enclose the property in quotes and escape the `:` and `=` characters. | `--secureProperty "gcp.privateKey:dGVzdA\=\="`
 |`updateStrategy`| Updates the strategy used. +
 Default: `rolling` | `recreate`
 
