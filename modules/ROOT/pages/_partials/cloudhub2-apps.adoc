@@ -60,12 +60,7 @@ Deploys the application specified in `<appID>` to the deployment target specifie
 
 [NOTE]
 ====
-To deploy applications using a connected app, the connected app must have the following scopes:
-
-* CloudHub Organization Admin
-* Read Servers
-* View Environment
-* View Organization
+To deploy applications using a connected app, the connected app must have CloudHub and Runtime Manager permission accordingly.
 ====
 
 
