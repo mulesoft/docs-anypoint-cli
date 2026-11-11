@@ -283,7 +283,7 @@ Include the flag to enable it | `--isFlex`
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether this is a Mule 4 API instance. +
-Include the flag to enable it | `--muleVersionOrAbove`
+Include the flag to enable it | `--muleVersion4OrAbove`
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
@@ -412,7 +412,7 @@ Include the flag to enable it | `--isFlex`
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether this is a Mule 4 API instance. +
-Include the flag to enable it | `--muleVersionOrAbove`
+Include the flag to enable it | `--muleVersion4OrAbove`
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
